@@ -817,7 +817,7 @@
         const land = topojson.feature(data, data.objects.land);
         drawLandTexture(land);
 
-        const landFill = new THREE.Mesh(new THREE.SphereGeometry(R * 1.010, 128, 64), landFillMaterial);
+        const landFill = new THREE.Mesh(new THREE.SphereGeometry(R * 1.010, 64, 32), landFillMaterial);
         landFill.renderOrder = 2;
         landFillGroup.add(landFill);
 
