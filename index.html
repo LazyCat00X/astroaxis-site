@@ -1138,7 +1138,6 @@
 
     renderer.domElement.addEventListener('pointermove', event => {
       updatePointer(event);
-      if (hoveredMarker) positionTooltip(hoveredMarker);
     }, { passive: true });
 
     renderer.domElement.addEventListener('pointerleave', () => {
