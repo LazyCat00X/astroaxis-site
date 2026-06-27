@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-HK">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ChainLens 鏈聞 — Hologram Globe</title>
-  <meta name="description" content="ChainLens 鏈聞 hologram globe hero visual" />
+  <title>ChainLens — AI-powered world news aggregator</title>
+  <meta name="description" content="ChainLens — AI-powered world news aggregator" />
   <style>
     :root {
       --bg: #050611;
@@ -325,12 +325,12 @@
   </style>
 </head>
 <body>
-  <main id="hero" aria-label="ChainLens 鏈聞 hologram globe hero">
+  <main id="hero" aria-label="ChainLens hologram globe hero">
     <canvas id="globe-canvas"></canvas>
     <section class="hud" aria-hidden="true">
       <div class="eyebrow">LIVE SIGNAL MAP</div>
-      <h1>ChainLens 鏈聞</h1>
-      <p class="subline">全球加密貨幣與金融新聞・AI 摘要・繁體中文</p>
+      <h1>ChainLens</h1>
+      <p class="subline">AI-powered world news aggregator</p>
     </section>
     <div id="article-tooltip" class="article-tooltip" role="status" aria-live="polite"></div>
     <nav class="filter-bar" aria-label="News marker filters">
@@ -1109,7 +1109,7 @@
       const bullets = summaryBullets(article.ai_summary);
       tooltip.innerHTML = `
         <div class="tooltip-title">${escapeHtml(article.title)}</div>
-        <div class="tooltip-source">來源：${escapeHtml(article.source)} · 提及：${escapeHtml(marker.userData.city)} · ${escapeHtml(marker.userData.topic)}</div>
+        <div class="tooltip-source">${escapeHtml(article.source)} · ${escapeHtml(marker.userData.city)} · ${escapeHtml(marker.userData.topic)}</div>
         <ul class="tooltip-summary">${bullets.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
       `;
       tooltip.classList.add('visible');
