@@ -1101,6 +1101,7 @@
       if (hoveredMarker === marker) return;
       if (hoveredMarker) hoveredMarker.scale.setScalar(hoveredMarker.userData.baseScale);
       hoveredMarker = marker;
+      controls.autoRotate = !marker;
       if (!marker) {
         tooltip.classList.remove('visible');
         return;
