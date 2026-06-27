@@ -1097,15 +1097,22 @@
       return String(value || '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
     }
 
+    let hoverCooldown = null;
+
     function setHoveredMarker(marker) {
       if (hoveredMarker === marker) return;
+      if (hoverCooldown) { clearTimeout(hoverCooldown); hoverCooldown = null; }
       if (hoveredMarker) hoveredMarker.scale.setScalar(hoveredMarker.userData.baseScale);
+      const wasHovering = !!hoveredMarker;
       hoveredMarker = marker;
-      controls.autoRotate = !marker;
       if (!marker) {
         tooltip.classList.remove('visible');
+        if (wasHovering) {
+          hoverCooldown = setTimeout(() => { controls.autoRotate = true; }, 500);
+        }
         return;
       }
+      if (!wasHovering) controls.autoRotate = false;
       const article = marker.userData.article;
       const bullets = summaryBullets(article.ai_summary);
       tooltip.innerHTML = `
