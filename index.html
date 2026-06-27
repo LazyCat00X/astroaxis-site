@@ -879,7 +879,7 @@
     ring.position.y = 0.002;
     globe.add(ring);
 
-    const ringParticleCount = 80;
+    const ringParticleCount = 120;
     const ringPositions = new Float32Array(ringParticleCount * 3);
     const ringSeeds = new Float32Array(ringParticleCount);
     for (let i = 0; i < ringParticleCount; i++) {
@@ -931,7 +931,7 @@
     globe.add(ringParticles);
 
     // Sparse star field with subtle shader twinkle.
-    const starCount = window.innerWidth < 800 ? 60 : 100;
+    const starCount = window.innerWidth < 800 ? 90 : 150;
     const starPositions = new Float32Array(starCount * 3);
     const starSeeds = new Float32Array(starCount);
     for (let i = 0; i < starCount; i++) {
