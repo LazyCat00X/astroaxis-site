@@ -739,7 +739,7 @@
       });
       renderer.setClearColor(0x03040c, 1);
       renderer.setSize(initialSize.w, initialSize.h);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
 
       const clock = new THREE.Clock();
       const universe = new THREE.Group();
@@ -1125,9 +1125,9 @@
         camera.position.z = w < 760 ? 11.5 : 10.4;
         camera.updateProjectionMatrix();
         renderer.setSize(w, h);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
       }
-
+      resize();
       function animate() {
         const elapsed = clock.getElapsedTime();
         const isActive = document.getElementById('history3d-view')?.classList.contains('active');
@@ -1989,6 +1989,10 @@
     renderer.domElement.addEventListener('pointermove', event => {
       updatePointer(event);
       if (hoveredMarker) positionTooltip(hoveredMarker);
+      // Raycaster on mouse move instead of every frame
+      raycaster.setFromCamera(pointer, camera);
+      const hits = raycaster.intersectObjects(markerMeshes.filter(m => m.visible), false);
+      setHoveredMarker(hits.length ? hits[0].object : null);
     }, { passive: true });
 
     renderer.domElement.addEventListener('pointerleave', () => {
@@ -2088,9 +2092,6 @@
       ringParticleMat.uniforms.uTime.value = elapsed;
       starMaterial.uniforms.uTime.value = elapsed;
 
-      raycaster.setFromCamera(pointer, camera);
-      const hits = raycaster.intersectObjects(markerMeshes.filter(marker => marker.visible), false);
-      setHoveredMarker(hits.length ? hits[0].object : null);
       markerMeshes.forEach((marker, index) => {
         if (!marker.visible) return;
         const isHovered = marker === hoveredMarker;
