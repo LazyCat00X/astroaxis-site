@@ -2388,13 +2388,18 @@
         // Distance scale: shrink labels when zoomed in close
         const distScale = Math.min(2.0, Math.max(0.5, camDist / 7));
         labelGroup.children.forEach(sprite => {
-          // Get world-space positions for correct facing check
+          // Get world-space positions
           const worldPos = new THREE.Vector3();
           sprite.getWorldPosition(worldPos);
-          const toSprite = new THREE.Vector3().copy(worldPos).sub(globeCenter).normalize();
-          const camDir = new THREE.Vector3().copy(camera.position).sub(globeCenter).normalize();
-          const facing = toSprite.dot(camDir);
-          const facingFactor = Math.max(0, (facing - 0.0) / 0.6);
+          // Direction from camera to sprite
+          const toSprite = new THREE.Vector3().copy(worldPos).sub(camera.position).normalize();
+          // Globe center to camera
+          const camDir = new THREE.Vector3().copy(globeCenter).sub(camera.position).normalize();
+          // If sprite direction deviates from globe center direction by more than
+          // the globe's angular radius ~40deg, it's on the far side
+          const angle = toSprite.dot(camDir);
+          // Globe subtends ~40deg at typical distance; threshold at cos(40deg) ≈ 0.77
+          const facingFactor = angle > 0.77 ? 1 : Math.max(0, (angle - 0.3) / 0.47);
           sprite.material.opacity = baseOpacity * facingFactor;
           // Shrink on zoom-in so labels don't block view
           const baseScale = sprite.userData.baseScale || sprite.scale.x;
