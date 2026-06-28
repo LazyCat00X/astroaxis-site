@@ -1933,6 +1933,15 @@
     globe.add(markerGroup);
     globe.add(continentGroup);
 
+    // Share single uTime across all shader materials
+    const _uTime = { value: 0 };
+    haloMaterial.uniforms.uTime = _uTime;
+    continentMaterial.uniforms.uTime = _uTime;
+    continentGlowMaterial.uniforms.uTime = _uTime;
+    ringMat.uniforms.uTime = _uTime;
+    ringParticleMat.uniforms.uTime = _uTime;
+    starMaterial.uniforms.uTime = _uTime;
+
     // Track invisible instances for filtering
     const invisibleFlags = new Uint8Array(count);
 
@@ -2111,12 +2120,7 @@
       grid.scale.setScalar(pulse);
       continentGroup.scale.setScalar(1 + Math.sin(elapsed * 0.9 + 0.8) * 0.0035);
 
-      haloMaterial.uniforms.uTime.value = elapsed;
-      continentMaterial.uniforms.uTime.value = elapsed;
-      continentGlowMaterial.uniforms.uTime.value = elapsed;
-      ringMat.uniforms.uTime.value = elapsed;
-      ringParticleMat.uniforms.uTime.value = elapsed;
-      starMaterial.uniforms.uTime.value = elapsed;
+      _uTime.value = elapsed;
 
       // Update instanced marker pulse via instance matrix
       const dummy = new THREE.Object3D();
