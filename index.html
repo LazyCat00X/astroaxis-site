@@ -1367,16 +1367,16 @@
     const latitudeMat = makeLineMaterial({ color: '#6366f1', opacity: 0.18 });
     const glowGridMat = makeLineMaterial({ color: '#22d3ee', opacity: 0.06 });
 
-    for (let lat = -80; lat <= 80; lat += 10) {
+    for (let lat = -75; lat <= 75; lat += 15) {
       const points = [];
-      for (let lon = -180; lon <= 180; lon += 3) points.push(latLonToVec3(lat, lon, R));
-      const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), lat % 20 === 0 ? latitudeMat : glowGridMat);
+      for (let lon = -180; lon <= 180; lon += 5) points.push(latLonToVec3(lat, lon, R));
+      const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), lat % 30 === 0 ? latitudeMat : glowGridMat);
       grid.add(line);
     }
 
-    for (let lon = -180; lon < 180; lon += 10) {
+    for (let lon = -180; lon < 180; lon += 15) {
       const points = [];
-      for (let lat = -80; lat <= 80; lat += 2) points.push(latLonToVec3(lat, lon, R));
+      for (let lat = -80; lat <= 80; lat += 3) points.push(latLonToVec3(lat, lon, R));
       const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), lon % 30 === 0 ? meridianMat : glowGridMat);
       grid.add(line);
     }
@@ -1479,8 +1479,8 @@
     // into bright clumps on a small hologram. Simplify in lon/lat space before
     // generating Three.js line geometry so we keep recognizable continents with
     // far fewer overlapping neon segments.
-    const COASTLINE_SIMPLIFY_TOLERANCE = 0.32; // degrees; ~35km at equator
-    const LAND_TEXTURE_SIMPLIFY_TOLERANCE = 0.18;
+    const COASTLINE_SIMPLIFY_TOLERANCE = 0.5; // degrees; ~55km at equator
+    const LAND_TEXTURE_SIMPLIFY_TOLERANCE = 0.25;
     const MIN_OUTLINE_AREA = 0.12;
 
     const textureSize = window.innerWidth < 768 ? 1024 : 2048;
