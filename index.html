@@ -2055,11 +2055,13 @@
           if (country) country.count++;
         }
         console.log(`Loaded ${countryLookup.length} countries, ${markerPositions.length} articles mapped`);
+        // Render borders + labels AFTER data is loaded (async fix)
+        renderCountryBorders();
       } catch (e) { console.warn('Country labels unavailable:', e); }
     }
     loadCountries();
 
-    // ── Render country boundary lines ──
+    // ── Render country boundary lines (called from loadCountries after data ready) ──
     function renderCountryBorders() {
       const borderGroup = new THREE.Group();
       const borderMat = new THREE.LineBasicMaterial({
@@ -2116,7 +2118,7 @@
       window._countryLabels = labelGroup;
       console.log(`Rendered ${countryLookup.length} country boundaries + labels`);
     }
-    renderCountryBorders();
+    // renderCountryBorders() called from loadCountries() after async fetch completes
 
     // Share single uTime across all shader materials
     const _uTime = { value: 0 };
