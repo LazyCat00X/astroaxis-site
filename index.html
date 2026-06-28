@@ -2063,10 +2063,10 @@
     function renderCountryBorders() {
       const borderGroup = new THREE.Group();
       const borderMat = new THREE.LineBasicMaterial({
-        color: 0xffffff, transparent: true, opacity: 0.08, depthWrite: false
+        color: 0xffffff, transparent: true, opacity: 0.5, depthWrite: false, depthTest: false
       });
       const borderGlowMat = new THREE.LineBasicMaterial({
-        color: 0x22d3ee, transparent: true, opacity: 0.03, depthWrite: false
+        color: 0x22d3ee, transparent: true, opacity: 0.2, depthWrite: false, depthTest: false
       });
       countryLookup.forEach(entry => {
         entry.polys.forEach(poly => {
