@@ -898,7 +898,7 @@
         halo.userData = { pulseOffset: yearIndex * 0.9, baseOpacity: haloMaterial.opacity };
         ringGroup.add(halo);
 
-        const yearLabel = makeTextSprite(yearIndex === 0 ? '2026 · NOW' : String(year), {
+        const yearLabel = makeTextSprite(String(year), {
           color: yearIndex === 0 ? '#ecfeff' : yearAccent[yearIndex],
           bg: yearIndex === 0 ? 'rgba(4,10,25,0.58)' : 'rgba(4,10,25,0.38)',
           border: `rgba(${Math.floor(color.r * 255)},${Math.floor(color.g * 255)},${Math.floor(color.b * 255)},0.38)`,
