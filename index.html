@@ -430,9 +430,9 @@
 <!-- Top Navigation -->
 <nav class="top-nav">
   <span class="logo">◆ ChainLens</span>
-  <button class="nav-btn active" data-view="globe">Globe</button>
-  <button class="nav-btn" data-view="timeline">Timeline</button>
-  <button class="nav-btn" data-view="feed">Feed</button>
+  <button class="nav-btn active" data-view="globe" data-i18n="nav.globe">Globe</button>
+  <button class="nav-btn" data-view="timeline" data-i18n="nav.timeline">Timeline</button>
+  <button class="nav-btn" data-view="feed" data-i18n="nav.feed">Feed</button>
   <div style="position:relative;margin-left:auto">
     <button class="lang-btn" id="langBtn">🌐 繁</button>
     <div class="lang-dropdown" id="langDropdown">
@@ -447,35 +447,35 @@
 
 <!-- Breaking news banner -->
 <div class="breach-banner" id="breachBanner">
-  ⚠️ <strong>BREAKING:</strong> <span id="breachText">Major event detected</span>
+  ⚠️ <strong data-i18n="alert.breaking">BREAKING:</strong> <span id="breachText">Major event detected</span>
 </div>
 
 <div id="globe-view" class="view-panel active">
   <main id="hero" aria-label="ChainLens hologram globe hero">
     <canvas id="globe-canvas"></canvas>
     <section class="hud" aria-hidden="true">
-      <div class="eyebrow">LIVE SIGNAL MAP</div>
+      <div class="eyebrow" data-i18n="hud.eyebrow">LIVE SIGNAL MAP</div>
       <h1>ChainLens</h1>
-      <p class="subline">AI-powered world news aggregator</p>
+      <p class="subline" data-i18n="hud.subline">AI-powered world news aggregator</p>
     </section>
     <div id="article-tooltip" class="article-tooltip" role="status" aria-live="polite"></div>
     <nav class="filter-bar" aria-label="News marker filters">
-      <button class="filter-btn active" data-filter-type="all" data-filter-value="All">All</button>
-      <button class="filter-btn" data-filter-type="region" data-filter-value="Americas">Americas</button>
-      <button class="filter-btn" data-filter-type="region" data-filter-value="Europe">Europe</button>
-      <button class="filter-btn" data-filter-type="region" data-filter-value="Asia">Asia</button>
-      <button class="filter-btn active" data-filter-type="time" data-filter-value="all">ALL TIME</button>
-      <button class="filter-btn" data-filter-type="time" data-filter-value="6h">6H</button>
-      <button class="filter-btn" data-filter-type="time" data-filter-value="24h">24H</button>
-      <button class="filter-btn" data-filter-type="topic" data-filter-value="Bitcoin">Bitcoin</button>
-      <button class="filter-btn" data-filter-type="topic" data-filter-value="DeFi">DeFi</button>
-      <button class="filter-btn" data-filter-type="topic" data-filter-value="AI">AI</button>
-      <button class="filter-btn" data-filter-type="topic" data-filter-value="Regulation">Regulation</button>
+      <button class="filter-btn active" data-filter-type="all" data-filter-value="All" data-i18n="filter.all">All</button>
+      <button class="filter-btn" data-filter-type="region" data-filter-value="Americas" data-i18n="filter.americas">Americas</button>
+      <button class="filter-btn" data-filter-type="region" data-filter-value="Europe" data-i18n="filter.europe">Europe</button>
+      <button class="filter-btn" data-filter-type="region" data-filter-value="Asia" data-i18n="filter.asia">Asia</button>
+      <button class="filter-btn active" data-filter-type="time" data-filter-value="all" data-i18n="filter.alltime">ALL TIME</button>
+      <button class="filter-btn" data-filter-type="time" data-filter-value="6h" data-i18n="filter.6h">6H</button>
+      <button class="filter-btn" data-filter-type="time" data-filter-value="24h" data-i18n="filter.24h">24H</button>
+      <button class="filter-btn" data-filter-type="topic" data-filter-value="Bitcoin" data-i18n="filter.bitcoin">Bitcoin</button>
+      <button class="filter-btn" data-filter-type="topic" data-filter-value="DeFi" data-i18n="filter.defi">DeFi</button>
+      <button class="filter-btn" data-filter-type="topic" data-filter-value="AI" data-i18n="filter.ai">AI</button>
+      <button class="filter-btn" data-filter-type="topic" data-filter-value="Regulation" data-i18n="filter.regulation">Regulation</button>
     </nav>
     <div class="scanline"></div>
     <div class="vignette"></div>
-    <div class="hint">DRAG TO ROTATE · CLICK MARKERS FOR FULL STORY</div>
-    <div class="scroll-hint" aria-hidden="true">↓ scroll for articles</div>
+    <div class="hint" data-i18n="hint.drag">DRAG TO ROTATE · CLICK MARKERS FOR FULL STORY</div>
+    <div class="scroll-hint" aria-hidden="true" data-i18n="hint.scroll">↓ scroll for articles</div>
   </main>
 </div><!-- /globe-view -->
 
@@ -513,7 +513,72 @@
       });
     });
 
-    // ── Language switcher ──
+    // ── Full UI translations ──
+    const I18N = {
+      en: {
+        'nav.globe':'Globe','nav.timeline':'Timeline','nav.feed':'Feed',
+        'hud.eyebrow':'LIVE SIGNAL MAP','hud.subline':'AI-powered world news aggregator',
+        'filter.all':'All','filter.americas':'Americas','filter.europe':'Europe','filter.asia':'Asia',
+        'filter.alltime':'ALL TIME','filter.6h':'6H','filter.24h':'24H',
+        'filter.bitcoin':'Bitcoin','filter.defi':'DeFi','filter.ai':'AI','filter.regulation':'Regulation',
+        'hint.drag':'DRAG TO ROTATE · CLICK MARKERS FOR FULL STORY','hint.scroll':'↓ scroll for articles',
+        'feed.title':'ChainLens Feed','tl.title':'World History Timeline',
+        'alert.breaking':'BREAKING:','bias.none':'Neutral','bias.light':'Slight bias','bias.high':'Biased',
+      },
+      'zh-HK': {
+        'nav.globe':'全球','nav.timeline':'時間軸','nav.feed':'新聞',
+        'hud.eyebrow':'即時訊號地圖','hud.subline':'AI 驅動嘅全球新聞聚合',
+        'filter.all':'全部','filter.americas':'美洲','filter.europe':'歐洲','filter.asia':'亞洲',
+        'filter.alltime':'全部時間','filter.6h':'6小時','filter.24h':'24小時',
+        'filter.bitcoin':'Bitcoin','filter.defi':'DeFi','filter.ai':'AI','filter.regulation':'監管',
+        'hint.drag':'拖拽旋轉 · 點擊標記睇全文','hint.scroll':'↓ 向下睇文章',
+        'feed.title':'ChainLens 新聞','tl.title':'世界歷史時間軸',
+        'alert.breaking':'緊急：','bias.none':'中立','bias.light':'略帶偏頗','bias.high':'偏頗',
+      },
+      'zh-CN': {
+        'nav.globe':'全球','nav.timeline':'时间轴','nav.feed':'新闻',
+        'hud.eyebrow':'实时信号地图','hud.subline':'AI 驱动的全球新闻聚合',
+        'filter.all':'全部','filter.americas':'美洲','filter.europe':'欧洲','filter.asia':'亚洲',
+        'filter.alltime':'全部时间','filter.6h':'6小时','filter.24h':'24小时',
+        'filter.bitcoin':'比特币','filter.defi':'DeFi','filter.ai':'AI','filter.regulation':'监管',
+        'hint.drag':'拖拽旋转 · 点击标记看全文','hint.scroll':'↓ 向下看文章',
+        'feed.title':'ChainLens 新闻','tl.title':'世界历史时间轴',
+        'alert.breaking':'紧急：','bias.none':'中立','bias.light':'略有偏见','bias.high':'有偏见',
+      },
+      ja: {
+        'nav.globe':'世界','nav.timeline':'タイムライン','nav.feed':'ニュース',
+        'hud.eyebrow':'ライブシグナルマップ','hud.subline':'AI搭載の世界ニュースアグリゲーター',
+        'filter.all':'すべて','filter.americas':'アメリカ','filter.europe':'ヨーロッパ','filter.asia':'アジア',
+        'filter.alltime':'全期間','filter.6h':'6時間','filter.24h':'24時間',
+        'filter.bitcoin':'ビットコイン','filter.defi':'DeFi','filter.ai':'AI','filter.regulation':'規制',
+        'hint.drag':'ドラッグで回転 · マーカークリックで全文','hint.scroll':'↓ 記事をスクロール',
+        'feed.title':'ChainLens ニュース','tl.title':'世界史タイムライン',
+        'alert.breaking':'速報：','bias.none':'中立','bias.light':'やや偏り','bias.high':'偏りあり',
+      },
+      ko: {
+        'nav.globe':'세계','nav.timeline':'타임라인','nav.feed':'뉴스',
+        'hud.eyebrow':'실시간 신호 지도','hud.subline':'AI 기반 세계 뉴스 수집기',
+        'filter.all':'전체','filter.americas':'미주','filter.europe':'유럽','filter.asia':'아시아',
+        'filter.alltime':'전체 기간','filter.6h':'6시간','filter.24h':'24시간',
+        'filter.bitcoin':'비트코인','filter.defi':'DeFi','filter.ai':'AI','filter.regulation':'규제',
+        'hint.drag':'드래그 회전 · 마커 클릭으로 전체 기사','hint.scroll':'↓ 기사 스크롤',
+        'feed.title':'ChainLens 뉴스','tl.title':'세계 역사 타임라인',
+        'alert.breaking':'속보：','bias.none':'중립','bias.light':'약간 편향','bias.high':'편향',
+      },
+    };
+    const LANG_LABELS = {en:'EN','zh-HK':'繁','zh-CN':'简','ja':'日','ko':'한'};
+
+    function applyLanguage() {
+      const t = I18N[currentLang] || I18N['zh-HK'];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key]) el.textContent = t[key];
+      });
+      document.getElementById('langBtn').textContent = '🌐 ' + (LANG_LABELS[currentLang] || '繁');
+      renderTimeline();
+      renderFeed();
+    }
+
     document.getElementById('langBtn').addEventListener('click', () => {
       document.getElementById('langDropdown').classList.toggle('open');
     });
@@ -524,25 +589,19 @@
         document.querySelectorAll('.lang-option').forEach(o => o.classList.remove('active'));
         opt.classList.add('active');
         document.getElementById('langDropdown').classList.remove('open');
-        document.getElementById('langBtn').textContent = '🌐 ' + opt.textContent.slice(0,2);
-        renderTimeline();
-        renderFeed();
+        applyLanguage();
       });
     });
-    // Set initial language button
-    document.getElementById('langBtn').textContent = '🌐 ' + (currentLang === 'en' ? 'EN' : currentLang === 'zh-HK' ? '繁' : currentLang === 'zh-CN' ? '简' : currentLang === 'ja' ? '日' : '한');
+    applyLanguage();
 
     // ── Timeline ──
-    const TL_LABELS = {
-      en: {title:'World History Timeline'}, 'zh-HK':{title:'世界歷史時間軸'}, 'zh-CN':{title:'世界历史时间轴'},
-      ja:{title:'世界史タイムライン'}, ko:{title:'세계 역사 타임라인'}
-    };
+    // TL_LABELS merged into I18N above
     const TL_TYPE = {en:{finance:'Finance',tech:'Tech',politics:'Politics',climate:'Climate',crypto:'Crypto',disaster:'Disaster'},'zh-HK':{finance:'金融',tech:'科技',politics:'政治',climate:'氣候',crypto:'加密貨幣',disaster:'災難'},'zh-CN':{finance:'金融',tech:'科技',politics:'政治',climate:'气候',crypto:'加密货币',disaster:'灾难'},ja:{finance:'金融',tech:'技術',politics:'政治',climate:'気候',crypto:'暗号資産',disaster:'災害'},ko:{finance:'금융',tech:'기술',politics:'정치',climate:'기후',crypto:'암호화폐',disaster:'재난'}};
 
     function renderTimeline() {
-      const labels = TL_LABELS[currentLang] || TL_LABELS['en'];
+      const t = I18N[currentLang] || I18N['zh-HK'];
       const types = TL_TYPE[currentLang] || TL_TYPE['en'];
-      let html = `<h2 style="font-size:24px;font-weight:700;margin-bottom:24px;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">${labels.title}</h2>`;
+      let html = `<h2 style="font-size:24px;font-weight:700;margin-bottom:24px;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">${t['tl.title']}</h2>`;
       Object.keys(timelineData).sort().reverse().forEach(year => {
         html += `<div class="timeline-year"><h2>${year}</h2>`;
         timelineData[year].forEach(ev => {
@@ -561,11 +620,11 @@
     function renderFeed() {
       const articles = NEWS_DATA.articles || [];
       if (!articles.length) { document.getElementById('feed-content').innerHTML = '<p style="color:rgba(136,136,160,0.7);text-align:center;padding:40px">No articles yet.</p>'; return; }
-      let html = `<h2 style="font-size:24px;font-weight:700;margin-bottom:20px;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">ChainLens Feed</h2><div class="feed-grid">`;
+      let html = `<h2 style="font-size:24px;font-weight:700;margin-bottom:20px;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">${I18N[currentLang]?.['feed.title'] || 'ChainLens Feed'}</h2><div class="feed-grid">`;
       articles.slice(0, 50).forEach(a => {
         const biasScore = a.bias_score || 0;
         const biasCls = biasScore === 0 ? 'bias-low' : biasScore < 3 ? 'bias-med' : 'bias-high';
-        const biasLabel = biasScore === 0 ? 'Neutral' : biasScore < 3 ? 'Slight bias' : 'Biased';
+        const t = I18N[currentLang] || I18N['zh-HK']; const biasLabel = biasScore === 0 ? t['bias.none'] : biasScore < 3 ? t['bias.light'] : t['bias.high'];
         const bullets = (a.ai_summary || '').split('\n').filter(l => l.includes('•')).map(l => l.replace(/^[•\s]+/,'').trim()).filter(Boolean).slice(0, 4);
         html += `<div class="feed-card">
           <div class="card-top">
@@ -1367,8 +1426,10 @@
       if (!wasHovering) controls.autoRotate = false;
       const article = marker.userData.article;
       const bullets = summaryBullets(article.ai_summary);
-      tooltip.innerHTML = `
-        <div class="tooltip-title">${escapeHtml(article.title)}</div>
+      tooltip.innerHTML = `<div data-i18n="tooltip.hint" style="color:rgba(136,136,160,0.6);font-size:13px;text-align:center;padding:8px">Hover over a marker</div>`;
+      return;
+    }
+    tooltip.innerHTML = `<div class="tooltip-title">${escapeHtml(article.title)}</div>
         <div class="tooltip-source">${escapeHtml(article.source)} · ${escapeHtml(marker.userData.city)} · ${escapeHtml(marker.userData.topic)}</div>
         <ul class="tooltip-summary">${bullets.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
       `;
