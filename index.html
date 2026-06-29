@@ -2413,7 +2413,34 @@
     // ── Click cluster → open articles ──
     renderer.domElement.addEventListener('click', () => {
       if (!hoveredData || !hoveredData.articles) return;
-      window.location.href = hoveredData.articles[0].url;
+      const articles = hoveredData.articles;
+      if (articles.length === 1) {
+        window.location.href = articles[0].url;
+      } else {
+        // Show sticky article picker in tooltip
+        let html = `<div class="tooltip-title" style="margin-bottom:8px">📦 ${articles.length} articles · ${escapeHtml(hoveredData.city)}</div>`;
+        articles.forEach((a, i) => {
+          const color = topicColors[a.topic] || topicColors.General;
+          html += `<a href="${escapeHtml(a.url)}" target="_blank" rel="noopener" style="display:block;padding:6px 8px;margin:2px 0;border-radius:6px;background:rgba(255,255,255,0.04);color:#eef7ff;text-decoration:none;font-size:13px;line-height:1.35;border-left:3px solid ${color};transition:background .15s" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.04)'">${escapeHtml(a.title)}<br><span style="font-size:11px;color:rgba(136,146,182,0.7)">${escapeHtml(a.source)}</span></a>`;
+        });
+        tooltip.innerHTML = html;
+        tooltip.style.transition = 'none';
+        // Position at current hover position
+        const dummy = new THREE.Object3D();
+        instancedMarkers.getMatrixAt(hoveredIdx, dummy.matrix);
+        dummy.matrix.decompose(dummy.position, dummy.quaternion, dummy.scale);
+        const world = dummy.position.clone().project(camera);
+        const txScreen = (world.x * 0.5 + 0.5) * window.innerWidth;
+        const tyScreen = (-world.y * 0.5 + 0.5) * window.innerHeight;
+        const tooltipW = 360;
+        const offsetX = txScreen < window.innerWidth / 2 ? txScreen + 18 : txScreen - tooltipW - 18;
+        const clampedX = Math.max(8, Math.min(offsetX, window.innerWidth - tooltipW - 8));
+        tooltip.style.transform = `translate3d(${clampedX}px, ${Math.max(tyScreen - 80, 14)}px, 0)`;
+        tooltip.offsetHeight;
+        tooltip.style.transition = '';
+        tooltip.classList.add('visible');
+        // Don't clear hoveredData so tooltip stays
+      }
     });
 
     document.querySelectorAll('.filter-btn').forEach(button => {
