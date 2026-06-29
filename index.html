@@ -2000,7 +2000,7 @@
     const markerData = [];
     const dummy = new THREE.Object3D();
 
-    // Group articles by their base location for spiral distribution
+    // Group articles by their base location for clustering
     const locationGroups = {};
     NEWS_DATA.articles.slice(0, 100).forEach((article, index) => {
       if (!article.ai_summary) return;
@@ -2018,51 +2018,86 @@
       locationGroups[key].push({ article, baseLat, baseLon, city, index });
     });
 
-    // Distribute each group in a 2D spiral to avoid overlap
-    Object.values(locationGroups).forEach((group, gIdx) => {
+    // Create ONE cluster marker per location group
+    // with size proportional to article count
+    const countSprites = [];
+    Object.values(locationGroups).forEach((group) => {
       const { baseLat, baseLon, city } = group[0];
       const groupSize = group.length;
-      // Density cap: in dense groups, reduce individual glow brightness
-      // so additive blending doesn't create white blobs
-      const densityScale = Math.min(1, 5 / groupSize);
-      group.forEach((item, i) => {
-        // Archimedean spiral: angle grows linearly, radius grows as sqrt(i)
-        const turns = (1 + Math.sqrt(5)) / 2 - 1; // ~0.618, golden ratio — no repeating angles
-        const angle = i * turns * Math.PI * 2;
-        const radius = i < 1 ? 0 : 0.02 + Math.sqrt(i) * 0.9;
-        const cosLat = Math.max(0.05, Math.cos(baseLat * Math.PI / 180));
-        const lat = THREE.MathUtils.clamp(baseLat + radius * Math.cos(angle), -90, 90);
-        const lon = THREE.MathUtils.clamp(baseLon + radius * Math.sin(angle) / cosLat, -180, 180);
 
-        const article = item.article;
-        const topic = topicColors[article.topic] ? article.topic : (topicColors[article.category] ? article.category : 'General');
-        const color = new THREE.Color(topicColors[topic] || topicColors.General);
-
-        const pos = latLonToVec3(lat, lon, R * 1.035);
-        markerPositions.push(pos);
-        markerColors.push(color);
-        markerData.push({
-          article, topic, city, color,
-          region: regionFor(baseLat, baseLon),
-          baseScale: 1,
-          densityScale,
-          _index: item.index,
-        });
+      // Determine dominant topic color
+      const topicCounts = {};
+      let dominantTopic = 'General';
+      group.forEach(item => {
+        const t = topicColors[item.article.topic] ? item.article.topic : (topicColors[item.article.category] ? item.article.category : 'General');
+        topicCounts[t] = (topicCounts[t] || 0) + 1;
       });
-    });
+      let maxCnt = 0;
+      Object.entries(topicCounts).forEach(([t, c]) => { if (c > maxCnt) { maxCnt = c; dominantTopic = t; } });
+      const color = new THREE.Color(topicColors[dominantTopic] || topicColors.General);
 
-    // Instanced mesh for markers
+      // Cluster marker at centroid, size scales with count
+      const pos = latLonToVec3(baseLat, baseLon, R * 1.035);
+      const clusterScale = 1 + Math.min(groupSize - 1, 8) * 0.12;
+
+      markerPositions.push(pos);
+      markerColors.push(color);
+      markerData.push({
+        articles: group.map(g => g.article),
+        cities: [...new Set(group.map(g => g.city))],
+        topic: dominantTopic,
+        city: group.length === 1 ? city : city + ' +' + (groupSize - 1),
+        color,
+        region: regionFor(baseLat, baseLon),
+        baseScale: clusterScale,
+        count: groupSize,
+        _groupSize: groupSize,
+      });
+
+      // Count sprite for clusters with >1 article
+      if (groupSize > 1) {
+        const c = document.createElement('canvas');
+        c.width = 128; c.height = 64;
+        const cx = c.getContext('2d');
+        const fsize = groupSize > 99 ? 28 : 32;
+        cx.font = `bold ${fsize}px Inter, sans-serif`;
+        cx.textAlign = 'center';
+        cx.textBaseline = 'middle';
+        cx.shadowColor = 'rgba(0,0,0,0.9)';
+        cx.shadowBlur = 10;
+        cx.fillStyle = '#ffffff';
+        cx.fillText(String(groupSize), 64, 34);
+        cx.shadowBlur = 0;
+        const tex = new THREE.CanvasTexture(c);
+        tex.minFilter = THREE.LinearFilter;
+        const spriteMat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.92, depthWrite: false, depthTest: false });
+        const sprite = new THREE.Sprite(spriteMat);
+        sprite.position.copy(pos);
+        sprite.position.setLength(R * 1.075);
+        const s = Math.min(0.6, 0.2 + groupSize * 0.035);
+        sprite.scale.set(s, s * 0.5, 1);
+        countSprites.push(sprite);
+      }
+    });
+    // Add count sprites to marker group
+    countSprites.forEach(s => markerGroup.add(s));
+
+    // Instanced mesh for cluster markers
     const count = markerPositions.length;
     const markerMat = new THREE.MeshBasicMaterial({
       transparent: true, opacity: 1.0, blending: THREE.AdditiveBlending, depthWrite: false
     });
     const instancedMarkers = new THREE.InstancedMesh(markerGeometry, markerMat, count);
     const colorAttr = new THREE.InstancedBufferAttribute(new Float32Array(count * 3), 3);
+    // Build scale array for per-instance size
+    const scaleAttr = new THREE.InstancedBufferAttribute(new Float32Array(count), 1);
     for (let i = 0; i < count; i++) {
       dummy.position.copy(markerPositions[i]);
+      dummy.scale.set(markerData[i].baseScale, markerData[i].baseScale, markerData[i].baseScale);
       dummy.updateMatrix();
       instancedMarkers.setMatrixAt(i, dummy.matrix);
       colorAttr.setXYZ(i, markerColors[i].r, markerColors[i].g, markerColors[i].b);
+      scaleAttr.setXYZ(i, markerData[i].baseScale);
     }
     instancedMarkers.instanceColor = colorAttr;
     instancedMarkers.instanceMatrix.needsUpdate = true;
@@ -2075,6 +2110,7 @@
     const instancedGlows = new THREE.InstancedMesh(glowGeometry, glowMat, count);
     for (let i = 0; i < count; i++) {
       dummy.position.copy(markerPositions[i]);
+      dummy.scale.set(markerData[i].baseScale * 2, markerData[i].baseScale * 2, markerData[i].baseScale * 2);
       dummy.updateMatrix();
       instancedGlows.setMatrixAt(i, dummy.matrix);
     }
@@ -2090,7 +2126,7 @@
       data.instanceScale = 1;
       data.instanceOpacity = 1.0;
       data.glowOpacity = 0.28;
-      markerMeshes.push(data); // reuse markerMeshes array for filter/tooltip logic
+      markerMeshes.push(data);
     }
     globe.add(markerGroup);
     globe.add(continentGroup);
@@ -2261,13 +2297,18 @@
       if (activeFilters.region !== 'All' && data.region !== activeFilters.region) return false;
       if (activeFilters.topic !== 'All' && data.topic !== activeFilters.topic) return false;
       if (activeFilters.time !== 'all') {
-        const published = data.article.published;
-        if (!published) return false;
-        const pubTime = Date.parse(published);
-        if (isNaN(pubTime)) return false;
-        const hoursAgo = (Date.now() - pubTime) / (1000 * 60 * 60);
-        if (activeFilters.time === '6h' && hoursAgo > 6) return false;
-        if (activeFilters.time === '24h' && hoursAgo > 24) return false;
+        // Check if any article in the cluster matches the time filter
+        const matchesTime = data.articles.some(a => {
+          const published = a.published;
+          if (!published) return false;
+          const pubTime = Date.parse(published);
+          if (isNaN(pubTime)) return false;
+          const hoursAgo = (Date.now() - pubTime) / (1000 * 60 * 60);
+          if (activeFilters.time === '6h' && hoursAgo > 6) return false;
+          if (activeFilters.time === '24h' && hoursAgo > 24) return false;
+          return true;
+        });
+        if (!matchesTime) return false;
       }
       return true;
     }
@@ -2309,11 +2350,25 @@
         if (data !== hoveredData) {
           hoveredIdx = idx;
           hoveredData = data;
-          const art = data.article;
-          const bullets = summaryBullets(art.ai_summary);
-          tooltip.innerHTML = `<div class="tooltip-title">${escapeHtml(art.title)}</div>
-            <div class="tooltip-source">${escapeHtml(art.source)} · ${escapeHtml(data.city)} · ${escapeHtml(data.topic)}</div>
-            <ul class="tooltip-summary">${bullets.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`;
+          const cnt = data.articles.length;
+          const first = data.articles[0];
+          let html;
+          if (cnt > 1) {
+            html = `<div class="tooltip-title">📦 ${cnt} articles &middot; ${escapeHtml(data.city)}</div>`;
+            html += `<div class="tooltip-source">${escapeHtml(data.topic)} &middot; ${escapeHtml(data.region)}</div>`;
+            html += '<div class="tooltip-summary" style="margin-top:6px;padding-left:0">';
+            data.articles.slice(0, 6).forEach(a => {
+              html += `<div style="font-size:12px;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.06)">${escapeHtml(a.title)}</div>`;
+            });
+            if (cnt > 6) html += `<div style="font-size:11px;color:rgba(136,146,182,0.6);margin-top:4px">+ ${cnt - 6} more</div>`;
+            html += '</div>';
+          } else {
+            const bullets = summaryBullets(first.ai_summary);
+            html = `<div class="tooltip-title">${escapeHtml(first.title)}</div>`;
+            html += `<div class="tooltip-source">${escapeHtml(first.source)} &middot; ${escapeHtml(data.city)} &middot; ${escapeHtml(data.topic)}</div>`;
+            html += `<ul class="tooltip-summary">${bullets.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`;
+          }
+          tooltip.innerHTML = html;
           tooltip.style.transition = 'none';
           // Position tooltip using instanced mesh position
           const dummy = new THREE.Object3D();
@@ -2460,8 +2515,9 @@
         const op = isHovered ? 1 : 0.82 + Math.sin(elapsed * 2.2 + i) * 0.12;
         data.instanceOpacity += (op - data.instanceOpacity) * 0.18;
         const gop = isHovered ? 0.50 : 0.22 + Math.sin(elapsed * 1.8 + i) * 0.08;
-        // Density cap: reduce glow in crowded clusters to prevent white bloom
-        data.glowOpacity += (gop * (data.densityScale || 1) - data.glowOpacity) * 0.18;
+        // Cluster density: reduce glow in large clusters so additive blending doesn't bloom
+        const clusterDensity = Math.min(1, 4 / (data._groupSize || 1));
+        data.glowOpacity += (gop * clusterDensity - data.glowOpacity) * 0.18;
 
         if (Math.abs(s - prev) > 0.001) {
           instancedMarkers.getMatrixAt(i, dummy.matrix);
