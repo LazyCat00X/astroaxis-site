@@ -2021,6 +2021,10 @@
     // Distribute each group in a 2D spiral to avoid overlap
     Object.values(locationGroups).forEach((group, gIdx) => {
       const { baseLat, baseLon, city } = group[0];
+      const groupSize = group.length;
+      // Density cap: in dense groups, reduce individual glow brightness
+      // so additive blending doesn't create white blobs
+      const densityScale = Math.min(1, 5 / groupSize);
       group.forEach((item, i) => {
         // Archimedean spiral: angle grows linearly, radius grows as sqrt(i)
         const turns = (1 + Math.sqrt(5)) / 2 - 1; // ~0.618, golden ratio — no repeating angles
@@ -2041,6 +2045,7 @@
           article, topic, city, color,
           region: regionFor(baseLat, baseLon),
           baseScale: 1,
+          densityScale,
           _index: item.index,
         });
       });
@@ -2211,9 +2216,9 @@
         cx.font = `bold ${fontSize}px Inter, sans-serif`;
         cx.textAlign = 'center';
         cx.textBaseline = 'middle';
-        cx.shadowColor = 'rgba(0,0,0,0.8)';
-        cx.shadowBlur = 14;
-        cx.fillStyle = '#f0fcff';
+        cx.shadowColor = 'rgba(0,0,0,0.9)';
+        cx.shadowBlur = 18;
+        cx.fillStyle = '#ffffff';
         cx.fillText(entry.name, 512, 80);
         cx.shadowBlur = 0;
         const tex = new THREE.CanvasTexture(c);
@@ -2448,7 +2453,8 @@
         const op = isHovered ? 1 : 0.82 + Math.sin(elapsed * 2.2 + i) * 0.12;
         data.instanceOpacity += (op - data.instanceOpacity) * 0.18;
         const gop = isHovered ? 0.50 : 0.22 + Math.sin(elapsed * 1.8 + i) * 0.08;
-        data.glowOpacity += (gop - data.glowOpacity) * 0.18;
+        // Density cap: reduce glow in crowded clusters to prevent white bloom
+        data.glowOpacity += (gop * (data.densityScale || 1) - data.glowOpacity) * 0.18;
 
         if (Math.abs(s - prev) > 0.001) {
           instancedMarkers.getMatrixAt(i, dummy.matrix);
