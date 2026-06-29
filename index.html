@@ -749,9 +749,22 @@
     // ── Feed ──
     function renderFeed() {
       const articles = NEWS_DATA.articles || [];
-      if (!articles.length) { document.getElementById('feed-content').innerHTML = '<p style="color:rgba(136,136,160,0.7);text-align:center;padding:40px">No articles yet.</p>'; return; }
+      // Apply active filters (topic & time)
+      const filtered = articles.filter(a => {
+        // Topic filter
+        if (activeFilters.topic !== 'All' && a.topic !== activeFilters.topic) return false;
+        // Time filter
+        if (activeFilters.time !== 'all') {
+          if (!a.published) return false;
+          const hoursAgo = (Date.now() - Date.parse(a.published)) / (1000 * 60 * 60);
+          if (activeFilters.time === '6h' && hoursAgo > 6) return false;
+          if (activeFilters.time === '24h' && hoursAgo > 24) return false;
+        }
+        return true;
+      });
+      if (!filtered.length) { document.getElementById('feed-content').innerHTML = `<h2 style="font-size:24px;font-weight:700;margin-bottom:20px;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">${I18N[currentLang]?.['feed.title'] || 'AstroAxis Feed'}</h2><p style="color:rgba(136,136,160,0.7);text-align:center;padding:40px">No matching articles.</p>`; return; }
       let html = `<h2 style="font-size:24px;font-weight:700;margin-bottom:20px;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">${I18N[currentLang]?.['feed.title'] || 'AstroAxis Feed'}</h2><div class="feed-grid">`;
-      articles.slice(0, 50).forEach(a => {
+      filtered.slice(0, 50).forEach(a => {
         const biasScore = a.bias_score || 0;
         const biasCls = biasScore === 0 ? 'bias-low' : biasScore < 3 ? 'bias-med' : 'bias-high';
         const t = I18N[currentLang] || I18N['zh-HK']; const biasLabel = biasScore === 0 ? t['bias.none'] : biasScore < 3 ? t['bias.light'] : t['bias.high'];
@@ -2515,6 +2528,7 @@
           }
         }
         applyFilter();
+        renderFeed();
       });
     });
     applyFilter();
