@@ -2355,6 +2355,8 @@
         if (data !== hoveredData) {
           hoveredIdx = idx;
           hoveredData = data;
+          // Pause auto-rotate while hovering a marker
+          if (controls.autoRotate) controls.autoRotate = false;
           const cnt = data.articles.length;
           const first = data.articles[0];
           let html;
@@ -2395,24 +2397,23 @@
         hoveredIdx = -1;
         hoveredData = null;
         tooltip.classList.remove('visible');
+        // Resume auto-rotate
+        if (!controls.autoRotate) controls.autoRotate = true;
       }
     }, { passive: true });
 
     renderer.domElement.addEventListener('pointerleave', () => {
       pointer.set(-10, -10);
-      if (hoveredData) { hoveredIdx = -1; hoveredData = null; tooltip.classList.remove('visible'); }
+      if (hoveredData) { 
+        hoveredIdx = -1; hoveredData = null; tooltip.classList.remove('visible');
+        if (!controls.autoRotate) controls.autoRotate = true;
+      }
     }, { passive: true });
 
     // ── Click cluster → open articles ──
-    renderer.domElement.addEventListener('click', (event) => {
+    renderer.domElement.addEventListener('click', () => {
       if (!hoveredData || !hoveredData.articles) return;
-      const articles = hoveredData.articles;
-      if (articles.length === 1) {
-        window.open(articles[0].url, '_blank');
-      } else {
-        // Open first article for now; tooltip already shows the full list
-        window.open(articles[0].url, '_blank');
-      }
+      window.location.href = hoveredData.articles[0].url;
     });
 
     document.querySelectorAll('.filter-btn').forEach(button => {
