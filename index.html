@@ -1292,6 +1292,23 @@
         cancelAnimationFrame(history3D.animId);
         history3D.animId = null;
       }
+      // Dispose WebGL context to avoid GPU memory leak on Safari/iOS
+      if (history3D && history3D.renderer) {
+        history3D.renderer.dispose();
+        history3D.renderer.forceContextLoss();
+        history3D.renderer = null;
+      }
+      if (history3D && history3D.scene) {
+        history3D.scene.traverse(obj => {
+          if (obj.geometry) obj.geometry.dispose();
+          if (obj.material) {
+            if (obj.material.map) obj.material.map.dispose();
+            obj.material.dispose();
+          }
+        });
+        history3D.scene = null;
+      }
+      history3D = null;
     }
 
     // Update nav click handler to init/stop 3D History
