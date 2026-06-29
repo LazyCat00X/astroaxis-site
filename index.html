@@ -2070,11 +2070,12 @@
         cx.shadowBlur = 0;
         const tex = new THREE.CanvasTexture(c);
         tex.minFilter = THREE.LinearFilter;
-        const spriteMat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.92, depthWrite: false, depthTest: false });
+        const spriteMat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.95, depthWrite: false, depthTest: false });
         const sprite = new THREE.Sprite(spriteMat);
+        sprite.renderOrder = 10;
         sprite.position.copy(pos);
         sprite.position.setLength(R * 1.075);
-        const s = Math.min(0.6, 0.2 + groupSize * 0.035);
+        const s = Math.min(0.8, 0.25 + groupSize * 0.05);
         sprite.scale.set(s, s * 0.5, 1);
         countSprites.push(sprite);
       }
