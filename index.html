@@ -203,18 +203,67 @@
     .hud {
       position: absolute;
       left: clamp(20px, 5vw, 72px);
-      top: clamp(24px, 6vh, 72px);
-      z-index: 2;
+      top: 68px;
+      z-index: 4;
       pointer-events: none;
-      max-width: min(780px, calc(100vw - 40px));
-      padding: clamp(16px, 2.6vw, 24px);
+      max-width: clamp(210px, 22vw, 320px);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .hud-content-inner {
       border: 1px solid rgba(103, 232, 249, 0.12);
       border-radius: 28px;
+      padding: clamp(16px, 2.6vw, 24px);
       background: linear-gradient(135deg, rgba(5, 11, 28, 0.50), rgba(5, 8, 20, 0.18));
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 44px rgba(34, 211, 238, 0.08);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       text-shadow: 0 0 24px rgba(34, 211, 238, 0.28);
+    }
+    .hud.collapsed {
+      transform: translateX(-120%);
+      opacity: 0;
+    }
+    .hud-toggle {
+      position: absolute;
+      left: 100%;
+      top: 20px;
+      z-index: 5;
+      pointer-events: auto;
+      background: rgba(7,10,22,0.8);
+      border: 1px solid rgba(103,232,249,0.3);
+      border-left: none;
+      border-radius: 0 8px 8px 0;
+      color: var(--cyan);
+      cursor: pointer;
+      font-size: 14px;
+      padding: 8px 6px;
+      line-height: 1;
+      transition: background 0.2s;
+    }
+    .hud-toggle:hover { background: rgba(34,211,238,0.2); }
+    .hud.collapsed + .hud-toggle { left: auto; right: -28px; }
+    /* ── Legend items inside hud ── */
+    .hud-legend {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 10px;
+      pointer-events: auto;
+    }
+    .hud-legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      color: rgba(238,247,255,0.6);
+      letter-spacing: 0.03em;
+    }
+    .hud-legend-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
     }
 
     .eyebrow {
@@ -504,10 +553,26 @@
 <div id="globe-view" class="view-panel active">
   <main id="hero" aria-label="AstroAxis hologram globe hero">
     <canvas id="globe-canvas"></canvas>
-    <section class="hud" aria-hidden="true">
+    <section class="hud" id="hud-panel" aria-hidden="true">
+      <button id="hud-toggle" class="hud-toggle" title="Toggle panel">◀</button>
+      <div id="hud-content">
+      <div class="hud-content-inner">
       <div class="eyebrow" data-i18n="hud.eyebrow">LIVE SIGNAL MAP</div>
       <h1>AstroAxis</h1>
       <p class="subline" data-i18n="hud.subline">AI-powered world news aggregator</p>
+      <div class="hud-legend">
+        <span class="hud-legend-item"><span class="hud-legend-dot" style="background:#f97316"></span>Bitcoin</span>
+        <span class="hud-legend-item"><span class="hud-legend-dot" style="background:#818cf8"></span>Ethereum</span>
+        <span class="hud-legend-item"><span class="hud-legend-dot" style="background:#22c55e"></span>DeFi</span>
+        <span class="hud-legend-item"><span class="hud-legend-dot" style="background:#3b82f6"></span>AI</span>
+        <span class="hud-legend-item"><span class="hud-legend-dot" style="background:#ef4444"></span>Regulation</span>
+        <span class="hud-legend-item"><span class="hud-legend-dot" style="background:#eab308"></span>Policy</span>
+        <span class="hud-legend-item"><span class="hud-legend-dot" style="background:#6366f1"></span>Crypto</span>
+        <span class="hud-legend-item"><span class="hud-legend-dot" style="background:#22d3ee"></span>Finance</span>
+        <span class="hud-legend-item"><span class="hud-legend-dot" style="background:#a78bfa"></span>Tech</span>
+      </div><!-- /hud-legend -->
+      </div><!-- /hud-content-inner -->
+    </div><!-- /hud-content -->
     </section>
     <div id="article-tooltip" class="article-tooltip" role="status" aria-live="polite"></div>
     <div id="country-label" class="country-label"><span class="country-name" id="country-label-name"></span><span class="country-count" id="country-label-count"></span></div>
@@ -1337,7 +1402,7 @@
     const scene = new THREE.Scene();
     scene.fog = new THREE.FogExp2(0x000005, 0.018);
 
-    const camera = new THREE.PerspectiveCamera(36, window.innerWidth / window.innerHeight, 0.1, 120);
+    const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 120);
     camera.position.set(0, 1.2, 12.2);
 
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
@@ -1928,8 +1993,8 @@
         [baseLat, baseLon, city] = srcLoc;
       }
 
-      const latOffset = (Math.random() - 0.5) * 1.6;
-      const lonOffset = (Math.random() - 0.5) * 2.4;
+      const latOffset = (Math.random() - 0.5) * 8;
+      const lonOffset = (Math.random() - 0.5) * 12;
       const lat = THREE.MathUtils.clamp(baseLat + latOffset, -90, 90);
       const lon = THREE.MathUtils.clamp(baseLon + lonOffset, -180, 180);
 
@@ -1997,7 +2062,7 @@
     const countryCountEl = document.getElementById('country-label-count');
     const countryLabelEl = document.getElementById('country-label');
     let lastCountryLabel = null;
-    const ZOOM_THRESHOLD = 10.5;
+    const ZOOM_THRESHOLD = 18;
 
     // Ray-casting point-in-polygon in 2D lon/lat space
     function pointInRing(lon, lat, ring) {
@@ -2102,20 +2167,20 @@
         const pos = latLonToVec3(lat, lon, R * 1.045);
         // Create fresh canvas per country to avoid texture cross-contamination
         const c = document.createElement('canvas');
-        c.width = 512; c.height = 128;
+        c.width = 1024; c.height = 160;
         const cx = c.getContext('2d');
-        // Calculate label size from country bounding box area
+        // Calculate label size from country bounding box area — subtle variation
         const area = (entry.bbox[2] - entry.bbox[0]) * (entry.bbox[3] - entry.bbox[1]);
-        const scaleFactor = Math.sqrt(Math.abs(area)) / 6; // normalize
-        const labelScale = Math.min(2.5, Math.max(0.4, scaleFactor));
-        const fontSize = Math.round(28 + 28 * Math.min(1, scaleFactor));
+        const scaleFactor = Math.sqrt(Math.abs(area)) / 6;
+        const labelScale = Math.min(1.6, Math.max(0.6, scaleFactor));
+        const fontSize = Math.round(30 + 14 * Math.min(1, scaleFactor));
         cx.font = `bold ${fontSize}px Inter, sans-serif`;
         cx.textAlign = 'center';
         cx.textBaseline = 'middle';
         cx.shadowColor = 'rgba(0,0,0,0.8)';
         cx.shadowBlur = 14;
         cx.fillStyle = '#f0fcff';
-        cx.fillText(entry.name, 256, 64);
+        cx.fillText(entry.name, 512, 80);
         cx.shadowBlur = 0;
         const tex = new THREE.CanvasTexture(c);
         tex.minFilter = THREE.LinearFilter;
@@ -2314,6 +2379,16 @@
     window.addEventListener('resize', resize, { passive: true });
     resize();
 
+    // ── HUD toggle ──
+    const hudPanel = document.getElementById('hud-panel');
+    const hudToggle = document.getElementById('hud-toggle');
+    if (hudToggle && hudPanel) {
+      hudToggle.addEventListener('click', () => {
+        hudPanel.classList.toggle('collapsed');
+        hudToggle.textContent = hudPanel.classList.contains('collapsed') ? '▶' : '◀';
+      });
+    }
+
     function animate() {
       const elapsed = clock.getElapsedTime();
 
@@ -2423,9 +2498,9 @@
             sprite.material.opacity = 0; return;
           }
 
-          // Distance fade: visible only in a specific range
+          // Distance fade: labels visible across a wider range
           const opacity = Math.min(1, Math.max(0,
-            1 - Math.abs(camDist - 9) / 4
+            1 - Math.abs(camDist - 11) / 7
           ));
           sprite.material.opacity = opacity;
 
