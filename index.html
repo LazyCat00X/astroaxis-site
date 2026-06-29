@@ -1596,7 +1596,7 @@
     const LAND_TEXTURE_SIMPLIFY_TOLERANCE = 0.25;
     const MIN_OUTLINE_AREA = 0.12;
 
-    const textureSize = window.innerWidth < 768 ? 1024 : 2048;
+    const textureSize = window.innerWidth < 768 ? 1024 : (window.innerWidth < 1440 ? 2048 : 4096);
     const landCanvas = document.createElement('canvas');
     landCanvas.width = textureSize;
     landCanvas.height = textureSize / 2;
