@@ -2564,7 +2564,10 @@
             const local = hitWorld.sub(globeCenter).applyQuaternion(globe.quaternion.clone().invert());
             const nx = local.x / R, ny = local.y / R, nz = local.z / R;
             const lat = 90 - THREE.MathUtils.radToDeg(Math.acos(Math.min(1, Math.max(-1, ny))));
-            const lon = THREE.MathUtils.radToDeg(Math.atan2(nz, -nx)) - 180;
+            let lon = THREE.MathUtils.radToDeg(Math.atan2(nz, -nx)) - 180;
+            // Normalize to -180..180 so findCountry matches country bboxes correctly
+            while (lon < -180) lon += 360;
+            while (lon > 180) lon -= 360;
             const country = findCountry(lon, lat);
             if (country && country !== lastCountryLabel) {
               countryNameEl.textContent = country.name;
