@@ -4,8 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AstroAxis — AI-powered world news aggregator</title>
-  <meta name="description" content="AstroAxis — AI-powered world news aggregator" />
+  <meta name="description" content="AstroAxis — AI-powered world news aggregator with 3D globe, AI summaries, and real-time crypto/finance news" />
   <link rel="canonical" href="https://lazycat00x.github.io/astroaxis-site/" />
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="AstroAxis — AI-powered world news aggregator" />
+  <meta property="og:description" content="Interactive 3D globe with real-time news. AI summaries. Crypto. Finance. Tech." />
+  <meta property="og:image" content="https://lazycat00x.github.io/astroaxis-site/og-image.png" />
+  <meta property="og:url" content="https://lazycat00x.github.io/astroaxis-site/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AstroAxis — AI-powered world news aggregator" />
+  <meta name="twitter:description" content="Interactive 3D globe with real-time news. AI summaries." />
+  <meta name="twitter:image" content="https://lazycat00x.github.io/astroaxis-site/og-image.png" />
   <style>
     :root {
       --bg: #050611;
@@ -568,6 +578,25 @@
       cursor: grab; touch-action: none;
     }
     #history3d-canvas:active { cursor: grabbing; }
+    /* Error banner */
+    .error-banner {
+      position: fixed; top: 52px; left: 0; right: 0; z-index: 16;
+      background: linear-gradient(90deg, rgba(239,68,68,.15), rgba(239,68,68,.06));
+      border-bottom: 1px solid rgba(239,68,68,.3);
+      padding: 8px 20px; font-size: 13px; color: #fca5a5; text-align: center;
+      backdrop-filter: blur(8px); display: none; font-weight: 500;
+    }
+    .error-banner.show { display: block; }
+    /* Mobile fixes */
+    @media(max-width:768px){
+      .top-nav{gap:4px;padding:8px 10px}
+      .top-nav .logo{font-size:14px;margin-right:6px}
+      .nav-btn{font-size:10px;padding:5px 9px}
+      .filter-bar{border-radius:16px;bottom:8px;gap:3px;padding:6px}
+      .filter-btn{font-size:9px;padding:4px 6px}
+      .hud{left:8px;top:52px;max-width:180px}
+      .breach-banner,.error-banner{top:44px;font-size:12px;padding:6px 12px}
+    }
   </style>
 </head>
 <body>
@@ -620,6 +649,11 @@
 <!-- Breaking news banner -->
 <div class="breach-banner" id="breachBanner">
   ⚠️ <strong data-i18n="alert.breaking">BREAKING:</strong> <span id="breachText">Major event detected</span><span id="breachSource" style="color:rgba(255,255,255,0.4);font-weight:400;font-size:13px"></span>
+</div>
+
+<!-- Error / data-freshness banner -->
+<div class="error-banner" id="errorBanner">
+  ⚡ <span id="errorText">Some news sources are currently unavailable</span><span id="errorCount" style="color:rgba(255,255,255,0.35);font-weight:400;font-size:12px;margin-left:6px"></span>
 </div>
 
 <div id="globe-view" class="view-panel active" role="tabpanel" aria-label="Globe view">
@@ -698,6 +732,8 @@
 <!-- Screen reader announcements (visually hidden) -->
 <div id="a11y-live" aria-live="polite" aria-atomic="true"></div>
 
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
@@ -3021,6 +3057,59 @@
         renderFeed();
       };
       fb.appendChild(clear);
+    })();
+
+    // ── Personalization: track topic interest ──
+    (function(){
+      function getInterests(){ try{return JSON.parse(localStorage.getItem('astroaxis_interests')||'{}');}catch(e){return{};} }
+      function trackInterest(topic){
+        if(!topic || topic==='General') return;
+        const interests = getInterests();
+        interests[topic] = (interests[topic]||0) + 1;
+        localStorage.setItem('astroaxis_interests', JSON.stringify(interests));
+      }
+      // Track filter button clicks
+      document.querySelectorAll('.filter-btn[data-filter-type="topic"]').forEach(btn => {
+        btn.addEventListener('click', () => trackInterest(btn.dataset.filterValue));
+      });
+      // Track feed article clicks
+      document.getElementById('feed-content')?.addEventListener('click', e => {
+        const card = e.target.closest('.feed-card');
+        if(!card) return;
+        const topic = card.querySelector('.card-topic')?.textContent;
+        if(topic) trackInterest(topic);
+      });
+      // Highlight top interest on next visit
+      const interests = getInterests();
+      const topTopic = Object.entries(interests).sort((a,b)=>b[1]-a[1])[0];
+      if(topTopic){
+        const btn = document.querySelector(`.filter-btn[data-filter-value="${topTopic[0]}"]`);
+        if(btn){ btn.style.boxShadow = '0 0 14px rgba(34,211,238,.35)'; btn.style.borderColor = 'rgba(34,211,238,.5)'; }
+      }
+    })();
+
+    // ── Error/freshness check ──
+    (function(){
+      const articles = NEWS_DATA.articles || [];
+      if(!articles.length){
+        const eb = document.getElementById('errorBanner');
+        if(eb){ eb.classList.add('show'); document.getElementById('errorText').textContent = 'No news data available. Pipeline may be offline.'; }
+        return;
+      }
+      // Check freshness: if newest article > 12h, show stale warning
+      const newest = articles.reduce((max, a) => {
+        if(!a.published) return max;
+        const d = new Date(a.published).getTime();
+        return d > max ? d : max;
+      }, 0);
+      const hoursSince = (Date.now() - newest) / 3600000;
+      if(hoursSince > 12 && newest > 0){
+        const eb = document.getElementById('errorBanner');
+        if(eb){
+          eb.classList.add('show');
+          document.getElementById('errorText').textContent = `Data may be stale — last update ${Math.floor(hoursSince)}h ago`;
+        }
+      }
     })();
 
     animate();
