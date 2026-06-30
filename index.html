@@ -1577,6 +1577,10 @@
         );
         e.preventDefault();
       }
+      // Block unhandled keys in globe view to prevent browser focus nav
+      if (globeView && globeView.classList.contains('active') && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        e.preventDefault();
+      }
     });
     setTimeout(() => { document.documentElement.lang = currentLang; applyLanguage(); checkBreaking(); setInterval(checkBreaking, 300000); }, 100);
 
