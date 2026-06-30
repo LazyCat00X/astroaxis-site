@@ -1512,7 +1512,10 @@
 
     // ── Keyboard navigation ──
     document.addEventListener('keydown', (e) => {
+      // Block F7/F caret browsing
+      if (e.key === 'F7' || e.key === 'F' || e.key === 'f') { e.preventDefault(); return; }
       // Number keys 1-4: switch views
+      const globeView = document.getElementById('globe-view');
       const viewMap = { '1': 'globe', '2': 'timeline', '3': 'feed', '4': 'history3d' };
       if (e.key in viewMap && !e.ctrlKey && !e.metaKey && !e.altKey) {
         const target = viewMap[e.key];
@@ -1581,7 +1584,7 @@
       if (globeView && globeView.classList.contains('active') && !e.ctrlKey && !e.metaKey && !e.altKey) {
         e.preventDefault();
       }
-    });
+    }, {capture: true});
     setTimeout(() => { document.documentElement.lang = currentLang; applyLanguage(); checkBreaking(); setInterval(checkBreaking, 300000); }, 100);
 
     // ── Existing globe code below ──
