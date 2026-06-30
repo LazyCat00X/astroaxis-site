@@ -699,7 +699,7 @@
     </nav>
     <div class="scanline"></div>
     <div class="vignette"></div>
-    <div class="hint" data-i18n="hint.drag">🖱 DRAG · 🖮 ARROWS+± KEYS · 🔍 ZOOM OUT FOR HISTORY</div>
+    <div class="hint" data-i18n="hint.drag">🖱 DRAG · ←→ ROTATE · ↑↓ ZOOM · 1-4 VIEWS</div>
     <div class="scroll-hint" aria-hidden="true" data-i18n="hint.scroll">↓ scroll for articles</div>
   </main>
 </div><!-- /globe-view -->
@@ -1540,20 +1540,30 @@
         return;
       }
 
-      // Arrow keys on globe view: rotate globe via OrbitControls
+      // Arrow keys: Left/Right rotate, Up/Down zoom
       const globeView = document.getElementById('globe-view');
       if (globeView && globeView.classList.contains('active')) {
         const step = 0.08;
         if (e.key === 'ArrowLeft') { controls.target.y += step * 1.2; e.preventDefault(); }
         if (e.key === 'ArrowRight') { controls.target.y -= step * 1.2; e.preventDefault(); }
-        if (e.key === 'ArrowUp') { controls.target.x -= step * 1.5; e.preventDefault(); }
-        if (e.key === 'ArrowDown') { controls.target.x += step * 1.5; e.preventDefault(); }
+        if (e.key === 'ArrowUp') {
+          const camDist = camera.position.distanceTo(controls.target);
+          const newDist = Math.max(controls.minDistance, camDist - 1.5);
+          camera.position.copy(controls.target).add(camera.position.clone().sub(controls.target).normalize().multiplyScalar(newDist));
+          e.preventDefault();
+        }
+        if (e.key === 'ArrowDown') {
+          const camDist = camera.position.distanceTo(controls.target);
+          const newDist = Math.min(controls.maxDistance, camDist + 3.0);
+          camera.position.copy(controls.target).add(camera.position.clone().sub(controls.target).normalize().multiplyScalar(newDist));
+          e.preventDefault();
+        }
       }
 
-      // +/- zoom for globe view
+      // +/- zoom for globe view (keep for numpad/non-arrow users)
       if (e.key === '+' || e.key === '=') {
         const camDist = camera.position.distanceTo(controls.target);
-        const newDist = Math.max(controls.minDistance, camDist - 0.5);
+        const newDist = Math.max(controls.minDistance, camDist - 1.5);
         camera.position.copy(controls.target).add(
           camera.position.clone().sub(controls.target).normalize().multiplyScalar(newDist)
         );
