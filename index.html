@@ -700,7 +700,6 @@
     <div class="scanline"></div>
     <div class="vignette"></div>
     <div class="hint" data-i18n="hint.drag">DRAG TO ROTATE · CLICK MARKERS FOR FULL STORY</div>
-    <button id="history-toggle" style="position:absolute;right:clamp(16px,4vw,48px);bottom:clamp(50px,12vh,90px);z-index:6;background:rgba(7,10,22,.7);border:1px solid rgba(103,232,249,.25);border-radius:12px;color:rgba(238,247,255,.5);cursor:pointer;font-size:18px;padding:8px 12px;transition:all .2s;pointer-events:auto" title="Toggle history rings" onmouseover="this.style.color='#eaffff';this.style.borderColor='rgba(34,211,238,.5)'" onmouseout="this.style.color='rgba(238,247,255,.5)';this.style.borderColor='rgba(103,232,249,.25)'">🔭</button>
     <div class="scroll-hint" aria-hidden="true" data-i18n="hint.scroll">↓ scroll for articles</div>
   </main>
 </div><!-- /globe-view -->
@@ -2848,32 +2847,6 @@
         historyGroup.add(dot);
       });
     });
-
-    // 🔭 Toggle history rings view
-    (function(){
-      const btn = document.getElementById('history-toggle');
-      if(!btn) return;
-      let zoomedOut = false;
-      btn.addEventListener('click', () => {
-        zoomedOut = !zoomedOut;
-        const targetDist = zoomedOut ? 22 : 12;
-        const dir = camera.position.clone().sub(controls.target).normalize();
-        const animateZoom = () => {
-          const cur = camera.position.distanceTo(controls.target);
-          const next = cur + (targetDist - cur) * 0.15;
-          if (Math.abs(next - targetDist) < 0.1) {
-            camera.position.copy(controls.target).add(dir.clone().multiplyScalar(targetDist));
-            controls.update();
-            btn.textContent = zoomedOut ? '🔬' : '🔭';
-            return;
-          }
-          camera.position.copy(controls.target).add(dir.clone().multiplyScalar(next));
-          controls.update();
-          requestAnimationFrame(animateZoom);
-        };
-        animateZoom();
-      });
-    })();
 
     function resize() {
       const w = window.innerWidth;
