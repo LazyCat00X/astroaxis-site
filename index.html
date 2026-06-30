@@ -3087,13 +3087,17 @@
         const topic = card.querySelector('.card-topic')?.textContent;
         if(topic) trackInterest(topic);
       });
-      // Highlight top interest on next visit
+      // Highlight top interest on next visit (just 1 click triggers)
       const interests = getInterests();
       const topTopic = Object.entries(interests).sort((a,b)=>b[1]-a[1])[0];
-      if(topTopic && topTopic[1] >= 2){
+      if(topTopic && topTopic[1] >= 1){
         const btn = document.querySelector(`.filter-btn[data-filter-value="${topTopic[0]}"]`);
         if(btn){
-          btn.style.cssText += ';box-shadow:0 0 18px rgba(34,211,238,.45),inset 0 0 12px rgba(34,211,238,.1)!important;border-color:rgba(34,211,238,.65)!important;background:rgba(34,211,238,.18)!important;animation:interestPulse 2.2s ease-in-out infinite';
+          btn.style.setProperty('box-shadow','0 0 22px rgba(34,211,238,.5), inset 0 0 14px rgba(34,211,238,.12)','important');
+          btn.style.setProperty('border-color','rgba(34,211,238,.7)','important');
+          btn.style.setProperty('background','rgba(34,211,238,.2)','important');
+          btn.style.setProperty('color','#eaffff','important');
+          btn.style.setProperty('animation','interestPulse 2s ease-in-out infinite','important');
         }
       }
     })();
