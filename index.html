@@ -3061,7 +3061,7 @@
       const hideOverlay = () => {
         clearInterval(tick);
         overlay.style.opacity = '0';
-        setTimeout(() => { overlay.remove(); }, 600);
+        setTimeout(() => { overlay.remove(); document.body.focus(); }, 600);
         if(!localStorage.getItem('astroaxis_seen_onboarding')) {
           setTimeout(() => {
             const ob = document.getElementById('onboarding-overlay');
