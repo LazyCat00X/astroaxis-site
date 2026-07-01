@@ -600,7 +600,7 @@
     }
   </style>
 </head>
-<body>
+<body tabindex="-1">
 
 <!-- Loading Spinner -->
 <div id="loading-overlay" style="position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;background:#02030a;transition:opacity .5s">
@@ -1487,11 +1487,12 @@
         });
         btn.classList.add('active');
         btn.setAttribute('aria-selected', 'true');
-        btn.tabIndex = 0;
-        // Focus: for globe view, focus body so arrow keys rotate globe instead of switching tabs
+        // Globe view: ALL nav btns tabindex=-1 so ARIA tablist doesn't steal arrow keys
+        // Other views: active btn tabindex=0 for Tab navigation
+        btn.tabIndex = (btn.dataset.view === 'globe') ? -1 : 0;
         if (btn.dataset.view === 'globe') {
-          // Defer to override browser ARIA tab auto-focus
-          setTimeout(() => document.body.focus(), 0);
+          // Focus body immediately — body has tabindex=-1 so it's focusable on all platforms
+          document.body.focus();
         } else {
           btn.focus();
         }
@@ -1522,15 +1523,6 @@
       if (e.key === 'F7') { e.preventDefault(); return; }
       // Number keys 1-4: switch views
       const globeView = document.getElementById('globe-view');
-      
-      // Globe view: blur any focused nav tab so arrow keys rotate globe instead of switching tabs
-      if (globeView && globeView.classList.contains('active')) {
-        const ae = document.activeElement;
-        if (ae && ae.getAttribute('role') === 'tab') {
-          ae.blur();
-          document.body.focus();
-        }
-      }
       
       const viewMap = { '1': 'globe', '2': 'timeline', '3': 'feed', '4': 'history3d' };
       if (e.key in viewMap && !e.ctrlKey && !e.metaKey && !e.altKey) {
