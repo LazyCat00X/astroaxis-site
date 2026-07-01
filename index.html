@@ -1488,7 +1488,12 @@
         btn.classList.add('active');
         btn.setAttribute('aria-selected', 'true');
         btn.tabIndex = 0;
-        btn.focus();
+        // Focus: for globe view, focus body so arrow keys rotate globe instead of switching tabs
+        if (btn.dataset.view === 'globe') {
+          document.body.focus();
+        } else {
+          btn.focus();
+        }
         document.querySelectorAll('.view-panel').forEach(p => p.classList.remove('active'));
         const view = document.getElementById(btn.dataset.view + '-view');
         if (view) view.classList.add('active');
@@ -1512,10 +1517,20 @@
 
     // ── Keyboard navigation ──
     document.addEventListener('keydown', (e) => {
-      // Block F7/F caret browsing
-      if (e.key === 'F7' || e.key === 'F' || e.key === 'f') { e.preventDefault(); return; }
+      // Block F7 caret browsing only — allow normal F/f key usage
+      if (e.key === 'F7') { e.preventDefault(); return; }
       // Number keys 1-4: switch views
       const globeView = document.getElementById('globe-view');
+      
+      // Globe view: blur any focused nav tab so arrow keys rotate globe instead of switching tabs
+      if (globeView && globeView.classList.contains('active')) {
+        const ae = document.activeElement;
+        if (ae && ae.getAttribute('role') === 'tab') {
+          ae.blur();
+          document.body.focus();
+        }
+      }
+      
       const viewMap = { '1': 'globe', '2': 'timeline', '3': 'feed', '4': 'history3d' };
       if (e.key in viewMap && !e.ctrlKey && !e.metaKey && !e.altKey) {
         const target = viewMap[e.key];
@@ -3101,6 +3116,8 @@
     document.getElementById('onboarding-close')?.addEventListener('click', () => {
       document.getElementById('onboarding-overlay').style.display = 'none';
       localStorage.setItem('astroaxis_seen_onboarding', '1');
+      // Focus body so keyboard shortcuts work immediately after dismissing onboarding
+      setTimeout(() => document.body.focus(), 100);
     });
 
     // ── Bookmarks (localStorage) ──
