@@ -1561,8 +1561,8 @@
         const isZoomIn  = e.key === 'q' || e.key === '+' || e.key === '=';
         const isZoomOut = e.key === 'e' || e.key === '-';
         // Spin left/right
-        if (isLeft)  { globe.rotation.y -= 0.12; }
-        if (isRight) { globe.rotation.y += 0.12; }
+        if (isLeft)  { globe.rotation.y += 0.12; }
+        if (isRight) { globe.rotation.y -= 0.12; }
         // Tilt up/down (rotate camera around center)
         if (isUp || isDown) {
           const offset = camera.position.clone().sub(controls.target);
