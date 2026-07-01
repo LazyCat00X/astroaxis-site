@@ -1573,8 +1573,11 @@
           camera.position.y = controls.target.y + newDist * Math.cos(phi);
           camera.position.z = controls.target.z + newDist * Math.sin(phi) * Math.cos(theta);
           camera.lookAt(controls.target);
+          // Reset OrbitControls internal state to match new position
+          controls.target.set(0, -0.4, 0);
+          controls.update();
         }
-        if (isOrbit || isZoom) { e.preventDefault(); controls.update(); pauseAutoRotate(); }
+        if (isOrbit || isZoom) { e.preventDefault(); pauseAutoRotate(); }
       }
 
       // Block unhandled keys in globe view
