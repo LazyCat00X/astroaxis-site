@@ -1560,32 +1560,22 @@
         const isDown  = e.key === 'ArrowDown'  || e.key === 's';
         const isZoomIn  = e.key === 'q' || e.key === '+' || e.key === '=';
         const isZoomOut = e.key === 'e' || e.key === '-';
-        // Spin left/right
-        if (isLeft)  { globe.rotation.y += 0.12; }
-        if (isRight) { globe.rotation.y -= 0.12; }
-        // Tilt up/down (rotate camera around center)
+        // Spin left/right → update target, lerped in animate loop
+        if (isLeft)  { targetRotationY += 0.12; }
+        if (isRight) { targetRotationY -= 0.12; }
+        // Tilt up/down → update target phi
         if (isUp || isDown) {
           const offset = camera.position.clone().sub(controls.target);
-          const dist = offset.length();
-          let phi = Math.acos(offset.y / dist);
-          phi += isUp ? -0.15 : 0.15;
-          phi = Math.max(0.15, Math.min(Math.PI - 0.15, phi));
-          const theta = Math.atan2(offset.x, offset.z);
-          camera.position.x = controls.target.x + dist * Math.sin(phi) * Math.sin(theta);
-          camera.position.y = controls.target.y + dist * Math.cos(phi);
-          camera.position.z = controls.target.z + dist * Math.sin(phi) * Math.cos(theta);
-          camera.lookAt(controls.target);
+          if (targetPhi === null) targetPhi = Math.acos(offset.y / offset.length());
+          targetPhi += isUp ? -0.12 : 0.12;
+          targetPhi = Math.max(0.15, Math.min(Math.PI - 0.15, targetPhi));
         }
-        // Zoom in/out
+        // Zoom → update target distance
         if (isZoomIn || isZoomOut) {
-          const dir = camera.position.clone().sub(controls.target).normalize();
           const delta = isZoomOut ? 0.8 : -0.8;
-          const newDist = camera.position.distanceTo(controls.target) + delta;
-          if (newDist >= controls.minDistance && newDist <= controls.maxDistance) {
-            camera.position.copy(controls.target).addScaledVector(dir, newDist);
-          }
+          targetDist = Math.max(controls.minDistance, Math.min(controls.maxDistance, targetDist + delta));
         }
-        if (isLeft || isRight || isUp || isDown || isZoomIn || isZoomOut) { e.preventDefault(); controls.update(); pauseAutoRotate(); }
+        if (isLeft || isRight || isUp || isDown || isZoomIn || isZoomOut) { e.preventDefault(); pauseAutoRotate(); }
       }
       // Block unhandled keys in globe view to prevent browser focus nav
       if (!e.defaultPrevented && globeView && globeView.classList.contains('active') && !e.ctrlKey && !e.metaKey && !e.altKey) {
@@ -2828,6 +2818,11 @@
     controls.target.set(0, -0.4, 0);
     controls.update();
 
+    // ── Smooth motion targets (lerped in animation loop) ──
+    let targetRotationY = globe.rotation.y;
+    let targetPhi = null;  // set on first tilt
+    let targetDist = camera.position.distanceTo(controls.target);
+
     // ── Auto-rotation pause/resume: idle 25s → auto-resume ──
     let autoRotateTimer = null;
     function pauseAutoRotate() {
@@ -3073,6 +3068,29 @@
       }
 
       controls.update();
+
+      // ── Smooth keyboard motion (lerp towards targets, applied after controls) ──
+      const LERP = 0.14;
+      globe.rotation.y += (targetRotationY - globe.rotation.y) * LERP;
+      if (targetPhi !== null) {
+        const offset = camera.position.clone().sub(controls.target);
+        const curPhi = Math.acos(THREE.MathUtils.clamp(offset.y / offset.length(), -1, 1));
+        const newPhi = curPhi + (targetPhi - curPhi) * LERP;
+        const curDist = offset.length();
+        const newDist = curDist + (targetDist - curDist) * LERP;
+        const theta = Math.atan2(offset.x, offset.z);
+        camera.position.x = controls.target.x + newDist * Math.sin(newPhi) * Math.sin(theta);
+        camera.position.y = controls.target.y + newDist * Math.cos(newPhi);
+        camera.position.z = controls.target.z + newDist * Math.sin(newPhi) * Math.cos(theta);
+        camera.lookAt(controls.target);
+        targetDist = newDist;
+      } else if (Math.abs(targetDist - camera.position.distanceTo(controls.target)) > 0.001) {
+        const offset = camera.position.clone().sub(controls.target).normalize();
+        const curDist = camera.position.distanceTo(controls.target);
+        const newDist = curDist + (targetDist - curDist) * LERP;
+        camera.position.copy(controls.target).addScaledVector(offset, newDist);
+      }
+
       renderer.render(scene, camera);
       requestAnimationFrame(animate);
     }
