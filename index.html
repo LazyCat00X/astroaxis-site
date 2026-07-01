@@ -1559,16 +1559,29 @@
         const isRight = e.key === 'ArrowRight' || e.key === 'd';
         const isUp    = e.key === 'ArrowUp'    || e.key === 'w';
         const isDown  = e.key === 'ArrowDown'  || e.key === 's';
-        if (isLeft)  { controls.rotateLeft(-0.12); e.preventDefault(); }
-        if (isRight) { controls.rotateLeft(0.12); e.preventDefault(); }
-        if (isUp)    { controls.dollyIn(1.15); e.preventDefault(); }
-        if (isDown)  { controls.dollyOut(1.15); e.preventDefault(); }
-        controls.update();
+        if (isLeft)  { controls.rotateLeft(-0.12); }
+        if (isRight) { controls.rotateLeft(0.12); }
+        if (isUp || isDown) {
+          const dir = camera.position.clone().sub(controls.target).normalize();
+          const delta = isUp ? -0.8 : 0.8;
+          const newDist = camera.position.distanceTo(controls.target) + delta;
+          if (newDist >= controls.minDistance && newDist <= controls.maxDistance) {
+            camera.position.copy(controls.target).addScaledVector(dir, newDist);
+          }
+        }
+        if (isLeft || isRight || isUp || isDown) { e.preventDefault(); controls.update(); }
       }
 
       // +/- zoom for globe view (keep for numpad/non-arrow users)
-      if (e.key === '+' || e.key === '=') { controls.dollyIn(1.15); e.preventDefault(); }
-      if (e.key === '-') { controls.dollyOut(1.15); e.preventDefault(); }
+      if (e.key === '+' || e.key === '=' || e.key === '-') {
+        const dir = camera.position.clone().sub(controls.target).normalize();
+        const delta = (e.key === '-') ? 0.8 : -0.8;
+        const newDist = camera.position.distanceTo(controls.target) + delta;
+        if (newDist >= controls.minDistance && newDist <= controls.maxDistance) {
+          camera.position.copy(controls.target).addScaledVector(dir, newDist);
+        }
+        e.preventDefault(); controls.update();
+      }
       // Block unhandled keys in globe view to prevent browser focus nav
       if (!e.defaultPrevented && globeView && globeView.classList.contains('active') && !e.ctrlKey && !e.metaKey && !e.altKey) {
         e.preventDefault();
