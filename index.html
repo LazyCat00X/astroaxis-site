@@ -1555,44 +1555,20 @@
       // Arrow keys: Left/Right rotate, Up/Down zoom
       // WASD alt keys (A/D rotate, W/S zoom) for systems where arrow keys are intercepted
       if (globeView && globeView.classList.contains('active')) {
-        const step = 0.08;
         const isLeft  = e.key === 'ArrowLeft'  || e.key === 'a';
         const isRight = e.key === 'ArrowRight' || e.key === 'd';
         const isUp    = e.key === 'ArrowUp'    || e.key === 'w';
         const isDown  = e.key === 'ArrowDown'  || e.key === 's';
-        if (isLeft)  { controls.target.y += step * 1.2; e.preventDefault(); }
-        if (isRight) { controls.target.y -= step * 1.2; e.preventDefault(); }
-        if (isUp) {
-          const camDist = camera.position.distanceTo(controls.target);
-          const newDist = Math.max(controls.minDistance, camDist - 1.5);
-          camera.position.copy(controls.target).add(camera.position.clone().sub(controls.target).normalize().multiplyScalar(newDist));
-          e.preventDefault();
-        }
-        if (isDown) {
-          const camDist = camera.position.distanceTo(controls.target);
-          const newDist = Math.min(controls.maxDistance, camDist + 3.0);
-          camera.position.copy(controls.target).add(camera.position.clone().sub(controls.target).normalize().multiplyScalar(newDist));
-          e.preventDefault();
-        }
+        if (isLeft)  { controls.rotateLeft(-0.12); e.preventDefault(); }
+        if (isRight) { controls.rotateLeft(0.12); e.preventDefault(); }
+        if (isUp)    { controls.dollyIn(1.15); e.preventDefault(); }
+        if (isDown)  { controls.dollyOut(1.15); e.preventDefault(); }
+        controls.update();
       }
 
       // +/- zoom for globe view (keep for numpad/non-arrow users)
-      if (e.key === '+' || e.key === '=') {
-        const camDist = camera.position.distanceTo(controls.target);
-        const newDist = Math.max(controls.minDistance, camDist - 1.5);
-        camera.position.copy(controls.target).add(
-          camera.position.clone().sub(controls.target).normalize().multiplyScalar(newDist)
-        );
-        e.preventDefault();
-      }
-      if (e.key === '-') {
-        const camDist = camera.position.distanceTo(controls.target);
-        const newDist = Math.min(controls.maxDistance, camDist + 3.0);
-        camera.position.copy(controls.target).add(
-          camera.position.clone().sub(controls.target).normalize().multiplyScalar(newDist)
-        );
-        e.preventDefault();
-      }
+      if (e.key === '+' || e.key === '=') { controls.dollyIn(1.15); e.preventDefault(); }
+      if (e.key === '-') { controls.dollyOut(1.15); e.preventDefault(); }
       // Block unhandled keys in globe view to prevent browser focus nav
       if (!e.defaultPrevented && globeView && globeView.classList.contains('active') && !e.ctrlKey && !e.metaKey && !e.altKey) {
         e.preventDefault();
