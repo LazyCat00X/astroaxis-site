@@ -701,6 +701,7 @@
     <div class="vignette"></div>
     <div class="hint" data-i18n="hint.drag">🖱 DRAG · A/D ←→ SPIN · W/S ↑↓ TILT · Q/E ZOOM · 1-4 VIEWS</div>
     <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260702-04</div>
+    <div id="orbit-dbg" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999;font:bold 48px monospace;color:#fff;background:rgba(0,0,0,.7);padding:20px 40px;border-radius:12px;pointer-events:none">⌨</div>
     <div class="scroll-hint" aria-hidden="true" data-i18n="hint.scroll">↓ scroll for articles</div>
   </main>
 </div><!-- /globe-view -->
@@ -1548,32 +1549,32 @@
 
       // Globe camera orbit
       if (globeView && globeView.classList.contains('active')) {
-        const K = 0.25; // step size
+        const K = 0.25;
+        // DEBUG: visible indicator
+        const dbg = document.getElementById('orbit-dbg');
+        if (dbg) { dbg.textContent = 'KEY: ' + e.key; dbg.style.background = '#0f0'; setTimeout(()=>{dbg.style.background='rgba(0,0,0,.7)';},200); }
+        
         const isOrbit = e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'ArrowRight' || e.key === 'd'
                      || e.key === 'ArrowUp' || e.key === 'w' || e.key === 'ArrowDown' || e.key === 's';
         const isZoom  = e.key === 'q' || e.key === '+' || e.key === '=' || e.key === 'e' || e.key === '-';
         if (isOrbit || isZoom) {
-          try {
-            const off = camera.position.clone().sub(controls.target);
-            const dist = off.length();
-            let phi = Math.acos(THREE.MathUtils.clamp(off.y / dist, -1, 1));
-            let theta = Math.atan2(off.x, off.z);
-            if (e.key === 'ArrowLeft'  || e.key === 'a') theta -= K;
-            if (e.key === 'ArrowRight' || e.key === 'd') theta += K;
-            if (e.key === 'ArrowUp'    || e.key === 'w') phi = Math.max(0.15, phi - K);
-            if (e.key === 'ArrowDown'  || e.key === 's') phi = Math.min(Math.PI - 0.15, phi + K);
-            let newDist = dist;
-            if (e.key === 'q' || e.key === '+' || e.key === '=') newDist = Math.max(controls.minDistance, dist - 1.5);
-            if (e.key === 'e' || e.key === '-') newDist = Math.min(controls.maxDistance, dist + 1.5);
-            camera.position.x = controls.target.x + newDist * Math.sin(phi) * Math.sin(theta);
-            camera.position.y = controls.target.y + newDist * Math.cos(phi);
-            camera.position.z = controls.target.z + newDist * Math.sin(phi) * Math.cos(theta);
-            camera.lookAt(controls.target);
-            controls.update();
-          } catch(err) { console.warn('orbit:', err.message); }
-          e.preventDefault();
-          pauseAutoRotate();
+          const off = camera.position.clone().sub(controls.target);
+          const dist = off.length();
+          let phi = Math.acos(THREE.MathUtils.clamp(off.y / dist, -1, 1));
+          let theta = Math.atan2(off.x, off.z);
+          if (e.key === 'ArrowLeft'  || e.key === 'a') theta -= K;
+          if (e.key === 'ArrowRight' || e.key === 'd') theta += K;
+          if (e.key === 'ArrowUp'    || e.key === 'w') phi = Math.max(0.15, phi - K);
+          if (e.key === 'ArrowDown'  || e.key === 's') phi = Math.min(Math.PI - 0.15, phi + K);
+          let newDist = dist;
+          if (e.key === 'q' || e.key === '+' || e.key === '=') newDist = Math.max(controls.minDistance, dist - 1.5);
+          if (e.key === 'e' || e.key === '-') newDist = Math.min(controls.maxDistance, dist + 1.5);
+          camera.position.x = controls.target.x + newDist * Math.sin(phi) * Math.sin(theta);
+          camera.position.y = controls.target.y + newDist * Math.cos(phi);
+          camera.position.z = controls.target.z + newDist * Math.sin(phi) * Math.cos(theta);
+          camera.lookAt(controls.target);
         }
+        if (isOrbit || isZoom) { e.preventDefault(); controls.update(); pauseAutoRotate(); }
       }
 
       // Block unhandled keys in globe view
