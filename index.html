@@ -1518,74 +1518,54 @@
       requestAnimationFrame(() => { el.textContent = msg; });
     }
 
-    // ── Keyboard navigation ──
+    // ── Keyboard state tracking (hold multiple keys for diagonal movement) ──
+    const keysDown = new Set();
+    const ORBIT_MAP = {
+      'ArrowLeft': ['orbit', -1, 0], 'a': ['orbit', -1, 0],
+      'ArrowRight':['orbit', 1, 0],  'd': ['orbit', 1, 0],
+      'ArrowUp':   ['orbit', 0, -1], 'w': ['orbit', 0, -1],
+      'ArrowDown': ['orbit', 0, 1],  's': ['orbit', 0, 1],
+      'q': ['zoom', -1], '+': ['zoom', -1], '=': ['zoom', -1],
+      'e': ['zoom', 1], '-': ['zoom', 1],
+    };
+
     document.addEventListener('keydown', (e) => {
-      // Block F7 caret browsing only — allow normal F/f key usage
       if (e.key === 'F7') { e.preventDefault(); return; }
-      // Number keys 1-4: switch views
-      const globeView = document.getElementById('globe-view');
-      
+
       // Number keys 1-4: switch views
       const viewMap = { '1': 'globe', '2': 'timeline', '3': 'feed', '4': 'history3d' };
       if (e.key in viewMap && !e.ctrlKey && !e.metaKey && !e.altKey) {
         const target = viewMap[e.key];
         const btn = document.querySelector(`.nav-btn[data-view="${target}"]`);
         if (btn && !btn.classList.contains('active')) { btn.click(); }
-        e.preventDefault();
-        return;
+        e.preventDefault(); return;
       }
 
-      // Escape: close tooltip, sticky picker, lang dropdown
+      // Escape
       if (e.key === 'Escape') {
         const dd = document.getElementById('langDropdown');
         if (dd && dd.classList.contains('open')) {
           dd.classList.remove('open');
           document.getElementById('langBtn').setAttribute('aria-expanded', 'false');
-          e.preventDefault();
-          return;
         }
-        stickyTooltip = null;
-        hoveredIdx = -1;
-        hoveredData = null;
+        stickyTooltip = null; hoveredIdx = -1; hoveredData = null;
         const tt = document.getElementById('article-tooltip');
         if (tt) tt.classList.remove('visible');
         if (!controls.autoRotate) controls.autoRotate = true;
-        e.preventDefault();
-        return;
+        e.preventDefault(); return;
       }
 
-      // Globe controls: A/← → spin, W/↑ tilt up, S/↓ tilt down, Q/E zoom
-      if (globeView && globeView.classList.contains('active')) {
-        const isLeft  = e.key === 'ArrowLeft'  || e.key === 'a';
-        const isRight = e.key === 'ArrowRight' || e.key === 'd';
-        const isUp    = e.key === 'ArrowUp'    || e.key === 'w';
-        const isDown  = e.key === 'ArrowDown'  || e.key === 's';
-        const isZoomIn  = e.key === 'q' || e.key === '+' || e.key === '=';
-        const isZoomOut = e.key === 'e' || e.key === '-';
-        if (isLeft || isRight || isUp || isDown || isZoomIn || isZoomOut) {
-          try {
-            const offset = camera.position.clone().sub(controls.target);
-            const dist = offset.length();
-            let phi = Math.acos(THREE.MathUtils.clamp(offset.y / dist, -1, 1));
-            let theta = Math.atan2(offset.x, offset.z);
-            if (isLeft)  theta -= 0.12;
-            if (isRight) theta += 0.12;
-            if (isUp)    phi = Math.max(0.15, phi - 0.12);
-            if (isDown)  phi = Math.min(Math.PI - 0.15, phi + 0.12);
-            const newDist = isZoomIn ? Math.max(controls.minDistance, dist - 0.8)
-                         : isZoomOut ? Math.min(controls.maxDistance, dist + 0.8) : dist;
-            camera.position.x = controls.target.x + newDist * Math.sin(phi) * Math.sin(theta);
-            camera.position.y = controls.target.y + newDist * Math.cos(phi);
-            camera.position.z = controls.target.z + newDist * Math.sin(phi) * Math.cos(theta);
-            camera.lookAt(controls.target);
-            controls.update();
-          } catch(err) { console.warn('orbit err:', err.message); }
-          e.preventDefault();
-          pauseAutoRotate();
-        }
+      // Track orbit/zoom keys
+      if (e.key in ORBIT_MAP && !e.repeat) {
+        keysDown.add(e.key);
+        e.preventDefault();
+        pauseAutoRotate();
       }
-      // Block unhandled keys in globe view to prevent browser focus nav
-      if (!e.defaultPrevented && globeView && globeView.classList.contains('active') && !e.ctrlKey && !e.metaKey && !e.altKey) {
+    }, {capture: true});
+
+    document.addEventListener('keyup', (e) => {
+      if (e.key in ORBIT_MAP) {
+        keysDown.delete(e.key);
         e.preventDefault();
       }
     }, {capture: true});
@@ -3067,6 +3047,29 @@
           if (finalScale < 0.5) { sprite.material.opacity = 0; return; }
           sprite.scale.set(finalScale, finalScale * 0.30, 1);
         });
+      }
+
+      // ── Process held keys each frame (enables diagonal movement) ──
+      if (keysDown.size > 0) {
+        const STEP = 0.04; // per-frame step (at ~60fps = smooth)
+        let dTheta = 0, dPhi = 0, dZoom = 0;
+        keysDown.forEach(key => {
+          const action = ORBIT_MAP[key];
+          if (!action) return;
+          if (action[0] === 'orbit') { dTheta += action[1] * STEP; dPhi += action[2] * STEP; }
+          else if (action[0] === 'zoom') { dZoom += action[1]; }
+        });
+        const offset = camera.position.clone().sub(controls.target);
+        const dist = offset.length();
+        let phi = Math.acos(THREE.MathUtils.clamp(offset.y / dist, -1, 1));
+        let theta = Math.atan2(offset.x, offset.z);
+        theta += dTheta;
+        phi = Math.max(0.15, Math.min(Math.PI - 0.15, phi + dPhi));
+        const newDist = Math.max(controls.minDistance, Math.min(controls.maxDistance, dist + dZoom * 1.5));
+        camera.position.x = controls.target.x + newDist * Math.sin(phi) * Math.sin(theta);
+        camera.position.y = controls.target.y + newDist * Math.cos(phi);
+        camera.position.z = controls.target.z + newDist * Math.sin(phi) * Math.cos(theta);
+        camera.lookAt(controls.target);
       }
 
       controls.update();
