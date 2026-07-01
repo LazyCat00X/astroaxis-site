@@ -699,7 +699,7 @@
     </nav>
     <div class="scanline"></div>
     <div class="vignette"></div>
-    <div class="hint" data-i18n="hint.drag">🖱 DRAG · h/l ROTATE · k/j ZOOM · 1-4 VIEWS</div>
+    <div class="hint" data-i18n="hint.drag">🖱 DRAG · WASD/←→ ROTATE · ↑↓ ZOOM · 1-4 VIEWS</div>
     <div class="scroll-hint" aria-hidden="true" data-i18n="hint.scroll">↓ scroll for articles</div>
   </main>
 </div><!-- /globe-view -->
@@ -757,7 +757,7 @@
         'filter.all':'All','filter.americas':'Americas','filter.europe':'Europe','filter.asia':'Asia',
         'filter.alltime':'ALL TIME','filter.6h':'6H','filter.24h':'24H',
         'filter.bitcoin':'Bitcoin','filter.defi':'DeFi','filter.ai':'AI','filter.regulation':'Regulation',
-        'hint.drag':'DRAG · h/l ROTATE · k/j ZOOM','hint.scroll':'↓ scroll for articles',
+        'hint.drag':'DRAG · WASD/ARROWS ROTATE · ↑↓ ZOOM · 1-4 VIEWS','hint.scroll':'↓ scroll for articles',
         'feed.title':'AstroAxis Feed','tl.title':'World History Timeline',
         'alert.breaking':'BREAKING:','bias.none':'Neutral','bias.light':'Slight bias','bias.high':'Biased',
         'country.articles':'article','country.articles_plural':'articles',
@@ -770,7 +770,7 @@
         'filter.all':'全部','filter.americas':'美洲','filter.europe':'歐洲','filter.asia':'亞洲',
         'filter.alltime':'全部時間','filter.6h':'6小時','filter.24h':'24小時',
         'filter.bitcoin':'Bitcoin','filter.defi':'DeFi','filter.ai':'AI','filter.regulation':'監管',
-        'hint.drag':'拖拽旋轉 · h/l 轉 · k/j 縮放','hint.scroll':'↓ 向下睇文章',
+        'hint.drag':'拖拽 · WASD/箭咀旋轉 · ↑↓縮放 · 1-4切換','hint.scroll':'↓ 向下睇文章',
         'feed.title':'AstroAxis 新聞','tl.title':'世界歷史時間軸',
         'alert.breaking':'緊急：','bias.none':'中立','bias.light':'略帶偏頗','bias.high':'偏頗',
         'country.articles':'篇文章','country.articles_plural':'篇文章',
@@ -783,7 +783,7 @@
         'filter.all':'全部','filter.americas':'美洲','filter.europe':'欧洲','filter.asia':'亚洲',
         'filter.alltime':'全部时间','filter.6h':'6小时','filter.24h':'24小时',
         'filter.bitcoin':'比特币','filter.defi':'DeFi','filter.ai':'AI','filter.regulation':'监管',
-        'hint.drag':'拖拽旋转 · h/l 转 · k/j 缩放','hint.scroll':'↓ 向下看文章',
+        'hint.drag':'拖拽 · WASD/箭头旋转 · ↑↓缩放 · 1-4切换','hint.scroll':'↓ 向下看文章',
         'feed.title':'AstroAxis 新闻','tl.title':'世界历史时间轴',
         'alert.breaking':'紧急：','bias.none':'中立','bias.light':'略有偏见','bias.high':'有偏见',
         'country.articles':'篇文章','country.articles_plural':'篇文章',
@@ -1518,58 +1518,7 @@
     }
 
     // ── Keyboard navigation ──
-    // DEBUG: visible key overlay + persistent log (remove after debugging)
-    (function(){
-      const dbg = document.createElement('div');
-      dbg.id = 'keydbg';
-      dbg.style.cssText = 'position:fixed;top:60px;right:10px;z-index:999;background:rgba(0,0,0,.85);color:#0f0;font:12px monospace;padding:8px 12px;border-radius:6px;border:1px solid #0f0;max-width:340px;pointer-events:none';
-      document.body.appendChild(dbg);
-      
-      // Download button
-      const btn = document.createElement('button');
-      btn.textContent = '📥 LOG';
-      btn.style.cssText = 'position:fixed;top:60px;right:10px;z-index:1000;background:#0f0;color:#000;font:11px monospace;padding:2px 8px;border-radius:4px;border:none;cursor:pointer;pointer-events:auto;display:none';
-      btn.onclick = function(){
-        const log = JSON.parse(localStorage.getItem('keydbg_log')||'[]');
-        const text = log.join('\n');
-        const blob = new Blob([text], {type:'text/plain'});
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = 'astroaxis-keylog-' + new Date().toISOString().slice(0,19).replace(/:/g,'-') + '.txt';
-        a.click();
-      };
-      document.body.appendChild(btn);
-      // Show download button after first keypress
-      document.addEventListener('keydown', function(){ btn.style.display = 'block'; }, {once: true, capture: true});
-      
-      window._keydbg = dbg;
-      window._keylog = [];
-      // Load previous log
-      try {
-        const saved = JSON.parse(localStorage.getItem('keydbg_log')||'[]');
-        window._keylog = saved.slice(-100); // keep last 100
-      } catch(e) {}
-    })();
-    function dbgLog(msg) {
-      const ts = new Date().toISOString().slice(11,23);
-      const entry = ts + ' ' + msg;
-      window._keylog.unshift(entry);
-      if(window._keylog.length > 5) window._keylog.pop();
-      // Save full log to localStorage (keep last 500 entries)
-      try {
-        let full = JSON.parse(localStorage.getItem('keydbg_log')||'[]');
-        full.push(entry);
-        if(full.length > 500) full = full.slice(-500);
-        localStorage.setItem('keydbg_log', JSON.stringify(full));
-      } catch(e) {}
-      const el = document.getElementById('keydbg');
-      if(el) el.textContent = window._keylog.join('\n');
-    }
-    dbgLog('⌨ DEBUG READY — press keys, click 📥 LOG to download');
-
     document.addEventListener('keydown', (e) => {
-      const gv = document.getElementById('globe-view');
-      dbgLog('⌨ ' + e.key + ' | gv=' + (gv ? (gv.classList.contains('active')?'active':'inactive') : 'null') + ' | focus=' + (document.activeElement?.tagName||'?') + ' | prev=' + e.defaultPrevented);
       // Block F7 caret browsing only — allow normal F/f key usage
       if (e.key === 'F7') { e.preventDefault(); return; }
       // Number keys 1-4: switch views
@@ -1604,39 +1553,31 @@
       }
 
       // Arrow keys: Left/Right rotate, Up/Down zoom
-      // Alternative vim-style keys (h/l/j/k) for Linux systems where WM steals arrow keys
+      // WASD alt keys (A/D rotate, W/S zoom) for systems where arrow keys are intercepted
       if (globeView && globeView.classList.contains('active')) {
         const step = 0.08;
-        const isArrowLeft  = e.key === 'ArrowLeft'  || e.key === 'h';
-        const isArrowRight = e.key === 'ArrowRight' || e.key === 'l';
-        const isArrowUp    = e.key === 'ArrowUp'    || e.key === 'k';
-        const isArrowDown  = e.key === 'ArrowDown'  || e.key === 'j';
-        if (isArrowLeft)  { dbgLog('→ ROTATE LEFT');  controls.target.y += step * 1.2; e.preventDefault(); }
-        if (isArrowRight) { dbgLog('→ ROTATE RIGHT'); controls.target.y -= step * 1.2; e.preventDefault(); }
-        if (isArrowUp) {
-          dbgLog('→ ZOOM IN');
+        const isLeft  = e.key === 'ArrowLeft'  || e.key === 'a';
+        const isRight = e.key === 'ArrowRight' || e.key === 'd';
+        const isUp    = e.key === 'ArrowUp'    || e.key === 'w';
+        const isDown  = e.key === 'ArrowDown'  || e.key === 's';
+        if (isLeft)  { controls.target.y += step * 1.2; e.preventDefault(); }
+        if (isRight) { controls.target.y -= step * 1.2; e.preventDefault(); }
+        if (isUp) {
           const camDist = camera.position.distanceTo(controls.target);
           const newDist = Math.max(controls.minDistance, camDist - 1.5);
           camera.position.copy(controls.target).add(camera.position.clone().sub(controls.target).normalize().multiplyScalar(newDist));
           e.preventDefault();
         }
-        if (isArrowDown) {
-          dbgLog('→ ZOOM OUT');
+        if (isDown) {
           const camDist = camera.position.distanceTo(controls.target);
           const newDist = Math.min(controls.maxDistance, camDist + 3.0);
           camera.position.copy(controls.target).add(camera.position.clone().sub(controls.target).normalize().multiplyScalar(newDist));
           e.preventDefault();
         }
-        if (!e.defaultPrevented && e.key.startsWith('Arrow')) {
-          dbgLog('⚠ ARROW KEY NOT HANDLED! gv=' + !!globeView + ' active=' + globeView.classList.contains('active'));
-        }
-      } else if (e.key.startsWith('Arrow')) {
-        dbgLog('⚠ globeView check FAILED: exists=' + !!globeView + ' active=' + (globeView ? globeView.classList.contains('active') : 'N/A'));
       }
 
       // +/- zoom for globe view (keep for numpad/non-arrow users)
       if (e.key === '+' || e.key === '=') {
-        dbgLog('→ +/= ZOOM IN');
         const camDist = camera.position.distanceTo(controls.target);
         const newDist = Math.max(controls.minDistance, camDist - 1.5);
         camera.position.copy(controls.target).add(
@@ -1645,7 +1586,6 @@
         e.preventDefault();
       }
       if (e.key === '-') {
-        dbgLog('→ - ZOOM OUT');
         const camDist = camera.position.distanceTo(controls.target);
         const newDist = Math.min(controls.maxDistance, camDist + 3.0);
         camera.position.copy(controls.target).add(
@@ -1655,7 +1595,6 @@
       }
       // Block unhandled keys in globe view to prevent browser focus nav
       if (!e.defaultPrevented && globeView && globeView.classList.contains('active') && !e.ctrlKey && !e.metaKey && !e.altKey) {
-        dbgLog('→ BLOCKED unhandled key: ' + e.key);
         e.preventDefault();
       }
     }, {capture: true});
