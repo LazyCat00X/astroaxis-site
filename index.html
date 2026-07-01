@@ -1528,7 +1528,8 @@
       if (e.key in viewMap && !e.ctrlKey && !e.metaKey && !e.altKey) {
         const target = viewMap[e.key];
         const btn = document.querySelector(`.nav-btn[data-view="${target}"]`);
-        if (btn && !btn.classList.contains('active')) { btn.click(); e.preventDefault(); }
+        if (btn && !btn.classList.contains('active')) { btn.click(); }
+        e.preventDefault();
         return;
       }
 
