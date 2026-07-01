@@ -1490,7 +1490,8 @@
         btn.tabIndex = 0;
         // Focus: for globe view, focus body so arrow keys rotate globe instead of switching tabs
         if (btn.dataset.view === 'globe') {
-          document.body.focus();
+          // Defer to override browser ARIA tab auto-focus
+          setTimeout(() => document.body.focus(), 0);
         } else {
           btn.focus();
         }
