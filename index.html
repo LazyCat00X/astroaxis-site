@@ -1559,8 +1559,8 @@
         const isRight = e.key === 'ArrowRight' || e.key === 'd';
         const isUp    = e.key === 'ArrowUp'    || e.key === 'w';
         const isDown  = e.key === 'ArrowDown'  || e.key === 's';
-        if (isLeft)  { controls.rotateLeft(-0.12); }
-        if (isRight) { controls.rotateLeft(0.12); }
+        if (isLeft)  { globe.rotation.y -= 0.12; }
+        if (isRight) { globe.rotation.y += 0.12; }
         if (isUp || isDown) {
           const dir = camera.position.clone().sub(controls.target).normalize();
           const delta = isUp ? -0.8 : 0.8;
