@@ -1536,7 +1536,8 @@
     dbgLog('⌨ DEBUG READY — press keys');
 
     document.addEventListener('keydown', (e) => {
-      dbgLog('keydown: ' + e.key + ' code=' + e.code + ' prev=' + e.defaultPrevented);
+      const gv = document.getElementById('globe-view');
+      dbgLog('⌨ ' + e.key + ' | gv=' + (gv ? (gv.classList.contains('active')?'active':'inactive') : 'null') + ' | focus=' + (document.activeElement?.tagName||'?') + ' | prev=' + e.defaultPrevented);
       // Block F7 caret browsing only — allow normal F/f key usage
       if (e.key === 'F7') { e.preventDefault(); return; }
       // Number keys 1-4: switch views
@@ -1616,7 +1617,7 @@
         e.preventDefault();
       }
       // Block unhandled keys in globe view to prevent browser focus nav
-      if (globeView && globeView.classList.contains('active') && !e.ctrlKey && !e.metaKey && !e.altKey) {
+      if (!e.defaultPrevented && globeView && globeView.classList.contains('active') && !e.ctrlKey && !e.metaKey && !e.altKey) {
         dbgLog('→ BLOCKED unhandled key: ' + e.key);
         e.preventDefault();
       }
