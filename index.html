@@ -1518,7 +1518,25 @@
     }
 
     // ── Keyboard navigation ──
+    // DEBUG: visible key overlay (remove after debugging)
+    (function(){
+      const dbg = document.createElement('div');
+      dbg.id = 'keydbg';
+      dbg.style.cssText = 'position:fixed;top:60px;right:10px;z-index:999;background:rgba(0,0,0,.85);color:#0f0;font:12px monospace;padding:8px 12px;border-radius:6px;border:1px solid #0f0;max-width:300px;pointer-events:none';
+      document.body.appendChild(dbg);
+      window._keydbg = dbg;
+      window._keylog = [];
+    })();
+    function dbgLog(msg) {
+      window._keylog.unshift(msg);
+      if(window._keylog.length > 5) window._keylog.pop();
+      const el = document.getElementById('keydbg');
+      if(el) el.textContent = window._keylog.join('\n');
+    }
+    dbgLog('⌨ DEBUG READY — press keys');
+
     document.addEventListener('keydown', (e) => {
+      dbgLog('keydown: ' + e.key + ' code=' + e.code + ' prev=' + e.defaultPrevented);
       // Block F7 caret browsing only — allow normal F/f key usage
       if (e.key === 'F7') { e.preventDefault(); return; }
       // Number keys 1-4: switch views
@@ -1555,24 +1573,32 @@
       // Arrow keys: Left/Right rotate, Up/Down zoom
       if (globeView && globeView.classList.contains('active')) {
         const step = 0.08;
-        if (e.key === 'ArrowLeft') { controls.target.y += step * 1.2; e.preventDefault(); }
-        if (e.key === 'ArrowRight') { controls.target.y -= step * 1.2; e.preventDefault(); }
+        if (e.key === 'ArrowLeft') { dbgLog('→ ArrowLeft ROTATE'); controls.target.y += step * 1.2; e.preventDefault(); }
+        if (e.key === 'ArrowRight') { dbgLog('→ ArrowRight ROTATE'); controls.target.y -= step * 1.2; e.preventDefault(); }
         if (e.key === 'ArrowUp') {
+          dbgLog('→ ArrowUp ZOOM IN');
           const camDist = camera.position.distanceTo(controls.target);
           const newDist = Math.max(controls.minDistance, camDist - 1.5);
           camera.position.copy(controls.target).add(camera.position.clone().sub(controls.target).normalize().multiplyScalar(newDist));
           e.preventDefault();
         }
         if (e.key === 'ArrowDown') {
+          dbgLog('→ ArrowDown ZOOM OUT');
           const camDist = camera.position.distanceTo(controls.target);
           const newDist = Math.min(controls.maxDistance, camDist + 3.0);
           camera.position.copy(controls.target).add(camera.position.clone().sub(controls.target).normalize().multiplyScalar(newDist));
           e.preventDefault();
         }
+        if (!e.defaultPrevented && (e.key.startsWith('Arrow') || e.key === '+' || e.key === '-' || e.key === '=')) {
+          dbgLog('⚠ ARROW KEY NOT HANDLED! gv=' + !!globeView + ' active=' + globeView.classList.contains('active'));
+        }
+      } else if (e.key.startsWith('Arrow')) {
+        dbgLog('⚠ globeView check FAILED: exists=' + !!globeView + ' active=' + (globeView ? globeView.classList.contains('active') : 'N/A'));
       }
 
       // +/- zoom for globe view (keep for numpad/non-arrow users)
       if (e.key === '+' || e.key === '=') {
+        dbgLog('→ +/= ZOOM IN');
         const camDist = camera.position.distanceTo(controls.target);
         const newDist = Math.max(controls.minDistance, camDist - 1.5);
         camera.position.copy(controls.target).add(
@@ -1581,6 +1607,7 @@
         e.preventDefault();
       }
       if (e.key === '-') {
+        dbgLog('→ - ZOOM OUT');
         const camDist = camera.position.distanceTo(controls.target);
         const newDist = Math.min(controls.maxDistance, camDist + 3.0);
         camera.position.copy(controls.target).add(
@@ -1590,6 +1617,7 @@
       }
       // Block unhandled keys in globe view to prevent browser focus nav
       if (globeView && globeView.classList.contains('active') && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        dbgLog('→ BLOCKED unhandled key: ' + e.key);
         e.preventDefault();
       }
     }, {capture: true});
