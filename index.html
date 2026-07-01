@@ -1622,7 +1622,7 @@
           camera.position.copy(controls.target).add(camera.position.clone().sub(controls.target).normalize().multiplyScalar(newDist));
           e.preventDefault();
         }
-        if (!e.defaultPrevented && (e.key.startsWith('Arrow') || e.key === '+' || e.key === '-' || e.key === '=')) {
+        if (!e.defaultPrevented && e.key.startsWith('Arrow')) {
           dbgLog('⚠ ARROW KEY NOT HANDLED! gv=' + !!globeView + ' active=' + globeView.classList.contains('active'));
         }
       } else if (e.key.startsWith('Arrow')) {
