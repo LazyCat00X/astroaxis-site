@@ -1562,21 +1562,22 @@
         if (e.key === 'e' || e.key === '-') orbitDelta = {dTheta: 0, dPhi: 0, dZoom: 1.5};
         if (orbitDelta) {
           const d = orbitDelta;
-          requestAnimationFrame(() => {
-            const center = new THREE.Vector3(0, -0.4, 0);
-            const off = camera.position.clone().sub(center);
-            const dist = off.length();
-            let phi = Math.acos(THREE.MathUtils.clamp(off.y / dist, -1, 1));
-            let theta = Math.atan2(off.x, off.z);
-            theta += d.dTheta;
-            phi = Math.max(0.15, Math.min(Math.PI - 0.15, phi + d.dPhi));
-            const newDist = Math.max(controls.minDistance, Math.min(controls.maxDistance, dist + d.dZoom));
-            camera.position.x = center.x + newDist * Math.sin(phi) * Math.sin(theta);
-            camera.position.y = center.y + newDist * Math.cos(phi);
-            camera.position.z = center.z + newDist * Math.sin(phi) * Math.cos(theta);
-            camera.lookAt(center);
-            controls.target.copy(center);
-          });
+          // Method 1: rotate globe directly (always works)
+          if (d.dTheta !== 0) globe.rotation.y += d.dTheta;
+          // Method 2: camera orbit (for proper perspective change)
+          const center = new THREE.Vector3(0, -0.4, 0);
+          const off = camera.position.clone().sub(center);
+          const dist = off.length();
+          let phi = Math.acos(THREE.MathUtils.clamp(off.y / dist, -1, 1));
+          let theta = Math.atan2(off.x, off.z);
+          theta += d.dTheta;
+          phi = Math.max(0.15, Math.min(Math.PI - 0.15, phi + d.dPhi));
+          const newDist = Math.max(controls.minDistance, Math.min(controls.maxDistance, dist + d.dZoom));
+          camera.position.x = center.x + newDist * Math.sin(phi) * Math.sin(theta);
+          camera.position.y = center.y + newDist * Math.cos(phi);
+          camera.position.z = center.z + newDist * Math.sin(phi) * Math.cos(theta);
+          camera.lookAt(center);
+          controls.target.copy(center);
           e.preventDefault();
           pauseAutoRotate();
         }
