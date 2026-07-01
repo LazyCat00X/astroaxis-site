@@ -1524,6 +1524,7 @@
       // Number keys 1-4: switch views
       const globeView = document.getElementById('globe-view');
       
+      // Number keys 1-4: switch views
       const viewMap = { '1': 'globe', '2': 'timeline', '3': 'feed', '4': 'history3d' };
       if (e.key in viewMap && !e.ctrlKey && !e.metaKey && !e.altKey) {
         const target = viewMap[e.key];
@@ -1560,24 +1561,25 @@
         const isDown  = e.key === 'ArrowDown'  || e.key === 's';
         const isZoomIn  = e.key === 'q' || e.key === '+' || e.key === '=';
         const isZoomOut = e.key === 'e' || e.key === '-';
-        // Orbit camera around globe (spherical coords)
         if (isLeft || isRight || isUp || isDown || isZoomIn || isZoomOut) {
-          const offset = camera.position.clone().sub(controls.target);
-          const dist = offset.length();
-          let phi = Math.acos(THREE.MathUtils.clamp(offset.y / dist, -1, 1));
-          let theta = Math.atan2(offset.x, offset.z);
-          if (isLeft)  theta -= 0.12;
-          if (isRight) theta += 0.12;
-          if (isUp)    phi = Math.max(0.15, phi - 0.12);
-          if (isDown)  phi = Math.min(Math.PI - 0.15, phi + 0.12);
-          const newDist = isZoomIn ? Math.max(controls.minDistance, dist - 0.8)
-                       : isZoomOut ? Math.min(controls.maxDistance, dist + 0.8) : dist;
-          camera.position.x = controls.target.x + newDist * Math.sin(phi) * Math.sin(theta);
-          camera.position.y = controls.target.y + newDist * Math.cos(phi);
-          camera.position.z = controls.target.z + newDist * Math.sin(phi) * Math.cos(theta);
-          camera.lookAt(controls.target);
+          try {
+            const offset = camera.position.clone().sub(controls.target);
+            const dist = offset.length();
+            let phi = Math.acos(THREE.MathUtils.clamp(offset.y / dist, -1, 1));
+            let theta = Math.atan2(offset.x, offset.z);
+            if (isLeft)  theta -= 0.12;
+            if (isRight) theta += 0.12;
+            if (isUp)    phi = Math.max(0.15, phi - 0.12);
+            if (isDown)  phi = Math.min(Math.PI - 0.15, phi + 0.12);
+            const newDist = isZoomIn ? Math.max(controls.minDistance, dist - 0.8)
+                         : isZoomOut ? Math.min(controls.maxDistance, dist + 0.8) : dist;
+            camera.position.x = controls.target.x + newDist * Math.sin(phi) * Math.sin(theta);
+            camera.position.y = controls.target.y + newDist * Math.cos(phi);
+            camera.position.z = controls.target.z + newDist * Math.sin(phi) * Math.cos(theta);
+            camera.lookAt(controls.target);
+            controls.update();
+          } catch(err) { console.warn('orbit err:', err.message); }
           e.preventDefault();
-          controls.update();
           pauseAutoRotate();
         }
       }
