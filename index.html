@@ -699,7 +699,7 @@
     </nav>
     <div class="scanline"></div>
     <div class="vignette"></div>
-    <div class="hint" data-i18n="hint.drag">🖱 DRAG · ←→ ROTATE · ↑↓ ZOOM · 1-4 VIEWS</div>
+    <div class="hint" data-i18n="hint.drag">🖱 DRAG · h/l ROTATE · k/j ZOOM · 1-4 VIEWS</div>
     <div class="scroll-hint" aria-hidden="true" data-i18n="hint.scroll">↓ scroll for articles</div>
   </main>
 </div><!-- /globe-view -->
@@ -757,7 +757,7 @@
         'filter.all':'All','filter.americas':'Americas','filter.europe':'Europe','filter.asia':'Asia',
         'filter.alltime':'ALL TIME','filter.6h':'6H','filter.24h':'24H',
         'filter.bitcoin':'Bitcoin','filter.defi':'DeFi','filter.ai':'AI','filter.regulation':'Regulation',
-        'hint.drag':'DRAG TO ROTATE · CLICK MARKERS · ZOOM OUT FOR HISTORY','hint.scroll':'↓ scroll for articles',
+        'hint.drag':'DRAG · h/l ROTATE · k/j ZOOM','hint.scroll':'↓ scroll for articles',
         'feed.title':'AstroAxis Feed','tl.title':'World History Timeline',
         'alert.breaking':'BREAKING:','bias.none':'Neutral','bias.light':'Slight bias','bias.high':'Biased',
         'country.articles':'article','country.articles_plural':'articles',
@@ -770,7 +770,7 @@
         'filter.all':'全部','filter.americas':'美洲','filter.europe':'歐洲','filter.asia':'亞洲',
         'filter.alltime':'全部時間','filter.6h':'6小時','filter.24h':'24小時',
         'filter.bitcoin':'Bitcoin','filter.defi':'DeFi','filter.ai':'AI','filter.regulation':'監管',
-        'hint.drag':'拖拽旋轉 · 點擊標記睇全文 · 縮小睇歷史','hint.scroll':'↓ 向下睇文章',
+        'hint.drag':'拖拽旋轉 · h/l 轉 · k/j 縮放','hint.scroll':'↓ 向下睇文章',
         'feed.title':'AstroAxis 新聞','tl.title':'世界歷史時間軸',
         'alert.breaking':'緊急：','bias.none':'中立','bias.light':'略帶偏頗','bias.high':'偏頗',
         'country.articles':'篇文章','country.articles_plural':'篇文章',
@@ -783,7 +783,7 @@
         'filter.all':'全部','filter.americas':'美洲','filter.europe':'欧洲','filter.asia':'亚洲',
         'filter.alltime':'全部时间','filter.6h':'6小时','filter.24h':'24小时',
         'filter.bitcoin':'比特币','filter.defi':'DeFi','filter.ai':'AI','filter.regulation':'监管',
-        'hint.drag':'拖拽旋转 · 点击标记看全文 · 缩小看历史','hint.scroll':'↓ 向下看文章',
+        'hint.drag':'拖拽旋转 · h/l 转 · k/j 缩放','hint.scroll':'↓ 向下看文章',
         'feed.title':'AstroAxis 新闻','tl.title':'世界历史时间轴',
         'alert.breaking':'紧急：','bias.none':'中立','bias.light':'略有偏见','bias.high':'有偏见',
         'country.articles':'篇文章','country.articles_plural':'篇文章',
@@ -1604,19 +1604,24 @@
       }
 
       // Arrow keys: Left/Right rotate, Up/Down zoom
+      // Alternative vim-style keys (h/l/j/k) for Linux systems where WM steals arrow keys
       if (globeView && globeView.classList.contains('active')) {
         const step = 0.08;
-        if (e.key === 'ArrowLeft') { dbgLog('→ ArrowLeft ROTATE'); controls.target.y += step * 1.2; e.preventDefault(); }
-        if (e.key === 'ArrowRight') { dbgLog('→ ArrowRight ROTATE'); controls.target.y -= step * 1.2; e.preventDefault(); }
-        if (e.key === 'ArrowUp') {
-          dbgLog('→ ArrowUp ZOOM IN');
+        const isArrowLeft  = e.key === 'ArrowLeft'  || e.key === 'h';
+        const isArrowRight = e.key === 'ArrowRight' || e.key === 'l';
+        const isArrowUp    = e.key === 'ArrowUp'    || e.key === 'k';
+        const isArrowDown  = e.key === 'ArrowDown'  || e.key === 'j';
+        if (isArrowLeft)  { dbgLog('→ ROTATE LEFT');  controls.target.y += step * 1.2; e.preventDefault(); }
+        if (isArrowRight) { dbgLog('→ ROTATE RIGHT'); controls.target.y -= step * 1.2; e.preventDefault(); }
+        if (isArrowUp) {
+          dbgLog('→ ZOOM IN');
           const camDist = camera.position.distanceTo(controls.target);
           const newDist = Math.max(controls.minDistance, camDist - 1.5);
           camera.position.copy(controls.target).add(camera.position.clone().sub(controls.target).normalize().multiplyScalar(newDist));
           e.preventDefault();
         }
-        if (e.key === 'ArrowDown') {
-          dbgLog('→ ArrowDown ZOOM OUT');
+        if (isArrowDown) {
+          dbgLog('→ ZOOM OUT');
           const camDist = camera.position.distanceTo(controls.target);
           const newDist = Math.min(controls.maxDistance, camDist + 3.0);
           camera.position.copy(controls.target).add(camera.position.clone().sub(controls.target).normalize().multiplyScalar(newDist));
