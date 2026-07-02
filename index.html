@@ -552,12 +552,30 @@
 
     /* Feed cards */
     .feed-grid { display: grid; grid-template-columns: 1fr; gap: 14px; max-width: 900px; margin: 0 auto; }
+    .stats-bar {
+      display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; max-width: 900px; margin-left: auto; margin-right: auto;
+    }
+    .stat-chip {
+      background: rgba(7,10,22,.6); border: 1px solid rgba(136,136,160,.12); border-radius: 10px;
+      padding: 8px 14px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgba(228,228,236,.7);
+      min-width: 0;
+    }
+    .stat-chip .stat-bar-bg { flex:1; height:4px; border-radius:2px; background:rgba(136,136,160,.1); overflow:hidden; min-width:40px; }
+    .stat-chip .stat-bar-fill { height:100%; border-radius:2px; transition: width .4s ease; }
+    @media(max-width:768px){ .stats-bar{gap:6px} .stat-chip{font-size:10px;padding:5px 10px} }
     @media(min-width:768px){ .feed-grid { grid-template-columns: 1fr 1fr; } }
     .feed-card {
       background: rgba(7,10,22,0.6); border: 1px solid rgba(136,136,160,0.12); border-radius: 14px;
       padding: 16px; transition: all .2s;
     }
-    .feed-card:hover { border-color: rgba(99,102,241,0.35); }
+    .feed-card {
+      animation: cardIn .4s ease-out both;
+      opacity: 0; transform: translateY(12px);
+    }
+    @keyframes cardIn { to { opacity:1; transform:translateY(0); } }
+    .feed-card:hover { border-color: rgba(99,102,241,0.35); transform: translateY(-2px); }
+    .feed-content-wrap { transition: opacity .2s ease; }
+    .feed-content-wrap.filtering { opacity: 0.5; }
     .feed-card .card-top { display: flex; justify-content: space-between; align-items: start; gap: 8px; margin-bottom: 6px; }
     .feed-card .card-topic { font-size: 12px; padding: 3px 9px; border-radius: 4px; font-weight: 600; }
     .feed-card .card-source { font-size: 12px; color: rgba(136,136,160,0.8); }
@@ -566,6 +584,15 @@
     .feed-card h3 a:hover { color: #67e8f9; }
     .feed-card .card-summary { font-size: 14px; color: rgba(228,228,236,0.7); line-height: 1.55; margin-bottom: 8px; }
     .feed-card .card-summary li { margin: 4px 0; }
+    .feed-card { overflow: hidden; }
+    .feed-card .card-thumb {
+      width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;
+      display: block; background: var(--thumb-bg, rgba(15,23,42,0.5));
+    }
+    .feed-card .card-thumb.placeholder {
+      display: flex; align-items: center; justify-content: center;
+      font-size: 32px; opacity: 0.5;
+    }
     .feed-card .card-meta { display: flex; justify-content: space-between; font-size: 12px; color: rgba(136,136,160,0.6); border-top: 1px solid rgba(136,136,160,0.08); padding-top: 8px; }
     .bias-indicator { font-size: 12px; padding: 2px 9px; border-radius: 4px; }
     .bias-low { background: rgba(34,197,94,0.12); color: #22c55e; }
@@ -597,6 +624,7 @@
       .top-nav{gap:4px;padding:8px 10px}
       .top-nav .logo{font-size:14px;margin-right:6px}
       .nav-btn{font-size:10px;padding:5px 9px}
+      .feed-card .card-thumb{height:90px}
       .filter-bar{border-radius:16px;bottom:8px;gap:3px;padding:6px}
       .filter-btn{font-size:9px;padding:4px 6px}
       .hud{left:8px;top:52px;max-width:180px}
@@ -867,8 +895,24 @@
     }
 
     // ── Feed ──
+
+    const TOPIC_GRADIENTS = {
+      'AI': ['#1e3a5f','#3b82f6'], 'Bitcoin': ['#3d2e0a','#f97316'],
+      'Regulation': ['#3d1a1a','#ef4444'], 'DeFi': ['#1a3d1a','#22c55e'],
+      'Crypto': ['#2d1a5f','#818cf8'], 'Finance': ['#1a3d2e','#10b981'],
+      'Tech': ['#1a2a5f','#6366f1'], 'Policy': ['#3d2a0a','#f59e0b'],
+      'Macro': ['#2d1a3d','#a855f7'], 'Trading': ['#1a3d3d','#06b6d4'],
+      'Ethereum': ['#1a1a3d','#8b5cf6'], 'Science': ['#1a3d1a','#84cc16'],
+    };
+    function topicGradient(topic) {
+      const g = TOPIC_GRADIENTS[topic] || ['#1a1a2e','#8892b6'];
+      return `linear-gradient(135deg, ${g[0]}, ${g[1]}40)`;
+    }
+
     function renderFeed() {
       const articles = NEWS_DATA.articles || [];
+      const wrap = document.getElementById('feed-content');
+      if(wrap) wrap.classList.add('filtering');
       // Apply active filters (topic & time)
       const filtered = articles.filter(a => {
         // Topic filter
@@ -890,6 +934,20 @@
       if(activeFilters.time !== 'all') pills.push(`<span style="display:inline-block;padding:2px 10px;border-radius:999px;font-size:11px;background:rgba(99,102,241,.15);color:#a78bfa;border:1px solid rgba(99,102,241,.3);margin-right:4px">${activeFilters.time.toUpperCase()}</span>`);
       if(activeFilters.region !== 'All') pills.push(`<span style="display:inline-block;padding:2px 10px;border-radius:999px;font-size:11px;background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.3);margin-right:4px">${activeFilters.region}</span>`);
       if(pills.length){ html += `<div style="margin-bottom:16px">${pills.join('')} · ${filtered.length} result${filtered.length!==1?'s':''}</div>`; }
+      // Stats bar: topic distribution
+      const topicCounts = {}; filtered.forEach(a => { const t = a.topic || 'Other'; topicCounts[t] = (topicCounts[t]||0)+1; });
+      const topTopics = Object.entries(topicCounts).sort((a,b) => b[1]-a[1]).slice(0,4);
+      const maxCount = topTopics[0]?.[1] || 1;
+      const sourceSet = new Set(filtered.map(a => a.source));
+      html += `<div class="stats-bar">
+        <div class="stat-chip">📰 ${filtered.length} articles</div>
+        <div class="stat-chip">📡 ${sourceSet.size} sources</div>
+        ${topTopics.map(([t,c]) => {
+          const pct = Math.round(c/maxCount*100);
+          const tc = t==='AI'?'#3b82f6':t==='Bitcoin'?'#f97316':t==='Regulation'?'#ef4444':t==='DeFi'?'#22c55e':t==='Crypto'?'#818cf8':t==='Finance'?'#10b981':t==='Tech'?'#6366f1':'#8892b6';
+          return `<div class="stat-chip"><span style="color:${tc};font-weight:600">${t}</span> ${c}<span class="stat-bar-bg"><span class="stat-bar-fill" style="width:${pct}%;background:${tc}"></span></span></div>`;
+        }).join('')}
+      </div>`;
       html += `<div class="feed-grid">`;
       filtered.slice(0, 50).forEach(a => {
         const biasScore = a.bias_score || 0;
@@ -898,7 +956,9 @@
         // Multi-language summary: prefer currentLang, fallback zh-HK, fallback ai_summary string
         const summaryText = (a.summaries && a.summaries[currentLang]) || (a.summaries && a.summaries['zh-HK']) || a.ai_summary || '';
         const bullets = summaryText.split('\\n').filter(l => l.includes('•')).map(l => l.replace(/^[•\\s]+/,'').trim()).filter(Boolean).slice(0, 4);
-        html += `<div class="feed-card">
+        const thumbBg = topicGradient(a.topic || 'General');
+        html += `<div class="feed-card" style="--thumb-bg:${thumbBg}">
+          <div class="card-thumb placeholder" aria-hidden="true" style="background:${thumbBg}">${(a.topic||'G')[0]}</div>
           <div class="card-top">
             <span class="card-topic" style="color:#${a.topic === 'AI' ? '3b82f6' : a.topic === 'Bitcoin' ? 'f97316' : a.topic === 'Regulation' ? 'ef4444' : a.topic === 'DeFi' ? '22c55e' : '818cf8'}">${a.topic || 'General'}</span>
             <span class="bias-indicator ${biasCls}">${biasLabel}</span>
@@ -913,6 +973,10 @@
       });
       html += '</div>';
       document.getElementById('feed-content').innerHTML = html;
+      if(wrap) { requestAnimationFrame(() => { wrap.classList.remove('filtering'); }); }
+      // Stagger card entrance animation
+      const cards = document.querySelectorAll('#feed-content .feed-card');
+      cards.forEach((c, i) => { c.style.animationDelay = (i * 0.04) + 's'; });
     }
 
     // ── Breaking news checker ──
@@ -2649,9 +2713,15 @@
       renderFeed();
     }
     function isBookmarked(url){ return getBookmarks().some(b => b.url === url); }
+    function showToast(msg) {
+      const t = document.getElementById('share-toast') || (()=>{ const e=document.createElement('div');e.id='share-toast';e.style.cssText='position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:rgba(34,211,238,.15);border:1px solid #67e8f9;border-radius:999px;padding:10px 22px;color:#eaffff;z-index:100;font-size:13px;font-weight:600;backdrop-filter:blur(12px);pointer-events:none;opacity:0;transition:opacity .25s';document.body.appendChild(e);return e;})();
+      t.textContent = msg; t.style.opacity = '1';
+      clearTimeout(t._tid); t._tid = setTimeout(()=>{ t.style.opacity = '0'; }, 1800);
+    }
     function shareArticle(url, title) {
-      if(navigator.share){ navigator.share({title,url}); }
-      else { navigator.clipboard.writeText(url).then(() => { const t=document.createElement('div');t.textContent='📋 Link copied!';t.style.cssText='position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:rgba(34,211,238,.2);border:1px solid #67e8f9;border-radius:12px;padding:10px 20px;color:#eaffff;z-index:100;font-size:13px;font-weight:600';document.body.appendChild(t);setTimeout(()=>t.remove(),1500); }).catch(()=>{ window.open(url,'_blank'); }); }
+      if(navigator.share){ navigator.share({title,url}).catch(()=>{}); }
+      else if(navigator.clipboard){ navigator.clipboard.writeText(url).then(()=>{ showToast('📋 Link copied!'); }).catch(()=>{ window.open(url,'_blank'); }); }
+      else { window.open(url,'_blank'); }
     }
 
     // ── renderFeed override with bookmark + share ──
