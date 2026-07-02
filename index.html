@@ -36,6 +36,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="AstroAxis — AI-powered world news aggregator" />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
+  <meta http-equiv="Cache-Control" content="public, max-age=300, stale-while-revalidate=600" />
   <meta property="og:title" content="AstroAxis — AI-powered world news aggregator" />
   <meta property="og:description" content="Interactive 3D globe with real-time news. AI summaries. Crypto. Finance. Tech." />
   <meta property="og:image" content="https://lazycat00x.github.io/astroaxis-site/og-image.png" />
@@ -835,6 +836,51 @@
       document.body.innerHTML = '<div style="background:#03040c;color:#eef7ff;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:Inter,sans-serif;text-align:center;padding:40px"><div><div style="font-size:48px;margin-bottom:16px">⚠️</div><h1 style="font-size:22px;margin-bottom:8px">Failed to load 3D engine</h1><p style="color:rgba(238,247,255,.6);max-width:400px;line-height:1.6">The 3D globe library (Three.js) could not be loaded. This may be due to a network issue or content blocker.</p></div></div>';
       throw new Error('Three.js failed to load');
     }
+    // ── Performance monitoring (Core Web Vitals) ──
+    window._perfMetrics = {};
+    try {
+      // LCP (Largest Contentful Paint)
+      new PerformanceObserver(function(list) {
+        var entries = list.getEntries();
+        if (entries.length) {
+          window._perfMetrics.lcp = entries[entries.length-1].renderTime || entries[entries.length-1].loadTime;
+        }
+      }).observe({type: 'largest-contentful-paint', buffered: true});
+
+      // FCP (First Contentful Paint)
+      new PerformanceObserver(function(list) {
+        var entries = list.getEntries();
+        if (entries.length) window._perfMetrics.fcp = entries[0].startTime;
+      }).observe({type: 'paint', buffered: true});
+
+      // CLS (Cumulative Layout Shift)
+      var clsValue = 0;
+      new PerformanceObserver(function(list) {
+        list.getEntries().forEach(function(entry) {
+          if (!entry.hadRecentInput) clsValue += entry.value;
+        });
+        window._perfMetrics.cls = clsValue;
+      }).observe({type: 'layout-shift', buffered: true});
+
+      // TTFB
+      var nav = performance.getEntriesByType('navigation')[0];
+      if (nav) window._perfMetrics.ttfb = nav.responseStart - nav.requestStart;
+
+      // Log after page stabilizes
+      setTimeout(function() {
+        var m = window._perfMetrics;
+        console.log('%c⚡ AstroAxis Perf %cLCP:' + (m.lcp||0).toFixed(0) + 'ms FCP:' + (m.fcp||0).toFixed(0) + 'ms CLS:' + (m.cls||0).toFixed(3) + ' TTFB:' + (m.ttfb||0).toFixed(0) + 'ms',
+          'color:#67e8f9;font-weight:bold', 'color:#8892b6');
+        // Store for analytics
+        try {
+          var hist = JSON.parse(localStorage.getItem('astroaxis_perf') || '[]');
+          hist.push({time: Date.now(), lcp: m.lcp, fcp: m.fcp, cls: m.cls, ttfb: m.ttfb});
+          if (hist.length > 20) hist = hist.slice(-20);
+          localStorage.setItem('astroaxis_perf', JSON.stringify(hist));
+        } catch(e) {}
+      }, 5000);
+    } catch(e) { window._logError('perf', 'PerformanceObserver failed', e); }
+
     // ── Structured error logger ──
     const _errors = [];
     window._logError = function(category, msg, detail) {
@@ -849,6 +895,58 @@
     window.addEventListener('unhandledrejection', function(e) {
       window._logError('promise', String(e.reason||'').slice(0,100));
     });
+
+    // ── Privacy-respecting analytics (localStorage only, no external tracking) ──
+    (function() {
+      try {
+        var analytics = JSON.parse(localStorage.getItem('astroaxis_analytics') || '{"visits":0,"firstVisit":null,"lastVisit":null,"totalSeconds":0,"sessions":[]}');
+        var now = Date.now();
+        analytics.visits = (analytics.visits || 0) + 1;
+        analytics.firstVisit = analytics.firstVisit || now;
+        analytics.lastVisit = now;
+        // Session timer
+        var sessionStart = now;
+        setInterval(function() {
+          analytics.totalSeconds = (analytics.totalSeconds || 0) + 30;
+          if (analytics.totalSeconds % 300 < 30) { // save every ~5 min
+            localStorage.setItem('astroaxis_analytics', JSON.stringify(analytics));
+          }
+        }, 30000);
+        // Save on page unload
+        window.addEventListener('beforeunload', function() {
+          analytics.sessions = analytics.sessions || [];
+          analytics.sessions.push({start: sessionStart, end: Date.now(), duration: Math.round((Date.now()-sessionStart)/1000)});
+          if (analytics.sessions.length > 30) analytics.sessions = analytics.sessions.slice(-30);
+          localStorage.setItem('astroaxis_analytics', JSON.stringify(analytics));
+        });
+        localStorage.setItem('astroaxis_analytics', JSON.stringify(analytics));
+        // Console summary
+        setTimeout(function() {
+          var a = JSON.parse(localStorage.getItem('astroaxis_analytics') || '{}');
+          var mins = Math.round((a.totalSeconds||0)/60);
+          console.log('%c📊 AstroAxis %c' + (a.visits||0) + ' visits · ' + mins + ' min total',
+            'color:#a78bfa;font-weight:bold', 'color:#8892b6');
+        }, 2000);
+      } catch(e) {}
+    })();
+
+    // ── Dev dashboard (type window._dashboard() in console) ──
+    window._dashboard = function() {
+      var d = {
+        perf: window._perfMetrics || {},
+        errors: (typeof _errors !== 'undefined') ? _errors : [],
+        analytics: (function(){try{return JSON.parse(localStorage.getItem('astroaxis_analytics')||'{}');}catch(e){return{};}})(),
+        searches: (function(){try{return JSON.parse(localStorage.getItem('astroaxis_searches')||'[]');}catch(e){return[];}})(),
+        interests: (function(){try{return JSON.parse(localStorage.getItem('astroaxis_interests')||'{}');}catch(e){return{};}})(),
+        bookmarks: (function(){try{return JSON.parse(localStorage.getItem('astroaxis_bookmarks')||'[]');}catch(e){return[];}})(),
+        articles: (NEWS_DATA && NEWS_DATA.articles) ? NEWS_DATA.articles.length : 0,
+        memory: (performance.memory) ? {used: Math.round(performance.memory.usedJSHeapSize/1048576)+'MB', limit: Math.round(performance.memory.jsHeapSizeLimit/1048576)+'MB'} : 'N/A'
+      };
+      console.table(d);
+      console.log('%c💡 %cwindow._dashboard() %c— AstroAxis diagnostics',
+        'color:#67e8f9', 'color:#a78bfa', 'color:#8892b6');
+      return d;
+    };
 
     // ── View switching ──
     let currentLang = localStorage.getItem('astrolang') || 'zh-HK';
@@ -1057,10 +1155,26 @@
       const topicCounts = {}; filtered.forEach(a => { const t = a.topic || 'Other'; topicCounts[t] = (topicCounts[t]||0)+1; });
       const topTopics = Object.entries(topicCounts).sort((a,b) => b[1]-a[1]).slice(0,4);
       const maxCount = topTopics[0]?.[1] || 1;
+      const allArticles = NEWS_DATA.articles || [];
       const sourceSet = new Set(filtered.map(a => a.source));
+      const allSourceSet = new Set(allArticles.map(a => a.source));
+      // Pipeline health: check data freshness
+      const newestArticle = allArticles.reduce(function(max, a) {
+        if (!a.published) return max;
+        return Math.max(max, new Date(a.published).getTime());
+      }, 0);
+      const hoursSinceUpdate = newestArticle ? (Date.now() - newestArticle) / 3600000 : 999;
+      const pipelineStatus = hoursSinceUpdate < 6 ? '🟢' : hoursSinceUpdate < 24 ? '🟡' : '🔴';
+      const pipelineLabel = hoursSinceUpdate < 6 ? 'Live' : hoursSinceUpdate < 24 ? 'Stale (' + Math.floor(hoursSinceUpdate) + 'h)' : 'Offline';
+      const pipelineColor = hoursSinceUpdate < 6 ? '#22c55e' : hoursSinceUpdate < 24 ? '#f59e0b' : '#ef4444';
+      // Source coverage
+      const configuredSources = 35; // from source_locs.json
+      const activeSources = allSourceSet.size;
+      const sourceHealth = activeSources >= 20 ? '🟢' : activeSources >= 10 ? '🟡' : '🔴';
       html += `<div class="stats-bar">
+        <div class="stat-chip">${pipelineStatus} <span style="color:${pipelineColor}">${pipelineLabel}</span></div>
         <div class="stat-chip">📰 ${filtered.length} articles</div>
-        <div class="stat-chip">📡 ${sourceSet.size} sources</div>
+        <div class="stat-chip">${sourceHealth} ${activeSources}/${configuredSources} sources</div>
         ${topTopics.map(([t,c]) => {
           const pct = Math.round(c/maxCount*100);
           const tc = t==='AI'?'#3b82f6':t==='Bitcoin'?'#f97316':t==='Regulation'?'#ef4444':t==='DeFi'?'#22c55e':t==='Crypto'?'#818cf8':t==='Finance'?'#10b981':t==='Tech'?'#6366f1':'#8892b6';
@@ -1077,8 +1191,9 @@
       const trendIcon = trendPct > 10 ? '📈' : trendPct < -10 ? '📉' : '📊';
       const trendColor = trendPct > 10 ? '#22c55e' : trendPct < -10 ? '#ef4444' : '#8892b6';
       html += `<div class="stats-bar">
+        <div class="stat-chip">${pipelineStatus} <span style="color:${pipelineColor}">${pipelineLabel}</span></div>
         <div class="stat-chip">📰 ${filtered.length} articles</div>
-        <div class="stat-chip">📡 ${sourceSet.size} sources</div>
+        <div class="stat-chip">${sourceHealth} ${activeSources}/${configuredSources} sources</div>
         <div class="stat-chip" style="color:${trendColor}">${trendIcon} 24h trend ${trendPct > 0 ? '+' : ''}${trendPct}%</div>
         ${topTopics.map(([t,c]) => {
           const pct = Math.round(c/maxCount*100);
@@ -3094,4 +3209,4 @@
   </script>
 </body>
 </html>
-<div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260703-0240</div>
+<div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260703-0242</div>
