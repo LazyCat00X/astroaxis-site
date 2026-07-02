@@ -5,8 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AstroAxis — AI-powered world news aggregator</title>
   <meta name="description" content="AstroAxis — AI-powered world news aggregator with 3D globe, AI summaries, and real-time crypto/finance news" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AstroAxis",
+    "url": "https://lazycat00x.github.io/astroaxis-site/",
+    "description": "AI-powered world news aggregator with 3D globe visualization",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://lazycat00x.github.io/astroaxis-site/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json" id="news-jsonld">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": []
+  }
+  </script>
   <link rel="canonical" href="https://lazycat00x.github.io/astroaxis-site/" />
   <!-- Open Graph / Social -->
+  <meta property="og:title" content="AstroAxis — AI-powered world news aggregator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://lazycat00x.github.io/astroaxis-site/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AstroAxis — AI-powered world news aggregator" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
   <meta property="og:title" content="AstroAxis — AI-powered world news aggregator" />
   <meta property="og:description" content="Interactive 3D globe with real-time news. AI summaries. Crypto. Finance. Tech." />
   <meta property="og:image" content="https://lazycat00x.github.io/astroaxis-site/og-image.png" />
@@ -157,6 +186,9 @@
       border-color: #67e8f9 !important;
     }
     .filter-btn:focus-visible,
+    .keyboard-user :focus-visible {
+      outline: 2px solid #22d3ee !important; outline-offset: 2px;
+    }
     .nav-btn:focus-visible,
     .lang-btn:focus-visible,
     .lang-option:focus-visible,
@@ -467,6 +499,13 @@
   </style>
   <!-- Timeline + Feed styles -->
   <style>
+    .skip-link {
+      position: fixed; top: -100px; left: 12px; z-index: 999;
+      background: #22d3ee; color: #03040c; padding: 10px 18px; border-radius: 8px;
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      transition: top .2s;
+    }
+    .skip-link:focus { top: 12px; }
     .top-nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 20;
       display: flex; align-items: center; gap: 8px;
@@ -651,6 +690,16 @@
   </style>
 </head>
 <body tabindex="-1">
+<noscript>
+  <div style="background:#03040c;color:#eef7ff;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:Inter,sans-serif;text-align:center;padding:40px">
+    <div>
+      <div style="font-size:48px;margin-bottom:16px">🌍</div>
+      <h1 style="font-size:24px;margin-bottom:8px">AstroAxis</h1>
+      <p style="color:rgba(238,247,255,.6)">JavaScript is required to view the 3D globe and news feed.</p>
+      <p style="color:rgba(136,146,182,.5);font-size:13px;margin-top:12px">Please enable JavaScript in your browser settings.</p>
+    </div>
+  </div>
+</noscript>
 
 <!-- Loading Spinner -->
 <div id="loading-overlay" style="position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;background:#02030a;transition:opacity .5s">
@@ -679,6 +728,7 @@
 </div>
 
 <!-- Top Navigation -->
+<a href="#globe-view" class="skip-link" aria-label="Skip to main content">Skip to content</a>
 <nav class="top-nav" role="tablist" aria-label="View navigation">
   <span class="logo">◆ AstroAxis</span>
   <button class="nav-btn active" data-view="globe" data-i18n="nav.globe" role="tab" aria-selected="true" tabindex="-1">Globe</button>
@@ -686,7 +736,7 @@
   <button class="nav-btn" data-view="feed" data-i18n="nav.feed" role="tab" aria-selected="false" tabindex="-1">Feed</button>
   <span class="search-wrap">
     <input type="text" class="history-search" id="historySearch" placeholder="🔍 Search articles & events..." aria-label="Search news articles and timeline events" autocomplete="off" spellcheck="false">
-    <div class="search-recent" id="searchRecent"></div>
+    <div class="search-recent" id="searchRecent" role="listbox" aria-label="Recent searches"></div>
   </span>
   <div style="position:relative;margin-left:auto">
     <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">🌐 繁</button>
@@ -780,6 +830,26 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
   <script>
+    // ── Three.js load check ──
+    if (typeof THREE === 'undefined') {
+      document.body.innerHTML = '<div style="background:#03040c;color:#eef7ff;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:Inter,sans-serif;text-align:center;padding:40px"><div><div style="font-size:48px;margin-bottom:16px">⚠️</div><h1 style="font-size:22px;margin-bottom:8px">Failed to load 3D engine</h1><p style="color:rgba(238,247,255,.6);max-width:400px;line-height:1.6">The 3D globe library (Three.js) could not be loaded. This may be due to a network issue or content blocker.</p></div></div>';
+      throw new Error('Three.js failed to load');
+    }
+    // ── Structured error logger ──
+    const _errors = [];
+    window._logError = function(category, msg, detail) {
+      var entry = { time: new Date().toISOString(), category: category, msg: msg, detail: String(detail||'').slice(0,200) };
+      _errors.push(entry);
+      if (_errors.length > 50) _errors.shift();
+      console.warn('[AstroAxis:'+category+']', msg, detail||'');
+    };
+    window.addEventListener('error', function(e) {
+      window._logError('uncaught', e.message, (e.filename||'') + ':' + (e.lineno||''));
+    });
+    window.addEventListener('unhandledrejection', function(e) {
+      window._logError('promise', String(e.reason||'').slice(0,100));
+    });
+
     // ── View switching ──
     let currentLang = localStorage.getItem('astrolang') || 'zh-HK';
     const timelineData = {"2017": [{"date": "2017-12-17", "title": "Bitcoin Futures Launch", "desc": "CME launches Bitcoin futures, BTC peaks near $20K", "type": "crypto"}, {"date": "2017-09-15", "title": "Bitcoin China Ban", "desc": "China orders closure of all crypto exchanges", "type": "crypto"}, {"date": "2017-06-01", "title": "US Withdraws Paris Accord", "desc": "Trump announces US withdrawal from climate agreement", "type": "politics"}], "2018": [{"date": "2018-06-12", "title": "Trump-Kim Summit", "desc": "First US-North Korea summit in Singapore", "type": "politics"}, {"date": "2018-02-06", "title": "Falcon Heavy Launch", "desc": "SpaceX launches Falcon Heavy, world's most powerful rocket", "type": "tech"}], "2019": [{"date": "2019-12-01", "title": "COVID-19 First Cases", "desc": "First cases of novel coronavirus detected in Wuhan", "type": "disaster"}, {"date": "2019-04-15", "title": "Notre Dame Fire", "desc": "Major fire devastates Notre Dame Cathedral in Paris", "type": "disaster"}, {"date": "2019-01-01", "title": "Chang'e 4 Moon Landing", "desc": "China lands first spacecraft on far side of Moon", "type": "science"}], "2020": [{"date": "2020-03-11", "title": "COVID-19 Pandemic", "desc": "WHO declares COVID-19 a global pandemic", "type": "disaster"}, {"date": "2020-01-31", "title": "Brexit", "desc": "United Kingdom officially leaves the European Union", "type": "politics"}, {"date": "2020-01-03", "title": "Qasem Soleimani Killed", "desc": "US drone strike kills Iranian general in Baghdad", "type": "politics"}], "2021": [{"date": "2021-11-10", "title": "Bitcoin ATH $69K", "desc": "Bitcoin reaches all-time high of $69,000", "type": "crypto"}, {"date": "2021-08-15", "title": "Taliban Take Kabul", "desc": "Taliban seizes Afghan capital, US withdrawal ends", "type": "politics"}, {"date": "2021-02-18", "title": "Mars Landing", "desc": "NASA Perseverance rover lands on Mars", "type": "science"}, {"date": "2021-01-06", "title": "US Capitol Attack", "desc": "Supporters of President Trump storm the Capitol", "type": "politics"}], "2022": [{"date": "2022-11-30", "title": "ChatGPT Launched", "desc": "OpenAI releases ChatGPT, sparking AI revolution", "type": "tech"}, {"date": "2022-09-08", "title": "Queen Elizabeth II Dies", "desc": "Longest-reigning British monarch dies at 96", "type": "politics"}, {"date": "2022-02-24", "title": "Russia Invades Ukraine", "desc": "Full-scale invasion begins, major European conflict", "type": "politics"}, {"date": "2022-01-05", "title": "Bitcoin Crashes", "desc": "Bitcoin drops 50% from Nov 2021 high of $69K", "type": "crypto"}], "2023": [{"date": "2023-10-07", "title": "Israel-Gaza War", "desc": "Hamas attack triggers major conflict", "type": "politics"}, {"date": "2023-07-19", "title": "Global Temperature Record", "desc": "Hottest month ever recorded globally", "type": "climate"}, {"date": "2023-05-06", "title": "King Charles Coronation", "desc": "Charles III crowned King of the United Kingdom", "type": "politics"}, {"date": "2023-03-14", "title": "GPT-4 Released", "desc": "OpenAI releases GPT-4, advancing AI capabilities", "type": "tech"}], "2024": [{"date": "2024-11-05", "title": "US Presidential Election", "desc": "2024 United States presidential election", "type": "politics"}, {"date": "2024-07-21", "title": "Global Heatwave Record", "desc": "Hottest day on record globally", "type": "climate"}, {"date": "2024-03-15", "title": "EU AI Act Passed", "desc": "European Parliament passes landmark AI regulation", "type": "tech"}, {"date": "2024-01-10", "title": "Bitcoin ETF Approved", "desc": "SEC approves first spot Bitcoin ETFs", "type": "finance"}], "2025": [{"date": "2025-09-01", "title": "Crypto Market Correction", "desc": "Bitcoin drops 40% from ATH, broad selloff", "type": "crypto"}, {"date": "2025-06-15", "title": "USMCA Renegotiation", "desc": "North American trade deal renegotiation begins", "type": "finance"}, {"date": "2025-03-28", "title": "AI Export Controls", "desc": "US expands AI chip export restrictions", "type": "tech"}, {"date": "2025-01-20", "title": "New US Administration", "desc": "Inauguration of 47th US President", "type": "politics"}], "2026": [{"date": "2026-06-27", "title": "Binance EU Exit", "desc": "Binance fails MiCA license, withdraws from EU market", "type": "crypto"}, {"date": "2026-06-24", "title": "Venezuela Earthquake", "desc": "Dual 7.5M earthquakes, 1400+ casualties", "type": "disaster"}, {"date": "2026-04-05", "title": "Iran-US Peace Deal", "desc": "Historic ceasefire signed between US and Iran", "type": "politics"}, {"date": "2026-02-10", "title": "AI Model Proliferation", "desc": "Multiple nations launch sovereign AI models", "type": "tech"}]};
@@ -1041,7 +1111,7 @@
         const summaryText = (a.summaries && a.summaries[currentLang]) || (a.summaries && a.summaries['zh-HK']) || a.ai_summary || '';
         const bullets = summaryText.split('\\n').filter(l => l.includes('•')).map(l => l.replace(/^[•\\s]+/,'').trim()).filter(Boolean).slice(0, 4);
         const thumbBg = topicGradient(a.topic || 'General');
-        html += `<div class="feed-card" style="--thumb-bg:${thumbBg}">
+        html += `<article class="feed-card" role="article" aria-label="${a.title.replace(/"/g,'&quot;')}" style="--thumb-bg:${thumbBg}">
           <div class="card-thumb placeholder" aria-hidden="true" style="background:${thumbBg}">${(a.topic||'G')[0]}</div>
           <div class="card-top">
             <span class="card-topic" style="color:#${a.topic === 'AI' ? '3b82f6' : a.topic === 'Bitcoin' ? 'f97316' : a.topic === 'Regulation' ? 'ef4444' : a.topic === 'DeFi' ? '22c55e' : '818cf8'}">${a.topic || 'General'}</span>
@@ -1118,12 +1188,46 @@
     });
 
     // ── A11y announcement helper ──
-    function a11yAnnounce(msg) {
-      const el = document.getElementById('a11y-live');
-      if (!el) return;
-      el.textContent = '';
-      requestAnimationFrame(() => { el.textContent = msg; });
+    function a11yAnnounce(msg, priority) {
+      const liveRegion = document.getElementById('a11y-live');
+      if (!liveRegion) return;
+      if (priority === 'assertive') liveRegion.setAttribute('aria-live', 'assertive');
+      liveRegion.textContent = '';
+      requestAnimationFrame(() => {
+        liveRegion.textContent = msg;
+        if (priority === 'assertive') {
+          setTimeout(() => liveRegion.setAttribute('aria-live', 'polite'), 1000);
+        }
+      });
     }
+
+    // Announce search results for screen readers
+    const _origRenderFeedSR = renderFeed;
+    renderFeed = function() {
+      _origRenderFeedSR();
+      const cards = document.querySelectorAll('#feed-content .feed-card');
+      const sq = window._searchQuery;
+      if (sq) {
+        a11yAnnounce(cards.length + ' article' + (cards.length !== 1 ? 's' : '') + ' found for "' + sq + '"');
+      }
+    };
+
+    // Announce view switches
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        a11yAnnounce('Switched to ' + btn.textContent.trim() + ' view');
+      });
+    });
+
+    // Focus visible enhancement for keyboard users
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-user');
+      }
+    }, {capture: true});
+    document.addEventListener('mousedown', function() {
+      document.body.classList.remove('keyboard-user');
+    }, {capture: true});
 
     // ── Keyboard navigation ──
     document.addEventListener('keydown', (e) => {
@@ -1241,7 +1345,7 @@
       const recents = getRecentSearches();
       if (!recents.length) { searchRecent.classList.remove('open'); return; }
       searchRecent.innerHTML = recents.map((r, i) =>
-        `<div class="search-recent-item" data-q="${r.replace(/"/g,'&quot;')}"><span>🕐 ${r}</span><span class="del-recent" data-idx="${i}">×</span></div>`
+        `<div class="search-recent-item" role="option" data-q="${r.replace(/"/g,'&quot;')}"><span>🕐 ${r}</span><span class="del-recent" data-idx="${i}">×</span></div>`
       ).join('');
       searchRecent.classList.add('open');
     }
@@ -2990,4 +3094,4 @@
   </script>
 </body>
 </html>
-<div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260703-0236</div>
+<div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260703-0240</div>
