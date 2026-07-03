@@ -2833,6 +2833,9 @@ const GEO_KEYWORDS = [
       const H_YEARS = Object.keys(timelineData || {}).sort().reverse().slice(0, 15);
       const H_YEAR_COLORS = ['#67e8f9','#22d3ee','#818cf8','#a78bfa','#6366f1','#f59e0b','#f97316','#ef4444','#22c55e','#8892b6'];
 
+      // Store all dots by type for connection lines
+      const dotsByType = {};
+      
       H_YEARS.forEach((year, yi) => {
         const r = H_RING_BASE + yi * H_RING_STEP;
         const color = new THREE.Color(H_YEAR_COLORS[yi % H_YEAR_COLORS.length]);
@@ -2861,10 +2864,17 @@ const GEO_KEYWORDS = [
           dotMat.userData = { _baseOpacity: 0.7, _baseAngle: angle, _baseY: (ei%3)*0.08-0.05 };
           const dot = new THREE.Mesh(new THREE.SphereGeometry(0.06, 8, 6), dotMat);
           dot.position.set(Math.cos(angle)*r, (ei%3)*0.08-0.05, Math.sin(angle)*r);
-          dot.userData = { _event: ev, _year: year };
+          dot.userData = { _event: ev, _year: year, _ringRadius: r, _angle: angle };
           historyGroup.add(dot);
           window._historyDots = window._historyDots || [];
           window._historyDots.push(dot);
+          
+          // Group dots by type for connection lines
+          if (ev.type) {
+            if (!dotsByType[ev.type]) dotsByType[ev.type] = [];
+            dotsByType[ev.type].push({ dot, year: parseInt(year), ev });
+          }
+          
           dot.callback = () => {
             const panel = document.getElementById('timeline-view');
             if (panel) {
@@ -2875,6 +2885,58 @@ const GEO_KEYWORDS = [
             }
           };
         });
+      });
+      
+      // Create connection lines between same-type events across years
+      window._eventLines = [];
+      const lineColors = {
+        politics: '#eab308',
+        tech: '#3b82f6', 
+        finance: '#22c55e',
+        disaster: '#ef4444',
+        crypto: '#818cf8',
+        science: '#a78bfa',
+        climate: '#f97316'
+      };
+      
+      Object.keys(dotsByType).forEach(type => {
+        const dots = dotsByType[type];
+        if (dots.length < 2) return;
+        
+        // Sort by year (most recent first)
+        dots.sort((a, b) => b.year - a.year);
+        
+        // Connect events within 3 years of each other
+        for (let i = 0; i < dots.length - 1; i++) {
+          for (let j = i + 1; j < dots.length; j++) {
+            const yearDiff = dots[i].year - dots[j].year;
+            if (yearDiff > 3) break; // Only connect recent events
+            
+            // Create curved line between dots
+            const start = dots[i].dot.position.clone();
+            const end = dots[j].dot.position.clone();
+            
+            // Create a curved path
+            const mid = new THREE.Vector3().lerpVectors(start, end, 0.5);
+            mid.y += 0.3; // Arc upward
+            
+            const curve = new THREE.QuadraticBezierCurve3(start, mid, end);
+            const points = curve.getPoints(20);
+            const geometry = new THREE.BufferGeometry().setFromPoints(points);
+            
+            const lineMat = new THREE.LineBasicMaterial({
+              color: new THREE.Color(lineColors[type] || '#8892b6'),
+              transparent: true,
+              opacity: 0.15 + Math.random() * 0.15,
+              blending: THREE.AdditiveBlending
+            });
+            
+            const line = new THREE.Line(geometry, lineMat);
+            line.userData = { _type: type, _baseOpacity: lineMat.opacity };
+            historyGroup.add(line);
+            window._eventLines.push(line);
+          }
+        }
       });
     }
 
