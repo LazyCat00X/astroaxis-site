@@ -2840,43 +2840,42 @@ const GEO_KEYWORDS = [
         const ring = new THREE.Mesh(new THREE.RingGeometry(r - 0.015, r + 0.015, 160, 2), ringMat);
         ring.rotation.x = -Math.PI/2;
         ringMat.userData = { _baseOpacity: 0.35 };
-      historyGroup.add(ring);
+        historyGroup.add(ring);
 
-      const c = document.createElement('canvas'); c.width=200; c.height=60;
-      const ctx = c.getContext('2d');
-      ctx.font='bold 28px Inter,sans-serif'; ctx.fillStyle=H_YEAR_COLORS[yi]; ctx.textAlign='center';
-      ctx.fillText(year, 100, 42);
-      const tex = new THREE.CanvasTexture(c); tex.minFilter = THREE.LinearFilter;
-      const sprMat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.8, depthWrite: false });
-      sprMat.userData = { _baseOpacity: 0.8 };
-      const sprite = new THREE.Sprite(sprMat);
-      sprite.position.set(r + 0.4, 0.12, 0); sprite.scale.set(1.4, 0.42, 1);
-      historyGroup.add(sprite);
+        const c = document.createElement('canvas'); c.width=200; c.height=60;
+        const ctx = c.getContext('2d');
+        ctx.font='bold 28px Inter,sans-serif'; ctx.fillStyle=H_YEAR_COLORS[yi % H_YEAR_COLORS.length]; ctx.textAlign='center';
+        ctx.fillText(year, 100, 42);
+        const tex = new THREE.CanvasTexture(c); tex.minFilter = THREE.LinearFilter;
+        const sprMat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.8, depthWrite: false });
+        sprMat.userData = { _baseOpacity: 0.8 };
+        const sprite = new THREE.Sprite(sprMat);
+        sprite.position.set(r + 0.4, 0.12, 0); sprite.scale.set(1.4, 0.42, 1);
+        historyGroup.add(sprite);
 
-      const yrData = (timelineData || {})[String(year)] || [];
-      yrData.forEach((ev, ei) => {
-        const angle = (ei / Math.max(1, yrData.length)) * Math.PI * 2;
-        const dotColor = ev.type==='politics'?'#eab308':ev.type==='tech'?'#3b82f6':ev.type==='finance'?'#22c55e':ev.type==='disaster'?'#ef4444':ev.type==='crypto'?'#818cf8':ev.type==='science'?'#a78bfa':'#8892b6';
-        const dotMat = new THREE.MeshBasicMaterial({ color: new THREE.Color(dotColor), transparent: true, opacity: 0.7, blending: THREE.AdditiveBlending, depthWrite: false });
-        dotMat.userData = { _baseOpacity: 0.7, _baseAngle: angle, _baseY: (ei%3)*0.08-0.05 };
-        const dot = new THREE.Mesh(new THREE.SphereGeometry(0.06, 8, 6), dotMat);
-        dot.position.set(Math.cos(angle)*r, (ei%3)*0.08-0.05, Math.sin(angle)*r);
-        dot.userData = { _event: ev, _year: year };
-        historyGroup.add(dot);
-        window._historyDots = window._historyDots || [];
-        window._historyDots.push(dot);
-        // Click interaction for history dots
-        dot.callback = () => {
-          const panel = document.getElementById('timeline-view');
-          if (panel) {
-            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-            document.querySelector('[data-view="timeline"]')?.classList.add('active');
-            document.getElementById('globe-view').classList.remove('active');
-            document.getElementById('timeline-view').classList.add('active');
-          }
-        };
+        const yrData = (timelineData || {})[String(year)] || [];
+        yrData.forEach((ev, ei) => {
+          const angle = (ei / Math.max(1, yrData.length)) * Math.PI * 2;
+          const dotColor = ev.type==='politics'?'#eab308':ev.type==='tech'?'#3b82f6':ev.type==='finance'?'#22c55e':ev.type==='disaster'?'#ef4444':ev.type==='crypto'?'#818cf8':ev.type==='science'?'#a78bfa':'#8892b6';
+          const dotMat = new THREE.MeshBasicMaterial({ color: new THREE.Color(dotColor), transparent: true, opacity: 0.7, blending: THREE.AdditiveBlending, depthWrite: false });
+          dotMat.userData = { _baseOpacity: 0.7, _baseAngle: angle, _baseY: (ei%3)*0.08-0.05 };
+          const dot = new THREE.Mesh(new THREE.SphereGeometry(0.06, 8, 6), dotMat);
+          dot.position.set(Math.cos(angle)*r, (ei%3)*0.08-0.05, Math.sin(angle)*r);
+          dot.userData = { _event: ev, _year: year };
+          historyGroup.add(dot);
+          window._historyDots = window._historyDots || [];
+          window._historyDots.push(dot);
+          dot.callback = () => {
+            const panel = document.getElementById('timeline-view');
+            if (panel) {
+              document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+              document.querySelector('[data-view="timeline"]')?.classList.add('active');
+              document.getElementById('globe-view').classList.remove('active');
+              document.getElementById('timeline-view').classList.add('active');
+            }
+          };
+        });
       });
-    });
     }
 
     function resize() {
