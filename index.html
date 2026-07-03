@@ -2276,20 +2276,23 @@ const GEO_KEYWORDS = [
         .slice(0, 5);
     }
 
+    // ── Marker globals (declared early, built after NEWS_DATA loads) ──
     const markerGroup = new THREE.Group();
     const markerMeshes = [];
     const markerGeometry = new THREE.SphereGeometry(0.095, MARKER_SEGMENTS[0], MARKER_SEGMENTS[1]);
     const glowGeometry = new THREE.SphereGeometry(0.19, MARKER_SEGMENTS[0], MARKER_SEGMENTS[1]);
-
-    // Build position + color arrays for instancing
-    const markerPositions = [];
-    const markerColors = [];
-    const markerData = [];
+    let markerPositions = [];
+    let markerColors = [];
+    let markerData = [];
     const dummy = new THREE.Object3D();
 
-    // Group articles by their base location for clustering
-    const locationGroups = {};
-    const _articles = (typeof NEWS_DATA !== 'undefined' && NEWS_DATA.articles) ? NEWS_DATA.articles : [];
+    function buildMarkers() {
+      markerPositions = [];
+      markerColors = [];
+      markerData = [];
+      // Group articles by their base location for clustering
+      const locationGroups = {};
+      const _articles = (typeof NEWS_DATA !== 'undefined' && NEWS_DATA.articles) ? NEWS_DATA.articles : [];
     _articles.slice(0, 100).forEach((article, index) => {
       if (!article.ai_summary) return;
       let baseLat, baseLon, city;
@@ -2420,7 +2423,8 @@ const GEO_KEYWORDS = [
     }
     globe.add(markerGroup);
     globe.add(continentGroup);
-
+    console.log(`Built ${markerPositions.length} markers from ${_articles.length} articles`);
+    }
     // ── Country labels on zoom ──
     let countryLookup = [];
     const countryNameEl = document.getElementById('country-label-name');
@@ -3325,6 +3329,8 @@ const GEO_KEYWORDS = [
           document.getElementById('errorText').textContent = `Data may be stale — last update ${Math.floor(hoursSince)}h ago`;
         }
       }
+      // Build markers AFTER NEWS_DATA is loaded
+      buildMarkers();
       // Initialize UI after data loaded
       document.documentElement.lang = currentLang;
       applyLanguage();
