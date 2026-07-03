@@ -2285,6 +2285,8 @@ const GEO_KEYWORDS = [
     let markerColors = [];
     let markerData = [];
     let markerCount = 0;  // Global for animate loop
+    let instancedMarkers = null;
+    let historyGroup = null;
     const dummy = new THREE.Object3D();
     let activeFilters = { time: 'all', region: 'All', topic: 'All' };
 
@@ -2381,7 +2383,7 @@ const GEO_KEYWORDS = [
     const markerMat = new THREE.MeshBasicMaterial({
       transparent: true, opacity: 1.0, blending: THREE.AdditiveBlending, depthWrite: false
     });
-    const instancedMarkers = new THREE.InstancedMesh(markerGeometry, markerMat, markerCount);
+    instancedMarkers = new THREE.InstancedMesh(markerGeometry, markerMat, markerCount);
     const colorAttr = new THREE.InstancedBufferAttribute(new Float32Array(markerCount * 3), 3);
     // Build scale array for per-instance size
     const scaleAttr = new THREE.InstancedBufferAttribute(new Float32Array(markerCount), 1);
@@ -2829,7 +2831,7 @@ const GEO_KEYWORDS = [
     renderer.domElement.addEventListener('wheel', () => pauseAutoRotate(), { passive: true });
 
     // ── History Rings (created after timelineData loads) ──
-    const historyGroup = new THREE.Group();
+    historyGroup = new THREE.Group();
     globe.add(historyGroup);
     
     function initHistoryRings() {
@@ -3343,4 +3345,3 @@ const GEO_KEYWORDS = [
   </script>
 </body>
 </html>
-<!-- cache bust 1783092203 -->
