@@ -950,7 +950,7 @@
 
     // ── View switching ──
     let currentLang = localStorage.getItem('astrolang') || 'zh-HK';
-    const timelineData = {"2024": [{"date":"2024-01-10","title":"Bitcoin ETF Approved","desc":"SEC approves first spot Bitcoin ETFs in the US","type":"finance"},{"date":"2024-03-15","title":"AI Regulation Framework","desc":"EU passes landmark AI Act","type":"tech"},{"date":"2024-07-21","title":"Global Heatwave","desc":"Hottest day on record globally","type":"climate"},{"date":"2024-11-05","title":"US Presidential Election","desc":"2024 United States presidential election","type":"politics"}],"2025":[{"date":"2025-01-20","title":"New Administration","desc":"Inauguration of 47th US President","type":"politics"},{"date":"2025-03-28","title":"AI Export Controls","desc":"US tightens AI chip export restrictions","type":"tech"},{"date":"2025-06-15","title":"Global Trade Realignment","desc":"USMCA renegotiation begins","type":"finance"},{"date":"2025-09-01","title":"Crypto Market Correction","desc":"Bitcoin drops 40% from all-time high","type":"crypto"}],"2026":[{"date":"2026-02-10","title":"AI Model Proliferation","desc":"Multiple nations launch sovereign AI models","type":"tech"},{"date":"2026-04-05","title":"Iran-US Peace Deal","desc":"Historic ceasefire agreement signed","type":"politics"},{"date":"2026-06-24","title":"Venezuela Earthquake","desc":"Dual 7.5 magnitude quakes, 1000+ casualties","type":"disaster"},{"date":"2026-06-27","title":"Binance EU Exit","desc":"Binance fails MiCA license, exits EU market","type":"crypto"}]};
+    // timelineData now loaded dynamically from timeline-data.json
 
     // ── Full UI translations ──
     const I18N = {
@@ -1554,10 +1554,19 @@
     // ── Existing globe code below ──
     // Already available as THREE, THREE.OrbitControls via global
         let NEWS_DATA = {articles: [], sourceLocations: {}};
-    fetch('news-data.json')
-      .then(r => r.json())
-      .then(data => { NEWS_DATA = data; initApp(); })
-      .catch(e => { console.error('Failed to load news data:', e); initApp(); });
+    let timelineData = {};  // Will be loaded from timeline-data.json
+    
+    // Load both data files in parallel
+    Promise.all([
+      fetch('news-data.json').then(r => r.json()),
+      fetch('timeline-data.json').then(r => r.json()).catch(() => ({}))
+    ])
+      .then(([newsData, tlData]) => {
+        NEWS_DATA = newsData;
+        timelineData = tlData;
+        initApp();
+      })
+      .catch(e => { console.error('Failed to load data:', e); initApp(); });
 
 const GEO_KEYWORDS = [
       // ── Asia ──
