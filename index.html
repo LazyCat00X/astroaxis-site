@@ -271,7 +271,7 @@
       color: transparent;
       text-shadow: 0 0 40px rgba(34, 211, 238, 0.15);
     }
-    .country-label .country-count {
+    .country-label .country-markerCount {
       display: block;
       margin-top: 2px;
       font-size: clamp(11px, 1.2vw, 15px);
@@ -787,7 +787,7 @@
     </section>
     <button id="hud-toggle" class="hud-toggle" title="Toggle panel">◀</button>
     <div id="article-tooltip" class="article-tooltip" role="status" aria-live="polite"></div>
-    <div id="country-label" class="country-label"><span class="country-name" id="country-label-name"></span><span class="country-count" id="country-label-count"></span></div>
+    <div id="country-label" class="country-label"><span class="country-name" id="country-label-name"></span><span class="country-markerCount" id="country-label-markerCount"></span></div>
     <nav class="filter-bar" aria-label="News marker filters">
       <button class="filter-btn active" data-filter-type="all" data-filter-value="All" data-i18n="filter.all">All</button>
       <button class="filter-btn" data-filter-type="region" data-filter-value="Americas" data-i18n="filter.americas">Americas</button>
@@ -2284,7 +2284,9 @@ const GEO_KEYWORDS = [
     let markerPositions = [];
     let markerColors = [];
     let markerData = [];
+    let markerCount = 0;  // Global for animate loop
     const dummy = new THREE.Object3D();
+    let activeFilters = { time: 'all', region: 'All', topic: 'All' };
 
     function buildMarkers() {
       markerPositions = [];
@@ -2341,7 +2343,7 @@ const GEO_KEYWORDS = [
         color,
         region: regionFor(baseLat, baseLon),
         baseScale: clusterScale,
-        count: groupSize,
+        markerCount: groupSize,
         _groupSize: groupSize,
       });
 
@@ -2375,16 +2377,16 @@ const GEO_KEYWORDS = [
     countSprites.forEach(s => markerGroup.add(s));
 
     // Instanced mesh for cluster markers
-    const count = markerPositions.length;
+    markerCount = markerPositions.length;
     const markerMat = new THREE.MeshBasicMaterial({
       transparent: true, opacity: 1.0, blending: THREE.AdditiveBlending, depthWrite: false
     });
-    const instancedMarkers = new THREE.InstancedMesh(markerGeometry, markerMat, count);
-    const colorAttr = new THREE.InstancedBufferAttribute(new Float32Array(count * 3), 3);
+    const instancedMarkers = new THREE.InstancedMesh(markerGeometry, markerMat, markerCount);
+    const colorAttr = new THREE.InstancedBufferAttribute(new Float32Array(markerCount * 3), 3);
     // Build scale array for per-instance size
-    const scaleAttr = new THREE.InstancedBufferAttribute(new Float32Array(count), 1);
+    const scaleAttr = new THREE.InstancedBufferAttribute(new Float32Array(markerCount), 1);
     const originalPositions = markerPositions.map(p => p.clone());
-    for (let i = 0; i < count; i++) {
+    for (let i = 0; i < markerCount; i++) {
       dummy.position.copy(markerPositions[i]);
       dummy.scale.set(markerData[i].baseScale, markerData[i].baseScale, markerData[i].baseScale);
       dummy.updateMatrix();
@@ -2400,8 +2402,8 @@ const GEO_KEYWORDS = [
     const glowMat = new THREE.MeshBasicMaterial({
       transparent: true, opacity: 0.28, blending: THREE.AdditiveBlending, depthWrite: false
     });
-    const instancedGlows = new THREE.InstancedMesh(glowGeometry, glowMat, count);
-    for (let i = 0; i < count; i++) {
+    const instancedGlows = new THREE.InstancedMesh(glowGeometry, glowMat, markerCount);
+    for (let i = 0; i < markerCount; i++) {
       dummy.position.copy(markerPositions[i]);
       dummy.scale.set(markerData[i].baseScale * 2, markerData[i].baseScale * 2, markerData[i].baseScale * 2);
       dummy.updateMatrix();
@@ -2413,7 +2415,7 @@ const GEO_KEYWORDS = [
 
     // Per-instance state for animation + interaction
     markerMeshes.length = 0;
-    for (let i = 0; i < count; i++) {
+    for (let i = 0; i < markerCount; i++) {
       const data = markerData[i];
       data.matrixIndex = i;
       data.instanceScale = 1;
@@ -2428,7 +2430,7 @@ const GEO_KEYWORDS = [
     // ── Country labels on zoom ──
     let countryLookup = [];
     const countryNameEl = document.getElementById('country-label-name');
-    const countryCountEl = document.getElementById('country-label-count');
+    const countryCountEl = document.getElementById('country-label-markerCount');
     const countryLabelEl = document.getElementById('country-label');
     let lastCountryLabel = null;
     const ZOOM_THRESHOLD = 18;
@@ -2483,18 +2485,18 @@ const GEO_KEYWORDS = [
             centroid: [sumLon / cnt, sumLat / cnt],
             polys,
             bbox: [minLon, minLat, maxLon, maxLat],
-            count: 0
+            markerCount: 0
           });
         });
         // Assign articles to countries (with bbox pre-filter)
-        for (let i = 0; i < count; i++) {
+        for (let i = 0; i < markerCount; i++) {
           const pos = markerPositions[i];
           if (!pos) continue;
           const nx = pos.x / (R * 1.035), ny = pos.y / (R * 1.035), nz = pos.z / (R * 1.035);
           const lat = 90 - THREE.MathUtils.radToDeg(Math.acos(Math.min(1, Math.max(-1, ny))));
           const lon = THREE.MathUtils.radToDeg(Math.atan2(nz, -nx)) - 180;
           const country = findCountry(lon, lat);
-          if (country) country.count++;
+          if (country) country.markerCount++;
         }
         console.log(`Loaded ${countryLookup.length} countries, ${markerPositions.length} articles mapped`);
         // Render borders + labels AFTER data is loaded (async fix)
@@ -2578,7 +2580,7 @@ const GEO_KEYWORDS = [
     starMaterial.uniforms.uTime = _uTime;
 
     // Track invisible instances for filtering
-    const invisibleFlags = new Uint8Array(count);
+    const invisibleFlags = new Uint8Array(markerCount);
 
     const tooltip = document.getElementById('article-tooltip');
     const raycaster = new THREE.Raycaster();
@@ -2586,7 +2588,6 @@ const GEO_KEYWORDS = [
     let hoveredIdx = -1;
     let hoveredData = null;
     let stickyTooltip = null; // when set, tooltip stays visible after click
-    let activeFilters = { time: 'all', region: 'All', topic: 'All' };
 
     function markerMatchesFilter(data) {
       if (activeFilters.region !== 'All' && data.region !== activeFilters.region) return false;
@@ -2610,7 +2611,7 @@ const GEO_KEYWORDS = [
 
     function applyFilter() {
       const dummy = new THREE.Object3D();
-      for (let i = 0; i < count; i++) {
+      for (let i = 0; i < markerCount; i++) {
         const visible = markerMatchesFilter(markerData[i]);
         invisibleFlags[i] = visible ? 0 : 1;
         // Physically hide filtered-out markers / restore visible ones
@@ -3019,7 +3020,7 @@ const GEO_KEYWORDS = [
       // Fade out globe markers when zoomed far out (r>15)
       const markerVisibility = 1 - Math.max(0, Math.min(1, (camDist - 18) / 8));
       const distScale = Math.min(2.5, 12 / camDist) * markerVisibility;
-      for (let i = 0; i < count; i++) {
+      for (let i = 0; i < markerCount; i++) {
         const data = markerData[i];
         const isHovered = data === hoveredData;
         const target = isHovered ? 1.85 : 1 + Math.sin(elapsed * 2.6 + i * 0.47) * 0.09;
@@ -3085,8 +3086,8 @@ const GEO_KEYWORDS = [
             if (country && country !== lastCountryLabel) {
               countryNameEl.textContent = country.name;
               const t = I18N[currentLang] || I18N['zh-HK'];
-              const label = country.count === 1 ? (t['country.articles'] || 'article') : (t['country.articles_plural'] || 'articles');
-              countryCountEl.textContent = country.count + ' ' + label;
+              const label = country.markerCount === 1 ? (t['country.articles'] || 'article') : (t['country.articles_plural'] || 'articles');
+              countryCountEl.textContent = country.markerCount + ' ' + label;
               countryLabelEl.classList.add('visible');
               lastCountryLabel = country;
             } else if (!country && lastCountryLabel) {
