@@ -2286,6 +2286,7 @@ const GEO_KEYWORDS = [
     let markerData = [];
     let markerCount = 0;  // Global for animate loop
     let instancedMarkers = null;
+    let instancedGlows = null;
     let historyGroup = null;
     const dummy = new THREE.Object3D();
     let activeFilters = { time: 'all', region: 'All', topic: 'All' };
@@ -2404,7 +2405,7 @@ const GEO_KEYWORDS = [
     const glowMat = new THREE.MeshBasicMaterial({
       transparent: true, opacity: 0.28, blending: THREE.AdditiveBlending, depthWrite: false
     });
-    const instancedGlows = new THREE.InstancedMesh(glowGeometry, glowMat, markerCount);
+    instancedGlows = new THREE.InstancedMesh(glowGeometry, glowMat, markerCount);
     for (let i = 0; i < markerCount; i++) {
       dummy.position.copy(markerPositions[i]);
       dummy.scale.set(markerData[i].baseScale * 2, markerData[i].baseScale * 2, markerData[i].baseScale * 2);
@@ -2981,7 +2982,7 @@ const GEO_KEYWORDS = [
 
     function animate() {
       // Guard: markers not built yet
-      if (!instancedMarkers || markerCount === 0) {
+      if (!instancedMarkers || !instancedGlows || markerCount === 0) {
         requestAnimationFrame(animate);
         return;
       }
