@@ -939,7 +939,7 @@
         searches: (function(){try{return JSON.parse(localStorage.getItem('astroaxis_searches')||'[]');}catch(e){return[];}})(),
         interests: (function(){try{return JSON.parse(localStorage.getItem('astroaxis_interests')||'{}');}catch(e){return{};}})(),
         bookmarks: (function(){try{return JSON.parse(localStorage.getItem('astroaxis_bookmarks')||'[]');}catch(e){return[];}})(),
-        articles: (NEWS_DATA && NEWS_DATA.articles) ? NEWS_DATA.articles.length : 0,
+        articles: (typeof NEWS_DATA !== 'undefined' && NEWS_DATA && NEWS_DATA.articles) ? NEWS_DATA.articles.length : 0,
         memory: (performance.memory) ? {used: Math.round(performance.memory.usedJSHeapSize/1048576)+'MB', limit: Math.round(performance.memory.jsHeapSizeLimit/1048576)+'MB'} : 'N/A'
       };
       console.table(d);
@@ -1065,6 +1065,7 @@
     const TL_TYPE = {en:{finance:'Finance',tech:'Tech',politics:'Politics',climate:'Climate',crypto:'Crypto',disaster:'Disaster'},'zh-HK':{finance:'金融',tech:'科技',politics:'政治',climate:'氣候',crypto:'加密貨幣',disaster:'災難'},'zh-CN':{finance:'金融',tech:'科技',politics:'政治',climate:'气候',crypto:'加密货币',disaster:'灾难'},ja:{finance:'金融',tech:'技術',politics:'政治',climate:'気候',crypto:'暗号資産',disaster:'災害'},ko:{finance:'금융',tech:'기술',politics:'정치',climate:'기후',crypto:'암호화폐',disaster:'재난'}};
 
     function renderTimeline() {
+      if(typeof timelineData === 'undefined' || !Object.keys(timelineData).length) return;  // Skip if data not loaded
       const t = I18N[currentLang] || I18N['zh-HK'];
       const types = TL_TYPE[currentLang] || TL_TYPE['en'];
       let html = `<h2 style="font-size:24px;font-weight:700;margin-bottom:24px;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">${t['tl.title']}</h2>`;
@@ -2288,7 +2289,8 @@ const GEO_KEYWORDS = [
 
     // Group articles by their base location for clustering
     const locationGroups = {};
-    NEWS_DATA.articles.slice(0, 100).forEach((article, index) => {
+    const _articles = (typeof NEWS_DATA !== 'undefined' && NEWS_DATA.articles) ? NEWS_DATA.articles : [];
+    _articles.slice(0, 100).forEach((article, index) => {
       if (!article.ai_summary) return;
       let baseLat, baseLon, city;
       const geoMatch = detectGeoLocation(article);
