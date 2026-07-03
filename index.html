@@ -2297,7 +2297,7 @@ const GEO_KEYWORDS = [
       if (geoMatch) {
         [baseLat, baseLon, city] = geoMatch;
       } else {
-        const srcLoc = NEWS_DATA.sourceLocations[article.source];
+        const srcLoc = (typeof NEWS_DATA !== 'undefined' && NEWS_DATA.sourceLocations) ? NEWS_DATA.sourceLocations[article.source] : null;
         if (!srcLoc) return;
         [baseLat, baseLon, city] = srcLoc;
       }
