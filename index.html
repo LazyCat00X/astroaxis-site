@@ -2612,6 +2612,7 @@ const GEO_KEYWORDS = [
     }
 
     function applyFilter() {
+      if (!instancedMarkers || markerCount === 0) return;  // Guard: markers not built yet
       const dummy = new THREE.Object3D();
       for (let i = 0; i < markerCount; i++) {
         const visible = markerMatchesFilter(markerData[i]);
@@ -2979,6 +2980,11 @@ const GEO_KEYWORDS = [
     }
 
     function animate() {
+      // Guard: markers not built yet
+      if (!instancedMarkers || markerCount === 0) {
+        requestAnimationFrame(animate);
+        return;
+      }
       // FPS throttle for low-end devices
       if (FPS_THROTTLE > 1) {
         animate._fc = (animate._fc || 0) + 1;
@@ -2999,7 +3005,8 @@ const GEO_KEYWORDS = [
       const camDist = camera.position.distanceTo(controls.target);
       // History rings: fade in as you zoom out
       const historyOpacity = Math.max(0, Math.min(1, (camDist - 10) / 10));
-      historyGroup.children.forEach(child => {
+      if (historyGroup) {
+        historyGroup.children.forEach(child => {
         let baseOp = 0.5;
         if (child.material && child.material.userData && child.material.userData._baseOpacity != null) {
           baseOp = child.material.userData._baseOpacity;
@@ -3017,7 +3024,8 @@ const GEO_KEYWORDS = [
         }
         if (child.material) child.material.opacity = baseOp * historyOpacity;
         if (child.isSprite) child.material.opacity = (child.material.userData?._baseOpacity || 0.8) * historyOpacity;
-      });
+        });
+      }
 
       // Fade out globe markers when zoomed far out (r>15)
       const markerVisibility = 1 - Math.max(0, Math.min(1, (camDist - 18) / 8));
