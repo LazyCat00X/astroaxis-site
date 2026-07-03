@@ -2821,22 +2821,23 @@ const GEO_KEYWORDS = [
     renderer.domElement.addEventListener('pointerdown', () => pauseAutoRotate(), { passive: true });
     renderer.domElement.addEventListener('wheel', () => pauseAutoRotate(), { passive: true });
 
-    // ── History Rings (zoom out to see) ──
+    // ── History Rings (created after timelineData loads) ──
     const historyGroup = new THREE.Group();
     globe.add(historyGroup);
+    
+    function initHistoryRings() {
+      const H_RING_BASE = 7.0;
+      const H_RING_STEP = 0.92;
+      const H_YEARS = Object.keys(timelineData || {}).sort().reverse().slice(0, 15);
+      const H_YEAR_COLORS = ['#67e8f9','#22d3ee','#818cf8','#a78bfa','#6366f1','#f59e0b','#f97316','#ef4444','#22c55e','#8892b6'];
 
-    const H_RING_BASE = 7.0;
-    const H_RING_STEP = 0.92;
-    const H_YEARS = Object.keys(timelineData || {}).sort().reverse().slice(0, 15);  // Dynamic from timelineData, max 15 rings
-    const H_YEAR_COLORS = ['#67e8f9','#22d3ee','#818cf8','#a78bfa','#6366f1','#f59e0b','#f97316','#ef4444','#22c55e','#8892b6'];
-
-    H_YEARS.forEach((year, yi) => {
-      const r = H_RING_BASE + yi * H_RING_STEP;
-      const color = new THREE.Color(H_YEAR_COLORS[yi]);
-      const ringMat = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.35, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide });
-      const ring = new THREE.Mesh(new THREE.RingGeometry(r - 0.015, r + 0.015, 160, 2), ringMat);
-      ring.rotation.x = -Math.PI/2;
-      ringMat.userData = { _baseOpacity: 0.35 };
+      H_YEARS.forEach((year, yi) => {
+        const r = H_RING_BASE + yi * H_RING_STEP;
+        const color = new THREE.Color(H_YEAR_COLORS[yi % H_YEAR_COLORS.length]);
+        const ringMat = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.35, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide });
+        const ring = new THREE.Mesh(new THREE.RingGeometry(r - 0.015, r + 0.015, 160, 2), ringMat);
+        ring.rotation.x = -Math.PI/2;
+        ringMat.userData = { _baseOpacity: 0.35 };
       historyGroup.add(ring);
 
       const c = document.createElement('canvas'); c.width=200; c.height=60;
@@ -2873,7 +2874,7 @@ const GEO_KEYWORDS = [
           }
         };
       });
-    });
+    }
 
     function resize() {
       const w = window.innerWidth;
@@ -3266,6 +3267,7 @@ const GEO_KEYWORDS = [
       applyLanguage();
       checkBreaking();
       setInterval(checkBreaking, 300000);
+      initHistoryRings();  // Create history rings after timelineData loaded
       animate();
     }
   </script>
