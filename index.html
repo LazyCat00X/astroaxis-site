@@ -1105,11 +1105,12 @@
       // Apply active filters (topic, time) + global search
       const sq = window._searchQuery;
       const filtered = articles.filter(a => {
-        // Global search filter
+        // Global search filter with highlight support
         if (sq) {
-          const haystack = ((a.title||'') + ' ' + (a.ai_summary||'') + ' ' + (a.source||'')).toLowerCase();
+          const haystack = ((a.title||'') + ' ' + (a.ai_summary||'') + ' ' + (a.source||'') + ' ' + (a.url||'')).toLowerCase();
           if (!haystack.includes(sq)) return false;
-        }
+          a._searchMatch = sq; // Store for highlighting
+        } else { a._searchMatch = null; }
         // Topic filter
         if (activeFilters.topic !== 'All' && a.topic !== activeFilters.topic) return false;
         // Time filter
@@ -1257,6 +1258,7 @@
     }
 
     // ── Breaking news checker ──
+    let lastBreakingTitle = '';
     async function checkBreaking() {
       try {
         const articles = NEWS_DATA.articles || [];
@@ -1272,8 +1274,18 @@
           document.getElementById('breachText').textContent = u.title.slice(0, 80);
           document.getElementById('breachSource').textContent = u.source ? ' · ' + u.source : '';
           banner.classList.add('show');
+          // Send ntfy alert for new breaking news (dedup by title)
+          if (u.title !== lastBreakingTitle && window.location.hostname !== 'localhost') {
+            lastBreakingTitle = u.title;
+            fetch('https://ntfy.sh/astroaxis-breaking', {
+              method: 'POST',
+              headers: { 'Title': '🚨 AstroAxis Breaking', 'Priority': 'high', 'Tags': 'warning,newspaper' },
+              body: `${u.title}\n\n${u.source} • ${u.url}`
+            }).catch(() => {}); // silent fail
+          }
         } else {
           banner.classList.remove('show');
+          lastBreakingTitle = '';
         }
       } catch(e) { console.warn('Breaking check:', e); }
     }
