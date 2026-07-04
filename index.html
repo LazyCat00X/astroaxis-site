@@ -810,7 +810,7 @@
     <div class="vignette"></div>
     <div class="hint" data-i18n="hint.drag">🖱 DRAG · A/D ←→ SPIN · W/S ↑↓ TILT · Q/E ZOOM · 1-3 VIEWS</div>
     <div class="scroll-hint" aria-hidden="true" data-i18n="hint.scroll">↓ scroll for articles</div>
-  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260705-11</div>
+  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260705-13</div>
 </main>
 </div><!-- /globe-view -->
 
@@ -3110,7 +3110,45 @@ const GEO_KEYWORDS = [
         }
       });
 
-      console.log('StarField v2: ' + stars.length + ' stars, ' + window._eventLines.length + ' lines, 2000 dust');
+      // Spiral arm guide lines (3 arms)
+      for (let arm = 0; arm < 3; arm++) {
+        const armOffset = (arm / 3) * Math.PI * 2;
+        const armPts = [];
+        for (let s = 0; s <= 80; s++) {
+          const t = s / 80;
+          const sr = MIN_R + (MAX_R - MIN_R) * Math.pow(t, 0.5);
+          const sa = t * SPIRAL_TURNS * Math.PI * 2 + armOffset;
+          armPts.push(new THREE.Vector3(sr * Math.cos(sa), Math.sin(t*8)*0.5, sr * Math.sin(sa)));
+        }
+        const armGeo = new THREE.BufferGeometry().setFromPoints(armPts);
+        const armMat = new THREE.LineBasicMaterial({ color: 0x4466ff, transparent: true, opacity: 0.25, blending: THREE.AdditiveBlending, depthWrite: false });
+        armMat.userData = { _baseOpacity: 0.25, _isArm: true };
+        const armLine = new THREE.Line(armGeo, armMat);
+        historyGroup.add(armLine);
+      }
+
+      // Decade markers
+      var DECADES = [1900, 1920, 1940, 1960, 1980, 2000, 2020];
+      DECADES.forEach(function(dy) {
+        var dt2 = Math.min(1, (NOW_YEAR - dy) / MAX_YEARS);
+        var dr2 = MIN_R + (MAX_R - MIN_R) * Math.pow(dt2, 0.5);
+        var da2 = dt2 * SPIRAL_TURNS * Math.PI * 2;
+        var dc2 = document.createElement('canvas'); dc2.width = 120; dc2.height = 40;
+        var dctx2 = dc2.getContext('2d');
+        dctx2.font = 'bold 18px Inter,sans-serif';
+        dctx2.fillStyle = 'rgba(180,200,255,0.9)';
+        dctx2.textAlign = 'center';
+        dctx2.fillText(String(dy), 60, 26);
+        var dtex2 = new THREE.CanvasTexture(dc2); dtex2.minFilter = THREE.LinearFilter;
+        var dsm2 = new THREE.SpriteMaterial({ map: dtex2, transparent: true, opacity: 0.6, depthWrite: false, blending: THREE.AdditiveBlending });
+        dsm2.userData = { _baseOpacity: 0.6 };
+        var dspr2 = new THREE.Sprite(dsm2);
+        dspr2.position.set(dr2 * Math.cos(da2) * 1.08, 0.5, dr2 * Math.sin(da2) * 1.08);
+        dspr2.scale.set(1.2, 0.4, 1);
+        historyGroup.add(dspr2);
+      });
+
+      console.log('StarField v3: ' + stars.length + ' stars, ' + window._eventLines.length + ' lines, 2000 dust');
     }
 
     function resize() {
@@ -3223,7 +3261,11 @@ const GEO_KEYWORDS = [
         if (child.geometry && child.geometry.type === 'CylinderGeometry' && child.material.color && child.material.color.getHex() === 0x22d3ee) {
           child.material.opacity = (0.85 + Math.sin(elapsed * 1.2) * 0.08) * historyOpacity;
         }
-        if (child.material) child.material.opacity = baseOp * historyOpacity;
+        // Lines: constellation + arm lines fade based on camDist
+        if (child.material.userData && (child.material.userData._isArm || (child.userData && child.userData._type))) {
+          var _lb = camDist > 15 ? 1.0 : camDist > 10 ? 0.4 : 0.05;
+          if (child.material) child.material.opacity = baseOp * _lb * historyOpacity;
+        } else if (child.material) child.material.opacity = baseOp * historyOpacity;
         if (child.isSprite) child.material.opacity = (child.material.userData?._baseOpacity || 0.8) * historyOpacity;
         });
       }
