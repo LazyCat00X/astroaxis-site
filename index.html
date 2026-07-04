@@ -810,7 +810,7 @@
     <div class="vignette"></div>
     <div class="hint" data-i18n="hint.drag">🖱 DRAG · A/D ←→ SPIN · W/S ↑↓ TILT · Q/E ZOOM · 1-3 VIEWS</div>
     <div class="scroll-hint" aria-hidden="true" data-i18n="hint.scroll">↓ scroll for articles</div>
-  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260705-15</div>
+  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260705-17</div>
 </main>
 </div><!-- /globe-view -->
 
@@ -3049,43 +3049,71 @@ const GEO_KEYWORDS = [
         constellations[ev.type].push(stars.length - 1);
       });
 
-      // ── Build star meshes ──
+      // ── Build star sprites (point light + diffraction spikes) ──
       window._historyDots = [];
       window._eventLines = [];
-      const sGeo = new THREE.SphereGeometry(1, 8, 6);
-      const glowCache = {};
 
-      stars.forEach(s => {
-        const col = new THREE.Color(s.color[0], s.color[1], s.color[2]);
-        const hex = '#' + col.getHexString();
-        const baseOp = Math.min(0.8, s.luminance * 0.6);
-
-        // Glow (smaller than before)
-        if (!glowCache[hex]) {
-          const gc = document.createElement('canvas'); gc.width = 32; gc.height = 32;
-          const gx = gc.getContext('2d');
-          const gr = gx.createRadialGradient(16, 16, 0, 16, 16, 16);
-          gr.addColorStop(0, hex); gr.addColorStop(0.4, hex + '60'); gr.addColorStop(1, hex + '00');
-          gx.fillStyle = gr; gx.fillRect(0, 0, 32, 32);
-          glowCache[hex] = new THREE.CanvasTexture(gc);
+      // Create star texture: bright core + cross spikes (like real stars)
+      function makeStarTexture(colorHex, withSpikes, spikeLen) {
+        var sc = document.createElement('canvas');
+        sc.width = 64; sc.height = 64;
+        var sx = sc.getContext('2d');
+        var cx2 = 32, cy2 = 32;
+        // Core: tiny bright dot (not a big gradient blob)
+        sx.fillStyle = colorHex;
+        sx.beginPath(); sx.arc(cx2, cy2, 1.5, 0, Math.PI*2); sx.fill();
+        // Inner glow: small tight gradient
+        var ig = sx.createRadialGradient(cx2, cy2, 0, cx2, cy2, 4);
+        ig.addColorStop(0, colorHex);
+        ig.addColorStop(0.5, colorHex + '40');
+        ig.addColorStop(1, colorHex + '00');
+        sx.fillStyle = ig; sx.fillRect(0, 0, 64, 64);
+        // Diffraction spikes (cross pattern) for important stars
+        if (withSpikes) {
+          sx.strokeStyle = colorHex;
+          sx.lineCap = 'round';
+          // Horizontal spike
+          var hg = sx.createLinearGradient(cx2-spikeLen, cy2, cx2+spikeLen, cy2);
+          hg.addColorStop(0, colorHex + '00'); hg.addColorStop(0.5, colorHex + 'aa'); hg.addColorStop(1, colorHex + '00');
+          sx.strokeStyle = hg; sx.lineWidth = 0.8;
+          sx.beginPath(); sx.moveTo(cx2-spikeLen, cy2); sx.lineTo(cx2+spikeLen, cy2); sx.stroke();
+          // Vertical spike
+          var vg = sx.createLinearGradient(cx2, cy2-spikeLen, cx2, cy2+spikeLen);
+          vg.addColorStop(0, colorHex + '00'); vg.addColorStop(0.5, colorHex + 'aa'); vg.addColorStop(1, colorHex + '00');
+          sx.strokeStyle = vg;
+          sx.beginPath(); sx.moveTo(cx2, cy2-spikeLen); sx.lineTo(cx2, cy2+spikeLen); sx.stroke();
         }
-        const gMat = new THREE.SpriteMaterial({ map: glowCache[hex], transparent: true, opacity: s.luminance * 0.08, blending: THREE.AdditiveBlending, depthWrite: false });
-        gMat.userData = { _baseOpacity: s.luminance * 0.08 };
-        const glow = new THREE.Sprite(gMat);
-        glow.position.set(s.px, s.py, s.pz);
-        const gSz = s.size * (s.isCrit ? 0.8 : 0);  // only critical events get glow
-        glow.scale.set(gSz, gSz, 1);
-        historyGroup.add(glow);
+        var tex = new THREE.CanvasTexture(sc);
+        tex.minFilter = THREE.LinearFilter;
+        return tex;
+      }
 
-        // Star mesh
-        const sMat = new THREE.MeshBasicMaterial({ color: col, transparent: true, opacity: baseOp, blending: THREE.AdditiveBlending, depthWrite: false });
+      var starTexCache = {};
+      stars.forEach(function(s) {
+        // Add star color temperature variety
+        var tempShift = (s.ev._year % 3) / 3; // 0-0.67 based on year
+        var r2 = Math.min(1, s.color[0] + tempShift * 0.15);
+        var g2 = s.color[1];
+        var b2 = Math.min(1, s.color[2] + (1-tempShift) * 0.1);
+        var col = new THREE.Color(r2, g2, b2);
+        var hex = '#' + col.getHexString();
+        var hasSpikes = true; // all stars get spikes
+        var spikeLen = s.isCrit ? 20 : s.isMaj ? 12 : 6;
+        var cacheKey = hex + '_sl' + spikeLen;
+        if (!starTexCache[cacheKey]) {
+          starTexCache[cacheKey] = makeStarTexture(hex, hasSpikes, spikeLen);
+        }
+        var baseOp = Math.min(1.0, s.luminance * 0.85);
+        var sMat = new THREE.SpriteMaterial({ map: starTexCache[cacheKey], transparent: true, opacity: baseOp, blending: THREE.AdditiveBlending, depthWrite: false });
         sMat.userData = { _baseOpacity: baseOp, _tw: s.tw, _tph: s.tph };
-        const mesh = new THREE.Mesh(sGeo, sMat);
-        mesh.position.set(s.px, s.py, s.pz);
-        mesh.scale.setScalar(s.size);
-        mesh.userData = { _event: s.ev, _year: s.ev._year, _luminance: s.luminance, _isStar: true };
-        historyGroup.add(mesh);
-        window._historyDots.push(mesh);
+        var spr = new THREE.Sprite(sMat);
+        spr.position.set(s.px, s.py, s.pz);
+        // Size: critical biggest, but all small — they're distant stars not planets
+        var sprSize = s.isCrit ? 1.4 : s.isMaj ? 0.9 : 0.6;
+        spr.scale.set(sprSize, sprSize, 1);
+        spr.userData = { _event: s.ev, _year: s.ev._year, _luminance: s.luminance, _isStar: true };
+        historyGroup.add(spr);
+        window._historyDots.push(spr);
       });
 
       // ── Constellation lines: same type, within 10 years, close distance ──
@@ -3215,12 +3243,13 @@ const GEO_KEYWORDS = [
         if (child.material && child.material.userData && child.material.userData._baseOpacity != null) {
           baseOp = child.material.userData._baseOpacity;
         }
-        // Twinkle: stars flicker based on their twinkle params
+        // Twinkle: brightness change only, NO scale change
         if (child.material && child.material.userData && child.material.userData._tw) {
           const tw = child.material.userData._tw;
           const tph = child.material.userData._tph;
           const bOp = child.material.userData._baseOpacity || 0.5;
-          child.material.opacity = bOp * (0.7 + Math.sin(elapsed * tw + tph) * 0.3) * historyOpacity;
+          // Brightness varies between 50%-100% of base, never scales
+          child.material.opacity = bOp * (0.5 + Math.abs(Math.sin(elapsed * tw + tph)) * 0.5) * historyOpacity;
         }
         // LOD: distant view = only bright stars visible, close = all
         if (child.userData && child.userData._isStar && child.material) {
