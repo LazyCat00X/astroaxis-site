@@ -1,1446 +1,1201 @@
 {
   "articles": [
     {
-      "url": "https://www.bbc.co.uk/sport/football/articles/cvgmz3jyq9qo?at_medium=RSS&at_campaign=rss",
-      "title": "England-Mexico kick-off unchanged after Fifa U-turn",
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3359399/it-wiser-middle-powers-not-take-sides-face-us-china-rivalry?utm_source=rss_feed",
+      "title": "Is it wiser for middle powers ‘not to take sides’ in face of US-China rivalry?",
+      "source": "SCMP",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T11:00:05+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.nytimes.com/2026/07/04/world/africa/cape-verde-world-cup.html",
+      "title": "For Cape Verde, There’s Victory in Their World Cup Defeat",
+      "source": "New York Times",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T10:44:25+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.nytimes.com/2026/07/04/world/middleeast/iran-dissidents-crackdown.html",
+      "title": "Iran Projects Unity to the World While Pursuing a Crackdown at Home",
+      "source": "New York Times",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T10:33:34+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.wired.com/story/this-buried-apple-feature-turns-an-iphone-into-the-perfect-kids-dumb-phone/",
+      "title": "This Buried Apple Feature Turns an iPhone Into the Perfect Kids’ Dumb Phone",
+      "source": "Wired",
+      "topic": "Tech",
+      "category": "tech",
+      "published": "2026-07-04T10:30:00+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.wired.com/story/security-roundup-apples-hide-my-email-service-fails-to-hide-your-email/",
+      "title": "Security Roundup: Apple’s Hide My Email Service Fails to Hide Your Email",
+      "source": "Wired",
+      "topic": "Tech",
+      "category": "tech",
+      "published": "2026-07-04T10:30:00+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.aljazeera.com/opinions/2026/7/4/in-south-asia-america-has-stopped-asking-india-for-permission?traffic_source=rss",
+      "title": "In South Asia, America has stopped asking India for permission",
+      "source": "Al Jazeera",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T10:29:41+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.aljazeera.com/news/2026/7/4/ukraine-hits-oil-and-military-facilities-near-russias-st-petersburg?traffic_source=rss",
+      "title": "Ukraine hits oil and military facilities near Russia’s St Petersburg",
+      "source": "Al Jazeera",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T10:29:19+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.theguardian.com/world/2026/jul/04/uk-woman-arrested-thailand-pattaya-man-stabbed",
+      "title": "UK woman, 21, arrested in Thailand after allegedly stabbing boyfriend to death",
+      "source": "The Guardian",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T10:26:54+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.nytimes.com/2026/07/04/world/middleeast/iran-funeral-supreme-leader-ali-khamenei.html",
+      "title": "What to Know About Ayatollah Ali Khamenei as His Funeral Services Begin in Iran",
+      "source": "New York Times",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T10:20:25+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.nytimes.com/2026/07/04/briefing/happy-birthday-to-us.html",
+      "title": "Happy Birthday to Us",
+      "source": "New York Times",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T10:17:31+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.aljazeera.com/gallery/2026/7/4/millions-mourn-irans-ali-khamenei-amid-historic-funeral-procession?traffic_source=rss",
+      "title": "Millions mourn Iran’s Ali Khamenei amid historic funeral procession",
+      "source": "Al Jazeera",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T10:16:31+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-07-04/extreme-heat-breaks-across-eastern-us-severe-thunderstorms-to-follow",
+      "title": "Eastern US Heat Wave Starts to Retreat While Raising Storm Risk",
+      "source": "Bloomberg Crypto",
+      "topic": "Finance",
+      "category": "finance",
+      "published": "2026-07-04T10:14:17+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/cy9r2x4pz1wo?at_medium=RSS&at_campaign=rss",
+      "title": "Pubs and police brace for England-Mexico 1am kick-off after Fifa U-turn",
+      "source": "BBC World",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T10:06:43+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-07-04/ecb-is-in-good-position-given-inflation-data-moulin-says",
+      "title": "ECB Is in ‘Good Position’ Given Inflation Data, Moulin Says",
+      "source": "Bloomberg Crypto",
+      "topic": "Policy",
+      "category": "finance",
+      "published": "2026-07-04T10:05:31+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.ft.com/content/c40471ec-cac8-4ab0-8a77-34ae971a7ffc",
+      "title": "Iran mourners demand revenge at ayatollah’s funeral",
+      "source": "Financial Times",
+      "topic": "Finance",
+      "category": "finance",
+      "published": "2026-07-04T10:04:37+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/7/4/russia-claims-it-captured-the-strategic-key-ukrainian-city-of-kostiantynivk?traffic_source=rss",
+      "title": "Russia claims it captured the strategic key Ukrainian city of Kostiantynivk",
+      "source": "Al Jazeera",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T10:04:35+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.scmp.com/news/china/diplomacy/article/3359378/chinas-influence-african-ports-extends-software-automation-and-ai-study?utm_source=rss_feed",
+      "title": "China’s influence on African ports extends to software, automation and AI: study",
+      "source": "SCMP",
+      "topic": "AI",
+      "category": "general",
+      "published": "2026-07-04T10:00:11+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.nytimes.com/2026/07/04/world/canada/carney-alberta-pipeline-canada-us.html",
+      "title": "A Big Week in the West, Canada vs. Morocco, Trade and a Canada-U.S. Quiz",
+      "source": "New York Times",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T10:00:10+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-07-04/total-ceo-sees-mideast-producers-desperate-to-sell-oil-stocks",
+      "title": "Total CEO Sees Mideast Producers Desperate to Sell Oil Stocks",
+      "source": "Bloomberg Crypto",
+      "topic": "World",
+      "category": "finance",
+      "published": "2026-07-04T09:49:29+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0ky2zen1kgo?at_medium=RSS&at_campaign=rss",
+      "title": "Large crowds gather in Tehran on first day of Ayatollah Khamenei's funeral",
+      "source": "BBC World",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T09:45:55+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.aljazeera.com/sports/2026/7/4/cape-verde-fans-overjoyed-with-teams-world-cup-run-despite-argentina-loss?traffic_source=rss",
+      "title": "Cape Verde fans overjoyed with team’s World Cup run despite Argentina loss",
+      "source": "Al Jazeera",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T09:42:30+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/7/4/thousands-gather-as-khamenei-funeral-ceremonies-open-in-tehran?traffic_source=rss",
+      "title": "Thousands gather as Khamenei funeral ceremonies open in Tehran",
+      "source": "Al Jazeera",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T09:35:45+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.wired.com/story/food-preservatives-may-increase-the-risk-of-high-blood-pressure-and-cardiovascular-disease/",
+      "title": "Food Preservatives May Increase the Risk of High Blood Pressure and Cardiovascular Disease",
+      "source": "Wired",
+      "topic": "Health",
+      "category": "tech",
+      "published": "2026-07-04T09:30:00+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.nytimes.com/2026/07/04/world/americas/mexicos-secret-12th-man-in-the-world-cup-baby-jesus.html",
+      "title": "Mexico’s Secret 12th Man in the World Cup: Baby Jesus",
+      "source": "New York Times",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T09:24:53+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/cj4g0n0p15xo?at_medium=RSS&at_campaign=rss",
+      "title": "The massive scramble behind the scenes before the new PM arrives",
+      "source": "BBC World",
+      "topic": "Macro",
+      "category": "general",
+      "published": "2026-07-04T09:22:20+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.aljazeera.com/news/2026/7/4/armed-fighters-attack-multiple-towns-across-mali?traffic_source=rss",
+      "title": "Armed fighters attack multiple towns across Mali",
+      "source": "Al Jazeera",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T09:14:56+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-07-04/modi-says-india-will-continue-to-expand-oil-refining-capacity",
+      "title": "Modi Says India Will Keep Expanding Oil Refining Capacity",
+      "source": "Bloomberg Crypto",
+      "topic": "Finance",
+      "category": "finance",
+      "published": "2026-07-04T09:12:46+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c621je3we82o?at_medium=RSS&at_campaign=rss",
+      "title": "Eight of the 10 most populous countries are not in the World Cup",
+      "source": "BBC World",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T09:09:18+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.wired.com/story/best-july-fourth-mattress-deals-2026/",
+      "title": "The Best Fourth of July Mattress Sales on Beds We Actually Sleep On (2026)",
+      "source": "Wired",
+      "topic": "Tech",
+      "category": "tech",
+      "published": "2026-07-04T09:08:00+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.nytimes.com/2026/07/04/world/africa/rwanda-july-4-liberation-day.html",
+      "title": "In Rwanda, July 4 Is Liberation Day From Genocide",
+      "source": "New York Times",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T09:01:42+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.nytimes.com/2026/07/04/world/middleeast/iran-supreme-leader-funeral-divisions.html",
+      "title": "Momentary Unity at a Funeral Masks Deep Divisions Among Iran’s Leaders",
+      "source": "New York Times",
+      "topic": "Politics",
+      "category": "general",
+      "published": "2026-07-04T09:01:35+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.nytimes.com/2026/07/04/world/americas/world-cup-mexico-tourism-trump.html",
+      "title": "Trump’s Travel Crackdown Has a Winner: Mexican Tourism",
+      "source": "New York Times",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T09:00:07+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.wired.com/story/scientists-have-identified-a-new-fossil-species-of-axolotl-in-mexico/",
+      "title": "Scientists Have Identified a New Fossil Species of Axolotl in Mexico",
+      "source": "Wired",
+      "topic": "Science",
+      "category": "tech",
+      "published": "2026-07-04T09:00:00+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.npr.org/2026/07/04/nx-s1-5877727/swing-voters-america-250-midterms",
+      "title": "'Cautiously optimistic':  Swing voters describe their view of America at 250",
+      "source": "NPR",
+      "topic": "Politics",
+      "category": "general",
+      "published": "2026-07-04T09:00:00+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.aljazeera.com/news/2026/7/4/saudi-led-coalition-pledges-unprecedented-force-against-houthi-threats?traffic_source=rss",
+      "title": "Saudi-led coalition pledges ‘unprecedented’ force against Houthi threats",
+      "source": "Al Jazeera",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T08:59:17+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.nytimes.com/live/2026/07/04/world/iran-funeral-ayatollah-khamenei/iran-projecting-unity-to-the-world-pursues-a-crackdown-at-home",
+      "title": "Iran, projecting unity to the world, pursues a crackdown at home.",
+      "source": "New York Times",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T08:57:41+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-07-04/french-aircraft-carrier-set-to-head-home-after-hormuz-deployment",
+      "title": "French Aircraft Carrier Set to Head Home After Hormuz Deployment",
+      "source": "Bloomberg",
+      "topic": "Finance",
+      "category": "finance",
+      "published": "2026-07-04T08:52:36+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-07-04/mali-hit-by-several-attacks-targeting-major-towns-army-says",
+      "title": "Mali Hit by Several Attacks Targeting Major Towns, Army Says",
+      "source": "Bloomberg",
+      "topic": "Finance",
+      "category": "finance",
+      "published": "2026-07-04T08:38:50+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.nytimes.com/live/2026/07/04/world/iran-funeral-ayatollah-khamenei/heres-the-latest",
+      "title": "Here’s the latest.",
+      "source": "New York Times",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T08:36:20+00:00",
+      "ai_summary": "(no content)",
+      "summaries": {}
+    },
+    {
+      "url": "https://www.bbc.co.uk/sport/football/articles/cx2x1gwwjego?at_medium=RSS&at_campaign=rss",
+      "title": "England team booed on arrival at Mexico City hotel",
+      "source": "BBC World",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T08:33:11+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://cointelegraph.com/news/tim-draper-denies-moving-bitcoin-250k-btc-prediction?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "title": "Tim Draper denies moving Bitcoin, reiterates $250,000 BTC prediction",
+      "source": "CoinTelegraph",
+      "topic": "Bitcoin",
+      "category": "crypto",
+      "published": "2026-07-04T08:31:02+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c7vyqgy4r5lo?at_medium=RSS&at_campaign=rss",
+      "title": "In pictures: Stars and fans celebrate Taylor Swift and Travis Kelce's wedding",
       "source": "BBC World",
       "topic": "Sports",
       "category": "general",
-      "published": "2026-07-03T23:12:04+00:00",
+      "published": "2026-07-04T08:24:17+00:00",
       "ai_summary": "(neutralize failed)",
       "summaries": {
         "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://www.aljazeera.com/sports/2026/7/3/egypt-say-dallas-police-officer-pushed-player-team-director-at-world-cup?traffic_source=rss",
-      "title": "Egypt say Dallas police officer pushed player, team director at World Cup",
+      "url": "https://www.aljazeera.com/sports/2026/7/4/key-takeaways-from-round-of-32-stage-at-world-cup-2026?traffic_source=rss",
+      "title": "Key takeaways from Round of 32 stage at World Cup 2026",
       "source": "Al Jazeera",
       "topic": "World",
       "category": "general",
-      "published": "2026-07-03T22:20:04+00:00",
+      "published": "2026-07-04T08:22:56+00:00",
       "ai_summary": "(neutralize failed)",
       "summaries": {
         "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://www.scmp.com/news/china/military/article/3359352/can-taiwan-fix-its-military-manpower-shortage-training-reservists-advanced-weapons?utm_source=rss_feed",
-      "title": "Can Taiwan fix its military manpower shortage by training reservists in advanced weapons?",
-      "source": "SCMP",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T22:00:19+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/7/3/venezuelas-rodriguez-blames-propaganda-for-quake-response-backlash-2?traffic_source=rss",
-      "title": "Venezuela’s Rodriguez blames ‘propaganda’ for quake response backlash",
-      "source": "Al Jazeera",
-      "topic": "Politics",
-      "category": "general",
-      "published": "2026-07-03T21:49:17+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/7/3/venezuelas-rodriguez-blames-propaganda-for-quake-response-backlash?traffic_source=rss",
-      "title": "Venezuela’s Rodriguez blames ‘propaganda’ for quake response backlash",
-      "source": "Al Jazeera",
-      "topic": "Politics",
-      "category": "general",
-      "published": "2026-07-03T21:36:31+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://cointelegraph.com/markets/sol-rallies-as-solana-memecoins-prediction-market-activity-surge-are-bulls-back?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "title": "SOL rallies as Solana memecoins, prediction market activity surge: Are bulls back?",
-      "source": "CoinTelegraph",
-      "topic": "Trading",
-      "category": "crypto",
-      "published": "2026-07-03T21:36:02+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/news/2026/7/3/thousands-forced-to-evacuate-in-colorado-as-wildfire-spreads?traffic_source=rss",
-      "title": "Thousands forced to evacuate in Colorado as wildfire spreads",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/7/4/cape-verde-fans-celebrate-history-despite-loss?traffic_source=rss",
+      "title": "Cape Verde fans celebrate history despite loss",
       "source": "Al Jazeera",
       "topic": "General",
       "category": "general",
-      "published": "2026-07-03T21:32:05+00:00",
+      "published": "2026-07-04T08:22:25+00:00",
       "ai_summary": "(neutralize failed)",
       "summaries": {
         "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://www.bbc.co.uk/news/articles/c20y2lkgz13o?at_medium=RSS&at_campaign=rss",
-      "title": "How to walk 30 minutes a day - your tips after NHS reward scheme announced",
-      "source": "BBC World",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T21:31:05+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.scmp.com/opinion/china-opinion/article/3359270/us-has-failed-understand-china?utm_source=rss_feed",
-      "title": "The US has failed to understand China",
-      "source": "SCMP",
-      "topic": "Macro",
-      "category": "general",
-      "published": "2026-07-03T21:30:06+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.bbc.co.uk/news/articles/c0qy2zxjkwvo?at_medium=RSS&at_campaign=rss",
-      "title": "Starmer tells of 'intensely personal' decision to quit and warns Burnham in first interview since resigning",
-      "source": "BBC World",
-      "topic": "Politics",
-      "category": "general",
-      "published": "2026-07-03T21:26:53+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://techcrunch.com/2026/07/03/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
-      "title": "The only AI glossary you’ll need this year",
-      "source": "TechCrunch",
-      "topic": "DeFi",
-      "category": "tech",
-      "published": "2026-07-03T21:20:00+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/news/longform/2026/7/3/a-nightmare-strugging-with-the-aftermath-of-venezuelas-earthquakes?traffic_source=rss",
-      "title": "‘A nightmare’: Strugging with the aftermath of Venezuela’s earthquakes",
-      "source": "Al Jazeera",
-      "topic": "Science",
-      "category": "general",
-      "published": "2026-07-03T21:17:40+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.bloomberg.com/news/videos/2026-07-03/masters-in-business-with-mamoon-hamid-video",
-      "title": "Venture Capital During the AI Revolution: Masters in Business with Mamoon Hamid",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-04/oil-terminal-in-russia-s-st-petersburg-comes-under-drone-attack",
+      "title": "Oil Terminal in Russia’s St. Petersburg Comes Under Drone Attack",
       "source": "Bloomberg Crypto",
       "topic": "Finance",
       "category": "finance",
-      "published": "2026-07-03T21:13:04+00:00",
+      "published": "2026-07-04T08:07:28+00:00",
       "ai_summary": "(neutralize failed)",
       "summaries": {
         "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://decrypt.co/372750/claude-fable-5-not-nerfed-router-paranoid",
-      "title": "Claude Fable 5 Isn't Nerfed. The Router Is Just Paranoid",
-      "source": "Decrypt",
-      "topic": "AI",
-      "category": "crypto",
-      "published": "2026-07-03T21:06:03+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/news/2026/7/3/nasa-launches-robotic-mission-to-save-telescope-falling-back-to-earth?traffic_source=rss",
-      "title": "NASA launches robotic mission to save telescope falling back to Earth",
-      "source": "Al Jazeera",
-      "topic": "Science",
-      "category": "general",
-      "published": "2026-07-03T21:05:39+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/sports/2026/7/3/egypt-beat-australia-on-penalties-to-win-first-world-cup-knockout-match?traffic_source=rss",
-      "title": "Salah awaits Messi as Egypt beat Australia on penalties at World Cup",
+      "url": "https://www.aljazeera.com/video/2026/7/4/video-world-cup-2026-highlights?traffic_source=rss",
+      "title": "Watch World Cup Day 23: Argentina and Egypt survive thrillers to advance",
       "source": "Al Jazeera",
       "topic": "World",
       "category": "general",
-      "published": "2026-07-03T21:05:06+00:00",
+      "published": "2026-07-04T08:00:41+00:00",
       "ai_summary": "(neutralize failed)",
       "summaries": {
         "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://decrypt.co/372749/senator-gillibrand-ban-trump-elected-officials-launching-meme-coins",
-      "title": "Senator Gillibrand Seeks to Ban Trump, Elected Officials From Launching Meme Coins",
-      "source": "Decrypt",
-      "topic": "Politics",
-      "category": "crypto",
-      "published": "2026-07-03T21:03:33+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.npr.org/2026/07/03/nx-s1-5877361/taylor-swift-travis-kelce-wedding-msg",
-      "title": "Taylor Swift and Travis Kelce fans gather for glimpse of top secret wedding",
-      "source": "NPR",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T21:03:00+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/7/3/massive-wildfire-spreads-in-portugal-amid-extreme-heat-and-strong-wind?traffic_source=rss",
-      "title": "Massive wildfire spreads in Portugal amid extreme heat and strong wind",
-      "source": "Al Jazeera",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T21:01:17+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.bbc.co.uk/news/articles/c20y2p9qqqko?at_medium=RSS&at_campaign=rss",
-      "title": "Anguished families left to identify Venezuela quake victims at makeshift morgue",
-      "source": "BBC World",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T21:00:53+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.bloomberg.com/jp/news/newsletters/2026-07-03/THMAC1KGCTG300",
-      "title": "1ドル200円の円安シナリオ、高市氏インド訪問、W杯ピッチ外の戦い─1週間のニュース5選",
-      "source": "Bloomberg Crypto",
-      "topic": "Finance",
-      "category": "finance",
-      "published": "2026-07-03T21:00:01+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/sports/2026/7/3/dutch-football-association-to-sue-over-racist-slurs-after-world-cup-exit?traffic_source=rss",
-      "title": "Dutch football association to sue over racist slurs after World Cup exit",
-      "source": "Al Jazeera",
+      "url": "https://www.theguardian.com/global-development/2026/jul/04/overseas-education-project-for-women-and-girls-axed-by-uk-after-two-years",
+      "title": "Overseas education project for women and girls axed by UK after two years",
+      "source": "The Guardian",
       "topic": "World",
       "category": "general",
-      "published": "2026-07-03T20:58:14+00:00",
+      "published": "2026-07-04T08:00:08+00:00",
       "ai_summary": "(neutralize failed)",
       "summaries": {
         "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://www.npr.org/2026/07/03/nx-s1-5879278/irans-control-of-the-strait-of-hormuz-remains-a-powerful-bargaining-chip",
-      "title": "Iran's control of the Strait of Hormuz remains a powerful bargaining chip",
-      "source": "NPR",
-      "topic": "World",
-      "category": "general",
-      "published": "2026-07-03T20:51:04+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-07-03/brazil-justice-allows-jair-bolsonaro-to-remain-on-house-arrest",
-      "title": "Brazil Justice Allows Bolsonaro to Remain on House Arrest",
-      "source": "Bloomberg",
-      "topic": "Finance",
-      "category": "finance",
-      "published": "2026-07-03T20:43:21+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-07-03/trump-says-he-pardoned-six-people-pursued-for-fixing-their-car",
-      "title": "Trump Pardons Six People Pursued for ‘Fixing Their Car’",
-      "source": "Bloomberg",
-      "topic": "Finance",
-      "category": "finance",
-      "published": "2026-07-03T20:00:11+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.marketwatch.com/story/heres-whats-worth-streaming-in-july-2026-on-netflix-hulu-hbo-max-and-more-58d07528?mod=mw_rss_topstories",
-      "title": "Here’s what’s worth streaming in July 2026 on Netflix, Hulu, HBO Max and more",
-      "source": "MarketWatch",
-      "topic": "Finance",
-      "category": "finance",
-      "published": "2026-07-03T20:00:00+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/video/inside-story/2026/7/3/is-chinas-new-ethnic-unity-law-a-step-towards-forced-assimilation-2?traffic_source=rss",
-      "title": "Is China’s new ethnic unity law a step towards forced assimilation?",
-      "source": "Al Jazeera",
-      "topic": "Politics",
-      "category": "general",
-      "published": "2026-07-03T19:59:27+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/7/3/mamdani-calls-for-unity-on-americas-250th-birthday?traffic_source=rss",
-      "title": "Mamdani calls for unity on America’s 250th birthday",
+      "url": "https://www.aljazeera.com/news/2026/7/4/taylor-swift-and-travis-kelce-marry-at-nycs-madison-square-garden?traffic_source=rss",
+      "title": "Taylor Swift and Travis Kelce marry at NYC’s Madison Square Garden",
       "source": "Al Jazeera",
       "topic": "General",
       "category": "general",
-      "published": "2026-07-03T19:58:44+00:00",
+      "published": "2026-07-04T07:46:55+00:00",
       "ai_summary": "(neutralize failed)",
       "summaries": {
         "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://www.npr.org/2026/07/03/nx-s1-5822582/demise-and-possible-resurrection-of-primm-nevada",
-      "title": "A family steps in to save the dying casino town of Primm, Nevada",
-      "source": "NPR",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T19:55:39+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/economy/2026/7/3/us-heatwave-raises-alarms-over-ai-data-centre-energy-demands?traffic_source=rss",
-      "title": "US heatwave raises alarms over AI data centre energy demands",
-      "source": "Al Jazeera",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T19:48:44+00:00",
-      "ai_summary": "(neutralize failed)",
-      "summaries": {
-        "zh-HK": "(neutralize failed)"
-      }
-    },
-    {
-      "url": "https://techcrunch.com/2026/07/03/the-dune-keypad-device-can-be-your-meeting-controller-and-more/",
-      "title": "The Dune keypad device can be your meeting controller and more",
-      "source": "TechCrunch",
-      "topic": "Tech",
-      "category": "tech",
-      "published": "2026-07-03T18:28:30+00:00",
-      "ai_summary": "標題：Dune 鍵盤設備可以成為您的會議控制器及更多功能\n中立：\nProject Mirage 開發了一款名為 Dune 的設備，這是一個三鍵鋁製鍵盤，能夠連接到 MacBook 的 USB-C 端口。它的零售價格為 119 美元，旨在控制各種應用程序，根據當前活動的應用程序改變功能。該設備與 M2 Air 或更高版本以及 M1 Pro 或更高版本的 MacBook 型號兼容，運行 macOS 15 Sequoia 或更高版本。Dune 包含一個伴隨應用程序，用於配置快捷鍵和與日曆同步。用戶可以創建自定義快捷鍵或使用市場上現有的快捷鍵。該設備不需要電池，並從 MacBook 獲取電源。",
-      "summaries": {
-        "zh-HK": "標題：Dune 鍵盤設備可以成為您的會議控制器及更多功能\n中立：\nProject Mirage 開發了一款名為 Dune 的設備，這是一個三鍵鋁製鍵盤，能夠連接到 MacBook 的 USB-C 端口。它的零售價格為 119 美元，旨在控制各種應用程序，根據當前活動的應用程序改變功能。該設備與 M2 Air 或更高版本以及 M1 Pro 或更高版本的 MacBook 型號兼容，運行 macOS 15 Sequoia 或更高版本。Dune 包含一個伴隨應用程序，用於配置快捷鍵和與日曆同步。用戶可以創建自定義快捷鍵或使用市場上現有的快捷鍵。該設備不需要電池，並從 MacBook 獲取電源。",
-        "en": "Title: The Dune keypad device can be your meeting controller and more\nNeutral:\nProject Mirage has developed a device called Dune, a three-key aluminum keypad that connects to MacBook USB-C ports. It retails for $119 and is designed to control various applications, changing functions based on the active app. The device is compatible with M2 Air or later and M1 Pro or later MacBook models running macOS 15 Sequoia or later. Dune includes a companion app for configuring shortcuts and syncing with calendars. Users can create custom shortcuts or use pre-existing ones from a marketplace. The device does not require a battery and draws power from the MacBook.",
-        "zh-CN": "标题：Dune 键盘设备可以成为您的会议控制器及更多功能\n中立：\nProject Mirage 开发了一款名为 Dune 的设备，这是一款三键铝制键盘，能够连接到 MacBook 的 USB-C 端口。它的零售价格为 119 美元，旨在控制各种应用程序，根据当前活动的应用程序改变功能。该设备与 M2 Air 或更高版本以及 M1 Pro 或更高版本的 MacBook 型号兼容，运行 macOS 15 Sequoia 或更高版本。Dune 包含一个伴随应用程序，用于配置快捷键和与日历同步。用户可以创建自定义快捷键或使用市场上现有的快捷键。该设备不需要电池，并从 MacBook 获取电源。",
-        "ja": "タイトル：Dune キーパッドデバイスは会議コントローラーやその他の機能を提供します\n中立：\nProject Mirage は Dune というデバイスを開発しました。これは、MacBook の USB-C ポートに接続する三つのキーを持つアルミニウム製のキーパッドです。価格は119ドルで、さまざまなアプリケーションを制御するために設計されており、アクティブなアプリに基づいて機能が変わります。このデバイスは、macOS 15 Sequoia 以降を実行している M2 Air またはそれ以降、M1 Pro またはそれ以降の MacBook モデルと互換性があります。Dune には、"
-      }
-    },
-    {
-      "url": "https://www.wired.com/story/nuclear-startups-hit-milestone-why-it-matters/",
-      "title": "3 Nuclear Startups Hit a Big Milestone. Why It Matters—and Why It Doesn’t",
-      "source": "Wired",
-      "topic": "Tech",
-      "category": "tech",
-      "published": "2026-07-03T18:13:15+00:00",
-      "ai_summary": "標題：三家核能初創公司達成重大里程碑。這為什麼重要——以及為什麼不重要\n中立：\n三家核能初創公司，Valar Atomics、Antares Nuclear 和 Deployable Energy，在能源部啟動的試點計劃中實現了其反應堆的臨界性。該計劃旨在推進新核反應堆設計的發展。建立該計劃的行政命令由唐納德·特朗普總統於2025年5月頒布，臨界性達成的截止日期定於7月4日。這些反應堆在全國實驗室進行測試，包括洛斯阿拉莫斯國家實驗室和猶他州的一個州資助實驗室。這些初創公司正在與核能監管委員會協調，為未來的商業化進程導航。",
-      "summaries": {
-        "zh-HK": "標題：三家核能初創公司達成重大里程碑。這為什麼重要——以及為什麼不重要\n中立：\n三家核能初創公司，Valar Atomics、Antares Nuclear 和 Deployable Energy，在能源部啟動的試點計劃中實現了其反應堆的臨界性。該計劃旨在推進新核反應堆設計的發展。建立該計劃的行政命令由唐納德·特朗普總統於2025年5月頒布，臨界性達成的截止日期定於7月4日。這些反應堆在全國實驗室進行測試，包括洛斯阿拉莫斯國家實驗室和猶他州的一個州資助實驗室。這些初創公司正在與核能監管委員會協調，為未來的商業化進程導航。",
-        "en": "Title: 3 Nuclear Startups Hit a Big Milestone. Why It Matters—and Why It Doesn’t\nNeutral:\nThree nuclear startups, Valar Atomics, Antares Nuclear, and Deployable Energy, achieved criticality in their reactors as part of a pilot program initiated by the Department of Energy. This program aims to advance the development of new nuclear reactor designs. The executive order establishing the program was issued by President Donald Trump in May 2025, with a deadline for reaching criticality set for July 4. The reactors were tested at national laboratories, including Los Alamos National Laboratory and a state-funded lab in Utah. The startups are working to navigate regulatory processes with the Nuclear Regulatory Commission for future commercialization.",
-        "zh-CN": "标题：三家核能初创公司达成重大里程碑。这为什么重要——以及为什么不重要\n中立：\n三家核能初创公司，Valar Atomics、Antares Nuclear 和 Deployable Energy，在能源部启动的试点计划中实现了其反应堆的临界性。该计划旨在推进新核反应堆设计的发展。建立该计划的行政命令由唐纳德·特朗普总统于2025年5月颁布，临界性达成的截止日期定于7月4日。这些反应堆在全国实验室进行测试，包括洛斯阿拉莫斯国家实验室和犹他州的一个州资助实验室。这些初创公司正在与核能监管委员会协调，为未来的商业化进程导航。",
-        "ja": "タイトル：3つの核スタートアップが大きなマイルストーンを達成。なぜそれが重要なのか、そしてなぜ重要でないのか\n中立：\n3つの核スタートアップ、Valar Atomics、Antares Nuclear、Deployable Energyが、エネルギー省が開始したパイロットプログラムの一環として、反応炉の臨界状態を達成しました。このプログラムは、新しい核反応炉設計の開発を進めることを目的としています。このプログラムを設立するための大統領令は、2025年5月にドナルド・トランプ大"
-      }
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-07-03/burnham-rules-out-uk-election-if-he-takes-power-from-starmer",
-      "title": "Burnham Rules Out UK Election If He Takes Power From Starmer",
-      "source": "Bloomberg",
-      "topic": "Finance",
-      "category": "finance",
-      "published": "2026-07-03T18:08:27+00:00",
-      "ai_summary": "標題：伯納姆排除若接替史達默將舉行英國大選\n中立：\n安迪·伯納姆表示，如果他成為首相，接替基爾·史達默，他將不會召開英國大選。",
-      "summaries": {
-        "zh-HK": "標題：伯納姆排除若接替史達默將舉行英國大選\n中立：\n安迪·伯納姆表示，如果他成為首相，接替基爾·史達默，他將不會召開英國大選。",
-        "en": "Title: Burnham Rules Out UK Election If He Takes Power From Starmer\nNeutral:\nAndy Burnham stated that he would not call a UK general election if he becomes the prime minister, succeeding Keir Starmer.",
-        "zh-CN": "标题：伯纳姆排除若接替斯塔默将举行英国大选\n中立：\n安迪·伯纳姆表示，如果他成为首相，接替基尔·斯塔默，他将不会召开英国大选。",
-        "ja": "タイトル：バーンハム、スターマーから権力を引き継いだ場合、英国選挙を行わないと表明\n中立：\nアンディ・バーンハムは、キール・スターマーに代わって首相になった場合、英国の総選挙を呼びかけないと述べました。",
-        "ko": "제목: 번햄, 스타머로부터 권력을 인수할 경우 영국 선거를 배제\n중립:\n앤디 번햄은 키어 스타머를 이어 총리가 된다면 영국 총선을 소집하지 않겠다고 밝혔다."
-      }
-    },
-    {
-      "url": "https://decrypt.co/372738/zcash-ironwood-upgrade-developers-restore-confidence-zec-crash",
-      "title": "Zcash Ironwood Upgrade Nears as Developers Work to Restore Confidence After ZEC Crash",
-      "source": "Decrypt",
+      "url": "https://www.blocktempo.com/silicon-valley-podcasts-naval-anduril-trae-stephens-taiwan-risk-bet/",
+      "title": "納瓦爾：10-20年後臺灣終將被統一，美國與中國無須一戰",
+      "source": "動區動趨 (BlockTempo)",
       "topic": "Crypto",
       "category": "crypto",
-      "published": "2026-07-03T17:56:03+00:00",
-      "ai_summary": "標題：Zcash Ironwood 升級接近，開發者努力恢復 ZEC 崩潰後的信心\n中立：\nZcash 的開發者正在進行 Ironwood 升級，該升級即將啟動測試網。安全測試未發現任何新的嚴重漏洞。",
+      "published": "2026-07-04T07:31:23+00:00",
+      "ai_summary": "(neutralize failed)",
       "summaries": {
-        "zh-HK": "標題：Zcash Ironwood 升級接近，開發者努力恢復 ZEC 崩潰後的信心\n中立：\nZcash 的開發者正在進行 Ironwood 升級，該升級即將啟動測試網。安全測試未發現任何新的嚴重漏洞。",
-        "en": "Title: Zcash Ironwood Upgrade Nears as Developers Work to Restore Confidence After ZEC Crash\nNeutral:\nDevelopers of Zcash are working on the Ironwood upgrade, which is approaching testnet activation. Security testing has not revealed any new serious bugs.",
-        "zh-CN": "标题：Zcash Ironwood 升级临近，开发者努力恢复 ZEC 崩溃后的信心\n中立：\nZcash 的开发者正在进行 Ironwood 升级，该升级即将启动测试网。安全测试未发现任何新的严重漏洞。",
-        "ja": "タイトル：Zcash Ironwood アップグレードが近づく中、開発者は ZEC の暴落後の信頼回復に努める\n中立：\nZcash の開発者は Ironwood アップグレードに取り組んでおり、テストネットのアクティベーションが近づいています。セキュリティテストでは新たな深刻なバグは発見されていません。",
-        "ko": "제목: Zcash Ironwood 업그레이드가 가까워지며 개발자들이 ZEC 폭락 이후 신뢰 회복을 위해 노력하고 있습니다\n중립:\nZcash 개발자들은 Ironwood 업그레이드 작업을 진행 중이며, 테스트넷 활성화가 가까워지고 있습니다. 보안 테스트에서는 새로운 심각한 버그가 발견되지 않았습니다."
+        "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://www.theblock.co/post/407160/cryptoquant-bitcoin-ether-altcoin-exchange-deposits-volatility?utm_source=rss&utm_medium=rss",
-      "title": "CryptoQuant says bitcoin and altcoin exchange deposits have spiked, indicating higher volatility ahead",
-      "source": "The Block",
+      "url": "https://www.aljazeera.com/news/2026/7/4/trump-praises-army-rails-against-communism-in-us-250th-anniversary-speech?traffic_source=rss",
+      "title": "Trump praises army, rails against communism in US 250th anniversary speech",
+      "source": "Al Jazeera",
+      "topic": "Politics",
+      "category": "general",
+      "published": "2026-07-04T07:19:57+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.blocktempo.com/murphy-bitcoin-weak-rebound-sth-realized-price-cost-basis-resistance/",
+      "title": "分析師：比特幣短期目標反彈至6.4 萬、6.8 萬，站上7 萬才算強反彈",
+      "source": "動區動趨 (BlockTempo)",
       "topic": "Bitcoin",
       "category": "crypto",
-      "published": "2026-07-03T17:55:56+00:00",
-      "ai_summary": "標題：CryptoQuant表示比特幣和山寨幣的交易所存款激增，預示著未來的波動性將增加\n中立：\n根據CryptoQuant的數據，比特幣存入交易所的數量達到了近49,000 BTC。今年僅觀察到四次這一水平。",
+      "published": "2026-07-04T07:12:32+00:00",
+      "ai_summary": "(neutralize failed)",
       "summaries": {
-        "zh-HK": "標題：CryptoQuant表示比特幣和山寨幣的交易所存款激增，預示著未來的波動性將增加\n中立：\n根據CryptoQuant的數據，比特幣存入交易所的數量達到了近49,000 BTC。今年僅觀察到四次這一水平。",
-        "en": "Title: CryptoQuant says bitcoin and altcoin exchange deposits have spiked, indicating higher volatility ahead\nNeutral:\nBitcoin deposits to exchanges reached nearly 49,000 BTC, according to CryptoQuant. This level has been observed only four other times in the current year.",
-        "zh-CN": "标题：CryptoQuant表示比特币和山寨币的交易所存款激增，预示着未来的波动性将增加\n中立：\n根据CryptoQuant的数据，比特币存入交易所的数量达到了近49,000 BTC。今年仅观察到四次这一水平。",
-        "ja": "タイトル：CryptoQuantがビットコインとアルトコインの取引所への預金が急増していると発表、今後のボラティリティの上昇を示唆\n中立：\nCryptoQuantによると、取引所へのビットコインの預金はほぼ49,000 BTCに達しました。このレベルは、今年に入ってから他に4回しか観測されていません。",
-        "ko": "제목: CryptoQuant, 비트코인 및 알트코인 거래소 예치금 급증, 향후 변동성 증가 시사\n중립:\nCryptoQuant에 따르면, 거래소에 대한 비트코인 예치금이 거의 49,000 BTC에 도달했습니다. 올해 이 수준은 단 4회만 관찰되었습니다."
+        "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://www.bloomberg.com/news/articles/2026-07-03/sqm-codelco-venture-maps-path-to-higher-lithium-output-in-chile",
-      "title": "SQM-Codelco Venture Maps Path to Higher Lithium Output in Chile",
+      "url": "https://www.coindesk.com/markets/2026/07/04/xrp-climbs-8-as-one-onchain-gauge-signal-shows-favorable-risk-reward-for-buyers",
+      "title": "XRP climbs 8% as record holder losses signal better risk-reward for buyers",
+      "source": "CoinDesk",
+      "topic": "Crypto",
+      "category": "crypto",
+      "published": "2026-07-04T07:08:00+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.aljazeera.com/opinions/2026/7/4/at-250-america-is-still-deciding-who-belongs?traffic_source=rss",
+      "title": "At 250, America is still deciding who belongs",
+      "source": "Al Jazeera",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T07:07:30+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://blockcast.it/2026/07/04/securitize-tokenizes-295-million-of-its-own-stock-amid-nyse-debut/",
+      "title": "代幣化公司 Securitize 登陸紐交所，上市首日就把自家股票「代幣化」",
+      "source": "區塊客 (Blockcast)",
+      "topic": "Finance",
+      "category": "crypto",
+      "published": "2026-07-04T07:00:13+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-07-04/macron-s-budget-finale-augurs-more-political-chaos-in-france",
+      "title": "Macron’s Budget Finale Augurs More Political Chaos in France",
       "source": "Bloomberg Crypto",
-      "topic": "Finance",
+      "topic": "Macro",
       "category": "finance",
-      "published": "2026-07-03T17:52:25+00:00",
-      "ai_summary": "標題：SQM-Codelco 合作計劃提升智利鋰產量\n中立：\n智利礦業公司 SQM 和 Codelco 正在合作，計劃將其合資企業的鋰產量提高超過 70%。這一舉措旨在滿足未來電池的需求。",
+      "published": "2026-07-04T07:00:00+00:00",
+      "ai_summary": "(neutralize failed)",
       "summaries": {
-        "zh-HK": "標題：SQM-Codelco 合作計劃提升智利鋰產量\n中立：\n智利礦業公司 SQM 和 Codelco 正在合作，計劃將其合資企業的鋰產量提高超過 70%。這一舉措旨在滿足未來電池的需求。",
-        "en": "Title: SQM-Codelco Venture Maps Path to Higher Lithium Output in Chile\nNeutral:\nChilean mining companies SQM and Codelco are collaborating to increase lithium output at their partnership by over 70%. This initiative is focused on meeting future battery demand.",
-        "zh-CN": "标题：SQM-Codelco 合作计划提升智利锂产量\n中立：\n智利矿业公司 SQM 和 Codelco 正在合作，计划将其合资企业的锂产量提高超过 70%。这一举措旨在满足未来电池的需求。",
-        "ja": "タイトル：SQM-Codelco 共同事業がチリにおけるリチウム生産の増加を目指す\n中立：\nチリの鉱業会社SQMとCodelcoは、パートナーシップにおけるリチウム生産を70％以上増加させるために協力しています。この取り組みは、将来のバッテリー需要に応えることを目的としています。",
-        "ko": "제목: SQM-Codelco 합작 투자, 칠레에서 리튬 생산 증가 경로 모색\n중립:\n칠레의 광산 회사 SQM과 Codelco는 파트너십에서 리튬 생산을 70% 이상 증가시키기 위해 협력하고 있습니다. 이 이니셔티브는 미래 배터리 수요를 충족하는 데 중점을 두고 있습니다."
+        "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://time.com/article/2026/07/03/tucker-carlson-new-political-party-trump-maga-rift/",
-      "title": "Tucker Carlson Floats Idea of New Political Party Amid Split From Trump",
-      "source": "Time",
-      "topic": "Politics",
-      "category": "general",
-      "published": "2026-07-03T17:49:54+00:00",
-      "ai_summary": "標題：塔克·卡爾森在與特朗普分裂後提出新政黨的想法\n中立：\n塔克·卡爾森在退出對共和黨的支持並與唐納德·特朗普總統產生裂痕後，建議創建一個新政黨。他表示不會參加任何新政黨的競選，但強調需要一個第三政黨來解決他認為當前政治體系忽視的問題。前國會女議員瑪喬里·泰勒·格林也表示有關於成立新政黨的討論。卡爾森和格林之前都支持特朗普，但對他的行為表示不滿。共和黨計劃於九月在達拉斯舉行大會。",
-      "summaries": {
-        "zh-HK": "標題：塔克·卡爾森在與特朗普分裂後提出新政黨的想法\n中立：\n塔克·卡爾森在退出對共和黨的支持並與唐納德·特朗普總統產生裂痕後，建議創建一個新政黨。他表示不會參加任何新政黨的競選，但強調需要一個第三政黨來解決他認為當前政治體系忽視的問題。前國會女議員瑪喬里·泰勒·格林也表示有關於成立新政黨的討論。卡爾森和格林之前都支持特朗普，但對他的行為表示不滿。共和黨計劃於九月在達拉斯舉行大會。",
-        "en": "Title: Tucker Carlson Floats Idea of New Political Party Amid Split From Trump\nNeutral:\nTucker Carlson has suggested the creation of a new political party following his withdrawal of support from the GOP and his rift with President Donald Trump. He stated he would not run for any new party but emphasized the need for a third party to address issues he believes are overlooked by the current political system. Former Congresswoman Marjorie Taylor Greene has also indicated discussions about forming a new party. Both Carlson and Greene previously supported Trump but have expressed dissatisfaction with his actions. The Republican Party is scheduled to hold a convention in Dallas in September.",
-        "zh-CN": "标题：塔克·卡尔森在与特朗普分裂后提出新政党的想法\n中立：\n塔克·卡尔森在退出对共和党的支持并与唐纳德·特朗普总统产生裂痕后，建议创建一个新政党。他表示不会参加任何新政党的竞选，但强调需要一个第三政党来解决他认为当前政治体系忽视的问题。前国会女议员玛乔里·泰勒·格林也表示有关于成立新政党的讨论。卡尔森和格林之前都支持特朗普，但对他的行为表示不满。共和党计划于九月在达拉斯举行大会。",
-        "ja": "タイトル：タッカー・カールソン、トランプとの分裂を受けて新しい政党のアイデアを提案\n中立：\nタッカー・カールソンは、共和党からの支持を撤回し、ドナルド・トランプ大統領との亀裂を受けて新しい政党の創設を提案しました。彼は新しい政党に立候補するつもりはないと述べましたが、現在の政治システムが見落としている問題に対処するための第三政党の必要性を強調しました。元議会議員のマージョリー・テイラー・グリーンも新しい政党を形成することについての議論を示唆しています。カールソンとグリーンは以前トランプを支持していましたが、彼の行動に不満を表明しています。共和党は9月にダラスで大会を開催する予定です。",
-        "ko": "제목: 터커 칼슨, 트럼프와의 분열"
-      }
-    },
-    {
-      "url": "https://www.nytimes.com/2026/07/03/world/europe/hitler-bunker-berlin-germany.html",
-      "title": "A Hitler Bunker Faces Demolition in Housing-Challenged Berlin",
-      "source": "New York Times",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T17:47:13+00:00",
-      "ai_summary": "標題：一座與希特勒有關的碉堡面臨在住房緊張的柏林拆除\n中立：\n位於柏林的一個與阿道夫·希特勒有關的地點即將被拆除。保護專家指出，德國在保護歷史重要紀念碑與新住房開發需求之間存在衝突。",
-      "summaries": {
-        "zh-HK": "標題：一座與希特勒有關的碉堡面臨在住房緊張的柏林拆除\n中立：\n位於柏林的一個與阿道夫·希特勒有關的地點即將被拆除。保護專家指出，德國在保護歷史重要紀念碑與新住房開發需求之間存在衝突。",
-        "en": "Title: A Hitler Bunker Faces Demolition in Housing-Challenged Berlin\nNeutral:\nA site in Berlin associated with Adolf Hitler is set for demolition. Preservation experts have noted a conflict in Germany regarding the balance between preserving historically significant monuments and the need for new housing development.",
-        "zh-CN": "标题：一座与希特勒有关的碉堡面临在住房紧张的柏林拆除\n中立：\n位于柏林的一个与阿道夫·希特勒有关的地点即将被拆除。保护专家指出，德国在保护历史重要纪念碑与新住房开发需求之间存在冲突。",
-        "ja": "タイトル：住宅不足のベルリンでヒトラーのバンカーが解体される\n中立：\nベルリンにあるアドルフ・ヒトラーに関連する場所が解体される予定です。保存専門家は、歴史的に重要な記念碑を保存することと新しい住宅開発の必要性との間にドイツで対立があることを指摘しています。",
-        "ko": "제목: 주택 부족에 시달리는 베를린에서 히틀러 벙커가 철거된다\n중립:\n아돌프 히틀러와 관련된 베를린의 한 장소가 철거될 예정이다. 보존 전문가들은 독일에서 역사적으로 중요한 기념물을 보존하는 것과 새로운 주택 개발의 필요성 사이에 갈등이 있음을 지적하고 있다."
-      }
-    },
-    {
-      "url": "https://www.bbc.co.uk/news/articles/c982r5z7v0no?at_medium=RSS&at_campaign=rss",
-      "title": "Burnham rules out calling early election as PM",
-      "source": "BBC World",
-      "topic": "Politics",
-      "category": "general",
-      "published": "2026-07-03T17:47:10+00:00",
-      "ai_summary": "標題：伯納姆排除提前選舉的可能性\n中立：\n安迪·伯納姆表示，如果他在2026年7月成為首相，他將不會召開提前的全國大選。他是唯一一位候選人，取代基爾·斯塔默爵士成為工黨領袖。上次全國大選於2024年7月4日舉行，下一次選舉必須在2029年8月之前召開。伯納姆參加了一個在線AMA會議，在會議中他討論了各種主題，包括難民政策和國家養老金。他還表達了與歐盟談判更密切關係的意圖。自宣布參選以來，伯納姆僅接受了一次媒體訪問。",
-      "summaries": {
-        "zh-HK": "標題：伯納姆排除提前選舉的可能性\n中立：\n安迪·伯納姆表示，如果他在2026年7月成為首相，他將不會召開提前的全國大選。他是唯一一位候選人，取代基爾·斯塔默爵士成為工黨領袖。上次全國大選於2024年7月4日舉行，下一次選舉必須在2029年8月之前召開。伯納姆參加了一個在線AMA會議，在會議中他討論了各種主題，包括難民政策和國家養老金。他還表達了與歐盟談判更密切關係的意圖。自宣布參選以來，伯納姆僅接受了一次媒體訪問。",
-        "en": "Title: Burnham rules out calling early election as PM\nNeutral:\nAndy Burnham stated he will not call an early general election if he becomes prime minister later in July 2026. He is the sole candidate to replace Sir Keir Starmer as the leader of the Labour Party. The last general election occurred on 4 July 2024, and the next election must be called by August 2029. Burnham participated in an online AMA session on Reddit, where he addressed various topics, including policies on refugees and the state pension. He also expressed intentions to negotiate a closer relationship with the EU. Burnham has only given one media interview since announcing his candidacy.",
-        "zh-CN": "标题：伯纳姆排除提前选举的可能性\n中立：\n安迪·伯纳姆表示，如果他在2026年7月成为首相，他将不会召开提前的全国大选。他是唯一一位候选人，取代基尔·斯塔默爵士成为工党领袖。上次全国大选于2024年7月4日举行，下一次选举必须在2029年8月之前召开。伯纳姆参加了一个在线AMA会议，在会议中他讨论了各种主题，包括难民政策和国家养老金。他还表达了与欧盟谈判更密切关系的意图。自宣布参选以来，伯纳姆仅接受了一次媒体采访。",
-        "ja": "タイトル：バーンハム氏、首相就任後の早期選挙を否定\n中立：\nアンディ・バーンハム氏は、2026年7月に首相になった場合、早期の総選挙を呼びかけないと述べました。彼は、労働党のリーダーとしてキール・スターマー卿を置き換える唯一の候補者です。前回の総選挙は2024年7月4日に行われ、次回の選挙は2029年8月までに呼びかける必要があります。バーンハム氏は、RedditでのオンラインAMAセッションに参加し、難民政策や国家年金など、さまざまなトピックについて言及しました。また、EUとのより密接な関係を交渉する意向も示しました。バーンハム氏は、"
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/7/3/pakistan-bus-crash-kills-40?traffic_source=rss",
-      "title": "Pakistan bus crash kills 40",
-      "source": "Al Jazeera",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T17:44:02+00:00",
-      "ai_summary": "標題：巴基斯坦巴士事故造成40人死亡\n中立：\n2026年7月3日，巴基斯坦西南部發生巴士事故，至少40人喪生，另有8人受傷。據報導，該巴士載著從另一輛故障車輛轉乘的乘客，當時跌入一個岩石峽谷。救援隊已被派往現場。",
-      "summaries": {
-        "zh-HK": "標題：巴基斯坦巴士事故造成40人死亡\n中立：\n2026年7月3日，巴基斯坦西南部發生巴士事故，至少40人喪生，另有8人受傷。據報導，該巴士載著從另一輛故障車輛轉乘的乘客，當時跌入一個岩石峽谷。救援隊已被派往現場。",
-        "en": "Title: Pakistan bus crash kills 40\nNeutral:\nAt least 40 people were killed and eight others injured in a bus crash in southwestern Pakistan on July 3, 2026. The bus was reportedly carrying passengers from another vehicle that had broken down when it fell into a rocky ravine. Rescue teams were deployed to the scene.",
-        "zh-CN": "标题：巴基斯坦巴士事故造成40人死亡\n中立：\n2026年7月3日，巴基斯坦西南部发生巴士事故，至少40人遇难，另有8人受伤。报道称，该巴士载着从另一辆故障车辆转乘的乘客，跌入一个岩石峡谷。救援队已被派往现场。",
-        "ja": "タイトル：パキスタンのバス事故で40人死亡\n中立：\n2026年7月3日、パキスタン南西部でバス事故が発生し、少なくとも40人が死亡し、8人が負傷しました。このバスは、故障した別の車両から乗客を乗せていたと報じられており、岩の渓谷に転落しました。救助隊が現場に派遣されました。",
-        "ko": "제목: 파키스탄 버스 사고로 40명 사망\n중립:\n2026년 7월 3일, 파키스탄 남서부에서 발생한 버스 사고로 최소 40명이 사망하고 8명이 부상을 입었습니다. 이 버스는 고장난 다른 차량에서 승객을 태우고 있었던 것으로 전해지며, 바위가 많은 협곡으로 떨어졌습니다. 구조팀이 현장에 파견되었습니다."
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/7/3/world-leaders-pay-tribute-to-irans-late-leader-khamenei-in-tehran?traffic_source=rss",
-      "title": "World leaders pay tribute to Iran’s late leader Khamenei in Tehran",
-      "source": "Al Jazeera",
-      "topic": "World",
-      "category": "general",
-      "published": "2026-07-03T17:35:22+00:00",
-      "ai_summary": "標題：世界領袖在德黑蘭向伊朗已故領袖哈梅內伊致敬\n中立：\n外國領袖和地區代表團聚集在德黑蘭，向伊朗已故最高領袖阿里·哈梅內伊的靈柩致敬。他的棺木披著國旗，安放在大清真寺內。哈梅內伊的為期一週的國葬於2026年7月3日開始。",
-      "summaries": {
-        "zh-HK": "標題：世界領袖在德黑蘭向伊朗已故領袖哈梅內伊致敬\n中立：\n外國領袖和地區代表團聚集在德黑蘭，向伊朗已故最高領袖阿里·哈梅內伊的靈柩致敬。他的棺木披著國旗，安放在大清真寺內。哈梅內伊的為期一週的國葬於2026年7月3日開始。",
-        "en": "Title: World leaders pay tribute to Iran’s late leader Khamenei in Tehran\nNeutral:\nForeign leaders and regional delegations gathered in Tehran to pay respects at the casket of Iran's late Supreme Leader Ali Khamenei. His coffin was flag-draped and lay in state at the Grand Mosalla. A week-long state funeral for Khamenei began on July 3, 2026.",
-        "zh-CN": "标题：世界领导人在德黑兰向伊朗已故领导人哈梅内伊致敬\n中立：\n外国领导人和地区代表团聚集在德黑兰，向伊朗已故最高领袖阿里·哈梅内伊的灵柩致敬。他的棺木披着国旗，安放在大清真寺内。哈梅内伊的为期一周的国葬于2026年7月3日开始。",
-        "ja": "タイトル：世界の指導者たちがテヘランでイランの故指導者ハメネイに敬意を表す\n中立：\n外国の指導者や地域の代表団がテヘランに集まり、イランの故最高指導者アリー・ハメネイの棺に敬意を表しました。彼の棺は国旗で覆われ、大モサラに安置されていました。ハメネイのための1週間の国葬は2026年7月3日に始まりました。",
-        "ko": "제목: 세계 지도자들이 테헤란에서 이란의 고(故) 지도자 하메네이에 경의를 표하다\n중립:\n외국 지도자들과 지역 대표단이 테헤란에 모여 이란의 고(故) 최고 지도자 알리 하메네이의 관에 경의를 표했습니다. 그의 관은 국기로 덮여 있었고, 대 모살라에 안치되어 있었습니다. 하메네이를 위한 일주일간의 국장이 2026년 7월 3일에 시작되었습니다."
-      }
-    },
-    {
-      "url": "https://www.bbc.co.uk/news/articles/c24y2pr3dvyo?at_medium=RSS&at_campaign=rss",
-      "title": "Two Romanians jailed for stabbing journalist on behalf of Iran regime",
-      "source": "BBC World",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T17:25:59+00:00",
-      "ai_summary": "標題：兩名羅馬尼亞人因代表伊朗政權刺傷記者而被監禁\n中立：\n兩名羅馬尼亞男子因為代表伊朗政權刺傷一名記者而被判刑。這起事件引起了國際社會的廣泛關注，並引發了對言論自由的討論。",
-      "summaries": {
-        "zh-HK": "標題：兩名羅馬尼亞人因代表伊朗政權刺傷記者而被監禁\n中立：\n兩名羅馬尼亞男子因為代表伊朗政權刺傷一名記者而被判刑。這起事件引起了國際社會的廣泛關注，並引發了對言論自由的討論。",
-        "en": "Title: Two Romanians jailed for stabbing journalist on behalf of Iran regime\nNeutral:\nTwo Romanian men have been sentenced to prison for stabbing a journalist on behalf of the Iranian regime. This incident has drawn significant international attention and sparked discussions about freedom of speech.",
-        "zh-CN": "标题：两名罗马尼亚人因代表伊朗政权刺伤记者而被监禁\n中立：\n两名罗马尼亚男子因代表伊朗政权刺伤一名记者而被判刑。此事件引起了国际社会的广泛关注，并引发了关于言论自由的讨论。",
-        "ja": "タイトル：イラン政権のためにジャーナリストを刺した2人のルーマニア人が投獄される\n中立：\nイラン政権のためにジャーナリストを刺した2人のルーマニア人が刑務所に送られました。この事件は国際的な注目を集め、言論の自由についての議論を引き起こしています。",
-        "ko": "제목: 이란 정권을 대신해 기자를 찌른 두 명의 루마니아인 징역형\n중립:\n두 명의 루마니아 남성이 이란 정권을 대신해 기자를 찌른 혐의로 징역형을 선고받았습니다. 이 사건은 국제 사회의 큰 관심을 불러일으켰고, 언론 자유에 대한 논의를 촉발했습니다."
-      }
-    },
-    {
-      "url": "https://www.nytimes.com/2026/07/03/world/europe/belgium-building-damaged-america-250-fireworks.html",
-      "title": "A U.S. Independence Celebration Damaged a Museum in Belgium",
-      "source": "New York Times",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T17:19:51+00:00",
-      "ai_summary": "標題：美國獨立慶祝活動損壞比利時一座博物館\n中立：\n在布魯塞爾市中心的一個公園內舉行了一場煙火表演，以慶祝美國獨立日。美國駐比利時大使確認，活動造成了一座建築物上留下了黑色痕跡。",
-      "summaries": {
-        "zh-HK": "標題：美國獨立慶祝活動損壞比利時一座博物館\n中立：\n在布魯塞爾市中心的一個公園內舉行了一場煙火表演，以慶祝美國獨立日。美國駐比利時大使確認，活動造成了一座建築物上留下了黑色痕跡。",
-        "en": "Title: A U.S. Independence Celebration Damaged a Museum in Belgium\nNeutral:\nA fireworks display took place in a central Brussels park during a U.S. Independence celebration. The American ambassador to Belgium confirmed that black marks were left on a structure as a result of the event.",
-        "zh-CN": "标题：美国独立庆祝活动损坏比利时一座博物馆\n中立：\n在布鲁塞尔市中心的一个公园内举行了一场烟火表演，以庆祝美国独立日。美国驻比利时大使确认，活动导致一座建筑物上留下了黑色痕迹。",
-        "ja": "タイトル：アメリカ独立記念日のお祝いがベルギーの博物館を損傷\n中立：\nアメリカ独立記念日のお祝いの際、ブリュッセル中心部の公園で花火が打ち上げられました。アメリカのベルギー大使は、イベントの結果として建物に黒い跡が残ったことを確認しました。",
-        "ko": "제목: 미국 독립 기념일 축하 행사로 벨기에의 박물관이 손상됨\n중립:\n미국 독립 기념일 축하 행사 중 브뤼셀 중심부의 공원에서 불꽃놀이가 진행되었습니다. 미국의 벨기에 대사는 이 행사로 인해 건물에 검은 자국이 남았다고 확인했습니다."
-      }
-    },
-    {
-      "url": "https://decrypt.co/372737/dave-portnoy-losing-millions-bitcoin-falls",
-      "title": "'Every Time I Buy It, It Tanks': Dave Portnoy Says He's Losing Millions as Bitcoin Falls",
-      "source": "Decrypt",
-      "topic": "Bitcoin",
-      "category": "crypto",
-      "published": "2026-07-03T17:13:43+00:00",
-      "ai_summary": "標題：'每次我買它，它就會崩潰'：Dave Portnoy表示隨著比特幣下跌，他正在損失數百萬\n中立：\nBarstool Sports的創始人Dave Portnoy報告稱，他在比特幣上損失了數百萬。他表示，儘管可能會進一步貶值，他仍打算持有他的比特幣投資。",
-      "summaries": {
-        "zh-HK": "標題：'每次我買它，它就會崩潰'：Dave Portnoy表示隨著比特幣下跌，他正在損失數百萬\n中立：\nBarstool Sports的創始人Dave Portnoy報告稱，他在比特幣上損失了數百萬。他表示，儘管可能會進一步貶值，他仍打算持有他的比特幣投資。",
-        "en": "Title: 'Every Time I Buy It, It Tanks': Dave Portnoy Says He's Losing Millions as Bitcoin Falls\nNeutral:\nDave Portnoy, founder of Barstool Sports, reports that he has lost millions on Bitcoin. He has stated his intention to hold his Bitcoin investments despite the possibility of further declines in value.",
-        "zh-CN": "标题：'每次我买它，它就会崩溃'：Dave Portnoy表示随着比特币下跌，他正在损失数百万\n中立：\nBarstool Sports的创始人Dave Portnoy报告称，他在比特币上损失了数百万。他表示，尽管可能会进一步贬值，他仍打算持有他的比特币投资。",
-        "ja": "タイトル：'買うたびに暴落する'：デイブ・ポートノイ、ビットコインの下落で数百万ドルを失っていると語る\n中立：\nBarstool Sportsの創設者デイブ・ポートノイは、ビットコインで数百万ドルを失ったと報告しています。彼は、さらなる価値の下落の可能性にもかかわらず、ビットコイン投資を保持する意向を示しています。",
-        "ko": "제목: '매번 사면 폭락한다': 데이브 포트노이, 비트코인 하락으로 수백만 달러 손실\n중립:\nBarstool Sports의 창립자 데이브 포트노이는 비트코인에서 수백만 달러를 잃었다고 보고했습니다. 그는 가치가 더 하락할 가능성이 있음에도 불구하고 비트코인 투자를 유지할 의향이 있다고 밝혔습니다."
-      }
-    },
-    {
-      "url": "https://www.ft.com/content/010b7867-1bf3-4a32-aeee-a3e6a67e4b0b",
-      "title": "An American birthday worth celebrating",
-      "source": "Financial Times",
-      "topic": "Finance",
-      "category": "finance",
-      "published": "2026-07-03T17:12:29+00:00",
-      "ai_summary": "標題：值得慶祝的美國生日\n中立：\n文章討論了美國的創立理想，並提到了一種更新的能力。它沒有提供具體的事件、日期或地點。",
-      "summaries": {
-        "zh-HK": "標題：值得慶祝的美國生日\n中立：\n文章討論了美國的創立理想，並提到了一種更新的能力。它沒有提供具體的事件、日期或地點。",
-        "en": "Title: An American birthday worth celebrating\nNeutral:\nThe article discusses the founding ideals of the United States and mentions a capacity for renewal. It does not provide specific events, dates, or locations.",
-        "zh-CN": "标题：值得庆祝的美国生日\n中立：\n文章讨论了美国的创立理想，并提到了一种更新的能力。它没有提供具体的事件、日期或地点。",
-        "ja": "タイトル：祝う価値のあるアメリカの誕生日\n中立：\nこの記事はアメリカの建国の理念について論じており、再生の能力に言及しています。具体的なイベント、日付、場所は提供されていません。",
-        "ko": "제목: 축하할 가치가 있는 미국의 생일\n중립:\n이 기사는 미국의 건국 이념에 대해 논의하며 갱신의 능력에 대해 언급합니다. 특정 사건, 날짜 또는 장소는 제공되지 않습니다."
-      }
-    },
-    {
-      "url": "https://www.ft.com/content/a23d758d-3b48-4ea4-a08c-5dba88543d08",
-      "title": "Iran begins mourning for Khamenei under tight security",
-      "source": "Financial Times",
-      "topic": "Finance",
-      "category": "finance",
-      "published": "2026-07-03T17:00:39+00:00",
-      "ai_summary": "標題：伊朗在嚴密保安下開始悼念哈梅內伊\n中立：\n來自伊朗及鄰國的貴賓們正向被殺的最高領導人阿里·哈梅內伊致敬。伊朗的悼念活動已經開始。在此期間，已經採取了安全措施。官方的葬禮預計將在悼念期結束後舉行。",
-      "summaries": {
-        "zh-HK": "標題：伊朗在嚴密保安下開始悼念哈梅內伊\n中立：\n來自伊朗及鄰國的貴賓們正向被殺的最高領導人阿里·哈梅內伊致敬。伊朗的悼念活動已經開始。在此期間，已經採取了安全措施。官方的葬禮預計將在悼念期結束後舉行。",
-        "en": "Title: Iran begins mourning for Khamenei under tight security\nNeutral:\nDignitaries from Iran and neighboring countries are paying respects to the slain supreme leader, Ali Khamenei. Mourning activities have commenced in Iran. Security measures are in place during this period. An official funeral is expected to take place following the mourning period.",
-        "zh-CN": "标题：伊朗在严密保安下开始悼念哈梅内伊\n中立：\n来自伊朗及邻国的贵宾们正向被杀的最高领导人阿里·哈梅内伊致敬。伊朗的悼念活动已经开始。在此期间，已经采取了安全措施。官方的葬礼预计将在悼念期结束后举行。",
-        "ja": "タイトル：イラン、厳重な警備の下でハメネイの追悼を開始\n中立：\nイランおよび隣国の要人たちが、殺害された最高指導者アリー・ハメネイに敬意を表しています。イランでは追悼活動が始まりました。この期間中、安全対策が講じられています。公式の葬儀は追悼期間の後に行われる予定です。",
-        "ko": "제목: 이란, 엄격한 보안 속에서 하메네이를 추모하기 시작\n중립:\n이란 및 인근 국가의 고위 인사들이 살해된 최고 지도자 알리 하메네이에 경의를 표하고 있습니다. 이란에서는 추모 활동이 시작되었습니다. 이 기간 동안 보안 조치가 시행되고 있습니다. 공식 장례식은 추모 기간이 끝난 후에 열릴 것으로 예상됩니다."
-      }
-    },
-    {
-      "url": "https://cointelegraph.com/news/donald-trump-crypto-investments-president-profit-office?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "title": "Donald Trump says ‘nothing wrong’ with $1.4B crypto windfall while in office",
-      "source": "CoinTelegraph",
-      "topic": "Politics",
-      "category": "crypto",
-      "published": "2026-07-03T16:57:26+00:00",
-      "ai_summary": "標題：唐納德·特朗普表示在任期間獲得14億美元加密貨幣收益「沒有錯」\n中立：\n唐納德·特朗普表示，他在任期間獲得的14億美元加密貨幣收益「沒有錯」。歐洲證券及市場管理局（ESMA）發出警告，指出許多預測市場事件合約可能會面臨在歐盟對零售投資者的禁令。",
-      "summaries": {
-        "zh-HK": "標題：唐納德·特朗普表示在任期間獲得14億美元加密貨幣收益「沒有錯」\n中立：\n唐納德·特朗普表示，他在任期間獲得的14億美元加密貨幣收益「沒有錯」。歐洲證券及市場管理局（ESMA）發出警告，指出許多預測市場事件合約可能會面臨在歐盟對零售投資者的禁令。",
-        "en": "Title: Donald Trump says ‘nothing wrong’ with $1.4B crypto windfall while in office\nNeutral:\nDonald Trump stated that there was \"nothing wrong\" with a $1.4 billion cryptocurrency windfall he received while in office. The European Securities and Markets Authority (ESMA) issued a warning regarding prediction market event contracts, indicating that many of these contracts may face a ban for retail investors in the European Union.",
-        "zh-CN": "标题：唐纳德·特朗普表示在任期间获得14亿美元加密货币收益“没有错”\n中立：\n唐纳德·特朗普表示，他在任期间获得的14亿美元加密货币收益“没有错”。欧洲证券和市场管理局（ESMA）发出警告，指出许多预测市场事件合约可能会面临在欧盟对零售投资者的禁令。",
-        "ja": "タイトル：ドナルド・トランプ氏、在任中に得た14億ドルの暗号通貨の利益について「問題ない」と発言\n中立：\nドナルド・トランプ氏は、在任中に得た14億ドルの暗号通貨の利益について「問題ない」と述べました。欧州証券市場監視機構（ESMA）は、予測市場イベント契約に関する警告を発表し、これらの契約の多くが欧州連合内の小口投資家に対して禁止される可能性があることを示しています。",
-        "ko": "제목: 도널드 트럼프, 재임 중 14억 달러 암호화폐 수익에 대해 '문제 없다'고 말하다\n중립:\n도널드 트럼프는 재임 중에 받은 14억 달러의 암호화폐 수익에 대해 '문제 없다'고 밝혔습니다. 유럽 증권 시장 감독청(ESMA)은 예측 시장 이벤트 계약에 대한 경고를 발령하며, 이러한 계약의 상당수가 유럽 연합 내 소매 투자자에게 금지될 수 있음을 나타냈습니다."
-      }
-    },
-    {
-      "url": "https://cointelegraph.com/news/esma-warns-many-prediction-market-contracts-may-be-prohibited-eu-retail-investors?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "title": "ESMA warns many prediction market event contracts already face EU retail ban",
-      "source": "CoinTelegraph",
-      "topic": "Regulation",
-      "category": "crypto",
-      "published": "2026-07-03T16:54:20+00:00",
-      "ai_summary": "標題：ESMA警告許多預測市場事件合約已面臨歐盟零售禁令\n中立：\n歐洲證券及市場管理局（ESMA）發出警告，指出預測市場事件合約可能會受到歐盟對零售投資者的禁令。唐納德·特朗普表示，他認為在任期間報導的14億美元加密貨幣收益“沒有任何問題”。",
-      "summaries": {
-        "zh-HK": "標題：ESMA警告許多預測市場事件合約已面臨歐盟零售禁令\n中立：\n歐洲證券及市場管理局（ESMA）發出警告，指出預測市場事件合約可能會受到歐盟對零售投資者的禁令。唐納德·特朗普表示，他認為在任期間報導的14億美元加密貨幣收益“沒有任何問題”。",
-        "en": "Title: ESMA warns many prediction market event contracts already face EU retail ban\nNeutral:\nThe European Securities and Markets Authority (ESMA) issued a warning regarding prediction market event contracts that may be subject to a ban for retail investors in the European Union. Donald Trump stated that he sees \"nothing wrong\" with a reported $1.4 billion in cryptocurrency gains during his time in office.",
-        "zh-CN": "标题：ESMA警告许多预测市场事件合约已面临欧盟零售禁令\n中立：\n欧洲证券和市场管理局（ESMA）发出警告，指出预测市场事件合约可能会受到欧盟对零售投资者的禁令。唐纳德·特朗普表示，他认为在任期间报道的14亿美元加密货币收益“没有任何问题”。",
-        "ja": "タイトル：ESMAが多くの予測市場イベント契約がEUの小売禁止に直面していると警告\n中立：\n欧州証券市場監視機構（ESMA）は、小売投資家に対する禁止の対象となる可能性のある予測市場イベント契約について警告を発しました。ドナルド・トランプは、在任中に報告された14億ドルの暗号通貨の利益について「何も問題ない」と述べました。",
-        "ko": "제목: ESMA, 많은 예측 시장 이벤트 계약이 EU 소매 금지에 직면해 있다고 경고\n중립:\n유럽 증권 및 시장 당국(ESMA)은 유럽 연합의 소매 투자자에 대한 금지의 대상이 될 수 있는 예측 시장 이벤트 계약에 대해 경고를 발했습니다. 도널드 트럼프는 재임 중 보고된 14억 달러의 암호화폐 수익에 대해 \"문제가 없다\"고 밝혔습니다."
-      }
-    },
-    {
-      "url": "https://www.bbc.co.uk/news/articles/cdx7dxrwg7ro?at_medium=RSS&at_campaign=rss",
-      "title": "William talks World Cup football fever on Travis Kelce's podcast",
-      "source": "BBC World",
-      "topic": "World",
-      "category": "general",
-      "published": "2026-07-03T16:46:23+00:00",
-      "ai_summary": "標題：威廉在特拉維斯·凱爾西的播客中談論世界杯足球熱潮\n中立：\n威廉王子於2026年7月3日出現在特拉維斯·凱爾西的播客中，討論足球和即將舉行的世界杯，該賽事由美國共同主辦。他糾正了凱爾西，指出應稱其為「足球」，而不是「足球」。威廉提到如果英格蘭進入決賽，他將前往世界杯。他分享了他的父親查爾斯國王不喜歡足球的事，並表示自己在26年前觀看阿斯頓維拉的比賽後成為了他們的支持者。這一集提到了英格蘭最近與克羅地亞的比賽。威廉還討論了他作為足球協會主席的角色，並提到了幾位著名的英國球員。",
-      "summaries": {
-        "zh-HK": "標題：威廉在特拉維斯·凱爾西的播客中談論世界杯足球熱潮\n中立：\n威廉王子於2026年7月3日出現在特拉維斯·凱爾西的播客中，討論足球和即將舉行的世界杯，該賽事由美國共同主辦。他糾正了凱爾西，指出應稱其為「足球」，而不是「足球」。威廉提到如果英格蘭進入決賽，他將前往世界杯。他分享了他的父親查爾斯國王不喜歡足球的事，並表示自己在26年前觀看阿斯頓維拉的比賽後成為了他們的支持者。這一集提到了英格蘭最近與克羅地亞的比賽。威廉還討論了他作為足球協會主席的角色，並提到了幾位著名的英國球員。",
-        "en": "Title: William talks World Cup football fever on Travis Kelce's podcast\nNeutral:\nPrince William appeared on Travis Kelce's podcast on 3 July 2026, discussing football and the upcoming World Cup, which the US is co-hosting. He corrected Kelce, stating it is \"football\" and not \"soccer.\" William mentioned he would travel to the World Cup if England reached the final. He shared that his father, King Charles, dislikes football and that he became an Aston Villa supporter after watching them play 26 years ago. The episode referenced England's recent match against Croatia. William also discussed his role as president of the Football Association and named several notable English players.",
-        "zh-CN": "标题：威廉在特拉维斯·凯尔西的播客中谈论世界杯足球热潮\n中立：\n威廉王子于2026年7月3日出现在特拉维斯·凯尔西的播客中，讨论足球和即将举行的世界杯，该赛事由美国共同主办。他纠正了凯尔西，指出应称其为“足球”，而不是“足球”。威廉提到如果英格兰进入决赛，他将前往世界杯。他分享了他的父亲查尔斯国王不喜欢足球的事，并表示自己在26年前观看阿斯顿维拉的比赛后成为了他们的支持者。这一集提到了英格兰最近与克罗地亚的比赛。威廉还讨论了他作为足球协会主席的角色，并提到了几位著名的英国球员。",
-        "ja": "タイトル：ウィリアムがトラビス・ケルシーのポッドキャストでワールドカップサッカー熱について語る\n中立：\nウィリアム王子は2026年7月3日にトラビス・ケルシーのポッドキャストに出演し、サッカーとアメリカが共催する予定のワールドカップについて話しました。彼はケルシーに対して「サッカー」ではなく「フットボール」と言うべきだと訂正しました。ウィリアムは、イングランドが決勝に進出した場合、ワ"
-      }
-    },
-    {
-      "url": "https://www.bbc.co.uk/news/articles/cj0gp88q4l4o?at_medium=RSS&at_campaign=rss",
-      "title": "Polish PM warns critical months ahead in face of Russian threat",
-      "source": "BBC World",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T16:41:00+00:00",
-      "ai_summary": "標題：波蘭總理警告面對俄羅斯威脅的關鍵月份即將來臨\n中立：\n波蘭和立陶宛部隊於六月底進行了聯合軍事演習。波蘭總理唐納德·圖斯克表示，該國正在為面對來自俄羅斯的威脅準備各種情景。他提到對莫斯科可能發動武裝挑釁的擔憂，並引用了美國的情報。波蘭總統卡羅爾·納沃茨基預定下週參加在土耳其舉行的北約峰會。報導指出，波蘭的基礎設施可能會成為導彈或無人機的攻擊目標。北約第五條規定，對一個成員的武裝攻擊被視為對所有成員的攻擊。立陶宛駐北約大使指出，俄羅斯可能會使用混合戰爭戰術。",
-      "summaries": {
-        "zh-HK": "標題：波蘭總理警告面對俄羅斯威脅的關鍵月份即將來臨\n中立：\n波蘭和立陶宛部隊於六月底進行了聯合軍事演習。波蘭總理唐納德·圖斯克表示，該國正在為面對來自俄羅斯的威脅準備各種情景。他提到對莫斯科可能發動武裝挑釁的擔憂，並引用了美國的情報。波蘭總統卡羅爾·納沃茨基預定下週參加在土耳其舉行的北約峰會。報導指出，波蘭的基礎設施可能會成為導彈或無人機的攻擊目標。北約第五條規定，對一個成員的武裝攻擊被視為對所有成員的攻擊。立陶宛駐北約大使指出，俄羅斯可能會使用混合戰爭戰術。",
-        "en": "Title: Polish PM warns critical months ahead in face of Russian threat\nNeutral:\nPolish and Lithuanian forces conducted a joint military exercise in late June. Poland's Prime Minister Donald Tusk stated that the country is preparing for various scenarios regarding the threat from Russia. He mentioned concerns about potential armed provocations from Moscow, citing US intelligence. Polish President Karol Nawrocki is scheduled to attend a NATO summit in Turkey next week. Reports indicate that Polish infrastructure could be targeted by missiles or drones. NATO's Article 5 stipulates that an armed attack against one member is considered an attack against all members. Lithuania's ambassador to NATO noted that Russia may use hybrid warfare tactics.",
-        "zh-CN": "标题：波兰总理警告面临俄罗斯威胁的关键月份即将到来\n中立：\n波兰和立陶宛部队于六月底进行了联合军事演习。波兰总理唐纳德·图斯克表示，该国正在为应对来自俄罗斯的威胁准备各种情景。他提到对莫斯科可能发动武装挑衅的担忧，并引用了美国的情报。波兰总统卡罗尔·纳沃茨基定于下周参加在土耳其举行的北约峰会。报道指出，波兰的基础设施可能会成为导弹或无人机的攻击目标。北约第五条规定，对一个成员的武装攻击被视为对所有成员的攻击。立陶宛驻北约大使指出，俄罗斯可能会使用混合战争战术。",
-        "ja": "タイトル：ポーランド首相、ロシアの脅威に直面して重要な数ヶ月が迫っていると警告\n中立：\nポーランドとリトアニアの軍隊は6月下旬に共同軍事演習を実施しました。ポーランドの首相ドナルド・トゥスクは、同国がロシアからの脅威に関するさまざまなシナリオに備えていると述べました。彼は、米国の情報を引用し、モスクワから"
-      }
-    },
-    {
-      "url": "https://www.blocktempo.com/anthropic-announces-plans-to-develop-its-own-drugs-claude-science/",
-      "title": "Anthropic 宣布「親自開發新藥」，專家潑冷水：FDA 認證至少還要 10 年",
-      "source": "動區動趨 (BlockTempo)",
-      "topic": "AI",
-      "category": "crypto",
-      "published": "2026-07-03T16:38:55+00:00",
-      "ai_summary": "標題：Anthropic 宣布「親自開發新藥」，專家潑冷水：FDA 認證至少還要 10 年\n中立摘要：\nAnthropic 宣布計劃開發針對被忽視疾病的藥物。該公司為科學家推出了一個人工智能工作平台。Anthropic 生命科學主管 Eric Kauderer-Abrams 在題為「簡報：AI 促進科學」的發布會上作出此項宣布。專家表示，目前尚無任何由人工智能設計的藥物獲得美國食品及藥物管理局（FDA）批准。牛津大學教授 Frank von Delft 指出，人工智能無法取代物理實驗。倫敦大學學院教授 Matthew Todd 表示，生物化學反應非常複雜。Anthropic 尚未披露具體的疾病目標或臨床試驗計劃。",
-      "summaries": {
-        "zh-HK": "標題：Anthropic 宣布「親自開發新藥」，專家潑冷水：FDA 認證至少還要 10 年\n中立摘要：\nAnthropic 宣布計劃開發針對被忽視疾病的藥物。該公司為科學家推出了一個人工智能工作平台。Anthropic 生命科學主管 Eric Kauderer-Abrams 在題為「簡報：AI 促進科學」的發布會上作出此項宣布。專家表示，目前尚無任何由人工智能設計的藥物獲得美國食品及藥物管理局（FDA）批准。牛津大學教授 Frank von Delft 指出，人工智能無法取代物理實驗。倫敦大學學院教授 Matthew Todd 表示，生物化學反應非常複雜。Anthropic 尚未披露具體的疾病目標或臨床試驗計劃。",
-        "en": "Title: Anthropic Announces \"In-House Drug Development,\" Experts Pour Cold Water: FDA Approval at Least 10 Years Away\nNeutral Summary:\nAnthropic announced plans to develop drugs for neglected diseases. The company introduced an AI workbench for scientists. Anthropic life sciences head Eric Kauderer-Abrams made the announcement at a briefing titled \"The Briefing: AI for Science.\" Experts stated that no AI-designed drug has received FDA approval. Oxford professor Frank von Delft said AI cannot replace physical experiments. University College London professor Matthew Todd said biological chemical reactions are complex. Anthropic has not disclosed specific disease targets or plans for clinical trials.",
-        "zh-CN": "标题：Anthropic 宣布「亲自开发新药」，专家泼冷水：FDA 认证至少还要 10 年\n中立摘要：\nAnthropic 宣布计划开发针对被忽视疾病的药物。该公司为科学家推出了一款人工智能工作平台。Anthropic 生命科学主管 Eric Kauderer-Abrams 在题为「简报：AI 促进科学」的发布会上作出此项宣布。专家表示，目前尚无任何由人工智能设计的药物获得美国食品药品监督管理局（FDA）批准。牛津大学教授 Frank von Delft 指出，人工智能无法取代物理实验。伦敦大学学院教授 Matthew Todd 表示，生物化学反应非常复杂。Anthropic 尚未披露具体的疾病目标或临床试验计划。",
-        "ja": "タイトル：Anthropicが「自社で新薬開発」を発表、専門家は冷や水：FDA認可には少なくとも10年\n中立要約：\nAnthropicは、顧みられない疾患向けの医薬品を開発する計画を発表した。同社は科学者向けにAIワークベンチを導入した。Anthropicのライフサイエンス責任者エリック・カウデラー＝エイブラムス氏は、「ブリーフィング：AI for Science」と題された説明会でこの発表を行った。専門家らは、AIが設計した医薬品でFDAの承認を得たものはまだないと述べた。オックスフォード大学のフランク・フォン・デルフト教授は、AIは物理実験に取って代わることはできないと述べた。ユニバーシティ・カレッジ・ロンドンのマシュー・トッド教授は、生物学的化学反応は複雑であると述べた。Anthropicは、具体的な疾患ターゲットや"
-      }
-    },
-    {
-      "url": "https://techcrunch.com/2026/07/03/chevy-built-an-all-american-ev-truck-why-is-nobody-buying-it/",
-      "title": "Chevy built an All-American EV truck. Why is nobody buying it?",
-      "source": "TechCrunch",
-      "topic": "Tech",
-      "category": "tech",
-      "published": "2026-07-03T16:30:00+00:00",
-      "ai_summary": "標題：Chevy 打造了一款全美式電動貨車，為何無人問津？\n中立摘要：\n雪佛蘭推出了 Silverado EV，一款電動貨車。通用汽車在 2024 年於美國和加拿大銷售了約 14,000 輛。汽油動力的 Silverado 每季銷量是這個數字的十倍。Silverado EV 配備 205 千瓦時的電池組。車輛設有前行李箱、短貨斗、四門，以及駕駛室與貨斗之間的「帆形」結構。它包含 Super Cruise 免手持駕駛輔助系統。車輛長度接近 20 英尺，並配備後輪轉向系統。資訊娛樂系統使用 Google 服務。",
-      "summaries": {
-        "zh-HK": "標題：Chevy 打造了一款全美式電動貨車，為何無人問津？\n中立摘要：\n雪佛蘭推出了 Silverado EV，一款電動貨車。通用汽車在 2024 年於美國和加拿大銷售了約 14,000 輛。汽油動力的 Silverado 每季銷量是這個數字的十倍。Silverado EV 配備 205 千瓦時的電池組。車輛設有前行李箱、短貨斗、四門，以及駕駛室與貨斗之間的「帆形」結構。它包含 Super Cruise 免手持駕駛輔助系統。車輛長度接近 20 英尺，並配備後輪轉向系統。資訊娛樂系統使用 Google 服務。",
-        "en": "Title: Chevy built an All-American EV truck. Why is nobody buying it?\nNeutral:\nChevrolet produced the Silverado EV, an electric pickup truck. General Motors sold approximately 14,000 units in the U.S. and Canada in 2024. The gasoline-powered Silverado sells ten times that amount per quarter. The Silverado EV has a 205 kilowatt-hour battery pack. The vehicle has a frunk, a short bed, four doors, and a \"sail\" between the cabin and bed. It includes Super Cruise, a hands-free driver assistance system. The vehicle is almost 20 feet long and has rear-wheel steering. The infotainment system uses Google services.",
-        "zh-CN": "标题：雪佛兰打造了一款全美式电动卡车，为何无人问津？\n中立摘要：\n雪佛兰推出了 Silverado EV，一款电动皮卡。通用汽车在 2024 年于美国和加拿大销售了约 14,000 辆。汽油动力的 Silverado 每季度销量是这个数字的十倍。Silverado EV 配备 205 千瓦时的电池组。车辆设有前行李箱、短货斗、四门，以及驾驶室与货斗之间的「帆形」结构。它包含 Super Cruise 免手持驾驶辅助系统。车辆长度接近 20 英尺，并配备后轮转向系统。信息娱乐系统使用 Google 服务。",
-        "ja": "タイトル：ChevyがオールアメリカンなEVトラックを製造。なぜ誰も買わないのか？\n中立要約：\nシボレーは電気ピックアップトラック「Silverado EV」を生産した。ゼネラルモーターズは2024年に米国とカナダで約14,000台を販売した。ガソリン駆動のSilveradoは四半期ごとにその10倍の台数を販売している。Silverado EVは205キロワット時のバッテリーパックを搭載する。車両にはフランク（フロントトランク）、ショートベッド、4ドア、キャビンとベッドの間の「セイル」が備わる。ハンズフリー運転支援システム「スーパークルーズ」を含む。車両の全長は約20フィートで、後輪操舵を備える。インフォテインメントシステムはGoogleサービスを使用する。",
-        "ko": "제목: 쉐보레가 만든 올 아메리칸 EV 트"
-      }
-    },
-    {
-      "url": "https://www.wired.com/story/google-deepmind-unionization-talks-are-off-to-a-rocky-start/",
-      "title": "Google DeepMind Unionization Talks Are Off to a Rocky Start",
-      "source": "Wired",
-      "topic": "Tech",
-      "category": "tech",
-      "published": "2026-07-03T16:30:00+00:00",
-      "ai_summary": "標題：Google DeepMind 工會化談判開局不順\n2025年5月，Google DeepMind 倫敦員工要求承認通訊工會及聯合工會。公司拒絕該要求，但同意第三方仲裁。週三的會議包括工會幹事、員工、仲裁員及人力資源代表。DeepMind 領導層未有出席。一名 DeepMind 員工宣讀信件，指控人力資源代表打斷宣讀，且 Google 限制內部有關工會化的溝通。DeepMind 表示會議定義了代表範圍，並有適當代表出席。工會化行動始於2025年2月，Alphabet 刪除有關武器及監控的 AI 道德指引之後。",
-      "summaries": {
-        "zh-HK": "標題：Google DeepMind 工會化談判開局不順\n2025年5月，Google DeepMind 倫敦員工要求承認通訊工會及聯合工會。公司拒絕該要求，但同意第三方仲裁。週三的會議包括工會幹事、員工、仲裁員及人力資源代表。DeepMind 領導層未有出席。一名 DeepMind 員工宣讀信件，指控人力資源代表打斷宣讀，且 Google 限制內部有關工會化的溝通。DeepMind 表示會議定義了代表範圍，並有適當代表出席。工會化行動始於2025年2月，Alphabet 刪除有關武器及監控的 AI 道德指引之後。",
-        "en": "Title: Google DeepMind Unionization Talks Are Off to a Rocky Start\nIn May 2025, Google DeepMind employees in London requested recognition of the Communication Workers Union and Unite the Union. The company denied the request but agreed to third-party arbitration. A meeting on Wednesday included union officers, employees, an arbitrator, and HR representatives. DeepMind leadership did not attend. A DeepMind employee read a letter alleging HR interrupted the reading and that Google restricted internal communication about unionization. DeepMind stated the meeting defined representation scope and that appropriate representatives attended. The unionization push began in February 2025 after Alphabet removed AI ethics guidelines on weapons and surveillance.",
-        "zh-CN": "标题：Google DeepMind 工会化谈判开局不顺\n2025年5月，Google DeepMind 伦敦员工要求承认通信工会及联合工会。公司拒绝该要求，但同意第三方仲裁。周三的会议包括工会干事、员工、仲裁员及人力资源代表。DeepMind 领导层未出席。一名 DeepMind 员工宣读信件，指控人力资源代表打断宣读，且 Google 限制内部有关工会化的沟通。DeepMind 表示会议定义了代表范围，并有适当代表出席。工会化行动始于2025年2月，Alphabet 删除有关武器及监控的 AI 道德指引之后。",
-        "ja": "タイトル：Google DeepMindの組合化交渉、難航のスタート\n2025年5月、ロンドンのGoogle DeepMind従業員が通信労働組合とユナイト・ザ・ユニオンの承認を要求した。同社は要求を拒否したが、第三者による調停には同意した。水曜日の会議には組合役員、従業員、調停人、人事担当者が出席した。DeepMindの経営陣は出席しなかった。DeepMindの従業員が書簡を読み上げたが、人事担当者がそれを妨害し、Googleが組合化に関する社内コミュニケーションを制限したと主張した。DeepMindは、会議で代表範囲が定義され、適切な代表者が出席したと述べた。組合化の動きは、Alphabetが武器と監視に関するAI倫理ガイドラインを削除した後の2025年2月に始まった。",
-        "ko": "제목: Google DeepMind 노조화 협상, 순탄치 않은 출발\n2025년 5월, 런던의 Google DeepMind 직원들이 통신 노조와 유나이트 더 유니온의 승인을 요구했다. 회"
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/7/3/heavy-rain-floods-mumbai-during-intense-monsoon-spell?traffic_source=rss",
-      "title": "Heavy rain floods Mumbai during intense monsoon spell",
-      "source": "Al Jazeera",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T16:27:20+00:00",
-      "ai_summary": "標題：猛烈的季風降雨使孟買淹水\n中立：\n猛烈的季風降雨影響了印度孟買的部分地區，導致淹水和交通擁堵。印度氣象局已發布預報，預計週末將有更多的強降雨。該報告於2026年7月3日發布。",
-      "summaries": {
-        "zh-HK": "標題：猛烈的季風降雨使孟買淹水\n中立：\n猛烈的季風降雨影響了印度孟買的部分地區，導致淹水和交通擁堵。印度氣象局已發布預報，預計週末將有更多的強降雨。該報告於2026年7月3日發布。",
-        "en": "Title: Heavy rain floods Mumbai during intense monsoon spell\nNeutral:\nHeavy monsoon rains have affected parts of Mumbai, India, leading to flooding and traffic congestion. The India Meteorological Department has issued a forecast for additional heavy rainfall through the weekend. The report was published on July 3, 2026.",
-        "zh-CN": "标题：猛烈的季风降雨使孟买淹水\n中立：\n猛烈的季风降雨影响了印度孟买的部分地区，导致淹水和交通拥堵。印度气象局已发布预报，预计周末将有更多的强降雨。该报告于2026年7月3日发布。",
-        "ja": "タイトル：激しいモンスーンの影響でムンバイが洪水に見舞われる\n中立：\n激しいモンスーンの雨がインドのムンバイの一部に影響を及ぼし、洪水と交通渋滞を引き起こしています。インド気象局は、週末にかけてさらに強い降雨が予想されると発表しました。この報告は2026年7月3日に発表されました。",
-        "ko": "제목: 강한 몬순으로 뭄바이가 홍수 피해를 입다\n중립:\n강한 몬순 비가 인도 뭄바이의 일부 지역에 영향을 미쳐 홍수와 교통 혼잡을 초래했습니다. 인도 기상청은 주말 동안 추가적인 강우 예보를 발표했습니다. 이 보고서는 2026년 7월 3일에 발표되었습니다."
-      }
-    },
-    {
-      "url": "https://www.marketwatch.com/story/the-world-cup-has-made-cape-verde-goalkeeper-vozinha-a-17-million-star-15af0138?mod=mw_rss_topstories",
-      "title": "The World Cup has made Cape Verde goalkeeper Vozinha a $17 million social-media star",
-      "source": "MarketWatch",
-      "topic": "World",
-      "category": "finance",
-      "published": "2026-07-03T16:24:00+00:00",
-      "ai_summary": "• 標題：世界盃令佛得角門將禾仙拿成為估值1700萬美元的社交媒體明星\n中立摘要：佛得角門將禾仙拿在2022年國際足協世界盃期間，於Instagram上增加了超過100萬名追蹤者。一間市場分析公司估計其社交媒體價值為1700萬美元。佛得角於2022年12月2日在卡塔爾盧賽爾對陣阿根廷。",
-      "summaries": {
-        "zh-HK": "• 標題：世界盃令佛得角門將禾仙拿成為估值1700萬美元的社交媒體明星\n中立摘要：佛得角門將禾仙拿在2022年國際足協世界盃期間，於Instagram上增加了超過100萬名追蹤者。一間市場分析公司估計其社交媒體價值為1700萬美元。佛得角於2022年12月2日在卡塔爾盧賽爾對陣阿根廷。",
-        "en": "• Title: The World Cup has made Cape Verde goalkeeper Vozinha a $17 million social-media star\nNeutral: Cape Verde goalkeeper Vozinha gained over 1 million Instagram followers during the 2022 FIFA World Cup. His social media value was estimated at $17 million by a marketing analytics firm. Cape Verde played Argentina on December 2, 2022, in Lusail, Qatar.",
-        "zh-CN": "• 标题：世界杯令佛得角门将沃齐尼亚成为估值1700万美元的社交媒体明星\n中立摘要：佛得角门将沃齐尼亚在2022年国际足联世界杯期间，在Instagram上增加了超过100万名关注者。一家市场分析公司估计其社交媒体价值为1700万美元。佛得角于2022年12月2日在卡塔尔卢赛尔对阵阿根廷。",
-        "ja": "• タイトル：W杯でカーボベルデのGKヴォジーニャが1700万ドルのソーシャルメディアスターに\n中立要約：カーボベルデのゴールキーパー、ヴォジーニャは2022年FIFAワールドカップ中にInstagramのフォロワーを100万人以上増やした。マーケティング分析会社は彼のソーシャルメディア価値を1700万ドルと推定した。カーボベルデは2022年12月2日、カタールのルサイルでアルゼンチンと対戦した。",
-        "ko": "• 제목: 월드컵이 카보베르데 골키퍼 보지냐를 1700만 달러 소셜 미디어 스타로 만들다\n중립 요약: 카보베르데의 골키퍼 보지냐는 2022년 FIFA 월드컵 기간 동안 인스타그램 팔로워 100만 명 이상을 확보했다. 한 마케팅 분석 회사는 그의 소셜 미디어 가치를 1700만 달러로 추정했다. 카보베르데는 2022년 12월 2일 카타르 루사일에서 아르헨티나와 경기를 치렀다."
-      }
-    },
-    {
-      "url": "https://www.blocktempo.com/ethereum-q2-2026-update-defi-report-record-low-yield-l2-growth/",
-      "title": "以太坊 Q2 鏈上收益率創歷史新低！機構買盤成最後防線，這「關鍵數據」暴增 22% 撐起基本面",
-      "source": "動區動趨 (BlockTempo)",
-      "topic": "Ethereum",
-      "category": "crypto",
-      "published": "2026-07-03T16:23:00+00:00",
-      "ai_summary": "標題：以太坊 Q2 鏈上收益率創歷史新低！機構買盤成最後防線，這「關鍵數據」暴增 22% 撐起基本面\n中立摘要：\n2026年7月3日，分析師 Michael Nadeau 透過《The DeFi Report》發表了「觀察清單：以太坊第二季度更新」。報告指出，以太坊第二季度的總鏈上收益率跌至 2.68%，創下歷史新低。L1 GDP、DeFi 活動及 L2 參與度在本季度均有所放緩。總存款額達到 3162 億美元，較上一季度增長超過 22%。以太坊在穩定幣、RWA 及活躍貸款方面領先。Solana 在平均交易量方面領先。國庫公司持有 130 萬枚 ETH。",
-      "summaries": {
-        "zh-HK": "標題：以太坊 Q2 鏈上收益率創歷史新低！機構買盤成最後防線，這「關鍵數據」暴增 22% 撐起基本面\n中立摘要：\n2026年7月3日，分析師 Michael Nadeau 透過《The DeFi Report》發表了「觀察清單：以太坊第二季度更新」。報告指出，以太坊第二季度的總鏈上收益率跌至 2.68%，創下歷史新低。L1 GDP、DeFi 活動及 L2 參與度在本季度均有所放緩。總存款額達到 3162 億美元，較上一季度增長超過 22%。以太坊在穩定幣、RWA 及活躍貸款方面領先。Solana 在平均交易量方面領先。國庫公司持有 130 萬枚 ETH。",
-        "en": "Title: Ethereum Q2 Onchain Yield Hits Record Low! Institutional Buying Becomes Last Line of Defense, This \"Key Data\" Surges 22% to Support Fundamentals\nNeutral Summary:\nOn July 3, 2026, analyst Michael Nadeau, through The DeFi Report, published \"The Watch List: Ethereum Q2 Update.\" The report stated that Ethereum's total onchain yield fell to 2.68% in Q2, a record low. L1 GDP, DeFi activity, and L2 engagement softened during the quarter. Total deposits reached $316.2 billion, a quarter-over-quarter increase of over 22%. Ethereum led in stablecoins, RWAs, and active loans. Solana led in average transaction volume. Treasury firms held 1.3 million ETH.",
-        "zh-CN": "标题：以太坊 Q2 链上收益率创历史新低！机构买盘成最后防线，这「关键数据」暴增 22% 撑起基本面\n中立摘要：\n2026年7月3日，分析师 Michael Nadeau 通过《The DeFi Report》发表了「观察清单：以太坊第二季度更新」。报告指出，以太坊第二季度的总链上收益率跌至 2.68%，创下历史新低。L1 GDP、DeFi 活动及 L2 参与度在本季度均有所放缓。总存款额达到 3162 亿美元，较上一季度增长超过 22%。以太坊在稳定币、RWA 及活跃贷款方面领先。Solana 在平均交易量方面领先。国库公司持有 130 万枚 ETH。",
-        "ja": "タイトル：イーサリアムQ2オンチェーン利回りが過去最低を記録！機関投資家の買いが最後の防衛線、この「重要データ」が22%急増しファンダメンタルズを支える\n中立要約：\n2026年7月3日、アナリストのMichael Nadeau氏はThe DeFi Reportを通じて「ウォッチリスト：イーサリアムQ2アップデート」を発表しました。報告書によると、イーサリアムの総オンチェーン利回りはQ2に2.68%まで低下し、過去最低を記録しました。L1 GDP、DeFi活動、L2エンゲージメントは四半期中に軟化しました"
-      }
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-07-03/ecb-s-lagarde-will-attend-next-week-s-ecofin-instead-of-vujcic",
-      "title": "ECB’s Lagarde Will Attend Next Week’s Ecofin Instead of Vujcic",
-      "source": "Bloomberg Crypto",
-      "topic": "Policy",
-      "category": "finance",
-      "published": "2026-07-03T16:14:29+00:00",
-      "ai_summary": "• 歐洲央行行長拉加德將出席下週在布魯塞爾舉行的歐盟經濟財政理事會會議。副行長武伊契奇將不會出席。",
-      "summaries": {
-        "zh-HK": "• 歐洲央行行長拉加德將出席下週在布魯塞爾舉行的歐盟經濟財政理事會會議。副行長武伊契奇將不會出席。",
-        "en": "• ECB President Christine Lagarde will attend the next Ecofin meeting in Brussels. Vice President Vujcic will not attend.",
-        "zh-CN": "• 欧洲央行行长拉加德将出席下周在布鲁塞尔举行的欧盟经济财政理事会会议。副行长武伊契奇将不会出席。",
-        "ja": "• ECB総裁のラガルド氏は、来週ブリュッセルで開催されるエコフィン会合に出席する。副総裁のブイチッチ氏は出席しない。",
-        "ko": "• ECB 총장 크리스틴 라가르드가 다음 주 브뤼셀에서 열리는 에코핀 회의에 참석할 예정이다. 부총장 부이치치는 참석하지 않는다."
-      }
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-07-03/ecb-s-nagel-stresses-need-for-vigilance-at-next-rate-decision",
-      "title": "ECB’s Nagel Stresses Need for Vigilance at Next Rate Decision",
-      "source": "Bloomberg Crypto",
-      "topic": "Policy",
-      "category": "finance",
-      "published": "2026-07-03T16:09:40+00:00",
-      "ai_summary": "• 歐洲中央銀行管理委員會成員約阿希姆·納格爾表示，歐洲央行應監控通脹風險，並在下次利率決策中保持靈活性。",
-      "summaries": {
-        "zh-HK": "• 歐洲中央銀行管理委員會成員約阿希姆·納格爾表示，歐洲央行應監控通脹風險，並在下次利率決策中保持靈活性。",
-        "en": "• European Central Bank Governing Council member Joachim Nagel stated that the ECB should monitor inflation risks and maintain flexibility regarding its next rate decision.",
-        "zh-CN": "• 欧洲中央银行管理委员会成员约阿希姆·纳格尔表示，欧洲央行应监控通胀风险，并在下次利率决策中保持灵活性。",
-        "ja": "• 欧州中央銀行（ECB）の政策委員会メンバーであるヨアヒム・ナーゲル氏は、ECBはインフレリスクを監視し、次回の金利決定に関して柔軟性を維持すべきだと述べた。",
-        "ko": "• 유럽중앙은행(ECB) 통화정책위원회 위원 요아힘 나겔은 ECB가 인플레이션 위험을 모니터링하고 다음 금리 결정에 있어 유연성을 유지해야 한다고 밝혔다."
-      }
-    },
-    {
-      "url": "https://www.blocktempo.com/bio-protocol-launches-openlabs-desci-platform-ai-agents-funding/",
-      "title": "DeSci 龍頭專案 Bio Protocol 推出 OpenLabs 平台，人類聯手 AI 搶奪傳統科研資助權",
-      "source": "動區動趨 (BlockTempo)",
-      "topic": "Finance",
-      "category": "crypto",
-      "published": "2026-07-03T16:09:33+00:00",
-      "ai_summary": "[Skipped: LOW]",
-      "summaries": {
-        "zh-HK": "[此文可信度評級為 LOW，暫不處理]"
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/news/2026/7/3/germanys-merz-defends-nato-spending-after-trump-calls-it-ridiculous?traffic_source=rss",
-      "title": "Germany’s Merz defends NATO spending after Trump calls it ‘ridiculous’",
-      "source": "Al Jazeera",
-      "topic": "Politics",
-      "category": "general",
-      "published": "2026-07-03T16:05:29+00:00",
-      "ai_summary": "標題：德國總理默茨為北約開支辯護，此前特朗普稱其「荒謬」\n中立摘要：德國總理弗里德里希·默茨於2026年7月3日（星期五）為德國的北約國防開支辯護。此前，美國總統唐納德·特朗普在「真相社交」平台上發文，稱開支平衡「荒謬」且「單方面」。特朗普表示，德國在2014年至2025年間的開支「遠低於」美國或其他盟友。默茨表示，德國將在四年內將國防預算翻倍，並在2029年達到國民生產總值3.5%的開支基準，早於北約領導人同意的2035年期限。",
-      "summaries": {
-        "zh-HK": "標題：德國總理默茨為北約開支辯護，此前特朗普稱其「荒謬」\n中立摘要：德國總理弗里德里希·默茨於2026年7月3日（星期五）為德國的北約國防開支辯護。此前，美國總統唐納德·特朗普在「真相社交」平台上發文，稱開支平衡「荒謬」且「單方面」。特朗普表示，德國在2014年至2025年間的開支「遠低於」美國或其他盟友。默茨表示，德國將在四年內將國防預算翻倍，並在2029年達到國民生產總值3.5%的開支基準，早於北約領導人同意的2035年期限。",
-        "en": "Title: Germany’s Merz defends NATO spending after Trump calls it ‘ridiculous’\nNeutral: German Chancellor Friedrich Merz defended Germany's NATO defence spending on Friday, July 3, 2026. This followed US President Donald Trump's posts on Truth Social calling the spending balance \"ridiculous\" and \"one-sided.\" Trump stated Germany's spending was \"MUCH LOWER\" between 2014 and 2025 than the US or other allies. Merz said Germany would double its defence budget within four years and reach the 3.5 percent GDP spending benchmark by 2029, ahead of the 2035 deadline agreed by NATO leaders.",
-        "zh-CN": "标题：德国总理默茨为北约开支辩护，此前特朗普称其“荒谬”\n中立摘要：德国总理弗里德里希·默茨于2026年7月3日（星期五）为德国的北约国防开支辩护。此前，美国总统唐纳德·特朗普在“真相社交”平台上发文，称开支平衡“荒谬”且“单方面”。特朗普表示，德国在2014年至2025年间的开支“远低于”美国或其他盟友。默茨表示，德国将在四年内将国防预算翻倍，并在2029年达到国民生产总值3.5%的开支基准，早于北约领导人同意的2035年期限。",
-        "ja": "タイトル：ドイツのメルツ首相、トランプ氏が「馬鹿げている」と非難したNATO支出を擁護\n中立：ドイツのフリードリヒ・メルツ首相は2026年7月3日（金曜日）、ドイツのNATO国防支出を擁護した。これは、ドナルド・トランプ米大統領がTruth Socialに投稿し、支出バランスを「馬鹿げている」「一方的だ」と非難したことを受けたもの。トランプ氏は、2014年から2025年にかけてのドイツの支出は米国や他の同盟国よりも「はるかに低い」と述べた。メルツ首相は、ドイツは4年以内に国防予算を倍増し、NATO首脳が合意した2035年の期限を前倒しして、2029年までにGDP比3.5%の支出基準を達成すると述べた。",
-        "ko": "제목: 독일 메르츠 총리, 트럼프의 '터무니없다'는 비난에 NATO 지"
-      }
-    },
-    {
-      "url": "https://cointelegraph.com/news/crypto-biz-bitcoin-maximalism-meets-capital-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "title": "Crypto Biz: Bitcoin maximalism meets the realities of capital markets",
-      "source": "CoinTelegraph",
-      "topic": "Bitcoin",
-      "category": "crypto",
-      "published": "2026-07-03T16:03:41+00:00",
-      "ai_summary": "• 標題：Crypto Biz：比特幣極端主義遇上資本市場的現實\n中立摘要：\n比特幣的價格在資本市場中波動。文章探討了比特幣極端主義與金融市場動態之間的相互作用。文中未提供具體事件、日期或地點。",
-      "summaries": {
-        "zh-HK": "• 標題：Crypto Biz：比特幣極端主義遇上資本市場的現實\n中立摘要：\n比特幣的價格在資本市場中波動。文章探討了比特幣極端主義與金融市場動態之間的相互作用。文中未提供具體事件、日期或地點。",
-        "en": "• Title: Crypto Biz: Bitcoin maximalism meets the realities of capital markets\nNeutral:\nBitcoin's price fluctuated in capital markets. The article discussed the interaction between Bitcoin maximalism and financial market dynamics. No specific events, dates, or locations were provided.",
-        "zh-CN": "• 标题：Crypto Biz：比特币极端主义遇上资本市场的现实\n中立摘要：\n比特币的价格在资本市场中波动。文章探讨了比特币极端主义与金融市场动态之间的相互作用。文中未提供具体事件、日期或地点。",
-        "ja": "• タイトル：Crypto Biz：ビットコイン極端主義が資本市場の現実と出会う\n中立要約：\nビットコインの価格は資本市場で変動した。記事は、ビットコイン極端主義と金融市場のダイナミクスとの相互作用について議論した。具体的な出来事、日付、場所は提供されていない。",
-        "ko": "• 제목: Crypto Biz: 비트코인 극단주의가 자본 시장의 현실과 만나다\n중립 요약:\n비트코인의 가격은 자본 시장에서 변동했습니다. 기사는 비트코인 극단주의와 금융 시장 역학 간의 상호 작용을 논의했습니다. 구체적인 사건, 날짜 또는 장소는 제공되지 않았습니다."
-      }
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-07-03/colombian-president-asks-trump-to-remove-him-from-sanctions-list",
-      "title": "Colombian President Asks Trump to Remove Him From Sanctions List",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-04/iran-holds-funeral-for-ali-khamenei-after-death-in-us-war",
+      "title": "Iran Rallies Millions in Mass Funeral for Slain Leader Khamenei",
       "source": "Bloomberg",
       "topic": "Finance",
       "category": "finance",
-      "published": "2026-07-03T16:00:41+00:00",
-      "ai_summary": "• 哥倫比亞總統要求特朗普將他從制裁名單中移除",
+      "published": "2026-07-04T06:51:27+00:00",
+      "ai_summary": "(neutralize failed)",
       "summaries": {
-        "zh-HK": "• 哥倫比亞總統要求特朗普將他從制裁名單中移除",
-        "en": "• Colombian President asked U.S. President Donald Trump to remove him from a sanctions list.",
-        "zh-CN": "• 哥伦比亚总统要求特朗普将他从制裁名单中移除",
-        "ja": "• コロンビア大統領がトランプ氏に自身を制裁リストから外すよう要請",
-        "ko": "• 콜롬비아 대통령, 트럼프에게 자신을 제재 명단에서 제외해 달라고 요청"
+        "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://www.blocktempo.com/kobeissi-letter-foreign-investors-record-inflows-us-stocks-2026/",
-      "title": "全球瘋狂做多美股！Kobeissi 示警：外資湧入速度「破 20 年歷史紀錄」，AI 狂潮還能撐多久？",
+      "url": "https://www.coindesk.com/markets/2026/07/04/bitcoin-s-next-parabolic-run-may-need-usd1-trillion-in-fresh-capital",
+      "title": "Bitcoin’s next parabolic run may need $1 trillion in fresh capital",
+      "source": "CoinDesk",
+      "topic": "Bitcoin",
+      "category": "crypto",
+      "published": "2026-07-04T06:48:42+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.blocktempo.com/trump-pardons-emissions-violators-clean-air-act-sbf-independence-day/",
+      "title": "川普在美國獨立日特赦 11 人，「得罪拜登」有誰？多數因改車觸法",
       "source": "動區動趨 (BlockTempo)",
-      "topic": "Trading",
+      "topic": "Politics",
       "category": "crypto",
-      "published": "2026-07-03T16:00:38+00:00",
-      "ai_summary": "標題：全球瘋狂做多美股！Kobeissi 示警：外資湧入速度「破 20 年歷史紀錄」，AI 狂潮還能撐多久？\n中立摘要：\n2026年7月3日，Kobeissi Letter 在 X 平台上發文指出，外國投資者正以創紀錄的速度買入美國股票。今年至今，全球投資基金流入美國股市的金額，約佔其管理總資產的 2.5%。自 5 月以來，這個比例已增加超過一倍。該貼文將當前數據與過去 20 年的歷史平均值進行了比較。",
+      "published": "2026-07-04T06:38:07+00:00",
+      "ai_summary": "(neutralize failed)",
       "summaries": {
-        "zh-HK": "標題：全球瘋狂做多美股！Kobeissi 示警：外資湧入速度「破 20 年歷史紀錄」，AI 狂潮還能撐多久？\n中立摘要：\n2026年7月3日，Kobeissi Letter 在 X 平台上發文指出，外國投資者正以創紀錄的速度買入美國股票。今年至今，全球投資基金流入美國股市的金額，約佔其管理總資產的 2.5%。自 5 月以來，這個比例已增加超過一倍。該貼文將當前數據與過去 20 年的歷史平均值進行了比較。",
-        "en": "Title: Global Frenzy to Go Long on U.S. Stocks! Kobeissi Warns: Foreign Inflow Speed \"Breaks 20-Year Historical Record,\" How Long Can the AI Craze Last?\nNeutral Summary:\nOn July 3, 2026, The Kobeissi Letter posted on X that foreign investors are buying U.S. equities at a record pace. Year-to-date inflows from global investment funds into U.S. equities reached approximately 2.5% of their total assets under management. This percentage has more than doubled since May. The post compared current data to the historical average of the past 20 years.",
-        "zh-CN": "标题：全球疯狂做多美股！Kobeissi 示警：外资涌入速度“破 20 年历史纪录”，AI 狂潮还能撑多久？\n中立摘要：\n2026年7月3日，Kobeissi Letter 在 X 平台上发文指出，外国投资者正以创纪录的速度买入美国股票。今年至今，全球投资基金流入美国股市的金额，约占其管理总资产的 2.5%。自 5 月以来，这个比例已增加超过一倍。该贴文将当前数据与过去 20 年的历史平均值进行了比较。",
-        "ja": "タイトル：世界が米国株に強気！Kobeissi 警告：外国人投資家の資金流入ペースが「20年の歴史的記録を突破」、AIブームはいつまで続くのか？\n中立要約：\n2026年7月3日、Kobeissi Letter は X 上で、外国人投資家が記録的なペースで米国株を購入していると投稿しました。年初来のグローバル投資ファンドから米国株への流入額は、運用資産総額の約2.5%に達しました。この割合は5月以降で2倍以上に増加しています。同投稿は、現在のデータを過去20年間の歴史的平均値と比較しました。",
-        "ko": "제목: 전 세계가 미국 주식에 강세! Kobeissi 경고: 외국인 자금 유입 속도 \"20년 역사 기록 경신\", AI 열풍은 얼마나 갈까?\n중립 요약:\n2026년 7월 3일, Kobeissi Letter는 X에 외국인 투자자들이 기록적인 속도로 미국 주식을 매수하고 있다고 게시했습니다. 올해 들어 글로벌 투자 펀드의 미국 주식 유입액은 전체 운용 자산의 약 2.5%에 달"
+        "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://www.bbc.co.uk/news/articles/cd7wj7d0jzzo?at_medium=RSS&at_campaign=rss",
-      "title": "Parents warned not to publicly share children’s images amid AI abuse risks",
-      "source": "BBC World",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T15:57:42+00:00",
-      "ai_summary": "標題：家長被警告勿公開分享子女照片 因應AI濫用風險\n英國國家犯罪調查局（NCA）及互聯網觀察基金會（IWF）警告家長，切勿在網上公開張貼兒童照片，以免被用於人工智能生成的虐待影像。IWF在2025年識別出超過8000張AI生成的兒童性虐待圖片及影片，較去年增加14%。IWF報告指，2024年有13段AI生成的兒童性虐待影片，2025年則有3440段。NCA與IWF為家長發布指引，涵蓋私隱設定、社交媒體帳戶檢查及影像同意等範疇。英國政府已禁止「脫衣」應用程式，並修訂法律以防止AI系統製作兒童性虐待材料。",
-      "summaries": {
-        "zh-HK": "標題：家長被警告勿公開分享子女照片 因應AI濫用風險\n英國國家犯罪調查局（NCA）及互聯網觀察基金會（IWF）警告家長，切勿在網上公開張貼兒童照片，以免被用於人工智能生成的虐待影像。IWF在2025年識別出超過8000張AI生成的兒童性虐待圖片及影片，較去年增加14%。IWF報告指，2024年有13段AI生成的兒童性虐待影片，2025年則有3440段。NCA與IWF為家長發布指引，涵蓋私隱設定、社交媒體帳戶檢查及影像同意等範疇。英國政府已禁止「脫衣」應用程式，並修訂法律以防止AI系統製作兒童性虐待材料。",
-        "en": "Title: Parents warned not to publicly share children’s images amid AI abuse risks\nThe National Crime Agency (NCA) and Internet Watch Foundation (IWF) warned parents against publicly posting images of children online due to AI-generated abuse imagery. The IWF identified over 8,000 AI-generated child sexual abuse images and videos in 2025, a 14% increase from the previous year. The IWF reported 13 AI-generated child sexual abuse videos in 2024 and 3,440 in 2025. The NCA and IWF released guidance for parents on privacy settings, social media account checks, and image consent. The UK government banned \"nudification\" apps and amended laws to prevent AI systems from producing child sexual abuse material.",
-        "zh-CN": "标题：家长被警告勿公开分享子女照片 因应AI滥用风险\n英国国家犯罪调查局（NCA）及互联网观察基金会（IWF）警告家长，切勿在网上公开张贴儿童照片，以免被用于人工智能生成的虐待影像。IWF在2025年识别出超过8000张AI生成的儿童性虐待图片及影片，较去年增加14%。IWF报告指，2024年有13段AI生成的儿童性虐待影片，2025年则有3440段。NCA与IWF为家长发布指引，涵盖隐私设定、社交媒体账户检查及影像同意等范畴。英国政府已禁止“脱衣”应用程序，并修订法律以防止AI系统制作儿童性虐待材料。",
-        "ja": "タイトル：AI悪用リスクで、保護者に子どもの画像公開禁止を警告\n英国国家犯罪庁（NCA）とインターネット監視財団（IWF）は、AI生成による虐待画像のリスクから、保護者に対し子どもの画像をオンラインで公開しないよう警告した。IWFは2025年に8000件以上のAI生成による児童性的虐待画像・動画を特定し、前年比14%増加した。IWFは2024年に13件、2025年に3440件のAI生成による児童性的虐待動画を報告した。NCAとIWFは、プライバシー設定、ソーシャルメディアアカウントの確認、画像の同意に関する保護者向けガイダンスを発表した。英国政府は「ヌーディフィケーション」アプリを禁止し、AIシステムが児童性的虐待素材を生成するのを防"
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/news/2026/7/3/hottest-june-on-record-in-france-as-heatwave-deaths-rise-to-alarming-levels?traffic_source=rss",
-      "title": "Hottest June on record in France as heatwave deaths rise to alarming levels",
-      "source": "Al Jazeera",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T15:54:14+00:00",
-      "ai_summary": "標題：法國錄得有紀錄以來最炎熱的六月，熱浪死亡人數升至警戒水平\n中立摘要：根據法國氣象局，法國錄得自1947年有紀錄以來最炎熱的六月。從6月17日至30日，全國超過40%的地區氣溫超過40°C。平均氣溫為22.7°C，比1991年至2020年的季節性正常值高出3.8°C。6月24日和25日錄得法國有史以來的最高平均氣溫。法國公共衛生局報告，6月22日至28日當週有8,973人死亡，比前一週的6,948人增加29%。私人住宅死亡人數上升91%，護老院上升37%，醫院上升近20%。巴黎地區增加63%。",
-      "summaries": {
-        "zh-HK": "標題：法國錄得有紀錄以來最炎熱的六月，熱浪死亡人數升至警戒水平\n中立摘要：根據法國氣象局，法國錄得自1947年有紀錄以來最炎熱的六月。從6月17日至30日，全國超過40%的地區氣溫超過40°C。平均氣溫為22.7°C，比1991年至2020年的季節性正常值高出3.8°C。6月24日和25日錄得法國有史以來的最高平均氣溫。法國公共衛生局報告，6月22日至28日當週有8,973人死亡，比前一週的6,948人增加29%。私人住宅死亡人數上升91%，護老院上升37%，醫院上升近20%。巴黎地區增加63%。",
-        "en": "Title: Hottest June on record in France as heatwave deaths rise to alarming levels\nNeutral: France recorded its hottest June since records began in 1947, according to Meteo-France. From June 17 to June 30, temperatures exceeded 40°C in over 40% of the country. The average temperature was 22.7°C, 3.8°C above the 1991-2020 seasonal norm. June 24 and 25 had the highest average temperatures ever recorded in France. Public Health France reported 8,973 deaths for the week of June 22-28, a 29% increase from 6,948 deaths the previous week. Deaths in private homes rose 91%, in care homes 37%, and in hospitals nearly 20%. The Paris region saw a 63% increase.",
-        "zh-CN": "标题：法国录得有记录以来最炎热的六月，热浪死亡人数升至警戒水平\n中立摘要：根据法国气象局，法国录得自1947年有记录以来最炎热的六月。从6月17日至30日，全国超过40%的地区气温超过40°C。平均气温为22.7°C，比1991年至2020年的季节性正常值高出3.8°C。6月24日和25日录得法国有史以来的最高平均气温。法国公共卫生局报告，6月22日至28日当周有8,973人死亡，比前一周的6,948人增加29%。私人住宅死亡人数上升91%，养老院上升37%，医院上升近20%。巴黎地区增加63%。",
-        "ja": "タイトル：フランスで記録的な6月の暑さ、熱波による死亡者数が警戒レベルに上昇\n中立要約：フランス気象局によると、フランスは1947年の記録開始以来、最も暑い6月を記録した。6月17日から30日にかけて、国内の40%以上の地域で気温が40°Cを超えた。平均気温は22.7°Cで、1991～2020年の季節基準値を3.8°C上回った。6月24日と25日は、フランスでこれまでに記録された中で最も高い平均気温となった。フランス公衆衛生局は、6月22日から28日の週に8,973人の死亡を報告し、前週の6,948人から29%増加した"
-      }
-    },
-    {
-      "url": "https://www.bbc.co.uk/news/articles/c3wy26p5lexo?at_medium=RSS&at_campaign=rss",
-      "title": "Henry Nowak's killer appeals conviction and sentence",
-      "source": "BBC World",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T15:45:57+00:00",
-      "ai_summary": "標題：亨利·諾瓦克兇手上訴定罪及刑期\n中立摘要：維克倫·迪格瓦因謀殺亨利·諾瓦克，於2026年6月被判處終身監禁，最低服刑21年。上訴法院於2026年7月3日確認，迪格瓦正尋求對其定罪及刑期提出上訴。總檢察長艾莉·里夫斯曾將該刑期轉介，認為其「過於寬鬆」。兩項上訴均未設定日期。警察行為獨立辦公室正調查兩名警員，涉嫌嚴重不當行為，包括未能提供急救及決定給亨利·諾瓦克上手銬。調查亦審視種族或宗教是否影響了警員的決定。",
-      "summaries": {
-        "zh-HK": "標題：亨利·諾瓦克兇手上訴定罪及刑期\n中立摘要：維克倫·迪格瓦因謀殺亨利·諾瓦克，於2026年6月被判處終身監禁，最低服刑21年。上訴法院於2026年7月3日確認，迪格瓦正尋求對其定罪及刑期提出上訴。總檢察長艾莉·里夫斯曾將該刑期轉介，認為其「過於寬鬆」。兩項上訴均未設定日期。警察行為獨立辦公室正調查兩名警員，涉嫌嚴重不當行為，包括未能提供急救及決定給亨利·諾瓦克上手銬。調查亦審視種族或宗教是否影響了警員的決定。",
-        "en": "Title: Henry Nowak's killer appeals conviction and sentence\nNeutral: Vickrum Digwa was sentenced to life imprisonment with a minimum of 21 years in June 2026 for the murder of Henry Nowak. The Court of Appeal confirmed on 3 July 2026 that Digwa is seeking to appeal his conviction and sentence. The Solicitor General, Ellie Reeves, had referred the sentence as \"unduly lenient.\" No date has been set for either appeal. The Independent Office for Police Conduct is investigating two officers for potential gross misconduct, including failures to provide first aid and the decision to handcuff Henry Nowak. The investigation also examines whether race or religion influenced officers' decisions.",
-        "zh-CN": "标题：亨利·诺瓦克凶手上诉定罪及刑期\n中立摘要：维克伦·迪格瓦因谋杀亨利·诺瓦克，于2026年6月被判处终身监禁，最低服刑21年。上诉法院于2026年7月3日确认，迪格瓦正寻求对其定罪及刑期提出上诉。总检察长艾莉·里夫斯曾将该刑期转介，认为其“过于宽松”。两项上诉均未设定日期。警察行为独立办公室正调查两名警员，涉嫌严重不当行为，包括未能提供急救及决定给亨利·诺瓦克上手铐。调查亦审视种族或宗教是否影响了警员的决定。",
-        "ja": "タイトル：ヘンリー・ノワク殺害犯、有罪判決と刑期を不服として控訴\n中立要約：ヴィックラム・ディグワは、ヘンリー・ノワク殺害の罪で2026年6月に最低21年の仮釈放なしの終身刑を言い渡された。控訴院は2026年7月3日、ディグワが有罪判決と刑期の両方に対して控訴を求めていることを確認した。 Solicitor General（法務次官）のエリー・リーブスは、この刑期を「過度に寛大」として付託していた。両方の控訴の期日は未定である。警察行動独立監察機関は、2人の警察官について、応急処置の怠慢やヘンリー・ノワクへの手錠使用の決定を含む重大な不正行為の可能性を調査している。また、人種や宗教が警察官の判断に影響を与えたかどうか"
-      }
-    },
-    {
-      "url": "https://www.ft.com/content/57e4f80b-d6fc-4091-aa67-c49cac4aa5cb",
-      "title": "Artists allege ‘epic betrayal’ by collapsed fund that pooled works",
-      "source": "Financial Times",
-      "topic": "Finance",
-      "category": "finance",
-      "published": "2026-07-03T15:45:45+00:00",
-      "ai_summary": "標題：藝術家指控倒閉基金「史詩式背叛」，該基金曾匯集作品\n中立摘要：\nAPT 在 20 多年間匯集藝術作品。其模式涉及將作品集中管理，以便在出售時讓參與者受益。藝術家指控該基金倒閉。",
-      "summaries": {
-        "zh-HK": "標題：藝術家指控倒閉基金「史詩式背叛」，該基金曾匯集作品\n中立摘要：\nAPT 在 20 多年間匯集藝術作品。其模式涉及將作品集中管理，以便在出售時讓參與者受益。藝術家指控該基金倒閉。",
-        "en": "Title: Artists allege ‘epic betrayal’ by collapsed fund that pooled works\nNeutral:\nAPT aggregated artworks over 20 years. The model involved pooling works to benefit participants upon sale. Artists allege a collapse of the fund.",
-        "zh-CN": "标题：艺术家指控倒闭基金「史诗式背叛」，该基金曾汇集作品\n中立摘要：\nAPT 在 20 多年间汇集艺术作品。其模式涉及将作品集中管理，以便在出售时让参与者受益。艺术家指控该基金倒闭。",
-        "ja": "タイトル：アーティストらが作品をプールした破綻ファンドによる「壮大な裏切り」を主張\n中立要約：\nAPTは20年以上にわたりアート作品を集約した。そのモデルは作品をプールし、売却時に参加者が利益を得る仕組みだった。アーティストらはファンドの破綻を主張している。",
-        "ko": "제목: 예술가들, 작품을 모은 붕괴된 펀드의 '장대한 배신' 주장\n중립 요약:\nAPT는 20년 이상 예술 작품을 집계했습니다. 이 모델은 작품을 모아 판매 시 참가자들이 혜택을 보는 방식이었습니다. 예술가들은 펀드의 붕괴를 주장합니다."
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/news/2026/7/3/yemens-houthis-threaten-saudi-arabia-after-alleged-airspace-intrusion?traffic_source=rss",
-      "title": "Yemen’s Houthis threaten Saudi Arabia after alleged airspace intrusion",
-      "source": "Al Jazeera",
-      "topic": "Science",
-      "category": "general",
-      "published": "2026-07-03T15:44:30+00:00",
-      "ai_summary": "標題：也門胡塞武裝在指控沙特侵犯領空後發出威脅\n中立摘要：\n2026年7月3日，也門胡塞武裝發言人葉海亞·薩雷在一段影片中表示，如果沙特阿拉伯侵犯其領空或對其發動攻擊，胡塞武裝將以沙特機場及資產為目標。胡塞武裝部隊報告稱，他們與沙特戰機對峙，這些戰機據稱試圖阻止一架伊朗民用飛機在薩那國際機場降落。薩雷補充說，薩那與德黑蘭之間的航班將繼續運作。胡塞武裝媒體報導，該飛機已降落，隨後搭載一個胡塞武裝代表團返回德黑蘭，參加前伊朗最高領袖阿里·哈梅內伊的葬禮。",
-      "summaries": {
-        "zh-HK": "標題：也門胡塞武裝在指控沙特侵犯領空後發出威脅\n中立摘要：\n2026年7月3日，也門胡塞武裝發言人葉海亞·薩雷在一段影片中表示，如果沙特阿拉伯侵犯其領空或對其發動攻擊，胡塞武裝將以沙特機場及資產為目標。胡塞武裝部隊報告稱，他們與沙特戰機對峙，這些戰機據稱試圖阻止一架伊朗民用飛機在薩那國際機場降落。薩雷補充說，薩那與德黑蘭之間的航班將繼續運作。胡塞武裝媒體報導，該飛機已降落，隨後搭載一個胡塞武裝代表團返回德黑蘭，參加前伊朗最高領袖阿里·哈梅內伊的葬禮。",
-        "en": "Title: Yemen’s Houthis threaten Saudi Arabia after alleged airspace intrusion\nNeutral:\nOn 3 July 2026, Yemen’s Houthi spokesman Yahya Saree stated in a video that the group would target Saudi airports and assets if Saudi Arabia violated its airspace or attacked it. The Houthi armed forces reported confronting Saudi warplanes that allegedly attempted to prevent an Iranian civilian aircraft from landing at Sanaa International Airport. Saree added that flights between Sanaa and Tehran would continue. Houthi media reported the aircraft landed and later returned to Tehran carrying a Houthi delegation for the funeral of former Iranian Supreme Leader Ali Khamenei.",
-        "zh-CN": "标题：也门胡塞武装在指控沙特侵犯领空后发出威胁\n中立摘要：\n2026年7月3日，也门胡塞武装发言人叶海亚·萨雷在一段视频中表示，如果沙特阿拉伯侵犯其领空或对其发动攻击，胡塞武装将以沙特机场及资产为目标。胡塞武装部队报告称，他们与沙特战机对峙，这些战机据称试图阻止一架伊朗民用飞机在萨那国际机场降落。萨雷补充说，萨那与德黑兰之间的航班将继续运作。胡塞武装媒体报道，该飞机已降落，随后搭载一个胡塞武装代表团返回德黑兰，参加前伊朗最高领袖阿里·哈梅内伊的葬礼。",
-        "ja": "タイトル：イエメンのフーシ派、空域侵犯の申し立て後にサウジアラビアを脅迫\n中立要約：\n2026年7月3日、イエメンのフーシ派報道官ヤヒヤ・サリーは動画で、サウジアラビアが自国の空域を侵犯したり攻撃したりした場合、フーシ派はサウジの空港や資産を標的にすると述べた。フーシ派武装勢力は、イランの民間機がサヌア国際空港に着陸するのを阻止しようとしたとされるサウジ軍用機と対峙したと報告した。サリーは、サヌアとテヘラン間の便は継続すると付け加えた。フーシ派メディアは、同機が着陸し、その後、元イラン最高指導者アリ・ハメネイの葬儀に出席するフーシ派代表団"
-      }
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-07-03/canada-pension-plan-commits-1-75-billion-to-eqt-eqt-for-ai-infrastructure",
-      "title": "CPP Invests $1.75 Billion in EQT’s AI Infrastructure Buildout",
-      "source": "Bloomberg Crypto",
-      "topic": "AI",
-      "category": "finance",
-      "published": "2026-07-03T15:44:05+00:00",
-      "ai_summary": "• 加拿大退休金計劃投資局於週五宣佈，將投資17.5億美元，支持EQT公司的人工智能基礎設施建設。",
-      "summaries": {
-        "zh-HK": "• 加拿大退休金計劃投資局於週五宣佈，將投資17.5億美元，支持EQT公司的人工智能基礎設施建設。",
-        "en": "• Canada Pension Plan Investment Board announced on Friday it will invest $1.75 billion to support EQT Corp.’s artificial intelligence infrastructure buildout.",
-        "zh-CN": "• 加拿大退休金计划投资局于周五宣布，将投资17.5亿美元，支持EQT公司的人工智能基础设施建设。",
-        "ja": "• カナダ年金計画投資委員会は金曜日、EQT社の人工知能インフラ構築を支援するため、17億5000万ドルを投資すると発表した。",
-        "ko": "• 캐나다 연금 계획 투자 위원회는 금요일 EQT社의 인공지능 인프라 구축을 지원하기 위해 17억 5천만 달러를 투자한다고 발표했습니다."
-      }
-    },
-    {
-      "url": "https://www.marketwatch.com/story/ai-infrastructure-stocks-have-overtaken-big-tech-hyperscalers-in-an-extraordinary-shift-says-ubs-research-arm-7c425a02?mod=mw_rss_topstories",
-      "title": "AI infrastructure stocks have overtaken the tech hyperscalers in a shift UBS calls ‘extraordinary’",
-      "source": "MarketWatch",
-      "topic": "AI",
-      "category": "finance",
-      "published": "2026-07-03T15:41:00+00:00",
-      "ai_summary": "• 根據瑞銀研究，人工智能基礎設施公司的市場價值在四年內增長了600%。同期，超大規模雲端服務商的市場價值增長了100%。瑞銀形容這一轉變為「非凡」。",
-      "summaries": {
-        "zh-HK": "• 根據瑞銀研究，人工智能基礎設施公司的市場價值在四年內增長了600%。同期，超大規模雲端服務商的市場價值增長了100%。瑞銀形容這一轉變為「非凡」。",
-        "en": "• According to UBS research, the market value of AI infrastructure companies increased by 600% over four years. During the same period, the market value of hyperscalers increased by 100%. UBS described this shift as \"extraordinary.\"",
-        "zh-CN": "• 根据瑞银研究，人工智能基础设施公司的市场价值在四年内增长了600%。同期，超大规模云服务商的市场价值增长了100%。瑞银形容这一转变为“非凡”。",
-        "ja": "• ユーバーエス（UBS）の調査によると、AIインフラ企業の市場価値は4年間で600%増加しました。同期間に、ハイパースケーラーの市場価値は100%増加しました。UBSはこの変化を「異例」と表現しました。",
-        "ko": "• UBS 연구에 따르면, AI 인프라 기업의 시장 가치는 4년 동안 600% 증가했습니다. 같은 기간 동안 하이퍼스케일러의 시장 가치는 100% 증가했습니다. UBS는 이러한 변화를 \"비범하다\"고 설명했습니다."
-      }
-    },
-    {
-      "url": "https://decrypt.co/resources/what-q-day-quantum-threat-bitcoin-explained",
-      "title": "What Is Q-Day? The Quantum Threat to Bitcoin Explained",
-      "source": "Decrypt",
-      "topic": "Bitcoin",
+      "url": "https://www.blocktempo.com/serenity-china-ai-primary-market-funding-shifts-world-models-embodied/",
+      "title": "Serenity：世界模型成 AI 圈最大共識，中國資金棄基礎模型，轉為物理AI",
+      "source": "動區動趨 (BlockTempo)",
+      "topic": "World",
       "category": "crypto",
-      "published": "2026-07-03T15:40:16+00:00",
-      "ai_summary": "• 標題：什麼是Q-Day？量子威脅對比特幣的解釋\n中性：量子電腦可能偽造比特幣的數位簽章，從而實現未經授權的交易。這個事件被稱為Q-Day。目前尚未確定Q-Day的具體日期。",
+      "published": "2026-07-04T06:30:09+00:00",
+      "ai_summary": "(neutralize failed)",
       "summaries": {
-        "zh-HK": "• 標題：什麼是Q-Day？量子威脅對比特幣的解釋\n中性：量子電腦可能偽造比特幣的數位簽章，從而實現未經授權的交易。這個事件被稱為Q-Day。目前尚未確定Q-Day的具體日期。",
-        "en": "• Title: What Is Q-Day? The Quantum Threat to Bitcoin Explained\nNeutral: Quantum computers could potentially forge Bitcoin's digital signatures, enabling unauthorized transactions. This event is referred to as Q-Day. No specific date for Q-Day has been established.",
-        "zh-CN": "• 标题：什么是Q-Day？量子威胁对比特币的解释\n中性：量子计算机可能伪造比特币的数字签名，从而实现未经授权的交易。这个事件被称为Q-Day。目前尚未确定Q-Day的具体日期。",
-        "ja": "• タイトル：Q-Dayとは？ビットコインに対する量子の脅威の解説\n中立：量子コンピュータはビットコインのデジタル署名を偽造し、不正な取引を可能にする可能性があります。この出来事はQ-Dayと呼ばれています。Q-Dayの具体的な日付は確定されていません。",
-        "ko": "• 제목: Q-Day란 무엇인가? 비트코인에 대한 양자 위협 설명\n중립: 양자 컴퓨터는 비트코인의 디지털 서명을 위조하여 승인되지 않은 거래를 가능하게 할 수 있습니다. 이 사건을 Q-Day라고 합니다. Q-Day의 구체적인 날짜는 정해지지 않았습니다."
+        "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://www.theguardian.com/world/2026/jul/03/canada-alberta-pipeline",
-      "title": "New pipeline in Canada to proceed after C$150bn pledged to ease BC and First Nations concerns",
-      "source": "The Guardian",
+      "url": "https://www.aljazeera.com/sports/2026/7/4/france-vs-paraguay-world-cup-round-of-16-mbappe-prediction-kickoff?traffic_source=rss",
+      "title": "France vs Paraguay: World Cup Round of 16 – Mbappe, prediction, kickoff",
+      "source": "Al Jazeera",
       "topic": "World",
       "category": "general",
-      "published": "2026-07-03T15:34:32+00:00",
-      "ai_summary": "標題：加拿大新輸油管項目獲批，承諾投入1500億加元以緩解卑詩省及原住民疑慮\n中立摘要：\n2026年7月2日，加拿大總理馬克·卡尼與亞伯達省省長丹妮爾·史密斯宣布一項新的輸油管項目。該項目將沿現有橫山輸油管路線興建，並改道連接一個新終端，每日輸油量達100萬桶。政府承諾投入超過1500億加元，用於溫哥華港口擴建、液化天然氣終端基礎設施，以及保護南方居留虎鯨的措施。聯邦政府對卑詩省北海岸的油輪禁令維持不變。與原住民社區、各省及地區的磋商將立即展開。",
+      "published": "2026-07-04T06:21:44+00:00",
+      "ai_summary": "(neutralize failed)",
       "summaries": {
-        "zh-HK": "標題：加拿大新輸油管項目獲批，承諾投入1500億加元以緩解卑詩省及原住民疑慮\n中立摘要：\n2026年7月2日，加拿大總理馬克·卡尼與亞伯達省省長丹妮爾·史密斯宣布一項新的輸油管項目。該項目將沿現有橫山輸油管路線興建，並改道連接一個新終端，每日輸油量達100萬桶。政府承諾投入超過1500億加元，用於溫哥華港口擴建、液化天然氣終端基礎設施，以及保護南方居留虎鯨的措施。聯邦政府對卑詩省北海岸的油輪禁令維持不變。與原住民社區、各省及地區的磋商將立即展開。",
-        "en": "Title: New pipeline in Canada to proceed after C$150bn pledged to ease BC and First Nations concerns\nNeutral:\nOn 2 July 2026, Canadian Prime Minister Mark Carney and Alberta Premier Danielle Smith announced a new oil pipeline in Canada. The project follows the route of the existing Trans Mountain pipeline, diverting to a new terminal, and will transport 1 million barrels per day. Over C$150bn in investments were pledged for port expansion in Vancouver, LNG terminal infrastructure, and protections for the southern resident killer whale. The federal tanker ban on British Columbia’s north coast remains in place. Consultations with Indigenous communities, provinces, and territories will begin immediately.",
-        "zh-CN": "标题：加拿大新输油管项目获批，承诺投入1500亿加元以缓解卑诗省及原住民疑虑\n中立摘要：\n2026年7月2日，加拿大总理马克·卡尼与阿尔伯塔省省长丹妮尔·史密斯宣布一项新的输油管项目。该项目将沿现有横山输油管路线兴建，并改道连接一个新终端，每日输油量达100万桶。政府承诺投入超过1500亿加元，用于温哥华港口扩建、液化天然气终端基础设施，以及保护南方居留虎鲸的措施。联邦政府对卑诗省北海岸的油轮禁令维持不变。与原住民社区、各省及地区的磋商将立即展开。",
-        "ja": "タイトル：カナダ新パイプライン計画、BC州と先住民の懸念緩和に1500億カナダドル拠出で承認\n中立要約：\n2026年7月2日、カナダのマーク・カーニー首相とアルバータ州のダニエル・スミス州首相は、カナダにおける新たな石油パイプライン計画を発表した。このプロジェクトは既存のトランスマウンテンパイプラインのルートに沿い、新たなターミナルへと分岐し、日量100万バレルを輸送する。バンクーバーの港湾拡張、LNGターミナルインフラ、そしてサザンレジデントキラークジラの保護のために、1500億カナダドル以上の投資が約束された。ブリティッシュコロンビア州北海岸に対する連邦政府のタンカー禁止措"
+        "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://www.bloomberg.com/news/articles/2026-07-03/ireland-s-corporation-tax-receipts-rise-despite-reshoring-fears",
-      "title": "Irish Corporation Tax Receipts Rise Despite Reshoring Fears",
-      "source": "Bloomberg",
-      "topic": "Finance",
-      "category": "finance",
-      "published": "2026-07-03T15:32:05+00:00",
-      "ai_summary": "• 標題：愛爾蘭企業稅收在回流憂慮下仍錄得增長\n中立摘要：愛爾蘭上半年企業稅收有所增加。儘管外界憂慮美國總統特朗普宣佈的政策可能促使美國企業將利潤回流美國，但稅收仍錄得增長。",
-      "summaries": {
-        "zh-HK": "• 標題：愛爾蘭企業稅收在回流憂慮下仍錄得增長\n中立摘要：愛爾蘭上半年企業稅收有所增加。儘管外界憂慮美國總統特朗普宣佈的政策可能促使美國企業將利潤回流美國，但稅收仍錄得增長。",
-        "en": "• Title: Irish Corporation Tax Receipts Rise Despite Reshoring Fears\nNeutral: Irish corporate tax receipts increased in the first half of the year. This occurred amid concerns about potential profit reshoring by American firms, following President Donald Trump's stated policy to bring US company profits back to the United States.",
-        "zh-CN": "• 标题：爱尔兰企业税收在回流担忧下仍录得增长\n中立摘要：爱尔兰上半年企业税收有所增加。尽管外界忧虑美国总统特朗普宣布的政策可能促使美国企业将利润回流美国，但税收仍录得增长。",
-        "ja": "• タイトル：利益還流懸念にもかかわらずアイルランドの法人税収が増加\n中立要約：アイルランドの上半期の法人税収は増加した。これは、ドナルド・トランプ米大統領が米国企業の利益を米国に還流させる方針を表明したことを受け、米国企業による利益の還流（リショアリング）の可能性に対する懸念が高まる中での出来事である。",
-        "ko": "• 제목: 이익 환류 우려에도 불구하고 아일랜드 법인세 수입 증가\n중립 요약: 아일랜드의 상반기 법인세 수입이 증가했습니다. 이는 도널드 트럼프 미국 대통령이 미국 기업의 이익을 미국으로 환류시키겠다는 정책을 밝힌 데 따라 미국 기업들의 잠재적 이익 환류(리쇼어링)에 대한 우려가 제기되는 가운데 발생한 일입니다."
-      }
-    },
-    {
-      "url": "https://www.bbc.co.uk/news/articles/c4gy603z2qlo?at_medium=RSS&at_campaign=rss",
-      "title": "Ukrainian suspect hunted by police after Monaco bomb attack was 'disguised as a man'",
-      "source": "BBC World",
+      "url": "https://www.nytimes.com/2026/07/04/world/middleeast/khamenei-funeral-itineray-iran-iraq-shia.html",
+      "title": "Funeral Procession for Khamenei Will Visit 5 Cities in Iran and Iraq",
+      "source": "New York Times",
       "topic": "General",
       "category": "general",
-      "published": "2026-07-03T15:20:57+00:00",
-      "ai_summary": "標題：摩納哥炸彈襲擊案後被警方追緝的烏克蘭疑犯「偽裝成男性」\n一宗在摩納哥發生的包裹炸彈襲擊導致三人受傷，一名疑犯已被鎖定。摩納哥檢察官辦公室已對該名已離開摩納哥的外國籍疑犯發出逮捕令，並將發出國際刑警紅色通報。週一晚上，閉路電視畫面顯示有人將一個包裹放在一棟大樓的入口大堂，隨後發生爆炸，造成三人受傷。事件正以企圖謀殺方向調查。疑犯逃往法國博索萊伊方向，當時戴著黑色帽子。當地媒體報道疑犯為女性。受害者包括瓦迪姆·葉爾莫拉耶夫、其伴侶及兒子。葉爾莫拉耶夫為塞浦路斯公民，自2023年起受烏克蘭制裁。",
+      "published": "2026-07-04T06:17:04+00:00",
+      "ai_summary": "(neutralize failed)",
       "summaries": {
-        "zh-HK": "標題：摩納哥炸彈襲擊案後被警方追緝的烏克蘭疑犯「偽裝成男性」\n一宗在摩納哥發生的包裹炸彈襲擊導致三人受傷，一名疑犯已被鎖定。摩納哥檢察官辦公室已對該名已離開摩納哥的外國籍疑犯發出逮捕令，並將發出國際刑警紅色通報。週一晚上，閉路電視畫面顯示有人將一個包裹放在一棟大樓的入口大堂，隨後發生爆炸，造成三人受傷。事件正以企圖謀殺方向調查。疑犯逃往法國博索萊伊方向，當時戴著黑色帽子。當地媒體報道疑犯為女性。受害者包括瓦迪姆·葉爾莫拉耶夫、其伴侶及兒子。葉爾莫拉耶夫為塞浦路斯公民，自2023年起受烏克蘭制裁。",
-        "en": "Title: Ukrainian suspect hunted by police after Monaco bomb attack was 'disguised as a man'\nA suspect has been identified in a parcel bombing in Monaco that injured three people. Monaco's prosecutor's office issued an arrest warrant for the suspect, a foreign national no longer in Monaco, and will issue an Interpol red notice. On Monday evening, video surveillance showed a person leaving a package in a building entrance hall. An explosion injured three people. The incident is investigated as attempted murder. The suspect fled toward Beausoleil, France. The suspect wore a black hat. Local media reported the suspect was a woman. The victims include Vadym Yermolaiev, his partner, and his son. Yermolaiev is a Cypriot citizen and sanctioned by Ukraine since 2023.",
-        "zh-CN": "标题：摩纳哥炸弹袭击案后警方追捕的乌克兰嫌疑人“伪装成男性”\n摩纳哥一起包裹炸弹袭击事件造成三人受伤，一名嫌疑人已被确认。摩纳哥检察官办公室已对该名已离开摩纳哥的外国籍嫌疑人发出逮捕令，并将发布国际刑警红色通报。周一晚上，监控录像显示有人将一个包裹放在一栋大楼的门厅内，随后发生爆炸，造成三人受伤。此案正以谋杀未遂方向调查。嫌疑人逃往法国博索莱伊方向，当时戴着黑色帽子。当地媒体报道嫌疑人为女性。受害者包括瓦迪姆·叶尔莫拉耶夫、其伴侣及儿子。叶尔莫拉耶夫为塞浦路斯公民，自2023年起受乌克兰制裁。",
-        "ja": "タイトル：モナコ爆弾攻撃後に警察が追跡するウクライナ人容疑者、「男性に変装」\nモナコで起きた小包爆弾事件で3人が負傷し、容疑者が特定された。モナコ検察当局は、既に国外に逃亡した外国籍の容疑者に対して逮捕状を発行し、国際刑事警察機構（インターポール）のレッドノーティスを発出する予定。月曜日の夜、防犯カメラに建物のエントランスホールに小包を置く人物が映っており、その後爆発が発生し3人が負傷した。事件は殺人未遂として捜査されている。容疑者はフランスのボ"
+        "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://www.bloomberg.com/news/articles/2026-07-03/argentina-extends-6-billion-in-repo-maturities-beyond-election",
-      "title": "Argentina Pushes $6 Billion in Repo Maturities Past Election",
-      "source": "Bloomberg Crypto",
+      "url": "https://www.npr.org/2026/07/04/nx-s1-5882086/cape-verde-world-cup-ends",
+      "title": "Cape Verde's historic World Cup ride ends after pushing Argentina to the brink",
+      "source": "NPR",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T05:44:19+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.aljazeera.com/news/2026/7/4/could-israel-really-build-settlements-in-gaza?traffic_source=rss",
+      "title": "Could Israel really build settlements in Gaza?",
+      "source": "Al Jazeera",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T05:41:23+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.blocktempo.com/allianz-economist-fed-hike-rates-september-europe-us-policy-divergence/",
+      "title": "市場都在等降息，安聯首席經濟學家：聯準會 9 月恐怕會升息",
+      "source": "動區動趨 (BlockTempo)",
       "topic": "Policy",
-      "category": "finance",
-      "published": "2026-07-03T15:16:22+00:00",
-      "ai_summary": "• 阿根廷央行將總值60億美元的回購協議到期日延長。此舉旨在2027年總統大選前減輕政府的債務負擔。",
+      "category": "crypto",
+      "published": "2026-07-04T05:37:48+00:00",
+      "ai_summary": "(neutralize failed)",
       "summaries": {
-        "zh-HK": "• 阿根廷央行將總值60億美元的回購協議到期日延長。此舉旨在2027年總統大選前減輕政府的債務負擔。",
-        "en": "• Argentina's central bank extended maturities on repurchase agreements totaling $6 billion. The extension was made to reduce the government's debt burden ahead of the 2027 presidential election.",
-        "zh-CN": "• 阿根廷央行将总值60亿美元的回购协议到期日延长。此举旨在2027年总统大选前减轻政府的债务负担。",
-        "ja": "• アルゼンチン中央銀行は、総額60億ドルに上るレポ契約の満期を延長した。この延長は、2027年の大統領選挙前に政府の債務負担を軽減するために行われた。",
-        "ko": "• 아르헨티나 중앙은행은 총 60억 달러 규모의 환매조건부 채권(Repo) 만기를 연장했다. 이번 연장은 2027년 대통령 선거를 앞두고 정부의 부채 부담을 줄이기 위해 이루어졌다."
+        "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://cointelegraph.com/markets/bitcoin-price-tags-623k-nine-day-high-after-global-stocks-hit-historic-record?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "title": "Bitcoin price tags $62.3K nine-day high after global stocks hit historic record",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cm2jpkkdld4o?at_medium=RSS&at_campaign=rss",
+      "title": "Murals, flags and beef dishes - Messi mania takes hold in Miami",
+      "source": "BBC World",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T05:37:08+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/cnv9p35z866o?at_medium=RSS&at_campaign=rss",
+      "title": "The Papers: Storm threat to England match and 'bid to block Miliband'",
+      "source": "BBC World",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T05:12:12+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://cointelegraph.com/news/bitcoin-realized-profit-loss-ratio-falls-to-lowest-level-since-2022-cryptoquant?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "title": "Bitcoin profit and loss ratio falls to 43-month low",
       "source": "CoinTelegraph",
       "topic": "Bitcoin",
       "category": "crypto",
-      "published": "2026-07-03T15:11:30+00:00",
-      "ai_summary": "標題：比特幣價格觸及62,300美元，創九日新高，全球股市同日創歷史紀錄\n中立摘要：\n比特幣於2023年10月20日達到62,300美元，創下九日新高。同日，全球股市創下歷史紀錄。一名被告提出動議，要求駁回紐約一宗訴訟，該訴訟旨在爭奪39,069個比特幣錢包的所有權。",
+      "published": "2026-07-04T05:05:19+00:00",
+      "ai_summary": "(neutralize failed)",
       "summaries": {
-        "zh-HK": "標題：比特幣價格觸及62,300美元，創九日新高，全球股市同日創歷史紀錄\n中立摘要：\n比特幣於2023年10月20日達到62,300美元，創下九日新高。同日，全球股市創下歷史紀錄。一名被告提出動議，要求駁回紐約一宗訴訟，該訴訟旨在爭奪39,069個比特幣錢包的所有權。",
-        "en": "Title: Bitcoin price tags $62.3K nine-day high after global stocks hit historic record\nNeutral:\nBitcoin reached $62,300 on October 20, 2023, a nine-day high. Global stock markets hit a historic record on the same day. A defendant filed a motion to dismiss a New York lawsuit that seeks ownership of 39,069 Bitcoin wallets.",
-        "zh-CN": "标题：比特币价格触及62,300美元，创九日新高，全球股市同日创历史纪录\n中立摘要：\n比特币于2023年10月20日达到62,300美元，创下九日新高。同日，全球股市创下历史纪录。一名被告提出动议，要求驳回纽约一宗诉讼，该诉讼旨在争夺39,069个比特币钱包的所有权。",
-        "ja": "タイトル：ビットコイン価格が62,300ドルに達し9日ぶりの高値、世界の株式市場は同日に歴史的記録を更新\n中立要約：\nビットコインは2023年10月20日に62,300ドルに達し、9日ぶりの高値を記録した。同日、世界の株式市場は歴史的な記録を更新した。ある被告は、39,069のビットコインウォレットの所有権を求めるニューヨークの訴訟を却下するよう申し立てた。",
-        "ko": "제목: 비트코인 가격 62,300달러로 9일 만에 최고치, 글로벌 주식 시장은 사상 최고 기록 경신\n중립 요약:\n비트코인은 2023년 10월 20일에 62,300달러에 도달하며 9일 만에 최고치를 기록했다. 같은 날 글로벌 주식 시장은 사상 최고 기록을 경신했다. 한 피고는 39,069개의 비트코인 지갑 소유권을 요구하는 뉴욕 소송을 기각해 달라는 신청을 제기했다."
+        "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://time.com/article/2026/07/03/trump-nato-defense-spending-row-alliance-summit/",
-      "title": "Trump Says It’s 'Ridiculous' for U.S. to Maintain Current NATO Support as Rift Widens Ahead of Summit",
-      "source": "Time",
-      "topic": "Politics",
+      "url": "https://www.npr.org/2026/07/04/nx-s1-5882083/iran-funeral-ayatollah-ali-khamenei",
+      "title": "Iran begins dayslong funeral for the late Supreme Leader Ayatollah Ali Khamenei",
+      "source": "NPR",
+      "topic": "World",
       "category": "general",
-      "published": "2026-07-03T15:05:15+00:00",
-      "ai_summary": "[Skipped: LOW]",
+      "published": "2026-07-04T05:04:16+00:00",
+      "ai_summary": "(neutralize failed)",
       "summaries": {
-        "zh-HK": "[此文可信度評級為 LOW，暫不處理]"
+        "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://www.nytimes.com/2026/07/03/world/europe/denmark-fourth-of-july-trump-us.html",
-      "title": "Denmark Has a Big Fourth of July Party. This Year, the U.S. Is Uninvited.",
-      "source": "New York Times",
-      "topic": "Politics",
-      "category": "general",
-      "published": "2026-07-03T15:03:16+00:00",
-      "ai_summary": "標題：丹麥舉辦盛大美國獨立日派對，今年美國卻未獲邀請\n中立摘要：\n丹麥每年在雷比爾舉行的美國獨立日慶祝活動，原定於2025年7月4日舉行，但今年將不會有美國官員參與。丹麥官員要求主辦方將美國代表從活動節目中移除。此決定是在特朗普總統再次表達收購格陵蘭的興趣之後作出的。",
-      "summaries": {
-        "zh-HK": "標題：丹麥舉辦盛大美國獨立日派對，今年美國卻未獲邀請\n中立摘要：\n丹麥每年在雷比爾舉行的美國獨立日慶祝活動，原定於2025年7月4日舉行，但今年將不會有美國官員參與。丹麥官員要求主辦方將美國代表從活動節目中移除。此決定是在特朗普總統再次表達收購格陵蘭的興趣之後作出的。",
-        "en": "Title: Denmark Has a Big Fourth of July Party. This Year, the U.S. Is Uninvited.\nNeutral:\nDenmark's annual Fourth of July celebration in Rebild, scheduled for July 4, 2025, will not include American officials. Danish officials requested that organizers remove U.S. representatives from the event's program. The decision follows President Trump's renewed interest in acquiring Greenland.",
-        "zh-CN": "标题：丹麦举办盛大美国独立日派对，今年美国却未获邀请\n中立摘要：\n丹麦每年在雷比尔举行的美国独立日庆祝活动，原定于2025年7月4日举行，但今年将不会有美国官员参与。丹麦官员要求主办方将美国代表从活动节目中移除。此决定是在特朗普总统再次表达收购格陵兰的兴趣之后作出的。",
-        "ja": "タイトル：デンマークが盛大な独立記念日パーティーを開催、今年は米国が招待されず\n中立要約：\nデンマークのレビルで毎年開催される独立記念日祝賀行事（2025年7月4日予定）には、今年は米国政府関係者が参加しないことになった。デンマーク当局は主催者に対し、イベントのプログラムから米国代表を外すよう要請した。この決定は、トランプ大統領がグリーンランド買収への関心を再び表明したことを受けたものである。",
-        "ko": "제목: 덴마크, 대규모 미국 독립기념일 파티 개최… 올해는 미국 초대 안 해\n중립 요약:\n덴마크 레빌드에서 매년 열리는 미국 독립기념일 축제(2025년 7월 4일 예정)에 올해는 미국 관리들이 참석하지 않게 되었다. 덴마크 당국은 주최 측에 행사 프로그램에서 미국 대표를 제외하도록 요청했다. 이 결정은 트럼프 대통령이 그린란드 인수에 대한 관심을 다시 표명한 이후에 내려졌다."
-      }
-    },
-    {
-      "url": "https://www.bloomberg.com/news/videos/2026-07-03/defense-sector-to-remain-dynamic-euronext-ceo-boujnah-video",
-      "title": "Defense Sector to Remain Dynamic: Euronext CEO Boujnah",
+      "url": "https://www.bloomberg.com/news/videos/2026-07-04/ebola-vaccine-trials-could-start-this-year",
+      "title": "Ebola Vaccine Trials Could Start This Year",
       "source": "Bloomberg Crypto",
-      "topic": "Finance",
+      "topic": "Health",
       "category": "finance",
-      "published": "2026-07-03T15:02:48+00:00",
-      "ai_summary": "標題：國防板塊將保持活力：泛歐交易所行政總裁布尼亞\n泛歐交易所行政總裁斯特凡·布尼亞在法國普羅旺斯地區艾克斯經濟論壇上表示，國防板塊將保持活力。他提到歐洲軍費開支增加，以及投資者對該行業的持續支持。布尼亞亦討論了歐洲首次公開募股、資本市場改革、交易所整合，以及該地區的科技生態系統。該訪問由彭博社的卡羅琳·科南進行。",
+      "published": "2026-07-04T05:00:19+00:00",
+      "ai_summary": "(neutralize failed)",
       "summaries": {
-        "zh-HK": "標題：國防板塊將保持活力：泛歐交易所行政總裁布尼亞\n泛歐交易所行政總裁斯特凡·布尼亞在法國普羅旺斯地區艾克斯經濟論壇上表示，國防板塊將保持活力。他提到歐洲軍費開支增加，以及投資者對該行業的持續支持。布尼亞亦討論了歐洲首次公開募股、資本市場改革、交易所整合，以及該地區的科技生態系統。該訪問由彭博社的卡羅琳·科南進行。",
-        "en": "Title: Defense Sector to Remain Dynamic: Euronext CEO Boujnah\nEuronext CEO Stephane Boujnah stated at the Aix-en-Provence Economic Forum in France that the defense sector will remain dynamic. He cited increased European military spending and continued investor support for the industry. Boujnah also discussed European IPOs, capital markets reform, exchange consolidation, and the region's technology ecosystem. The interview was conducted by Bloomberg's Caroline Connan.",
-        "zh-CN": "标题：国防板块将保持活力：泛欧交易所首席执行官布尼亚\n泛欧交易所首席执行官斯特凡·布尼亚在法国普罗旺斯地区艾克斯经济论坛上表示，国防板块将保持活力。他提到欧洲军费开支增加，以及投资者对该行业的持续支持。布尼亚还讨论了欧洲首次公开募股、资本市场改革、交易所整合，以及该地区的科技生态系统。该采访由彭博社的卡罗琳·科南进行。",
-        "ja": "タイトル：防衛セクターは引き続き活発：ユーロネクストCEOブージナ\nユーロネクストのCEOステファン・ブージナ氏は、フランスのエクス＝アン＝プロヴァンス経済フォーラムで、防衛セクターは引き続き活発であると述べた。同氏は、欧州の軍事支出の増加と、投資家による同産業への継続的な支援を挙げた。また、欧州の新規株式公開（IPO）、資本市場改革、取引所統合、そして地域のテクノロジーエコシステムについても議論した。インタビューはブルームバーグのキャロライン・コナン氏が行った。",
-        "ko": "제목: 방위 부문은 계속 역동적일 것: 유로넥스트 CEO 부즈나\n유로넥스트 CEO 스테판 부즈나는 프랑스 엑상프로방스 경제 포럼에서 방위 부문이 계속 역동적일 것이라고 밝혔다. 그는 유럽의 군사 지출 증가와 투자자들의 해당 산업에 대한 지속적인 지원을 언급했다. 부즈나는 또한 유럽의 기업공개(IPO), 자본 시장 개혁, 거래소 통합, 그리고 지역의 기술 생태계에 대해 논의했다. 인터뷰는 블룸버그의 캐롤라인 코난이 진행했다."
+        "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://www.theguardian.com/australia-news/2026/jul/04/australia-property-market-transforming-first-home-buyers-cold-feet",
-      "title": "Cold feet and cooling prices: Australia’s property market is transforming – and first home buyers aren’t biting",
-      "source": "The Guardian",
-      "topic": "Policy",
-      "category": "general",
-      "published": "2026-07-03T15:00:33+00:00",
-      "ai_summary": "標題：腳凍降溫：澳洲樓市轉向，首置客卻步\n自2025年5月下旬起，每週拍賣的住宅中，少於一半成功售出。約40%的掛牌物業在拍賣前已成交。根據Equifax數據，2025年5月的首次置業貸款申請較2024年5月下跌13.4%。Loan Market報告指，2025年6月的首次置業貸款申請較2024年6月減少20%。在5%首期計劃價格上限以外的物業價格，自2025年4月開始下跌；低於上限的物業價格則於2025年6月開始下跌。儲備銀行連續三次加息。2025年5月中旬，聯邦預算案限制投資者購買現有住宅的負扣稅。從預算案公布至2025年6月中旬，投資者貸款下跌五分之一。",
-      "summaries": {
-        "zh-HK": "標題：腳凍降溫：澳洲樓市轉向，首置客卻步\n自2025年5月下旬起，每週拍賣的住宅中，少於一半成功售出。約40%的掛牌物業在拍賣前已成交。根據Equifax數據，2025年5月的首次置業貸款申請較2024年5月下跌13.4%。Loan Market報告指，2025年6月的首次置業貸款申請較2024年6月減少20%。在5%首期計劃價格上限以外的物業價格，自2025年4月開始下跌；低於上限的物業價格則於2025年6月開始下跌。儲備銀行連續三次加息。2025年5月中旬，聯邦預算案限制投資者購買現有住宅的負扣稅。從預算案公布至2025年6月中旬，投資者貸款下跌五分之一。",
-        "en": "Title: Cold feet and cooling prices: Australia’s property market is transforming – and first home buyers aren’t biting\nSince late May 2025, fewer than half of homes listed for auction each week have sold. Approximately 40% of listed homes are sold before auction. First home buyer loan applications in May 2025 were 13.4% lower than May 2024, according to Equifax. Loan Market reported a 20% decline in first home loan applications in June 2025 compared to June 2024. Property prices outside the 5% deposit scheme price caps began falling in April 2025. Properties below the caps began falling in June 2025. The Reserve Bank raised interest rates three consecutive times. In mid-May 2025, the federal budget restricted negative gearing for investors buying existing homes. Investor loans fell by one-fifth from the budget to mid-June 2025.",
-        "zh-CN": "标题：脚冷价降：澳洲楼市转型，首购族却步\n自2025年5月下旬起，每周拍卖的住宅中，不到一半成功售出。约40%的挂牌物业在拍卖前成交。根据Equifax数据，2025年5月的首次购房贷款申请较2024年5月下降13.4%。Loan Market报告称，2025年6月的首次购房贷款申请较2024年6月减少20%。在5%首付计划价格上限以外的物业价格，自2025年4月开始下跌；低于上限的物业价格则于2025年6月开始下跌。储备银行连续三次加息。2025年5月中旬，联邦预算案限制投资者购买现有住宅的负扣税。从预算案公布至2025年6月中旬，投资者贷款下降五分之一。",
-        "ja": "タイトル：冷え込む足元と冷める価格：オーストラリアの不動産市場が変貌、初回購入者は手を出さず\n2025年5月下旬以降、毎週競売にかけられた住宅の半数未満が売却されている。上場物件の約40%は競売前に売却されている。Equifaxによると、2025年5月の初回購入者向け住宅ローン申請件数は2024年5月比で13.4%減少した。Loan Marketは、2025年6月の"
-      }
-    },
-    {
-      "url": "https://www.scmp.com/news/china/diplomacy/article/3359298/americas-first-sphere-influence-becomes-test-its-power-250?utm_source=rss_feed",
-      "title": "America’s first sphere of influence becomes the test of its power at 250",
-      "source": "SCMP",
-      "topic": "World",
-      "category": "general",
-      "published": "2026-07-03T15:00:07+00:00",
-      "ai_summary": "標題：美國首個勢力範圍成為其建國250年之際的實力考驗\n中立摘要：\n美國迎來建國250週年。在2024年總統競選期間，唐納德·特朗普表示，巴西和墨西哥在與中國的關係上可以「為所欲為」。12月，白宮將西半球劃定為「國土安全區」，承諾阻止競爭對手控制美國海岸附近的戰略重要資產。官員將此策略描述為門羅主義的「特朗普推論」。北京方面發表了一份關於拉丁美洲的聲明，反對「霸權主義和強權政治」，並反對「單邊欺凌」，堅稱中國與該地區的關係「不受任何第三方支配」。",
-      "summaries": {
-        "zh-HK": "標題：美國首個勢力範圍成為其建國250年之際的實力考驗\n中立摘要：\n美國迎來建國250週年。在2024年總統競選期間，唐納德·特朗普表示，巴西和墨西哥在與中國的關係上可以「為所欲為」。12月，白宮將西半球劃定為「國土安全區」，承諾阻止競爭對手控制美國海岸附近的戰略重要資產。官員將此策略描述為門羅主義的「特朗普推論」。北京方面發表了一份關於拉丁美洲的聲明，反對「霸權主義和強權政治」，並反對「單邊欺凌」，堅稱中國與該地區的關係「不受任何第三方支配」。",
-        "en": "Title: America’s first sphere of influence becomes the test of its power at 250\nNeutral:\nThe United States marks the 250th anniversary of its founding. During the 2024 presidential campaign, Donald Trump stated that Brazil and Mexico could \"do whatever they wanted\" regarding relations with China. In December, the White House designated the western hemisphere a \"Homeland Security Zone,\" pledging to deny rival powers control of strategically important assets near US shores. Officials described the strategy as the \"Trump Corollary\" to the Monroe Doctrine. Beijing responded with a statement on Latin America, rejecting \"hegemonism and power politics\" and opposing \"unilateral bullying,\" insisting China's ties with the region were \"not subjugated by any third party.\"",
-        "zh-CN": "标题：美国首个势力范围成为其建国250年之际的实力考验\n中立摘要：\n美国迎来建国250周年。在2024年总统竞选期间，唐纳德·特朗普表示，巴西和墨西哥在与中国的關係上可以「为所欲为」。12月，白宫将西半球划定为「国土安全区」，承诺阻止竞争对手控制美国海岸附近的战略重要资产。官员将此策略描述为门罗主义的「特朗普推论」。北京方面发表了一份关于拉丁美洲的声明，反对「霸权主义和强权政治」，并反对「单边欺凌」，坚称中国与该地区的关系「不受任何第三方支配」。",
-        "ja": "タイトル：アメリカ最初の勢力圏が建国250年の力の試練に\n中立：\nアメリカ合衆国は建国250周年を迎える。2024年の大統領選挙期間中、ドナルド・トランプ氏はブラジルとメキシコが中国との関係において「好きなことをしてよい」と述べた。12月、ホワイトハウスは西半球を「国土安全保障区域」に指定し、競合国が米国沿岸近くの戦略的重要資産を掌握するのを阻止すると約束した。当局者はこの戦略をモンロー主義の「トランプ追補」と表現した。北京はラテンアメリカに関する声明で「覇権主義と強権政治」を拒否し、「一方的ないじめ」に反対し、中国と同地域との関係は「いかなる第三国にも従属しない」と主張した。",
-        "ko": "제목: 미국의 첫 번째 세력권, 건국 250주년 힘의 시험대가 되다\n중립:\n미국은 건국 250주년을 맞이한다. 202"
-      }
-    },
-    {
-      "url": "https://www.nytimes.com/2026/07/03/world/asia/tibet-self-immolation-united-nations-china.html",
-      "title": "Tibetan Man Dies After Self-Immolation Protest in New York",
-      "source": "New York Times",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T14:58:23+00:00",
-      "ai_summary": "[Skipped: LOW]",
-      "summaries": {
-        "zh-HK": "[此文可信度評級為 LOW，暫不處理]"
-      }
-    },
-    {
-      "url": "https://www.theguardian.com/australia-news/2026/jul/03/one-nation-christians-christian-voters-churchgoers-ntwnfb",
-      "title": "One Nation is campaigning directly to Christians. But will party policies rub against worshippers’ conscience?",
-      "source": "The Guardian",
-      "topic": "World",
-      "category": "general",
-      "published": "2026-07-03T14:57:34+00:00",
-      "ai_summary": "標題：一國黨直接向基督徒拉票。但政黨政策會否與信徒的良心衝突？\n中立：\n一國黨正直接向基督徒拉票。2024年6月4日，巴納比·喬伊斯在悉尼一場集會上向反墮胎活動人士發表演說。基督教領袖在集會上發言，並誦讀了主禱文。約44%的澳洲人自認為基督徒。根據全國教會生活調查，約五分之一的澳洲人定期上教堂。一國黨領袖寶琳·韓森表示，澳洲必須是「單一文化」。NCLS數據顯示，在海外出生的教會出席者比例已上升至超過三分之一。約四分之一的教友在家中使用英語以外的語言。",
-      "summaries": {
-        "zh-HK": "標題：一國黨直接向基督徒拉票。但政黨政策會否與信徒的良心衝突？\n中立：\n一國黨正直接向基督徒拉票。2024年6月4日，巴納比·喬伊斯在悉尼一場集會上向反墮胎活動人士發表演說。基督教領袖在集會上發言，並誦讀了主禱文。約44%的澳洲人自認為基督徒。根據全國教會生活調查，約五分之一的澳洲人定期上教堂。一國黨領袖寶琳·韓森表示，澳洲必須是「單一文化」。NCLS數據顯示，在海外出生的教會出席者比例已上升至超過三分之一。約四分之一的教友在家中使用英語以外的語言。",
-        "en": "Title: One Nation is campaigning directly to Christians. But will party policies rub against worshippers’ conscience?\nNeutral:\nOne Nation is campaigning directly to Christians. On June 4, 2024, Barnaby Joyce addressed anti-abortion campaigners at a Sydney rally. Christian leaders spoke at the rally. The Lord's Prayer was recited. Approximately 44% of Australians identify as Christian. About one in five Australians regularly attend church, according to the National Church Life Survey. One Nation leader Pauline Hanson has stated Australia must be \"monocultural.\" The proportion of church attenders born overseas has risen to more than one in three, according to the NCLS. About a quarter of churchgoers speak a language other than English at home.",
-        "zh-CN": "标题：一国党直接向基督徒拉票。但政党政策会否与信徒的良心冲突？\n中立：\n一国党正直接向基督徒拉票。2024年6月4日，巴纳比·乔伊斯在悉尼一场集会上向反堕胎活动人士发表演说。基督教领袖在集会上发言，并诵读了主祷文。约44%的澳大利亚人自认为基督徒。根据全国教会生活调查，约五分之一的澳大利亚人定期上教堂。一国党领袖宝琳·韩森表示，澳大利亚必须是“单一文化”。NCLS数据显示，在海外出生的教会出席者比例已上升至超过三分之一。约四分之一的教友在家中使用英语以外的语言。",
-        "ja": "タイトル：ワン・ネーションが直接キリスト教徒に働きかけ。しかし政党の政策は信者の良心に反するのか？\n中立：\nワン・ネーションは直接キリスト教徒に働きかけている。2024年6月4日、バーナビー・ジョイスがシドニーの集会で中絶反対活動家に向けて演説した。集会ではキリスト教指導者が発言し、主の祈りが唱えられた。オーストラリア人の約44％がキリスト教徒と自認している。全国教会生活調査によると、オーストラリア人の約5人に1人が定期的に教会に通っている。ワン・ネーション党首ポーリン・ハンソンは、オーストラリアは「単一文化」でなければならないと述べている。NCLSによると、海外生まれの教会出席者の割合は3分の1以上に増加している。教会出席者の約4分の1が家庭で英語以外"
-      }
-    },
-    {
-      "url": "https://www.bbc.co.uk/news/articles/c4gyxnj38m1o?at_medium=RSS&at_campaign=rss",
-      "title": "German row over plan for workers to need sick note on first day of illness",
-      "source": "BBC World",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T14:56:30+00:00",
-      "ai_summary": "德國由基督教民主聯盟（CDU）和社會民主黨（SPD）組成的聯合政府宣佈修改病假規則。新規定要求員工在生病首日提交醫生證明，並終止透過電話取得證明的選項。總理弗里德里希·梅爾茨表示，德國的病假天數過高。根據現行規定，員工需在生病第四天提交證明。這項變更是稅務、勞工及退休金改革的一部分。勞工部長貝爾貝爾·巴斯表示，她將研究這項要求。",
-      "summaries": {
-        "zh-HK": "德國由基督教民主聯盟（CDU）和社會民主黨（SPD）組成的聯合政府宣佈修改病假規則。新規定要求員工在生病首日提交醫生證明，並終止透過電話取得證明的選項。總理弗里德里希·梅爾茨表示，德國的病假天數過高。根據現行規定，員工需在生病第四天提交證明。這項變更是稅務、勞工及退休金改革的一部分。勞工部長貝爾貝爾·巴斯表示，她將研究這項要求。",
-        "en": "Germany's coalition government, consisting of the Christian Democratic Party (CDU) and the Social Democrats (SPD), announced changes to sick-leave rules. The changes require workers to provide a doctor's note on the first day of illness, ending the option to obtain the note by phone. Chancellor Friedrich Merz stated the number of sick days in Germany is too high. Under current rules, a certificate is required on the fourth day of illness. The changes were agreed as part of tax, labour, and pension reforms. Labour Minister Bärbel Bas said she would investigate the requirement.",
-        "zh-CN": "德国由基督教民主联盟（CDU）和社会民主党（SPD）组成的联合政府宣布修改病假规则。新规定要求员工在生病首日提交医生证明，并终止通过电话取得证明的选项。总理弗里德里希·梅尔茨表示，德国的病假天数过高。根据现行规定，员工需在生病第四天提交证明。这项变更是税务、劳工及退休金改革的一部分。劳工部长贝尔贝尔·巴斯表示，她将研究这项要求。",
-        "ja": "ドイツのキリスト教民主同盟（CDU）と社会民主党（SPD）からなる連立政権は、病気休暇規則の変更を発表した。変更内容は、労働者が病気の初日に医師の診断書を提出することを義務付け、電話での診断書取得オプションを廃止するものだ。フリードリヒ・メルツ首相は、ドイツの病気休暇日数が多すぎると述べた。現行規則では、病気の4日目に診断書が必要とされている。この変更は、税制、労働、年金改革の一環として合意された。バルベル・バス労働大臣は、この要件を調査すると述べた。",
-        "ko": "독일의 기독민주연합(CDU)과 사회민주당(SPD)으로 구성된 연립 정부가 병가 규칙 변경을 발표했다. 변경 사항은 근로자가 질병 첫날에 의사의 진단서를 제출하도록 요구하며, 전화로 진단서를 받는 옵션을 종료한다. 프리드리히 메르츠 총리는 독일의 병가 일수가 너무 높다고 밝혔다. 현행 규칙에 따르면 질병 4일째에 진단서가 필요하다. 이 변경은 세금, 노동 및 연금 개혁의 일환으로 합의되었다. 바르벨 바스 노동부 장관은 이 요구 사항을 조사하겠다고 말했다."
-      }
-    },
-    {
-      "url": "https://www.theguardian.com/technology/2026/jul/03/nsw-government-openai-arrives-sydney-terminator-films",
-      "title": "NSW government ‘absolutely thrilled’ to welcome OpenAI ... until someone mentioned the Terminator films",
-      "source": "The Guardian",
-      "topic": "AI",
-      "category": "general",
-      "published": "2026-07-03T14:54:59+00:00",
-      "ai_summary": "標題：新南威爾士州政府「非常興奮」歡迎OpenAI……直到有人提到《未來戰士》電影\n中立摘要：\nOpenAI於2024年8月宣布在澳洲設立首個辦事處，並於2024年12月正式啟用。新南威爾士州科技廳長阿努拉克·錢蒂翁辦公室在2025年3月提交給州議會的電郵顯示，工作人員從一份關於該宣布的新聞稿中刪除了「非常興奮」一詞。在2024年6月的一次會議上，錢蒂翁告訴OpenAI，悉尼吸引了澳洲65%的風險投資，並是Atlassian、Canva和Afterpay的所在地。新南威爾士州政府正在制定一項數據中心策略。環境廳長佩妮·夏普表示，悉尼是數據中心的「極具吸引力地點」。",
-      "summaries": {
-        "zh-HK": "標題：新南威爾士州政府「非常興奮」歡迎OpenAI……直到有人提到《未來戰士》電影\n中立摘要：\nOpenAI於2024年8月宣布在澳洲設立首個辦事處，並於2024年12月正式啟用。新南威爾士州科技廳長阿努拉克·錢蒂翁辦公室在2025年3月提交給州議會的電郵顯示，工作人員從一份關於該宣布的新聞稿中刪除了「非常興奮」一詞。在2024年6月的一次會議上，錢蒂翁告訴OpenAI，悉尼吸引了澳洲65%的風險投資，並是Atlassian、Canva和Afterpay的所在地。新南威爾士州政府正在制定一項數據中心策略。環境廳長佩妮·夏普表示，悉尼是數據中心的「極具吸引力地點」。",
-        "en": "Title: NSW government ‘absolutely thrilled’ to welcome OpenAI ... until someone mentioned the Terminator films\nNeutral:\nOpenAI announced its first Australian office in August 2024 and opened it in December 2024. Emails from the office of NSW technology minister Anoulack Chanthivong, tabled in NSW parliament in March 2025, showed staff removed the phrase \"absolutely thrilled\" from a media statement about the announcement. In a June 2024 meeting, Chanthivong told OpenAI that Sydney attracts 65% of Australia's venture capital and is home to Atlassian, Canva, and Afterpay. The NSW government is developing a datacentre strategy. Environment minister Penny Sharpe stated Sydney is a \"highly desirable location\" for datacentres.",
-        "zh-CN": "标题：新南威尔士州政府“非常兴奋”欢迎OpenAI……直到有人提到《终结者》电影\n中立摘要：\nOpenAI于2024年8月宣布在澳大利亚设立首个办事处，并于2024年12月正式启用。新南威尔士州科技厅长安努拉克·钱蒂翁办公室在2025年3月提交给州议会的电邮显示，工作人员从一份关于该宣布的新闻稿中删除了“非常兴奋”一词。在2024年6月的一次会议上，钱蒂翁告诉OpenAI，悉尼吸引了澳大利亚65%的风险投资，并且是Atlassian、Canva和Afterpay的所在地。新南威尔士州政府正在制定一项数据中心策略。环境厅长佩妮·夏普表示，悉尼是数据中心的“极具吸引力地点”。",
-        "ja": "タイトル：NSW州政府、OpenAIを「絶対に大喜び」で歓迎……誰かがターミネーター映画に言及するまでは\n中立要約：\nOpenAIは2024年8月にオーストラリア初のオフィスを発表し、2024年12月に開設した。2025年3月にNSW州議会に提出された、NSW州技術大臣アヌラック・チャンティボン氏の事務所からの電子メールによると、スタッフがこの発表に関するメディア声明から「絶対に大喜び」という表現を削除していたことが示された。2024年6月の会合で、チャンティボン氏はOpenAI"
-      }
-    },
-    {
-      "url": "https://www.theguardian.com/australia-news/2026/jul/03/nsw-labor-party-conference-anti-protest-laws-aukus-gambling-palestine-ntwnfb",
-      "title": "Entire NSW Labor left calls for controversial anti-protest laws to be scrapped ahead of party conference",
-      "source": "The Guardian",
-      "topic": "Politics",
-      "category": "general",
-      "published": "2026-07-03T14:53:58+00:00",
-      "ai_summary": "標題：新州工黨全體左翼呼籲在黨大會前廢除具爭議的反抗議法\n中立摘要：五十六個新州工黨支部已向州大會提交動議，要求廢除或檢討反抗議法。整個左翼派系支持一項廢除兩項法律的動議。大會定於星期六舉行。州長柯民思將在大會上發言。預計將宣布獵人地區的火車製造計劃。賭博改革、AUKUS及巴勒斯坦等議題亦屬提交的動議範圍。反抗議法由聯盟黨政府於2022年通過，並獲工黨支持。一項限制在宗教場所外抗議的法律於2023年通過。",
-      "summaries": {
-        "zh-HK": "標題：新州工黨全體左翼呼籲在黨大會前廢除具爭議的反抗議法\n中立摘要：五十六個新州工黨支部已向州大會提交動議，要求廢除或檢討反抗議法。整個左翼派系支持一項廢除兩項法律的動議。大會定於星期六舉行。州長柯民思將在大會上發言。預計將宣布獵人地區的火車製造計劃。賭博改革、AUKUS及巴勒斯坦等議題亦屬提交的動議範圍。反抗議法由聯盟黨政府於2022年通過，並獲工黨支持。一項限制在宗教場所外抗議的法律於2023年通過。",
-        "en": "Title: Entire NSW Labor left calls for controversial anti-protest laws to be scrapped ahead of party conference\nNeutral: Fifty-six NSW Labor branches have submitted motions to the state conference calling for the repeal or review of anti-protest laws. The entire left faction supports a motion to repeal two laws. The conference is scheduled for Saturday. Premier Chris Minns will address the conference. An announcement on train manufacturing in the Hunter region is expected. Gambling reform, Aukus, and Palestine are also among submitted motions. The anti-protest laws were passed by the Coalition government in 2022 and supported by Labor. A law restricting protests outside places of worship was passed in 2023.",
-        "zh-CN": "标题：新州工党全体左翼呼吁在党大会前废除有争议的反抗议法\n中立摘要：五十六个新州工党支部已向州大会提交动议，要求废除或检讨反抗议法。整个左翼派系支持一项废除两项法律的动议。大会定于星期六举行。州长柯民思将在大会上发言。预计将宣布猎人地区的火车制造计划。赌博改革、AUKUS及巴勒斯坦等议题亦属提交的动议范围。反抗议法由联盟党政府于2022年通过，并获工党支持。一项限制在宗教场所外抗议的法律于2023年通过。",
-        "ja": "タイトル：NSW労働党左派全体が党大会前に物議を醸す反抗議法の廃止を要求\n中立要約：ニューサウスウェールズ州労働党の56の支部が州大会に、反抗議法の廃止または見直しを求める動議を提出した。左派全体が2つの法律を廃止する動議を支持している。大会は土曜日に開催予定。クリス・ミンズ州知事が大会で演説する。ハンター地域での鉄道車両製造に関する発表が予想される。ギャンブル改革、AUKUS、パレスチナも提出された動議に含まれている。反抗議法は2022年に連合政府によって可決され、労働党が支持した。礼拝所外での抗議を制限する法律は2023年に可決された。",
-        "ko": "제목: NSW 노동당 좌파 전체, 당 대회 앞두고 논란의 반시위법 폐지 촉구\n중립 요약: 56개의"
-      }
-    },
-    {
-      "url": "https://www.nytimes.com/2026/07/03/world/europe/monaco-bomb-suspect-ukraine-anastasiia-berezovska.html",
-      "title": "Woman From Ukraine Was Behind Monaco Bomb Attack, Officials Say",
-      "source": "New York Times",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T14:52:21+00:00",
-      "ai_summary": "• 標題：官員稱摩納哥炸彈襲擊案幕後黑手為烏克蘭女子\n中立摘要：\n一名39歲的烏克蘭女子阿納斯塔西婭·貝雷佐夫斯卡，被當局指控於週一在摩納哥試圖用包裹炸彈殺害三人。她目前仍在逃。",
-      "summaries": {
-        "zh-HK": "• 標題：官員稱摩納哥炸彈襲擊案幕後黑手為烏克蘭女子\n中立摘要：\n一名39歲的烏克蘭女子阿納斯塔西婭·貝雷佐夫斯卡，被當局指控於週一在摩納哥試圖用包裹炸彈殺害三人。她目前仍在逃。",
-        "en": "• Title: Woman From Ukraine Was Behind Monaco Bomb Attack, Officials Say\nNeutral:\nAnastasiia Berezovska, a 39-year-old Ukrainian, is accused by authorities of attempting to kill three people with a parcel bomb in Monaco on Monday. She is currently at large.",
-        "zh-CN": "• 标题：官员称摩纳哥炸弹袭击案幕后黑手为乌克兰女子\n中立摘要：\n一名39岁的乌克兰女子阿纳斯塔西娅·贝雷佐夫斯卡，被当局指控于周一在摩纳哥试图用包裹炸弹杀害三人。她目前仍在逃。",
-        "ja": "• タイトル：当局発表、モナコ爆弾攻撃の背後にウクライナ人女性\n中立要約：\n39歳のウクライナ人女性アナスタシア・ベレゾフスカは、当局により月曜日にモナコで小包爆弾を使って3人を殺害しようとしたと告発されている。彼女は現在逃亡中である。",
-        "ko": "• 제목: 당국, 모나코 폭탄 공격 배후에 우크라이나 여성 있다고 밝혀\n중립 요약:\n39세 우크라이나 여성 아나스타샤 베레조프스카가 당국에 의해 월요일 모나코에서 소포 폭탄으로 3명을 살해하려 한 혐의로 기소되었다. 그녀는 현재 도주 중이다."
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/news/2026/7/3/why-is-the-uk-mired-in-a-maternity-and-neonatal-deaths-scandal?traffic_source=rss",
-      "title": "Why is the UK mired in a maternity and neonatal deaths scandal?",
-      "source": "Al Jazeera",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T14:51:52+00:00",
-      "ai_summary": "標題：為何英國深陷產婦及新生兒死亡醜聞？\n中立摘要：兩項調查發現，英格蘭醫院信託基金的護理質素欠佳，導致產婦及新生兒死亡。一項針對諾丁漢大學醫院信託基金（NUH）的調查發現，13年內有超過500名母親及嬰兒因護理不善而受傷或死亡。2026年發表的奧克肯德報告涵蓋了女王醫療中心及諾丁漢城市醫院。阿莫斯報告亦發現類似結果。牛津大學1月發表的研究報告指出，英國2022至2024年的產婦死亡率為每10萬次分娩12.8人死亡，較2009至2011年高出20%。",
-      "summaries": {
-        "zh-HK": "標題：為何英國深陷產婦及新生兒死亡醜聞？\n中立摘要：兩項調查發現，英格蘭醫院信託基金的護理質素欠佳，導致產婦及新生兒死亡。一項針對諾丁漢大學醫院信託基金（NUH）的調查發現，13年內有超過500名母親及嬰兒因護理不善而受傷或死亡。2026年發表的奧克肯德報告涵蓋了女王醫療中心及諾丁漢城市醫院。阿莫斯報告亦發現類似結果。牛津大學1月發表的研究報告指出，英國2022至2024年的產婦死亡率為每10萬次分娩12.8人死亡，較2009至2011年高出20%。",
-        "en": "Title: Why is the UK mired in a maternity and neonatal deaths scandal?\nNeutral: Two inquiries found substandard care at hospital trusts in England contributed to maternal and neonatal deaths. An inquiry into Nottingham University Hospitals Trust (NUH) found over 500 mothers and babies came to harm or died due to poor care over 13 years. The Ockenden report, released in 2026, covered Queen’s Medical Centre and Nottingham City Hospital. The Amos report found similar outcomes. Oxford University research published in January reported the UK maternal mortality rate for 2022-2024 was 12.8 deaths per 100,000 maternities, 20 percent higher than 2009-2011.",
-        "zh-CN": "标题：为何英国深陷产妇及新生儿死亡丑闻？\n中立摘要：两项调查发现，英格兰医院信托基金的护理质量欠佳，导致产妇及新生儿死亡。一项针对诺丁汉大学医院信托基金（NUH）的调查发现，13年内有超过500名母亲及婴儿因护理不善而受伤或死亡。2026年发表的奥克肯德报告涵盖了女王医疗中心及诺丁汉城市医院。阿莫斯报告亦发现类似结果。牛津大学1月发表的研究报告指出，英国2022至2024年的产妇死亡率为每10万次分娩12.8人死亡，较2009至2011年高出20%。",
-        "ja": "タイトル：なぜ英国は産科・新生児死亡スキャンダルに陥っているのか？\n中立要約：2つの調査により、イングランドの病院トラストにおける標準以下のケアが産科および新生児死亡の一因となっていることが判明した。ノッティンガム大学病院トラスト（NUH）の調査では、13年間に500人以上の母親と赤ちゃんが不適切なケアにより被害を受けたり死亡したりしたことが明らかになった。2026年に発表されたオッケンデン報告書は、クイーンズ・メディカル・センターとノッティンガム・シティ病院を対象としている。エイモス報告書も同様の結果を示した。1月に発表されたオックスフォード大学の研究では、2022～2024年の英国の妊産婦死亡率は出産10万件あたり12.8人で、2009～2011年より20％高いと報告された。",
-        "ko": "제목: 영국이 산모 및 신생아 사망 스캔들에 빠진"
-      }
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-07-03/armenia-passes-bill-to-restrict-citizens-abroad-from-voting",
-      "title": "Armenia Passes Bill to Restrict Citizens Abroad From Voting",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-04/andy-burnham-s-call-on-ed-miliband-could-shape-his-premiership",
+      "title": "Andy Burnham’s Call on Ed Miliband Could Shape His Premiership",
       "source": "Bloomberg",
-      "topic": "Finance",
-      "category": "finance",
-      "published": "2026-07-03T14:45:30+00:00",
-      "ai_summary": "• 標題：亞美尼亞通過法案限制海外公民投票權\n中立摘要：\n2021年3月25日，亞美尼亞議會通過一項法案，限制居住在國外的公民在全國選舉中的投票權。該法規適用於大多數居住在國外的亞美尼亞公民。這項法案是在2021年6月20日備受爭議的議會選舉後不到一個月通過的，該選舉曾面臨法律挑戰。",
-      "summaries": {
-        "zh-HK": "• 標題：亞美尼亞通過法案限制海外公民投票權\n中立摘要：\n2021年3月25日，亞美尼亞議會通過一項法案，限制居住在國外的公民在全國選舉中的投票權。該法規適用於大多數居住在國外的亞美尼亞公民。這項法案是在2021年6月20日備受爭議的議會選舉後不到一個月通過的，該選舉曾面臨法律挑戰。",
-        "en": "• Title: Armenia Passes Bill to Restrict Citizens Abroad From Voting\nNeutral:\nOn March 25, 2021, Armenia's parliament passed a bill restricting voting rights for citizens living abroad in national elections. The legislation applies to most Armenian citizens residing outside the country. The bill was approved less than one month after a disputed parliamentary election on June 20, 2021, which faced legal challenges.",
-        "zh-CN": "• 标题：亚美尼亚通过法案限制海外公民投票权\n中立摘要：\n2021年3月25日，亚美尼亚议会通过一项法案，限制居住在国外的公民在全国选举中的投票权。该法规适用于大多数居住在国外的亚美尼亚公民。这项法案是在2021年6月20日备受争议的议会选举后不到一个月通过的，该选举曾面临法律挑战。",
-        "ja": "• タイトル：アルメニア、在外国民の投票権を制限する法案を可決\n中立な要約：\n2021年3月25日、アルメニア議会は国外に居住する国民の国政選挙における投票権を制限する法案を可決しました。この法律は、国外に居住する大多数のアルメニア国民に適用されます。この法案は、法的異議申し立てに直面した2021年6月20日の論争の的となった議会選挙から1か月も経たないうちに承認されました。",
-        "ko": "• 제목: 아르메니아, 해외 시민 투표권 제한 법안 통과\n중립 요약:\n2021년 3월 25일, 아르메니아 의회는 해외에 거주하는 시민들의 총선 투표권을 제한하는 법안을 통과시켰습니다. 이 법안은 국외에 거주하는 대부분의 아르메니아 시민에게 적용됩니다. 해당 법안은 법적 도전에 직면했던 2021년 6월 20일의 논란의 여지가 있는 의회 선거 이후 한 달도 채 되지 않아 승인되었습니다."
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/sports/2026/7/3/gaza-sports-community-pledges-to-continue-legacy-of-killed-goalkeeper?traffic_source=rss",
-      "title": "Gaza sports community pledges to continue legacy of killed goalkeeper",
-      "source": "Al Jazeera",
-      "topic": "World",
-      "category": "general",
-      "published": "2026-07-03T14:43:21+00:00",
-      "ai_summary": "[Skipped: LOW]",
-      "summaries": {
-        "zh-HK": "[此文可信度評級為 LOW，暫不處理]"
-      }
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-07-03/canadian-stocks-enjoy-broad-gains-after-new-pipeline-proposal",
-      "title": "Canadian Stocks Enjoy Broad Gains After New Pipeline Proposal",
-      "source": "Bloomberg Crypto",
-      "topic": "Finance",
-      "category": "finance",
-      "published": "2026-07-03T14:37:05+00:00",
-      "ai_summary": "• 加拿大股市在總理馬克·卡尼宣布一項通往該國西岸的新管道項目後，於週五上午普遍上揚。",
-      "summaries": {
-        "zh-HK": "• 加拿大股市在總理馬克·卡尼宣布一項通往該國西岸的新管道項目後，於週五上午普遍上揚。",
-        "en": "• Canadian stocks enjoyed broad gains Friday morning after Prime Minister Mark Carney announced a new pipeline project to the country's West Coast.",
-        "zh-CN": "• 加拿大股市在总理马克·卡尼宣布一项通往该国西海岸的新管道项目后，于周五上午普遍上涨。",
-        "ja": "• カナダの株式市場は、マーク・カーニー首相が同国西海岸への新たなパイプライン計画を発表した後、金曜日の午前中に広範な上昇を見せた。",
-        "ko": "• 캐나다 증시는 마크 카니 총리가 서부 해안으로 연결되는 새로운 파이프라인 프로젝트를 발표한 후 금요일 오전에 전반적으로 상승했습니다."
-      }
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-07-03/opec-output-surged-in-june-as-hormuz-flows-jumped-survey-shows",
-      "title": "OPEC Output Surged in June as Hormuz Flows Jumped, Survey Shows",
-      "source": "Bloomberg Crypto",
-      "topic": "Trading",
-      "category": "finance",
-      "published": "2026-07-03T14:36:39+00:00",
-      "ai_summary": "• 標題：調查顯示，OPEC 6 月產量飆升，霍爾木茲海峽流量激增\n中立摘要：根據彭博調查，石油輸出國組織（OPEC）6 月原油產量增加。波斯灣成員國恢復經霍爾木茲海峽的出口。此前美國與伊朗達成和平協議。",
-      "summaries": {
-        "zh-HK": "• 標題：調查顯示，OPEC 6 月產量飆升，霍爾木茲海峽流量激增\n中立摘要：根據彭博調查，石油輸出國組織（OPEC）6 月原油產量增加。波斯灣成員國恢復經霍爾木茲海峽的出口。此前美國與伊朗達成和平協議。",
-        "en": "• Title: OPEC Output Surged in June as Hormuz Flows Jumped, Survey Shows\nNeutral: OPEC crude oil production increased in June. Persian Gulf members resumed exports through the Strait of Hormuz. This followed a peace accord between the US and Iran, according to a Bloomberg survey.",
-        "zh-CN": "• 标题：调查显示，OPEC 6 月产量飙升，霍尔木兹海峡流量激增\n中立摘要：根据彭博调查，石油输出国组织（OPEC）6 月原油产量增加。波斯湾成员国恢复经霍尔木兹海峡的出口。此前美国与伊朗达成和平协议。",
-        "ja": "• タイトル：調査で明らかに、OPECの6月生産量が急増、ホルムズ海峡の通過量も増加\n中立要約：ブルームバーグの調査によると、OPECの6月の原油生産量が増加した。ペルシャ湾岸加盟国はホルムズ海峡を通じた輸出を再開した。これは米国とイランの間の和平合意を受けたもの。",
-        "ko": "• 제목: 조사 결과, 6월 OPEC 생산량 급증, 호르무즈 해협 통행량 증가\n중립 요약: 블룸버그 조사에 따르면, 6월 OPEC 원유 생산량이 증가했습니다. 페르시아만 회원국들은 호르무즈 해협을 통한 수출을 재개했습니다. 이는 미국과 이란 간의 평화 협정에 따른 것입니다."
-      }
-    },
-    {
-      "url": "https://www.bbc.co.uk/news/articles/cly87w9z0e5o?at_medium=RSS&at_campaign=rss",
-      "title": "Syrian ex-colonel accused of crimes against humanity deemed 'unfit to plead'",
-      "source": "BBC World",
-      "topic": "General",
-      "category": "general",
-      "published": "2026-07-03T14:33:08+00:00",
-      "ai_summary": "標題：被控危害人類罪嘅敍利亞前上校被裁定「唔適合答辯」\n中立摘要：\n58歲嘅前敍利亞空軍情報上校薩利姆·米歇爾·阿爾-薩勒姆，被倫敦奧卑利法院嘅Cheema-Grubb法官裁定「唔適合答辯」同「唔適合接受審訊」。呢個決定係基於四位醫學專家對佢運動神經元疾病診斷嘅一致意見。阿爾-薩勒姆被控三項謀殺罪（作為危害人類罪）、三項酷刑罪，以及一項與謀殺相關嘅附帶行為罪，涉及2011年同2012年喺大馬士革嘅事件。佢透過視像出庭，戴住氧氣面罩。控方接受咗呢個決定。案件事實審訊定於2027年進行。",
-      "summaries": {
-        "zh-HK": "標題：被控危害人類罪嘅敍利亞前上校被裁定「唔適合答辯」\n中立摘要：\n58歲嘅前敍利亞空軍情報上校薩利姆·米歇爾·阿爾-薩勒姆，被倫敦奧卑利法院嘅Cheema-Grubb法官裁定「唔適合答辯」同「唔適合接受審訊」。呢個決定係基於四位醫學專家對佢運動神經元疾病診斷嘅一致意見。阿爾-薩勒姆被控三項謀殺罪（作為危害人類罪）、三項酷刑罪，以及一項與謀殺相關嘅附帶行為罪，涉及2011年同2012年喺大馬士革嘅事件。佢透過視像出庭，戴住氧氣面罩。控方接受咗呢個決定。案件事實審訊定於2027年進行。",
-        "en": "Title: Syrian ex-colonel accused of crimes against humanity deemed 'unfit to plead'\nNeutral:\nSalem Michel Al-Salem, 58, a former Syrian Air Force Intelligence colonel, was deemed \"unfit to plead\" and \"unfit to stand trial\" by Justice Cheema-Grubb at London's Old Bailey. The decision followed the unified opinion of four medical experts regarding his motor neurone disease diagnosis. Al-Salem faces charges of three counts of murder as a crime against humanity, three counts of torture, and one charge of conduct ancillary to murder, relating to alleged events in Damascus in 2011 and 2012. He appeared via video with an oxygen mask. The Crown accepted the decision. A trial of the facts is scheduled for 2027.",
-        "zh-CN": "标题：被控危害人类罪的前叙利亚上校被裁定“不适合答辩”\n中立摘要：\n58岁的前叙利亚空军情报上校萨利姆·米歇尔·阿尔-萨勒姆，被伦敦老贝利法院的Cheema-Grubb法官裁定“不适合答辩”和“不适合接受审判”。这一决定基于四位医学专家对其运动神经元疾病诊断的一致意见。阿尔-萨勒姆被控三项谋杀罪（作为危害人类罪）、三项酷刑罪，以及一项与谋杀相关的附带行为罪，涉及2011年和2012年在大马士革的涉嫌事件。他通过视频出庭，戴着氧气面罩。控方接受了这一决定。案件事实审理定于2027年进行。",
-        "ja": "タイトル：人道に対する罪で告発されたシリアの元大佐、「答弁不能」と判断\n中立要約：\n58歳の元シリア空軍情報大佐サリム・ミシェル・アル＝サレムは、ロンドンのオールド・ベイリー裁判所でチーマ＝グラブ判事により「答弁不能」および「裁判に耐えられない」と判断された。この決定は、彼の運動ニューロン疾患の診断に関する4人の医学専門家の一致した意見に基づく。アル＝サレムは、2011年と2012年にダマスカスで起きたとされる事件に関連し、人道に対する罪としての殺人3件、拷問3件、および殺人への付随行為1件の"
-      }
-    },
-    {
-      "url": "https://www.ft.com/content/5128e476-db8b-48ac-a8fb-0f16d0f5c2ed",
-      "title": "Trump will oppose heavy US AI regulation, says outgoing tech adviser",
-      "source": "FT Tech",
-      "topic": "Regulation",
-      "category": "tech",
-      "published": "2026-07-03T14:32:49+00:00",
-      "ai_summary": "標題：特朗普將反對美國嚴格監管人工智能，即將離任的科技顧問表示\n中立：\n即將離任的科技顧問斯里拉姆·克里希南向《金融時報》表示，特朗普總統反對美國對人工智能實施嚴格監管。克里希南稱，總統反對設立集中式的人工智能監管機構。此言論發表之際，針對人工智能的反對聲浪日益高漲。",
-      "summaries": {
-        "zh-HK": "標題：特朗普將反對美國嚴格監管人工智能，即將離任的科技顧問表示\n中立：\n即將離任的科技顧問斯里拉姆·克里希南向《金融時報》表示，特朗普總統反對美國對人工智能實施嚴格監管。克里希南稱，總統反對設立集中式的人工智能監管機構。此言論發表之際，針對人工智能的反對聲浪日益高漲。",
-        "en": "Title: Trump will oppose heavy US AI regulation, says outgoing tech adviser\nNeutral:\nSriram Krishnan, outgoing tech adviser, stated to the Financial Times that President Trump opposes heavy regulation of artificial intelligence in the United States. Krishnan said the president is against a centralized AI regulator. The statement was made amid growing backlash against AI.",
-        "zh-CN": "标题：特朗普将反对美国严格监管人工智能，即将离任的科技顾问表示\n中立：\n即将离任的科技顾问斯里拉姆·克里希南向《金融时报》表示，特朗普总统反对美国对人工智能实施严格监管。克里希南称，总统反对设立集中式的人工智能监管机构。此言论发表之际，针对人工智能的反对声浪日益高涨。",
-        "ja": "タイトル：トランプ氏は米国の厳格なAI規制に反対する、退任するテクノロジー顧問が発言\n中立：\n退任するテクノロジー顧問のスリラム・クリシュナン氏は、フィナンシャル・タイムズに対し、トランプ大統領が米国における人工知能の厳格な規制に反対していると述べた。クリシュナン氏は、大統領が中央集権的なAI規制機関に反対していると語った。この発言は、AIに対する反発が高まる中で行われた。",
-        "ko": "제목: 트럼프, 미국의 과도한 AI 규제 반대할 것, 퇴임하는 기술 고문 발언\n중립:\n퇴임하는 기술 고문 스리람 크리슈난이 파이낸셜 타임스에 트럼프 대통령이 미국 내 인공지능에 대한 과도한 규제를 반대한다고 밝혔다. 크리슈난은 대통령이 중앙집권적 AI 규제 기관에 반대한다고 말했다. 이 발언은 AI에 대한 반발이 커지는 가운데 나왔다."
-      }
-    },
-    {
-      "url": "https://www.aljazeera.com/news/2026/7/3/mourners-bury-victims-of-damascus-cafe-bombing-with-six-lawyers-among-dead?traffic_source=rss",
-      "title": "Mourners bury victims of Damascus cafe bombing with six lawyers among dead",
-      "source": "Al Jazeera",
-      "topic": "World",
-      "category": "general",
-      "published": "2026-07-03T14:28:45+00:00",
-      "ai_summary": "標題：哀悼者埋葬大馬士革咖啡館爆炸案遇難者，六名律師身亡\n2026年7月3日，敘利亞大馬士革al-Hijaz區al-Nasr街的Al-Mushairiya咖啡館發生炸彈爆炸。爆炸造成10人死亡，包括六名律師，另有22人受傷。該咖啡館距離司法宮約70米。大馬士革省長Maher Marwan形容該裝置為「簡陋」。敘利亞律師協會發表聲明哀悼遇難律師。暫無組織承認責任。包括土耳其、伊拉克、埃及、卡塔爾和約旦在內的地區政府譴責了這次襲擊。歐盟亦予以譴責。",
-      "summaries": {
-        "zh-HK": "標題：哀悼者埋葬大馬士革咖啡館爆炸案遇難者，六名律師身亡\n2026年7月3日，敘利亞大馬士革al-Hijaz區al-Nasr街的Al-Mushairiya咖啡館發生炸彈爆炸。爆炸造成10人死亡，包括六名律師，另有22人受傷。該咖啡館距離司法宮約70米。大馬士革省長Maher Marwan形容該裝置為「簡陋」。敘利亞律師協會發表聲明哀悼遇難律師。暫無組織承認責任。包括土耳其、伊拉克、埃及、卡塔爾和約旦在內的地區政府譴責了這次襲擊。歐盟亦予以譴責。",
-        "en": "Title: Mourners bury victims of Damascus cafe bombing with six lawyers among dead\nOn July 3, 2026, a bomb exploded at Al-Mushairiya Cafe on al-Nasr Street in the al-Hijaz district of Damascus, Syria. The blast killed 10 people, including six lawyers, and wounded 22 others. The cafe is located approximately 70 meters from the Palace of Justice. Damascus Governor Maher Marwan described the device as \"primitive.\" The Syrian Bar Association issued a statement mourning the lawyers. No group claimed responsibility. Regional governments including Turkiye, Iraq, Egypt, Qatar, and Jordan condemned the attack. The European Union also condemned it.",
-        "zh-CN": "标题：哀悼者埋葬大马士革咖啡馆爆炸案遇难者，六名律师身亡\n2026年7月3日，叙利亚大马士革al-Hijaz区al-Nasr街的Al-Mushairiya咖啡馆发生炸弹爆炸。爆炸造成10人死亡，包括六名律师，另有22人受伤。该咖啡馆距离司法宫约70米。大马士革省长Maher Marwan形容该装置为“简陋”。叙利亚律师协会发表声明哀悼遇难律师。暂无组织承认责任。包括土耳其、伊拉克、埃及、卡塔尔和约旦在内的地区政府谴责了这次袭击。欧盟亦予以谴责。",
-        "ja": "タイトル：ダマスカスのカフェ爆破事件の犠牲者を埋葬、弁護士6名が死亡\n2026年7月3日、シリア・ダマスカスのアル・ヒジャーズ地区アル・ナスル通りにあるアル・ムシャイリヤ・カフェで爆弾が爆発した。爆発により10人が死亡し、そのうち6人は弁護士で、他に22人が負傷した。カフェは司法宮殿から約70メートルの場所にある。ダマスカス知事マヘル・マルワンはこの装置を「原始的なもの」と表現した。シリア弁護士会は声明を発表し、弁護士たちを悼んだ。犯行声明を出したグループはない。トルコ、イラク、エジプト、カタール、ヨルダンなどの地域政府は攻撃を非難した。欧州連合も非難した。",
-        "ko": "제목: 다마스쿠스 카페 폭탄 테러 희생자들 장례, 변호사 6"
-      }
-    },
-    {
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "title": "Here’s what happened in crypto today",
-      "source": "CoinTelegraph",
-      "topic": "Bitcoin",
-      "category": "crypto",
-      "published": "2026-07-03T14:20:46+00:00",
-      "ai_summary": "[Skipped: LOW]",
-      "summaries": {
-        "zh-HK": "[此文可信度評級為 LOW，暫不處理]"
-      }
-    },
-    {
-      "url": "https://www.marketwatch.com/story/a-looming-ai-disappointment-and-rising-yields-why-one-research-firm-is-hitting-the-brakes-on-u-s-stocks-4bfaa67b?mod=mw_rss_topstories",
-      "title": "A looming AI disappointment and rising yields. Why one research firm is hitting the brakes on U.S. stocks.",
-      "source": "MarketWatch",
       "topic": "DeFi",
       "category": "finance",
-      "published": "2026-07-03T14:17:00+00:00",
-      "ai_summary": "• 標題：人工智能可能令人失望及收益率上升。一家研究機構為何對美國股市踩下煞車。\n中立摘要：宏觀研究委員會（MacroResearchBoard）就未來12個月的美國股市發出警告。該機構指出，人工智能相關的潛在失望情緒以及收益率上升是影響因素。此警告適用於目前由科技股主導的市場。",
+      "published": "2026-07-04T05:00:00+00:00",
+      "ai_summary": "(neutralize failed)",
       "summaries": {
-        "zh-HK": "• 標題：人工智能可能令人失望及收益率上升。一家研究機構為何對美國股市踩下煞車。\n中立摘要：宏觀研究委員會（MacroResearchBoard）就未來12個月的美國股市發出警告。該機構指出，人工智能相關的潛在失望情緒以及收益率上升是影響因素。此警告適用於目前由科技股主導的市場。",
-        "en": "• Title: A looming AI disappointment and rising yields. Why one research firm is hitting the brakes on U.S. stocks.\nNeutral: MacroResearchBoard issued a warning regarding U.S. stocks over the next 12 months. The firm cited a potential AI-related disappointment and rising yields as factors. The warning applies to a market currently dominated by technology stocks.",
-        "zh-CN": "• 标题：人工智能可能令人失望及收益率上升。一家研究机构为何对美国股市踩下刹车。\n中立摘要：宏观研究委员会（MacroResearchBoard）就未来12个月的美国股市发出警告。该机构指出，人工智能相关的潜在失望情绪以及收益率上升是影响因素。此警告适用于目前由科技股主导的市场。",
-        "ja": "• タイトル：迫るAI失望と利回り上昇。ある調査会社が米国株にブレーキをかける理由。\n中立要約：マクロリサーチボード（MacroResearchBoard）は、今後12か月の米国株に関する警告を発しました。同社は、AI関連の潜在的な失望と利回り上昇を要因として挙げています。この警告は、現在テクノロジー株が支配する市場に適用されます。",
-        "ko": "• 제목: 다가오는 AI 실망감과 수익률 상승. 한 리서치 회사가 미국 주식에 브레이크를 거는 이유.\n중립 요약: 매크로리서치보드(MacroResearchBoard)가 향후 12개월간 미국 주식에 대해 경고를 발령했습니다. 이 회사는 AI 관련 잠재적 실망감과 수익률 상승을 요인으로 지목했습니다. 이 경고는 현재 기술주가 주도하는 시장에 적용됩니다."
+        "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://www.marketwatch.com/story/we-were-stunned-my-daughter-39-said-her-mother-in-law-gives-her-more-money-than-we-do-do-i-call-her-out-b63d087c?mod=mw_rss_topstories",
-      "title": "‘We were stunned’: My daughter, 39, said her mother-in-law gives her more money than we do. Do I call her out?",
-      "source": "MarketWatch",
+      "url": "https://cointelegraph.com/news/us-law-enforcement-group-drops-opposition-to-clarity-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "title": "US law enforcement group drops opposition to CLARITY Act: Report",
+      "source": "CoinTelegraph",
+      "topic": "Regulation",
+      "category": "crypto",
+      "published": "2026-07-04T04:59:17+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/7/4/trump-calls-communism-a-mortal-threat-at-us-250th-birthday-event?traffic_source=rss",
+      "title": "Trump calls communism a ‘mortal threat’ at US 250th birthday event",
+      "source": "Al Jazeera",
+      "topic": "Politics",
+      "category": "general",
+      "published": "2026-07-04T04:54:40+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-07-04/trump-commemorates-fourth-of-july-with-speech-at-mount-rushmore",
+      "title": "Trump Commemorates Fourth of July With Speech at Mount Rushmore",
+      "source": "Bloomberg",
       "topic": "Finance",
       "category": "finance",
-      "published": "2026-07-03T14:15:00+00:00",
-      "ai_summary": "標題：「我哋好震驚」：我個女39歲，話奶奶畀佢嘅錢多過我哋。我應唔應該同佢講清楚？\n中立摘要：\n一名39歲女子從父母那裡收到100美元生日禮物。她告訴父母，奶奶寄了400美元給她。父母正在考慮是否要與她討論此事。",
+      "published": "2026-07-04T04:52:10+00:00",
+      "ai_summary": "(neutralize failed)",
       "summaries": {
-        "zh-HK": "標題：「我哋好震驚」：我個女39歲，話奶奶畀佢嘅錢多過我哋。我應唔應該同佢講清楚？\n中立摘要：\n一名39歲女子從父母那裡收到100美元生日禮物。她告訴父母，奶奶寄了400美元給她。父母正在考慮是否要與她討論此事。",
-        "en": "Title: ‘We were stunned’: My daughter, 39, said her mother-in-law gives her more money than we do. Do I call her out?\nNeutral:\nA 39-year-old woman received a $100 birthday gift from her parents. She told them her mother-in-law had sent her $400. The parents are considering whether to address this with her.",
-        "zh-CN": "标题：「我们很震惊」：我女儿39岁，说婆婆给她的钱比我们多。我该不该跟她说清楚？\n中立摘要：\n一名39岁女子从父母那里收到100美元生日礼物。她告诉父母，婆婆寄了400美元给她。父母正在考虑是否要与她讨论此事。",
-        "ja": "タイトル：「私たちは驚いた」：39歳の娘が、義母からもらうお金は私たちよりも多いと言いました。私は彼女に指摘すべきでしょうか？\n中立な要約：\n39歳の女性が両親から100ドルの誕生日プレゼントを受け取りました。彼女は両親に、義母から400ドルが送られたと話しました。両親はこれについて彼女と話し合うべきかどうか検討しています。",
-        "ko": "제목: '우리는 충격을 받았습니다': 39세 딸이 시어머니가 우리보다 더 많은 돈을 준다고 말했습니다. 제가 그녀에게 따져야 할까요?\n중립 요약:\n한 39세 여성이 부모님으로부터 100달러의 생일 선물을 받았습니다. 그녀는 부모님에게 시어머니가 400달러를 보냈다고 말했습니다. 부모님은 이 문제를 그녀와 논의할지 고려하고 있습니다."
+        "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://www.ft.com/content/3ed70f64-7443-4241-ac0f-38eabe218913",
-      "title": "‘It’s whack-a-mole’: how Europe’s smart border melted down",
+      "url": "https://www.bbc.co.uk/news/videos/cewqpdgqj0ko?at_medium=RSS&at_campaign=rss",
+      "title": "Watch: Taylor Swift and Travis Kelce are married - here's how the day unfolded",
+      "source": "BBC World",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T04:50:06+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.theguardian.com/australia-news/2026/jul/04/sydney-records-hottest-june-since-1859-as-expert-warns-new-high-a-signature-of-global-warming",
+      "title": "Sydney records hottest June since 1859 as expert warns new high a ‘signature’ of global warming",
+      "source": "The Guardian",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T04:37:24+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/cp36l4e6v9po?at_medium=RSS&at_campaign=rss",
+      "title": "Fireworks, flyovers and a 'really long' Trump speech ahead as US celebrates 250th",
+      "source": "BBC World",
+      "topic": "Politics",
+      "category": "general",
+      "published": "2026-07-04T04:31:13+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.ft.com/content/46ae86e3-b7a4-4ef6-b90a-bc96214c521c",
+      "title": "Trump uses Mount Rushmore speech to warn of ‘communist menace’ in US",
+      "source": "Financial Times",
+      "topic": "Politics",
+      "category": "finance",
+      "published": "2026-07-04T04:23:42+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-07-04/russia-said-it-captured-key-ukraine-stronghold-in-donetsk-region",
+      "title": "Russia Said It Captured Key Ukraine Stronghold in Donetsk Region",
+      "source": "Bloomberg Crypto",
+      "topic": "World",
+      "category": "finance",
+      "published": "2026-07-04T04:21:41+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.theguardian.com/australia-news/2026/jul/04/chris-minns-admits-nsw-labor-needs-to-climb-everest-to-stay-in-power-as-protesters-interrupt-state-conference-ntwnfb",
+      "title": "Chris Minns says Labor needs to ‘climb Everest’ to stay in power as One Nation looms over state conference",
+      "source": "The Guardian",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T04:15:38+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.aljazeera.com/sports/2026/7/4/fifa-world-cup-round-of-16-match-schedule-which-teams-qualified?traffic_source=rss",
+      "title": "FIFA World Cup: Round of 16 match schedule and which teams qualified",
+      "source": "Al Jazeera",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T04:14:29+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.aljazeera.com/news/2026/7/4/thirty-two-years-on-young-rwandans-reflect-on-progress-pain-and-hope?traffic_source=rss",
+      "title": "Thirty-two years on, young Rwandans reflect on progress, pain and hope",
+      "source": "Al Jazeera",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T04:12:20+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/cx2k4k7jqeno?at_medium=RSS&at_campaign=rss",
+      "title": "Iran begins public mourning for Ayatollah killed in February",
+      "source": "BBC World",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T04:12:06+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.nytimes.com/2026/07/04/world/asia/australia-china-politics.html",
+      "title": "Australia Tried to Push Back on China. China Pushed Harder.",
+      "source": "New York Times",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T04:01:06+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.ft.com/content/4787fc56-f131-4b3b-b90d-c22aa68e7354",
+      "title": "Good vibes are masking a reset in markets",
+      "source": "FT Tech",
+      "topic": "Finance",
+      "category": "tech",
+      "published": "2026-07-04T04:00:43+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.ft.com/content/67d7afb6-117c-4335-815c-72000e610b65",
+      "title": "It is investors vs gamers as Sony ditches discs",
+      "source": "FT Tech",
+      "topic": "Finance",
+      "category": "tech",
+      "published": "2026-07-04T04:00:43+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.ft.com/content/bbd9c82a-7154-40a0-ab7b-4b822f554fa8",
+      "title": "Won’t somebody not think of the children?",
+      "source": "FT Tech",
+      "topic": "Tech",
+      "category": "tech",
+      "published": "2026-07-04T04:00:34+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.ft.com/content/3265b413-f8b6-4ee9-a058-5d6689df9100",
+      "title": "My fellow American: who should be remembered for the next 250 years?",
       "source": "Financial Times",
       "topic": "Finance",
       "category": "finance",
-      "published": "2026-07-03T14:00:58+00:00",
-      "ai_summary": "標題：「打地鼠」：歐洲智能邊境如何崩潰\n中立：歐盟的出入境系統（EES）於2008年首次提出，是一個旨在登記非歐盟旅客的自動化邊境系統。其實施已多次延遲。截至2024年，該系統仍未投入運作。這些延誤已在邊境口岸為旅客造成混亂。該系統的目的是通過追蹤出入境記錄來加強安全。",
+      "published": "2026-07-04T04:00:34+00:00",
+      "ai_summary": "(neutralize failed)",
       "summaries": {
-        "zh-HK": "標題：「打地鼠」：歐洲智能邊境如何崩潰\n中立：歐盟的出入境系統（EES）於2008年首次提出，是一個旨在登記非歐盟旅客的自動化邊境系統。其實施已多次延遲。截至2024年，該系統仍未投入運作。這些延誤已在邊境口岸為旅客造成混亂。該系統的目的是通過追蹤出入境記錄來加強安全。",
-        "en": "Title: ‘It’s whack-a-mole’: how Europe’s smart border melted down\nNeutral: The European Union's Entry/Exit System (EES), first proposed in 2008, is an automated border system designed to register non-EU travelers. Its implementation has been delayed multiple times. As of 2024, the system is not operational. The delays have caused disruptions for travelers at border points. The system's purpose is to enhance security by tracking entries and exits.",
-        "zh-CN": "标题：「打地鼠」：欧洲智能边境如何崩溃\n中立：欧盟的出入境系统（EES）于2008年首次提出，是一个旨在登记非欧盟旅客的自动化边境系统。其实施已多次延迟。截至2024年，该系统仍未投入运作。这些延误已在边境口岸为旅客造成混乱。该系统的目的是通过追踪出入境记录来加强安全。",
-        "ja": "タイトル：「モグラ叩き」：欧州のスマートボーダーが崩壊した経緯\n中立：欧州連合の出入国システム（EES）は2008年に初めて提案され、非EU旅行者を登録するための自動化された国境システムです。その導入は何度も延期されています。2024年現在、このシステムは稼働していません。これらの遅延により、国境地点で旅行者に混乱が生じています。このシステムの目的は、出入国を追跡することでセキュリティを強化することです。",
-        "ko": "제목: '두더지 잡기': 유럽의 스마트 국경이 붕괴된 과정\n중립: 유럽연합의 출입국 시스템(EES)은 2008년에 처음 제안되었으며, 비EU 여행자를 등록하도록 설계된 자동화된 국경 시스템입니다. 그 시행은 여러 차례 연기되었습니다. 2024년 현재, 이 시스템은 작동하지 않습니다. 이러한 지연은 국경 지점에서 여행자들에게 혼란을 초래했습니다. 이 시스템의 목적은 출입국을 추적하여 보안을 강화하는 것입니다."
+        "zh-HK": "(neutralize failed)"
       }
     },
     {
-      "url": "https://arstechnica.com/space/2026/07/rocket-report-indian-startup-nears-first-launch-spacexs-millenary-milestone/",
-      "title": "Rocket Report: Indian startup nears first launch; SpaceX's millenary milestone",
-      "source": "ArsTechnica",
+      "url": "https://www.ft.com/content/0a7844b1-c91c-473e-a2f9-29d7c964b1cc",
+      "title": "My America: On the strangeness of pledging allegiance to the flag",
+      "source": "Financial Times",
+      "topic": "Finance",
+      "category": "finance",
+      "published": "2026-07-04T04:00:34+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.ft.com/content/260f93d4-c7a2-443b-8c3a-c62bf8c626d0",
+      "title": "My America: Can we keep this great experiment?",
+      "source": "Financial Times",
+      "topic": "Finance",
+      "category": "finance",
+      "published": "2026-07-04T04:00:21+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.ft.com/content/34eb59fa-fc22-4b03-b9e6-205443d19dd1",
+      "title": "Simon Schama: The founding fathers and the battle for America’s future",
+      "source": "Financial Times",
+      "topic": "World",
+      "category": "finance",
+      "published": "2026-07-04T04:00:21+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.ft.com/content/b640ab8d-4273-43be-8206-be750c004665",
+      "title": "Yankee pyramids: the meaning of presidential libraries",
+      "source": "Financial Times",
+      "topic": "Politics",
+      "category": "finance",
+      "published": "2026-07-04T04:00:21+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.scmp.com/news/china/politics/article/3359359/will-reluctance-local-government-undermine-reforms-chinas-hukou-system?utm_source=rss_feed",
+      "title": "Will reluctance from local government undermine reforms to China’s hukou system?",
+      "source": "SCMP",
+      "topic": "Politics",
+      "category": "general",
+      "published": "2026-07-04T04:00:19+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.ft.com/content/2601f17e-001f-4f84-a9cc-9979ef63b898",
+      "title": "What happens when an online game dies?",
+      "source": "FT Tech",
       "topic": "Science",
       "category": "tech",
-      "published": "2026-07-03T13:55:35+00:00",
-      "ai_summary": "• 標題：火箭報告：印度初創公司接近首次發射；SpaceX 達成千年里程碑\n中立：NASA 授予 Rocket Lab 三項使用 Electron 火箭的專屬發射合約。",
+      "published": "2026-07-04T04:00:12+00:00",
+      "ai_summary": "(neutralize failed)",
       "summaries": {
-        "zh-HK": "• 標題：火箭報告：印度初創公司接近首次發射；SpaceX 達成千年里程碑\n中立：NASA 授予 Rocket Lab 三項使用 Electron 火箭的專屬發射合約。",
-        "en": "• Title: Rocket Report: Indian startup nears first launch; SpaceX's millenary milestone\nNeutral: NASA awarded Rocket Lab contracts for three dedicated launches using the Electron rocket.",
-        "zh-CN": "• 标题：火箭报告：印度初创公司接近首次发射；SpaceX 达成千年里程碑\n中立：NASA 授予 Rocket Lab 三项使用 Electron 火箭的专属发射合约。",
-        "ja": "• タイトル：ロケットレポート：インドの新興企業が初打ち上げに近づく；SpaceXの千年のマイルストーン\n中立：NASAはRocket Labに対し、Electronロケットを使用した3回の専用打ち上げ契約を授与した。",
-        "ko": "• 제목: 로켓 리포트: 인도 스타트업, 첫 발사 임박; SpaceX의 천년 이정표\n중립: NASA는 Rocket Lab에 Electron 로켓을 사용한 3회의 전용 발사 계약을 체결했습니다."
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.ft.com/content/21b54a7c-79fa-474f-99c4-e79e7cc30a26",
+      "title": "Who really designed that dress? How fashion is reacting to AI",
+      "source": "FT Tech",
+      "topic": "Tech",
+      "category": "tech",
+      "published": "2026-07-04T04:00:12+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.npr.org/2026/07/04/nx-s1-5876246/reflections-on-americas-250th-birthday",
+      "title": "Reflections on America's 250th birthday",
+      "source": "NPR",
+      "topic": "General",
+      "category": "general",
+      "published": "2026-07-04T04:00:00+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://cointelegraph.com/markets/bitcoin-ether-extend-relief-rallies-as-extreme-fear-meets-renewed-etf-buying?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "title": "Bitcoin, Ether extend relief rallies as extreme fear meets renewed ETF buying",
+      "source": "CoinTelegraph",
+      "topic": "Bitcoin",
+      "category": "crypto",
+      "published": "2026-07-04T03:54:18+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.blocktempo.com/samsung-seeks-third-dram-price-hike-ai-squeezes-memory-supply/",
+      "title": "三星傳出 Q3 DRAM 再漲 20%！一年漲三次，AI 排擠產能燒向手機、PC",
+      "source": "動區動趨 (BlockTempo)",
+      "topic": "Trading",
+      "category": "crypto",
+      "published": "2026-07-04T03:53:37+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.blocktempo.com/musk-forbes-innovator-humanoid-robots-streets-billion-2031-abundance-keynes/",
+      "title": "馬斯克預測5年後：全球至少有1億台人形機器人，甚至10億台",
+      "source": "動區動趨 (BlockTempo)",
+      "topic": "Crypto",
+      "category": "crypto",
+      "published": "2026-07-04T03:51:15+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.aljazeera.com/news/2026/7/4/arias-sends-colombia-into-world-cup-last-16-with-1-0-win-over-ghana?traffic_source=rss",
+      "title": "Arias sends Colombia into World Cup last-16 with 1-0 win over Ghana",
+      "source": "Al Jazeera",
+      "topic": "World",
+      "category": "general",
+      "published": "2026-07-04T03:41:22+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
+      }
+    },
+    {
+      "url": "https://www.blocktempo.com/ansem-bullpenfi-memecoin-airdrop-market-cap-doubles-350-million-holders/",
+      "title": "迷因幣 ANSEM 空投 12 小時後翻倍破 3.5 億鎂！Ansem 一人握 65% 供給",
+      "source": "動區動趨 (BlockTempo)",
+      "topic": "Finance",
+      "category": "crypto",
+      "published": "2026-07-04T03:41:15+00:00",
+      "ai_summary": "(neutralize failed)",
+      "summaries": {
+        "zh-HK": "(neutralize failed)"
       }
     }
   ],
@@ -1621,5 +1376,5 @@
       "London"
     ]
   },
-  "updated": "2026-07-04T11:06:03.460475+00:00"
+  "updated": "2026-07-04T11:21:01.993574+00:00"
 }
