@@ -1,0 +1,177 @@
+{
+  "CoinDesk": [
+    40.7,
+    -74.0,
+    "New York"
+  ],
+  "CoinTelegraph": [
+    51.5,
+    -0.1,
+    "London"
+  ],
+  "The Block": [
+    40.7,
+    -74.0,
+    "New York"
+  ],
+  "Decrypt": [
+    37.8,
+    -122.4,
+    "San Francisco"
+  ],
+  "Blockworks": [
+    40.7,
+    -74.0,
+    "New York"
+  ],
+  "Bloomberg Crypto": [
+    40.7,
+    -74.0,
+    "New York"
+  ],
+  "Bloomberg": [
+    40.7,
+    -74.0,
+    "New York"
+  ],
+  "CNBC": [
+    40.9,
+    -73.9,
+    "Englewood Cliffs"
+  ],
+  "WSJ Markets": [
+    40.7,
+    -74.0,
+    "New York"
+  ],
+  "FT Tech": [
+    51.5,
+    -0.1,
+    "London"
+  ],
+  "TechCrunch": [
+    37.8,
+    -122.4,
+    "San Francisco"
+  ],
+  "ArsTechnica": [
+    42.4,
+    -71.1,
+    "Boston"
+  ],
+  "Wired": [
+    37.8,
+    -122.4,
+    "San Francisco"
+  ],
+  "Chainlink (Chinese)": [
+    31.2,
+    121.5,
+    "Shanghai"
+  ],
+  "Unchained": [
+    40.7,
+    -74.0,
+    "New York"
+  ],
+  "DL News": [
+    51.5,
+    -0.1,
+    "London"
+  ],
+  "Bankless": [
+    37.8,
+    -122.4,
+    "San Francisco"
+  ],
+  "\u52d5\u5340\u52d5\u8da8 (BlockTempo)": [
+    25.0,
+    121.5,
+    "Taipei"
+  ],
+  "\u5340\u584a\u5ba2 (Blockcast)": [
+    25.0,
+    121.5,
+    "Taipei"
+  ],
+  "\u79d1\u6280\u65b0\u5831": [
+    25.0,
+    121.5,
+    "Taipei"
+  ],
+  "Reuters": [
+    51.5,
+    -0.1,
+    "London"
+  ],
+  "\u9999\u6e2f\u7d93\u6fdf\u65e5\u5831": [
+    22.3,
+    114.2,
+    "Hong Kong"
+  ],
+  "\u9245\u4ea8\u7db2": [
+    25.0,
+    121.5,
+    "Taipei"
+  ],
+  "BBC World": [
+    51.5,
+    -0.1,
+    "London"
+  ],
+  "Reuters World": [
+    51.5,
+    -0.1,
+    "London"
+  ],
+  "AP News": [
+    40.7,
+    -74.0,
+    "New York"
+  ],
+  "Al Jazeera": [
+    25.3,
+    51.5,
+    "Doha"
+  ],
+  "NPR": [
+    38.9,
+    -77.0,
+    "Washington DC"
+  ],
+  "Nikkei Asia": [
+    35.7,
+    139.7,
+    "Tokyo"
+  ],
+  "SCMP": [
+    22.3,
+    114.2,
+    "Hong Kong"
+  ],
+  "The Guardian": [
+    51.5,
+    -0.1,
+    "London"
+  ],
+  "New York Times": [
+    40.7,
+    -74.0,
+    "New York"
+  ],
+  "Washington Post": [
+    38.9,
+    -77.0,
+    "Washington DC"
+  ],
+  "Time": [
+    40.7,
+    -74.0,
+    "New York"
+  ],
+  "The Economist": [
+    51.5,
+    -0.1,
+    "London"
+  ]
+}

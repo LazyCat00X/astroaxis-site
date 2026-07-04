@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Logs
+cron.log
+
+# Backup
+*.bak
+
+# Secrets - NEVER commit
+.env
+.env.local
+*.pem
+*_token*
+
+# Cache
+.cache/

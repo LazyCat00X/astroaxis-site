@@ -1,0 +1,153 @@
+{
+  "2026": [
+    {
+      "date": "2026-06-27",
+      "title": "Binance EU Exit",
+      "desc": "Binance fails MiCA license, withdraws from EU market",
+      "type": "crypto"
+    },
+    {
+      "date": "2026-06-24",
+      "title": "Venezuela Earthquake",
+      "desc": "Dual 7.5M earthquakes, 1400+ casualties",
+      "type": "disaster"
+    },
+    {
+      "date": "2026-04-05",
+      "title": "Iran-US Peace Deal",
+      "desc": "Historic ceasefire signed between US and Iran",
+      "type": "politics"
+    },
+    {
+      "date": "2026-02-10",
+      "title": "AI Model Proliferation",
+      "desc": "Multiple nations launch sovereign AI models",
+      "type": "tech"
+    }
+  ],
+  "2025": [
+    {
+      "date": "2025-09-01",
+      "title": "Crypto Market Correction",
+      "desc": "Bitcoin drops 40% from ATH, broad selloff",
+      "type": "crypto"
+    },
+    {
+      "date": "2025-07-04",
+      "title": "A devastating flood strikes the Texas Hill Country, killing at least 108 people.",
+      "desc": "A devastating flood strikes the Texas Hill Country, killing at least 108 people.",
+      "type": "climate",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2025-07-04",
+      "title": "The Oasis Live '25 tour begins in Principality Stadium, Cardiff, ending a 16-yea",
+      "desc": "The Oasis Live '25 tour begins in Principality Stadium, Cardiff, ending a 16-year hiatus.",
+      "type": "general",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2025-06-15",
+      "title": "USMCA Renegotiation",
+      "desc": "North American trade deal renegotiation begins",
+      "type": "finance"
+    },
+    {
+      "date": "2025-03-28",
+      "title": "AI Export Controls",
+      "desc": "US expands AI chip export restrictions",
+      "type": "tech"
+    },
+    {
+      "date": "2025-01-20",
+      "title": "New US Administration",
+      "desc": "Inauguration of 47th US President",
+      "type": "politics"
+    }
+  ],
+  "2024": [
+    {
+      "date": "2024-11-05",
+      "title": "US Presidential Election",
+      "desc": "2024 United States presidential election",
+      "type": "politics"
+    },
+    {
+      "date": "2024-07-21",
+      "title": "Global Heatwave Record",
+      "desc": "Hottest day on record globally",
+      "type": "climate"
+    },
+    {
+      "date": "2024-07-04",
+      "title": "The Labour Party, led by Keir Starmer, wins a landslide majority in the 2024 Uni",
+      "desc": "The Labour Party, led by Keir Starmer, wins a landslide majority in the 2024 United Kingdom general election, ending 14 years of Conservative government.",
+      "type": "politics",
+      "source": "wikipedia"
+    },
+    {
+      "date": "2024-03-15",
+      "title": "EU AI Act Passed",
+      "desc": "European Parliament passes landmark AI regulation",
+      "type": "tech"
+    },
+    {
+      "date": "2024-01-10",
+      "title": "Bitcoin ETF Approved",
+      "desc": "SEC approves first spot Bitcoin ETFs",
+      "type": "finance"
+    }
+  ],
+  "2023": [
+    {
+      "date": "2023-10-07",
+      "title": "Israel-Gaza War",
+      "desc": "Hamas attack triggers major conflict",
+      "type": "politics"
+    },
+    {
+      "date": "2023-07-19",
+      "title": "Global Temperature Record",
+      "desc": "Hottest month ever recorded globally",
+      "type": "climate"
+    },
+    {
+      "date": "2023-05-06",
+      "title": "King Charles Coronation",
+      "desc": "Charles III crowned King of the United Kingdom",
+      "type": "politics"
+    },
+    {
+      "date": "2023-03-14",
+      "title": "GPT-4 Released",
+      "desc": "OpenAI releases GPT-4, advancing AI capabilities",
+      "type": "tech"
+    }
+  ],
+  "2022": [
+    {
+      "date": "2022-11-30",
+      "title": "ChatGPT Launched",
+      "desc": "OpenAI releases ChatGPT, sparking AI revolution",
+      "type": "tech"
+    },
+    {
+      "date": "2022-09-08",
+      "title": "Queen Elizabeth II Dies",
+      "desc": "Longest-reigning British monarch dies at 96",
+      "type": "politics"
+    },
+    {
+      "date": "2022-02-24",
+      "title": "Russia Invades Ukraine",
+      "desc": "Full-scale invasion begins, major European conflict",
+      "type": "politics"
+    },
+    {
+      "date": "2022-01-05",
+      "title": "Bitcoin Crashes",
+      "desc": "Bitcoin drops 50% from Nov 2021 high of $69K",
+      "type": "crypto"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+name: AstroAxis Pipeline
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Every hour
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15  # Prevent 5h runs
+    permissions:
+      contents: write
+      pages: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Fetch timeline events
+        run: python3 timeline_fetcher.py
+        env:
+          MODELS_API_TOKEN: ${{ secrets.MODELS_API_TOKEN }}
+      
+      - name: Crawl news articles
+        run: python3 crawler.py
+      
+      - name: Summarize articles
+        run: |
+          export MAX_ARTICLES_PER_RUN=2
+          timeout 12m python3 summarizer.py || echo "Summarize timed out, using cached data"
+        env:
+          MODELS_API_TOKEN: ${{ secrets.MODELS_API_TOKEN }}
+      
+      - name: Generate data files
+        run: |
+          python3 generate_globe_data.py
+          python3 generate_news_json.py
+          python3 generate_sitemap.py
+      
+      - name: Deploy to GitHub Pages
+        run: |
+          # Clone the Pages repo with deploy token
+          git clone https://x-access-token:${{ secrets.DEPLOY_TOKEN }}@github.com/LazyCat00X/astroaxis-site.git pages-repo
+          cd pages-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Copy generated files from main repo
+          cp ../deploy/index.html .
+          cp ../deploy/news-data.json .
+          cp ../deploy/timeline-data.json .
+          cp ../deploy/sitemap.xml .
+          cp ../deploy/robots.txt .
+          
+          git add index.html news-data.json timeline-data.json sitemap.xml robots.txt
+          if git diff --cached --quiet; then
+            echo "No changes to deploy"
+          else
+            git commit -m "auto: hourly update $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push origin main
+          fi
+      
+      - name: Sync data back to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/articles.json data/timeline.json data/timeline_recent.json
+          if git diff --cached --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "auto: sync data $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git pull --rebase origin main || true
+            git push origin main
+          fi

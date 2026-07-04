@@ -1,0 +1,3362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AstroAxis — AI-powered world news aggregator</title>
+  <meta name="description" content="AstroAxis — AI-powered world news aggregator with 3D globe, AI summaries, and real-time crypto/finance news" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AstroAxis",
+    "url": "https://lazycat00x.github.io/astroaxis-site/",
+    "description": "AI-powered world news aggregator with 3D globe visualization",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://lazycat00x.github.io/astroaxis-site/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json" id="news-jsonld">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": []
+  }
+  </script>
+  <link rel="canonical" href="https://lazycat00x.github.io/astroaxis-site/" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='none' stroke='%2322d3ee' stroke-width='3'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%236366f1' stroke-width='2' opacity='0.6'/%3E%3Ccircle cx='35' cy='40' r='4' fill='%2367e8f9'/%3E%3Ccircle cx='62' cy='55' r='3' fill='%23a78bfa'/%3E%3Ccircle cx='45' cy='65' r='3' fill='%23f59e0b'/%3E%3C/svg%3E" />
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="AstroAxis — AI-powered world news aggregator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://lazycat00x.github.io/astroaxis-site/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AstroAxis — AI-powered world news aggregator" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
+  <meta http-equiv="Cache-Control" content="public, max-age=300, stale-while-revalidate=600" />
+  <meta property="og:title" content="AstroAxis — AI-powered world news aggregator" />
+  <meta property="og:description" content="Interactive 3D globe with real-time news. AI summaries. Crypto. Finance. Tech." />
+  <meta property="og:image" content="https://lazycat00x.github.io/astroaxis-site/og-image.png" />
+  <meta property="og:url" content="https://lazycat00x.github.io/astroaxis-site/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AstroAxis — AI-powered world news aggregator" />
+  <meta name="twitter:description" content="Interactive 3D globe with real-time news. AI summaries." />
+  <meta name="twitter:image" content="https://lazycat00x.github.io/astroaxis-site/og-image.png" />
+  <style>
+    :root {
+      --bg: #050611;
+      --text: #eef7ff;
+      --muted: #8892b6;
+      --cyan: #22d3ee;
+      --cyan-soft: #67e8f9;
+      --accent: #6366f1;
+      --violet: #a78bfa;
+      --orange: #f59e0b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      overflow: hidden;
+      background: #000;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    }
+
+    body {
+      min-height: 100dvh;
+      background:
+        radial-gradient(circle at 68% 44%, rgba(34, 211, 238, 0.17), transparent 25%),
+        radial-gradient(circle at 45% 54%, rgba(99, 102, 241, 0.22), transparent 28%),
+        radial-gradient(circle at 18% 24%, rgba(245, 158, 11, 0.08), transparent 22%),
+        linear-gradient(135deg, #02030a 0%, #050611 46%, #08091c 100%);
+    }
+
+    #hero {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100dvh;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    #hero::before,
+    #hero::after {
+      content: "";
+      position: absolute;
+      inset: -18%;
+      z-index: 0;
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
+
+    #hero::before {
+      opacity: 0.48;
+      background:
+        conic-gradient(from 224deg at 61% 45%, transparent 0deg, rgba(34, 211, 238, 0.18) 34deg, transparent 78deg, rgba(99, 102, 241, 0.16) 126deg, transparent 180deg, rgba(34, 211, 238, 0.10) 260deg, transparent 360deg);
+      filter: blur(42px) saturate(1.25);
+      animation: auroraDrift 18s ease-in-out infinite alternate;
+    }
+
+    #hero::after {
+      opacity: 0.18;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+      background-size: 78px 78px;
+      mask-image: radial-gradient(circle at 55% 48%, black 0%, transparent 68%);
+      transform: perspective(900px) rotateX(63deg) translateY(17%);
+    }
+
+    #globe-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      cursor: grab;
+      touch-action: none;
+      z-index: 0;
+      filter: drop-shadow(0 0 34px rgba(34, 211, 238, 0.18));
+    }
+
+    #globe-canvas:active { cursor: grabbing; }
+
+
+    .filter-bar {
+      position: fixed;
+      bottom: clamp(12px, 4vh, 40px);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: clamp(4px, 0.8vw, 8px);
+      width: min(920px, calc(100vw - 16px));
+      padding: clamp(6px, 0.8vh, 10px) clamp(8px, 1vw, 12px);
+      border: 1px solid rgba(103, 232, 249, 0.24);
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(8, 14, 31, 0.72), rgba(3, 6, 18, 0.58));
+      backdrop-filter: blur(18px) saturate(1.2);
+      -webkit-backdrop-filter: blur(18px) saturate(1.2);
+      box-shadow: 0 22px 80px rgba(0, 0, 0, 0.32), 0 0 42px rgba(34, 211, 238, 0.14), inset 0 1px 0 rgba(255,255,255,0.08), inset 0 0 28px rgba(99, 102, 241, 0.08);
+    }
+
+    .filter-sep {
+      width: 1px;
+      height: 18px;
+      background: rgba(136, 136, 160, 0.22);
+      flex-shrink: 0;
+      margin: 0 2px;
+    }
+    .filter-btn {
+      appearance: none;
+      border: 1px solid rgba(136, 136, 160, 0.28);
+      border-radius: 999px;
+      background: rgba(15, 22, 44, 0.64);
+      color: rgba(238, 247, 255, 0.7);
+      cursor: pointer;
+      font: inherit;
+      font-size: clamp(9px, 1.2vw, 13px);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      transition: border-color 160ms ease, color 160ms ease, background 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+      padding: clamp(5px, 0.6vh, 8px) clamp(6px, 0.8vw, 11px);
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      border-color: rgba(34, 211, 238, 0.72);
+      background: rgba(34, 211, 238, 0.14);
+      color: #eaffff;
+      box-shadow: 0 0 18px rgba(34, 211, 238, 0.22);
+      transform: translateY(-1px);
+    }
+
+    .filter-btn[data-filter-type="topic"][data-filter-value="Bitcoin"].active { border-color: rgba(249, 115, 22, 0.85); box-shadow: 0 0 20px rgba(249, 115, 22, 0.2); }
+    .filter-btn[data-filter-type="topic"][data-filter-value="DeFi"].active { border-color: rgba(34, 197, 94, 0.85); box-shadow: 0 0 20px rgba(34, 197, 94, 0.2); }
+    .filter-btn[data-filter-type="topic"][data-filter-value="AI"].active { border-color: rgba(59, 130, 246, 0.85); box-shadow: 0 0 20px rgba(59, 130, 246, 0.2); }
+    .filter-btn[data-filter-type="topic"][data-filter-value="Regulation"].active { border-color: rgba(239, 68, 68, 0.85); box-shadow: 0 0 20px rgba(239, 68, 68, 0.2); }
+
+    /* ── Keyboard focus styles ── */
+    :focus-visible {
+      outline: 2px solid #67e8f9;
+      outline-offset: 2px;
+      border-color: #67e8f9 !important;
+    }
+    .filter-btn:focus-visible,
+    .keyboard-user :focus-visible {
+      outline: 2px solid #22d3ee !important; outline-offset: 2px;
+    }
+    .nav-btn:focus-visible,
+    .lang-btn:focus-visible,
+    .lang-option:focus-visible,
+    .hud-toggle:focus-visible {
+      outline: 2px solid #67e8f9;
+      outline-offset: 2px;
+      z-index: 25;
+      position: relative;
+    }
+    .feed-card h3 a:focus-visible {
+      outline: 2px solid #67e8f9;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+    /* Skip hidden panels */
+    .view-panel:not(.active) :focus-visible {
+      outline: none !important;
+    }
+    /* Screen-reader only utility */
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+    #a11y-live {
+      position: fixed; top: 0; left: 0; width: 1px; height: 1px;
+      overflow: hidden; clip: rect(0,0,0,0); z-index: -1;
+    }
+
+    .article-tooltip {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 5;
+      width: min(340px, calc(100vw - 28px));
+      pointer-events: none;
+      opacity: 0;
+      transform: translate3d(-999px, -999px, 0) scale(0.96);
+      transition: opacity 120ms ease;
+      will-change: transform;
+      border: 1px solid rgba(34, 211, 238, 0.34);
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(7, 10, 22, 0.94), rgba(3, 6, 16, 0.9));
+      box-shadow: 0 0 34px rgba(34, 211, 238, 0.18), inset 0 0 24px rgba(99, 102, 241, 0.08);
+      backdrop-filter: blur(16px);
+      padding: 14px 16px;
+    }
+
+    .article-tooltip.visible { opacity: 1; }
+    .tooltip-title { font-size: 16px; font-weight: 800; line-height: 1.35; color: #f7ffff; }
+    .tooltip-source { margin-top: 5px; color: rgba(136, 136, 160, 0.9); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .tooltip-summary { margin-top: 10px; padding-left: 18px; color: rgba(228, 228, 236, 0.82); font-size: 13px; line-height: 1.55; }
+    .tooltip-summary li { margin: 5px 0; }
+
+    /* Zoom-in country label — subtle, don't block the view */
+    .country-label {
+      position: fixed;
+      top: 95px;
+      right: clamp(16px, 4vw, 48px);
+      left: auto;
+      bottom: auto;
+      transform: none;
+      z-index: 4;
+      pointer-events: none;
+      text-align: right;
+      opacity: 0;
+      transition: opacity 320ms ease;
+      will-change: opacity;
+    }
+    .country-label.visible { opacity: 1; }
+    .country-label .country-name {
+      display: block;
+      font-size: clamp(16px, 2vw, 28px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      background: linear-gradient(135deg, #f7ffff 0%, #67e8f9 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 40px rgba(34, 211, 238, 0.15);
+    }
+    .country-label .country-markerCount {
+      display: block;
+      margin-top: 2px;
+      font-size: clamp(11px, 1.2vw, 15px);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: rgba(136, 146, 182, 0.7);
+      text-shadow: none;
+    }
+
+    .hud {
+      position: absolute;
+      left: clamp(20px, 5vw, 72px);
+      top: 68px;
+      z-index: 4;
+      pointer-events: none;
+      max-width: clamp(210px, 22vw, 320px);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .hud-content-inner {
+      border: 1px solid rgba(103, 232, 249, 0.12);
+      border-radius: 28px;
+      padding: clamp(16px, 2.6vw, 24px);
+      background: linear-gradient(135deg, rgba(5, 11, 28, 0.50), rgba(5, 8, 20, 0.18));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 44px rgba(34, 211, 238, 0.08);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      text-shadow: 0 0 24px rgba(34, 211, 238, 0.28);
+    }
+    .hud.collapsed {
+      transform: translateX(-120%);
+      opacity: 0;
+    }
+    .hud-toggle {
+      position: fixed;
+      left: 10px;
+      top: 96px;
+      z-index: 12;
+      pointer-events: auto;
+      background: rgba(7,10,22,0.85);
+      border: 1px solid rgba(103,232,249,0.35);
+      border-radius: 0 8px 8px 0;
+      color: var(--cyan);
+      cursor: pointer;
+      font-size: 13px;
+      padding: 7px 5px;
+      line-height: 1;
+      transition: background 0.2s, color 0.2s;
+    }
+    .hud-toggle:hover { background: rgba(34,211,238,0.25); color: #fff; }
+    /* ── Legend items inside hud ── */
+    .hud-legend {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 10px;
+      pointer-events: auto;
+    }
+    .hud-legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      color: rgba(238,247,255,0.6);
+      letter-spacing: 0.03em;
+    }
+    .hud-legend-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      box-shadow: 0 0 6px currentColor;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--cyan);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--cyan);
+      box-shadow: 0 0 18px var(--cyan), 0 0 34px var(--accent);
+      animation: statusPulse 1.8s ease-in-out infinite;
+    }
+
+    h1 {
+      margin-top: 14px;
+      font-size: clamp(20px, 4vw, 48px);
+      line-height: 0.94;
+      letter-spacing: -0.06em;
+      max-width: 760px;
+      background: linear-gradient(135deg, #fff 0%, #eef7ff 34%, #67e8f9 63%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subline {
+      margin-top: 18px;
+      color: rgba(228, 228, 236, 0.68);
+      font-size: clamp(13px, 1.45vw, 17px);
+      max-width: 520px;
+      line-height: 1.8;
+    }
+
+    .signal-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .metric {
+      min-width: 108px;
+      padding: 10px 12px;
+      border: 1px solid rgba(103, 232, 249, 0.14);
+      border-radius: 16px;
+      background: rgba(3, 9, 24, 0.42);
+      box-shadow: inset 0 0 18px rgba(34, 211, 238, 0.045);
+    }
+
+    .metric strong {
+      display: block;
+      color: #f7ffff;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 2px;
+      color: rgba(136, 146, 182, 0.86);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .scanline {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.12;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.0) 0px,
+        rgba(255,255,255,0.0) 3px,
+        rgba(34,211,238,0.22) 4px,
+        rgba(255,255,255,0.0) 5px
+      );
+      mix-blend-mode: screen;
+    }
+
+    .vignette {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 50% 46%, transparent 0%, transparent 38%, rgba(0,0,0,0.28) 66%, rgba(0,0,0,0.8) 100%),
+        linear-gradient(90deg, rgba(0,0,0,0.62), transparent 30%, transparent 70%, rgba(0,0,0,0.62));
+    }
+
+    .hint {
+      position: absolute;
+      left: clamp(16px, 4vw, 52px);
+      bottom: clamp(16px, 4vh, 42px);
+      z-index: 2;
+      color: rgba(136, 136, 160, 0.75);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      pointer-events: none;
+      max-width: calc(100vw - clamp(32px, 8vw, 104px) - clamp(210px, 22vw, 320px));
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .scroll-hint {
+      position: fixed;
+      bottom: clamp(4px, 1.5vh, 12px);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 8;
+      color: rgba(136, 136, 160, 0.45);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      pointer-events: none;
+      animation: scrollPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.35; }
+      50% { opacity: 0.7; }
+    }
+
+    @keyframes statusPulse {
+      0%, 100% { transform: scale(0.84); opacity: 0.65; }
+      50% { transform: scale(1.2); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .hud { top: 28px; left: 20px; right: 20px; }
+      .subline { max-width: 330px; }
+      .hint { display: none; }
+      .filter-bar { border-radius: 22px; bottom: 12px; padding: 8px; }
+      .filter-btn { font-size: clamp(9px, 1.2vw, 13px); padding: clamp(5px, 0.6vh, 9px) clamp(8px, 1vw, 14px); }
+    }
+    @media (max-width: 640px) {
+      .filter-btn { font-size: 10px; padding: 7px 9px; }
+    }
+    @keyframes spin {to{transform:rotate(360deg)}}
+    @keyframes interestPulse {0%,100%{box-shadow:0 0 18px rgba(34,211,238,.45),inset 0 0 12px rgba(34,211,238,.1)}50%{box-shadow:0 0 28px rgba(34,211,238,.65),inset 0 0 18px rgba(34,211,238,.18)}}
+  </style>
+  <!-- Timeline + Feed styles -->
+  <style>
+    .skip-link {
+      position: fixed; top: -100px; left: 12px; z-index: 999;
+      background: #22d3ee; color: #03040c; padding: 10px 18px; border-radius: 8px;
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      transition: top .2s;
+    }
+    .skip-link:focus { top: 12px; }
+    .top-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 20;
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px clamp(14px,3vw,28px);
+      background: linear-gradient(180deg, rgba(3,6,18,0.88) 0%, rgba(3,6,18,0.72) 70%, transparent);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      pointer-events: auto;
+    }
+    .top-nav .logo { font-size: 18px; font-weight: 800; background: linear-gradient(135deg,#67e8f9,#a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-right: 16px; white-space: nowrap; }
+    .nav-btn {
+      background: transparent; border: 1px solid rgba(136,136,160,0.25); border-radius: 999px;
+      color: rgba(238,247,255,0.65); cursor: pointer; font: inherit; font-size: 12px; font-weight: 600;
+      padding: 6px 14px; transition: all .2s; letter-spacing: .04em;
+    }
+    .nav-btn:hover { border-color: rgba(34,211,238,0.5); color: #eef7ff; }
+    .nav-btn.active { background: rgba(34,211,238,0.15); border-color: #22d3ee; color: #eaffff; }
+    .history-search {
+      background: rgba(3,6,18,0.6); border: 1px solid rgba(136,136,160,0.2); border-radius: 999px;
+      color: rgba(238,247,255,0.7); font: inherit; font-size: 11px; font-weight: 500;
+      padding: 6px 14px; width: 140px; outline: none; transition: all .25s;
+      letter-spacing: .03em; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    }
+    .history-search::placeholder { color: rgba(136,146,182,0.4); }
+    .history-search:focus { border-color: rgba(34,211,238,0.55); color: #eef7ff; width: 190px; background: rgba(3,6,18,0.85); box-shadow: 0 0 12px rgba(34,211,238,0.1); }
+    .history-search.has-match { border-color: rgba(34,211,238,0.5); }
+    .history-search.no-match { border-color: rgba(239,68,68,0.4); }
+    .search-recent {
+      position: absolute; top: 100%; left: 0; right: 0; margin-top: 4px;
+      background: rgba(7,10,22,.95); border: 1px solid rgba(136,136,160,.15); border-radius: 10px;
+      padding: 6px 0; z-index: 20; display: none; backdrop-filter: blur(12px);
+      max-height: 180px; overflow-y: auto;
+    }
+    .search-recent.open { display: block; }
+    .search-recent-item {
+      padding: 7px 14px; font-size: 12px; color: rgba(228,228,236,.7); cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .search-recent-item:hover { background: rgba(34,211,238,.08); color: #eef7ff; }
+    .search-recent-item .del-recent { color: rgba(136,136,160,.4); font-size: 14px; padding: 2px 6px; }
+    .search-recent-item .del-recent:hover { color: #ef4444; }
+    .search-wrap { position: relative; }
+    .lang-btn {
+      margin-left: auto; background: transparent; border: 1px solid rgba(136,136,160,0.2); border-radius: 999px;
+      color: rgba(238,247,255,0.6); cursor: pointer; font: inherit; font-size: 11px; font-weight: 600;
+      padding: 5px 10px; transition: all .2s;
+    }
+    .lang-btn:hover { border-color: rgba(167,139,250,0.5); color: #eef7ff; }
+    .lang-dropdown {
+      display: none; position: absolute; top: 100%; right: 10px; margin-top: 4px;
+      background: rgba(7,10,22,0.95); border: 1px solid rgba(136,136,160,0.25); border-radius: 12px;
+      backdrop-filter: blur(16px); overflow: hidden; min-width: 120px;
+    }
+    .lang-dropdown.open { display: block; }
+    .lang-option {
+      display: block; width: 100%; padding: 8px 14px; border: none; background: transparent;
+      color: rgba(238,247,255,0.7); cursor: pointer; font: inherit; font-size: 13px; text-align: left;
+      transition: background .15s;
+    }
+    .lang-option:hover { background: rgba(99,102,241,0.2); color: #fff; }
+    .lang-option.active { color: #67e8f9; font-weight: 600; }
+
+    .view-panel {
+      display: none; position: fixed; top: 52px; left: 0; right: 0; bottom: 0;
+      overflow-y: auto; z-index: 8; padding: 24px clamp(14px,4vw,48px) 40px;
+    }
+    .view-panel.active { display: block; }
+    #globe-view {
+      top: 0; padding: 0; overflow: hidden;
+    }
+    #globe-view #hero {
+      top: 52px;
+      height: calc(100dvh - 52px);
+    }
+
+    /* Timeline */
+    .timeline-year { margin-bottom: 32px; }
+    .timeline-year h2 { font-size: 22px; font-weight: 700; color: #22d3ee; margin-bottom: 14px; letter-spacing: .06em; }
+    .timeline-event {
+      display: flex; gap: 16px; margin-bottom: 12px; padding: 14px 18px;
+      background: rgba(7,10,22,0.6); border: 1px solid rgba(136,136,160,0.12); border-radius: 12px;
+      transition: all .2s;
+    }
+    .timeline-event:hover { border-color: rgba(99,102,241,0.4); background: rgba(7,10,22,0.8); }
+    .timeline-event .date { font-size: 14px; color: #8892b6; min-width: 60px; font-weight: 600; }
+    .timeline-event .info { flex: 1; }
+    .timeline-event .info h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+    .timeline-event .info p { font-size: 14px; color: rgba(228,228,236,0.7); }
+    .timeline-event .type-badge {
+      font-size: 12px; padding: 3px 10px; border-radius: 4px; font-weight: 600;
+      align-self: center;
+    }
+    .type-badge.finance { background: rgba(34,197,94,0.15); color: #22c55e; }
+    .type-badge.tech { background: rgba(59,130,246,0.15); color: #3b82f6; }
+    .type-badge.politics { background: rgba(234,179,8,0.15); color: #eab308; }
+    .type-badge.climate { background: rgba(249,115,22,0.15); color: #f97316; }
+    .type-badge.crypto { background: rgba(99,102,241,0.15); color: #818cf8; }
+    .type-badge.disaster { background: rgba(239,68,68,0.15); color: #ef4444; }
+
+    /* Feed cards */
+    .feed-grid { display: grid; grid-template-columns: 1fr; gap: 14px; max-width: 900px; margin: 0 auto; }
+    .stats-bar {
+      display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; max-width: 900px; margin-left: auto; margin-right: auto;
+    }
+    .stat-chip {
+      background: rgba(7,10,22,.6); border: 1px solid rgba(136,136,160,.12); border-radius: 10px;
+      padding: 8px 14px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgba(228,228,236,.7);
+      min-width: 0;
+    }
+    .stat-chip .stat-bar-bg { flex:1; height:4px; border-radius:2px; background:rgba(136,136,160,.1); overflow:hidden; min-width:40px; }
+    .stat-chip .stat-bar-fill { height:100%; border-radius:2px; transition: width .4s ease; }
+    @media(max-width:768px){ .stats-bar{gap:6px} .stat-chip{font-size:10px;padding:5px 10px} }
+    @media(min-width:768px){ .feed-grid { grid-template-columns: 1fr 1fr; } }
+    .feed-card {
+      background: rgba(7,10,22,0.6); border: 1px solid rgba(136,136,160,0.12); border-radius: 14px;
+      padding: 16px; transition: all .2s;
+    }
+    .feed-card {
+      animation: cardIn .4s ease-out both;
+      opacity: 0; transform: translateY(12px);
+    }
+    @keyframes cardIn { to { opacity:1; transform:translateY(0); } }
+    .feed-card:hover { border-color: rgba(99,102,241,0.35); transform: translateY(-2px); }
+    .rec-card { border-color: rgba(245,158,11,.15) !important; }
+    .rec-card:hover { border-color: rgba(245,158,11,.4) !important; }
+    .feed-content-wrap { transition: opacity .2s ease; }
+    .feed-content-wrap.filtering { opacity: 0.5; }
+    .topic-tag:hover { border-color: rgba(34,211,238,.4) !important; background: rgba(34,211,238,.08) !important; }
+    .feed-card .card-top { display: flex; justify-content: space-between; align-items: start; gap: 8px; margin-bottom: 6px; }
+    .feed-card .card-topic { font-size: 12px; padding: 3px 9px; border-radius: 4px; font-weight: 600; }
+    .feed-card .card-source { font-size: 12px; color: rgba(136,136,160,0.8); }
+    .feed-card h3 { font-size: 16px; font-weight: 600; line-height: 1.4; margin-bottom: 8px; }
+    .feed-card h3 a { color: #eef7ff; text-decoration: none; }
+    .feed-card h3 a:hover { color: #67e8f9; }
+    .feed-card .card-summary { font-size: 14px; color: rgba(228,228,236,0.7); line-height: 1.55; margin-bottom: 8px; }
+    .feed-card .card-summary li { margin: 4px 0; }
+    .feed-card { overflow: hidden; }
+    .feed-card .card-thumb {
+      width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;
+      display: block; background: var(--thumb-bg, rgba(15,23,42,0.5));
+    }
+    .feed-card .card-thumb.placeholder {
+      display: flex; align-items: center; justify-content: center;
+      font-size: 32px; opacity: 0.5;
+    }
+    .feed-card .card-meta { display: flex; justify-content: space-between; font-size: 12px; color: rgba(136,136,160,0.6); border-top: 1px solid rgba(136,136,160,0.08); padding-top: 8px; }
+    .bias-indicator { font-size: 12px; padding: 2px 9px; border-radius: 4px; }
+    .bias-low { background: rgba(34,197,94,0.12); color: #22c55e; }
+    .bias-med { background: rgba(234,179,8,0.12); color: #eab308; }
+    .bias-high { background: rgba(239,68,68,0.12); color: #ef4444; }
+
+    .breach-banner {
+      position: fixed; top: 52px; left: 0; right: 0; z-index: 15;
+      background: linear-gradient(90deg, rgba(239,68,68,0.15), rgba(239,68,68,0.08));
+      border-bottom: 1px solid rgba(239,68,68,0.3);
+      padding: 10px 20px; font-size: 15px; color: #fca5a5; text-align: center;
+      backdrop-filter: blur(8px); display: none; font-weight: 600;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .breach-banner.show { display: block; }
+    .breach-banner strong { color: #ef4444; }
+  
+    /* Error banner */
+    .error-banner {
+      position: fixed; top: 52px; left: 0; right: 0; z-index: 16;
+      background: linear-gradient(90deg, rgba(239,68,68,.15), rgba(239,68,68,.06));
+      border-bottom: 1px solid rgba(239,68,68,.3);
+      padding: 8px 20px; font-size: 13px; color: #fca5a5; text-align: center;
+      backdrop-filter: blur(8px); display: none; font-weight: 500;
+    }
+    .error-banner.show { display: block; }
+    /* Mobile fixes */
+    @media(max-width:768px){
+      .top-nav{gap:4px;padding:8px 10px}
+      .top-nav .logo{font-size:14px;margin-right:6px}
+      .nav-btn{font-size:10px;padding:5px 9px}
+      .feed-card .card-thumb{height:90px}
+      .filter-bar{border-radius:16px;bottom:8px;gap:3px;padding:6px}
+      .filter-btn{font-size:9px;padding:4px 6px}
+      .hud{left:8px;top:52px;max-width:180px}
+      .breach-banner,.error-banner{top:44px;font-size:12px;padding:6px 12px}
+    }
+  </style>
+</head>
+<body tabindex="-1">
+<noscript>
+  <div style="background:#03040c;color:#eef7ff;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:Inter,sans-serif;text-align:center;padding:40px">
+    <div>
+      <div style="font-size:48px;margin-bottom:16px">🌍</div>
+      <h1 style="font-size:24px;margin-bottom:8px">AstroAxis</h1>
+      <p style="color:rgba(238,247,255,.6)">JavaScript is required to view the 3D globe and news feed.</p>
+      <p style="color:rgba(136,146,182,.5);font-size:13px;margin-top:12px">Please enable JavaScript in your browser settings.</p>
+    </div>
+  </div>
+</noscript>
+
+<!-- Loading Spinner -->
+<div id="loading-overlay" style="position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;background:#02030a;transition:opacity .5s">
+<div style="text-align:center">
+<svg width="64" height="64" viewBox="0 0 64 64" style="animation:spin .8s linear infinite"><circle cx="32" cy="32" r="28" fill="none" stroke="url(#g)" stroke-width="3" stroke-dasharray="120 56"/><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#67e8f9"/><stop offset="50%" stop-color="#6366f1"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient></defs></svg>
+<div style="color:rgba(238,247,255,.6);font-size:13px;margin-top:18px;letter-spacing:.08em">ASTROAXIS</div>
+<div id="loading-status" style="color:rgba(136,146,182,.5);font-size:11px;margin-top:6px">Initializing globe...</div>
+</div>
+</div>
+
+<!-- Onboarding Tutorial Overlay -->
+<div id="onboarding-overlay" style="display:none;position:fixed;inset:0;z-index:99;background:rgba(2,3,10,.88);backdrop-filter:blur(6px);align-items:center;justify-content:center;flex-direction:column;gap:14px">
+<div style="max-width:420px;text-align:center;padding:32px 28px;border:1px solid rgba(103,232,249,.24);border-radius:24px;background:linear-gradient(180deg,rgba(7,10,22,.94),rgba(3,6,16,.88))">
+<div style="font-size:40px;margin-bottom:10px">🌍</div>
+<h2 style="font-size:22px;font-weight:700;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:14px">Welcome to AstroAxis</h2>
+<div id="onboarding-steps" style="color:rgba(228,228,236,.78);font-size:14px;line-height:2;margin-bottom:10px">
+  <div>🖱 <b>Drag</b> to rotate the globe</div>
+  <div>🔍 <b>Scroll</b> to zoom in/out</div>
+  <div>📍 <b>Click markers</b> to read full stories</div>
+  <div>🔽 <b>Bottom bar</b> to filter by topic & time</div>
+  <div>📑 <b>Top tabs</b> to switch views</div>
+  <div>☆ <b>Bookmark</b> articles to save</div>
+</div>
+<button id="onboarding-close" style="background:rgba(34,211,238,.15);border:1px solid rgba(34,211,238,.5);color:#eaffff;border-radius:999px;padding:10px 36px;cursor:pointer;font:inherit;font-size:14px;font-weight:600;transition:all .2s" onmouseover="this.style.background='rgba(34,211,238,.25)'" onmouseout="this.style.background='rgba(34,211,238,.15)'">Got it! →</button>
+</div>
+</div>
+
+<!-- Top Navigation -->
+<a href="#globe-view" class="skip-link" aria-label="Skip to main content">Skip to content</a>
+<nav class="top-nav" role="tablist" aria-label="View navigation">
+  <span class="logo">◆ AstroAxis</span>
+  <button class="nav-btn active" data-view="globe" data-i18n="nav.globe" role="tab" aria-selected="true" tabindex="-1">Globe</button>
+  <button class="nav-btn" data-view="timeline" data-i18n="nav.timeline" role="tab" aria-selected="false" tabindex="-1">Timeline</button>
+  <button class="nav-btn" data-view="feed" data-i18n="nav.feed" role="tab" aria-selected="false" tabindex="-1">Feed</button>
+  <span class="search-wrap">
+    <input type="text" class="history-search" id="historySearch" placeholder="🔍 Search..." aria-label="Search news articles and timeline events" autocomplete="off" spellcheck="false">
+    <div class="search-recent" id="searchRecent" role="listbox" aria-label="Recent searches"></div>
+  </span>
+  <div style="position:relative;margin-left:auto">
+    <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">🌐 繁</button>
+    <div class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Language selection">
+      <button class="lang-option" data-lang="en" role="option" aria-selected="false">English</button>
+      <button class="lang-option active" data-lang="zh-HK" role="option" aria-selected="true">繁體中文</button>
+      <button class="lang-option" data-lang="zh-CN" role="option" aria-selected="false">简体中文</button>
+      <button class="lang-option" data-lang="ja" role="option" aria-selected="false">日本語</button>
+      <button class="lang-option" data-lang="ko" role="option" aria-selected="false">한국어</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Breaking news banner -->
+<div class="breach-banner" id="breachBanner">
+  ⚠️ <strong data-i18n="alert.breaking">BREAKING:</strong> <span id="breachText">Major event detected</span><span id="breachSource" style="color:rgba(255,255,255,0.4);font-weight:400;font-size:13px"></span>
+</div>
+
+<!-- Error / data-freshness banner -->
+<div class="error-banner" id="errorBanner">
+  ⚡ <span id="errorText">Some news sources are currently unavailable</span><span id="errorCount" style="color:rgba(255,255,255,0.35);font-weight:400;font-size:12px;margin-left:6px"></span>
+</div>
+
+<div id="globe-view" class="view-panel active" role="tabpanel" aria-label="Globe view">
+  <main id="hero" aria-label="AstroAxis hologram globe hero">
+    <canvas id="globe-canvas" role="application" aria-label="Interactive 3D globe with news markers. Use keyboard arrows to rotate, +/- to zoom, and Tab to navigate filters."></canvas>
+    <section class="hud" id="hud-panel">
+      <div id="hud-content">
+      <div class="hud-content-inner">
+      <div class="eyebrow" data-i18n="hud.eyebrow">LIVE SIGNAL MAP</div>
+      <h1>AstroAxis</h1>
+      <p class="subline" data-i18n="hud.subline">AI-powered world news aggregator</p>
+      <!-- legend removed: redundant with bottom filter bar -->
+      </div><!-- /hud-content-inner -->
+    </div><!-- /hud-content -->
+    </section>
+    <button id="hud-toggle" class="hud-toggle" title="Toggle panel">◀</button>
+    <div id="article-tooltip" class="article-tooltip" role="status" aria-live="polite"></div>
+    <div id="country-label" class="country-label"><span class="country-name" id="country-label-name"></span><span class="country-markerCount" id="country-label-markerCount"></span></div>
+    <nav class="filter-bar" aria-label="News marker filters">
+      <button class="filter-btn active" data-filter-type="all" data-filter-value="All" data-i18n="filter.all">All</button>
+      <span class="filter-sep" aria-hidden="true"></span>
+      <button class="filter-btn" data-filter-type="region" data-filter-value="Americas" data-i18n="filter.americas">Americas</button>
+      <span class="filter-sep" aria-hidden="true"></span>
+      <button class="filter-btn" data-filter-type="region" data-filter-value="Europe" data-i18n="filter.europe">Europe</button>
+      <span class="filter-sep" aria-hidden="true"></span>
+      <button class="filter-btn" data-filter-type="region" data-filter-value="Asia" data-i18n="filter.asia">Asia</button>
+      <span class="filter-sep" aria-hidden="true"></span>
+      <button class="filter-btn active" data-filter-type="time" data-filter-value="all" data-i18n="filter.alltime">ALL TIME</button>
+      <button class="filter-btn" data-filter-type="time" data-filter-value="6h" data-i18n="filter.6h">6H</button>
+      <button class="filter-btn" data-filter-type="time" data-filter-value="24h" data-i18n="filter.24h">24H</button>
+      <span class="filter-sep" aria-hidden="true"></span>
+      <button class="filter-btn" data-filter-type="topic" data-filter-value="Bitcoin" data-i18n="filter.bitcoin">Bitcoin</button>
+      <span class="filter-sep" aria-hidden="true"></span>
+      <button class="filter-btn" data-filter-type="topic" data-filter-value="DeFi" data-i18n="filter.defi">DeFi</button>
+      <span class="filter-sep" aria-hidden="true"></span>
+      <button class="filter-btn" data-filter-type="topic" data-filter-value="AI" data-i18n="filter.ai">AI</button>
+      <span class="filter-sep" aria-hidden="true"></span>
+      <button class="filter-btn" data-filter-type="topic" data-filter-value="Regulation" data-i18n="filter.regulation">Regulation</button>
+    </nav>
+    <div class="scanline"></div>
+    <div class="vignette"></div>
+    <div class="hint" data-i18n="hint.drag">🖱 DRAG · A/D ←→ SPIN · W/S ↑↓ TILT · Q/E ZOOM · 1-3 VIEWS</div>
+    <div class="scroll-hint" aria-hidden="true" data-i18n="hint.scroll">↓ scroll for articles</div>
+  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260704-01</div>
+</main>
+</div><!-- /globe-view -->
+
+<!-- Timeline Panel -->
+<div id="timeline-view" class="view-panel" role="tabpanel" aria-label="Timeline view">
+  <div id="timeline-content" style="max-width:800px;margin:0 auto;padding-top:16px">
+    <div class="timeline-year"><h2>⏳ Loading timeline...</h2></div>
+  </div>
+</div>
+
+<!-- Feed Panel -->
+<div id="feed-view" class="view-panel" role="tabpanel" aria-label="News feed view">
+  <div id="feed-content" style="max-width:900px;margin:0 auto;padding-top:16px">
+    <p style="color:rgba(136,136,160,0.7);text-align:center;padding:40px">Loading articles...</p>
+  </div>
+</div>
+
+<!-- Screen reader announcements (visually hidden) -->
+<div id="a11y-live" aria-live="polite" aria-atomic="true"></div>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script>
+    // ── Three.js load check ──
+    if (typeof THREE === 'undefined') {
+      document.body.innerHTML = '<div style="background:#03040c;color:#eef7ff;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:Inter,sans-serif;text-align:center;padding:40px"><div><div style="font-size:48px;margin-bottom:16px">⚠️</div><h1 style="font-size:22px;margin-bottom:8px">Failed to load 3D engine</h1><p style="color:rgba(238,247,255,.6);max-width:400px;line-height:1.6">The 3D globe library (Three.js) could not be loaded. This may be due to a network issue or content blocker.</p></div></div>';
+      throw new Error('Three.js failed to load');
+    }
+    // ── Performance monitoring (Core Web Vitals) ──
+    window._perfMetrics = {};
+    try {
+      // LCP (Largest Contentful Paint)
+      new PerformanceObserver(function(list) {
+        var entries = list.getEntries();
+        if (entries.length) {
+          window._perfMetrics.lcp = entries[entries.length-1].renderTime || entries[entries.length-1].loadTime;
+        }
+      }).observe({type: 'largest-contentful-paint', buffered: true});
+
+      // FCP (First Contentful Paint)
+      new PerformanceObserver(function(list) {
+        var entries = list.getEntries();
+        if (entries.length) window._perfMetrics.fcp = entries[0].startTime;
+      }).observe({type: 'paint', buffered: true});
+
+      // CLS (Cumulative Layout Shift)
+      var clsValue = 0;
+      new PerformanceObserver(function(list) {
+        list.getEntries().forEach(function(entry) {
+          if (!entry.hadRecentInput) clsValue += entry.value;
+        });
+        window._perfMetrics.cls = clsValue;
+      }).observe({type: 'layout-shift', buffered: true});
+
+      // TTFB
+      var nav = performance.getEntriesByType('navigation')[0];
+      if (nav) window._perfMetrics.ttfb = nav.responseStart - nav.requestStart;
+
+      // Log after page stabilizes
+      setTimeout(function() {
+        var m = window._perfMetrics;
+        console.log('%c⚡ AstroAxis Perf %cLCP:' + (m.lcp||0).toFixed(0) + 'ms FCP:' + (m.fcp||0).toFixed(0) + 'ms CLS:' + (m.cls||0).toFixed(3) + ' TTFB:' + (m.ttfb||0).toFixed(0) + 'ms',
+          'color:#67e8f9;font-weight:bold', 'color:#8892b6');
+        // Store for analytics
+        try {
+          var hist = JSON.parse(localStorage.getItem('astroaxis_perf') || '[]');
+          hist.push({time: Date.now(), lcp: m.lcp, fcp: m.fcp, cls: m.cls, ttfb: m.ttfb});
+          if (hist.length > 20) hist = hist.slice(-20);
+          localStorage.setItem('astroaxis_perf', JSON.stringify(hist));
+        } catch(e) {}
+      }, 5000);
+    } catch(e) { window._logError('perf', 'PerformanceObserver failed', e); }
+
+    // ── Structured error logger ──
+    const _errors = [];
+    window._logError = function(category, msg, detail) {
+      var entry = { time: new Date().toISOString(), category: category, msg: msg, detail: String(detail||'').slice(0,200) };
+      _errors.push(entry);
+      if (_errors.length > 50) _errors.shift();
+      console.warn('[AstroAxis:'+category+']', msg, detail||'');
+    };
+    window.addEventListener('error', function(e) {
+      window._logError('uncaught', e.message, (e.filename||'') + ':' + (e.lineno||''));
+    });
+    window.addEventListener('unhandledrejection', function(e) {
+      window._logError('promise', String(e.reason||'').slice(0,100));
+    });
+
+    // ── Privacy-respecting analytics (localStorage only, no external tracking) ──
+    (function() {
+      try {
+        var analytics = JSON.parse(localStorage.getItem('astroaxis_analytics') || '{"visits":0,"firstVisit":null,"lastVisit":null,"totalSeconds":0,"sessions":[]}');
+        var now = Date.now();
+        analytics.visits = (analytics.visits || 0) + 1;
+        analytics.firstVisit = analytics.firstVisit || now;
+        analytics.lastVisit = now;
+        // Session timer
+        var sessionStart = now;
+        setInterval(function() {
+          analytics.totalSeconds = (analytics.totalSeconds || 0) + 30;
+          if (analytics.totalSeconds % 300 < 30) { // save every ~5 min
+            localStorage.setItem('astroaxis_analytics', JSON.stringify(analytics));
+          }
+        }, 30000);
+        // Save on page unload
+        window.addEventListener('beforeunload', function() {
+          analytics.sessions = analytics.sessions || [];
+          analytics.sessions.push({start: sessionStart, end: Date.now(), duration: Math.round((Date.now()-sessionStart)/1000)});
+          if (analytics.sessions.length > 30) analytics.sessions = analytics.sessions.slice(-30);
+          localStorage.setItem('astroaxis_analytics', JSON.stringify(analytics));
+        });
+        localStorage.setItem('astroaxis_analytics', JSON.stringify(analytics));
+        // Console summary
+        setTimeout(function() {
+          var a = JSON.parse(localStorage.getItem('astroaxis_analytics') || '{}');
+          var mins = Math.round((a.totalSeconds||0)/60);
+          console.log('%c📊 AstroAxis %c' + (a.visits||0) + ' visits · ' + mins + ' min total',
+            'color:#a78bfa;font-weight:bold', 'color:#8892b6');
+        }, 2000);
+      } catch(e) {}
+    })();
+
+    // ── Dev dashboard (type window._dashboard() in console) ──
+    window._dashboard = function() {
+      var d = {
+        perf: window._perfMetrics || {},
+        errors: (typeof _errors !== 'undefined') ? _errors : [],
+        analytics: (function(){try{return JSON.parse(localStorage.getItem('astroaxis_analytics')||'{}');}catch(e){return{};}})(),
+        searches: (function(){try{return JSON.parse(localStorage.getItem('astroaxis_searches')||'[]');}catch(e){return[];}})(),
+        interests: (function(){try{return JSON.parse(localStorage.getItem('astroaxis_interests')||'{}');}catch(e){return{};}})(),
+        bookmarks: (function(){try{return JSON.parse(localStorage.getItem('astroaxis_bookmarks')||'[]');}catch(e){return[];}})(),
+        articles: (typeof NEWS_DATA !== 'undefined' && NEWS_DATA && NEWS_DATA.articles) ? NEWS_DATA.articles.length : 0,
+        memory: (performance.memory) ? {used: Math.round(performance.memory.usedJSHeapSize/1048576)+'MB', limit: Math.round(performance.memory.jsHeapSizeLimit/1048576)+'MB'} : 'N/A'
+      };
+      console.table(d);
+      console.log('%c💡 %cwindow._dashboard() %c— AstroAxis diagnostics',
+        'color:#67e8f9', 'color:#a78bfa', 'color:#8892b6');
+      return d;
+    };
+
+    // ── View switching ──
+    let currentLang = localStorage.getItem('astrolang') || 'zh-HK';
+
+    // ── Full UI translations ──
+    const I18N = {
+      en: {
+        'nav.globe':'Globe','nav.timeline':'Timeline','nav.feed':'Feed',
+        'hud.eyebrow':'LIVE SIGNAL MAP','hud.subline':'AI-powered world news aggregator',
+        'filter.all':'All','filter.americas':'Americas','filter.europe':'Europe','filter.asia':'Asia',
+        'filter.alltime':'ALL TIME','filter.6h':'6H','filter.24h':'24H',
+        'filter.bitcoin':'Bitcoin','filter.defi':'DeFi','filter.ai':'AI','filter.regulation':'Regulation',
+        'hint.drag':'DRAG · A/D SPIN · W/S TILT · Q/E ZOOM · 1-3 VIEWS','hint.scroll':'↓ scroll for articles',
+        'feed.title':'AstroAxis Feed','tl.title':'World History Timeline',
+        'alert.breaking':'BREAKING:','bias.none':'Neutral','bias.light':'Slight bias','bias.high':'Biased',
+        'country.articles':'article','country.articles_plural':'articles',
+        
+        
+      },
+      'zh-HK': {
+        'nav.globe':'全球','nav.timeline':'時間軸','nav.feed':'新聞',
+        'hud.eyebrow':'即時訊號地圖','hud.subline':'AI 驅動嘅全球新聞聚合',
+        'filter.all':'全部','filter.americas':'美洲','filter.europe':'歐洲','filter.asia':'亞洲',
+        'filter.alltime':'全部時間','filter.6h':'6小時','filter.24h':'24小時',
+        'filter.bitcoin':'Bitcoin','filter.defi':'DeFi','filter.ai':'AI','filter.regulation':'監管',
+        'hint.drag':'拖拽 · A/D 左右轉 · W/S 上下傾 · Q/E 縮放 · 1-3切換','hint.scroll':'↓ 向下睇文章',
+        'feed.title':'AstroAxis 新聞','tl.title':'世界歷史時間軸',
+        'alert.breaking':'緊急：','bias.none':'中立','bias.light':'略帶偏頗','bias.high':'偏頗',
+        'country.articles':'篇文章','country.articles_plural':'篇文章',
+        
+        
+      },
+      'zh-CN': {
+        'nav.globe':'全球','nav.timeline':'时间轴','nav.feed':'新闻',
+        'hud.eyebrow':'实时信号地图','hud.subline':'AI 驱动的全球新闻聚合',
+        'filter.all':'全部','filter.americas':'美洲','filter.europe':'欧洲','filter.asia':'亚洲',
+        'filter.alltime':'全部时间','filter.6h':'6小时','filter.24h':'24小时',
+        'filter.bitcoin':'比特币','filter.defi':'DeFi','filter.ai':'AI','filter.regulation':'监管',
+        'hint.drag':'拖拽 · A/D 左右转 · W/S 上下倾 · Q/E 缩放 · 1-3切换','hint.scroll':'↓ 向下看文章',
+        'feed.title':'AstroAxis 新闻','tl.title':'世界历史时间轴',
+        'alert.breaking':'紧急：','bias.none':'中立','bias.light':'略有偏见','bias.high':'有偏见',
+        'country.articles':'篇文章','country.articles_plural':'篇文章',
+        
+        
+      },
+      ja: {
+        'nav.globe':'世界','nav.timeline':'タイムライン','nav.feed':'ニュース',
+        'hud.eyebrow':'ライブシグナルマップ','hud.subline':'AI搭載の世界ニュースアグリゲーター',
+        'filter.all':'すべて','filter.americas':'アメリカ','filter.europe':'ヨーロッパ','filter.asia':'アジア',
+        'filter.alltime':'全期間','filter.6h':'6時間','filter.24h':'24時間',
+        'filter.bitcoin':'ビットコイン','filter.defi':'DeFi','filter.ai':'AI','filter.regulation':'規制',
+        'hint.drag':'ドラッグで回転 · マーカークリックで全文','hint.scroll':'↓ 記事をスクロール',
+        'feed.title':'AstroAxis ニュース','tl.title':'世界史タイムライン',
+        'alert.breaking':'速報：','bias.none':'中立','bias.light':'やや偏り','bias.high':'偏りあり',
+        'country.articles':'記事','country.articles_plural':'記事',
+        
+        
+      },
+      ko: {
+        'nav.globe':'세계','nav.timeline':'타임라인','nav.feed':'뉴스',
+        'hud.eyebrow':'실시간 신호 지도','hud.subline':'AI 기반 세계 뉴스 수집기',
+        'filter.all':'전체','filter.americas':'미주','filter.europe':'유럽','filter.asia':'아시아',
+        'filter.alltime':'전체 기간','filter.6h':'6시간','filter.24h':'24시간',
+        'filter.bitcoin':'비트코인','filter.defi':'DeFi','filter.ai':'AI','filter.regulation':'규제',
+        'hint.drag':'드래그 회전 · 마커 클릭으로 전체 기사','hint.scroll':'↓ 기사 스크롤',
+        'feed.title':'AstroAxis 뉴스','tl.title':'세계 역사 타임라인',
+        'alert.breaking':'속보：','bias.none':'중립','bias.light':'약간 편향','bias.high':'편향',
+        'country.articles':'기사','country.articles_plural':'기사',
+        
+        
+      },
+    };
+    const LANG_LABELS = {en:'EN','zh-HK':'繁','zh-CN':'简','ja':'日','ko':'한'};
+
+    function applyLanguage() {
+      const t = I18N[currentLang] || I18N['zh-HK'];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key]) el.textContent = t[key];
+      });
+      document.getElementById('langBtn').textContent = '🌐 ' + (LANG_LABELS[currentLang] || '繁');
+      renderTimeline();
+      renderFeed();
+    }
+
+    document.getElementById('langBtn').addEventListener('click', () => {
+      const dd = document.getElementById('langDropdown');
+      const isOpen = dd.classList.toggle('open');
+      document.getElementById('langBtn').setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if (isOpen) dd.querySelector('.lang-option.active')?.focus();
+    });
+    document.querySelectorAll('.lang-option').forEach(opt => {
+      opt.addEventListener('click', () => {
+        currentLang = opt.dataset.lang;
+        localStorage.setItem('astrolang', currentLang);
+        document.querySelectorAll('.lang-option').forEach(o => {
+          o.classList.remove('active');
+          o.setAttribute('aria-selected', 'false');
+        });
+        opt.classList.add('active');
+        opt.setAttribute('aria-selected', 'true');
+        document.documentElement.lang = currentLang;
+        document.getElementById('langDropdown').classList.remove('open');
+        document.getElementById('langBtn').setAttribute('aria-expanded', 'false');
+        applyLanguage();
+        a11yAnnounce('Language changed to ' + (LANG_LABELS[currentLang] || currentLang));
+      });
+    });
+
+    // Defer initial language/render pass until all const data below (TL_TYPE, NEWS_DATA)
+    // has been initialized. Calling applyLanguage() here triggers temporal-dead-zone
+    // ReferenceErrors and aborts the rest of the script before the globe can start.
+
+    // ── Timeline ──
+    // TL_LABELS merged into I18N above
+    const TL_TYPE = {en:{finance:'Finance',tech:'Tech',politics:'Politics',climate:'Climate',crypto:'Crypto',disaster:'Disaster'},'zh-HK':{finance:'金融',tech:'科技',politics:'政治',climate:'氣候',crypto:'加密貨幣',disaster:'災難'},'zh-CN':{finance:'金融',tech:'科技',politics:'政治',climate:'气候',crypto:'加密货币',disaster:'灾难'},ja:{finance:'金融',tech:'技術',politics:'政治',climate:'気候',crypto:'暗号資産',disaster:'災害'},ko:{finance:'금융',tech:'기술',politics:'정치',climate:'기후',crypto:'암호화폐',disaster:'재난'}};
+
+    function renderTimeline() {
+      if(typeof timelineData === 'undefined' || !Object.keys(timelineData).length) return;  // Skip if data not loaded
+      const t = I18N[currentLang] || I18N['zh-HK'];
+      const types = TL_TYPE[currentLang] || TL_TYPE['en'];
+      let html = `<h2 style="font-size:24px;font-weight:700;margin-bottom:24px;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">${t['tl.title']}</h2>`;
+      Object.keys(timelineData).sort().reverse().forEach(year => {
+        html += `<div class="timeline-year"><h2>${year}</h2>`;
+        timelineData[year].forEach(ev => {
+          html += `<div class="timeline-event">
+            <div class="date">${ev.date}</div>
+            <div class="info"><h3>${ev.title}</h3><p>${ev.desc}</p></div>
+            <span class="type-badge ${ev.type}">${types[ev.type] || ev.type}</span>
+          </div>`;
+        });
+        html += `</div>`;
+      });
+      document.getElementById('timeline-content').innerHTML = html;
+    }
+
+    // ── Feed ──
+
+    const TOPIC_GRADIENTS = {
+      'AI': ['#1e3a5f','#3b82f6'], 'Bitcoin': ['#3d2e0a','#f97316'],
+      'Regulation': ['#3d1a1a','#ef4444'], 'DeFi': ['#1a3d1a','#22c55e'],
+      'Crypto': ['#2d1a5f','#818cf8'], 'Finance': ['#1a3d2e','#10b981'],
+      'Tech': ['#1a2a5f','#6366f1'], 'Policy': ['#3d2a0a','#f59e0b'],
+      'Macro': ['#2d1a3d','#a855f7'], 'Trading': ['#1a3d3d','#06b6d4'],
+      'Ethereum': ['#1a1a3d','#8b5cf6'], 'Science': ['#1a3d1a','#84cc16'],
+    };
+    function topicGradient(topic) {
+      const g = TOPIC_GRADIENTS[topic] || ['#1a1a2e','#8892b6'];
+      return `linear-gradient(135deg, ${g[0]}, ${g[1]}40)`;
+    }
+
+    function renderFeed() {
+      const articles = NEWS_DATA.articles || [];
+      const wrap = document.getElementById('feed-content');
+      if(wrap) wrap.classList.add('filtering');
+      // Apply active filters (topic, time) + global search
+      const sq = window._searchQuery;
+      const filtered = articles.filter(a => {
+        // Global search filter with highlight support
+        if (sq) {
+          const haystack = ((a.title||'') + ' ' + (a.ai_summary||'') + ' ' + (a.source||'') + ' ' + (a.url||'')).toLowerCase();
+          if (!haystack.includes(sq)) return false;
+          a._searchMatch = sq; // Store for highlighting
+        } else { a._searchMatch = null; }
+        // Topic filter
+        if (activeFilters.topic !== 'All' && a.topic !== activeFilters.topic) return false;
+        // Time filter
+        if (activeFilters.time !== 'all') {
+          if (!a.published) return false;
+          const hoursAgo = (Date.now() - Date.parse(a.published)) / (1000 * 60 * 60);
+          if (activeFilters.time === '6h' && hoursAgo > 6) return false;
+          if (activeFilters.time === '24h' && hoursAgo > 24) return false;
+        }
+        return true;
+      });
+      if (!filtered.length) { document.getElementById('feed-content').innerHTML = `<h2 style="font-size:24px;font-weight:700;margin-bottom:20px;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">${I18N[currentLang]?.['feed.title'] || 'AstroAxis Feed'}</h2><p style="color:rgba(136,136,160,0.7);text-align:center;padding:40px">No matching articles.</p>`; return; }
+      let html = `<h2 style="font-size:24px;font-weight:700;margin-bottom:8px;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">${I18N[currentLang]?.['feed.title'] || 'AstroAxis Feed'}</h2>`;
+      // Active filter pills
+      const pills = [];
+      if(activeFilters.topic !== 'All') pills.push(`<span style="display:inline-block;padding:2px 10px;border-radius:999px;font-size:11px;background:rgba(34,211,238,.15);color:#67e8f9;border:1px solid rgba(34,211,238,.3);margin-right:4px">${activeFilters.topic}</span>`);
+      if(activeFilters.time !== 'all') pills.push(`<span style="display:inline-block;padding:2px 10px;border-radius:999px;font-size:11px;background:rgba(99,102,241,.15);color:#a78bfa;border:1px solid rgba(99,102,241,.3);margin-right:4px">${activeFilters.time.toUpperCase()}</span>`);
+      if(activeFilters.region !== 'All') pills.push(`<span style="display:inline-block;padding:2px 10px;border-radius:999px;font-size:11px;background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.3);margin-right:4px">${activeFilters.region}</span>`);
+      if(pills.length){ html += `<div style="margin-bottom:16px">${pills.join('')} · ${filtered.length} result${filtered.length!==1?'s':''}</div>`; }
+      // ── Personalization: "For You" based on reading history ──
+      const interests = (()=>{ try{return JSON.parse(localStorage.getItem('astroaxis_interests')||'{}');}catch(e){return{};} })();
+      const topInterest = Object.entries(interests).sort((a,b)=>b[1]-a[1])[0];
+      if (topInterest && topInterest[1] >= 1 && activeFilters.topic === 'All' && !sq) {
+        const recs = articles.filter(a => a.topic === topInterest[0] && !a.summarized === false).slice(0, 2);
+        if (recs.length) {
+          html += `<div style="margin-bottom:18px;max-width:900px;margin-left:auto;margin-right:auto">
+            <div style="font-size:13px;color:rgba(136,146,182,.6);margin-bottom:8px;letter-spacing:.04em">⭐ For You · ${topInterest[0]}</div>
+            <div class="feed-grid">`;
+          recs.forEach(a => {
+            const bullets = ((a.summaries && a.summaries[currentLang]) || (a.summaries && a.summaries['zh-HK']) || a.ai_summary || '').split('\\n').filter(l => l.includes('•')).map(l => l.replace(/^[•\\s]+/,'').trim()).filter(Boolean).slice(0, 3);
+            const tb = topicGradient(a.topic||'General');
+            html += `<div class="feed-card rec-card" style="--thumb-bg:${tb};border-color:rgba(245,158,11,.2)">
+              <h3><a href="${a.url}" target="_blank" rel="noopener">${a.title}</a></h3>
+              <div class="card-summary"><ul>${bullets.map(b => `<li>${b}</li>`).join('')}</ul></div>
+              <div class="card-meta"><span>${a.source}</span><span>${a.published ? new Date(a.published).toLocaleDateString() : ''}</span></div>
+            </div>`;
+          });
+          html += `</div></div>`;
+        }
+      }
+
+      // Stats bar: topic distribution
+      const topicCounts = {}; filtered.forEach(a => { const t = a.topic || 'Other'; topicCounts[t] = (topicCounts[t]||0)+1; });
+      const topTopics = Object.entries(topicCounts).sort((a,b) => b[1]-a[1]).slice(0,4);
+      const maxCount = topTopics[0]?.[1] || 1;
+      const allArticles = NEWS_DATA.articles || [];
+      const sourceSet = new Set(filtered.map(a => a.source));
+      const allSourceSet = new Set(allArticles.map(a => a.source));
+      // Pipeline health: check data freshness
+      const newestArticle = allArticles.reduce(function(max, a) {
+        if (!a.published) return max;
+        return Math.max(max, new Date(a.published).getTime());
+      }, 0);
+      const hoursSinceUpdate = newestArticle ? (Date.now() - newestArticle) / 3600000 : 999;
+      const pipelineStatus = hoursSinceUpdate < 6 ? '🟢' : hoursSinceUpdate < 24 ? '🟡' : '🔴';
+      const pipelineLabel = hoursSinceUpdate < 6 ? 'Live' : hoursSinceUpdate < 24 ? 'Stale (' + Math.floor(hoursSinceUpdate) + 'h)' : 'Offline';
+      const pipelineColor = hoursSinceUpdate < 6 ? '#22c55e' : hoursSinceUpdate < 24 ? '#f59e0b' : '#ef4444';
+      // Source coverage
+      const configuredSources = 35; // from source_locs.json
+      const activeSources = allSourceSet.size;
+      const sourceHealth = activeSources >= 20 ? '🟢' : activeSources >= 10 ? '🟡' : '🔴';
+      // Trend: compare 24h vs 48h
+      const now = Date.now();
+      const recent24 = articles.filter(a => { if(!a.published) return false; return (now - Date.parse(a.published)) < 86400000; });
+      const prev48 = articles.filter(a => { if(!a.published) return false; const h = (now - Date.parse(a.published))/3600000; return h >= 24 && h < 48; });
+      const trend24 = recent24.length;
+      const trend48 = prev48.length;
+      const trendPct = trend48 > 0 ? Math.round((trend24 - trend48) / trend48 * 100) : 0;
+      const trendIcon = trendPct > 10 ? '📈' : trendPct < -10 ? '📉' : '📊';
+      const trendColor = trendPct > 10 ? '#22c55e' : trendPct < -10 ? '#ef4444' : '#8892b6';
+      html += `<div class="stats-bar">
+        <div class="stat-chip">${pipelineStatus} <span style="color:${pipelineColor}">${pipelineLabel}</span></div>
+        <div class="stat-chip">📰 ${filtered.length} articles</div>
+        <div class="stat-chip">${sourceHealth} ${activeSources}/${configuredSources} sources</div>
+        <div class="stat-chip" style="color:${trendColor}">${trendIcon} 24h trend ${trendPct > 0 ? '+' : ''}${trendPct}%</div>
+        ${topTopics.map(([t,c]) => {
+          const pct = Math.round(c/maxCount*100);
+          const tc = t==='AI'?'#3b82f6':t==='Bitcoin'?'#f97316':t==='Regulation'?'#ef4444':t==='DeFi'?'#22c55e':t==='Crypto'?'#818cf8':t==='Finance'?'#10b981':t==='Tech'?'#6366f1':'#8892b6';
+          return `<div class="stat-chip"><span style="color:${tc};font-weight:600">${t}</span> ${c}<span class="stat-bar-bg"><span class="stat-bar-fill" style="width:${pct}%;background:${tc}"></span></span></div>`;
+        }).join('')}
+      </div>`;
+      // Hot topic cloud
+      if (!sq && activeFilters.topic === 'All') {
+        const allTopics = {}; articles.forEach(a => { const t = a.topic || 'Other'; allTopics[t] = (allTopics[t]||0)+1; });
+        const hotTopics = Object.entries(allTopics).sort((a,b) => b[1]-a[1]).slice(0, 12);
+        if (hotTopics.length > 1) {
+          const maxHot = hotTopics[0][1];
+          html += `<div style="max-width:900px;margin:0 auto 16px;display:flex;flex-wrap:wrap;gap:6px;align-items:center">
+            <span style="font-size:11px;color:rgba(136,146,182,.5);margin-right:4px">🔥</span>`;
+          hotTopics.forEach(([t,c]) => {
+            const size = Math.max(11, 11 + (c/maxHot)*10);
+            const tc = t==='AI'?'#3b82f6':t==='Bitcoin'?'#f97316':t==='Regulation'?'#ef4444':t==='DeFi'?'#22c55e':'#8892b6';
+            html += `<span class="topic-tag" style="font-size:${size}px;color:${tc};cursor:pointer;padding:2px 8px;border-radius:999px;background:rgba(136,136,160,.06);border:1px solid rgba(136,136,160,.1);transition:all .2s" data-topic="${t}" onclick="document.querySelector('.filter-btn[data-filter-value=\\'${t}\\']')?.click()">${t} ${c}</span>`;
+          });
+          html += `</div>`;
+        }
+      }
+      html += `<div class="feed-grid">`;
+      filtered.slice(0, 50).forEach(a => {
+        const biasScore = a.bias_score || 0;
+        const biasCls = biasScore === 0 ? 'bias-low' : biasScore < 3 ? 'bias-med' : 'bias-high';
+        const t = I18N[currentLang] || I18N['zh-HK']; const biasLabel = biasScore === 0 ? t['bias.none'] : biasScore < 3 ? t['bias.light'] : t['bias.high'];
+        // Multi-language summary: prefer currentLang, fallback zh-HK, fallback ai_summary string
+        const summaryText = (a.summaries && a.summaries[currentLang]) || (a.summaries && a.summaries['zh-HK']) || a.ai_summary || '';
+        const bullets = summaryText.split('\\n').filter(l => l.includes('•')).map(l => l.replace(/^[•\\s]+/,'').trim()).filter(Boolean).slice(0, 4);
+        const thumbBg = topicGradient(a.topic || 'General');
+        html += `<article class="feed-card" role="article" aria-label="${a.title.replace(/"/g,'&quot;')}" style="--thumb-bg:${thumbBg}">
+          <div class="card-thumb placeholder" aria-hidden="true" style="background:${thumbBg}">${(a.topic||'G')[0]}</div>
+          <div class="card-top">
+            <span class="card-topic" style="color:#${a.topic === 'AI' ? '3b82f6' : a.topic === 'Bitcoin' ? 'f97316' : a.topic === 'Regulation' ? 'ef4444' : a.topic === 'DeFi' ? '22c55e' : '818cf8'}">${a.topic || 'General'}</span>
+
+          </div>
+          <h3><a href="${a.url}" target="_blank" rel="noopener">${a.title}</a></h3>
+          <div class="card-summary"><ul>${bullets.map(b => `<li>${b}</li>`).join('')}</ul></div>
+          <div class="card-meta">
+            <span>${a.source}</span>
+            <span>${a.published ? new Date(a.published).toLocaleDateString() : ''}</span>
+          </div>
+        </div>`;
+      });
+      html += '</div>';
+      document.getElementById('feed-content').innerHTML = html;
+      // Update JSON-LD with current articles
+      try {
+        const newsLD = document.getElementById('news-jsonld');
+        if (newsLD) {
+          const ld = JSON.parse(newsLD.textContent);
+          ld.itemListElement = filtered.slice(0, 10).map((a, i) => ({
+            "@type": "ListItem", "position": i + 1,
+            "item": {
+              "@type": "NewsArticle",
+              "headline": a.title,
+              "url": a.url,
+              "datePublished": a.published || '',
+              "description": (a.ai_summary || '').slice(0, 160)
+            }
+          }));
+          newsLD.textContent = JSON.stringify(ld, null, 2);
+        }
+      } catch(e) {}
+      if(wrap) { requestAnimationFrame(() => { wrap.classList.remove('filtering'); }); }
+      // Stagger card entrance animation
+      const cards = document.querySelectorAll('#feed-content .feed-card');
+      cards.forEach((c, i) => { c.style.animationDelay = (i * 0.04) + 's'; });
+    }
+
+    // ── Breaking news checker ──
+    let lastBreakingTitle = '';
+    async function checkBreaking() {
+      try {
+        const articles = NEWS_DATA.articles || [];
+        const recent = articles.filter(a => {
+          if (!a.published) return false;
+          const h = (Date.now() - new Date(a.published).getTime()) / 3600000;
+          return h < 2;
+        });
+        const urgent = recent.filter(a => /earthquake|tsunami|hurricane|attack|war|crash|collapse|explosion|shooting|pandemic/i.test((a.title||'') + ' ' + (a.ai_summary||'')));
+        const banner = document.getElementById('breachBanner');
+        if (urgent.length > 0) {
+          const u = urgent[0];
+          document.getElementById('breachText').textContent = u.title.slice(0, 80);
+          document.getElementById('breachSource').textContent = u.source ? ' · ' + u.source : '';
+          banner.classList.add('show');
+          // Send ntfy alert for new breaking news (dedup by title)
+          if (u.title !== lastBreakingTitle && window.location.hostname !== 'localhost') {
+            lastBreakingTitle = u.title;
+            fetch('https://ntfy.sh/astroaxis-breaking', {
+              method: 'POST',
+              headers: { 'Title': '🚨 AstroAxis Breaking', 'Priority': 'high', 'Tags': 'warning,newspaper' },
+              body: `${u.title}\n\n${u.source} • ${u.url}`
+            }).catch(() => {}); // silent fail
+          }
+        } else {
+          banner.classList.remove('show');
+          lastBreakingTitle = '';
+        }
+      } catch(e) { console.warn('Breaking check:', e); }
+    }
+
+    // Deactivate 3D history when leaving view
+    // Update nav click handler
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.nav-btn').forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+          b.tabIndex = -1;
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        // Globe view: ALL nav btns tabindex=-1 so ARIA tablist doesn't steal arrow keys
+        // Other views: active btn tabindex=0 for Tab navigation
+        btn.tabIndex = (btn.dataset.view === 'globe') ? -1 : 0;
+        if (btn.dataset.view === 'globe') {
+          // Focus body immediately — body has tabindex=-1 so it's focusable on all platforms
+          document.body.focus();
+        } else {
+          btn.focus();
+        }
+        document.querySelectorAll('.view-panel').forEach(p => p.classList.remove('active'));
+        const view = document.getElementById(btn.dataset.view + '-view');
+        if (view) view.classList.add('active');
+        if (btn.dataset.view === 'globe' && typeof animate === 'function') { if (window._animId) cancelAnimationFrame(window._animId); animate(); }
+
+        // Screen reader announcement
+        const t = I18N[currentLang] || I18N['zh-HK'];
+        const viewName = btn.textContent.trim();
+        a11yAnnounce('Switched to ' + viewName + ' view');
+      });
+    });
+
+    // ── A11y announcement helper ──
+    function a11yAnnounce(msg, priority) {
+      const liveRegion = document.getElementById('a11y-live');
+      if (!liveRegion) return;
+      if (priority === 'assertive') liveRegion.setAttribute('aria-live', 'assertive');
+      liveRegion.textContent = '';
+      requestAnimationFrame(() => {
+        liveRegion.textContent = msg;
+        if (priority === 'assertive') {
+          setTimeout(() => liveRegion.setAttribute('aria-live', 'polite'), 1000);
+        }
+      });
+    }
+
+    // Announce search results for screen readers
+    const _origRenderFeedSR = renderFeed;
+    renderFeed = function() {
+      _origRenderFeedSR();
+      const cards = document.querySelectorAll('#feed-content .feed-card');
+      const sq = window._searchQuery;
+      if (sq) {
+        a11yAnnounce(cards.length + ' article' + (cards.length !== 1 ? 's' : '') + ' found for "' + sq + '"');
+      }
+    };
+
+    // Announce view switches
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        a11yAnnounce('Switched to ' + btn.textContent.trim() + ' view');
+      });
+    });
+
+    // Focus visible enhancement for keyboard users
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-user');
+      }
+    }, {capture: true});
+    document.addEventListener('mousedown', function() {
+      document.body.classList.remove('keyboard-user');
+    }, {capture: true});
+
+    // ── Keyboard navigation ──
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'F7') { e.preventDefault(); return; }
+
+      // Number keys 1-3: switch views
+      const globeView = document.getElementById('globe-view');
+      const viewMap = { '1': 'globe', '2': 'timeline', '3': 'feed' };
+      if (e.key in viewMap && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        const target = viewMap[e.key];
+        const btn = document.querySelector(`.nav-btn[data-view="${target}"]`);
+        if (btn && !btn.classList.contains('active')) { btn.click(); }
+        e.preventDefault(); return;
+      }
+
+      // Key 4: zoom out to history rings distance
+      if (e.key === '4' && !e.ctrlKey && !e.metaKey && !e.altKey && globeView && globeView.classList.contains('active')) {
+        const center = new THREE.Vector3(0, -0.4, 0);
+        const dir = camera.position.clone().sub(center).normalize();
+        const TARGET_DIST = 20;
+        const duration = 800;
+        const startDist = camera.position.distanceTo(center);
+        const startTime = performance.now();
+        function zoomAnim(now) {
+          const elapsed = now - startTime;
+          const t = Math.min(1, elapsed / duration);
+          const eased = 1 - Math.pow(1 - t, 3); // ease-out cubic
+          const dist = startDist + (TARGET_DIST - startDist) * eased;
+          camera.position.copy(center.clone().add(dir.clone().multiplyScalar(dist)));
+          camera.lookAt(center);
+          controls.target.copy(center);
+          controls.update();
+          renderer.render(scene, camera);
+          if (t < 1) requestAnimationFrame(zoomAnim);
+        }
+        requestAnimationFrame(zoomAnim);
+        pauseAutoRotate();
+        e.preventDefault(); return;
+      }
+      // Escape
+      if (e.key === 'Escape') {
+        const dd = document.getElementById('langDropdown');
+        if (dd && dd.classList.contains('open')) {
+          dd.classList.remove('open');
+          document.getElementById('langBtn').setAttribute('aria-expanded', 'false');
+        }
+        stickyTooltip = null; hoveredIdx = -1; hoveredData = null;
+        const tt = document.getElementById('article-tooltip');
+        if (tt) tt.classList.remove('visible');
+        if (!controls.autoRotate) controls.autoRotate = true;
+        e.preventDefault(); return;
+      }
+
+      // Globe camera orbit
+      if (globeView && globeView.classList.contains('active')) {
+        const K = 0.25;
+      
+        let orbitDelta = null;
+        if (e.key === 'ArrowLeft'  || e.key === 'a') orbitDelta = {dTheta: -K, dPhi: 0, dZoom: 0};
+        if (e.key === 'ArrowRight' || e.key === 'd') orbitDelta = {dTheta: K, dPhi: 0, dZoom: 0};
+        if (e.key === 'ArrowUp'    || e.key === 'w') orbitDelta = {dTheta: 0, dPhi: -K, dZoom: 0};
+        if (e.key === 'ArrowDown'  || e.key === 's') orbitDelta = {dTheta: 0, dPhi: K, dZoom: 0};
+        if (e.key === 'q' || e.key === '+' || e.key === '=') orbitDelta = {dTheta: 0, dPhi: 0, dZoom: -1.5};
+        if (e.key === 'e' || e.key === '-') orbitDelta = {dTheta: 0, dPhi: 0, dZoom: 1.5};
+        if (orbitDelta) {
+          const d = orbitDelta;
+          requestAnimationFrame(() => {
+            const center = new THREE.Vector3(0, -0.4, 0);
+            const off = camera.position.clone().sub(center);
+            const dist = off.length();
+            let phi = Math.acos(THREE.MathUtils.clamp(off.y / dist, -1, 1));
+            let theta = Math.atan2(off.x, off.z);
+            theta += d.dTheta;
+            phi = Math.max(0.15, Math.min(Math.PI - 0.15, phi + d.dPhi));
+            const newDist = Math.max(controls.minDistance, Math.min(controls.maxDistance, dist + d.dZoom));
+            camera.position.set(
+              center.x + newDist * Math.sin(phi) * Math.sin(theta),
+              center.y + newDist * Math.cos(phi),
+              center.z + newDist * Math.sin(phi) * Math.cos(theta)
+            );
+            camera.lookAt(center);
+            controls.target.copy(center);
+            controls.update();
+            // Force immediate render so animation loop can't override
+            renderer.render(scene, camera);
+          });
+          e.preventDefault();
+          pauseAutoRotate();
+        }
+      }
+
+      // Block unhandled keys in globe view
+      if (!e.defaultPrevented && globeView && globeView.classList.contains('active') && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        e.preventDefault();
+      }
+    }, {capture: true});
+    // init moved to initApp() after NEWS_DATA loaded
+
+    // ── Global search input (history + feed) ──
+    const searchInput = document.getElementById('historySearch');
+    const searchRecent = document.getElementById('searchRecent');
+
+    function getRecentSearches() {
+      try { return JSON.parse(localStorage.getItem('astroaxis_searches') || '[]'); } catch(e) { return []; }
+    }
+    function saveRecentSearch(q) {
+      if (!q || q.length < 2) return;
+      let recents = getRecentSearches().filter(r => r !== q);
+      recents.unshift(q);
+      if (recents.length > 8) recents.pop();
+      localStorage.setItem('astroaxis_searches', JSON.stringify(recents));
+    }
+    function renderRecentSearches() {
+      if (!searchRecent) return;
+      const recents = getRecentSearches();
+      if (!recents.length) { searchRecent.classList.remove('open'); return; }
+      searchRecent.innerHTML = recents.map((r, i) =>
+        `<div class="search-recent-item" role="option" data-q="${r.replace(/"/g,'&quot;')}"><span>🕐 ${r}</span><span class="del-recent" data-idx="${i}">×</span></div>`
+      ).join('');
+      searchRecent.classList.add('open');
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('focus', () => renderRecentSearches());
+      searchInput.addEventListener('blur', () => setTimeout(() => searchRecent?.classList.remove('open'), 200));
+
+      searchInput.addEventListener('input', () => {
+        const val = searchInput.value.trim().toLowerCase();
+        window._searchQuery = val || null;
+        searchInput.classList.remove('has-match', 'no-match');
+
+        // Trigger Feed re-render when in feed view
+        const feedView = document.getElementById('feed-view');
+        if (feedView && feedView.classList.contains('active')) {
+          renderFeed();
+        }
+
+        // Visual feedback
+        if (!val) { searchRecent?.classList.remove('open'); return; }
+        // Check history dots
+        let hasMatch = false;
+        if (window._historyDots) {
+          hasMatch = window._historyDots.some(d => {
+            const ev = d.userData?._event;
+            if (!ev) return false;
+            return (ev.title||'').toLowerCase().includes(val) || (ev.desc||'').toLowerCase().includes(val) || String(d.userData._year).includes(val);
+          });
+        }
+        // Also check feed articles
+        const articles = NEWS_DATA.articles || [];
+        if (!hasMatch) {
+          hasMatch = articles.some(a =>
+            (a.title||'').toLowerCase().includes(val) || (a.ai_summary||'').toLowerCase().includes(val) || (a.source||'').toLowerCase().includes(val)
+          );
+        }
+        searchInput.classList.add(hasMatch ? 'has-match' : 'no-match');
+      });
+
+      searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          searchInput.value = ''; searchInput.dispatchEvent(new Event('input')); searchInput.blur(); e.stopPropagation();
+        }
+        if (e.key === 'Enter') {
+          const val = searchInput.value.trim();
+          if (val) saveRecentSearch(val);
+          searchRecent?.classList.remove('open');
+        }
+      });
+    }
+
+    // Recent search click handler
+    if (searchRecent) {
+      searchRecent.addEventListener('mousedown', (e) => {
+        const item = e.target.closest('.search-recent-item');
+        if (!item) return;
+        if (e.target.classList.contains('del-recent')) {
+          const idx = parseInt(e.target.dataset.idx);
+          let recents = getRecentSearches();
+          recents.splice(idx, 1);
+          localStorage.setItem('astroaxis_searches', JSON.stringify(recents));
+          renderRecentSearches();
+          return;
+        }
+        const q = item.dataset.q;
+        if (q) { searchInput.value = q; searchInput.dispatchEvent(new Event('input')); }
+      });
+    }
+
+    // ── Existing globe code below ──
+    // Already available as THREE, THREE.OrbitControls via global
+        let NEWS_DATA = {articles: [], sourceLocations: {}};
+    let timelineData = {};  // Will be loaded from timeline-data.json
+    
+    // Load both data files in parallel
+    Promise.all([
+      fetch('news-data.json').then(r => r.json()),
+      fetch('timeline-data.json').then(r => r.json()).catch(() => ({}))
+    ])
+      .then(([newsData, tlData]) => {
+        NEWS_DATA = newsData;
+        timelineData = tlData;
+        initApp();
+      })
+      .catch(e => { console.error('Failed to load data:', e); initApp(); });
+
+const GEO_KEYWORDS = [
+      // ── Asia ──
+      { re: /香港|Hong\s*Kong/gi,                                loc: [22.3, 114.2, 'Hong Kong'] },
+      { re: /新加坡|Singapore/gi,                                  loc: [1.3, 103.8, 'Singapore'] },
+      { re: /東京|Tokyo|日本|Japan/gi,                              loc: [36.0, 138.0, 'Japan'] },
+      { re: /韓國|Korea|Seoul|首爾|South\s*Korea/gi,                loc: [37.5, 127.0, 'South Korea'] },
+      { re: /台灣|Taiwan|Taipei|台北/gi,                             loc: [25.0, 121.5, 'Taiwan'] },
+      { re: /孟加拉|Bangladesh|Dhaka/gi,                           loc: [24.0, 90.0, 'Bangladesh'] },
+      { re: /印度|India|Mumbai|Delhi|Bangalore/gi,                  loc: [20.0, 78.0, 'India'] },
+      { re: /泰國|Thailand|Bangkok|曼谷/gi,                         loc: [15.0, 100.0, 'Thailand'] },
+      { re: /越南|Vietnam|Hanoi|胡志明/gi,                           loc: [14.0, 108.0, 'Vietnam'] },
+      { re: /菲律賓|Philippines|Manila/gi,                         loc: [14.0, 122.0, 'Philippines'] },
+      { re: /印尼|Indonesia|Jakarta/gi,                            loc: [-6.0, 107.0, 'Indonesia'] },
+      { re: /馬來西亞|Malaysia|Kuala\s*Lumpur/gi,                   loc: [4.0, 102.0, 'Malaysia'] },
+      { re: /巴基斯坦|Pakistan|Karachi/gi,                         loc: [30.0, 70.0, 'Pakistan'] },
+      { re: /上海|Shanghai|北京|Beijing|深圳|Shenzhen|中國|China|Chinese/gi, loc: [35.0, 105.0, 'China'] },
+
+      // ── Middle East ──
+      { re: /霍爾木茲|Hormuz|Strait\s*of\s*Hormuz/gi,              loc: [26.5, 56.0, 'Strait of Hormuz'] },
+      { re: /巴林|Bahrain/gi,                                      loc: [26.0, 50.5, 'Bahrain'] },
+      { re: /UAE|Dubai|阿聯酋|Abu\s*Dhabi/gi,                        loc: [25.0, 55.0, 'UAE'] },
+      { re: /卡塔爾|Qatar|Doha/gi,                                  loc: [25.3, 51.5, 'Qatar'] },
+      { re: /沙特|Saudi|Riyadh|利雅得/gi,                           loc: [24.0, 45.0, 'Saudi Arabia'] },
+      { re: /德黑蘭|Tehran|伊朗|Iran/gi,                              loc: [32.0, 53.0, 'Iran'] },
+      { re: /以色列|Israel|Tel\s*Aviv|耶路撒冷/gi,                   loc: [31.0, 35.0, 'Israel'] },
+      { re: /土耳其|Turkey|Istanbul|Ankara/gi,                     loc: [39.0, 35.0, 'Turkey'] },
+      { re: /波斯尼亞|Bosnia/gi,                                    loc: [44.0, 18.0, 'Bosnia'] },
+
+      // ── Europe ──
+      { re: /希臘|Greece/gi,                                        loc: [39.0, 22.0, 'Greece'] },
+      { re: /EU|歐盟|Europe|European|歐元區/gi,                       loc: [50.0, 10.0, 'Europe'] },
+      { re: /英國|UK|Britain|London|England/gi,                     loc: [51.5, -0.1, 'United Kingdom'] },
+      { re: /法國|France|Paris|French/gi,                           loc: [47.0, 2.0, 'France'] },
+      { re: /德國|Germany|Berlin|Frankfurt/gi,                      loc: [51.0, 9.0, 'Germany'] },
+      { re: /俄羅斯|Russia|Moscow|莫斯科/gi,                          loc: [60.0, 40.0, 'Russia'] },
+      { re: /瑞士|Switzerland|Zurich/gi,                            loc: [47.0, 8.0, 'Switzerland'] },
+      { re: /意大利|Italy|Milan|Rome/gi,                            loc: [42.0, 13.0, 'Italy'] },
+      { re: /西班牙|Spain|Madrid|Barcelona/gi,                      loc: [40.0, -3.0, 'Spain'] },
+
+      // ── North America ──
+      { re: /德州|Texas/gi,                                         loc: [31.0, -100.0, 'Texas, US'] },
+      { re: /加州|California/gi,                                    loc: [37.0, -120.0, 'California, US'] },
+      { re: /墨西哥|Mexico/gi,                                       loc: [23.0, -102.0, 'Mexico'] },
+      { re: /加拿大|Canada|Toronto|Vancouver/gi,                     loc: [56.0, -106.0, 'Canada'] },
+      { re: /USMCA|美墨加|北美|North\s*America/gi,                    loc: [39.0, -98.0, 'North America'] },
+      { re: /美國|US\b|America|United\s*States|Washington|New\s*York|華爾街|白宮|華府|國會|聯邦/gi, loc: [39.0, -98.0, 'United States'] },
+
+      // ── South America ──
+      { re: /委內瑞拉|Venezuela|Caracas/gi,                          loc: [8.0, -66.0, 'Venezuela'] },
+      { re: /玻利維亞|Bolivia|La\s*Paz/gi,                            loc: [-17.0, -65.0, 'Bolivia'] },
+      { re: /巴西|Brazil|Rio|Sao\s*Paulo|Brasilia|São Paulo/gi,      loc: [-15.0, -50.0, 'Brazil'] },
+      { re: /阿根廷|Argentina|Buenos\s*Aires/gi,                     loc: [-38.0, -63.0, 'Argentina'] },
+      { re: /哥倫比亞|Colombia|Bogota/gi,                            loc: [4.0, -72.0, 'Colombia'] },
+      { re: /智利|Chile|Santiago/gi,                                   loc: [-33.0, -70.0, 'Chile'] },
+      { re: /秘魯|Peru|Lima/gi,                                        loc: [-12.0, -77.0, 'Peru'] },
+      { re: /烏拉圭|Uruguay|Montevideo/gi,                            loc: [-34.0, -56.0, 'Uruguay'] },
+      { re: /巴拉圭|Paraguay|Asunción/gi,                              loc: [-25.0, -57.0, 'Paraguay'] },
+      { re: /厄瓜多爾|Ecuador|Quito/gi,                                loc: [-1.0, -78.0, 'Ecuador'] },
+
+      // ── Africa ──
+      { re: /尼日利亞|Nigeria|Lagos|Abuja/gi,                         loc: [8.0, 8.0, 'Nigeria'] },
+      { re: /南非|South\s*Africa|Johannesburg|Cape\s*Town|Pretoria/gi, loc: [-30.0, 25.0, 'South Africa'] },
+      { re: /肯亞|Kenya|Nairobi/gi,                                   loc: [-1.0, 36.0, 'Kenya'] },
+      { re: /埃及|Egypt|Cairo/gi,                                     loc: [27.0, 30.0, 'Egypt'] },
+      { re: /加納|Ghana|Accra/gi,                                      loc: [5.0, -0.1, 'Ghana'] },
+      { re: /埃塞俄比亞|Ethiopia|Addis\s*Ababa/gi,                    loc: [9.0, 38.0, 'Ethiopia'] },
+      { re: /坦桑尼亞|Tanzania|Dodoma|Dar es Salaam/gi,               loc: [-6.0, 35.0, 'Tanzania'] },
+      { re: /安哥拉|Angola|Luanda/gi,                                  loc: [-12.0, 17.0, 'Angola'] },
+      { re: /摩洛哥|Morocco|Casablanca|Rabat/gi,                      loc: [31.0, -7.0, 'Morocco'] },
+      { re: /突尼斯|Tunisia|Tunis/gi,                                  loc: [34.0, 9.0, 'Tunisia'] },
+
+      // ── Oceania ──
+      { re: /澳洲|Australia|Sydney|Melbourne|Brisbane|Perth/gi,       loc: [-25.0, 135.0, 'Australia'] },
+      { re: /新西蘭|New\s*Zealand|Auckland|Wellington/gi,             loc: [-41.0, 174.0, 'New Zealand'] },
+      { re: /斐濟|Fiji|Suva/gi,                                        loc: [-18.0, 178.0, 'Fiji'] },
+      { re: /巴布亞新幾內亞|Papua New Guinea|Port Moresby/gi,         loc: [-6.0, 147.0, 'Papua New Guinea'] },
+
+      // ── Broad catch-alls (last resort) ──
+      { re: /中東|Middle\s*East/gi,                                  loc: [25.0, 45.0, 'Middle East'] },
+    ];
+
+    // Detect a geo location from article title + summary.
+    // Returns [lat, lon, displayName] on first regex match, or null.
+    function detectGeoLocation(article) {
+      const text = ((article.title || '') + ' ' + (article.ai_summary || '')).toLowerCase();
+      for (const entry of GEO_KEYWORDS) {
+        // Clone the regex so we can use .test() without lastIndex issues in a loop
+        const re = new RegExp(entry.re.source, entry.re.flags);
+        if (re.test(text)) {
+          return entry.loc;
+        }
+      }
+      return null;
+    }
+
+    // ── Device capability detection ──
+    const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+    const cores = navigator.hardwareConcurrency || 4;
+    const memoryGB = (navigator.deviceMemory || 8);
+    const isLowEnd = isMobile || cores <= 4 || memoryGB <= 4;
+    const MAX_PIXEL_RATIO = isLowEnd ? 1.0 : 1.5;
+    const USE_ANTIALIAS = !isLowEnd;
+    const MARKER_SEGMENTS = isLowEnd ? [12, 8] : [28, 20];
+    const GLOBE_SEGMENTS = isLowEnd ? 48 : 64;
+    const FPS_THROTTLE = isLowEnd ? 2 : 1; // skip every Nth frame on low-end
+
+    const canvas = document.getElementById('globe-canvas');
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.FogExp2(0x000005, 0.018);
+
+    const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 120);
+    camera.position.set(0, 1.2, 12.2);
+
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: USE_ANTIALIAS, alpha: true, powerPreference: isLowEnd ? 'low-power' : 'high-performance', preserveDrawingBuffer: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, MAX_PIXEL_RATIO));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.3;
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    renderer.setClearColor(0x000000, 0);
+    renderer.setClearAlpha(0);
+    const clock = new THREE.Clock();
+    const globe = new THREE.Group();
+    globe.rotation.set(0.03, -0.62, 0);
+    globe.position.y = -0.8;
+    scene.add(globe);
+
+    const R = 4.15;
+    const CYAN = new THREE.Color('#22d3ee');
+    const ACCENT = new THREE.Color('#6366f1');
+
+    function latLonToVec3(lat, lon, radius = R) {
+      const phi = THREE.MathUtils.degToRad(90 - lat);
+      const theta = THREE.MathUtils.degToRad(lon + 180);
+      return new THREE.Vector3(
+        -radius * Math.sin(phi) * Math.cos(theta),
+        radius * Math.cos(phi),
+        radius * Math.sin(phi) * Math.sin(theta)
+      );
+    }
+
+    function makeLineMaterial({ color = '#22d3ee', opacity = 0.3, additive = true } = {}) {
+      return new THREE.LineBasicMaterial({
+        color,
+        transparent: true,
+        opacity,
+        blending: additive ? THREE.AdditiveBlending : THREE.NormalBlending,
+        depthWrite: false
+      });
+    }
+
+    // Full-sphere wireframe: merged into 3 LineSegments for draw-call efficiency
+    const grid = new THREE.Group();
+    const meridianMat = makeLineMaterial({ color: '#22d3ee', opacity: 0.16 });
+    const latitudeMat = makeLineMaterial({ color: '#6366f1', opacity: 0.18 });
+    const glowGridMat = makeLineMaterial({ color: '#22d3ee', opacity: 0.06 });
+
+    // Collect all latitude line points into one geometry
+    const latPts = [], latMajorPts = [];
+    for (let lat = -75; lat <= 75; lat += 15) {
+      const pts = [];
+      for (let lon = -180; lon <= 180; lon += 5) pts.push(latLonToVec3(lat, lon, R));
+      const target = lat % 30 === 0 ? latMajorPts : latPts;
+      for (let i = 0; i < pts.length - 1; i++) { target.push(pts[i]); target.push(pts[i+1]); }
+    }
+    if (latPts.length) { const g = new THREE.BufferGeometry().setFromPoints(latPts); grid.add(new THREE.LineSegments(g, glowGridMat)); }
+    if (latMajorPts.length) { const g = new THREE.BufferGeometry().setFromPoints(latMajorPts); grid.add(new THREE.LineSegments(g, latitudeMat)); }
+
+    // Collect all meridian line points into one geometry
+    const merPts = [], merMajorPts = [];
+    for (let lon = -180; lon < 180; lon += 15) {
+      const pts = [];
+      for (let lat = -80; lat <= 80; lat += 3) pts.push(latLonToVec3(lat, lon, R));
+      const target = lon % 30 === 0 ? merMajorPts : merPts;
+      for (let i = 0; i < pts.length - 1; i++) { target.push(pts[i]); target.push(pts[i+1]); }
+    }
+    if (merPts.length) { const g = new THREE.BufferGeometry().setFromPoints(merPts); grid.add(new THREE.LineSegments(g, glowGridMat)); }
+    if (merMajorPts.length) { const g = new THREE.BufferGeometry().setFromPoints(merMajorPts); grid.add(new THREE.LineSegments(g, meridianMat)); }
+    globe.add(grid);
+
+    // ── Depth-occlusion sphere: renders to depth buffer only, no color ──
+    // This prevents back-side elements (borders, labels) from showing through
+    const depthSphere = new THREE.Mesh(
+      new THREE.SphereGeometry(R * 1.012, 48, 24),
+      new THREE.MeshBasicMaterial({
+        colorWrite: false, depthWrite: true, depthTest: true,
+        side: THREE.FrontSide
+      })
+    );
+    depthSphere.renderOrder = 1;
+    globe.add(depthSphere);
+
+    // Faint sphere-cap aura (transparent wire-only accent; no opaque surface).
+    const haloMaterial = new THREE.ShaderMaterial({
+      transparent: true,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending,
+      side: THREE.BackSide,
+      uniforms: {
+        uTime: { value: 0 },
+        uCyan: { value: CYAN },
+        uAccent: { value: ACCENT }
+      },
+      vertexShader: `
+        varying vec3 vNormal;
+        varying vec3 vWorld;
+        void main() {
+          vNormal = normalize(normalMatrix * normal);
+          vec4 world = modelMatrix * vec4(position, 1.0);
+          vWorld = world.xyz;
+          gl_Position = projectionMatrix * viewMatrix * world;
+        }
+      `,
+      fragmentShader: `
+        uniform float uTime;
+        uniform vec3 uCyan;
+        uniform vec3 uAccent;
+        varying vec3 vNormal;
+        varying vec3 vWorld;
+        void main() {
+          float rim = pow(1.0 - abs(dot(normalize(vNormal), vec3(0.0, 0.0, 1.0))), 2.3);
+          float pulse = 0.55 + 0.45 * sin(uTime * 1.45 + vWorld.y * 1.6);
+          vec3 color = mix(uAccent, uCyan, 0.62 + 0.22 * sin(uTime));
+          gl_FragColor = vec4(color, rim * 0.105 * pulse);
+        }
+      `
+    });
+    const halo = new THREE.Mesh(new THREE.SphereGeometry(R * 1.006, GLOBE_SEGMENTS, GLOBE_SEGMENTS/2), haloMaterial);
+    globe.add(halo);
+
+    const continentMaterial = new THREE.ShaderMaterial({
+      transparent: true,
+      depthWrite: false,
+      depthTest: false,
+      blending: THREE.AdditiveBlending,
+      uniforms: {
+        uTime: { value: 0 },
+        uOpacity: { value: 0.62 },
+        uColorA: { value: CYAN },
+        uColorB: { value: ACCENT }
+      },
+      vertexShader: `
+        attribute float aProgress;
+        varying float vProgress;
+        varying vec3 vWorld;
+        void main() {
+          vProgress = aProgress;
+          vec4 world = modelMatrix * vec4(position, 1.0);
+          vWorld = world.xyz;
+          gl_Position = projectionMatrix * viewMatrix * world;
+        }
+      `,
+      fragmentShader: `
+        uniform float uTime;
+        uniform float uOpacity;
+        uniform vec3 uColorA;
+        uniform vec3 uColorB;
+        varying float vProgress;
+        varying vec3 vWorld;
+        void main() {
+          // Fade the back half of the transparent globe so the coastlines read cleanly
+          // instead of drawing every far-side continent over the front hemisphere.
+          vec3 normal = normalize(vWorld);
+          vec3 viewDir = normalize(cameraPosition - vWorld);
+          float facing = smoothstep(-0.08, 0.34, dot(normal, viewDir));
+          float limb = 0.38 + 0.62 * smoothstep(-0.02, 0.22, dot(normal, viewDir));
+          float flow = smoothstep(0.92, 1.0, 1.0 - abs(fract(vProgress * 2.4 - uTime * 0.09) - 0.5) * 2.0);
+          float spark = smoothstep(0.975, 1.0, 1.0 - abs(fract(vProgress * 7.0 - uTime * 0.18) - 0.5) * 2.0);
+          vec3 color = mix(uColorB, uColorA, 0.72 + flow * 0.28);
+          float alpha = uOpacity * facing * limb * (0.58 + flow * 0.34 + spark * 0.14);
+          gl_FragColor = vec4(color, alpha);
+        }
+      `
+    });
+
+    const continentGlowMaterial = continentMaterial.clone();
+    continentGlowMaterial.uniforms = THREE.UniformsUtils.clone(continentMaterial.uniforms);
+    continentGlowMaterial.uniforms.uOpacity.value = 0.18;
+    continentGlowMaterial.uniforms.uColorA.value = new THREE.Color('#67e8f9');
+    continentGlowMaterial.uniforms.uColorB.value = new THREE.Color('#818cf8');
+
+    const continentGroup = new THREE.Group();
+    const landFillGroup = new THREE.Group();
+
+    // Natural Earth 50m has beautiful source geometry, but its raw coastline
+    // vertex density turns intricate regions (fjords, island chains, peninsulas)
+    // into bright clumps on a small hologram. Simplify in lon/lat space before
+    // generating Three.js line geometry so we keep recognizable continents with
+    // far fewer overlapping neon segments.
+    const COASTLINE_SIMPLIFY_TOLERANCE = 0.5; // degrees; ~55km at equator
+    const LAND_TEXTURE_SIMPLIFY_TOLERANCE = 0.25;
+    const MIN_OUTLINE_AREA = 0.12;
+
+    const textureSize = window.innerWidth < 768 ? 1024 : (window.innerWidth < 1440 ? 2048 : 4096);
+    const landCanvas = document.createElement('canvas');
+    landCanvas.width = textureSize;
+    landCanvas.height = textureSize / 2;
+    const landCtx = landCanvas.getContext('2d');
+    const landTexture = new THREE.CanvasTexture(landCanvas);
+    landTexture.minFilter = THREE.LinearFilter;
+    landTexture.magFilter = THREE.LinearFilter;
+    landTexture.generateMipmaps = false;
+    landTexture.anisotropy = Math.min(4, renderer.capabilities.getMaxAnisotropy());
+
+    const landFillMaterial = new THREE.MeshBasicMaterial({
+      map: landTexture,
+      transparent: true,
+      opacity: 0.72,
+      blending: THREE.AdditiveBlending,
+      side: THREE.FrontSide,
+      depthWrite: false,
+      depthTest: false
+    });
+
+    function unwrapRing(ring) {
+      if (!ring || !ring.length) return [];
+      const unwrapped = [[ring[0][0], ring[0][1]]];
+      let previous = ring[0][0];
+      let offset = 0;
+      for (let i = 1; i < ring.length; i++) {
+        const [rawLon, lat] = ring[i];
+        let lon = rawLon + offset;
+        while (lon - previous > 180) lon -= 360;
+        while (lon - previous < -180) lon += 360;
+        offset = lon - rawLon;
+        unwrapped.push([lon, lat]);
+        previous = lon;
+      }
+      return unwrapped;
+    }
+
+    function sqSegmentDistance(point, start, end) {
+      const x = point[0], y = point[1];
+      const x1 = start[0], y1 = start[1];
+      const dx = end[0] - x1;
+      const dy = end[1] - y1;
+      if (dx === 0 && dy === 0) {
+        const sx = x - x1;
+        const sy = y - y1;
+        return sx * sx + sy * sy;
+      }
+      const t = Math.max(0, Math.min(1, ((x - x1) * dx + (y - y1) * dy) / (dx * dx + dy * dy)));
+      const px = x1 + t * dx;
+      const py = y1 + t * dy;
+      const ex = x - px;
+      const ey = y - py;
+      return ex * ex + ey * ey;
+    }
+
+    function simplifyLineRdp(points, tolerance) {
+      if (!points || points.length <= 2) return points ? points.slice() : [];
+      const toleranceSq = tolerance * tolerance;
+      const keep = new Uint8Array(points.length);
+      keep[0] = 1;
+      keep[points.length - 1] = 1;
+      const stack = [[0, points.length - 1]];
+
+      while (stack.length) {
+        const [first, last] = stack.pop();
+        let maxDistanceSq = 0;
+        let index = -1;
+        for (let i = first + 1; i < last; i++) {
+          const distanceSq = sqSegmentDistance(points[i], points[first], points[last]);
+          if (distanceSq > maxDistanceSq) {
+            maxDistanceSq = distanceSq;
+            index = i;
+          }
+        }
+        if (index !== -1 && maxDistanceSq > toleranceSq) {
+          keep[index] = 1;
+          stack.push([first, index], [index, last]);
+        }
+      }
+
+      const simplified = [];
+      for (let i = 0; i < points.length; i++) {
+        if (keep[i]) simplified.push(points[i]);
+      }
+      return simplified;
+    }
+
+    function simplifyRing(ring, tolerance = COASTLINE_SIMPLIFY_TOLERANCE) {
+      const unwrapped = unwrapRing(ring);
+      if (unwrapped.length <= 4) return unwrapped;
+
+      const points = unwrapped.slice();
+      const first = points[0];
+      const last = points[points.length - 1];
+      if (Math.abs(first[0] - last[0]) < 1e-9 && Math.abs(first[1] - last[1]) < 1e-9) {
+        points.pop();
+      }
+      if (points.length <= 4) return points;
+
+      // RDP is defined for open polylines. For a closed coast ring, split it at
+      // the point farthest from the first vertex, simplify both arcs, then join.
+      let splitIndex = 1;
+      let maxDistanceSq = 0;
+      for (let i = 1; i < points.length; i++) {
+        const dx = points[i][0] - points[0][0];
+        const dy = points[i][1] - points[0][1];
+        const distanceSq = dx * dx + dy * dy;
+        if (distanceSq > maxDistanceSq) {
+          maxDistanceSq = distanceSq;
+          splitIndex = i;
+        }
+      }
+
+      const arcA = simplifyLineRdp(points.slice(0, splitIndex + 1), tolerance);
+      const arcB = simplifyLineRdp(points.slice(splitIndex).concat([points[0]]), tolerance);
+      const simplified = arcA.concat(arcB.slice(1, -1));
+
+      // Never let simplification collapse an island/continent into a triangle.
+      return simplified.length >= 4 ? simplified : points;
+    }
+
+    function lonLatToTexturePoint(lon, lat, xShift = 0) {
+      return [
+        ((lon + 180) / 360) * landCanvas.width + xShift,
+        ((90 - lat) / 180) * landCanvas.height
+      ];
+    }
+
+    function drawLandTexture(geoJson) {
+      landCtx.clearRect(0, 0, landCanvas.width, landCanvas.height);
+      landCtx.save();
+      landCtx.fillStyle = 'rgba(14, 61, 104, 0.46)';
+      landCtx.strokeStyle = 'rgba(34, 211, 238, 0.18)';
+      landCtx.lineWidth = Math.max(1, landCanvas.width / 1600);
+
+      function drawPolygon(poly, xShift) {
+        landCtx.beginPath();
+        poly.forEach((ring) => {
+          const simplified = simplifyRing(ring, LAND_TEXTURE_SIMPLIFY_TOLERANCE);
+          simplified.forEach(([lon, lat], i) => {
+            const [x, y] = lonLatToTexturePoint(lon, lat, xShift);
+            if (i === 0) landCtx.moveTo(x, y);
+            else landCtx.lineTo(x, y);
+          });
+          landCtx.closePath();
+        });
+        landCtx.fill('evenodd');
+        landCtx.stroke();
+      }
+
+      geoJson.features.forEach((feature) => {
+        if (!feature.geometry) return;
+        const polygons = feature.geometry.type === 'Polygon'
+          ? [feature.geometry.coordinates]
+          : feature.geometry.coordinates;
+        [-landCanvas.width, 0, landCanvas.width].forEach(shift => {
+          polygons.forEach(poly => drawPolygon(poly, shift));
+        });
+      });
+      landCtx.restore();
+      landTexture.needsUpdate = true;
+    }
+
+    function ringAreaApprox(ring) {
+      let area = 0;
+      const pts = unwrapRing(ring);
+      for (let i = 0, j = pts.length - 1; i < pts.length; j = i++) {
+        area += (pts[j][0] * pts[i][1]) - (pts[i][0] * pts[j][1]);
+      }
+      return Math.abs(area) * 0.5;
+    }
+
+    function addCoastRing(ring, index) {
+      if (!ring || ring.length < 3) return;
+      // Avoid turning tiny one-pixel islands into noisy neon confetti at globe
+      // scale, then simplify the remaining coastline before creating line meshes.
+      if (ring.length < 6 || ringAreaApprox(ring) < MIN_OUTLINE_AREA) return;
+      const simplifiedRing = simplifyRing(ring);
+      if (simplifiedRing.length < 4) return;
+
+      const outlineRadius = R * 1.018;
+      const glowRadius = R * 1.022;
+      const closedRing = simplifiedRing.concat([simplifiedRing[0]]);
+      const outlinePoints = closedRing.map(([lon, lat]) => latLonToVec3(lat, lon, outlineRadius));
+      const glowPoints = closedRing.map(([lon, lat]) => latLonToVec3(lat, lon, glowRadius));
+      const progress = new Float32Array(outlinePoints.length);
+      for (let i = 0; i < outlinePoints.length; i++) progress[i] = i / Math.max(1, outlinePoints.length - 1) + index * 0.031;
+
+      const outlineGeometry = new THREE.BufferGeometry().setFromPoints(outlinePoints);
+      outlineGeometry.setAttribute('aProgress', new THREE.BufferAttribute(progress, 1));
+      const glowGeometry = new THREE.BufferGeometry().setFromPoints(glowPoints);
+      glowGeometry.setAttribute('aProgress', new THREE.BufferAttribute(progress, 1));
+
+      const glowLine = new THREE.Line(glowGeometry, continentGlowMaterial);
+      glowLine.renderOrder = 3;
+      continentGroup.add(glowLine);
+
+      const crispLine = new THREE.Line(outlineGeometry, continentMaterial);
+      crispLine.renderOrder = 4;
+      continentGroup.add(crispLine);
+    }
+
+    async function loadContinents() {
+      try {
+        const response = await fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/land-50m.json');
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        const land = topojson.feature(data, data.objects.land);
+        drawLandTexture(land);
+
+        const landFill = new THREE.Mesh(new THREE.SphereGeometry(R * 1.010, GLOBE_SEGMENTS, GLOBE_SEGMENTS/2), landFillMaterial);
+        landFill.renderOrder = 2;
+        landFillGroup.add(landFill);
+
+        let ringIndex = 0;
+        land.features.forEach((feature) => {
+          if (!feature.geometry) return;
+          const polygons = feature.geometry.type === 'Polygon'
+            ? [feature.geometry.coordinates]
+            : feature.geometry.coordinates;
+          polygons.forEach(poly => {
+            // Outer rings provide the clean continent/coastline silhouette. Drawing
+            // inner lake holes as neon outlines made the globe look busy and jagged.
+            addCoastRing(poly[0], ringIndex++);
+          });
+        });
+
+        globe.add(landFillGroup);
+        globe.add(continentGroup);
+      } catch (error) {
+        console.warn('Unable to load Natural Earth continent data:', error);
+      }
+    }
+
+    loadContinents();
+
+    // Neon equator ring and orbiting particles.
+    const ringMat = new THREE.ShaderMaterial({
+      transparent: true,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending,
+      side: THREE.DoubleSide,
+      uniforms: {
+        uTime: { value: 0 },
+        uColorA: { value: CYAN },
+        uColorB: { value: ACCENT }
+      },
+      vertexShader: `
+        varying vec2 vUv;
+        void main() {
+          vUv = uv;
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+      `,
+      fragmentShader: `
+        uniform float uTime;
+        uniform vec3 uColorA;
+        uniform vec3 uColorB;
+        varying vec2 vUv;
+        void main() {
+          float radial = 1.0 - abs(vUv.y - 0.5) * 2.0;
+          float dash = 0.55 + 0.45 * sin((vUv.x + uTime * 0.045) * 80.0);
+          vec3 color = mix(uColorB, uColorA, radial);
+          gl_FragColor = vec4(color, pow(radial, 0.8) * (0.38 + dash * 0.34));
+        }
+      `
+    });
+    const ring = new THREE.Mesh(new THREE.RingGeometry(R * 0.988, R * 1.024, 192, 4), ringMat);
+    ring.rotation.x = Math.PI / 2;
+    ring.position.y = 0.002;
+    globe.add(ring);
+
+    const ringParticleCount = 120;
+    const ringPositions = new Float32Array(ringParticleCount * 3);
+    const ringSeeds = new Float32Array(ringParticleCount);
+    for (let i = 0; i < ringParticleCount; i++) {
+      ringSeeds[i] = Math.random();
+      const a = ringSeeds[i] * Math.PI * 2;
+      const jitter = (Math.random() - 0.5) * 0.055;
+      ringPositions[i * 3] = Math.cos(a) * (R + jitter);
+      ringPositions[i * 3 + 1] = (Math.random() - 0.5) * 0.04;
+      ringPositions[i * 3 + 2] = Math.sin(a) * (R + jitter);
+    }
+    const ringParticleGeom = new THREE.BufferGeometry();
+    ringParticleGeom.setAttribute('position', new THREE.BufferAttribute(ringPositions, 3));
+    ringParticleGeom.setAttribute('aSeed', new THREE.BufferAttribute(ringSeeds, 1));
+    const ringParticleMat = new THREE.ShaderMaterial({
+      transparent: true,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending,
+      uniforms: { uTime: { value: 0 }, uColor: { value: CYAN } },
+      vertexShader: `
+        attribute float aSeed;
+        uniform float uTime;
+        varying float vSeed;
+        void main() {
+          vSeed = aSeed;
+          vec3 p = position;
+          float speed = 0.45 + aSeed * 0.9;
+          float a = atan(p.z, p.x) + uTime * speed * 0.23;
+          float r = length(p.xz) + sin(uTime * 2.0 + aSeed * 20.0) * 0.025;
+          p.x = cos(a) * r;
+          p.z = sin(a) * r;
+          p.y += sin(uTime * 4.0 + aSeed * 31.0) * 0.025;
+          vec4 mv = modelViewMatrix * vec4(p, 1.0);
+          gl_Position = projectionMatrix * mv;
+          gl_PointSize = (2.0 + 4.2 * fract(aSeed * 17.0)) * (10.0 / -mv.z);
+        }
+      `,
+      fragmentShader: `
+        uniform vec3 uColor;
+        varying float vSeed;
+        void main() {
+          vec2 uv = gl_PointCoord - 0.5;
+          float d = length(uv);
+          float alpha = smoothstep(0.5, 0.0, d) * (0.45 + 0.55 * sin(vSeed * 40.0));
+          gl_FragColor = vec4(uColor, alpha);
+        }
+      `
+    });
+    const ringParticles = new THREE.Points(ringParticleGeom, ringParticleMat);
+    globe.add(ringParticles);
+
+    // Enhanced star field with Milky Way band.
+    const starCount = window.innerWidth < 800 ? 200 : 400;
+    const starPositions = new Float32Array(starCount * 3);
+    const starSeeds = new Float32Array(starCount);
+    const starColors = new Float32Array(starCount * 3);  // RGB color variation
+    for (let i = 0; i < starCount; i++) {
+      // Milky Way band: 30% of stars concentrated near equatorial plane
+      const isMilkyWay = i < starCount * 0.3;
+      const radius = isMilkyWay ? (22 + Math.random() * 18) : (18 + Math.random() * 40);
+      const theta = Math.random() * Math.PI * 2;
+      // Milky Way stars cluster near y=0 plane, others spread wider
+      const ySpread = isMilkyWay ? 3 : 12;
+      const y = (Math.random() - 0.5) * ySpread;
+      starPositions[i * 3] = Math.cos(theta) * radius;
+      starPositions[i * 3 + 1] = y;
+      starPositions[i * 3 + 2] = Math.sin(theta) * radius - 9;
+      starSeeds[i] = Math.random();
+      // Color variation: blue-white for normal, warmer for Milky Way
+      const colorTemp = isMilkyWay ? (0.85 + Math.random() * 0.15) : (0.6 + Math.random() * 0.4);
+      starColors[i * 3] = colorTemp;     // R
+      starColors[i * 3 + 1] = colorTemp + 0.1;  // G slightly higher
+      starColors[i * 3 + 2] = 1.0;              // B full
+    }
+    const starGeometry = new THREE.BufferGeometry();
+    starGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3));
+    starGeometry.setAttribute('aSeed', new THREE.BufferAttribute(starSeeds, 1));
+    starGeometry.setAttribute('aColor', new THREE.BufferAttribute(starColors, 3));
+    const starMaterial = new THREE.ShaderMaterial({
+      transparent: true,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending,
+      uniforms: { uTime: { value: 0 } },
+      vertexShader: `
+        attribute float aSeed;
+        attribute vec3 aColor;
+        uniform float uTime;
+        varying float vAlpha;
+        varying vec3 vColor;
+        void main() {
+          float twinkle = 0.35 + 0.65 * sin(uTime * (0.5 + aSeed * 1.7) + aSeed * 30.0);
+          vAlpha = 0.18 + twinkle * 0.52;
+          vColor = aColor;
+          vec4 mv = modelViewMatrix * vec4(position, 1.0);
+          gl_Position = projectionMatrix * mv;
+          gl_PointSize = (0.8 + aSeed * 2.2) * (16.0 / -mv.z);
+        }
+      `,
+      fragmentShader: `
+        varying float vAlpha;
+        varying vec3 vColor;
+        void main() {
+          vec2 uv = gl_PointCoord - 0.5;
+          float d = length(uv);
+          float alpha = smoothstep(0.5, 0.02, d) * vAlpha;
+          gl_FragColor = vec4(vColor, alpha);
+        }
+      `
+    });
+    scene.add(new THREE.Points(starGeometry, starMaterial));
+
+
+
+    const topicColors = {
+      Bitcoin: '#ff8800',
+      Ethereum: '#9999ff',
+      DeFi: '#22dd66',
+      AI: '#4499ff',
+      Regulation: '#ff4444',
+      Policy: '#ffdd00',
+      Crypto: '#7777ff',
+      Finance: '#33eeff',
+      Tech: '#bb88ff',
+      General: '#aaaacc'
+    };
+
+    function regionFor(lat, lon) {
+      if (lon >= -170 && lon <= -25) return 'Americas';
+      if (lon >= -25 && lon <= 55 && lat >= 30) return 'Europe';
+      return 'Asia';
+    }
+
+    function summaryBullets(text) {
+      return String(text || '')
+        .split(/\n+/)
+        .map(line => line.trim())
+        .filter(line => line.startsWith('•'))
+        .map(line => line.replace(/^•\s*/, '').trim())
+        .filter(Boolean)
+        .slice(0, 5);
+    }
+
+    // ── Marker globals (declared early, built after NEWS_DATA loads) ──
+    const markerGroup = new THREE.Group();
+    const markerMeshes = [];
+    const markerGeometry = new THREE.SphereGeometry(0.095, MARKER_SEGMENTS[0], MARKER_SEGMENTS[1]);
+    const glowGeometry = new THREE.SphereGeometry(0.19, MARKER_SEGMENTS[0], MARKER_SEGMENTS[1]);
+    let markerPositions = [];
+    let markerColors = [];
+    let markerData = [];
+    let markerCount = 0;  // Global for animate loop
+    let instancedMarkers = null;
+    let instancedGlows = null;
+    let historyGroup = null;
+    const dummy = new THREE.Object3D();
+    let activeFilters = { time: 'all', region: 'All', topic: 'All' };
+
+    function buildMarkers() {
+      markerPositions = [];
+      markerColors = [];
+      markerData = [];
+      // Group articles by their base location for clustering
+      const locationGroups = {};
+      const _articles = (typeof NEWS_DATA !== 'undefined' && NEWS_DATA.articles) ? NEWS_DATA.articles : [];
+    _articles.slice(0, 100).forEach((article, index) => {
+      if (!article.ai_summary) return;
+      let baseLat, baseLon, city;
+      const geoMatch = detectGeoLocation(article);
+      if (geoMatch) {
+        [baseLat, baseLon, city] = geoMatch;
+      } else {
+        const srcLoc = (typeof NEWS_DATA !== 'undefined' && NEWS_DATA.sourceLocations) ? NEWS_DATA.sourceLocations[article.source] : null;
+        if (!srcLoc) return;
+        [baseLat, baseLon, city] = srcLoc;
+      }
+      const key = `${baseLat.toFixed(1)},${baseLon.toFixed(1)}`;
+      if (!locationGroups[key]) locationGroups[key] = [];
+      locationGroups[key].push({ article, baseLat, baseLon, city, index });
+    });
+
+    // Create ONE cluster marker per location group
+    // with size proportional to article count
+    const countSprites = [];
+    Object.values(locationGroups).forEach((group) => {
+      const { baseLat, baseLon, city } = group[0];
+      const groupSize = group.length;
+
+      // Determine dominant topic color
+      const topicCounts = {};
+      let dominantTopic = 'General';
+      group.forEach(item => {
+        const t = topicColors[item.article.topic] ? item.article.topic : (topicColors[item.article.category] ? item.article.category : 'General');
+        topicCounts[t] = (topicCounts[t] || 0) + 1;
+      });
+      let maxCnt = 0;
+      Object.entries(topicCounts).forEach(([t, c]) => { if (c > maxCnt) { maxCnt = c; dominantTopic = t; } });
+      const color = new THREE.Color(topicColors[dominantTopic] || topicColors.General);
+
+      // Cluster marker at centroid, size scales with count
+      const pos = latLonToVec3(baseLat, baseLon, R * 1.035);
+      const clusterScale = 1 + Math.min(groupSize - 1, 8) * 0.12;
+
+      markerPositions.push(pos);
+      markerColors.push(color);
+      markerData.push({
+        articles: group.map(g => g.article),
+        cities: [...new Set(group.map(g => g.city))],
+        topic: dominantTopic,
+        city: group.length === 1 ? city : city + ' +' + (groupSize - 1),
+        color,
+        region: regionFor(baseLat, baseLon),
+        baseScale: clusterScale,
+        markerCount: groupSize,
+        _groupSize: groupSize,
+      });
+
+      // Count sprite for clusters with >1 article
+      if (groupSize > 1) {
+        const c = document.createElement('canvas');
+        c.width = 128; c.height = 64;
+        const cx = c.getContext('2d');
+        const fsize = groupSize > 99 ? 28 : 32;
+        cx.font = `bold ${fsize}px Inter, sans-serif`;
+        cx.textAlign = 'center';
+        cx.textBaseline = 'middle';
+        cx.shadowColor = 'rgba(0,0,0,0.9)';
+        cx.shadowBlur = 10;
+        cx.fillStyle = '#ffffff';
+        cx.fillText(String(groupSize), 64, 34);
+        cx.shadowBlur = 0;
+        const tex = new THREE.CanvasTexture(c);
+        tex.minFilter = THREE.LinearFilter;
+        const spriteMat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.95, depthWrite: false, depthTest: false });
+        const sprite = new THREE.Sprite(spriteMat);
+        sprite.renderOrder = 10;
+        sprite.position.copy(pos);
+        sprite.position.setLength(R * 1.075);
+        const s = Math.min(0.8, 0.25 + groupSize * 0.05);
+        sprite.scale.set(s, s * 0.5, 1);
+        countSprites.push(sprite);
+      }
+    });
+    // Add count sprites to marker group
+    countSprites.forEach(s => markerGroup.add(s));
+
+    // Instanced mesh for cluster markers
+    markerCount = markerPositions.length;
+    const markerMat = new THREE.MeshBasicMaterial({
+      transparent: true, opacity: 1.0, blending: THREE.AdditiveBlending, depthWrite: false
+    });
+    instancedMarkers = new THREE.InstancedMesh(markerGeometry, markerMat, markerCount);
+    const colorAttr = new THREE.InstancedBufferAttribute(new Float32Array(markerCount * 3), 3);
+    // Build scale array for per-instance size
+    const scaleAttr = new THREE.InstancedBufferAttribute(new Float32Array(markerCount), 1);
+    const originalPositions = markerPositions.map(p => p.clone());
+    for (let i = 0; i < markerCount; i++) {
+      dummy.position.copy(markerPositions[i]);
+      dummy.scale.set(markerData[i].baseScale, markerData[i].baseScale, markerData[i].baseScale);
+      dummy.updateMatrix();
+      instancedMarkers.setMatrixAt(i, dummy.matrix);
+      colorAttr.setXYZ(i, markerColors[i].r, markerColors[i].g, markerColors[i].b);
+      scaleAttr.setXYZ(i, markerData[i].baseScale);
+    }
+    instancedMarkers.instanceColor = colorAttr;
+    instancedMarkers.instanceMatrix.needsUpdate = true;
+    markerGroup.add(instancedMarkers);
+
+    // Instanced mesh for glows
+    const glowMat = new THREE.MeshBasicMaterial({
+      transparent: true, opacity: 0.28, blending: THREE.AdditiveBlending, depthWrite: false
+    });
+    instancedGlows = new THREE.InstancedMesh(glowGeometry, glowMat, markerCount);
+    for (let i = 0; i < markerCount; i++) {
+      dummy.position.copy(markerPositions[i]);
+      dummy.scale.set(markerData[i].baseScale * 2, markerData[i].baseScale * 2, markerData[i].baseScale * 2);
+      dummy.updateMatrix();
+      instancedGlows.setMatrixAt(i, dummy.matrix);
+    }
+    instancedGlows.instanceColor = colorAttr;
+    instancedGlows.instanceMatrix.needsUpdate = true;
+    markerGroup.add(instancedGlows);
+
+    // Per-instance state for animation + interaction
+    markerMeshes.length = 0;
+    for (let i = 0; i < markerCount; i++) {
+      const data = markerData[i];
+      data.matrixIndex = i;
+      data.instanceScale = 1;
+      data.instanceOpacity = 1.0;
+      data.glowOpacity = 0.28;
+      markerMeshes.push(data);
+    }
+    globe.add(markerGroup);
+    globe.add(continentGroup);
+    console.log(`Built ${markerPositions.length} markers from ${_articles.length} articles`);
+    }
+    // ── Country labels on zoom ──
+    let countryLookup = [];
+    const countryNameEl = document.getElementById('country-label-name');
+    const countryCountEl = document.getElementById('country-label-markerCount');
+    const countryLabelEl = document.getElementById('country-label');
+    let lastCountryLabel = null;
+    const ZOOM_THRESHOLD = 18;
+
+    // Ray-casting point-in-polygon in 2D lon/lat space
+    function pointInRing(lon, lat, ring) {
+      let inside = false;
+      for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+        const xi = ring[i][0], yi = ring[i][1];
+        const xj = ring[j][0], yj = ring[j][1];
+        if ((yi > lat) !== (yj > lat) && lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi) inside = !inside;
+      }
+      return inside;
+    }
+    function findCountry(lon, lat) {
+      for (const entry of countryLookup) {
+        // Bbox pre-filter
+        if (lon < entry.bbox[0] || lon > entry.bbox[2] || lat < entry.bbox[1] || lat > entry.bbox[3]) continue;
+        let found = false;
+        for (const poly of entry.polys) {
+          if (!pointInRing(lon, lat, poly[0])) continue;
+          let inHole = false;
+          for (let k = 1; k < poly.length; k++) { if (pointInRing(lon, lat, poly[k])) { inHole = true; break; } }
+          if (!inHole) { found = true; break; }
+        }
+        if (found) return entry;
+      }
+      return null;
+    }
+
+    async function loadCountries() {
+      try {
+        const resp = await fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json');
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const data = await resp.json();
+        const countries = topojson.feature(data, data.objects.countries);
+        countries.features.forEach(f => {
+          if (!f.properties || !f.properties.name) return;
+          const polys = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates;
+          // Compute centroid + bounding box from vertex average
+          let sumLon = 0, sumLat = 0, cnt = 0;
+          let minLon = 180, maxLon = -180, minLat = 90, maxLat = -90;
+          polys.forEach(poly => poly[0].forEach(([lon, lat]) => {
+            sumLon += lon; sumLat += lat; cnt++;
+            if (lon < minLon) minLon = lon;
+            if (lon > maxLon) maxLon = lon;
+            if (lat < minLat) minLat = lat;
+            if (lat > maxLat) maxLat = lat;
+          }));
+          countryLookup.push({
+            name: f.properties.name,
+            centroid: [sumLon / cnt, sumLat / cnt],
+            polys,
+            bbox: [minLon, minLat, maxLon, maxLat],
+            markerCount: 0
+          });
+        });
+        // Assign articles to countries (with bbox pre-filter)
+        for (let i = 0; i < markerCount; i++) {
+          const pos = markerPositions[i];
+          if (!pos) continue;
+          const nx = pos.x / (R * 1.035), ny = pos.y / (R * 1.035), nz = pos.z / (R * 1.035);
+          const lat = 90 - THREE.MathUtils.radToDeg(Math.acos(Math.min(1, Math.max(-1, ny))));
+          const lon = THREE.MathUtils.radToDeg(Math.atan2(nz, -nx)) - 180;
+          const country = findCountry(lon, lat);
+          if (country) country.markerCount++;
+        }
+        console.log(`Loaded ${countryLookup.length} countries, ${markerPositions.length} articles mapped`);
+        // Render borders + labels AFTER data is loaded (async fix)
+        renderCountryBorders();
+      } catch (e) { console.warn('Country labels unavailable:', e); }
+    }
+    loadCountries();
+
+    // ── Render country boundary lines (called from loadCountries after data ready) ──
+    function renderCountryBorders() {
+      const borderGroup = new THREE.Group();
+      const borderMat = new THREE.LineBasicMaterial({
+        color: 0xffffff, transparent: true, opacity: 0.75, depthWrite: false, depthTest: true
+      });
+      const borderGlowMat = new THREE.LineBasicMaterial({
+        color: 0x22d3ee, transparent: true, opacity: 0.40, depthWrite: false, depthTest: true
+      });
+      countryLookup.forEach(entry => {
+        entry.polys.forEach(poly => {
+          const ring = poly[0];
+          if (!ring || ring.length < 4) return;
+          const pts = ring.map(([lon, lat]) => latLonToVec3(lat, lon, R * 1.025));
+          pts.push(pts[0]);
+          const geom = new THREE.BufferGeometry().setFromPoints(pts);
+          const line = new THREE.Line(geom, borderMat);
+          borderGroup.add(line);
+          const glowPts = ring.map(([lon, lat]) => latLonToVec3(lat, lon, R * 1.018));
+          glowPts.push(glowPts[0]);
+          const glowGeom = new THREE.BufferGeometry().setFromPoints(glowPts);
+          const glowLine = new THREE.Line(glowGeom, borderGlowMat);
+          borderGroup.add(glowLine);
+        });
+      });
+      globe.add(borderGroup);
+      // ── Country name sprites on globe surface ──
+      const labelGroup = new THREE.Group();
+      countryLookup.forEach(entry => {
+        const [lon, lat] = entry.centroid;
+        const pos = latLonToVec3(lat, lon, R * 1.045);
+        // Create fresh canvas per country to avoid texture cross-contamination
+        const c = document.createElement('canvas');
+        c.width = 1024; c.height = 160;
+        const cx = c.getContext('2d');
+        // Calculate label size from country bounding box area — subtle variation
+        const area = (entry.bbox[2] - entry.bbox[0]) * (entry.bbox[3] - entry.bbox[1]);
+        const scaleFactor = Math.sqrt(Math.abs(area)) / 6;
+        const labelScale = Math.min(1.6, Math.max(0.6, scaleFactor));
+        const fontSize = Math.round(30 + 14 * Math.min(1, scaleFactor));
+        cx.font = `bold ${fontSize}px Inter, sans-serif`;
+        cx.textAlign = 'center';
+        cx.textBaseline = 'middle';
+        cx.shadowColor = 'rgba(0,0,0,0.9)';
+        cx.shadowBlur = 18;
+        cx.fillStyle = '#ffffff';
+        cx.fillText(entry.name, 512, 80);
+        cx.shadowBlur = 0;
+        const tex = new THREE.CanvasTexture(c);
+        tex.minFilter = THREE.LinearFilter;
+        const mat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0, depthWrite: false, depthTest: false });
+        const sprite = new THREE.Sprite(mat);
+        sprite.position.copy(pos);
+        sprite.scale.set(labelScale * 2.2, labelScale * 0.55, 1);
+        sprite.userData.entry = entry;
+        sprite.userData.baseScale = labelScale * 2.2;
+        labelGroup.add(sprite);
+      });
+      globe.add(labelGroup);
+      // Store label group for opacity animation in animate loop
+      window._countryLabels = labelGroup;
+      console.log(`Rendered ${countryLookup.length} country boundaries + labels`);
+    }
+    // renderCountryBorders() called from loadCountries() after async fetch completes
+
+    // Share single uTime across all shader materials
+    const _uTime = { value: 0 };
+    haloMaterial.uniforms.uTime = _uTime;
+    continentMaterial.uniforms.uTime = _uTime;
+    continentGlowMaterial.uniforms.uTime = _uTime;
+    ringMat.uniforms.uTime = _uTime;
+    ringParticleMat.uniforms.uTime = _uTime;
+    starMaterial.uniforms.uTime = _uTime;
+
+    // Track invisible instances for filtering
+    const invisibleFlags = new Uint8Array(markerCount);
+
+    const tooltip = document.getElementById('article-tooltip');
+    const raycaster = new THREE.Raycaster();
+    const pointer = new THREE.Vector2(-10, -10);
+    let hoveredIdx = -1;
+    let hoveredData = null;
+    let stickyTooltip = null; // when set, tooltip stays visible after click
+
+    function markerMatchesFilter(data) {
+      if (activeFilters.region !== 'All' && data.region !== activeFilters.region) return false;
+      if (activeFilters.topic !== 'All' && data.topic !== activeFilters.topic) return false;
+      if (activeFilters.time !== 'all') {
+        // Check if any article in the cluster matches the time filter
+        const matchesTime = data.articles.some(a => {
+          const published = a.published;
+          if (!published) return false;
+          const pubTime = Date.parse(published);
+          if (isNaN(pubTime)) return false;
+          const hoursAgo = (Date.now() - pubTime) / (1000 * 60 * 60);
+          if (activeFilters.time === '6h' && hoursAgo > 6) return false;
+          if (activeFilters.time === '24h' && hoursAgo > 24) return false;
+          return true;
+        });
+        if (!matchesTime) return false;
+      }
+      return true;
+    }
+
+    function applyFilter() {
+      if (!instancedMarkers || markerCount === 0) return;  // Guard: markers not built yet
+      const dummy = new THREE.Object3D();
+      for (let i = 0; i < markerCount; i++) {
+        const visible = markerMatchesFilter(markerData[i]);
+        invisibleFlags[i] = visible ? 0 : 1;
+        // Physically hide filtered-out markers / restore visible ones
+        instancedMarkers.getMatrixAt(i, dummy.matrix);
+        dummy.matrix.decompose(dummy.position, dummy.quaternion, dummy.scale);
+        if (visible) {
+          dummy.position.copy(originalPositions[i]);
+        } else {
+          dummy.position.set(0, -100, 0);
+        }
+        dummy.updateMatrix();
+        instancedMarkers.setMatrixAt(i, dummy.matrix);
+        instancedGlows.setMatrixAt(i, dummy.matrix);
+      }
+      instancedMarkers.instanceMatrix.needsUpdate = true;
+      instancedGlows.instanceMatrix.needsUpdate = true;
+      if (hoveredData && !markerMatchesFilter(hoveredData)) {
+        hoveredIdx = -1;
+        hoveredData = null;
+        tooltip.classList.remove('visible');
+      }
+    }
+
+    function escapeHtml(value) {
+      return String(value || '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+    }
+
+    let hoverCooldown = null;
+
+    function updatePointer(event) {
+      const rect = renderer.domElement.getBoundingClientRect();
+      pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+      pointer.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+    }
+
+    renderer.domElement.addEventListener('pointermove', event => {
+      updatePointer(event);
+      raycaster.setFromCamera(pointer, camera);
+      const hits = raycaster.intersectObject(instancedMarkers);
+      if (hits.length && hits[0].instanceId !== undefined) {
+        const idx = hits[0].instanceId;
+        if (invisibleFlags[idx]) return;
+        const data = markerData[idx];
+        if (data !== hoveredData) {
+          hoveredIdx = idx;
+          hoveredData = data;
+          // Pause auto-rotate while hovering a marker
+          if (controls.autoRotate) controls.autoRotate = false;
+          const cnt = data.articles.length;
+          const first = data.articles[0];
+          let html;
+          if (cnt > 1) {
+            html = `<div class="tooltip-title">📦 ${cnt} articles &middot; ${escapeHtml(data.city)}</div>`;
+            html += `<div class="tooltip-source">${escapeHtml(data.topic)} &middot; ${escapeHtml(data.region)}</div>`;
+            html += '<div class="tooltip-summary" style="margin-top:6px;padding-left:0">';
+            data.articles.slice(0, 6).forEach(a => {
+              html += `<div style="font-size:12px;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.06)">${escapeHtml(a.title)}</div>`;
+            });
+            if (cnt > 6) html += `<div style="font-size:11px;color:rgba(136,146,182,0.6);margin-top:4px">+ ${cnt - 6} more</div>`;
+            html += '</div>';
+          } else {
+            const bullets = summaryBullets(first.ai_summary);
+            html = `<div class="tooltip-title">${escapeHtml(first.title)}</div>`;
+            html += `<div class="tooltip-source">${escapeHtml(first.source)} &middot; ${escapeHtml(data.city)} &middot; ${escapeHtml(data.topic)}</div>`;
+            html += `<ul class="tooltip-summary">${bullets.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`;
+          }
+          tooltip.innerHTML = html;
+          tooltip.style.transition = 'none';
+          // Position tooltip using instanced mesh position
+          const dummy = new THREE.Object3D();
+          instancedMarkers.getMatrixAt(idx, dummy.matrix);
+          dummy.matrix.decompose(dummy.position, dummy.quaternion, dummy.scale);
+          const world = dummy.position.clone().project(camera);
+          // Smart tooltip position: left side markers get tooltip on right, right side markers get tooltip on left
+          const tooltipW = 340;
+          const txScreen = (world.x * 0.5 + 0.5) * window.innerWidth;
+          const tyScreen = (-world.y * 0.5 + 0.5) * window.innerHeight;
+          const offsetX = txScreen < window.innerWidth / 2 ? txScreen + 18 : txScreen - tooltipW - 18;
+          const clampedX = Math.max(8, Math.min(offsetX, window.innerWidth - tooltipW - 8));
+          tooltip.style.transform = `translate3d(${clampedX}px, ${Math.max(tyScreen - 80, 14)}px, 0) scale(1)`;
+          tooltip.offsetHeight;
+          tooltip.style.transition = '';
+          tooltip.classList.add('visible');
+        }
+      } else if (hoveredData) {
+        if (stickyTooltip !== null) return; // don't clear sticky picker
+        hoveredIdx = -1;
+        hoveredData = null;
+        tooltip.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    renderer.domElement.addEventListener('pointerleave', () => {
+      pointer.set(-10, -10);
+      if (hoveredData) { 
+        hoveredIdx = -1; hoveredData = null; tooltip.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    // ── Click cluster → open articles or show picker ──
+    renderer.domElement.addEventListener('click', () => {
+      // If sticky picker is shown and clicking empty space, close it
+      if (stickyTooltip !== null && (!hoveredData || hoveredData === null)) {
+        stickyTooltip = null;
+        hoveredIdx = -1;
+        hoveredData = null;
+        tooltip.classList.remove('visible');
+        pauseAutoRotate(); // restart idle timer
+        return;
+      }
+      if (!hoveredData || !hoveredData.articles) return;
+      const articles = hoveredData.articles;
+      if (articles.length === 1) {
+        window.location.href = articles[0].url;
+      } else {
+        stickyTooltip = hoveredIdx;
+        // Show sticky article picker in tooltip
+        let html = `<div class="tooltip-title" style="margin-bottom:8px">📦 ${articles.length} articles · ${escapeHtml(hoveredData.city)}</div>`;
+        articles.forEach((a, i) => {
+          const color = topicColors[a.topic] || topicColors.General;
+          html += `<a href="${escapeHtml(a.url)}" target="_blank" rel="noopener" style="display:block;padding:6px 8px;margin:2px 0;border-radius:6px;background:rgba(255,255,255,0.04);color:#eef7ff;text-decoration:none;font-size:13px;line-height:1.35;border-left:3px solid ${color};transition:background .15s" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.04)'">${escapeHtml(a.title)}<br><span style="font-size:11px;color:rgba(136,146,182,0.7)">${escapeHtml(a.source)}</span></a>`;
+        });
+        tooltip.innerHTML = html;
+        tooltip.style.transition = 'none';
+        // Position at current hover position
+        const dummy = new THREE.Object3D();
+        instancedMarkers.getMatrixAt(hoveredIdx, dummy.matrix);
+        dummy.matrix.decompose(dummy.position, dummy.quaternion, dummy.scale);
+        const world = dummy.position.clone().project(camera);
+        const txScreen = (world.x * 0.5 + 0.5) * window.innerWidth;
+        const tyScreen = (-world.y * 0.5 + 0.5) * window.innerHeight;
+        const tooltipW = 360;
+        const offsetX = txScreen < window.innerWidth / 2 ? txScreen + 18 : txScreen - tooltipW - 18;
+        const clampedX = Math.max(8, Math.min(offsetX, window.innerWidth - tooltipW - 8));
+        tooltip.style.transform = `translate3d(${clampedX}px, ${Math.max(tyScreen - 80, 14)}px, 0)`;
+        tooltip.offsetHeight;
+        tooltip.style.transition = '';
+        tooltip.classList.add('visible');
+        // Don't clear hoveredData so tooltip stays
+      }
+    });
+
+    document.querySelectorAll('.filter-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const filterType = button.dataset.filterType;
+        const filterValue = button.dataset.filterValue;
+
+        if (filterType === 'all') {
+          // Global reset: deactivate all, re-activate "All" + "ALL TIME"
+          activeFilters = { time: 'all', region: 'All', topic: 'All' };
+          document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+          document.querySelectorAll('.filter-btn[data-filter-type="all"]').forEach(btn => btn.classList.add('active'));
+          document.querySelector('.filter-btn[data-filter-type="time"][data-filter-value="all"]').classList.add('active');
+        } else if (filterType === 'region') {
+          if (activeFilters.region === filterValue) {
+            activeFilters.region = 'All';
+            button.classList.remove('active');
+            document.querySelector('.filter-btn[data-filter-type="all"]').classList.add('active');
+          } else {
+            activeFilters.region = filterValue;
+            document.querySelectorAll('.filter-btn[data-filter-type="all"]').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.filter-btn[data-filter-type="region"]').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+          }
+        } else if (filterType === 'time') {
+          activeFilters.time = filterValue;
+          document.querySelectorAll('.filter-btn[data-filter-type="all"]').forEach(btn => btn.classList.remove('active'));
+          document.querySelectorAll('.filter-btn[data-filter-type="time"]').forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+        } else if (filterType === 'topic') {
+          if (activeFilters.topic === filterValue) {
+            activeFilters.topic = 'All';
+            button.classList.remove('active');
+          } else {
+            activeFilters.topic = filterValue;
+            document.querySelectorAll('.filter-btn[data-filter-type="all"]').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.filter-btn[data-filter-type="topic"]').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+          }
+        }
+        applyFilter();
+        renderFeed();
+        // Screen reader announcement
+        const btnText = button.textContent.trim();
+        a11yAnnounce('Filter: ' + btnText);
+      });
+    });
+    applyFilter();
+
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.055;
+    controls.enablePan = false;
+    controls.enableZoom = true;
+    controls.minDistance = 5;
+    controls.maxDistance = 28;
+    controls.enableRotate = true;
+    controls.minPolarAngle = 0;
+    controls.maxPolarAngle = Math.PI;
+    controls.rotateSpeed = 0.26;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 1.0;
+    controls.target.set(0, -0.4, 0);
+    controls.update();
+
+    // ── Auto-rotation pause/resume: idle 25s → auto-resume ──
+    let autoRotateTimer = null;
+    function pauseAutoRotate() {
+      if (controls.autoRotate) controls.autoRotate = false;
+      clearTimeout(autoRotateTimer);
+      autoRotateTimer = setTimeout(() => { controls.autoRotate = true; }, 25000);
+    }
+    // Hook into pointer drag start / scroll to pause auto-rotate
+    renderer.domElement.addEventListener('pointerdown', () => pauseAutoRotate(), { passive: true });
+    renderer.domElement.addEventListener('wheel', () => pauseAutoRotate(), { passive: true });
+
+    // ── History Rings (created after timelineData loads) ──
+    historyGroup = new THREE.Group();
+    globe.add(historyGroup);
+    
+    function initHistoryRings() {
+      const H_RING_BASE = 7.0;
+      const H_RING_STEP = 0.92;
+      const H_YEARS = Object.keys(timelineData || {}).sort().reverse().slice(0, 15);
+      const H_YEAR_COLORS = ['#67e8f9','#22d3ee','#818cf8','#a78bfa','#6366f1','#f59e0b','#f97316','#ef4444','#22c55e','#8892b6'];
+
+      // Store all dots by type for connection lines
+      const dotsByType = {};
+      
+      H_YEARS.forEach((year, yi) => {
+        const r = H_RING_BASE + yi * H_RING_STEP;
+        const color = new THREE.Color(H_YEAR_COLORS[yi % H_YEAR_COLORS.length]);
+        const ringMat = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.35, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide });
+        const ring = new THREE.Mesh(new THREE.RingGeometry(r - 0.015, r + 0.015, 160, 2), ringMat);
+        ring.rotation.x = -Math.PI/2;
+        ringMat.userData = { _baseOpacity: 0.35 };
+        historyGroup.add(ring);
+
+        const c = document.createElement('canvas'); c.width=200; c.height=60;
+        const ctx = c.getContext('2d');
+        ctx.font='bold 28px Inter,sans-serif'; ctx.fillStyle=H_YEAR_COLORS[yi % H_YEAR_COLORS.length]; ctx.textAlign='center';
+        ctx.fillText(year, 100, 42);
+        const tex = new THREE.CanvasTexture(c); tex.minFilter = THREE.LinearFilter;
+        const sprMat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.8, depthWrite: false });
+        sprMat.userData = { _baseOpacity: 0.8 };
+        const sprite = new THREE.Sprite(sprMat);
+        sprite.position.set(r + 0.4, 0.12, 0); sprite.scale.set(1.4, 0.42, 1);
+        historyGroup.add(sprite);
+
+        const yrData = (timelineData || {})[String(year)] || [];
+        yrData.forEach((ev, ei) => {
+          const angle = (ei / Math.max(1, yrData.length)) * Math.PI * 2;
+          const dotColor = ev.type==='politics'?'#eab308':ev.type==='tech'?'#3b82f6':ev.type==='finance'?'#22c55e':ev.type==='disaster'?'#ef4444':ev.type==='crypto'?'#818cf8':ev.type==='science'?'#a78bfa':'#8892b6';
+          const dotMat = new THREE.MeshBasicMaterial({ color: new THREE.Color(dotColor), transparent: true, opacity: 0.7, blending: THREE.AdditiveBlending, depthWrite: false });
+          dotMat.userData = { _baseOpacity: 0.7, _baseAngle: angle, _baseY: (ei%3)*0.08-0.05 };
+          const dot = new THREE.Mesh(new THREE.SphereGeometry(0.06, 8, 6), dotMat);
+          dot.position.set(Math.cos(angle)*r, (ei%3)*0.08-0.05, Math.sin(angle)*r);
+          dot.userData = { _event: ev, _year: year, _ringRadius: r, _angle: angle };
+          historyGroup.add(dot);
+          window._historyDots = window._historyDots || [];
+          window._historyDots.push(dot);
+          
+          // Group dots by type for connection lines
+          if (ev.type) {
+            if (!dotsByType[ev.type]) dotsByType[ev.type] = [];
+            dotsByType[ev.type].push({ dot, year: parseInt(year), ev });
+          }
+          
+          dot.callback = () => {
+            const panel = document.getElementById('timeline-view');
+            if (panel) {
+              document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+              document.querySelector('[data-view="timeline"]')?.classList.add('active');
+              document.getElementById('globe-view').classList.remove('active');
+              document.getElementById('timeline-view').classList.add('active');
+            }
+          };
+        });
+      });
+      
+      // Create connection lines between same-type events across years
+      window._eventLines = [];
+      const lineColors = {
+        politics: '#eab308',
+        tech: '#3b82f6', 
+        finance: '#22c55e',
+        disaster: '#ef4444',
+        crypto: '#818cf8',
+        science: '#a78bfa',
+        climate: '#f97316'
+      };
+      
+      Object.keys(dotsByType).forEach(type => {
+        const dots = dotsByType[type];
+        if (dots.length < 2) return;
+        
+        // Sort by year (most recent first)
+        dots.sort((a, b) => b.year - a.year);
+        
+        // Connect events within 3 years of each other
+        for (let i = 0; i < dots.length - 1; i++) {
+          for (let j = i + 1; j < dots.length; j++) {
+            const yearDiff = dots[i].year - dots[j].year;
+            if (yearDiff > 3) break; // Only connect recent events
+            
+            // Create curved line between dots
+            const start = dots[i].dot.position.clone();
+            const end = dots[j].dot.position.clone();
+            
+            // Create a curved path
+            const mid = new THREE.Vector3().lerpVectors(start, end, 0.5);
+            mid.y += 0.3; // Arc upward
+            
+            const curve = new THREE.QuadraticBezierCurve3(start, mid, end);
+            const points = curve.getPoints(20);
+            const geometry = new THREE.BufferGeometry().setFromPoints(points);
+            
+            const lineMat = new THREE.LineBasicMaterial({
+              color: new THREE.Color(lineColors[type] || '#8892b6'),
+              transparent: true,
+              opacity: 0.15 + Math.random() * 0.15,
+              blending: THREE.AdditiveBlending
+            });
+            
+            const line = new THREE.Line(geometry, lineMat);
+            line.userData = { _type: type, _baseOpacity: lineMat.opacity };
+            historyGroup.add(line);
+            window._eventLines.push(line);
+          }
+        }
+      });
+    }
+
+    function resize() {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      camera.aspect = w / h;
+      camera.position.z = w < 768 ? 13.8 : 12.2;
+      camera.position.y = w < 768 ? 1.6 : 1.2;
+      camera.updateProjectionMatrix();
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      renderer.setSize(w, h);
+      globe.scale.setScalar(w < 768 ? 0.82 : Math.min(1.06, Math.max(0.92, h / 960)));
+    }
+    window.addEventListener('resize', resize, { passive: true });
+    resize();
+
+    // Expose Three.js objects for browser debug/remote inspection
+    window._cam = camera;
+    window._ctrl = controls;
+    window._globe = globe;
+    window._scene = scene;
+    window._renderer2 = renderer;
+
+    // ── HUD toggle ──
+    const hudPanel = document.getElementById('hud-panel');
+    const hudToggle = document.getElementById('hud-toggle');
+    if (hudToggle && hudPanel) {
+      hudToggle.addEventListener('click', () => {
+        hudPanel.classList.toggle('collapsed');
+        hudToggle.textContent = hudPanel.classList.contains('collapsed') ? '▶' : '◀';
+      });
+    }
+
+    function animate() {
+      // Guard: markers not built yet
+      if (!instancedMarkers || !instancedGlows || markerCount === 0) {
+        requestAnimationFrame(animate);
+        return;
+      }
+      // FPS throttle for low-end devices
+      if (FPS_THROTTLE > 1) {
+        animate._fc = (animate._fc || 0) + 1;
+        if (animate._fc % FPS_THROTTLE !== 0) { requestAnimationFrame(animate); return animate._fc; }
+      }
+      const elapsed = clock.getElapsedTime();
+
+      const pulse = 1 + Math.sin(elapsed * 1.1) * 0.006;
+      grid.scale.setScalar(pulse);
+      continentGroup.scale.setScalar(1 + Math.sin(elapsed * 0.9 + 0.8) * 0.0035);
+
+      _uTime.value = elapsed;
+
+      // Update instanced marker pulse via instance matrix
+      const dummy = new THREE.Object3D();
+      let needsUpdate = false;
+      // Distance-based size cap: markers stay readable but never overwhelm the view
+      const camDist = camera.position.distanceTo(controls.target);
+      // History rings: fade in as you zoom out
+      const historyOpacity = Math.max(0, Math.min(1, (camDist - 10) / 10));
+      if (historyGroup) {
+        historyGroup.children.forEach(child => {
+        let baseOp = 0.5;
+        if (child.material && child.material.userData && child.material.userData._baseOpacity != null) {
+          baseOp = child.material.userData._baseOpacity;
+        }
+        // Pulse animation for history dots
+        const pulseScale = 1 + Math.sin(elapsed * 2.5 + (child.userData?._event?.date?.slice(5,7)||0) * 0.3) * 0.15;
+        if (child.geometry && child.geometry.type === 'SphereGeometry') {
+          child.scale.setScalar(pulseScale);
+          // Slow orbit around ring
+          if (child.material.userData?._baseAngle) {
+            const a = child.material.userData._baseAngle + elapsed * 0.08;
+            const r = child.position.length();
+            child.position.set(Math.cos(a) * r, child.material.userData._baseY || 0, Math.sin(a) * r);
+          }
+        }
+        if (child.material) child.material.opacity = baseOp * historyOpacity;
+        if (child.isSprite) child.material.opacity = (child.material.userData?._baseOpacity || 0.8) * historyOpacity;
+        });
+      }
+
+      // Fade out globe markers when zoomed far out (r>15)
+      const markerVisibility = 1 - Math.max(0, Math.min(1, (camDist - 18) / 8));
+      const distScale = Math.min(2.5, 12 / camDist) * markerVisibility;
+      for (let i = 0; i < markerCount; i++) {
+        const data = markerData[i];
+        const isHovered = data === hoveredData;
+        const target = isHovered ? 1.85 : 1 + Math.sin(elapsed * 2.6 + i * 0.47) * 0.09;
+        const prev = data.instanceScale;
+        data.instanceScale += (target - prev) * 0.18;
+        const s = data.instanceScale * distScale;
+        const op = isHovered ? 1 : 0.82 + Math.sin(elapsed * 2.2 + i) * 0.12;
+        data.instanceOpacity += (op - data.instanceOpacity) * 0.18;
+        const gop = isHovered ? 0.50 : 0.22 + Math.sin(elapsed * 1.8 + i) * 0.08;
+        // Cluster density: reduce glow in large clusters so additive blending doesn't bloom
+        const clusterDensity = Math.min(1, 4 / (data._groupSize || 1));
+        data.glowOpacity += (gop * clusterDensity - data.glowOpacity) * 0.18;
+
+        if (Math.abs(s - prev) > 0.001) {
+          instancedMarkers.getMatrixAt(i, dummy.matrix);
+          const pos = new THREE.Vector3().setFromMatrixPosition(dummy.matrix);
+          dummy.position.copy(pos);
+          dummy.scale.set(s, s, s);
+          dummy.updateMatrix();
+          instancedMarkers.setMatrixAt(i, dummy.matrix);
+          // Also update glow instance with same distance-scaled size
+          instancedGlows.getMatrixAt(i, dummy.matrix);
+          const glowPos = new THREE.Vector3().setFromMatrixPosition(dummy.matrix);
+          dummy.position.copy(glowPos);
+          const glowS = s * 2.0; // glow is 2x marker size
+          dummy.scale.set(glowS, glowS, glowS);
+          dummy.updateMatrix();
+          instancedGlows.setMatrixAt(i, dummy.matrix);
+          needsUpdate = true;
+        }
+      }
+      if (needsUpdate) {
+        instancedMarkers.instanceMatrix.needsUpdate = true;
+        instancedGlows.instanceMatrix.needsUpdate = true;
+      }
+
+      // ── Country label on zoom ──
+      // camDist already computed above for marker size cap
+      if (camDist < ZOOM_THRESHOLD && countryLookup.length) {
+        // Ray from camera through screen center → globe surface
+        const centerNdc = new THREE.Vector3(0, 0, 0.5);
+        centerNdc.unproject(camera);
+        const rayDir = centerNdc.sub(camera.position).normalize();
+        const globeCenter = new THREE.Vector3(0, -0.8, 0);
+        const toCam = new THREE.Vector3().copy(camera.position).sub(globeCenter);
+        const a = rayDir.dot(rayDir);
+        const b = 2 * rayDir.dot(toCam);
+        const c = toCam.dot(toCam) - R * R;
+        const disc = b * b - 4 * a * c;
+        if (disc >= 0) {
+          const t = (-b - Math.sqrt(disc)) / (2 * a);
+          if (t > 0) {
+            // World → globe local space (undo rotation + translation)
+            const hitWorld = new THREE.Vector3().copy(camera.position).add(rayDir.clone().multiplyScalar(t));
+            const local = hitWorld.sub(globeCenter).applyQuaternion(globe.quaternion.clone().invert());
+            const nx = local.x / R, ny = local.y / R, nz = local.z / R;
+            const lat = 90 - THREE.MathUtils.radToDeg(Math.acos(Math.min(1, Math.max(-1, ny))));
+            let lon = THREE.MathUtils.radToDeg(Math.atan2(nz, -nx)) - 180;
+            // Normalize to -180..180 so findCountry matches country bboxes correctly
+            while (lon < -180) lon += 360;
+            while (lon > 180) lon -= 360;
+            const country = findCountry(lon, lat);
+            if (country && country !== lastCountryLabel) {
+              countryNameEl.textContent = country.name;
+              const t = I18N[currentLang] || I18N['zh-HK'];
+              const label = country.markerCount === 1 ? (t['country.articles'] || 'article') : (t['country.articles_plural'] || 'articles');
+              countryCountEl.textContent = country.markerCount + ' ' + label;
+              countryLabelEl.classList.add('visible');
+              lastCountryLabel = country;
+            } else if (!country && lastCountryLabel) {
+              countryLabelEl.classList.remove('visible');
+              lastCountryLabel = null;
+            }
+          }
+        }
+      } else if (lastCountryLabel) {
+        countryLabelEl.classList.remove('visible');
+        lastCountryLabel = null;
+      }
+
+      // ── Country label sprite opacity & size by zoom ──
+      const labelGroup = window._countryLabels;
+      if (labelGroup) {
+        const globeCenter = new THREE.Vector3(0, -0.8, 0);
+        labelGroup.children.forEach(sprite => {
+          // Compute world position via globe's world matrix
+          const worldPos = new THREE.Vector3();
+          worldPos.copy(sprite.position);
+          globe.localToWorld(worldPos);
+          // Check if on front face
+          const toSprite = new THREE.Vector3().copy(worldPos).sub(globeCenter);
+          const toCam = new THREE.Vector3().copy(camera.position).sub(globeCenter);
+          const facing = toSprite.dot(toCam);
+          // Front face only
+          if (facing <= 0) { sprite.material.opacity = 0; return; }
+
+          // Project to screen to check visible size
+          worldPos.project(camera);
+          const screenX = (worldPos.x * 0.5 + 0.5) * window.innerWidth;
+          const screenY = (-worldPos.y * 0.5 + 0.5) * window.innerHeight;
+          // Skip if outside viewport (with margin)
+          if (screenX < -300 || screenX > window.innerWidth + 300 ||
+              screenY < -300 || screenY > window.innerHeight + 300) {
+            sprite.material.opacity = 0; return;
+          }
+
+          // Compute screen-space label width (approximate)
+          const spriteWorldSize = sprite.userData.baseScale || sprite.scale.x;
+          const labelWidth = spriteWorldSize * 600 / camDist; // ~pixels on screen
+          // Hide if label would be wider than 35% of viewport
+          if (labelWidth > window.innerWidth * 0.35) {
+            sprite.material.opacity = 0; return;
+          }
+
+          // Distance fade: labels visible across full zoom range
+          const opacity = Math.min(0.85, Math.max(0.12,
+            1 - Math.abs(camDist - 8) / 14
+          ));
+          sprite.material.opacity = opacity;
+
+          // Larger screen size for readability across zoom levels
+          const screenScale = 0.5 + 0.5 * Math.min(1, labelWidth / 140);
+          const finalScale = spriteWorldSize * screenScale * 0.45;
+          // Skip if label would be too small to read (< 0.5 world units)
+          if (finalScale < 0.5) { sprite.material.opacity = 0; return; }
+          sprite.scale.set(finalScale, finalScale * 0.30, 1);
+        });
+      }
+
+      controls.update();
+      renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+    }
+
+    // ── Loading Sequence ──
+    (function(){
+      const overlay = document.getElementById('loading-overlay');
+      const status = document.getElementById('loading-status');
+      if(!overlay) return;
+      const startTime = Date.now();
+      const MIN_DISPLAY = 1200; // minimum 1.2s visible
+      let steps = ['Loading data...','Building globe...','Rendering markers...'];
+      if(isLowEnd) steps.push('💻 Low-end mode');
+      let i = 0;
+      const tick = setInterval(() => {
+        if(i < steps.length){ status.textContent = steps[i]; i++; }
+      }, 400);
+      const hideOverlay = () => {
+        clearInterval(tick);
+        overlay.style.opacity = '0';
+        setTimeout(() => { overlay.remove(); document.body.focus(); }, 600);
+        if(!localStorage.getItem('astroaxis_seen_onboarding')) {
+          setTimeout(() => {
+            const ob = document.getElementById('onboarding-overlay');
+            if(ob){ ob.style.display = 'flex'; }
+          }, 400);
+        }
+      };
+      const checkReady = () => {
+        if(typeof globe !== 'undefined' && globe && globe.children.length > 0) {
+          const elapsed = Date.now() - startTime;
+          if(elapsed >= MIN_DISPLAY) { hideOverlay(); return; }
+          setTimeout(hideOverlay, MIN_DISPLAY - elapsed);
+          return;
+        }
+        requestAnimationFrame(checkReady);
+      };
+      requestAnimationFrame(checkReady);
+    })();
+
+    // ── Onboarding ──
+    document.getElementById('onboarding-close')?.addEventListener('click', () => {
+      document.getElementById('onboarding-overlay').style.display = 'none';
+      localStorage.setItem('astroaxis_seen_onboarding', '1');
+      // Focus body so keyboard shortcuts work immediately after dismissing onboarding
+      setTimeout(() => document.body.focus(), 100);
+    });
+
+    // ── Bookmarks (localStorage) ──
+    function getBookmarks(){ try{return JSON.parse(localStorage.getItem('astroaxis_bookmarks')||'[]');}catch(e){return[];} }
+    function saveBookmarks(b){ localStorage.setItem('astroaxis_bookmarks', JSON.stringify(b)); }
+    function toggleBookmark(url, title, source) {
+      let bm = getBookmarks();
+      const idx = bm.findIndex(b => b.url === url);
+      if(idx >= 0){ bm.splice(idx,1); } else { bm.push({url,title,source,time:Date.now()}); }
+      saveBookmarks(bm);
+      renderFeed();
+    }
+    function isBookmarked(url){ return getBookmarks().some(b => b.url === url); }
+    function showToast(msg) {
+      const t = document.getElementById('share-toast') || (()=>{ const e=document.createElement('div');e.id='share-toast';e.style.cssText='position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:rgba(34,211,238,.15);border:1px solid #67e8f9;border-radius:999px;padding:10px 22px;color:#eaffff;z-index:100;font-size:13px;font-weight:600;backdrop-filter:blur(12px);pointer-events:none;opacity:0;transition:opacity .25s';document.body.appendChild(e);return e;})();
+      t.textContent = msg; t.style.opacity = '1';
+      clearTimeout(t._tid); t._tid = setTimeout(()=>{ t.style.opacity = '0'; }, 1800);
+    }
+    function shareArticle(url, title) {
+      if(navigator.share){ navigator.share({title,url}).catch(()=>{}); }
+      else if(navigator.clipboard){ navigator.clipboard.writeText(url).then(()=>{ showToast('📋 Link copied!'); }).catch(()=>{ window.open(url,'_blank'); }); }
+      else { window.open(url,'_blank'); }
+    }
+
+    // ── renderFeed override with bookmark + share ──
+    const _origRenderFeed = renderFeed;
+    renderFeed = function() {
+      _origRenderFeed();
+      const cards = document.querySelectorAll('#feed-content .feed-card');
+      cards.forEach(card => {
+        const link = card.querySelector('h3 a');
+        if(!link) return;
+        const url = link.href;
+        const title = link.textContent.replace(/'/g,"\\u2019");
+        const meta = card.querySelector('.card-meta');
+        if(!meta || meta.querySelector('.action-btns')) return;
+        const isBm = isBookmarked(url);
+        const btns = document.createElement('span');
+        btns.className = 'action-btns';
+        btns.style.cssText = 'display:flex;gap:6px;align-items:center';
+        const bmBtn = document.createElement('button');
+        bmBtn.className = 'bm-btn';
+        bmBtn.title = 'Bookmark';
+        bmBtn.style.cssText = 'background:transparent;border:1px solid '+(isBm?'rgba(245,158,11,.5)':'rgba(136,136,160,.2)')+';border-radius:14px;color:'+(isBm?'#f59e0b':'rgba(238,247,255,.4)')+';cursor:pointer;font-size:15px;padding:1px 7px;line-height:1.4;transition:all .15s';
+        bmBtn.textContent = isBm ? '★' : '☆';
+        bmBtn.onclick = function(e){ e.preventDefault(); e.stopPropagation(); toggleBookmark(url, title, ''); };
+        const shareBtn = document.createElement('button');
+        shareBtn.className = 'share-btn';
+        shareBtn.title = 'Share';
+        shareBtn.style.cssText = 'background:transparent;border:1px solid rgba(136,136,160,.2);border-radius:14px;color:rgba(238,247,255,.4);cursor:pointer;font-size:14px;padding:1px 7px;line-height:1.4;transition:all .15s';
+        shareBtn.textContent = '↗';
+        shareBtn.onclick = function(e){ e.preventDefault(); e.stopPropagation(); shareArticle(url, title); };
+        btns.appendChild(bmBtn);
+        btns.appendChild(shareBtn);
+        meta.appendChild(btns);
+      });
+    };
+
+    // ── Filter clear-all button ──
+    (function(){
+      const fb = document.querySelector('.filter-bar');
+      if(!fb) return;
+      const clear = document.createElement('button');
+      clear.className = 'filter-btn';
+      clear.textContent = '✕ Clear';
+      clear.style.cssText = 'color:rgba(239,68,68,.7);border-color:rgba(239,68,68,.2)';
+      clear.onclick = () => {
+        document.querySelectorAll('.filter-btn.active').forEach(b => b.classList.remove('active'));
+        document.querySelector('.filter-btn[data-filter-value="All"]')?.classList.add('active');
+        document.querySelector('.filter-btn[data-filter-type="time"][data-filter-value="all"]')?.classList.add('active');
+        activeFilters = {topic:'All',time:'all',region:'All'};
+        renderFeed();
+      };
+      fb.appendChild(clear);
+    })();
+
+    // ── Personalization: track topic interest ──
+    (function(){
+      function getInterests(){ try{return JSON.parse(localStorage.getItem('astroaxis_interests')||'{}');}catch(e){return{};} }
+      function trackInterest(topic){
+        if(!topic || topic==='General') return;
+        const interests = getInterests();
+        interests[topic] = (interests[topic]||0) + 1;
+        localStorage.setItem('astroaxis_interests', JSON.stringify(interests));
+      }
+      // Track filter button clicks
+      document.querySelectorAll('.filter-btn[data-filter-type="topic"]').forEach(btn => {
+        btn.addEventListener('click', () => trackInterest(btn.dataset.filterValue));
+      });
+      // Track feed article clicks
+      document.getElementById('feed-content')?.addEventListener('click', e => {
+        const card = e.target.closest('.feed-card');
+        if(!card) return;
+        const topic = card.querySelector('.card-topic')?.textContent;
+        if(topic) trackInterest(topic);
+      });
+      // Highlight top interest on next visit (just 1 click triggers)
+      const interests = getInterests();
+      const topTopic = Object.entries(interests).sort((a,b)=>b[1]-a[1])[0];
+      if(topTopic && topTopic[1] >= 1){
+        const btn = document.querySelector(`.filter-btn[data-filter-value="${topTopic[0]}"]`);
+        if(btn){
+          btn.style.setProperty('box-shadow','0 0 22px rgba(34,211,238,.5), inset 0 0 14px rgba(34,211,238,.12)','important');
+          btn.style.setProperty('border-color','rgba(34,211,238,.7)','important');
+          btn.style.setProperty('background','rgba(34,211,238,.2)','important');
+          btn.style.setProperty('color','#eaffff','important');
+          btn.style.setProperty('animation','interestPulse 2s ease-in-out infinite','important');
+        }
+      }
+    })();
+
+    // ── initApp: called after NEWS_DATA loaded ──
+    function initApp() {
+      const articles = NEWS_DATA.articles || [];
+      if(!articles.length){
+        const eb = document.getElementById('errorBanner');
+        if(eb){ eb.classList.add('show'); document.getElementById('errorText').textContent = 'No news data available. Pipeline may be offline.'; }
+        return;
+      }
+      // Check freshness: if newest article > 12h, show stale warning
+      const newest = articles.reduce((max, a) => {
+        if(!a.published) return max;
+        const d = new Date(a.published).getTime();
+        return d > max ? d : max;
+      }, 0);
+      const hoursSince = (Date.now() - newest) / 3600000;
+      if(hoursSince > 12 && newest > 0){
+        const eb = document.getElementById('errorBanner');
+        if(eb){
+          eb.classList.add('show');
+          document.getElementById('errorText').textContent = `Data may be stale — last update ${Math.floor(hoursSince)}h ago`;
+        }
+      }
+      // Build markers AFTER NEWS_DATA is loaded
+      buildMarkers();
+      // Initialize UI after data loaded
+      document.documentElement.lang = currentLang;
+      applyLanguage();
+      checkBreaking();
+      setInterval(checkBreaking, 300000);
+      initHistoryRings();  // Create history rings after timelineData loaded
+      animate();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+# 新聞 RSS 來源
+# category: 分類標籤
+# lang: en / zh / jp / kr
+sources:
+  - name: CoinDesk
+    url: https://www.coindesk.com/arc/outboundfeeds/rss/
+    category: crypto
+    lang: en
+  - name: CoinTelegraph
+    url: https://cointelegraph.com/rss
+    category: crypto
+    lang: en
+  - name: The Block
+    url: https://www.theblock.co/rss.xml
+    category: crypto
+    lang: en
+  - name: Decrypt
+    url: https://decrypt.co/feed
+    category: crypto
+    lang: en
+  - name: Blockworks
+    url: https://blockworks.co/feed
+    category: crypto
+    lang: en
+  - name: Bloomberg Crypto
+    url: https://feeds.bloomberg.com/markets/news.rss
+    category: finance
+    lang: en
+  - name: Reuters
+    url: https://www.reutersagency.com/feed/?post_type=business&feed_type=rss
+    category: finance
+    lang: en
+  - name: CNBC
+    url: https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10001147
+    category: finance
+    lang: en
+  - name: WSJ Markets
+    url: https://feeds.a.dj.com/rss/RSSMarketsMain.xml
+    category: finance
+    lang: en
+  - name: FT Tech
+    url: https://www.ft.com/technology?format=rss
+    category: tech
+    lang: en
+  - name: TechCrunch
+    url: https://techcrunch.com/feed/
+    category: tech
+    lang: en
+  - name: ArsTechnica
+    url: https://feeds.arstechnica.com/arstechnica/index
+    category: tech
+    lang: en
+  - name: Wired
+    url: https://www.wired.com/feed/rss
+    category: tech
+    lang: en
+  - name: Bloomberg
+    url: https://feeds.bloomberg.com/politics/news.rss
+    category: finance
+    lang: en
+  - name: Chainlink (Chinese)
+    url: https://chainlinktoday.com/feed/
+    category: crypto
+    lang: en
+  - name: Unchained
+    url: https://unchainedcrypto.com/feed/
+    category: crypto
+    lang: en
+  - name: DL News
+    url: https://www.dlnews.com/arc/outboundfeeds/rss/
+    category: crypto
+    lang: en
+  - name: Bankless
+    url: https://www.bankless.com/feed
+    category: crypto
+    lang: en
+  # Chinese sources
+  - name: 動區動趨 (BlockTempo)
+    url: https://www.blocktempo.com/feed/
+    category: crypto
+    lang: zh
+  - name: 區塊客 (Blockcast)
+    url: https://blockcast.it/feed/
+    category: crypto
+    lang: zh
+  - name: 鉅亨網
+    url: https://news.cnyes.com/news/rss/cnyes_news.xml
+    category: finance
+    lang: zh
+  - name: 科技新報
+    url: https://ccc.technews.tw/feed/
+    category: tech
+    lang: zh
+  - name: 香港經濟日報
+    url: https://www.hket.com/rss
+    category: finance
+    lang: zh
+  # General news sources
+  - name: BBC World
+    url: https://feeds.bbci.co.uk/news/rss.xml
+    category: general
+    lang: en
+  - name: Reuters World
+    url: https://www.reutersagency.com/feed/?post_type=best&feed_type=rss
+    category: general
+    lang: en
+  - name: AP News
+    url: https://feeds.ap.org/ap/news.xml
+    category: general
+    lang: en
+  - name: Al Jazeera
+    url: https://www.aljazeera.com/xml/rss/all.xml
+    category: general
+    lang: en
+  - name: NPR
+    url: https://feeds.npr.org/1001/rss.xml
+    category: general
+    lang: en
+  - name: Nikkei Asia
+    url: https://asia.nikkei.com/rss/feed
+    category: general
+    lang: en
+  - name: SCMP
+    url: https://www.scmp.com/rss/4/feed
+    category: general
+    lang: en
+  - name: The Guardian
+    url: https://www.theguardian.com/world/rss
+    category: general
+    lang: en
+  - name: New York Times
+    url: https://rss.nytimes.com/services/xml/rss/nyt/World.xml
+    category: general
+    lang: en
+  - name: Washington Post
+    url: https://feeds.washingtonpost.com/rss/world
+    category: general
+    lang: en
+  - name: Time
+    url: https://time.com/feed/
+    category: general
+    lang: en
+  - name: Financial Times
+    url: https://www.ft.com/rss/home
+    category: finance
+    lang: en
+  - name: MarketWatch
+    url: https://www.marketwatch.com/rss/topstories
+    category: finance
+    lang: en
