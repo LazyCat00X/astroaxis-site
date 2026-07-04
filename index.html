@@ -810,7 +810,7 @@
     <div class="vignette"></div>
     <div class="hint" data-i18n="hint.drag">🖱 DRAG · A/D ←→ SPIN · W/S ↑↓ TILT · Q/E ZOOM · 1-3 VIEWS</div>
     <div class="scroll-hint" aria-hidden="true" data-i18n="hint.scroll">↓ scroll for articles</div>
-  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260704-01</div>
+  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260705-01</div>
 </main>
 </div><!-- /globe-view -->
 
@@ -2843,8 +2843,8 @@ const GEO_KEYWORDS = [
     globe.add(historyGroup);
     
     function initHistoryRings() {
-      const H_RING_BASE = 7.0;
-      const H_RING_STEP = 0.92;
+      const H_RING_BASE = 8.5;
+      const H_RING_STEP = 1.8;
       const H_YEARS = Object.keys(timelineData || {}).sort().reverse().slice(0, 15);
       const H_YEAR_COLORS = ['#67e8f9','#22d3ee','#818cf8','#a78bfa','#6366f1','#f59e0b','#f97316','#ef4444','#22c55e','#8892b6'];
 
@@ -2854,10 +2854,10 @@ const GEO_KEYWORDS = [
       H_YEARS.forEach((year, yi) => {
         const r = H_RING_BASE + yi * H_RING_STEP;
         const color = new THREE.Color(H_YEAR_COLORS[yi % H_YEAR_COLORS.length]);
-        const ringMat = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.35, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide });
-        const ring = new THREE.Mesh(new THREE.RingGeometry(r - 0.015, r + 0.015, 160, 2), ringMat);
+        const ringMat = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.55, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide });
+        const ring = new THREE.Mesh(new THREE.RingGeometry(r - 0.06, r + 0.06, 160, 2), ringMat);
         ring.rotation.x = -Math.PI/2;
-        ringMat.userData = { _baseOpacity: 0.35 };
+        ringMat.userData = { _baseOpacity: 0.55 };
         historyGroup.add(ring);
 
         const c = document.createElement('canvas'); c.width=200; c.height=60;
@@ -2868,16 +2868,16 @@ const GEO_KEYWORDS = [
         const sprMat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.8, depthWrite: false });
         sprMat.userData = { _baseOpacity: 0.8 };
         const sprite = new THREE.Sprite(sprMat);
-        sprite.position.set(r + 0.4, 0.12, 0); sprite.scale.set(1.4, 0.42, 1);
+        sprite.position.set(Math.cos(yi * 0.8) * (r + 0.6), 0.12, Math.sin(yi * 0.8) * (r + 0.6)); sprite.scale.set(1.4, 0.42, 1);
         historyGroup.add(sprite);
 
         const yrData = (timelineData || {})[String(year)] || [];
         yrData.forEach((ev, ei) => {
           const angle = (ei / Math.max(1, yrData.length)) * Math.PI * 2;
           const dotColor = ev.type==='politics'?'#eab308':ev.type==='tech'?'#3b82f6':ev.type==='finance'?'#22c55e':ev.type==='disaster'?'#ef4444':ev.type==='crypto'?'#818cf8':ev.type==='science'?'#a78bfa':'#8892b6';
-          const dotMat = new THREE.MeshBasicMaterial({ color: new THREE.Color(dotColor), transparent: true, opacity: 0.7, blending: THREE.AdditiveBlending, depthWrite: false });
-          dotMat.userData = { _baseOpacity: 0.7, _baseAngle: angle, _baseY: (ei%3)*0.08-0.05 };
-          const dot = new THREE.Mesh(new THREE.SphereGeometry(0.06, 8, 6), dotMat);
+          const dotMat = new THREE.MeshBasicMaterial({ color: new THREE.Color(dotColor), transparent: true, opacity: 0.9, blending: THREE.AdditiveBlending, depthWrite: false });
+          dotMat.userData = { _baseOpacity: 0.9, _baseAngle: angle, _baseY: (ei%3)*0.08-0.05 };
+          const dot = new THREE.Mesh(new THREE.SphereGeometry(0.15, 12, 8), dotMat);
           dot.position.set(Math.cos(angle)*r, (ei%3)*0.08-0.05, Math.sin(angle)*r);
           dot.userData = { _event: ev, _year: year, _ringRadius: r, _angle: angle };
           historyGroup.add(dot);
@@ -2925,7 +2925,7 @@ const GEO_KEYWORDS = [
         for (let i = 0; i < dots.length - 1; i++) {
           for (let j = i + 1; j < dots.length; j++) {
             const yearDiff = dots[i].year - dots[j].year;
-            if (yearDiff > 3) break; // Only connect recent events
+            if (yearDiff > 2) break; // Only connect adjacent years
             
             // Create curved line between dots
             const start = dots[i].dot.position.clone();
