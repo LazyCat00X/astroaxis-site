@@ -810,7 +810,7 @@
     <div class="vignette"></div>
     <div class="hint" data-i18n="hint.drag">🖱 DRAG · A/D ←→ SPIN · W/S ↑↓ TILT · Q/E ZOOM · 1-3 VIEWS</div>
     <div class="scroll-hint" aria-hidden="true" data-i18n="hint.scroll">↓ scroll for articles</div>
-  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260705-07</div>
+  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260705-08</div>
 </main>
 </div><!-- /globe-view -->
 
@@ -2966,126 +2966,94 @@ const GEO_KEYWORDS = [
     historyGroup.add(baseRingMesh);
     window._baseRingMat = baseRingMat2;
     
-    function initHistoryRings() {
-      const H_BASE = 8.0;
-      const H_STEP = 2.0;
-      const AXIS_TILT = 0.41;
-      const ECCENTRICITY = 0.82;
-      const H_YEARS = Object.keys(timelineData || {}).sort().reverse().slice(0, 8);
-      const H_YEAR_COLORS = ['#67e8f9','#22d3ee','#818cf8','#a78bfa','#6366f1','#f59e0b','#f97316'];
-      const dotsByType = {};
-      H_YEARS.forEach((year, yi) => {
-        const r = H_BASE + yi * H_STEP;
-        const color = new THREE.Color(H_YEAR_COLORS[yi % H_YEAR_COLORS.length]);
-        const precession = yi * (Math.PI / Math.max(1, H_YEARS.length));
-        const orbitPts = [];
-        const segs = 128;
-        for (let s = 0; s <= segs; s++) {
-          const t = (s / segs) * Math.PI * 2;
-          orbitPts.push(new THREE.Vector3(Math.cos(t) * r, 0, Math.sin(t) * r * ECCENTRICITY));
-        }
-        const orbitGeo = new THREE.BufferGeometry().setFromPoints(orbitPts);
-        const tierOpacity = yi === 0 ? 0.7 : yi <= 2 ? 0.4 : 0.2;
-        const orbitMat = new THREE.LineBasicMaterial({ color, transparent: true, opacity: tierOpacity, blending: THREE.AdditiveBlending, depthWrite: false });
-        const orbit = new THREE.Line(orbitGeo, orbitMat);
-        orbit.rotation.x = AXIS_TILT;
-        orbit.rotation.y = precession;
-        orbitMat.userData = { _baseOpacity: tierOpacity };
-        historyGroup.add(orbit);
-        const c = document.createElement('canvas'); c.width = 200; c.height = 60;
-        const ctx = c.getContext('2d');
-        ctx.font = 'bold 28px Inter,sans-serif';
-        ctx.fillStyle = H_YEAR_COLORS[yi % H_YEAR_COLORS.length];
-        ctx.textAlign = 'center';
-        ctx.fillText(year, 100, 42);
-        const tex = new THREE.CanvasTexture(c); tex.minFilter = THREE.LinearFilter;
-        const sprMat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.85, depthWrite: false });
-        sprMat.userData = { _baseOpacity: 0.85 };
-        const sprite = new THREE.Sprite(sprMat);
-        const lx = r + 0.8;
-        const ly_raw = 0;
-        const ty = ly_raw * Math.sin(AXIS_TILT);
-        const tz = ly_raw * Math.cos(AXIS_TILT);
-        const px = lx * Math.cos(precession) - tz * Math.sin(precession);
-        const pz = lx * Math.sin(precession) + tz * Math.cos(precession);
-        sprite.position.set(px, ty, pz);
-        sprite.scale.set(1.6, 0.48, 1);
-        historyGroup.add(sprite);
-        const yrData = (timelineData || {})[String(year)] || [];
-        yrData.forEach((ev, ei) => {
-          const angle = (ei / Math.max(1, yrData.length)) * Math.PI * 2;
-          const dotColor = ev.type === 'politics' ? '#eab308' : ev.type === 'tech' ? '#3b82f6' : ev.type === 'finance' ? '#22c55e' : ev.type === 'disaster' ? '#ef4444' : ev.type === 'crypto' ? '#818cf8' : ev.type === 'science' ? '#a78bfa' : ev.type === 'climate' ? '#f97316' : '#8892b6';
-          const ox = Math.cos(angle) * r;
-          const oz = Math.sin(angle) * r * ECCENTRICITY;
-          const dy = oz * Math.sin(AXIS_TILT);
-          const dz = oz * Math.cos(AXIS_TILT);
-          const fx = ox * Math.cos(precession) - dz * Math.sin(precession);
-          const fz = ox * Math.sin(precession) + dz * Math.cos(precession);
-          const glowC = document.createElement('canvas'); glowC.width = 64; glowC.height = 64;
-          const gctx = glowC.getContext('2d');
-          const grad = gctx.createRadialGradient(32, 32, 0, 32, 32, 32);
-          grad.addColorStop(0, dotColor);
-          grad.addColorStop(0.3, dotColor + '80');
-          grad.addColorStop(1, dotColor + '00');
-          gctx.fillStyle = grad;
-          gctx.fillRect(0, 0, 64, 64);
-          const glowTex = new THREE.CanvasTexture(glowC);
-          const glowSprMat = new THREE.SpriteMaterial({ map: glowTex, transparent: true, opacity: 0.7, blending: THREE.AdditiveBlending, depthWrite: false });
-          glowSprMat.userData = { _baseOpacity: 0.7 };
-          const glow = new THREE.Sprite(glowSprMat);
-          glow.position.set(fx, dy, fz);
-          const isCritical = ev.type === 'disaster' || ev.type === 'politics';
-          const isMajor = ev.type === 'tech' || ev.type === 'crypto' || ev.type === 'finance';
-          const dotSize = isCritical ? 0.24 : isMajor ? 0.18 : 0.12;
-          const glowSz = isCritical ? 1.4 : isMajor ? 1.0 : 0.6;
-          glow.scale.set(glowSz, glowSz, 1);
-          historyGroup.add(glow);
-          const dotMat = new THREE.MeshBasicMaterial({ color: new THREE.Color(dotColor), transparent: true, opacity: 0.95, blending: THREE.AdditiveBlending, depthWrite: false });
-          dotMat.userData = { _baseOpacity: 0.95 };
-          const dot = new THREE.Mesh(new THREE.SphereGeometry(dotSize, 12, 8), dotMat);
-          dot.position.set(fx, dy, fz);
-          dot.userData = { _event: ev, _year: year, _ringRadius: r, _angle: angle };
-          historyGroup.add(dot);
-          window._historyDots = window._historyDots || [];
-          window._historyDots.push(dot);
-          if (ev.type) {
-            if (!dotsByType[ev.type]) dotsByType[ev.type] = [];
-            dotsByType[ev.type].push({ dot, year: parseInt(year), ev });
-          }
-          dot.callback = () => {
-            const panel = document.getElementById('timeline-view');
-            if (panel) {
-              document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-              document.querySelector('[data-view="timeline"]')?.classList.add('active');
-              document.getElementById('globe-view').classList.remove('active');
-              document.getElementById('timeline-view').classList.add('active');
-            }
-          };
-        });
+    function initStarField() {
+      const STAR_MIN_R = 10;
+      const STAR_MAX_R = 28;
+      const MAX_YEARS = 120;
+      const CURRENT_YEAR = new Date().getFullYear();
+      const allYears = Object.keys(timelineData || {}).sort();
+      const allEvents = [];
+      allYears.forEach(yk => {
+        const yrEvts = timelineData[yk] || [];
+        yrEvts.forEach(ev => allEvents.push({ ...ev, _year: parseInt(yk) }));
       });
+      if (!allEvents.length) return;
+      const TYPE_COLORS = {
+        politics: [0.918, 0.698, 0.031], tech: [0.231, 0.510, 0.965],
+        finance: [0.133, 0.773, 0.369], disaster: [0.937, 0.267, 0.267],
+        crypto: [0.506, 0.506, 0.969], science: [0.655, 0.545, 0.980],
+        climate: [0.976, 0.451, 0.090], general: [0.533, 0.573, 0.714],
+      };
+      const stars = [];
+      const constellations = {};
+      allEvents.forEach((ev, i) => {
+        const yearAgo = Math.max(0, CURRENT_YEAR - ev._year);
+        const t = Math.min(1, yearAgo / MAX_YEARS);
+        const r = STAR_MIN_R + (STAR_MAX_R - STAR_MIN_R) * Math.pow(t, 0.6);
+        const luminance = 1.0 - t * 0.75;
+        const isCritical = ev.type === 'disaster' || ev.type === 'politics';
+        const isMajor = ev.type === 'tech' || ev.type === 'crypto' || ev.type === 'finance';
+        const size = isCritical ? 0.35 : isMajor ? 0.22 : 0.14;
+        const phi = Math.acos(1 - 2 * (i + 0.5) / allEvents.length);
+        const theta = Math.PI * (1 + Math.sqrt(5)) * (i + 0.5);
+        const px = r * Math.sin(phi) * Math.cos(theta);
+        const py = r * Math.cos(phi);
+        const pz = r * Math.sin(phi) * Math.sin(theta);
+        const color = TYPE_COLORS[ev.type] || TYPE_COLORS.general;
+        stars.push({ pos: [px,py,pz], color, size, luminance, r, ev, yearAgo, isCritical, isMajor, twinkleSpeed: 0.5+Math.random()*1.5, twinklePhase: Math.random()*Math.PI*2 });
+        if (!constellations[ev.type]) constellations[ev.type] = [];
+        constellations[ev.type].push(stars.length - 1);
+      });
+      window._historyDots = [];
       window._eventLines = [];
-      const lineColors = { politics: '#eab308', tech: '#3b82f6', finance: '#22c55e', disaster: '#ef4444', crypto: '#818cf8', science: '#a78bfa', climate: '#f97316' };
-      Object.keys(dotsByType).forEach(type => {
-        const dots = dotsByType[type];
-        if (dots.length < 2) return;
-        dots.sort((a, b) => b.year - a.year);
-        for (let i = 0; i < dots.length - 1; i++) {
-          const yearDiff = dots[i].year - dots[i + 1].year;
-          if (yearDiff > 2) continue;
-          const start = dots[i].dot.position.clone();
-          const end = dots[i + 1].dot.position.clone();
-          const mid = new THREE.Vector3().lerpVectors(start, end, 0.5);
-          mid.y += 0.5;
-          const curve = new THREE.QuadraticBezierCurve3(start, mid, end);
-          const pts = curve.getPoints(16);
+      const starGeo = new THREE.SphereGeometry(1, 8, 6);
+      stars.forEach((s, idx) => {
+        const col = new THREE.Color(s.color[0], s.color[1], s.color[2]);
+        const baseOp = s.luminance * 0.9;
+        const gc = document.createElement('canvas'); gc.width=64; gc.height=64;
+        const gx = gc.getContext('2d');
+        const ghex = '#'+col.getHexString();
+        const gr = gx.createRadialGradient(32,32,0,32,32,32);
+        gr.addColorStop(0, ghex); gr.addColorStop(0.3, ghex+'80'); gr.addColorStop(1, ghex+'00');
+        gx.fillStyle = gr; gx.fillRect(0,0,64,64);
+        const gTex = new THREE.CanvasTexture(gc);
+        const gMat = new THREE.SpriteMaterial({ map: gTex, transparent: true, opacity: s.luminance*0.5, blending: THREE.AdditiveBlending, depthWrite: false });
+        gMat.userData = { _baseOpacity: s.luminance*0.5 };
+        const glow = new THREE.Sprite(gMat);
+        glow.position.set(s.pos[0], s.pos[1], s.pos[2]);
+        const gSize = s.size * (s.isCritical ? 4 : s.isMajor ? 3 : 2);
+        glow.scale.set(gSize, gSize, 1);
+        historyGroup.add(glow);
+        const sMat = new THREE.MeshBasicMaterial({ color: col, transparent: true, opacity: baseOp, blending: THREE.AdditiveBlending, depthWrite: false });
+        sMat.userData = { _baseOpacity: baseOp, _twinkleSpeed: s.twinkleSpeed, _twinklePhase: s.twinklePhase };
+        const mesh = new THREE.Mesh(starGeo, sMat);
+        mesh.position.set(s.pos[0], s.pos[1], s.pos[2]);
+        mesh.scale.setScalar(s.size);
+        mesh.userData = { _event: s.ev, _year: s.ev._year, _luminance: s.luminance, _isStar: true };
+        historyGroup.add(mesh);
+        window._historyDots.push(mesh);
+      });
+      const CONST_LINE_COLOR = { politics: 0xeab308, tech: 0x3b82f6, finance: 0x22c55e, disaster: 0xef4444, crypto: 0x818cf8, science: 0xa78bfa, climate: 0xf97316 };
+      Object.keys(constellations).forEach(type => {
+        const indices = constellations[type];
+        if (indices.length < 2) return;
+        const sorted = indices.map(i => ({ i, year: stars[i].ev._year })).sort((a, b) => b.year - a.year);
+        for (let a = 0; a < sorted.length - 1; a++) {
+          if (sorted[a].year - sorted[a+1].year > 15) continue;
+          const s1 = stars[sorted[a].i], s2 = stars[sorted[a+1].i];
+          const dist = Math.hypot(s1.pos[0]-s2.pos[0], s1.pos[1]-s2.pos[1], s1.pos[2]-s2.pos[2]);
+          if (dist > 12) continue;
+          const pts = [new THREE.Vector3(s1.pos[0],s1.pos[1],s1.pos[2]), new THREE.Vector3(s2.pos[0],s2.pos[1],s2.pos[2])];
           const geo = new THREE.BufferGeometry().setFromPoints(pts);
-          const lMat = new THREE.LineBasicMaterial({ color: new THREE.Color(lineColors[type] || '#8892b6'), transparent: true, opacity: 0.12, blending: THREE.AdditiveBlending });
+          const op = Math.min(s1.luminance, s2.luminance) * 0.15;
+          const lMat = new THREE.LineBasicMaterial({ color: CONST_LINE_COLOR[type] || 0x8892b6, transparent: true, opacity: op, blending: THREE.AdditiveBlending });
           const line = new THREE.Line(geo, lMat);
-          line.userData = { _type: type, _baseOpacity: 0.12 };
+          line.userData = { _type: type, _baseOpacity: op };
           historyGroup.add(line);
           window._eventLines.push(line);
         }
       });
+      console.log('StarField: ' + stars.length + ' stars, ' + window._eventLines.length + ' constellation lines');
     }
 
     function resize() {
@@ -3501,7 +3469,7 @@ const GEO_KEYWORDS = [
       applyLanguage();
       checkBreaking();
       setInterval(checkBreaking, 300000);
-      initHistoryRings();  // Create history rings after timelineData loaded
+      initStarField();  // Create history rings after timelineData loaded
       animate();
     }
   </script>
