@@ -810,7 +810,7 @@
     <div class="vignette"></div>
     <div class="hint" data-i18n="hint.drag">🖱 DRAG · A/D ←→ SPIN · W/S ↑↓ TILT · Q/E ZOOM · 1-3 VIEWS</div>
     <div class="scroll-hint" aria-hidden="true" data-i18n="hint.scroll">↓ scroll for articles</div>
-  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260705-13</div>
+  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260705-14</div>
 </main>
 </div><!-- /globe-view -->
 
@@ -3058,7 +3058,7 @@ const GEO_KEYWORDS = [
       stars.forEach(s => {
         const col = new THREE.Color(s.color[0], s.color[1], s.color[2]);
         const hex = '#' + col.getHexString();
-        const baseOp = s.luminance * 0.75;
+        const baseOp = Math.min(1.0, s.luminance * 1.0);
 
         // Glow (smaller than before)
         if (!glowCache[hex]) {
@@ -3069,11 +3069,11 @@ const GEO_KEYWORDS = [
           gx.fillStyle = gr; gx.fillRect(0, 0, 32, 32);
           glowCache[hex] = new THREE.CanvasTexture(gc);
         }
-        const gMat = new THREE.SpriteMaterial({ map: glowCache[hex], transparent: true, opacity: s.luminance * 0.25, blending: THREE.AdditiveBlending, depthWrite: false });
-        gMat.userData = { _baseOpacity: s.luminance * 0.25 };
+        const gMat = new THREE.SpriteMaterial({ map: glowCache[hex], transparent: true, opacity: s.luminance * 0.08, blending: THREE.AdditiveBlending, depthWrite: false });
+        gMat.userData = { _baseOpacity: s.luminance * 0.08 };
         const glow = new THREE.Sprite(gMat);
         glow.position.set(s.px, s.py, s.pz);
-        const gSz = s.size * (s.isCrit ? 1.8 : s.isMaj ? 1.2 : 0.8);
+        const gSz = s.size * (s.isCrit ? 1.0 : s.isMaj ? 0.7 : 0.4);
         glow.scale.set(gSz, gSz, 1);
         historyGroup.add(glow);
 
@@ -3101,7 +3101,7 @@ const GEO_KEYWORDS = [
           if (dist > 8) continue;
           const pts = [new THREE.Vector3(s1.px, s1.py, s1.pz), new THREE.Vector3(s2.px, s2.py, s2.pz)];
           const geo = new THREE.BufferGeometry().setFromPoints(pts);
-          const op = Math.min(s1.luminance, s2.luminance) * 0.35;
+          const op = Math.min(s1.luminance, s2.luminance) * 0.5;
           const lMat = new THREE.LineBasicMaterial({ color: CLC[type] || 0x8892b6, transparent: true, opacity: op, blending: THREE.AdditiveBlending });
           const line = new THREE.Line(geo, lMat);
           line.userData = { _type: type, _baseOpacity: op };
@@ -3110,7 +3110,7 @@ const GEO_KEYWORDS = [
         }
       });
 
-      // Spiral arm guide lines (3 arms)
+      // Spiral arm guide lines (3 arms) — thick tubes for visibility
       for (let arm = 0; arm < 3; arm++) {
         const armOffset = (arm / 3) * Math.PI * 2;
         const armPts = [];
@@ -3120,11 +3120,12 @@ const GEO_KEYWORDS = [
           const sa = t * SPIRAL_TURNS * Math.PI * 2 + armOffset;
           armPts.push(new THREE.Vector3(sr * Math.cos(sa), Math.sin(t*8)*0.5, sr * Math.sin(sa)));
         }
-        const armGeo = new THREE.BufferGeometry().setFromPoints(armPts);
-        const armMat = new THREE.LineBasicMaterial({ color: 0x4466ff, transparent: true, opacity: 0.25, blending: THREE.AdditiveBlending, depthWrite: false });
-        armMat.userData = { _baseOpacity: 0.25, _isArm: true };
-        const armLine = new THREE.Line(armGeo, armMat);
-        historyGroup.add(armLine);
+        const curve = new THREE.CatmullRomCurve3(armPts);
+        const tubeGeo = new THREE.TubeGeometry(curve, 80, 0.05, 6, false);
+        const armMat = new THREE.MeshBasicMaterial({ color: 0x4466ff, transparent: true, opacity: 0.3, blending: THREE.AdditiveBlending, depthWrite: false });
+        armMat.userData = { _baseOpacity: 0.3, _isArm: true };
+        const armMesh = new THREE.Mesh(tubeGeo, armMat);
+        historyGroup.add(armMesh);
       }
 
       // Decade markers
@@ -3133,18 +3134,18 @@ const GEO_KEYWORDS = [
         var dt2 = Math.min(1, (NOW_YEAR - dy) / MAX_YEARS);
         var dr2 = MIN_R + (MAX_R - MIN_R) * Math.pow(dt2, 0.5);
         var da2 = dt2 * SPIRAL_TURNS * Math.PI * 2;
-        var dc2 = document.createElement('canvas'); dc2.width = 120; dc2.height = 40;
+        var dc2 = document.createElement('canvas'); dc2.width = 160; dc2.height = 50;
         var dctx2 = dc2.getContext('2d');
-        dctx2.font = 'bold 18px Inter,sans-serif';
-        dctx2.fillStyle = 'rgba(180,200,255,0.9)';
+        dctx2.font = 'bold 24px Inter,sans-serif';
+        dctx2.fillStyle = 'rgba(200,220,255,1.0)';
         dctx2.textAlign = 'center';
-        dctx2.fillText(String(dy), 60, 26);
+        dctx2.fillText(String(dy), 80, 32);
         var dtex2 = new THREE.CanvasTexture(dc2); dtex2.minFilter = THREE.LinearFilter;
         var dsm2 = new THREE.SpriteMaterial({ map: dtex2, transparent: true, opacity: 0.6, depthWrite: false, blending: THREE.AdditiveBlending });
         dsm2.userData = { _baseOpacity: 0.6 };
         var dspr2 = new THREE.Sprite(dsm2);
         dspr2.position.set(dr2 * Math.cos(da2) * 1.08, 0.5, dr2 * Math.sin(da2) * 1.08);
-        dspr2.scale.set(1.2, 0.4, 1);
+        dspr2.scale.set(1.8, 0.56, 1);
         historyGroup.add(dspr2);
       });
 
