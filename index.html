@@ -810,7 +810,7 @@
     <div class="vignette"></div>
     <div class="hint" data-i18n="hint.drag">🖱 DRAG · A/D ←→ SPIN · W/S ↑↓ TILT · Q/E ZOOM · 1-3 VIEWS</div>
     <div class="scroll-hint" aria-hidden="true" data-i18n="hint.scroll">↓ scroll for articles</div>
-  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260705-01</div>
+  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260705-04</div>
 </main>
 </div><!-- /globe-view -->
 
@@ -2841,55 +2841,126 @@ const GEO_KEYWORDS = [
     // ── History Rings (created after timelineData loads) ──
     historyGroup = new THREE.Group();
     globe.add(historyGroup);
+
+    // ── Earth's rotation axis (glowing cylinder through poles) ──
+    const axisGeo = new THREE.CylinderGeometry(0.04, 0.04, 16, 8);
+    const axisMat = new THREE.MeshBasicMaterial({ color: 0x67e8f9, transparent: true, opacity: 0.6, blending: THREE.AdditiveBlending, depthWrite: false });
+    const axisLine = new THREE.Mesh(axisGeo, axisMat);
+    axisLine.rotation.z = 0.41;
+    axisMat.userData = { _baseOpacity: 0.6 };
+    historyGroup.add(axisLine);
+
+    // Axis glow sprite at north pole tip
+    const tipC = document.createElement('canvas'); tipC.width = 64; tipC.height = 64;
+    const tipCtx = tipC.getContext('2d');
+    const tipGrad = tipCtx.createRadialGradient(32, 32, 0, 32, 32, 32);
+    tipGrad.addColorStop(0, 'rgba(103,232,249,1)');
+    tipGrad.addColorStop(0.4, 'rgba(103,232,249,0.4)');
+    tipGrad.addColorStop(1, 'rgba(103,232,249,0)');
+    tipCtx.fillStyle = tipGrad;
+    tipCtx.fillRect(0, 0, 64, 64);
+    const tipTex = new THREE.CanvasTexture(tipC);
+    const tipSprMat = new THREE.SpriteMaterial({ map: tipTex, transparent: true, opacity: 0.8, blending: THREE.AdditiveBlending, depthWrite: false });
+    tipSprMat.userData = { _baseOpacity: 0.8 };
+    const tipGlow = new THREE.Sprite(tipSprMat);
+    const tipPos = new THREE.Vector3(0, 8, 0);
+    tipPos.applyAxisAngle(new THREE.Vector3(0, 0, 1), 0.41);
+    tipGlow.position.copy(tipPos);
+    tipGlow.scale.set(2.5, 2.5, 1);
+    historyGroup.add(tipGlow);
+
+    // ── Precession cone (wireframe, connects year orbit apices) ──
+    // Visualizes how the axis itself traces a cone over geological time
+    const coneGeo = new THREE.ConeGeometry(4, 6, 32, 1, true);
+    const coneMat = new THREE.MeshBasicMaterial({ color: 0x6366f1, wireframe: true, transparent: true, opacity: 0.15, side: THREE.DoubleSide, depthWrite: false });
+    coneMat.userData = { _baseOpacity: 0.15 };
+    const cone = new THREE.Mesh(coneGeo, coneMat);
+    cone.position.set(0, 5, 0);
+    cone.rotation.z = 0.41;
+    coneMat.visible = true;
+    historyGroup.add(cone);
     
     function initHistoryRings() {
-      const H_RING_BASE = 8.5;
-      const H_RING_STEP = 1.8;
-      const H_YEARS = Object.keys(timelineData || {}).sort().reverse().slice(0, 15);
-      const H_YEAR_COLORS = ['#67e8f9','#22d3ee','#818cf8','#a78bfa','#6366f1','#f59e0b','#f97316','#ef4444','#22c55e','#8892b6'];
-
-      // Store all dots by type for connection lines
+      const H_BASE = 8.0;
+      const H_STEP = 2.0;
+      const AXIS_TILT = 0.41;
+      const ECCENTRICITY = 0.82;
+      const H_YEARS = Object.keys(timelineData || {}).sort().reverse().slice(0, 8);
+      const H_YEAR_COLORS = ['#67e8f9','#22d3ee','#818cf8','#a78bfa','#6366f1','#f59e0b','#f97316'];
       const dotsByType = {};
-      
       H_YEARS.forEach((year, yi) => {
-        const r = H_RING_BASE + yi * H_RING_STEP;
+        const r = H_BASE + yi * H_STEP;
         const color = new THREE.Color(H_YEAR_COLORS[yi % H_YEAR_COLORS.length]);
-        const ringMat = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.55, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide });
-        const ring = new THREE.Mesh(new THREE.RingGeometry(r - 0.06, r + 0.06, 160, 2), ringMat);
-        ring.rotation.x = -Math.PI/2;
-        ringMat.userData = { _baseOpacity: 0.55 };
-        historyGroup.add(ring);
-
-        const c = document.createElement('canvas'); c.width=200; c.height=60;
+        const precession = yi * (Math.PI / Math.max(1, H_YEARS.length));
+        const orbitPts = [];
+        const segs = 128;
+        for (let s = 0; s <= segs; s++) {
+          const t = (s / segs) * Math.PI * 2;
+          orbitPts.push(new THREE.Vector3(Math.cos(t) * r, 0, Math.sin(t) * r * ECCENTRICITY));
+        }
+        const orbitGeo = new THREE.BufferGeometry().setFromPoints(orbitPts);
+        const orbitMat = new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.5, blending: THREE.AdditiveBlending, depthWrite: false });
+        const orbit = new THREE.Line(orbitGeo, orbitMat);
+        orbit.rotation.x = AXIS_TILT;
+        orbit.rotation.y = precession;
+        orbitMat.userData = { _baseOpacity: 0.5 };
+        historyGroup.add(orbit);
+        const c = document.createElement('canvas'); c.width = 200; c.height = 60;
         const ctx = c.getContext('2d');
-        ctx.font='bold 28px Inter,sans-serif'; ctx.fillStyle=H_YEAR_COLORS[yi % H_YEAR_COLORS.length]; ctx.textAlign='center';
+        ctx.font = 'bold 28px Inter,sans-serif';
+        ctx.fillStyle = H_YEAR_COLORS[yi % H_YEAR_COLORS.length];
+        ctx.textAlign = 'center';
         ctx.fillText(year, 100, 42);
         const tex = new THREE.CanvasTexture(c); tex.minFilter = THREE.LinearFilter;
-        const sprMat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.8, depthWrite: false });
-        sprMat.userData = { _baseOpacity: 0.8 };
+        const sprMat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.85, depthWrite: false });
+        sprMat.userData = { _baseOpacity: 0.85 };
         const sprite = new THREE.Sprite(sprMat);
-        sprite.position.set(Math.cos(yi * 0.8) * (r + 0.6), 0.12, Math.sin(yi * 0.8) * (r + 0.6)); sprite.scale.set(1.4, 0.42, 1);
+        const lx = r + 0.8;
+        const ly_raw = 0;
+        const ty = ly_raw * Math.sin(AXIS_TILT);
+        const tz = ly_raw * Math.cos(AXIS_TILT);
+        const px = lx * Math.cos(precession) - tz * Math.sin(precession);
+        const pz = lx * Math.sin(precession) + tz * Math.cos(precession);
+        sprite.position.set(px, ty, pz);
+        sprite.scale.set(1.6, 0.48, 1);
         historyGroup.add(sprite);
-
         const yrData = (timelineData || {})[String(year)] || [];
         yrData.forEach((ev, ei) => {
           const angle = (ei / Math.max(1, yrData.length)) * Math.PI * 2;
-          const dotColor = ev.type==='politics'?'#eab308':ev.type==='tech'?'#3b82f6':ev.type==='finance'?'#22c55e':ev.type==='disaster'?'#ef4444':ev.type==='crypto'?'#818cf8':ev.type==='science'?'#a78bfa':'#8892b6';
-          const dotMat = new THREE.MeshBasicMaterial({ color: new THREE.Color(dotColor), transparent: true, opacity: 0.9, blending: THREE.AdditiveBlending, depthWrite: false });
-          dotMat.userData = { _baseOpacity: 0.9, _baseAngle: angle, _baseY: (ei%3)*0.08-0.05 };
-          const dot = new THREE.Mesh(new THREE.SphereGeometry(0.15, 12, 8), dotMat);
-          dot.position.set(Math.cos(angle)*r, (ei%3)*0.08-0.05, Math.sin(angle)*r);
+          const dotColor = ev.type === 'politics' ? '#eab308' : ev.type === 'tech' ? '#3b82f6' : ev.type === 'finance' ? '#22c55e' : ev.type === 'disaster' ? '#ef4444' : ev.type === 'crypto' ? '#818cf8' : ev.type === 'science' ? '#a78bfa' : ev.type === 'climate' ? '#f97316' : '#8892b6';
+          const ox = Math.cos(angle) * r;
+          const oz = Math.sin(angle) * r * ECCENTRICITY;
+          const dy = oz * Math.sin(AXIS_TILT);
+          const dz = oz * Math.cos(AXIS_TILT);
+          const fx = ox * Math.cos(precession) - dz * Math.sin(precession);
+          const fz = ox * Math.sin(precession) + dz * Math.cos(precession);
+          const glowC = document.createElement('canvas'); glowC.width = 64; glowC.height = 64;
+          const gctx = glowC.getContext('2d');
+          const grad = gctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+          grad.addColorStop(0, dotColor);
+          grad.addColorStop(0.3, dotColor + '80');
+          grad.addColorStop(1, dotColor + '00');
+          gctx.fillStyle = grad;
+          gctx.fillRect(0, 0, 64, 64);
+          const glowTex = new THREE.CanvasTexture(glowC);
+          const glowSprMat = new THREE.SpriteMaterial({ map: glowTex, transparent: true, opacity: 0.7, blending: THREE.AdditiveBlending, depthWrite: false });
+          glowSprMat.userData = { _baseOpacity: 0.7 };
+          const glow = new THREE.Sprite(glowSprMat);
+          glow.position.set(fx, dy, fz);
+          glow.scale.set(0.8, 0.8, 1);
+          historyGroup.add(glow);
+          const dotMat = new THREE.MeshBasicMaterial({ color: new THREE.Color(dotColor), transparent: true, opacity: 0.95, blending: THREE.AdditiveBlending, depthWrite: false });
+          dotMat.userData = { _baseOpacity: 0.95 };
+          const dot = new THREE.Mesh(new THREE.SphereGeometry(0.18, 12, 8), dotMat);
+          dot.position.set(fx, dy, fz);
           dot.userData = { _event: ev, _year: year, _ringRadius: r, _angle: angle };
           historyGroup.add(dot);
           window._historyDots = window._historyDots || [];
           window._historyDots.push(dot);
-          
-          // Group dots by type for connection lines
           if (ev.type) {
             if (!dotsByType[ev.type]) dotsByType[ev.type] = [];
             dotsByType[ev.type].push({ dot, year: parseInt(year), ev });
           }
-          
           dot.callback = () => {
             const panel = document.getElementById('timeline-view');
             if (panel) {
@@ -2901,56 +2972,27 @@ const GEO_KEYWORDS = [
           };
         });
       });
-      
-      // Create connection lines between same-type events across years
       window._eventLines = [];
-      const lineColors = {
-        politics: '#eab308',
-        tech: '#3b82f6', 
-        finance: '#22c55e',
-        disaster: '#ef4444',
-        crypto: '#818cf8',
-        science: '#a78bfa',
-        climate: '#f97316'
-      };
-      
+      const lineColors = { politics: '#eab308', tech: '#3b82f6', finance: '#22c55e', disaster: '#ef4444', crypto: '#818cf8', science: '#a78bfa', climate: '#f97316' };
       Object.keys(dotsByType).forEach(type => {
         const dots = dotsByType[type];
         if (dots.length < 2) return;
-        
-        // Sort by year (most recent first)
         dots.sort((a, b) => b.year - a.year);
-        
-        // Connect events within 3 years of each other
         for (let i = 0; i < dots.length - 1; i++) {
-          for (let j = i + 1; j < dots.length; j++) {
-            const yearDiff = dots[i].year - dots[j].year;
-            if (yearDiff > 2) break; // Only connect adjacent years
-            
-            // Create curved line between dots
-            const start = dots[i].dot.position.clone();
-            const end = dots[j].dot.position.clone();
-            
-            // Create a curved path
-            const mid = new THREE.Vector3().lerpVectors(start, end, 0.5);
-            mid.y += 0.3; // Arc upward
-            
-            const curve = new THREE.QuadraticBezierCurve3(start, mid, end);
-            const points = curve.getPoints(20);
-            const geometry = new THREE.BufferGeometry().setFromPoints(points);
-            
-            const lineMat = new THREE.LineBasicMaterial({
-              color: new THREE.Color(lineColors[type] || '#8892b6'),
-              transparent: true,
-              opacity: 0.15 + Math.random() * 0.15,
-              blending: THREE.AdditiveBlending
-            });
-            
-            const line = new THREE.Line(geometry, lineMat);
-            line.userData = { _type: type, _baseOpacity: lineMat.opacity };
-            historyGroup.add(line);
-            window._eventLines.push(line);
-          }
+          const yearDiff = dots[i].year - dots[i + 1].year;
+          if (yearDiff > 2) continue;
+          const start = dots[i].dot.position.clone();
+          const end = dots[i + 1].dot.position.clone();
+          const mid = new THREE.Vector3().lerpVectors(start, end, 0.5);
+          mid.y += 0.5;
+          const curve = new THREE.QuadraticBezierCurve3(start, mid, end);
+          const pts = curve.getPoints(16);
+          const geo = new THREE.BufferGeometry().setFromPoints(pts);
+          const lMat = new THREE.LineBasicMaterial({ color: new THREE.Color(lineColors[type] || '#8892b6'), transparent: true, opacity: 0.12, blending: THREE.AdditiveBlending });
+          const line = new THREE.Line(geo, lMat);
+          line.userData = { _type: type, _baseOpacity: 0.12 };
+          historyGroup.add(line);
+          window._eventLines.push(line);
         }
       });
     }
