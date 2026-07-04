@@ -810,7 +810,7 @@
     <div class="vignette"></div>
     <div class="hint" data-i18n="hint.drag">🖱 DRAG · A/D ←→ SPIN · W/S ↑↓ TILT · Q/E ZOOM · 1-3 VIEWS</div>
     <div class="scroll-hint" aria-hidden="true" data-i18n="hint.scroll">↓ scroll for articles</div>
-  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260705-10</div>
+  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260705-11</div>
 </main>
 </div><!-- /globe-view -->
 
@@ -3182,6 +3182,21 @@ const GEO_KEYWORDS = [
           const tph = child.material.userData._tph;
           const bOp = child.material.userData._baseOpacity || 0.5;
           child.material.opacity = bOp * (0.7 + Math.sin(elapsed * tw + tph) * 0.3) * historyOpacity;
+        }
+        // LOD: distant view = only bright stars visible, close = all
+        if (child.userData && child.userData._isStar && child.material) {
+          const lum = child.userData._luminance || 0.5;
+          const lodThreshold = camDist > 25 ? 0.4 : camDist > 18 ? 0.2 : 0;
+          if (lum < lodThreshold) {
+            child.visible = false;
+          } else {
+            child.visible = true;
+          }
+        }
+        // Fade dust at close range
+        if (child.isPoints && child.material && child.material.userData && child.material.userData._baseOpacity !== undefined) {
+          const dustFade = camDist < 12 ? 0.1 : camDist < 20 ? 0.3 : 1.0;
+          child.material.opacity = (child.material.userData._baseOpacity || 0.25) * dustFade * historyOpacity;
         }
         // Pulse: critical events pulse faster/bigger
         if (child.geometry && child.geometry.type === 'SphereGeometry') {
