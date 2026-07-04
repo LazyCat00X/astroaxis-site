@@ -810,7 +810,7 @@
     <div class="vignette"></div>
     <div class="hint" data-i18n="hint.drag">🖱 DRAG · A/D ←→ SPIN · W/S ↑↓ TILT · Q/E ZOOM · 1-3 VIEWS</div>
     <div class="scroll-hint" aria-hidden="true" data-i18n="hint.scroll">↓ scroll for articles</div>
-  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260705-04</div>
+  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260705-05</div>
 </main>
 </div><!-- /globe-view -->
 
@@ -2843,12 +2843,20 @@ const GEO_KEYWORDS = [
     globe.add(historyGroup);
 
     // ── Earth's rotation axis (glowing cylinder through poles) ──
-    const axisGeo = new THREE.CylinderGeometry(0.04, 0.04, 16, 8);
-    const axisMat = new THREE.MeshBasicMaterial({ color: 0x67e8f9, transparent: true, opacity: 0.6, blending: THREE.AdditiveBlending, depthWrite: false });
-    const axisLine = new THREE.Mesh(axisGeo, axisMat);
-    axisLine.rotation.z = 0.41;
-    axisMat.userData = { _baseOpacity: 0.6 };
-    historyGroup.add(axisLine);
+    // Core
+    const axisCoreGeo = new THREE.CylinderGeometry(0.02, 0.02, 16, 8);
+    const axisCoreMat = new THREE.MeshBasicMaterial({ color: 0x22d3ee, transparent: true, opacity: 0.9, blending: THREE.AdditiveBlending, depthWrite: false });
+    const axisCore = new THREE.Mesh(axisCoreGeo, axisCoreMat);
+    axisCore.rotation.z = 0.41;
+    axisCoreMat.userData = { _baseOpacity: 0.9 };
+    historyGroup.add(axisCore);
+    // Glow
+    const axisGlowGeo = new THREE.CylinderGeometry(0.08, 0.08, 16, 8);
+    const axisGlowMat = new THREE.MeshBasicMaterial({ color: 0x67e8f9, transparent: true, opacity: 0.15, blending: THREE.AdditiveBlending, depthWrite: false });
+    const axisGlow = new THREE.Mesh(axisGlowGeo, axisGlowMat);
+    axisGlow.rotation.z = 0.41;
+    axisGlowMat.userData = { _baseOpacity: 0.15 };
+    historyGroup.add(axisGlow);
 
     // Axis glow sprite at north pole tip
     const tipC = document.createElement('canvas'); tipC.width = 64; tipC.height = 64;
@@ -2869,16 +2877,29 @@ const GEO_KEYWORDS = [
     tipGlow.scale.set(2.5, 2.5, 1);
     historyGroup.add(tipGlow);
 
-    // ── Precession cone (wireframe, connects year orbit apices) ──
-    // Visualizes how the axis itself traces a cone over geological time
-    const coneGeo = new THREE.ConeGeometry(4, 6, 32, 1, true);
-    const coneMat = new THREE.MeshBasicMaterial({ color: 0x6366f1, wireframe: true, transparent: true, opacity: 0.15, side: THREE.DoubleSide, depthWrite: false });
-    coneMat.userData = { _baseOpacity: 0.15 };
-    const cone = new THREE.Mesh(coneGeo, coneMat);
-    cone.position.set(0, 5, 0);
-    cone.rotation.z = 0.41;
-    coneMat.visible = true;
-    historyGroup.add(cone);
+    // ── Precession cone: edge lines + base ring ──
+    const coneR = 3.5, coneH = 5;
+    const coneGeoPC = new THREE.ConeGeometry(coneR, coneH, 24, 1, true);
+    const coneEdges = new THREE.EdgesGeometry(coneGeoPC, 20);
+    const coneEdgeMat = new THREE.LineBasicMaterial({ color: 0xa78bfa, transparent: true, opacity: 0.35, blending: THREE.AdditiveBlending });
+    const coneLines = new THREE.LineSegments(coneEdges, coneEdgeMat);
+    coneLines.position.set(0, 4.5, 0);
+    coneLines.rotation.z = 0.41;
+    coneEdgeMat.userData = { _baseOpacity: 0.35 };
+    historyGroup.add(coneLines);
+    window._coneEdgeMat = coneEdgeMat;
+    // Base ring
+    const baseRingGeo = new THREE.RingGeometry(coneR * 0.95, coneR * 1.05, 64);
+    const baseRingMat2 = new THREE.MeshBasicMaterial({ color: 0x8b5cf6, transparent: true, opacity: 0.2, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, depthWrite: false });
+    const baseRingMesh = new THREE.Mesh(baseRingGeo, baseRingMat2);
+    const brPos = new THREE.Vector3(0, 2, 0);
+    brPos.applyAxisAngle(new THREE.Vector3(0, 0, 1), 0.41);
+    baseRingMesh.position.copy(brPos);
+    baseRingMesh.lookAt(0, 0, 0);
+    baseRingMesh.rotateX(Math.PI/2);
+    baseRingMat2.userData = { _baseOpacity: 0.2 };
+    historyGroup.add(baseRingMesh);
+    window._baseRingMat = baseRingMat2;
     
     function initHistoryRings() {
       const H_BASE = 8.0;
@@ -2899,11 +2920,12 @@ const GEO_KEYWORDS = [
           orbitPts.push(new THREE.Vector3(Math.cos(t) * r, 0, Math.sin(t) * r * ECCENTRICITY));
         }
         const orbitGeo = new THREE.BufferGeometry().setFromPoints(orbitPts);
-        const orbitMat = new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.5, blending: THREE.AdditiveBlending, depthWrite: false });
+        const tierOpacity = yi === 0 ? 0.7 : yi <= 2 ? 0.4 : 0.2;
+        const orbitMat = new THREE.LineBasicMaterial({ color, transparent: true, opacity: tierOpacity, blending: THREE.AdditiveBlending, depthWrite: false });
         const orbit = new THREE.Line(orbitGeo, orbitMat);
         orbit.rotation.x = AXIS_TILT;
         orbit.rotation.y = precession;
-        orbitMat.userData = { _baseOpacity: 0.5 };
+        orbitMat.userData = { _baseOpacity: tierOpacity };
         historyGroup.add(orbit);
         const c = document.createElement('canvas'); c.width = 200; c.height = 60;
         const ctx = c.getContext('2d');
@@ -2947,11 +2969,15 @@ const GEO_KEYWORDS = [
           glowSprMat.userData = { _baseOpacity: 0.7 };
           const glow = new THREE.Sprite(glowSprMat);
           glow.position.set(fx, dy, fz);
-          glow.scale.set(0.8, 0.8, 1);
+          const isCritical = ev.type === 'disaster' || ev.type === 'politics';
+          const isMajor = ev.type === 'tech' || ev.type === 'crypto' || ev.type === 'finance';
+          const dotSize = isCritical ? 0.24 : isMajor ? 0.18 : 0.12;
+          const glowSz = isCritical ? 1.4 : isMajor ? 1.0 : 0.6;
+          glow.scale.set(glowSz, glowSz, 1);
           historyGroup.add(glow);
           const dotMat = new THREE.MeshBasicMaterial({ color: new THREE.Color(dotColor), transparent: true, opacity: 0.95, blending: THREE.AdditiveBlending, depthWrite: false });
           dotMat.userData = { _baseOpacity: 0.95 };
-          const dot = new THREE.Mesh(new THREE.SphereGeometry(0.18, 12, 8), dotMat);
+          const dot = new THREE.Mesh(new THREE.SphereGeometry(dotSize, 12, 8), dotMat);
           dot.position.set(fx, dy, fz);
           dot.userData = { _event: ev, _year: year, _ringRadius: r, _angle: angle };
           historyGroup.add(dot);
