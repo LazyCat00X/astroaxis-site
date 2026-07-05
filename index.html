@@ -648,11 +648,11 @@
     .feed-card h3 { font-size: 16px; font-weight: 600; line-height: 1.4; margin-bottom: 8px; }
     .feed-card h3 a { color: #eef7ff; text-decoration: none; }
     .feed-card h3 a:hover { color: #67e8f9; }
-    .feed-card .card-summary { font-size: 14px; color: rgba(228,228,236,0.7); line-height: 1.55; margin-bottom: 8px; }
-    .feed-card .card-summary li { margin: 4px 0; }
+    .feed-card .card-summary { font-size: 14px; color: rgba(228,228,236,0.7); line-height: 1.7; margin-bottom: 10px; }
+    .feed-card .card-summary li { margin: 6px 0; }
     .feed-card { overflow: hidden; }
     .feed-card .card-thumb {
-      width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;
+      width: 100%; height: 80px; object-fit: cover; border-radius: 8px; margin-bottom: 8px;
       display: block; background: var(--thumb-bg, rgba(15,23,42,0.5));
     }
     .feed-card .card-thumb.placeholder {
@@ -673,7 +673,7 @@
       letter-spacing: 0.05em; opacity: 0.7;
     }
     .feed-card .card-thumb.real-img {
-      width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;
+      width: 100%; height: 80px; object-fit: cover; border-radius: 8px; margin-bottom: 8px;
       display: block;
     }
     .feed-card .card-meta { display: flex; justify-content: space-between; font-size: 12px; color: rgba(136,136,160,0.6); border-top: 1px solid rgba(136,136,160,0.08); padding-top: 8px; }
@@ -707,7 +707,7 @@
       .top-nav{gap:4px;padding:8px 10px}
       .top-nav .logo{font-size:14px;margin-right:6px}
       .nav-btn{font-size:10px;padding:5px 9px}
-      .feed-card .card-thumb{height:90px}
+      .feed-card .card-thumb{height:60px}
       .filter-bar{border-radius:16px;bottom:8px;gap:3px;padding:6px}
       .filter-btn{font-size:9px;padding:4px 6px}
       .hud{left:8px;top:52px;max-width:180px}
@@ -1185,7 +1185,7 @@
             html += `<div class="feed-card rec-card" style="--thumb-bg:${tb};border-color:rgba(245,158,11,.2)">
               <h3><a href="${a.url}" target="_blank" rel="noopener">${a.title}</a></h3>
               <div class="card-summary"><ul>${bullets.map(b => `<li>${b}</li>`).join('')}</ul></div>
-              <div class="card-meta"><span>${a.source}</span><span>${a.published ? new Date(a.published).toLocaleDateString() : ''}</span></div>
+              <div class="card-meta"><span>${a.source}</span><span>${a.published ? new Date(a.published).toLocaleDateString(currentLang === 'zh-HK' || currentLang === 'zh-CN' ? 'zh-TW' : currentLang, { year: 'numeric', month: 'short', day: 'numeric' }) : ''}</span></div>
             </div>`;
           });
           html += `</div></div>`;
@@ -1258,16 +1258,16 @@
         const bullets = summaryText.split('\\n').filter(l => l.includes('•')).map(l => l.replace(/^[•\\s]+/,'').trim()).filter(Boolean).slice(0, 4);
         const thumbBg = topicGradient(a.topic || 'General');
         html += `<article class="feed-card" role="article" aria-label="${a.title.replace(/"/g,'&quot;')}" style="--thumb-bg:${thumbBg}">
-          <div class="card-thumb placeholder" aria-hidden="true" style="background:${thumbBg}">${topicIcon(a.topic||'General')}<span class="thumb-topic">${a.topic || 'General'}</span></div>
+          <div class="card-thumb placeholder" aria-hidden="true" style="background:${thumbBg}">${topicIcon(a.topic||'General')}</div>
           <div class="card-top">
-            <span class="card-topic" style="color:#${a.topic === 'AI' ? '3b82f6' : a.topic === 'Bitcoin' ? 'f97316' : a.topic === 'Regulation' ? 'ef4444' : a.topic === 'DeFi' ? '22c55e' : '818cf8'}">${a.topic || 'General'}</span>
+            <span class="card-topic" style="color:#${a.topic === 'AI' ? '3b82f6' : a.topic === 'Bitcoin' ? 'f97316' : a.topic === 'Regulation' ? 'ef4444' : a.topic === 'DeFi' ? '22c55e' : a.topic === 'Crypto' ? '818cf8' : a.topic === 'Finance' ? '10b981' : a.topic === 'Tech' ? '6366f1' : a.topic === 'World' ? '0ea5e9' : a.topic === 'Politics' ? 'ec4899' : a.topic === 'Science' ? '84cc16' : a.topic === 'Health' ? 'f97316' : '818cf8'}">${a.topic || 'General'}</span>
 
           </div>
           <h3><a href="${a.url}" target="_blank" rel="noopener">${a.title}</a></h3>
           <div class="card-summary"><ul>${bullets.map(b => `<li>${b}</li>`).join('')}</ul></div>
           <div class="card-meta">
             <span>${a.source}</span>
-            <span>${a.published ? new Date(a.published).toLocaleDateString() : ''}</span>
+            <span>${a.published ? new Date(a.published).toLocaleDateString(currentLang === 'zh-HK' || currentLang === 'zh-CN' ? 'zh-TW' : currentLang, { year: 'numeric', month: 'short', day: 'numeric' }) : ''}</span>
           </div>
         </div>`;
       });
