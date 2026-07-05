@@ -733,6 +733,81 @@
       backdrop-filter: blur(8px); display: none; font-weight: 500;
     }
     .error-banner.show { display: block; }
+    
+    /* CSS3D Marker Styles */
+    .css3d-marker {
+      width: 160px;
+      padding: 12px;
+      background: rgba(10, 20, 40, 0.95);
+      border: 2px solid rgba(100, 200, 255, 0.5);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 13px;
+      cursor: pointer;
+      pointer-events: auto;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+    }
+    
+    .css3d-marker:hover {
+      background: rgba(20, 40, 80, 0.95);
+      border-color: #64c8ff;
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(100, 200, 255, 0.3);
+    }
+    
+    .marker-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 8px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { 
+        box-shadow: 0 0 10px currentColor;
+        transform: scale(1);
+      }
+      50% { 
+        box-shadow: 0 0 20px currentColor, 0 0 30px currentColor;
+        transform: scale(1.2);
+      }
+    }
+    
+    .marker-title {
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .marker-topic {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    .marker-desc {
+      font-size: 12px;
+      line-height: 1.5;
+      color: #b0b8d0;
+      margin-bottom: 6px;
+    }
+    
+    .marker-stats {
+      font-size: 11px;
+      color: #64c8ff;
+      border-top: 1px solid rgba(100, 200, 255, 0.2);
+      padding-top: 6px;
+    }
+    
     /* Mobile fixes */
     @media(max-width:768px){
       .top-nav{gap:4px;padding:8px 10px}
@@ -882,8 +957,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <!-- Pure 2.5D: Canvas 2D + HTML markers, no Three.js -->
   <script>
     // ── Three.js load check ──
     if (typeof THREE === 'undefined') {
@@ -1783,6 +1857,16 @@ const GEO_KEYWORDS = [
     renderer.outputEncoding = THREE.sRGBEncoding;
     renderer.setClearColor(0x000000, 0);
     renderer.setClearAlpha(0);
+    
+    // Initialize CSS3D Renderer for 2.5D hybrid markers
+    css3dRenderer = new THREE.CSS3DRenderer();
+    css3dRenderer.setSize(window.innerWidth, window.innerHeight);
+    css3dRenderer.domElement.style.position = 'absolute';
+    css3dRenderer.domElement.style.top = '0';
+    css3dRenderer.domElement.style.left = '0';
+    css3dRenderer.domElement.style.pointerEvents = 'none';
+    document.body.appendChild(css3dRenderer.domElement);
+    
     const clock = new THREE.Clock();
     const globe = new THREE.Group();
     globe.rotation.set(0.03, -0.62, 0);
@@ -2389,6 +2473,8 @@ const GEO_KEYWORDS = [
       markerPositions = [];
       markerColors = [];
       markerData = [];
+      css3dMarkers = [];
+      
       // Group articles by their base location for clustering
       const locationGroups = {};
       const _articles = (typeof NEWS_DATA !== 'undefined' && NEWS_DATA.articles) ? NEWS_DATA.articles : [];
@@ -2408,10 +2494,8 @@ const GEO_KEYWORDS = [
       locationGroups[key].push({ article, baseLat, baseLon, city, index });
     });
 
-    // Create ONE cluster marker per location group
-    // with size proportional to article count
-    const countSprites = [];
-    Object.values(locationGroups).forEach((group) => {
+    // Create CSS3D markers for each location group
+    Object.values(locationGroups).forEach((group, idx) => {
       const { baseLat, baseLon, city } = group[0];
       const groupSize = group.length;
 
@@ -2424,14 +2508,58 @@ const GEO_KEYWORDS = [
       });
       let maxCnt = 0;
       Object.entries(topicCounts).forEach(([t, c]) => { if (c > maxCnt) { maxCnt = c; dominantTopic = t; } });
-      const color = new THREE.Color(topicColors[dominantTopic] || topicColors.General);
+      const colorHex = topicColors[dominantTopic] || topicColors.General;
+      const color = new THREE.Color(colorHex);
 
-      // Cluster marker at centroid, size scales with count
+      // Position on globe surface
       const pos = latLonToVec3(baseLat, baseLon, R * 1.035);
       const clusterScale = 1 + Math.min(groupSize - 1, 8) * 0.12;
 
       markerPositions.push(pos);
       markerColors.push(color);
+      
+      // Create HTML element for marker
+      const markerElement = document.createElement('div');
+      markerElement.className = 'css3d-marker';
+      markerElement.id = `news-marker-${idx}`;
+      markerElement.dataset.topic = dominantTopic;
+      markerElement.dataset.city = city;
+      markerElement.dataset.count = groupSize;
+      
+      const summaryText = group[0].article.ai_summary ? 
+        group[0].article.ai_summary.split('•')[1]?.trim().slice(0, 80) + '...' : 
+        'No summary available';
+      
+      markerElement.innerHTML = `
+        <div class="marker-title">
+          <span class="marker-dot" style="background: ${colorHex}; color: ${colorHex};"></span>
+          ${city}
+        </div>
+        <div class="marker-topic" style="background: ${colorHex}20; color: ${colorHex};">${dominantTopic}</div>
+        <div class="marker-desc">${summaryText}</div>
+        <div class="marker-stats">📰 ${groupSize} article${groupSize > 1 ? 's' : ''}</div>
+      `;
+      
+      // Click handler
+      markerElement.addEventListener('click', (e) => {
+        e.stopPropagation();
+        console.log('Marker clicked:', city, groupSize, 'articles');
+        // TODO: Open article list or navigate to feed view
+        alert(`📍 ${city}\n${dominantTopic}\n${groupSize} articles\n\nClick OK to see articles`);
+      });
+      
+      // Create CSS3DObject
+      const css3dObject = new THREE.CSS3DObject(markerElement);
+      css3dObject.position.copy(pos);
+      
+      // Rotate to face outward from globe
+      const lookAtTarget = pos.clone().multiplyScalar(2);
+      css3dObject.lookAt(lookAtTarget);
+      
+      // Scale based on cluster size
+      const scale = clusterScale * 0.015;
+      css3dObject.scale.set(scale, scale, scale);
+      
       markerData.push({
         articles: group.map(g => g.article),
         cities: [...new Set(group.map(g => g.city))],
@@ -2442,45 +2570,26 @@ const GEO_KEYWORDS = [
         baseScale: clusterScale,
         markerCount: groupSize,
         _groupSize: groupSize,
+        css3dObject: css3dObject,
       });
-
-      // Count sprite for clusters with >1 article
-      if (groupSize > 1) {
-        const c = document.createElement('canvas');
-        c.width = 128; c.height = 64;
-        const cx = c.getContext('2d');
-        const fsize = groupSize > 99 ? 28 : 32;
-        cx.font = `bold ${fsize}px Inter, sans-serif`;
-        cx.textAlign = 'center';
-        cx.textBaseline = 'middle';
-        cx.shadowColor = 'rgba(0,0,0,0.9)';
-        cx.shadowBlur = 10;
-        cx.fillStyle = '#ffffff';
-        cx.fillText(String(groupSize), 64, 34);
-        cx.shadowBlur = 0;
-        const tex = new THREE.CanvasTexture(c);
-        tex.minFilter = THREE.LinearFilter;
-        const spriteMat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.95, depthWrite: false, depthTest: false });
-        const sprite = new THREE.Sprite(spriteMat);
-        sprite.renderOrder = 10;
-        sprite.position.copy(pos);
-        sprite.position.setLength(R * 1.075);
-        const s = Math.min(0.8, 0.25 + groupSize * 0.05);
-        sprite.scale.set(s, s * 0.5, 1);
-        countSprites.push(sprite);
-      }
+      
+      css3dMarkers.push(css3dObject);
     });
-    // Add count sprites to marker group
-    countSprites.forEach(s => markerGroup.add(s));
-
-    // Instanced mesh for cluster markers
+    
+    // Add CSS3D markers to scene
+    if (css3dRenderer) {
+      css3dMarkers.forEach(marker => {
+        scene.add(marker);
+      });
+    }
+    
+    // Keep WebGL instanced markers for visual effects (glow, pulse)
     markerCount = markerPositions.length;
     const markerMat = new THREE.MeshBasicMaterial({
       transparent: true, opacity: 1.0, blending: THREE.AdditiveBlending, depthWrite: false
     });
     instancedMarkers = new THREE.InstancedMesh(markerGeometry, markerMat, markerCount);
     const colorAttr = new THREE.InstancedBufferAttribute(new Float32Array(markerCount * 3), 3);
-    // Build scale array for per-instance size
     const scaleAttr = new THREE.InstancedBufferAttribute(new Float32Array(markerCount), 1);
     const originalPositions = markerPositions.map(p => p.clone());
     for (let i = 0; i < markerCount; i++) {
@@ -3277,6 +3386,9 @@ const GEO_KEYWORDS = [
       camera.updateProjectionMatrix();
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
       renderer.setSize(w, h);
+      if (css3dRenderer) {
+        css3dRenderer.setSize(w, h);
+      }
       globe.scale.setScalar(w < 768 ? 0.82 : Math.min(1.06, Math.max(0.92, h / 960)));
     }
     window.addEventListener('resize', resize, { passive: true });
@@ -3523,6 +3635,10 @@ const GEO_KEYWORDS = [
 
       if (!window._cameraOverride) controls.update();
       renderer.render(scene, camera);
+      // Temporarily disabled CSS3DRenderer to fix WebGL context lost
+      // if (css3dRenderer && css3dMarkers && css3dMarkers.length > 0) {
+      //   css3dRenderer.render(scene, camera);
+      // }
       requestAnimationFrame(animate);
     }
 
