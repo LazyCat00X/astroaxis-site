@@ -778,7 +778,7 @@
   <div><b>Click markers</b> to read full stories</div>
   <div><b>Bottom bar</b> to filter by topic & time</div>
   <div><b>Top tabs</b> to switch views</div>
-  <div>☆ <b>Bookmark</b> articles to save</div>
+  <div><b>Bookmark</b> articles to save</div>
 </div>
 <button id="onboarding-close" style="background:rgba(34,211,238,.15);border:1px solid rgba(34,211,238,.5);color:#eaffff;border-radius:999px;padding:10px 36px;cursor:pointer;font:inherit;font-size:14px;font-weight:600;transition:all .2s" onmouseover="this.style.background='rgba(34,211,238,.25)'" onmouseout="this.style.background='rgba(34,211,238,.15)'">Got it! →</button>
 </div>
@@ -814,7 +814,7 @@
 
 <!-- Error / data-freshness banner -->
 <div class="error-banner" id="errorBanner">
-  ⚡ <span id="errorText">Some news sources are currently unavailable</span><span id="errorCount" style="color:rgba(255,255,255,0.35);font-weight:400;font-size:12px;margin-left:6px"></span>
+  <span id="errorText">Some news sources are currently unavailable</span><span id="errorCount" style="color:rgba(255,255,255,0.35);font-weight:400;font-size:12px;margin-left:6px"></span>
 </div>
 
 <div id="globe-view" class="view-panel active" role="tabpanel" aria-label="Globe view">
@@ -887,7 +887,7 @@
   <script>
     // ── Three.js load check ──
     if (typeof THREE === 'undefined') {
-      document.body.innerHTML = '<div style="background:#03040c;color:#eef7ff;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:Inter,sans-serif;text-align:center;padding:40px"><div><div style="font-size:48px;margin-bottom:16px">⚠️</div><h1 style="font-size:22px;margin-bottom:8px">Failed to load 3D engine</h1><p style="color:rgba(238,247,255,.6);max-width:400px;line-height:1.6">The 3D globe library (Three.js) could not be loaded. This may be due to a network issue or content blocker.</p></div></div>';
+      document.body.innerHTML = '<div style="background:#03040c;color:#eef7ff;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:Inter,sans-serif;text-align:center;padding:40px"><div><div style="font-size:48px;margin-bottom:16px">&#9888;</div><h1 style="font-size:22px;margin-bottom:8px">Failed to load 3D engine</h1><p style="color:rgba(238,247,255,.6);max-width:400px;line-height:1.6">The 3D globe library (Three.js) could not be loaded. This may be due to a network issue or content blocker.</p></div></div>';
       throw new Error('Three.js failed to load');
     }
     // ── Performance monitoring (Core Web Vitals) ──
@@ -923,7 +923,7 @@
       // Log after page stabilizes
       setTimeout(function() {
         var m = window._perfMetrics;
-        console.log('%c⚡ AstroAxis Perf %cLCP:' + (m.lcp||0).toFixed(0) + 'ms FCP:' + (m.fcp||0).toFixed(0) + 'ms CLS:' + (m.cls||0).toFixed(3) + ' TTFB:' + (m.ttfb||0).toFixed(0) + 'ms',
+        console.log('%cAstroAxis Perf %cLCP:' + (m.lcp||0).toFixed(0) + 'ms FCP:' + (m.fcp||0).toFixed(0) + 'ms CLS:' + (m.cls||0).toFixed(3) + ' TTFB:' + (m.ttfb||0).toFixed(0) + 'ms',
           'color:#67e8f9;font-weight:bold', 'color:#8892b6');
         // Store for analytics
         try {
@@ -1162,10 +1162,10 @@
     }
     const TOPIC_ICONS = {
       'AI': '◇', 'Bitcoin': '₿', 'Regulation': '§', 'DeFi': '◈',
-      'Crypto': '◆', 'Finance': '$', 'Tech': '⌘', 'Policy': '★',
-      'Macro': '◈', 'Trading': '↑', 'Ethereum': 'Ξ', 'Science': '⚛',
-      'World': '◐', 'General': '◯', 'Politics': '⚑', 'Health': '+',
-      'Entertainment': '♪', 'Sports': '★', 'Climate': '☀',
+      'Crypto': '◆', 'Finance': '$', 'Tech': '⌘', 'Policy': '[P]',
+      'Macro': '◈', 'Trading': '↑', 'Ethereum': 'Ξ', 'Science': '[S]',
+      'World': '◐', 'General': '◯', 'Politics': '[!]', 'Health': '+',
+      'Entertainment': '[E]', 'Sports': '[S]', 'Climate': '[C]',
     };
     function topicIcon(topic) {
       return TOPIC_ICONS[topic] || TOPIC_ICONS['General'];
@@ -3591,7 +3591,7 @@ const GEO_KEYWORDS = [
         bmBtn.className = 'bm-btn';
         bmBtn.title = 'Bookmark';
         bmBtn.style.cssText = 'background:transparent;border:1px solid '+(isBm?'rgba(245,158,11,.5)':'rgba(136,136,160,.2)')+';border-radius:14px;color:'+(isBm?'#f59e0b':'rgba(238,247,255,.4)')+';cursor:pointer;font-size:15px;padding:1px 7px;line-height:1.4;transition:all .15s';
-        bmBtn.textContent = isBm ? '★' : '☆';
+        bmBtn.textContent = isBm ? '■' : '□';
         bmBtn.onclick = function(e){ e.preventDefault(); e.stopPropagation(); toggleBookmark(url, title, ''); };
         const shareBtn = document.createElement('button');
         shareBtn.className = 'share-btn';
