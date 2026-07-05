@@ -613,6 +613,21 @@
     .type-badge.crypto { background: rgba(99,102,241,0.15); color: #818cf8; }
     .type-badge.disaster { background: rgba(239,68,68,0.15); color: #ef4444; }
 
+    /* Timeline v21 — real DOM dots + line (not pseudo-elements) */
+    .tl-container { position: relative; }
+    .tl-line { position: absolute; left: 19px; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, #22d3ee, #6366f1, transparent); opacity: 0.4; z-index: 0; }
+    .tl-year-header { position: relative; display: flex; align-items: center; gap: 12px; margin: 28px 0 14px; z-index: 1; }
+    .tl-year-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; background: #22d3ee; box-shadow: 0 0 12px rgba(34,211,238,0.6); }
+    .tl-year-header h2 { font-size: 28px; font-weight: 800; color: #67e8f9; letter-spacing: .04em; margin: 0; }
+    .tl-event { display: flex; gap: 12px; margin-bottom: 8px; z-index: 1; }
+    .tl-event-dot { width: 10px; height: 10px; border-radius: 50%; border: 2px solid; flex-shrink: 0; margin-top: 14px; background: rgba(15,23,42,0.8); }
+    .tl-event-body { flex: 1; padding: 12px 16px; background: rgba(7,10,22,0.5); border: 1px solid rgba(136,136,160,0.08); border-radius: 10px; transition: all .2s; }
+    .tl-event-body:hover { border-color: rgba(99,102,241,0.3); background: rgba(7,10,22,0.75); }
+    .tl-dot-politics { border-color: #eab308; } .tl-dot-tech { border-color: #3b82f6; }
+    .tl-dot-finance { border-color: #22c55e; } .tl-dot-disaster { border-color: #ef4444; }
+    .tl-dot-crypto { border-color: #818cf8; } .tl-dot-science { border-color: #a78bfa; }
+    .tl-dot-climate { border-color: #f97316; } .tl-dot-general { border-color: #8892b6; }
+
     /* Feed cards */
     .feed-grid { display: grid; grid-template-columns: 1fr; gap: 14px; max-width: 900px; margin: 0 auto; }
     .stats-bar {
@@ -827,7 +842,7 @@
     <div class="vignette"></div>
     <div class="hint" data-i18n="hint.drag">🖱 DRAG · A/D ←→ SPIN · W/S ↑↓ TILT · Q/E ZOOM · 1-3 VIEWS</div>
     <div class="scroll-hint" aria-hidden="true" data-i18n="hint.scroll">↓ scroll for articles</div>
-  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260705-18</div>
+  <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:9px;color:rgba(136,146,182,0.3);pointer-events:none">v20260705-21</div>
 </main>
 </div><!-- /globe-view -->
 
@@ -1091,9 +1106,10 @@
       if(typeof timelineData === 'undefined' || !Object.keys(timelineData).length) return;
       const t = I18N[currentLang] || I18N['zh-HK'];
       const types = TL_TYPE[currentLang] || TL_TYPE['en'];
-      let html = `<h2 style="font-size:24px;font-weight:700;margin-bottom:24px;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">${t['tl.title']}</h2>`;
+      let html = '<div class="tl-container"><div class="tl-line"></div>';
+      html += '<h2 style="font-size:24px;font-weight:700;margin-bottom:24px;padding-left:26px;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">' + t['tl.title'] + '</h2>';
       Object.keys(timelineData).sort().reverse().forEach(year => {
-        html += `<div class="tl-year-header"><h2>${year}</h2></div>`;
+        html += '<div class="tl-year-header"><div class="tl-year-dot"></div><h2>' + year + '</h2></div>';
         timelineData[year].forEach(ev => {
           var title = (ev.title || '').slice(0, 80);
           if (ev.title && ev.title.length > 80) title += '...';
@@ -1101,14 +1117,15 @@
           if (desc === ev.title) desc = '';
           if (desc.length > 150) desc = desc.slice(0, 147) + '...';
           var evType = ev.type || 'general';
-          html += `<div class="tl-event type-${evType}">
-            <div class="tl-date">${ev.date || year}</div>
-            <h3>${title}</h3>
-            ${desc ? `<p>${desc}</p>` : ''}
-            <span class="tl-badge type-${evType}">${types[evType] || evType}</span>
-          </div>`;
+          html += '<div class="tl-event"><div class="tl-event-dot tl-dot-' + evType + '"></div>';
+          html += '<div class="tl-event-body"><div class="tl-date">' + (ev.date || year) + '</div>';
+          html += '<h3>' + title + '</h3>';
+          if (desc) html += '<p>' + desc + '</p>';
+          html += '<span class="tl-badge type-' + evType + '">' + (types[evType] || evType) + '</span>';
+          html += '</div></div>';
         });
       });
+      html += '</div>';
       document.getElementById('timeline-content').innerHTML = html;
     }
 
