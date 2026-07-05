@@ -3687,6 +3687,9 @@ const GEO_KEYWORDS = [
         if(eb){ eb.classList.add('show'); document.getElementById('errorText').textContent = 'No news data available. Pipeline may be offline.'; }
         // Still render timeline even without articles
         renderTimeline();
+        // Dismiss loading overlay
+        const overlay = document.getElementById('loading-overlay');
+        if(overlay){ overlay.style.opacity = '0'; setTimeout(() => overlay.remove(), 600); }
         return;
       }
       // Check freshness: if newest article > 12h, show stale warning
