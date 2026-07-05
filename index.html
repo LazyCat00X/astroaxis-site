@@ -1269,7 +1269,7 @@
             <span>${a.source}</span>
             <span>${a.published ? new Date(a.published).toLocaleDateString(currentLang === 'zh-HK' || currentLang === 'zh-CN' ? 'zh-TW' : currentLang, { year: 'numeric', month: 'short', day: 'numeric' }) : ''}</span>
           </div>
-        </div>`;
+        </article>`;
       });
       html += '</div>';
       document.getElementById('feed-content').innerHTML = html;
