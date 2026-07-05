@@ -1088,20 +1088,26 @@
     const TL_TYPE = {en:{finance:'Finance',tech:'Tech',politics:'Politics',climate:'Climate',crypto:'Crypto',disaster:'Disaster'},'zh-HK':{finance:'金融',tech:'科技',politics:'政治',climate:'氣候',crypto:'加密貨幣',disaster:'災難'},'zh-CN':{finance:'金融',tech:'科技',politics:'政治',climate:'气候',crypto:'加密货币',disaster:'灾难'},ja:{finance:'金融',tech:'技術',politics:'政治',climate:'気候',crypto:'暗号資産',disaster:'災害'},ko:{finance:'금융',tech:'기술',politics:'정치',climate:'기후',crypto:'암호화폐',disaster:'재난'}};
 
     function renderTimeline() {
-      if(typeof timelineData === 'undefined' || !Object.keys(timelineData).length) return;  // Skip if data not loaded
+      if(typeof timelineData === 'undefined' || !Object.keys(timelineData).length) return;
       const t = I18N[currentLang] || I18N['zh-HK'];
       const types = TL_TYPE[currentLang] || TL_TYPE['en'];
       let html = `<h2 style="font-size:24px;font-weight:700;margin-bottom:24px;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">${t['tl.title']}</h2>`;
       Object.keys(timelineData).sort().reverse().forEach(year => {
-        html += `<div class="timeline-year"><h2>${year}</h2>`;
+        html += `<div class="tl-year-header"><h2>${year}</h2></div>`;
         timelineData[year].forEach(ev => {
-          html += `<div class="timeline-event">
-            <div class="date">${ev.date}</div>
-            <div class="info"><h3>${ev.title}</h3><p>${ev.desc}</p></div>
-            <span class="type-badge ${ev.type}">${types[ev.type] || ev.type}</span>
+          var title = (ev.title || '').slice(0, 80);
+          if (ev.title && ev.title.length > 80) title += '...';
+          var desc = ev.desc || '';
+          if (desc === ev.title) desc = '';
+          if (desc.length > 150) desc = desc.slice(0, 147) + '...';
+          var evType = ev.type || 'general';
+          html += `<div class="tl-event type-${evType}">
+            <div class="tl-date">${ev.date || year}</div>
+            <h3>${title}</h3>
+            ${desc ? `<p>${desc}</p>` : ''}
+            <span class="tl-badge type-${evType}">${types[evType] || evType}</span>
           </div>`;
         });
-        html += `</div>`;
       });
       document.getElementById('timeline-content').innerHTML = html;
     }
