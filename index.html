@@ -1126,23 +1126,44 @@
       html += '<h2 style="font-size:24px;font-weight:700;margin-bottom:24px;padding-left:26px;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">' + t['tl.title'] + '</h2>';
       Object.keys(timelineData).sort().reverse().forEach(year => {
         html += '<div class="tl-year-header"><div class="tl-year-dot"></div><h2>' + year + '</h2></div>';
-        timelineData[year].forEach(ev => {
+        timelineData[year].forEach((ev, idx) => {
           var title = (ev.title || '').slice(0, 80);
           if (ev.title && ev.title.length > 80) title += '...';
           var desc = ev.desc || '';
           if (desc === ev.title) desc = '';
           if (desc.length > 150) desc = desc.slice(0, 147) + '...';
           var evType = ev.type || 'general';
-          html += '<div class="tl-event"><div class="tl-event-dot tl-dot-' + evType + '"></div>';
+          var eventId = 'tl-event-' + year + '-' + idx;
+          html += '<div class="tl-event" id="' + eventId + '" onclick="toggleTimelineEvent(\'' + eventId + '\')" style="cursor:pointer"><div class="tl-event-dot tl-dot-' + evType + '"></div>';
           html += '<div class="tl-event-body"><div class="tl-date">' + (ev.date || year) + '</div>';
           html += '<h3>' + title + '</h3>';
-          if (desc) html += '<p>' + desc + '</p>';
+          if (desc) html += '<p class="tl-desc-preview">' + desc + '</p>';
+          if (ev.desc && ev.desc.length > 150) html += '<p class="tl-desc-full" style="display:none">' + ev.desc + '</p>';
           html += '<span class="tl-badge type-' + evType + '">' + (types[evType] || evType) + '</span>';
           html += '</div></div>';
         });
       });
       html += '</div>';
       document.getElementById('timeline-content').innerHTML = html;
+    }
+
+    function toggleTimelineEvent(eventId) {
+      const eventEl = document.getElementById(eventId);
+      if (!eventEl) return;
+      const descPreview = eventEl.querySelector('.tl-desc-preview');
+      const descFull = eventEl.querySelector('.tl-desc-full');
+      if (!descPreview || !descFull) return;
+      
+      const isExpanded = descFull.style.display !== 'none';
+      if (isExpanded) {
+        descFull.style.display = 'none';
+        descPreview.style.display = 'block';
+        eventEl.style.background = '';
+      } else {
+        descPreview.style.display = 'none';
+        descFull.style.display = 'block';
+        eventEl.style.background = 'rgba(99,102,241,0.08)';
+      }
     }
 
     // ── Feed ──
