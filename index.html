@@ -3484,7 +3484,7 @@ const GEO_KEYWORDS = [
         });
       }
 
-      controls.update();
+      if (!window._cameraOverride) controls.update();
       renderer.render(scene, camera);
       requestAnimationFrame(animate);
     }
