@@ -750,7 +750,7 @@
 <noscript>
   <div style="background:#03040c;color:#eef7ff;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:Inter,sans-serif;text-align:center;padding:40px">
     <div>
-      <div style="font-size:48px;margin-bottom:16px">🌍</div>
+      <div style="font-size:48px;margin-bottom:16px">&#9678;</div>
       <h1 style="font-size:24px;margin-bottom:8px">AstroAxis</h1>
       <p style="color:rgba(238,247,255,.6)">JavaScript is required to view the 3D globe and news feed.</p>
       <p style="color:rgba(136,146,182,.5);font-size:13px;margin-top:12px">Please enable JavaScript in your browser settings.</p>
@@ -770,14 +770,14 @@
 <!-- Onboarding Tutorial Overlay -->
 <div id="onboarding-overlay" style="display:none;position:fixed;inset:0;z-index:99;background:rgba(2,3,10,.88);backdrop-filter:blur(6px);align-items:center;justify-content:center;flex-direction:column;gap:14px">
 <div style="max-width:420px;text-align:center;padding:32px 28px;border:1px solid rgba(103,232,249,.24);border-radius:24px;background:linear-gradient(180deg,rgba(7,10,22,.94),rgba(3,6,16,.88))">
-<div style="font-size:40px;margin-bottom:10px">🌍</div>
+<div style="font-size:40px;margin-bottom:10px">&#9678;</div>
 <h2 style="font-size:22px;font-weight:700;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:14px">Welcome to AstroAxis</h2>
 <div id="onboarding-steps" style="color:rgba(228,228,236,.78);font-size:14px;line-height:2;margin-bottom:10px">
-  <div>🖱 <b>Drag</b> to rotate the globe</div>
-  <div>🔍 <b>Scroll</b> to zoom in/out</div>
-  <div>📍 <b>Click markers</b> to read full stories</div>
-  <div>🔽 <b>Bottom bar</b> to filter by topic & time</div>
-  <div>📑 <b>Top tabs</b> to switch views</div>
+  <div><b>Drag</b> to rotate the globe</div>
+  <div><b>Scroll</b> to zoom in/out</div>
+  <div><b>Click markers</b> to read full stories</div>
+  <div><b>Bottom bar</b> to filter by topic & time</div>
+  <div><b>Top tabs</b> to switch views</div>
   <div>☆ <b>Bookmark</b> articles to save</div>
 </div>
 <button id="onboarding-close" style="background:rgba(34,211,238,.15);border:1px solid rgba(34,211,238,.5);color:#eaffff;border-radius:999px;padding:10px 36px;cursor:pointer;font:inherit;font-size:14px;font-weight:600;transition:all .2s" onmouseover="this.style.background='rgba(34,211,238,.25)'" onmouseout="this.style.background='rgba(34,211,238,.15)'">Got it! →</button>
@@ -792,11 +792,11 @@
   <button class="nav-btn" data-view="timeline" data-i18n="nav.timeline" role="tab" aria-selected="false" tabindex="-1">Timeline</button>
   <button class="nav-btn" data-view="feed" data-i18n="nav.feed" role="tab" aria-selected="false" tabindex="-1">Feed</button>
   <span class="search-wrap">
-    <input type="text" class="history-search" id="historySearch" placeholder="🔍 Search..." aria-label="Search news articles and timeline events" autocomplete="off" spellcheck="false">
+    <input type="text" class="history-search" id="historySearch" placeholder="Search..." aria-label="Search news articles and timeline events" autocomplete="off" spellcheck="false">
     <div class="search-recent" id="searchRecent" role="listbox" aria-label="Recent searches"></div>
   </span>
   <div style="position:relative;margin-left:auto">
-    <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">🌐 繁</button>
+    <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">繁</button>
     <div class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Language selection">
       <button class="lang-option" data-lang="en" role="option" aria-selected="false">English</button>
       <button class="lang-option active" data-lang="zh-HK" role="option" aria-selected="true">繁體中文</button>
@@ -809,7 +809,7 @@
 
 <!-- Breaking news banner -->
 <div class="breach-banner" id="breachBanner">
-  ⚠️ <strong data-i18n="alert.breaking">BREAKING:</strong> <span id="breachText">Major event detected</span><span id="breachSource" style="color:rgba(255,255,255,0.4);font-weight:400;font-size:13px"></span>
+  <strong data-i18n="alert.breaking">BREAKING:</strong> <span id="breachText">Major event detected</span><span id="breachSource" style="color:rgba(255,255,255,0.4);font-weight:400;font-size:13px"></span>
 </div>
 
 <!-- Error / data-freshness banner -->
@@ -856,7 +856,7 @@
     </nav>
     <div class="scanline"></div>
     <div class="vignette"></div>
-    <div class="hint" id="first-hint" data-i18n="hint.drag">🖱 DRAG · A/D ←→ SPIN · W/S ↑↓ TILT · Q/E ZOOM · 1-3 VIEWS</div>
+    <div class="hint" id="first-hint" data-i18n="hint.drag">DRAG · A/D ←→ SPIN · W/S ↑↓ TILT · Q/E ZOOM · 1-3 VIEWS</div>
     <div class="scroll-hint" aria-hidden="true" data-i18n="hint.scroll">↓ scroll for articles</div>
   <div style="position:fixed;bottom:4px;left:8px;z-index:99;font-size:10px;color:rgba(136,146,182,0.55);pointer-events:none">v20260705-23</div>
 </main>
@@ -978,7 +978,7 @@
         setTimeout(function() {
           var a = JSON.parse(localStorage.getItem('astroaxis_analytics') || '{}');
           var mins = Math.round((a.totalSeconds||0)/60);
-          console.log('%c📊 AstroAxis %c' + (a.visits||0) + ' visits · ' + mins + ' min total',
+          console.log('%cAstroAxis %c' + (a.visits||0) + ' visits · ' + mins + ' min total',
             'color:#a78bfa;font-weight:bold', 'color:#8892b6');
         }, 2000);
       } catch(e) {}
@@ -997,7 +997,7 @@
         memory: (performance.memory) ? {used: Math.round(performance.memory.usedJSHeapSize/1048576)+'MB', limit: Math.round(performance.memory.jsHeapSizeLimit/1048576)+'MB'} : 'N/A'
       };
       console.table(d);
-      console.log('%c💡 %cwindow._dashboard() %c— AstroAxis diagnostics',
+      console.log('%c%cwindow._dashboard() %c— AstroAxis diagnostics',
         'color:#67e8f9', 'color:#a78bfa', 'color:#8892b6');
       return d;
     };
@@ -1081,7 +1081,7 @@
         const key = el.dataset.i18n;
         if (t[key]) el.textContent = t[key];
       });
-      document.getElementById('langBtn').textContent = '🌐 ' + (LANG_LABELS[currentLang] || '繁');
+      document.getElementById('langBtn').textContent = '' + (LANG_LABELS[currentLang] || '繁');
       renderTimeline();
       renderFeed();
     }
@@ -1164,7 +1164,7 @@
       'AI': '◇', 'Bitcoin': '₿', 'Regulation': '§', 'DeFi': '◈',
       'Crypto': '◆', 'Finance': '$', 'Tech': '⌘', 'Policy': '★',
       'Macro': '◈', 'Trading': '↑', 'Ethereum': 'Ξ', 'Science': '⚛',
-      'World': '◐', 'General': '◯', 'Politics': '⚑', 'Health': '✚',
+      'World': '◐', 'General': '◯', 'Politics': '⚑', 'Health': '+',
       'Entertainment': '♪', 'Sports': '★', 'Climate': '☀',
     };
     function topicIcon(topic) {
@@ -1238,13 +1238,13 @@
         return Math.max(max, new Date(a.published).getTime());
       }, 0);
       const hoursSinceUpdate = newestArticle ? (Date.now() - newestArticle) / 3600000 : 999;
-      const pipelineStatus = hoursSinceUpdate < 6 ? '🟢' : hoursSinceUpdate < 24 ? '🟡' : '🔴';
+      const pipelineStatus = hoursSinceUpdate < 6 ? '<span style="color:#22c55e">&#9679;</span>' : hoursSinceUpdate < 24 ? '<span style="color:#eab308">&#9679;</span>' : '<span style="color:#ef4444">&#9679;</span>';
       const pipelineLabel = hoursSinceUpdate < 6 ? 'Live' : hoursSinceUpdate < 24 ? 'Stale (' + Math.floor(hoursSinceUpdate) + 'h)' : 'Offline';
       const pipelineColor = hoursSinceUpdate < 6 ? '#22c55e' : hoursSinceUpdate < 24 ? '#f59e0b' : '#ef4444';
       // Source coverage
       const configuredSources = 35; // from source_locs.json
       const activeSources = allSourceSet.size;
-      const sourceHealth = activeSources >= 20 ? '🟢' : activeSources >= 10 ? '🟡' : '🔴';
+      const sourceHealth = activeSources >= 20 ? '<span style="color:#22c55e">&#9679;</span>' : activeSources >= 10 ? '<span style="color:#eab308">&#9679;</span>' : '<span style="color:#ef4444">&#9679;</span>';
       // Trend: compare 24h vs 48h
       const now = Date.now();
       const recent24 = articles.filter(a => { if(!a.published) return false; return (now - Date.parse(a.published)) < 86400000; });
@@ -1252,11 +1252,11 @@
       const trend24 = recent24.length;
       const trend48 = prev48.length;
       const trendPct = trend48 > 0 ? Math.round((trend24 - trend48) / trend48 * 100) : 0;
-      const trendIcon = trendPct > 10 ? '📈' : trendPct < -10 ? '📉' : '📊';
+      const trendIcon = trendPct > 10 ? '&#9650;' : trendPct < -10 ? '&#9660;' : '&#9644;';
       const trendColor = trendPct > 10 ? '#22c55e' : trendPct < -10 ? '#ef4444' : '#8892b6';
       html += `<div class="stats-bar">
         <div class="stat-chip">${pipelineStatus} <span style="color:${pipelineColor}">${pipelineLabel}</span></div>
-        <div class="stat-chip">📰 ${filtered.length} articles</div>
+        <div class="stat-chip">${filtered.length} articles</div>
         <div class="stat-chip">${sourceHealth} ${activeSources}/${configuredSources} sources</div>
         <div class="stat-chip" style="color:${trendColor}">${trendIcon} 24h trend ${trendPct > 0 ? '+' : ''}${trendPct}%</div>
         ${topTopics.map(([t,c]) => {
@@ -1272,7 +1272,7 @@
         if (hotTopics.length > 1) {
           const maxHot = hotTopics[0][1];
           html += `<div style="max-width:900px;margin:0 auto 16px;display:flex;flex-wrap:wrap;gap:6px;align-items:center">
-            <span style="font-size:11px;color:rgba(136,146,182,.5);margin-right:4px">🔥</span>`;
+            `;
           hotTopics.forEach(([t,c]) => {
             const size = Math.max(11, 11 + (c/maxHot)*10);
             const tc = t==='AI'?'#3b82f6':t==='Bitcoin'?'#f97316':t==='Regulation'?'#ef4444':t==='DeFi'?'#22c55e':'#8892b6';
@@ -1352,7 +1352,7 @@
             lastBreakingTitle = u.title;
             fetch('https://ntfy.sh/astroaxis-breaking', {
               method: 'POST',
-              headers: { 'Title': '🚨 AstroAxis Breaking', 'Priority': 'high', 'Tags': 'warning,newspaper' },
+              headers: { 'Title': 'AstroAxis Breaking', 'Priority': 'high', 'Tags': 'warning,newspaper' },
               body: `${u.title}\n\n${u.source} • ${u.url}`
             }).catch(() => {}); // silent fail
           }
@@ -1553,7 +1553,7 @@
       const recents = getRecentSearches();
       if (!recents.length) { searchRecent.classList.remove('open'); return; }
       searchRecent.innerHTML = recents.map((r, i) =>
-        `<div class="search-recent-item" role="option" data-q="${r.replace(/"/g,'&quot;')}"><span>🕐 ${r}</span><span class="del-recent" data-idx="${i}">×</span></div>`
+        `<div class="search-recent-item" role="option" data-q="${r.replace(/"/g,'&quot;')}"><span>${r}</span><span class="del-recent" data-idx="${i}">×</span></div>`
       ).join('');
       searchRecent.classList.add('open');
     }
@@ -2741,7 +2741,7 @@ const GEO_KEYWORDS = [
           const first = data.articles[0];
           let html;
           if (cnt > 1) {
-            html = `<div class="tooltip-title">📦 ${cnt} articles &middot; ${escapeHtml(data.city)}</div>`;
+            html = `<div class="tooltip-title">${cnt} articles &middot; ${escapeHtml(data.city)}</div>`;
             html += `<div class="tooltip-source">${escapeHtml(data.topic)} &middot; ${escapeHtml(data.region)}</div>`;
             html += '<div class="tooltip-summary" style="margin-top:6px;padding-left:0">';
             data.articles.slice(0, 6).forEach(a => {
@@ -2871,7 +2871,7 @@ const GEO_KEYWORDS = [
       } else {
         stickyTooltip = hoveredIdx;
         // Show sticky article picker in tooltip
-        let html = `<div class="tooltip-title" style="margin-bottom:8px">📦 ${articles.length} articles · ${escapeHtml(hoveredData.city)}</div>`;
+        let html = `<div class="tooltip-title" style="margin-bottom:8px">${articles.length} articles · ${escapeHtml(hoveredData.city)}</div>`;
         articles.forEach((a, i) => {
           const color = topicColors[a.topic] || topicColors.General;
           html += `<a href="${escapeHtml(a.url)}" target="_blank" rel="noopener" style="display:block;padding:6px 8px;margin:2px 0;border-radius:6px;background:rgba(255,255,255,0.04);color:#eef7ff;text-decoration:none;font-size:13px;line-height:1.35;border-left:3px solid ${color};transition:background .15s" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.04)'">${escapeHtml(a.title)}<br><span style="font-size:11px;color:rgba(136,146,182,0.7)">${escapeHtml(a.source)}</span></a>`;
@@ -3513,7 +3513,7 @@ const GEO_KEYWORDS = [
       const startTime = Date.now();
       const MIN_DISPLAY = 1200; // minimum 1.2s visible
       let steps = ['Loading data...','Building globe...','Rendering markers...'];
-      if(isLowEnd) steps.push('💻 Low-end mode');
+      if(isLowEnd) steps.push('Low-end mode');
       let i = 0;
       const tick = setInterval(() => {
         if(i < steps.length){ status.textContent = steps[i]; i++; }
@@ -3567,7 +3567,7 @@ const GEO_KEYWORDS = [
     }
     function shareArticle(url, title) {
       if(navigator.share){ navigator.share({title,url}).catch(()=>{}); }
-      else if(navigator.clipboard){ navigator.clipboard.writeText(url).then(()=>{ showToast('📋 Link copied!'); }).catch(()=>{ window.open(url,'_blank'); }); }
+      else if(navigator.clipboard){ navigator.clipboard.writeText(url).then(()=>{ showToast('Link copied!'); }).catch(()=>{ window.open(url,'_blank'); }); }
       else { window.open(url,'_blank'); }
     }
 
@@ -3611,7 +3611,7 @@ const GEO_KEYWORDS = [
       if(!fb) return;
       const clear = document.createElement('button');
       clear.className = 'filter-btn';
-      clear.textContent = '✕ Clear';
+      clear.textContent = 'Clear';
       clear.style.cssText = 'color:rgba(239,68,68,.7);border-color:rgba(239,68,68,.2)';
       clear.onclick = () => {
         document.querySelectorAll('.filter-btn.active').forEach(b => b.classList.remove('active'));
