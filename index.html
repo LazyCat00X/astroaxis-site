@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Iran War Live Updates: Trump Casts Doubt on Future of Cease-Fire After Exchange of Strikes · Trump Praises NATO’s ‘Unity</title>
-  <meta name="description" content="Trump Praises NATO’s ‘Unity’ After Lashing Out at Allies · Paradigm Raises $1.2B Fourth Fund, Expands Into AI · Trump floats idea of Australia’s retirement system again. Bu — AI-powered world news agg" />
+  <title>Nvidia’s stock trades at a juicy discount, according to BofA · Trump Tells Zelensky Ukraine Will Be Allowed to Manufactu</title>
+  <meta name="description" content="Trump Tells Zelensky Ukraine Will Be Allowed to Manufacture  · SpaceXAI releases Grok 4.5, which Elon describes as an ‘Opus · Japan PM misses chance for European diplomacy by skipping NA — AI-powered " />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -897,18 +897,18 @@
         const bullets = summaryText.split('\\n').filter(l => l.includes('•')).map(l => l.replace(/^[•\\s]+/,'').trim()).filter(Boolean).slice(0, 4);
         const thumbBg = topicGradient(a.topic || 'General');
         html += `<article class="feed-card" role="article" aria-label="${a.title.replace(/"/g,'&quot;')}" style="--thumb-bg:${thumbBg}">
-          <div class="card-thumb placeholder" aria-hidden="true" style="background:${thumbBg}">${topicIcon(a.topic||'General')}</div>
-          <div class="card-top">
-            <span class="card-topic" style="color:#${a.topic === 'AI' ? '3b82f6' : a.topic === 'Bitcoin' ? 'f97316' : a.topic === 'Regulation' ? 'ef4444' : a.topic === 'DeFi' ? '22c55e' : a.topic === 'Crypto' ? '818cf8' : a.topic === 'Finance' ? '10b981' : a.topic === 'Tech' ? '6366f1' : a.topic === 'World' ? '0ea5e9' : a.topic === 'Politics' ? 'ec4899' : a.topic === 'Science' ? '84cc16' : a.topic === 'Health' ? 'f97316' : '818cf8'}">${a.topic || 'General'}</span>
-            ${trustBadge(a.source)}
-          </div>
-          <h3><a href="${a.url}" target="_blank" rel="noopener">${a.title}</a></h3>
-          <div class="card-summary"><ul>${bullets.map(b => `<li>${b}</li>`).join('')}</ul></div>
-          <div class="card-meta">
-            <span>${a.source}</span>
-            <span>${a.published ? new Date(a.published).toLocaleDateString(currentLang === 'zh-HK' || currentLang === 'zh-CN' ? 'zh-TW' : currentLang, { year: 'numeric', month: 'short', day: 'numeric' }) : ''}</span>
-          </div>
-        </article>`;
+                  <div class="card-thumb placeholder" aria-hidden="true" style="background:${thumbBg}">${topicIcon(a.topic||'General')}</div>
+                  <div class="card-top">
+                    <a class="card-topic" href="/topic/${slugify(a.topic||'General')}/" style="color:#${a.topic === 'AI' ? '3b82f6' : a.topic === 'Bitcoin' ? 'f97316' : a.topic === 'Regulation' ? 'ef4444' : a.topic === 'DeFi' ? '22c55e' : a.topic === 'Crypto' ? '818cf8' : a.topic === 'Finance' ? '10b981' : a.topic === 'Tech' ? '6366f1' : a.topic === 'World' ? '0ea5e9' : a.topic === 'Politics' ? 'ec4899' : a.topic === 'Science' ? '84cc16' : a.topic === 'Health' ? 'f97316' : '818cf8'};text-decoration:none">${a.topic || 'General'}</a>
+                    ${trustBadge(a.source)}
+                  </div>
+                  <h3><a href="${a.url}" target="_blank" rel="noopener">${a.title}</a></h3>
+                  <div class="card-summary"><ul>${bullets.map(b => `<li>${b}</li>`).join('')}</ul></div>
+                  <div class="card-meta">
+                    <a href="/source/${slugify(a.source||'unknown')}/" style="color:inherit;text-decoration:none">${a.source}</a>
+                    <span>${a.published ? new Date(a.published).toLocaleDateString(currentLang === 'zh-HK' || currentLang === 'zh-CN' ? 'zh-TW' : currentLang, { year: 'numeric', month: 'short', day: 'numeric' }) : ''}</span>
+                  </div>
+                </article>`;
       });
       html += '</div>';
       // Load More button
