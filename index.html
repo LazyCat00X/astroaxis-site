@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2 Battered Artificial Intelligence (AI) Stocks Due for a Massive Summer Rebound - The Motley Fool · Only 5% of U.S. adul</title>
-  <meta name="description" content="Only 5% of U.S. adults can ace this 8-question financial-lit · Manhattan office leasing sees strongest gains in 20 years · Police name man wanted over murders of wife and children — AI-powered world n" />
+  <title>Neo-Nazi jailed for terror offence after MI5 sting · $LAB 閃崩 85% 蒸發百億市值！ZachXBT 再發警告：幣安、Bitget 成內部操縱幫兇 · Police name man</title>
+  <meta name="description" content="$LAB 閃崩 85% 蒸發百億市值！ZachXBT 再發警告：幣安、Bitget 成內部操縱幫兇 · Police name man wanted over murders of wife and daughters · 2 Battered Artificial Intelligence (AI) Stocks Due for a Mas — AI-powered world news agg" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -201,6 +201,10 @@
     .topic-tag:hover { border-color: rgba(34,211,238,.4) !important; background: rgba(34,211,238,.08) !important; }
     .feed-card .card-top { display: flex; justify-content: space-between; align-items: start; gap: 8px; margin-bottom: 6px; }
     .feed-card .card-topic { font-size: 12px; padding: 3px 9px; border-radius: 4px; font-weight: 600; }
+    .feed-card .trust-badge { font-size: 10px; padding: 2px 6px; border-radius: 3px; font-weight: 700; margin-left: auto; flex-shrink: 0; }
+    .feed-card .trust-badge.high { color: #fbbf24; }
+    .feed-card .trust-badge.medium { color: #67e8f9; }
+    .feed-card .trust-badge.low { color: rgba(136,136,160,0.4); }
     .feed-card .card-source { font-size: 12px; color: rgba(136,136,160,0.8); }
     .feed-card h3 { font-size: 16px; font-weight: 600; line-height: 1.4; margin-bottom: 8px; }
     .feed-card h3 a { color: #eef7ff; text-decoration: none; }
@@ -428,6 +432,8 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
   <script defer src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+  <!-- Cloudflare Web Analytics (replace TOKEN with your CF Web Analytics token) -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d3c2a1b4e5f67890"}'></script>
   <script type="module">
     import * as THREE from 'three';
     import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -740,6 +746,19 @@
       return TOPIC_ICONS[topic] || TOPIC_ICONS['General'];
     }
 
+    // ── Source trust levels ──
+    const TRUST_MAP = {
+      'New York Times': 'high', 'Bloomberg': 'high', 'Reuters': 'high', 'Financial Times': 'high', 'AP News': 'high', 'BBC World': 'high', 'WSJ Markets': 'high', 'NPR': 'high', 'Washington Post': 'high', 'The Guardian': 'high',
+      'CNBC': 'medium', 'MarketWatch': 'medium', 'Nikkei Asia': 'medium', 'SCMP': 'medium', 'Time': 'medium', 'Al Jazeera': 'medium', 'TechCrunch': 'medium', 'ArsTechnica': 'medium', 'Wired': 'medium', 'The Verge': 'medium', 'MIT Tech Review': 'medium', 'Bloomberg Crypto': 'medium',
+      'Reuters (Google News)': 'medium', 'AP News (Google News)': 'medium', 'AI News (Google)': 'medium', 'ArsTechnica AI': 'medium', 'VentureBeat AI': 'medium', 'OpenAI Blog': 'medium', 'Google AI Blog': 'medium', 'Anthropic Blog': 'medium', 'Hugging Face Blog': 'medium',
+    };
+    function trustBadge(source) {
+      const level = TRUST_MAP[source] || 'low';
+      if (level === 'high') return '<span class="trust-badge high" title="Established source">★</span>';
+      if (level === 'medium') return '<span class="trust-badge medium" title="Secondary source">◈</span>';
+      return '<span class="trust-badge low" title="Low trust source">○</span>';
+    }
+
     function renderFeed() {
       const articles = NEWS_DATA.articles || [];
       const wrap = document.getElementById('feed-content');
@@ -863,7 +882,7 @@
           <div class="card-thumb placeholder" aria-hidden="true" style="background:${thumbBg}">${topicIcon(a.topic||'General')}</div>
           <div class="card-top">
             <span class="card-topic" style="color:#${a.topic === 'AI' ? '3b82f6' : a.topic === 'Bitcoin' ? 'f97316' : a.topic === 'Regulation' ? 'ef4444' : a.topic === 'DeFi' ? '22c55e' : a.topic === 'Crypto' ? '818cf8' : a.topic === 'Finance' ? '10b981' : a.topic === 'Tech' ? '6366f1' : a.topic === 'World' ? '0ea5e9' : a.topic === 'Politics' ? 'ec4899' : a.topic === 'Science' ? '84cc16' : a.topic === 'Health' ? 'f97316' : '818cf8'}">${a.topic || 'General'}</span>
-
+            ${trustBadge(a.source)}
           </div>
           <h3><a href="${a.url}" target="_blank" rel="noopener">${a.title}</a></h3>
           <div class="card-summary"><ul>${bullets.map(b => `<li>${b}</li>`).join('')}</ul></div>
@@ -1294,7 +1313,7 @@ const GEO_KEYWORDS = [
     // Detect a geo location from article title + summary.
     // Returns [lat, lon, displayName] on first regex match, or null.
     function detectGeoLocation(article) {
-      const text = ((article.title || '') + ' ' + (article.ai_summary || '')).toLowerCase();
+      const text = ((article.title || '') + ' ' + ((article.ai_summary || article.source) || '')).toLowerCase();
       for (const entry of GEO_KEYWORDS) {
         // Clone the regex so we can use .test() without lastIndex issues in a loop
         const re = new RegExp(entry.re.source, entry.re.flags);
@@ -1939,9 +1958,9 @@ const GEO_KEYWORDS = [
       markerData = [];
       // Group articles by their base location for clustering
       const locationGroups = {};
-      const _articles = (typeof NEWS_DATA !== 'undefined' && NEWS_DATA.articles) ? NEWS_DATA.articles : [];
-    _articles.slice(0, 100).forEach((article, index) => {
-      if (!article.ai_summary) return;
+      const _articles = (typeof NEWS_DATA !== 'undefined' && NEWS_DATA.globeArticles) ? NEWS_DATA.globeArticles : [];
+    _articles.forEach((article, index) => {
+      // Globe articles may not have ai_summary — skip only if coordinates missing
       let baseLat, baseLon, city;
       const geoMatch = detectGeoLocation(article);
       if (geoMatch) {
