@@ -5,7 +5,7 @@
 <link>https://lazycat00x.github.io/astroaxis-site</link>
 <description>AI-powered news aggregator</description>
 <language>en</language>
-<lastBuildDate>Thu, 09 Jul 2026 18:09:03 +0000</lastBuildDate>
+<lastBuildDate>Thu, 09 Jul 2026 18:11:56 +0000</lastBuildDate>
 <generator>AstroAxis</generator>
 <image>
 <url>https://lazycat00x.github.io/astroaxis-site/og-image.png</url>
@@ -13,13 +13,52 @@
 <link>https://lazycat00x.github.io/astroaxis-site</link>
 </image>
 <item>
+<title>Buffalo Bills quarterback Josh Allen says he would 'entertain' idea to follow Tom Brady, Drew Brees into broadcasting</title>
+<link>https://www.cnbc.com/2026/07/09/buffalo-bills-qb-josh-allen-says-he-would-entertain-broadcasting.html</link>
+<guid>https://www.cnbc.com/2026/07/09/buffalo-bills-qb-josh-allen-says-he-would-entertain-broadcasting.html</guid>
+<pubDate>Thu, 09 Jul 2026 18:05:13 +0000</pubDate>
+<category>Sports</category>
+<description>• 布法羅比爾隊四分衛喬希·艾倫表示，他會考慮跟隨特朗普和德魯·布里斯進入廣播行業的想法  
+• 艾倫在與CNBC Sport的訪談中宣布與睡眠輔助產品Natrol的合作  
+• 他表示，如果能從純廣播的角度出發，做NFL退役後的廣播工作會很「酷」  
+• 近年來，許多前NFL四分衛獲得了電視工作的機會</description>
+<source url="https://www.cnbc.com/2026/07/09/buffalo-bills-qb-josh-allen-says-he-would-entertain-broadcasting.html">CNBC</source>
+</item>
+<item>
+<title>A new kind of robot swims the seas and soars the skies</title>
+<link>https://www.npr.org/2026/07/09/nx-s1-5885040/robot-flying-aerial-aquatic-mit-birds</link>
+<guid>https://www.npr.org/2026/07/09/nx-s1-5885040/robot-flying-aerial-aquatic-mit-birds</guid>
+<pubDate>Thu, 09 Jul 2026 18:01:11 +0000</pubDate>
+<category>General</category>
+<description>• 麻省理工學院的機械工程師拉斐爾·祖弗瑞的實驗室研發了一種新型機器人，能在空中飛行和水中游泳，靈感來自潛水海鳥如大西洋海雀。
+• 這種機器人重約半磅，翼展接近三英尺，研究成果於週四在《科學》期刊發表。
+• 研究團隊設計機器人時不使用腿部，以簡化控制和運動，並選擇不折疊的翼以保持結構簡單。
+• 此機器人可用於觀察沿海海洋和監測遠程珊瑚礁等，具有多種潛在應用。</description>
+<source url="https://www.npr.org/2026/07/09/nx-s1-5885040/robot-flying-aerial-aquatic-mit-birds">NPR</source>
+</item>
+<item>
 <title>Meet Biomni: the free powerful biomed AI agent turning data into hypotheses</title>
 <link>https://www.scmp.com/news/china/science/article/3359945/meet-biomni-free-powerful-biomed-ai-agent-turning-data-hypotheses?utm_source=rss_feed</link>
 <guid>https://www.scmp.com/news/china/science/article/3359945/meet-biomni-free-powerful-biomed-ai-agent-turning-data-hypotheses?utm_source=rss_feed</guid>
 <pubDate>Thu, 09 Jul 2026 18:00:08 +0000</pubDate>
 <category>Health</category>
-<description></description>
+<description>• 斯坦福大學的團隊開發了一個名為Biomni的免費生物醫學AI代理，能將數據轉化為假設。  
+• 該系統已作為開源系統發布，提供網頁界面，生物學家無需編寫代碼即可使用。  
+• 斯坦福計算機科學教授Jure Leskovec表示，全球已有超過10,000名科學家在日常任務中使用該系統。  
+• Biomni能從普通語言請求生成完整的研究工作流程，包括數據搜索、分析代碼撰寫及實驗室指導步驟。</description>
 <source url="https://www.scmp.com/news/china/science/article/3359945/meet-biomni-free-powerful-biomed-ai-agent-turning-data-hypotheses?utm_source=rss_feed">SCMP</source>
+</item>
+<item>
+<title>OUTDOOR ACCESS FOR DISABLED IN VERMONT</title>
+<link>https://www.npr.org/2026/07/09/nx-s1-5879435/outdoor-access-for-disabled-in-vermont</link>
+<guid>https://www.npr.org/2026/07/09/nx-s1-5879435/outdoor-access-for-disabled-in-vermont</guid>
+<pubDate>Thu, 09 Jul 2026 18:00:00 +0000</pubDate>
+<category>General</category>
+<description>• 佛蒙特州正在建設一條長達485英里的多用途自行車道，名為The Velomont，旨在連接27個社區並整合現有的步道網絡。  
+• 該項目致力於考慮殘疾騎士的需求，並進行適應性評估，以改善現有步道的可及性。  
+• 殘疾運動員路易斯·阿雷瓦洛使用特製的電動三輪車，並表示能夠重返步道對他來說意義重大。  
+• 承包商正在建設符合ADA標準的旅館，並在步道沿線設置鎖定的越野輪椅，以便殘疾騎士使用。</description>
+<source url="https://www.npr.org/2026/07/09/nx-s1-5879435/outdoor-access-for-disabled-in-vermont">NPR</source>
 </item>
 <item>
 <title>How to stop Meta’s AI image generator from using your Instagram photos</title>
@@ -27,7 +66,10 @@
 <guid>https://techcrunch.com/2026/07/09/how-to-stop-metas-ai-image-generator-from-using-your-instagram-photos/</guid>
 <pubDate>Thu, 09 Jul 2026 17:56:47 +0000</pubDate>
 <category>Tech</category>
-<description></description>
+<description>• Meta於星期二推出新功能“Muse Image”，允許用戶創建原創圖像和編輯現有照片。  
+• Muse Image可使用公共Instagram帳戶的照片生成AI圖像，只有私人帳戶和18歲以下用戶的帳戶自動排除在外。  
+• 用戶對於其公共照片被陌生人用於AI生成圖像的同意問題表示擔憂，並且未被通知其內容被重用。  
+• 根據皮尤研究中心的調查，35%的受訪者對人工智能的使用表示擔憂，Meta的隱私記錄也引發了對其新AI功能的懷疑。</description>
 <source url="https://techcrunch.com/2026/07/09/how-to-stop-metas-ai-image-generator-from-using-your-instagram-photos/">TechCrunch</source>
 </item>
 <item>
@@ -36,7 +78,10 @@
 <guid>https://www.theblock.co/post/407785/white-house-defends-trumps-regulatory-appointments-as-cftc-vacancies-complicate-crypto-bill-push?utm_source=rss&amp;utm_medium=rss</guid>
 <pubDate>Thu, 09 Jul 2026 17:53:16 +0000</pubDate>
 <category>Regulation</category>
-<description></description>
+<description>• 白宮官員向參議院多數黨領袖約翰·圖恩及少數黨領袖查爾斯·舒默發送信件，澄清特朗普政府在任命監管機構委員方面的立場。  
+• 目前商品期貨交易委員會（CFTC）只有一名委員，特朗普被要求任命更多委員以支持《清晰法案》的推進。  
+• 白宮表示已尋求民主黨人提名擔任證券交易委員會及CFTC的領導職位，但未收到回覆。  
+• 白宮在信中提及最近的最高法院裁決，認為該裁決擴大了特朗普總統對多個獨立聯邦機構領導人的罷免權限。</description>
 <source url="https://www.theblock.co/post/407785/white-house-defends-trumps-regulatory-appointments-as-cftc-vacancies-complicate-crypto-bill-push?utm_source=rss&amp;utm_medium=rss">The Block</source>
 </item>
 <item>
@@ -45,7 +90,10 @@
 <guid>https://www.marketwatch.com/story/risky-leveraged-etfs-are-booming-in-2026-some-worry-they-could-be-making-the-stock-market-more-volatile-cef1427b?mod=mw_rss_topstories</guid>
 <pubDate>Thu, 09 Jul 2026 17:52:00 +0000</pubDate>
 <category>Finance</category>
-<description></description>
+<description>• 2026年，槓桿交易所交易基金（ETFs）需求上升，吸引了許多交易者參與  
+• 部分專家擔心這些高風險產品可能會增加股市的波動性  
+• 交易者對於基礎股票的劇烈波動視為一種特點，而非缺陷  
+• 槓桿ETFs的流行引發了市場對其潛在風險的討論</description>
 <source url="https://www.marketwatch.com/story/risky-leveraged-etfs-are-booming-in-2026-some-worry-they-could-be-making-the-stock-market-more-volatile-cef1427b?mod=mw_rss_topstories">MarketWatch</source>
 </item>
 <item>
@@ -54,7 +102,10 @@
 <guid>https://www.npr.org/2026/07/09/nx-s1-5885052/spacexai-stabilityai-deepfake-csam-class-action</guid>
 <pubDate>Thu, 09 Jul 2026 17:49:33 +0000</pubDate>
 <category>Regulation</category>
-<description></description>
+<description>• 一項針對特斯拉創辦人馬斯克的AI公司SpaceXAI的集體訴訟擴大，新增原告指控該公司未能妥善報告與兒童性虐待有關的資訊。
+• 來自懷俄明州和威斯康辛州的兩名原告加入了早前由三名田納西州青少年提出的訴訟，所有原告均以「Jane Doe」身份出庭。
+• 訴訟指控包括SpaceXAI和Stability AI在內的公司利用AI模型生成兒童性虐待材料，並對性交易活動獲利，要求這些公司安裝更有效的防護措施。
+• 訴訟中提到，SpaceXAI未能按法律要求向失踪及被剝削兒童國家中心報告懷疑的兒童性剝削案件，包括未能提供涉嫌犯罪者的IP地址。</description>
 <source url="https://www.npr.org/2026/07/09/nx-s1-5885052/spacexai-stabilityai-deepfake-csam-class-action">NPR</source>
 </item>
 <item>
@@ -63,7 +114,10 @@
 <guid>https://www.aljazeera.com/news/2026/7/9/mexico-to-seek-us-criminal-complaints-over-ice-related-deaths-of-citizens?traffic_source=rss</guid>
 <pubDate>Thu, 09 Jul 2026 17:46:30 +0000</pubDate>
 <category>General</category>
-<description></description>
+<description>• 墨西哥政府宣布將要求美國檢察官對其公民在移民執法行動中死亡事件展開刑事調查 
+• 墨西哥總統克勞迪婭·謝因鮑姆表示，將對負責人提出正式控訴，並強調不會對墨西哥公民的死亡視而不見 
+• 此舉是在一名墨西哥國籍人士在休士頓的移民行動中被ICE特工槍殺後的兩天內作出的 
+• 墨西哥外交部長羅伯托·維拉斯科表示，將直接向美國檢察官提出控訴，並計劃對經營美國移民拘留中心的私營公司提起民事訴訟</description>
 <source url="https://www.aljazeera.com/news/2026/7/9/mexico-to-seek-us-criminal-complaints-over-ice-related-deaths-of-citizens?traffic_source=rss">Al Jazeera</source>
 </item>
 <item>
@@ -96,7 +150,10 @@
 <guid>https://www.aljazeera.com/news/2026/7/9/palestinian-legislative-elections-set-for-november-28?traffic_source=rss</guid>
 <pubDate>Thu, 09 Jul 2026 17:32:09 +0000</pubDate>
 <category>Politics</category>
-<description></description>
+<description>• 巴勒斯坦總統阿巴斯宣布將於11月28日在所有巴勒斯坦地區舉行立法選舉，這是20年來的首次選舉。  
+• 上次立法選舉於2006年舉行，哈馬斯獲勝後導致政治分裂，哈馬斯於2007年控制加沙。  
+• 阿巴斯的決定被視為在國際壓力下的結果，外國勢力希望見到巴勒斯坦權力機構的改革。  
+• 以色列尚未對選舉公告作出回應，若選舉進行，需解決在被佔的東耶路撒冷舉行投票的問題。</description>
 <source url="https://www.aljazeera.com/news/2026/7/9/palestinian-legislative-elections-set-for-november-28?traffic_source=rss">Al Jazeera</source>
 </item>
 <item>
@@ -189,7 +246,10 @@
 <guid>https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdzE4QVlfMm1wUDVhZm1QbzNvSjR5WDdUSm5sUnhpVmM2ekhYeUNNc0JmZFpxcGh3VkpEbTB2NXJJOXJMeHhZSG1NOXZ1ZnljMWx3VkhWT0NoV21fa3BOb3MxVTdmSmJwdWF4ZjVfZVhDdmZCRHVaN0FrNEw0TFpMNkpVOGN2djRuSkFRdjhGQXR3NkZYQ3ZrYjBsUnAzdlhLY0h5TktSZzg?oc=5</guid>
 <pubDate>Thu, 09 Jul 2026 17:06:59 +0000</pubDate>
 <category>AI</category>
-<description></description>
+<description>• 一項研究探討人工智能在眼科病人教育中的應用及其可能的誤導性資訊問題  
+• 研究指出，部分病人可能因為不正確的AI資訊而產生誤解  
+• 專家呼籲醫療專業人士應加強對病人的教育，確保資訊的準確性  
+• 會議於2023年10月在歐洲舉行，聚焦於AI技術在醫療領域的影響及挑戰</description>
 <source url="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdzE4QVlfMm1wUDVhZm1QbzNvSjR5WDdUSm5sUnhpVmM2ekhYeUNNc0JmZFpxcGh3VkpEbTB2NXJJOXJMeHhZSG1NOXZ1ZnljMWx3VkhWT0NoV21fa3BOb3MxVTdmSmJwdWF4ZjVfZVhDdmZCRHVaN0FrNEw0TFpMNkpVOGN2djRuSkFRdjhGQXR3NkZYQ3ZrYjBsUnAzdlhLY0h5TktSZzg?oc=5">AI News (Google)</source>
 </item>
 <item>
@@ -354,7 +414,10 @@
 <guid>https://news.google.com/rss/articles/CBMiqwFBVV95cUxNOXpYVGRPTHh3WVU2RGxoZXZYV3lScnBURktzNjYtZjhoRW1abkNHY3luUGptVkx3LUVOaGw4Z0M0VFBpRy1zUVhXci04ZUFCZ3VnNFY2Y09lSVlvaHJiR0Q2NjgtR1p5VW5qTU1EbFp1dHBCc0pXUzNzQlZvMzZ5NFRvczdCS3B0MGNXVXRpYkVwSk5RV29Wcy1tcmpBaWE3ZGxLbENQNTZEbUU?oc=5</guid>
 <pubDate>Thu, 09 Jul 2026 16:34:16 +0000</pubDate>
 <category>General</category>
-<description></description>
+<description>• 據報導，在馬利，一輛載有俄羅斯戰士的車隊遭到襲擊  
+• 事件發生的具體時間和地點尚未公開  
+• 當地消息來源表示，襲擊造成了人員傷亡  
+• 目前尚未有任何組織或個人聲明對襲擊負責</description>
 <source url="https://news.google.com/rss/articles/CBMiqwFBVV95cUxNOXpYVGRPTHh3WVU2RGxoZXZYV3lScnBURktzNjYtZjhoRW1abkNHY3luUGptVkx3LUVOaGw4Z0M0VFBpRy1zUVhXci04ZUFCZ3VnNFY2Y09lSVlvaHJiR0Q2NjgtR1p5VW5qTU1EbFp1dHBCc0pXUzNzQlZvMzZ5NFRvczdCS3B0MGNXVXRpYkVwSk5RV29Wcy1tcmpBaWE3ZGxLbENQNTZEbUU?oc=5">Reuters (Google News)</source>
 </item>
 <item>
@@ -903,7 +966,10 @@
 <guid>https://arstechnica.com/health/2026/07/surprised-doctors-find-10-inch-worm-in-mans-groin-during-elective-surgery/</guid>
 <pubDate>Thu, 09 Jul 2026 15:33:41 +0000</pubDate>
 <category>Tech</category>
-<description></description>
+<description>• 一名71歲男子在進行腹股溝疝氣手術時，醫生意外發現其腹部有一條長達10英寸（26厘米）的活蟲。  
+• 該男子選擇進行手術修復無痛的腹股溝突出，這種情況在年長男性中相對常見。  
+• 醫生在手術前檢查時，男子的健康狀況良好，並未出現任何異常症狀或血液檢查異常。  
+• 醫生採用腹腔鏡手術，並在手術過程中發現並取出了這條仍然活著的帶狀蟲。</description>
 <source url="https://arstechnica.com/health/2026/07/surprised-doctors-find-10-inch-worm-in-mans-groin-during-elective-surgery/">ArsTechnica</source>
 </item>
 <item>
@@ -1164,7 +1230,10 @@
 <guid>https://news.google.com/rss/articles/CBMihwFBVV95cUxNdFdnSUR4YnJRaXBYeFlGRnhqS3k3V3lxaFJqQllsZWZiRDRkbWtIZ2FJZld6b0tSXzVLemM5S0N6dEFYcVdadHRTMjFraHlJTmJYQldPaTdseldUS0dBQTlvOFhmaFNHQTBVU05fTkVLTGZXMW9NYldQcFZSRXY4SEFYb0tCQ2M?oc=5</guid>
 <pubDate>Thu, 09 Jul 2026 15:01:00 +0000</pubDate>
 <category>World</category>
-<description></description>
+<description>• 美國足球明星克里斯蒂安·普利西奇在世界杯對比利時的比賽中腿部骨折  
+• 此事件發生在比賽的下半場，導致他無法繼續參賽  
+• 普利西奇的傷勢將影響他未來的比賽安排  
+• 美國隊在該場比賽中以0-1不敵比利時，無法晉級下一輪</description>
 <source url="https://news.google.com/rss/articles/CBMihwFBVV95cUxNdFdnSUR4YnJRaXBYeFlGRnhqS3k3V3lxaFJqQllsZWZiRDRkbWtIZ2FJZld6b0tSXzVLemM5S0N6dEFYcVdadHRTMjFraHlJTmJYQldPaTdseldUS0dBQTlvOFhmaFNHQTBVU05fTkVLTGZXMW9NYldQcFZSRXY4SEFYb0tCQ2M?oc=5">AP News (Google News)</source>
 </item>
 <item>
@@ -2718,7 +2787,10 @@
 <guid>https://www.blocktempo.com/gate-io-responds-to-1-7m-user-hack-alipay-device-compromised/</guid>
 <pubDate>Thu, 09 Jul 2026 12:35:21 +0000</pubDate>
 <category>Crypto</category>
-<description></description>
+<description>• 加密貨幣交易所 Gate 涉及170萬美元用戶資金失竊事件，官方於7月9日發表聲明反駁指控，稱系統未遭駭客入侵。  
+• 事件起因於一名用戶在社交平台X上報告其帳戶資金被盜，並質疑Gate的風控機制。  
+• Gate官方指出，駭客掌握用戶的支付寶交易歷史影片，並通過多重驗證獲得帳戶訪問權限，認為問題出在用戶設備遭遠端控制或個資外洩。  
+• Gate已啟動資產追蹤，並聯絡Tether等機構協助凍結被盜資金，並承諾配合司法調查。</description>
 <source url="https://www.blocktempo.com/gate-io-responds-to-1-7m-user-hack-alipay-device-compromised/">動區動趨 (BlockTempo)</source>
 </item>
 <item>
@@ -2727,7 +2799,10 @@
 <guid>https://blockcast.it/2026/07/09/temasek-says-crypto-is-off-the-table-will-focus-on-ai/</guid>
 <pubDate>Thu, 09 Jul 2026 12:34:17 +0000</pubDate>
 <category>Crypto</category>
-<description></description>
+<description>• 淡馬錫控股因FTX倒閉損失2.75億美元，決定未來5年加大對人工智慧（AI）的投資，暫不考慮加密貨幣。  
+• 淡馬錫計劃將AI投資比重從2026年第一季的6%提升至2031年的15%。  
+• 淡馬錫全球投資總裁Nagi Hamiyeh表示，AI投資仍處於起步階段，未來數十年將持續增長，但部分AI領域估值已超過基本面，需保持審慎。  
+• 雖然不投資加密貨幣，淡馬錫仍在探索區塊鏈技術的潛力，並重視AI的商業化應用。</description>
 <source url="https://blockcast.it/2026/07/09/temasek-says-crypto-is-off-the-table-will-focus-on-ai/">區塊客 (Blockcast)</source>
 </item>
 <item>
@@ -2736,7 +2811,10 @@
 <guid>https://www.scmp.com/opinion/china-opinion/article/3359746/us-china-ai-war-boils-down-contest-over-electricity?utm_source=rss_feed</guid>
 <pubDate>Thu, 09 Jul 2026 12:30:06 +0000</pubDate>
 <category>AI</category>
-<description></description>
+<description>• 中美之間的人工智能競爭正轉變為電力產出和價格的競賽，電力成為主要成本因素。  
+• 中國的開源人工智能模型迅速增長，最近DeepSeek和Zhipu AI的發布縮小了與美國封閉源模型的差距。  
+• 中國的能源策略以自給自足和碳中和為核心，重點發展太陽能、風能和水電。  
+• 去年，太陽能的平準化成本降至每千瓦時約兩美分，使其在與碳氫化合物競爭中變得具備競爭力。</description>
 <source url="https://www.scmp.com/opinion/china-opinion/article/3359746/us-china-ai-war-boils-down-contest-over-electricity?utm_source=rss_feed">SCMP</source>
 </item>
 <item>
@@ -2745,7 +2823,10 @@
 <guid>https://www.theblock.co/post/407628/stripe-privy-jito-develop-solana-transaction-inclusion-tool-fullsend?utm_source=rss&amp;utm_medium=rss</guid>
 <pubDate>Thu, 09 Jul 2026 12:30:02 +0000</pubDate>
 <category>Crypto</category>
-<description></description>
+<description>• Stripe旗下的Privy與Solana基礎設施公司Jito Labs共同開發了一個名為FullSend的交易確定工具，旨在確保Privy錢包發送的交易能夠快速納入Solana區塊中。  
+• FullSend自2023年1月以來在Privy錢包中運行，並在數百萬筆交易中達到99.999%的成功率。  
+• 該工具通過Jito的低延遲網絡，將每筆Privy錢包簽署的交易自動路由至當前和即將到來的Solana區塊建設領導者，將交易納入延遲縮短至50毫秒。  
+• FullSend特別針對金融科技公司、市場製造商及其他需要在區塊鏈上進行快速且可靠...</description>
 <source url="https://www.theblock.co/post/407628/stripe-privy-jito-develop-solana-transaction-inclusion-tool-fullsend?utm_source=rss&amp;utm_medium=rss">The Block</source>
 </item>
 <item>
@@ -2754,7 +2835,10 @@
 <guid>https://www.aljazeera.com/news/2026/7/9/ukraine-targets-russian-oil-depots-and-tankers-in-drone-attacks?traffic_source=rss</guid>
 <pubDate>Thu, 09 Jul 2026 12:24:20 +0000</pubDate>
 <category>General</category>
-<description></description>
+<description>• 烏克蘭在亞速海攻擊兩艘油輪及數個俄羅斯油氣設施，造成燃料危機 
+• 烏克蘭總統澤連斯基表示，攻擊包括位於烏法的油泵站及距前線約800公里的燃料儲存設施 
+• 俄羅斯超過90%的地區因燃料短缺而實施某種形式的配給 
+• 特朗普在北約峰會期間承諾將授予烏克蘭製造愛國者防空系統的許可，並對烏克蘭的攻擊表示支持</description>
 <source url="https://www.aljazeera.com/news/2026/7/9/ukraine-targets-russian-oil-depots-and-tankers-in-drone-attacks?traffic_source=rss">Al Jazeera</source>
 </item>
 <item>
@@ -2763,7 +2847,10 @@
 <guid>https://decrypt.co/373112/morning-minute-paradigm-raises-1-2b-fund-as-cryptos-top-vc-pushes-into-ai</guid>
 <pubDate>Thu, 09 Jul 2026 12:23:22 +0000</pubDate>
 <category>Bitcoin</category>
-<description></description>
+<description>• Paradigm於近日籌集了12億美元的基金，計劃投資於AI和機器人技術，擴展其業務範圍。  
+• Paradigm由Matt Huang和Coinbase聯合創辦人Fred Ehrsam於2018年成立，曾是加密貨幣的主要投資者。  
+• BNB Chain計劃在2026年下半年推出一個專為AI代理交易設計的新Layer-1區塊鏈，目標是每秒處理超過10萬筆交易。  
+• 該區塊鏈旨在提供低延遲的交易執行，並移除公共交易池以防止前置交易和夾擊攻擊。</description>
 <source url="https://decrypt.co/373112/morning-minute-paradigm-raises-1-2b-fund-as-cryptos-top-vc-pushes-into-ai">Decrypt</source>
 </item>
 <item>
@@ -2772,7 +2859,10 @@
 <guid>https://www.theguardian.com/environment/2026/jul/09/species-ingenious-survival-strategies-no-match-human-destruction-red-list</guid>
 <pubDate>Thu, 09 Jul 2026 12:20:09 +0000</pubDate>
 <category>General</category>
-<description></description>
+<description>• 根據國際自然保護聯盟（IUCN）最新的紅色名單，許多物種因人類活動而面臨滅絕風險，包括深海熱泉的貝類和沙漠雨蛙。  
+• 超過200種貝類僅生活在深海熱泉，兩-thirds的物種因深海採礦而面臨滅絕威脅。  
+• IUCN指出，雖然許多物種受到威脅，但透過保護措施，像是澳洲的條紋食蟻袋鼠已經從瀕危邊緣回升。  
+• IUCN在四月更新中宣布，因氣候危機導致海冰融化，皇帝企鵝已被正式列為滅絕危險物種。</description>
 <source url="https://www.theguardian.com/environment/2026/jul/09/species-ingenious-survival-strategies-no-match-human-destruction-red-list">The Guardian</source>
 </item>
 <item>
@@ -2781,7 +2871,10 @@
 <guid>https://www.blocktempo.com/meta-to-produce-iris-ai-chip-tsmc-14gw-compute/</guid>
 <pubDate>Thu, 09 Jul 2026 12:18:30 +0000</pubDate>
 <category>Crypto</category>
-<description></description>
+<description>• Meta 預計於2026年9月量產自研AI晶片「Iris」，由台積電代工製造  
+• 公司計畫在2026年內部署7吉瓦運算基礎設施，並在2027年前將算力翻倍至14吉瓦  
+• Meta 將投入1,450億美元於AI基礎設施，計畫每6個月推出一款新AI處理器  
+• 為應對原物料短缺，Meta已與多家供應商簽署長期供應合約以降低成本</description>
 <source url="https://www.blocktempo.com/meta-to-produce-iris-ai-chip-tsmc-14gw-compute/">動區動趨 (BlockTempo)</source>
 </item>
 <item>
@@ -2790,7 +2883,10 @@
 <guid>https://decrypt.co/373113/eu-set-to-revise-mica-in-2027-to-cover-foreign-stablecoin-issuers</guid>
 <pubDate>Thu, 09 Jul 2026 12:18:24 +0000</pubDate>
 <category>Regulation</category>
-<description></description>
+<description>• 歐盟計劃在2027年重新修訂其加密資產市場（MiCA）法規，以監管非歐盟穩定幣發行者並擴大其範圍。
+• 此舉是因應美國總統特朗普推動以美元為支持的穩定幣，該類穩定幣佔市場的95%。
+• 歐洲委員會正在與利益相關者進行諮詢，截止日期為9月30日，然後決定是否正式重新開啟該法律。
+• 歐洲央行對於加強規則表達強烈支持，警告美元穩定幣可能影響銀行存款及歐元的貨幣主權。</description>
 <source url="https://decrypt.co/373113/eu-set-to-revise-mica-in-2027-to-cover-foreign-stablecoin-issuers">Decrypt</source>
 </item>
 <item>
@@ -2799,7 +2895,10 @@
 <guid>https://www.bloomberg.com/news/articles/2026-07-09/magnificent-seven-s-weakness-is-starting-to-become-a-problem-for-wall-street</guid>
 <pubDate>Thu, 09 Jul 2026 12:14:13 +0000</pubDate>
 <category>Finance</category>
-<description></description>
+<description>• 美國科技巨頭在2026年的股市反彈中缺席，這一情況引起市場關注  
+• 被稱為「壯麗七人組」的科技公司在近四年的牛市中表現突出  
+• 分析指出，這些公司的缺席可能會對華爾街造成影響  
+• 投資者開始擔心科技股的持續疲弱可能會影響整體市場表現</description>
 <source url="https://www.bloomberg.com/news/articles/2026-07-09/magnificent-seven-s-weakness-is-starting-to-become-a-problem-for-wall-street">Bloomberg Crypto</source>
 </item>
 <item>
@@ -2808,7 +2907,10 @@
 <guid>https://news.google.com/rss/articles/CBMitgFBVV95cUxPcTVCVnkxZk5MNExDemVjYXdMTzgwQUtUdTBKVWxvMU96TUdCRlFjaG56alB4OU9kLS1sa01XQm5YbUVJSVFxVDJQaXdycHVNVWFEWklYcEF6RFBDZmJZb1hMLVdZdEs4WW5zdmRWSEhhaDhlMDlpdzN5cFhLeE1yUXF6VXp6cV9ERWxHdEdjRlBoaDRHdG9CWHp2LXJFVjVuZjN5bzRaRFN6ZnNqTmJoTkhIcTlJQQ?oc=5</guid>
 <pubDate>Thu, 09 Jul 2026 12:11:49 +0000</pubDate>
 <category>Health</category>
-<description></description>
+<description>• 藥廠Moderna獲得歐盟合同，供應呼吸道合胞病毒（RSV）疫苗  
+• 合同內容包括疫苗的生產和分發  
+• 此舉旨在加強歐盟對抗RSV的能力  
+• Moderna表示將在未來幾個月內開始交付疫苗</description>
 <source url="https://news.google.com/rss/articles/CBMitgFBVV95cUxPcTVCVnkxZk5MNExDemVjYXdMTzgwQUtUdTBKVWxvMU96TUdCRlFjaG56alB4OU9kLS1sa01XQm5YbUVJSVFxVDJQaXdycHVNVWFEWklYcEF6RFBDZmJZb1hMLVdZdEs4WW5zdmRWSEhhaDhlMDlpdzN5cFhLeE1yUXF6VXp6cV9ERWxHdEdjRlBoaDRHdG9CWHp2LXJFVjVuZjN5bzRaRFN6ZnNqTmJoTkhIcTlJQQ?oc=5">Reuters (Google News)</source>
 </item>
 <item>
@@ -2817,7 +2919,10 @@
 <guid>https://www.blocktempo.com/spacex-moves-bitcoin-first-time-in-6-months-test-transaction/</guid>
 <pubDate>Thu, 09 Jul 2026 12:07:44 +0000</pubDate>
 <category>Bitcoin</category>
-<description></description>
+<description>• SpaceX 的比特幣錢包在沉寂半年後，於2026年7月7日進行了一筆價值88美元的轉帳，標誌著首次異動  
+• 該轉帳被視為典型的「測試交易」，可能為未來大規模資產轉移或拋售的前兆  
+• 根據Arkham的數據，SpaceX目前持有超過18,700枚比特幣，市值約11.6億美元  
+• SpaceX剛於一個月前完成首次公開發行（IPO），其比特幣庫存策略將面臨更嚴格的合規審查與調整</description>
 <source url="https://www.blocktempo.com/spacex-moves-bitcoin-first-time-in-6-months-test-transaction/">動區動趨 (BlockTempo)</source>
 </item>
 <item>
@@ -2826,7 +2931,10 @@
 <guid>https://www.aljazeera.com/sports/2026/7/9/fifa-world-cup-2026-what-happened-to-the-beautiful-game?traffic_source=rss</guid>
 <pubDate>Thu, 09 Jul 2026 12:05:10 +0000</pubDate>
 <category>World</category>
-<description></description>
+<description>• 2026年世界盃足球賽的變化反映了過去50年足球運動的演變，強調了美麗足球的缺失。  
+• 巴西在2014年世界盃半決賽以1-7慘敗於德國，顯示出戰術性強的球隊在足球中的主導地位。  
+• 1974年，足球的商業化開始，FIFA總統哈維蘭治的當選標誌著全球贊助協議的興起。  
+• 儘管足球成為大生意，仍有如1974年的荷蘭和1982年的巴西等隊伍展現了美麗的比賽風格。</description>
 <source url="https://www.aljazeera.com/sports/2026/7/9/fifa-world-cup-2026-what-happened-to-the-beautiful-game?traffic_source=rss">Al Jazeera</source>
 </item>
 <item>
