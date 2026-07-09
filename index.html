@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Microsoft’s patch Tuesdays are about to get bigger · UK politicians mull permanent crypto donation ban in wake of · Orba</title>
-  <meta name="description" content="UK politicians mull permanent crypto donation ban in wake of · Orban Call to Protest Hungary President Ouster Draws Small C · LIVE: France vs Morocco – FIFA World Cup 2026 quarterfinal — AI-powered wo" />
+  <title>Nvidia is a victim of the compute marketplace it created · Microsoft’s patch Tuesdays are about to get bigger · Squid Ar</title>
+  <meta name="description" content="Microsoft’s patch Tuesdays are about to get bigger · Squid Are Among the Most Intelligent Ocean Creatures. Climat · Poland Sentences Russian Exile to 7 Years in Prison for Spyi — AI-powered world news" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2190,6 +2190,7 @@ const GEO_KEYWORDS = [
     globe.add(markerGroup);
     globe.add(continentGroup);
     console.log(`Built ${markerPositions.length} markers from ${_articles.length} articles`);
+      updateAgentLayer(null);
     }
     // ── Country labels on zoom ──
     let countryLookup = [];
@@ -2440,8 +2441,8 @@ const GEO_KEYWORDS = [
       renderer.domElement.setAttribute('data-total-articles', String(NEWS_DATA?.articles?.length || 0));
     }
 
-    // Initial agent layer state after markers built
-    setTimeout(() => { try { updateAgentLayer(null); } catch(e) {} }, 500);
+    // Initial agent layer state — set after buildMarkers() runs
+    // (called at end of buildMarkers)
 
     function updatePointer(event) {
       const rect = renderer.domElement.getBoundingClientRect();
