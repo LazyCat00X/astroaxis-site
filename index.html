@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OpenAI Releases GPT-5.6 Sol: Here’s How It Stacks Up Against Other AI Models · Meta’s new AI chips will begin production</title>
-  <meta name="description" content="Meta’s new AI chips will begin production in September · Spain’s Joint Debt Proposal Questioned by EU’s Largest Econo · Franklin’s Dudley Sees AI Infrastructure Bull Case Through 2 — AI-powered world " />
+  <title>Google&#8217;s Nest Thermostat has hit its best price of the year · Oil Industry Retained Up to €200 Million of German F</title>
+  <meta name="description" content="Oil Industry Retained Up to €200 Million of German Fuel Subs · OpenAI Releases GPT-5.6 Sol: Here’s How It Stacks Up Against · Meta’s new AI chips will begin production in September — AI-powered world " />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2517,6 +2517,14 @@ const GEO_KEYWORDS = [
       const dotHits = raycaster.intersectObjects(window._historyDots);
       if (dotHits.length) {
         const dot = dotHits[0].object;
+        // Occlusion check: skip dots BEHIND the globe
+        const globeCenter = new THREE.Vector3(0, -0.8, 0);
+        const dotPos = new THREE.Vector3();
+        dotPos.copy(dot.position);
+        globe.localToWorld(dotPos);
+        const toDot = dotPos.sub(globeCenter).normalize();
+        const toCam = new THREE.Vector3().copy(camera.position).sub(globeCenter).normalize();
+        if (toDot.dot(toCam) < 0.5) return; // Dot is on back face, skip
         if (dot !== hoveredHistoryDot) {
           hoveredHistoryDot = dot;
           const ev = dot.userData._event;
