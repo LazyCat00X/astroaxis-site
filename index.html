@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Arms Race: House Committee Debates BIS Budget - Legis1 · Dronemaker Helsing Alters Staff Stock Plan Before Funding Ro</title>
-  <meta name="description" content="Dronemaker Helsing Alters Staff Stock Plan Before Funding Ro · Labour MPs Push to Make UK Crypto Donation Ban Permanent · Gaza Aid Worker on His Way to Watch World Cup Killed by Isra — AI-powered worl" />
+  <title>This is why paper checks refuse to die · The 1X Neo Robot Has Freaky Fast Fingers · Hyperliquid Policy Center, Phantom u</title>
+  <meta name="description" content="The 1X Neo Robot Has Freaky Fast Fingers · Hyperliquid Policy Center, Phantom urge CFTC to stop treatin · Pontypridd, Birkenhead and Isle of Bute among shortlist for  — AI-powered world news aggregato" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2510,15 +2510,39 @@ const GEO_KEYWORDS = [
 
     // ── History dot click → jump to timeline view ──
     // ── Globe click: markers or history dots ──
-    renderer.domElement.addEventListener('click', (e) => {
+    let pointerDownPos = null;
+    renderer.domElement.addEventListener('pointerdown', (e) => {
+      pointerDownPos = { x: e.clientX, y: e.clientY };
+    });
+    // Use pointerup instead of click — fires after pointerleave, but we track hoveredData via pointerdown snapshot
+    renderer.domElement.addEventListener('pointerup', (e) => {
+      // Check if this was a drag (not a click)
+      if (pointerDownPos) {
+        const dx = e.clientX - pointerDownPos.x;
+        const dy = e.clientY - pointerDownPos.y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        pointerDownPos = null;
+        if (dist > 8) return; // Was a drag, not a click
+      }
+      // Re-check what's under the pointer at release time
+      const rect = renderer.domElement.getBoundingClientRect();
+      const px = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+      const py = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+      raycaster.setFromCamera({x:px, y:py}, camera);
+      const hits = raycaster.intersectObject(instancedMarkers);
+      let hitData = null;
+      let hitIdx = -1;
+      if (hits.length && hits[0].instanceId !== undefined) {
+        hitIdx = hits[0].instanceId;
+        if (!invisibleFlags[hitIdx]) hitData = markerData[hitIdx];
+      }
       // If sticky picker is shown and clicking empty space, close it
-      if (stickyTooltip !== null) {
-        if (!hoveredData) {
-          stickyTooltip = null;
-          tooltip.classList.remove('visible');
-          pauseAutoRotate();
-          return;
-        }
+      if (stickyTooltip !== null && !hitData) {
+        stickyTooltip = null;
+        hoveredData = null;
+        tooltip.classList.remove('visible');
+        pauseAutoRotate();
+        return;
       }
       // Check history dot click first
       if (hoveredHistoryDot) {
@@ -2544,14 +2568,14 @@ const GEO_KEYWORDS = [
         return;
       }
       // Marker click
-      if (!hoveredData || !hoveredData.articles) return;
-      const articles = hoveredData.articles;
+      if (!hitData || !hitData.articles) return;
+      const articles = hitData.articles;
       if (articles.length === 1) {
         window.location.href = articles[0].url;
       } else {
-        stickyTooltip = hoveredIdx;
+        stickyTooltip = hitIdx;
         // Show sticky article picker in tooltip
-        let html = `<div class="tooltip-title" style="margin-bottom:8px">${articles.length} articles · ${escapeHtml(hoveredData.city)}</div>`;
+        let html = `<div class="tooltip-title" style="margin-bottom:8px">${articles.length} articles · ${escapeHtml(hitData.city)}</div>`;
         articles.forEach((a, i) => {
           const color = topicColors[a.topic] || topicColors.General;
           html += `<a href="${escapeHtml(a.url)}" target="_blank" rel="noopener" style="display:block;padding:6px 8px;margin:2px 0;border-radius:6px;background:rgba(255,255,255,0.04);color:#eef7ff;text-decoration:none;font-size:13px;line-height:1.35;border-left:3px solid ${color};transition:background .15s" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.04)'">${escapeHtml(a.title)}<br><span style="font-size:11px;color:rgba(136,146,182,0.7)">${escapeHtml(a.source)}</span></a>`;
@@ -2560,7 +2584,7 @@ const GEO_KEYWORDS = [
         tooltip.style.transition = 'none';
         // Position at current hover position
         const dummy = new THREE.Object3D();
-        instancedMarkers.getMatrixAt(hoveredIdx, dummy.matrix);
+        instancedMarkers.getMatrixAt(hitIdx, dummy.matrix);
         dummy.matrix.decompose(dummy.position, dummy.quaternion, dummy.scale);
         const world = dummy.position.clone().project(camera);
         const txScreen = (world.x * 0.5 + 0.5) * window.innerWidth;
