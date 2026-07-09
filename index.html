@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Block reaches $45M settlement with 46 states over Cash App fraud probe · Canada’s Well Health Preps C$150 Million High-Y</title>
-  <meta name="description" content="Canada’s Well Health Preps C$150 Million High-Yield Bond Sal · Factory Fire in China Kills 28 · Why this Wall Street veteran is betting on Avalanche — AI-powered world news aggregator with 3D globe, A" />
+  <title>AI Arms Race: House Committee Debates BIS Budget - Legis1 · Dronemaker Helsing Alters Staff Stock Plan Before Funding Ro</title>
+  <meta name="description" content="Dronemaker Helsing Alters Staff Stock Plan Before Funding Ro · Labour MPs Push to Make UK Crypto Donation Ban Permanent · Gaza Aid Worker on His Way to Watch World Cup Killed by Isra — AI-powered worl" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2509,7 +2509,18 @@ const GEO_KEYWORDS = [
     }, { passive: true });
 
     // ── History dot click → jump to timeline view ──
-    renderer.domElement.addEventListener('click', () => {
+    // ── Globe click: markers or history dots ──
+    renderer.domElement.addEventListener('click', (e) => {
+      // If sticky picker is shown and clicking empty space, close it
+      if (stickyTooltip !== null) {
+        if (!hoveredData) {
+          stickyTooltip = null;
+          tooltip.classList.remove('visible');
+          pauseAutoRotate();
+          return;
+        }
+      }
+      // Check history dot click first
       if (hoveredHistoryDot) {
         const ev = hoveredHistoryDot.userData._event;
         if (ev && ev.title) {
@@ -2530,28 +2541,9 @@ const GEO_KEYWORDS = [
             }
           }, 200);
         }
-      }
-    });
-
-    renderer.domElement.addEventListener('pointerleave', () => {
-      pointer.set(-10, -10);
-      hoveredHistoryDot = null;
-      if (hoveredData) {
-        hoveredIdx = -1; hoveredData = null; tooltip.classList.remove('visible');
-      }
-    }, { passive: true });
-
-    // ── Click cluster → open articles or show picker ──
-    renderer.domElement.addEventListener('click', () => {
-      // If sticky picker is shown and clicking empty space, close it
-      if (stickyTooltip !== null && (!hoveredData || hoveredData === null)) {
-        stickyTooltip = null;
-        hoveredIdx = -1;
-        hoveredData = null;
-        tooltip.classList.remove('visible');
-        pauseAutoRotate(); // restart idle timer
         return;
       }
+      // Marker click
       if (!hoveredData || !hoveredData.articles) return;
       const articles = hoveredData.articles;
       if (articles.length === 1) {
@@ -2583,6 +2575,14 @@ const GEO_KEYWORDS = [
         // Don't clear hoveredData so tooltip stays
       }
     });
+
+    renderer.domElement.addEventListener('pointerleave', () => {
+      pointer.set(-10, -10);
+      hoveredHistoryDot = null;
+      if (hoveredData) {
+        hoveredIdx = -1; hoveredData = null; tooltip.classList.remove('visible');
+      }
+    }, { passive: true });
 
     document.querySelectorAll('.filter-btn').forEach(button => {
       button.addEventListener('click', () => {
