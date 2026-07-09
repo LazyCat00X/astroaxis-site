@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nvidia is a victim of the compute marketplace it created · Microsoft’s patch Tuesdays are about to get bigger · Squid Ar</title>
-  <meta name="description" content="Microsoft’s patch Tuesdays are about to get bigger · Squid Are Among the Most Intelligent Ocean Creatures. Climat · Poland Sentences Russian Exile to 7 Years in Prison for Spyi — AI-powered world news" />
+  <title>OpenAI Releases GPT-5.6 Sol: Here’s How It Stacks Up Against Other AI Models · Meta’s new AI chips will begin production</title>
+  <meta name="description" content="Meta’s new AI chips will begin production in September · Spain’s Joint Debt Proposal Questioned by EU’s Largest Econo · Franklin’s Dudley Sees AI Infrastructure Bull Case Through 2 — AI-powered world " />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2190,7 +2190,6 @@ const GEO_KEYWORDS = [
     globe.add(markerGroup);
     globe.add(continentGroup);
     console.log(`Built ${markerPositions.length} markers from ${_articles.length} articles`);
-      updateAgentLayer(null);
     }
     // ── Country labels on zoom ──
     let countryLookup = [];
@@ -2441,8 +2440,8 @@ const GEO_KEYWORDS = [
       renderer.domElement.setAttribute('data-total-articles', String(NEWS_DATA?.articles?.length || 0));
     }
 
-    // Initial agent layer state — set after buildMarkers() runs
-    // (called at end of buildMarkers)
+    // Initial agent layer state — set after markers + invisibleFlags are ready
+    setTimeout(() => { try { updateAgentLayer(null); } catch(e) {} }, 1000);
 
     function updatePointer(event) {
       const rect = renderer.domElement.getBoundingClientRect();
@@ -3032,32 +3031,38 @@ const GEO_KEYWORDS = [
         hudToggle.textContent = hudPanel.classList.contains('collapsed') ? '▶' : '◀';
       });
     }
-
+    // ── Animate ──
+    const _dummy = new THREE.Object3D();
+    const _pos = new THREE.Vector3();
+    const _glowPos = new THREE.Vector3();
+    const _rayDir = new THREE.Vector3();
+    const _globeCenter = new THREE.Vector3(0, -0.8, 0);
+    const _toCam = new THREE.Vector3();
+    const _hitWorld = new THREE.Vector3();
+    const _local = new THREE.Vector3();
+    const _worldPos = new THREE.Vector3();
+    const _toSprite = new THREE.Vector3();
+    const _toCam2 = new THREE.Vector3();
+    let _frameCount = 0;
     function animate() {
-      // Guard: markers not built yet
       if (!instancedMarkers || !instancedGlows || markerCount === 0) {
         requestAnimationFrame(animate);
         return;
       }
-      // FPS throttle for low-end devices
+      // 30fps cap — smooth enough, halves GPU load
+      _frameCount++;
+      if (_frameCount % 2 !== 0) { requestAnimationFrame(animate); return; }
       if (FPS_THROTTLE > 1) {
         animate._fc = (animate._fc || 0) + 1;
         if (animate._fc % FPS_THROTTLE !== 0) { requestAnimationFrame(animate); return animate._fc; }
       }
       const elapsed = clock.getElapsedTime();
-
       const pulse = 1 + Math.sin(elapsed * 1.1) * 0.006;
       grid.scale.setScalar(pulse);
       continentGroup.scale.setScalar(1 + Math.sin(elapsed * 0.9 + 0.8) * 0.0035);
-
       _uTime.value = elapsed;
-
-      // Update instanced marker pulse via instance matrix
-      const dummy = new THREE.Object3D();
       let needsUpdate = false;
-      // Distance-based size cap: markers stay readable but never overwhelm the view
       const camDist = camera.position.distanceTo(controls.target);
-      // History rings: fade in as you zoom out
       const historyOpacity = Math.max(0, Math.min(1, (camDist - 10) / 10));
       if (historyGroup) {
         historyGroup.children.forEach(child => {
@@ -3065,55 +3070,41 @@ const GEO_KEYWORDS = [
         if (child.material && child.material.userData && child.material.userData._baseOpacity != null) {
           baseOp = child.material.userData._baseOpacity;
         }
-        // Twinkle: brightness change only, NO scale change
         if (child.material && child.material.userData && child.material.userData._tw) {
           const tw = child.material.userData._tw;
           const tph = child.material.userData._tph;
           const bOp = child.material.userData._baseOpacity || 0.5;
-          // Brightness varies between 50%-100% of base, never scales
           child.material.opacity = bOp * (0.5 + Math.abs(Math.sin(elapsed * tw + tph)) * 0.5) * historyOpacity;
         }
-        // LOD: distant view = only bright stars visible, close = all
         if (child.userData && child.userData._isStar && child.material) {
           const lum = child.userData._luminance || 0.5;
           const lodThreshold = camDist > 25 ? 0.4 : camDist > 18 ? 0.2 : 0;
-          if (lum < lodThreshold) {
-            child.visible = false;
-          } else {
-            child.visible = true;
-          }
+          child.visible = lum >= lodThreshold;
         }
-        // Fade dust at close range
         if (child.isPoints && child.material && child.material.userData && child.material.userData._baseOpacity !== undefined) {
           const dustFade = camDist < 12 ? 0.1 : camDist < 20 ? 0.3 : 1.0;
           child.material.opacity = (child.material.userData._baseOpacity || 0.25) * dustFade * historyOpacity;
         }
-        // Pulse: critical events pulse faster/bigger
         if (child.geometry && child.geometry.type === 'SphereGeometry') {
           const ev = child.userData?._event;
           const isCrit = ev && (ev.type === 'disaster' || ev.type === 'politics');
           const pulseSpeed = isCrit ? 3.5 : 2.0;
           const pulseAmp = isCrit ? 0.25 : 0.12;
-          const pulseScale = 1 + Math.sin(elapsed * pulseSpeed + child.position.x * 0.5) * pulseAmp;
-          child.scale.setScalar(pulseScale);
+          child.scale.setScalar(1 + Math.sin(elapsed * pulseSpeed + child.position.x * 0.5) * pulseAmp);
         }
-        // Cone edge + base ring breathing
         if (child.material === window._coneEdgeMat) {
           child.material.opacity = (0.25 + Math.sin(elapsed * 0.8) * 0.1) * historyOpacity;
         }
         if (child.material === window._baseRingMat) {
           child.material.opacity = (0.12 + Math.sin(elapsed * 0.8 + 0.5) * 0.06) * historyOpacity;
         }
-        // Axis tip diamond rotation
         if (child === window._axisTip) {
           child.rotation.y = elapsed * 0.5;
           child.rotation.x = elapsed * 0.3;
         }
-        // Axis core subtle flicker
         if (child.geometry && child.geometry.type === 'CylinderGeometry' && child.material.color && child.material.color.getHex() === 0x22d3ee) {
           child.material.opacity = (0.85 + Math.sin(elapsed * 1.2) * 0.08) * historyOpacity;
         }
-        // Lines: constellation + arm lines fade based on camDist
         if (child.material.userData && (child.material.userData._isArm || (child.userData && child.userData._type))) {
           var _lb = camDist > 15 ? 1.0 : camDist > 10 ? 0.4 : 0.05;
           if (child.material) child.material.opacity = baseOp * _lb * historyOpacity;
@@ -3121,8 +3112,6 @@ const GEO_KEYWORDS = [
         if (child.isSprite) child.material.opacity = (child.material.userData?._baseOpacity || 0.8) * historyOpacity;
         });
       }
-
-      // Fade out globe markers when zoomed far out (r>15)
       const markerVisibility = 1 - Math.max(0, Math.min(1, (camDist - 18) / 8));
       const distScale = Math.min(2.5, 12 / camDist) * markerVisibility;
       for (let i = 0; i < markerCount; i++) {
@@ -3135,25 +3124,22 @@ const GEO_KEYWORDS = [
         const op = isHovered ? 1 : 0.82 + Math.sin(elapsed * 2.2 + i) * 0.12;
         data.instanceOpacity += (op - data.instanceOpacity) * 0.18;
         const gop = isHovered ? 0.50 : 0.22 + Math.sin(elapsed * 1.8 + i) * 0.08;
-        // Cluster density: reduce glow in large clusters so additive blending doesn't bloom
         const clusterDensity = Math.min(1, 4 / (data._groupSize || 1));
         data.glowOpacity += (gop * clusterDensity - data.glowOpacity) * 0.18;
-
         if (Math.abs(s - prev) > 0.001) {
-          instancedMarkers.getMatrixAt(i, dummy.matrix);
-          const pos = new THREE.Vector3().setFromMatrixPosition(dummy.matrix);
-          dummy.position.copy(pos);
-          dummy.scale.set(s, s, s);
-          dummy.updateMatrix();
-          instancedMarkers.setMatrixAt(i, dummy.matrix);
-          // Also update glow instance with same distance-scaled size
-          instancedGlows.getMatrixAt(i, dummy.matrix);
-          const glowPos = new THREE.Vector3().setFromMatrixPosition(dummy.matrix);
-          dummy.position.copy(glowPos);
-          const glowS = s * 2.0; // glow is 2x marker size
-          dummy.scale.set(glowS, glowS, glowS);
-          dummy.updateMatrix();
-          instancedGlows.setMatrixAt(i, dummy.matrix);
+          instancedMarkers.getMatrixAt(i, _dummy.matrix);
+          _pos.setFromMatrixPosition(_dummy.matrix);
+          _dummy.position.copy(_pos);
+          _dummy.scale.set(s, s, s);
+          _dummy.updateMatrix();
+          instancedMarkers.setMatrixAt(i, _dummy.matrix);
+          instancedGlows.getMatrixAt(i, _dummy.matrix);
+          _glowPos.setFromMatrixPosition(_dummy.matrix);
+          _dummy.position.copy(_glowPos);
+          const glowS = s * 2.0;
+          _dummy.scale.set(glowS, glowS, glowS);
+          _dummy.updateMatrix();
+          instancedGlows.setMatrixAt(i, _dummy.matrix);
           needsUpdate = true;
         }
       }
@@ -3161,30 +3147,23 @@ const GEO_KEYWORDS = [
         instancedMarkers.instanceMatrix.needsUpdate = true;
         instancedGlows.instanceMatrix.needsUpdate = true;
       }
-
-      // ── Country label on zoom ──
-      // camDist already computed above for marker size cap
+      // Country label on zoom — reuse vectors
       if (camDist < ZOOM_THRESHOLD && countryLookup.length) {
-        // Ray from camera through screen center → globe surface
-        const centerNdc = new THREE.Vector3(0, 0, 0.5);
-        centerNdc.unproject(camera);
-        const rayDir = centerNdc.sub(camera.position).normalize();
-        const globeCenter = new THREE.Vector3(0, -0.8, 0);
-        const toCam = new THREE.Vector3().copy(camera.position).sub(globeCenter);
-        const a = rayDir.dot(rayDir);
-        const b = 2 * rayDir.dot(toCam);
-        const c = toCam.dot(toCam) - R * R;
+        _rayDir.set(0, 0, 0.5).unproject(camera).sub(camera.position).normalize();
+        _globeCenter.set(0, -0.8, 0);
+        _toCam.copy(camera.position).sub(_globeCenter);
+        const a = _rayDir.dot(_rayDir);
+        const b = 2 * _rayDir.dot(_toCam);
+        const c = _toCam.dot(_toCam) - R * R;
         const disc = b * b - 4 * a * c;
         if (disc >= 0) {
           const t = (-b - Math.sqrt(disc)) / (2 * a);
           if (t > 0) {
-            // World → globe local space (undo rotation + translation)
-            const hitWorld = new THREE.Vector3().copy(camera.position).add(rayDir.clone().multiplyScalar(t));
-            const local = hitWorld.sub(globeCenter).applyQuaternion(globe.quaternion.clone().invert());
-            const nx = local.x / R, ny = local.y / R, nz = local.z / R;
+            _hitWorld.copy(camera.position).addScaledVector(_rayDir, t);
+            _local.copy(_hitWorld).sub(_globeCenter).applyQuaternion(globe.quaternion.clone().invert());
+            const nx = _local.x / R, ny = _local.y / R, nz = _local.z / R;
             const lat = 90 - THREE.MathUtils.radToDeg(Math.acos(Math.min(1, Math.max(-1, ny))));
             let lon = THREE.MathUtils.radToDeg(Math.atan2(nz, -nx)) - 180;
-            // Normalize to -180..180 so findCountry matches country bboxes correctly
             while (lon < -180) lon += 360;
             while (lon > 180) lon -= 360;
             const country = findCountry(lon, lat);
@@ -3205,30 +3184,20 @@ const GEO_KEYWORDS = [
         countryLabelEl.classList.remove('visible');
         lastCountryLabel = null;
       }
-
-      // ── Country label sprite opacity & size by zoom ──
+      // Country label sprite opacity & size by zoom
       const labelGroup = window._countryLabels;
       if (labelGroup) {
-        const globeCenter = new THREE.Vector3(0, -0.8, 0);
+        _globeCenter.set(0, -0.8, 0);
         labelGroup.children.forEach(sprite => {
-          // Compute world position via globe's world matrix
-          const worldPos = new THREE.Vector3();
-          worldPos.copy(sprite.position);
-          globe.localToWorld(worldPos);
-          // Check if on front face
-          const toSprite = new THREE.Vector3().copy(worldPos).sub(globeCenter);
-          const toCam = new THREE.Vector3().copy(camera.position).sub(globeCenter);
-          const facing = toSprite.dot(toCam);
-          // Front face only
-          if (facing <= 0) { sprite.material.opacity = 0; return; }
-
-          // Project to screen to check visible size
-          worldPos.project(camera);
-          const screenX = (worldPos.x * 0.5 + 0.5) * window.innerWidth;
-          const screenY = (-worldPos.y * 0.5 + 0.5) * window.innerHeight;
-          // Skip if outside viewport (with margin)
-          if (screenX < -300 || screenX > window.innerWidth + 300 ||
-              screenY < -300 || screenY > window.innerHeight + 300) {
+          _worldPos.copy(sprite.position);
+          globe.localToWorld(_worldPos);
+          _toSprite.copy(_worldPos).sub(_globeCenter);
+          _toCam2.copy(camera.position).sub(_globeCenter);
+          if (_toSprite.dot(_toCam2) <= 0) { sprite.material.opacity = 0; return; }
+          _worldPos.project(camera);
+          const screenX = (_worldPos.x * 0.5 + 0.5) * window.innerWidth;
+          const screenY = (-_worldPos.y * 0.5 + 0.5) * window.innerHeight;
+          if (screenX < -300 || screenX > window.innerWidth + 300 || screenY < -300 || screenY > window.innerHeight + 300) {
             sprite.material.opacity = 0; return;
           }
 
