@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -3955,325 +3955,871 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/bitcoins-dwindling-exchange-reserves-dont-pack-the-same-bullish-punch-anymore.html</loc>
+    <lastmod>2026-07-09T08:43:01Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/bank-of-korea-stands-firm-on-bank-led-stablecoin-push-as-deposit-token-pilots-ad.html</loc>
+    <lastmod>2026-07-09T09:19:38Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/swift-launches-blockchain-ledger-with-17-bank-tokenized-deposit-pilot.html</loc>
+    <lastmod>2026-07-09T08:51:48Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/regulators-invited-binance-to-seek-new-licenses-after-mica-setback-co-ceo-says.html</loc>
+    <lastmod>2026-07-09T08:26:30Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/russias-largest-private-bank-alfa-bank-tests-crypto-trading.html</loc>
+    <lastmod>2026-07-09T08:22:36Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/russias-alfa-bank-plans-to-launch-digital-depository-to-offer-crypto-services-re.html</loc>
+    <lastmod>2026-07-09T09:10:50Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/sony-bank-gets-conditional-occ-approval-for-us-trust-bank-to-issue-dollar-backed.html</loc>
+    <lastmod>2026-07-09T07:50:55Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/a-20-year-olds-crypto-wallet-moved-123m-in-romance-scam-cash-interpol-says.html</loc>
+    <lastmod>2026-07-09T09:21:54Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/blackrocks-jewell-sees-ai-capex-stable-for-two-to-three-years.html</loc>
+    <lastmod>2026-07-09T08:52:28Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/hugo-boss-board-rejects-frasers-bid-as-not-reflecting-potential.html</loc>
+    <lastmod>2026-07-09T08:49:32Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/uks-capita-sinks-on-profit-hit-from-pension-contract-failures.html</loc>
+    <lastmod>2026-07-09T08:37:19Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/thailand-and-malaysia-reach-deal-to-end-seafood-trade-spat.html</loc>
+    <lastmod>2026-07-09T08:29:40Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/france-plans-2-billion-to-cut-fertilizer-imports-dependence.html</loc>
+    <lastmod>2026-07-09T08:10:52Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/sk-hynixs-stock-swings-challenge-arbitrage-bets-on-new-adrs.html</loc>
+    <lastmod>2026-07-09T08:08:04Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/indonesia-gets-first-russian-oil-shipment-after-deal-with-moscow.html</loc>
+    <lastmod>2026-07-09T08:05:48Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/market-warns-uks-plan-for-long-dated-debt-needs-a-rethink.html</loc>
+    <lastmod>2026-07-09T08:04:02Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/indonesian-tycoon-jerry-ng-is-said-to-mull-options-for-bfi-finance-bank-jago.html</loc>
+    <lastmod>2026-07-09T08:02:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/odd-lots-man-groups-massive-growth-in-token-spending-podcast.html</loc>
+    <lastmod>2026-07-09T08:00:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/german-exports-unexpectedly-increase-as-us-sales-rebound.html</loc>
+    <lastmod>2026-07-09T07:58:36Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/hong-kongs-mideast-pivot-and-chinas-ai-persona-woes.html</loc>
+    <lastmod>2026-07-09T06:43:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/federal-investigators-say-certain-doge-records-were-deleted.html</loc>
+    <lastmod>2026-07-09T09:30:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/the-best-food-dehydrators-for-self-sufficient-kitchens-2026.html</loc>
+    <lastmod>2026-07-09T09:30:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/why-do-some-soccer-players-cut-the-heels-off-their-cleats.html</loc>
+    <lastmod>2026-07-09T09:00:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/the-4-best-home-air-conditioners-to-buy-right-now.html</loc>
+    <lastmod>2026-07-09T08:49:47Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/is-an-air-conditioning-revolution-coming-to-europe.html</loc>
+    <lastmod>2026-07-09T08:44:57Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/how-the-future-of-hormuz-is-testing-omans-balancing-act.html</loc>
+    <lastmod>2026-07-09T09:27:05Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/swiss-see-good-chance-of-a-lasting-15-tariff-deal-with-us.html</loc>
+    <lastmod>2026-07-08T17:43:59Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/fujimori-legacy-shows-limits-of-trumps-push-against-china-in-peru.html</loc>
+    <lastmod>2026-07-09T09:00:20Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/narco-violence-fiscal-risk-await-trumps-new-colombian-ally.html</loc>
+    <lastmod>2026-07-09T09:00:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/ukraine-hits-two-more-tankers-in-russia-as-kyiv-expands-attacks.html</loc>
+    <lastmod>2026-07-09T07:31:34Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/%E9%AB%98%E7%9B%9B%E5%81%9A%E5%A4%9A%E4%B8%AD%E5%9C%8Bai4%E5%85%86%E5%B8%82%E5%80%BC%E5%85%A8%E7%90%83%E5%9F%BA%E9%87%91%E5%83%85%E9%85%8D12.html</loc>
+    <lastmod>2026-07-09T08:55:43Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/%E7%BE%8E%E5%9C%8B%E5%88%A9%E7%8E%87%E6%8E%A2%E8%A8%8E%E7%AD%89%E9%99%8D%E6%81%AF%E5%85%88%E5%8D%87%E6%81%AF%E5%B7%B4%E5%85%8B%E8%90%8A%E7%9C%8B%E8%81%AF%E6%BA%96%E6%9C%83%E5%A3%93%E5%88%B02027%E5%B9%B4%E4%B8%8D%E5%8B%95.html</loc>
+    <lastmod>2026-07-09T08:52:04Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/%E7%BE%8E%E9%8A%80%E8%BC%9D%E9%81%94%E4%BB%8A%E5%B9%B4%E5%8F%AA%E6%BC%B2-3-%E6%98%AF%E4%BC%B0%E5%80%BC%E9%8C%AF%E6%AE%BA%E6%9C%AC%E7%9B%8A%E6%AF%94%E5%B7%B2%E7%B6%93%E4%B8%8B%E6%B2%89%E5%88%B0-7-%E5%B9%B4%E4%BD%8E%E9%BB%9E.html</loc>
+    <lastmod>2026-07-09T08:49:15Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/%E5%A6%82%E4%BD%95%E4%BD%88%E5%B1%80-ai-%E6%A9%9F%E5%99%A8%E4%BA%BA%E7%94%A2%E6%A5%AD%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97.html</loc>
+    <lastmod>2026-07-09T08:47:10Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/robinhood-vs-xstocks%E8%82%A1%E7%A5%A8%E4%BB%A3%E5%B9%A3%E5%8C%96%E6%AC%8A%E5%88%A9%E9%82%8A%E7%95%8C%E6%89%8D%E6%98%AF%E9%97%9C%E9%8D%B5.html</loc>
+    <lastmod>2026-07-09T08:43:43Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/%E8%B2%9D%E6%A0%BC%E5%85%88%E7%94%9F%E5%88%86%E6%9E%90%E5%BE%9E%E7%9B%88%E8%99%A7%E8%A6%96%E8%A7%92%E7%82%BA%E4%BD%95%E6%88%91%E5%80%91%E8%B7%9D%E9%9B%A2%E7%86%8A%E5%BA%95%E4%B8%8D%E9%81%A0%E4%BA%86.html</loc>
+    <lastmod>2026-07-09T08:40:03Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/%E7%A7%91%E6%8A%80%E8%82%A1%E5%8F%B2%E4%B8%8A%E6%B3%A2%E5%8B%95%E6%9C%80%E5%A4%A7vxnvix-%E6%AF%94%E5%80%BC%E5%89%B5-23-%E5%B9%B4%E6%96%B0%E9%AB%98.html</loc>
+    <lastmod>2026-07-09T08:32:08Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/%E5%B0%8F%E9%BE%8D%E8%9D%A6-openclaw-%E6%88%90%E7%AB%8B%E9%9D%9E%E7%87%9F%E5%88%A9%E5%9F%BA%E9%87%91%E6%9C%83openainvidia%E5%BE%AE%E8%BB%9F%E9%A8%B0%E8%A8%8A%E9%83%BD%E6%90%B6%E8%91%97%E5%85%A5%E8%82%A1.html</loc>
+    <lastmod>2026-07-09T06:50:43Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/ai-%E5%90%83%E5%85%89%E8%A8%98%E6%86%B6%E9%AB%94100-%E7%BE%8E%E5%85%83%E4%BD%8E%E5%83%B9%E6%89%8B%E6%A9%9F%E6%81%90%E5%BE%9E%E5%B8%82%E5%A0%B4%E6%B6%88%E5%A4%B1.html</loc>
+    <lastmod>2026-07-09T06:40:44Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/%E7%B4%A2%E5%B0%BC%E9%8A%80%E8%A1%8C%E7%8D%B2-occ-%E6%9C%89%E6%A2%9D%E4%BB%B6%E6%89%B9%E5%87%86%E8%A8%AD%E7%AB%8B%E5%85%A8%E5%9C%8B%E4%BF%A1%E6%89%98%E9%8A%80%E8%A1%8C2027-%E5%B9%B4%E5%95%9F%E5%8B%95%E7%A9%A9%E5%AE%9A%E5%B9%A3%E6%A5%AD%E5%8B%99.html</loc>
+    <lastmod>2026-07-09T06:37:59Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/%E7%9E%84%E6%BA%96%E9%AB%98%E9%A0%BB%E4%BA%A4%E6%98%93-ai-%E4%BB%A3%E7%90%86bnb-chain-%E7%B1%8C%E5%82%99%E5%85%A8%E6%96%B0-layer1-%E5%85%AC%E9%8F%88%E5%8A%9B%E6%8B%9A%E6%98%8E%E5%B9%B4%E4%B8%8A%E7%B7%9A.html</loc>
+    <lastmod>2026-07-09T07:43:55Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/burnham-on-course-for-no-10-as-labour-nominations-open.html</loc>
+    <lastmod>2026-07-09T09:00:32Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/most-popular-baby-names-for-boys-and-girls-in-2025-revealed.html</loc>
+    <lastmod>2026-07-09T09:14:40Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/drug-mules-carrying-cannabis-from-thailand-face-tougher-penalties.html</loc>
+    <lastmod>2026-07-09T05:05:10Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/bonnie-tyler-the-gravel-voiced-star-who-sang-her-way-into-music-history.html</loc>
+    <lastmod>2026-07-09T09:05:12Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/how-rise-in-adhd-benefits-claims-is-adding-to-welfare-spending-challenge.html</loc>
+    <lastmod>2026-07-09T08:35:18Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/children-keep-dying-in-a-country-that-made-huge-progress-on-measles.html</loc>
+    <lastmod>2026-07-08T22:03:05Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/how-kane-and-haaland-compare-who-would-you-pick.html</loc>
+    <lastmod>2026-07-09T05:18:59Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/us-iran-launch-more-attacks-as-mediators-urge-warring-sides-to-uphold-mou.html</loc>
+    <lastmod>2026-07-09T09:04:50Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/hottest-june-on-record-in-western-europe-as-heatwaves-hit-continent.html</loc>
+    <lastmod>2026-07-09T09:00:46Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/inside-kings-college-londons-crackdown-on-pro-palestine-students.html</loc>
+    <lastmod>2026-07-09T09:00:33Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/shoot-me-just-let-my-son-pass-final-moments-of-palestinian-ahmad-zaid.html</loc>
+    <lastmod>2026-07-09T08:51:01Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/in-maps-and-charts-south-sudans-15-years-of-independence.html</loc>
+    <lastmod>2026-07-09T08:35:30Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/morocco-fans-paint-boston-red-but-remain-wary-of-france-at-fifa-world-cup.html</loc>
+    <lastmod>2026-07-09T08:32:29Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/fifa-world-cup-refereeing-chief-denies-bias-claims-in-argentina-egypt-game.html</loc>
+    <lastmod>2026-07-09T08:08:52Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/a-florida-airport-is-officially-renamed-for-trump-what-does-he-stand-to-gain.html</loc>
+    <lastmod>2026-07-09T09:01:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/new-aviation-mechanics-graduate-with-jobs-in-hand-thanks-to-a-labor-shortage.html</loc>
+    <lastmod>2026-07-09T09:00:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/campaign-staffers-keep-trying-to-bet-on-races-despite-push-to-curb-insider-tradi.html</loc>
+    <lastmod>2026-07-09T09:00:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/how-englands-class-divide-shaped-andy-burnham-the-uks-likely-next-prime-minister.html</loc>
+    <lastmod>2026-07-09T09:00:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/the-iran-war-has-pushed-some-countries-away-from-oil-and-toward-clean-energy.html</loc>
+    <lastmod>2026-07-09T09:00:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/morning-news-brief.html</loc>
+    <lastmod>2026-07-09T08:59:51Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/north-koreas-premier-heads-to-china-for-defence-treaty-anniversary-as-allies-ext.html</loc>
+    <lastmod>2026-07-09T09:22:28Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/us-iran-ceasefire-collapse-revives-risks-of-global-inflation.html</loc>
+    <lastmod>2026-07-09T09:03:15Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/venomous-snakes-escape-breeding-farms-in-southern-china-during-flooding.html</loc>
+    <lastmod>2026-07-09T08:08:20Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/neil-the-one-tonne-elephant-seal-causing-traffic-jams-in-rural-tasmania-has-retu.html</loc>
+    <lastmod>2026-07-09T09:19:37Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/at-nato-summit-trump-puts-on-a-show-while-europe-gets-down-to-business.html</loc>
+    <lastmod>2026-07-09T09:03:49Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/arrest-in-minnesota-pandemic-fraud-case-faces-extradition-hurdles-in-somalia.html</loc>
+    <lastmod>2026-07-09T09:02:32Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/sifting-through-venezuela-earthquakes-rubble-and-the-ashes-of-a-revolution.html</loc>
+    <lastmod>2026-07-09T09:21:30Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/trumps-loyal-defender-at-the-vatican.html</loc>
+    <lastmod>2026-07-09T09:00:52Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/former-dallas-cowboys-cheerleader-reece-weaver-buys-750000-home-in-alabama-after.html</loc>
+    <lastmod>2026-07-09T09:01:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/7-eleven-made-349-million-from-surge-in-gasoline-prices-in-the-us-last-quarter.html</loc>
+    <lastmod>2026-07-09T08:39:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/iran-to-bury-slain-supreme-leader-in-culmination-of-mass-funeral-reuters.html</loc>
+    <lastmod>2026-07-09T08:54:25Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/merz-says-germany-agreed-to-acquire-us-tomahawk-missiles-reuters.html</loc>
+    <lastmod>2026-07-09T07:45:43Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/uniqlo-operator-fast-retailings-q3-profit-jumps-457-raises-forecast-reuters.html</loc>
+    <lastmod>2026-07-09T06:42:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/how-a-palestinian-town-is-defending-itself-from-israeli-settler-attacks-reuters.html</loc>
+    <lastmod>2026-07-09T05:04:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/binance-maintains-commitment-to-eu-seeking-more-licences-in-asia-reuters.html</loc>
+    <lastmod>2026-07-09T06:20:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/asian-shares-wobble-as-oil-jumps-on-renewed-gulf-hostilities-reuters.html</loc>
+    <lastmod>2026-07-09T01:49:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/far-right-ex-mayor-of-rome-emerges-as-unlikely-prison-campaigner-reuters.html</loc>
+    <lastmod>2026-07-09T06:03:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/south-koreas-supreme-court-upholds-lower-court-ruling-in-ex-president-yoons-obst.html</loc>
+    <lastmod>2026-07-09T05:19:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/flooding-from-days-of-heavy-rain-in-southern-china-has-killed-39-people-ap-news.html</loc>
+    <lastmod>2026-07-09T07:08:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/why-world-cup-game-balls-always-make-their-way-back-onto-the-pitch-during-matche.html</loc>
+    <lastmod>2026-07-08T15:28:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/generative-artificial-intelligence-ai-in-teaching-market-report-2026-global-anal.html</loc>
+    <lastmod>2026-07-09T08:06:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/eu-action-plan-on-cybersecurity-and-artificial-intelligence-industrial-cyber.html</loc>
+    <lastmod>2026-07-09T09:29:58Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/the-epistemology-of-death-psychological-autopsy-artificial-intelligence-and-fore.html</loc>
+    <lastmod>2026-07-09T07:44:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/the-pentagons-ai-strategy-has-a-funding-problem-war-on-the-rocks.html</loc>
+    <lastmod>2026-07-09T07:48:04Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/pimco-may-eye-long-term-jgbs-if-yields-hit-3-japan-co-head-says-nikkei-asia.html</loc>
+    <lastmod>2026-07-08T20:22:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/1-in-5-usb-drives-recommended-on-amazon-have-complaints-about-faked-storage-nikk.html</loc>
+    <lastmod>2026-07-08T21:34:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/chipmakers-are-preparing-for-years-of-expansion-applied-materials-ceo-nikkei-asi.html</loc>
+    <lastmod>2026-07-09T05:05:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/nikkei-225-to-add-information-and-communications-sector-nikkei-asia.html</loc>
+    <lastmod>2026-07-09T08:58:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/china-automakers-shift-gears-to-exports-as-domestic-demand-weakens-nikkei-asia.html</loc>
+    <lastmod>2026-07-09T09:12:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/australia-and-india-seal-uranium-export-pact-boost-defense-ties-nikkei-asia.html</loc>
+    <lastmod>2026-07-09T08:41:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/ai/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/tech/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/entertainment/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/trading/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/general/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/politics/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/world/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/finance/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/crypto/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/regulation/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/science/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/bitcoin/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/defi/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/policy/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/health/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/macro/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/nft/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/sports/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/ethereum/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>  <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/openai-blog/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/the-verge/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/reuters-google-news/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/ap-news-google-news/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/ai-news-google/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/nikkei-asia/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/coindesk/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/cointelegraph/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/the-block/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/decrypt/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/bloomberg-crypto/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/techcrunch/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/arstechnica/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/bloomberg/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/unchained/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/%E5%8B%95%E5%8D%80%E5%8B%95%E8%B6%A8-blocktempo/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/%E5%8D%80%E5%A1%8A%E5%AE%A2-blockcast/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/bbc-world/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/al-jazeera/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/scmp/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/the-guardian/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/new-york-times/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/time/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/financial-times/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/marketwatch/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/google-ai-blog/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/hugging-face-blog/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/mit-tech-review-ai/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/cnbc/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/ft-tech/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/wired/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/bankless/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/%E7%A7%91%E6%8A%80%E6%96%B0%E5%A0%B1/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/npr/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/arstechnica-ai/</loc>
-    <lastmod>2026-07-09T07:43:51Z</lastmod>
+    <lastmod>2026-07-09T09:35:04Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url></urlset>
