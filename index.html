@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Federal Investigators Say Certain DOGE Records Were Deleted · The Best Food Dehydrators for Self-Sufficient Kitchens (20</title>
-  <meta name="description" content="The Best Food Dehydrators for Self-Sufficient Kitchens (2026 · EU Action Plan on Cybersecurity and Artificial Intelligence  · How the Future of Hormuz Is Testing Oman’s Balancing Act — AI-powered worl" />
+  <title>Strategies and design for increasing AI sustainability - Nature · Final Stage of Ayatollah Ali Khamenei’s Weeklong Funer</title>
+  <meta name="description" content="Final Stage of Ayatollah Ali Khamenei’s Weeklong Funeral Is  · Stranded Oil Ships Clear Out of Gulf as Owners Get Wary Agai · Fuel Prices Show Inflation Is Still a Risk for Markets — AI-powered world " />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -696,11 +696,19 @@
       if(typeof timelineData === 'undefined' || !Object.keys(timelineData).length) return;
       const t = I18N[currentLang] || I18N['zh-HK'];
       const types = TL_TYPE[currentLang] || TL_TYPE['en'];
+      const sq = window._searchQuery;
       let html = '<div class="tl-container"><div class="tl-line"></div>';
       html += '<h2 style="font-size:24px;font-weight:700;margin-bottom:24px;padding-left:26px;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">' + t['tl.title'] + '</h2>';
+      let totalEvents = 0;
       Object.keys(timelineData).sort().reverse().forEach(year => {
+        var yearEvents = timelineData[year].filter(function(ev) {
+          if (!sq) return true;
+          return (ev.title||'').toLowerCase().includes(sq) || (ev.desc||'').toLowerCase().includes(sq) || (ev.type||'').toLowerCase().includes(sq);
+        });
+        if (!yearEvents.length) return;
+        totalEvents += yearEvents.length;
         html += '<div class="tl-year-header"><div class="tl-year-dot"></div><h2>' + year + '</h2></div>';
-        timelineData[year].forEach((ev, idx) => {
+        yearEvents.forEach((ev, idx) => {
           var title = (ev.title || '').slice(0, 80);
           if (ev.title && ev.title.length > 80) title += '...';
           var desc = ev.desc || '';
@@ -710,15 +718,26 @@
           var eventId = 'tl-event-' + year + '-' + idx;
           html += '<div class="tl-event" id="' + eventId + '" onclick="toggleTimelineEvent(\'' + eventId + '\')" style="cursor:pointer"><div class="tl-event-dot tl-dot-' + evType + '"></div>';
           html += '<div class="tl-event-body"><div class="tl-date">' + (ev.date || year) + '</div>';
-          html += '<h3>' + title + '</h3>';
-          if (desc) html += '<p class="tl-desc-preview">' + desc + '</p>';
+          html += '<h3>' + (sq ? highlightMatch(title, sq) : title) + '</h3>';
+          if (desc) html += '<p class="tl-desc-preview">' + (sq ? highlightMatch(desc, sq) : desc) + '</p>';
           if (ev.desc && ev.desc.length > 150) html += '<p class="tl-desc-full" style="display:none">' + ev.desc + '</p>';
           html += '<span class="tl-badge type-' + evType + '">' + (types[evType] || evType) + '</span>';
           html += '</div></div>';
         });
       });
       html += '</div>';
+      if (sq && totalEvents === 0) {
+        html = '<h2 style="font-size:24px;font-weight:700;margin-bottom:20px;background:linear-gradient(135deg,#67e8f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">' + t['tl.title'] + '</h2><p style="color:rgba(136,136,160,0.7);text-align:center;padding:40px">No matching timeline events.</p>';
+      } else if (sq) {
+        html += '<p style="text-align:center;color:rgba(136,136,160,0.5);font-size:13px;margin:16px 0 40px">' + totalEvents + ' matching event' + (totalEvents !== 1 ? 's' : '') + '</p>';
+      }
       document.getElementById('timeline-content').innerHTML = html;
+    }
+
+    function highlightMatch(text, query) {
+      if (!query) return text;
+      var re = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      return text.replace(re, '<mark style="background:rgba(34,211,238,0.2);color:#67e8f9;border-radius:2px;padding:0 2px">$1</mark>');
     }
 
     function toggleTimelineEvent(eventId) {
@@ -905,7 +924,7 @@
         html += `<article class="feed-card" role="article" aria-label="${a.title.replace(/"/g,'&quot;')}" style="--thumb-bg:${thumbBg}">
                   <div class="card-thumb placeholder" aria-hidden="true" style="background:${thumbBg}">${topicIcon(a.topic||'General')}</div>
                   <div class="card-top">
-                    <a class="card-topic" href="/topic/${slugify(a.topic||'General')}/" style="color:#${a.topic === 'AI' ? '3b82f6' : a.topic === 'Bitcoin' ? 'f97316' : a.topic === 'Regulation' ? 'ef4444' : a.topic === 'DeFi' ? '22c55e' : a.topic === 'Crypto' ? '818cf8' : a.topic === 'Finance' ? '10b981' : a.topic === 'Tech' ? '6366f1' : a.topic === 'World' ? '0ea5e9' : a.topic === 'Politics' ? 'ec4899' : a.topic === 'Science' ? '84cc16' : a.topic === 'Health' ? 'f97316' : '818cf8'};text-decoration:none">${a.topic || 'General'}</a>
+                    <a class="card-topic" href="/topic/${slugify(a.topic||'General')}/" onclick="event.preventDefault(); window._searchQuery=null; activeFilters.topic='${(a.topic||'General').replace(/'/g,"\\'")}'; document.querySelector('[data-view=\"globe\"]')?.click(); document.querySelectorAll('.filter-btn[data-filter-type=\"topic\"]').forEach(function(b){ b.classList.toggle('active', b.dataset.filterValue === '${(a.topic||'General').replace(/'/g,"\\'")}'); }); return false" style="color:#${a.topic === 'AI' ? '3b82f6' : a.topic === 'Bitcoin' ? 'f97316' : a.topic === 'Regulation' ? 'ef4444' : a.topic === 'DeFi' ? '22c55e' : a.topic === 'Crypto' ? '818cf8' : a.topic === 'Finance' ? '10b981' : a.topic === 'Tech' ? '6366f1' : a.topic === 'World' ? '0ea5e9' : a.topic === 'Politics' ? 'ec4899' : a.topic === 'Science' ? '84cc16' : a.topic === 'Health' ? 'f97316' : '818cf8'};text-decoration:none">${a.topic || 'General'}</a>
                     ${trustBadge(a.source)}
                   </div>
                   <h3><a href="${a.url}" target="_blank" rel="noopener">${a.title}</a></h3>
@@ -1201,10 +1220,17 @@
         window._searchQuery = val || null;
         searchInput.classList.remove('has-match', 'no-match');
 
-        // Trigger Feed re-render when in feed view
-        const feedView = document.getElementById('feed-view');
-        if (feedView && feedView.classList.contains('active')) {
-          renderFeed();
+        // Re-render ALL views with search
+        const activeView = document.querySelector('.view-panel.active');
+        renderFeed();
+        renderTimeline();
+        if (activeView && activeView.id !== 'feed-view' && activeView.id !== 'timeline-view') {
+          // Trigger globe search filtering if visible
+        }
+        if (activeView) {
+          const orig = activeView.style.display;
+          activeView.style.display = 'block';
+          activeView.style.display = orig;
         }
 
         // Visual feedback
@@ -2598,6 +2624,7 @@ const GEO_KEYWORDS = [
         }
         applyFilter();
         renderFeed();
+        renderTimeline();
         // Screen reader announcement
         const btnText = button.textContent.trim();
         a11yAnnounce('Filter: ' + btnText);
