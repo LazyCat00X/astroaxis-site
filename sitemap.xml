@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/</loc>
-    <lastmod>2026-07-09T05:17:34Z</lastmod>
+    <lastmod>2026-07-09T05:22:39Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -21,6 +21,12 @@
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/articles/humans-just-a-ghost-in-the-machine-as-artificial-intelligence-redefines-good-job.html</loc>
     <lastmod>2026-07-09T05:00:39Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/hoka-coupon-codes-30-off-in-july-2026.html</loc>
+    <lastmod>2026-07-09T05:00:00Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -44,12 +50,6 @@
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/articles/corsair-discount-code-up-to-50-off-for-july-2026.html</loc>
-    <lastmod>2026-07-09T05:00:00Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lazycat00x.github.io/astroaxis-site/articles/hoka-coupon-codes-30-off-in-july-2026.html</loc>
     <lastmod>2026-07-09T05:00:00Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -141,12 +141,6 @@
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/articles/double-cross-first-class-why-indias-modi-wins-so-many-foreign-awards.html</loc>
     <lastmod>2026-07-09T04:30:51Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lazycat00x.github.io/astroaxis-site/articles/asking-ai-for-health-advice-5-tips-for-safer-searches-cincinnati-enquirer.html</loc>
-    <lastmod>2026-07-09T04:30:00Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1197,6 +1191,12 @@
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/articles/oil-prices-rise-and-stocks-drop-worldwide-after-trump-says-ceasefire-with-iran-i.html</loc>
     <lastmod>2026-07-08T20:47:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lazycat00x.github.io/astroaxis-site/articles/this-chart-shows-stamp-prices-over-the-years-as-usps-hikes-postage-again-this-we.html</loc>
+    <lastmod>2026-07-08T20:35:00Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3008,54 +3008,54 @@
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/s/</loc>
-    <lastmod>2026-07-09T05:17:34Z</lastmod>
+    <lastmod>2026-07-09T05:22:39Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/w/</loc>
-    <lastmod>2026-07-09T05:17:34Z</lastmod>
+    <lastmod>2026-07-09T05:22:39Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/topic/ss/</loc>
-    <lastmod>2026-07-09T05:17:34Z</lastmod>
+    <lastmod>2026-07-09T05:22:39Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>  <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/s/</loc>
-    <lastmod>2026-07-09T05:17:34Z</lastmod>
+    <lastmod>2026-07-09T05:22:39Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/ws/</loc>
-    <lastmod>2026-07-09T05:17:34Z</lastmod>
+    <lastmod>2026-07-09T05:22:39Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/w/</loc>
-    <lastmod>2026-07-09T05:17:34Z</lastmod>
+    <lastmod>2026-07-09T05:22:39Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/wsws/</loc>
-    <lastmod>2026-07-09T05:17:34Z</lastmod>
+    <lastmod>2026-07-09T05:22:39Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/sws/</loc>
-    <lastmod>2026-07-09T05:17:34Z</lastmod>
+    <lastmod>2026-07-09T05:22:39Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lazycat00x.github.io/astroaxis-site/source/ss/</loc>
-    <lastmod>2026-07-09T05:17:34Z</lastmod>
+    <lastmod>2026-07-09T05:22:39Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url></urlset>
