@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>This is why paper checks refuse to die · The 1X Neo Robot Has Freaky Fast Fingers · Hyperliquid Policy Center, Phantom u</title>
-  <meta name="description" content="The 1X Neo Robot Has Freaky Fast Fingers · Hyperliquid Policy Center, Phantom urge CFTC to stop treatin · Pontypridd, Birkenhead and Isle of Bute among shortlist for  — AI-powered world news aggregato" />
+  <title>Can Bitcoin hold $62K ahead of Friday’s $1.4 billion options expiry? · Wall Street Finds a New Way to Help Investors Avo</title>
+  <meta name="description" content="Wall Street Finds a New Way to Help Investors Avoid Elon Mus · Artificial Intelligence in the Detection, Characterization,  · Mortgage rates jump as tensions with Iran spook bond investo — AI-powered " />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2406,6 +2406,38 @@ const GEO_KEYWORDS = [
 
     let hoverCooldown = null;
 
+    // ── AI agent visibility layer ──
+    // Hidden div that syncs raycaster state so AI agents can read marker data
+    const agentLayer = document.createElement('div');
+    agentLayer.id = 'globe-agent-state';
+    agentLayer.style.cssText = 'position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none';
+    renderer.domElement.parentNode?.appendChild(agentLayer);
+    function updateAgentLayer(data, idx) {
+      if (data && data.articles) {
+        const urls = data.articles.map(a => a.url).join(',');
+        agentLayer.setAttribute('data-hovered', 'true');
+        agentLayer.setAttribute('data-marker-index', String(idx || ''));
+        agentLayer.setAttribute('data-article-count', String(data.articles.length));
+        agentLayer.setAttribute('data-topic', data.topic || '');
+        agentLayer.setAttribute('data-city', data.city || '');
+        agentLayer.setAttribute('data-article-urls', urls);
+        agentLayer.setAttribute('data-article-titles', data.articles.map(a => (a.title||'').slice(0,60)).join('|'));
+        agentLayer.textContent = data.articles.length + ' articles: ' + data.articles.map(a => a.title).join('; ');
+      } else {
+        agentLayer.removeAttribute('data-hovered');
+        agentLayer.removeAttribute('data-marker-index');
+        agentLayer.removeAttribute('data-article-count');
+        agentLayer.removeAttribute('data-topic');
+        agentLayer.removeAttribute('data-city');
+        agentLayer.removeAttribute('data-article-urls');
+        agentLayer.removeAttribute('data-article-titles');
+        agentLayer.textContent = '';
+      }
+      const visible = markerData.filter((d,i) => !invisibleFlags[i]).length;
+      renderer.domElement.setAttribute('data-visible-markers', String(visible));
+      renderer.domElement.setAttribute('data-total-articles', String(NEWS_DATA?.articles?.length || 0));
+    }
+
     function updatePointer(event) {
       const rect = renderer.domElement.getBoundingClientRect();
       pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
@@ -2423,6 +2455,7 @@ const GEO_KEYWORDS = [
         if (data !== hoveredData) {
           hoveredIdx = idx;
           hoveredData = data;
+          updateAgentLayer(data, idx);
           // Pause auto-rotate while hovering a marker
           if (controls.autoRotate) controls.autoRotate = false;
           const cnt = data.articles.length;
@@ -2466,6 +2499,7 @@ const GEO_KEYWORDS = [
         hoveredIdx = -1;
         hoveredData = null;
         tooltip.classList.remove('visible');
+        updateAgentLayer(null);
       }
     }, { passive: true });
 
@@ -2574,6 +2608,7 @@ const GEO_KEYWORDS = [
         window.location.href = articles[0].url;
       } else {
         stickyTooltip = hitIdx;
+        updateAgentLayer(hitData, hitIdx);
         // Show sticky article picker in tooltip
         let html = `<div class="tooltip-title" style="margin-bottom:8px">${articles.length} articles · ${escapeHtml(hitData.city)}</div>`;
         articles.forEach((a, i) => {
@@ -2605,6 +2640,7 @@ const GEO_KEYWORDS = [
       hoveredHistoryDot = null;
       if (hoveredData) {
         hoveredIdx = -1; hoveredData = null; tooltip.classList.remove('visible');
+        updateAgentLayer(null);
       }
     }, { passive: true });
 
