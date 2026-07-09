@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Can Bitcoin hold $62K ahead of Friday’s $1.4 billion options expiry? · Wall Street Finds a New Way to Help Investors Avo</title>
-  <meta name="description" content="Wall Street Finds a New Way to Help Investors Avoid Elon Mus · Artificial Intelligence in the Detection, Characterization,  · Mortgage rates jump as tensions with Iran spook bond investo — AI-powered " />
+  <title>UK politicians mull permanent crypto donation ban in wake of Nigel Farage scandal · Orban Call to Protest Hungary Presid</title>
+  <meta name="description" content="Orban Call to Protest Hungary President Ouster Draws Small C · LIVE: France vs Morocco – FIFA World Cup 2026 quarterfinal · Can Bitcoin hold $62K ahead of Friday’s $1.4 billion options — AI-powered wo" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2437,6 +2437,9 @@ const GEO_KEYWORDS = [
       renderer.domElement.setAttribute('data-visible-markers', String(visible));
       renderer.domElement.setAttribute('data-total-articles', String(NEWS_DATA?.articles?.length || 0));
     }
+
+    // Initial agent layer state after markers built
+    setTimeout(() => { try { updateAgentLayer(null); } catch(e) {} }, 500);
 
     function updatePointer(event) {
       const rect = renderer.domElement.getBoundingClientRect();
