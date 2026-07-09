@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UK politicians mull permanent crypto donation ban in wake of Nigel Farage scandal · Orban Call to Protest Hungary Presid</title>
-  <meta name="description" content="Orban Call to Protest Hungary President Ouster Draws Small C · LIVE: France vs Morocco – FIFA World Cup 2026 quarterfinal · Can Bitcoin hold $62K ahead of Friday’s $1.4 billion options — AI-powered wo" />
+  <title>Microsoft’s patch Tuesdays are about to get bigger · UK politicians mull permanent crypto donation ban in wake of · Orba</title>
+  <meta name="description" content="UK politicians mull permanent crypto donation ban in wake of · Orban Call to Protest Hungary President Ouster Draws Small C · LIVE: France vs Morocco – FIFA World Cup 2026 quarterfinal — AI-powered wo" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2412,6 +2412,8 @@ const GEO_KEYWORDS = [
     agentLayer.id = 'globe-agent-state';
     agentLayer.style.cssText = 'position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none';
     renderer.domElement.parentNode?.appendChild(agentLayer);
+    // Also ensure it's in the DOM — body fallback for timing issues
+    if (!agentLayer.parentNode) document.body.appendChild(agentLayer);
     function updateAgentLayer(data, idx) {
       if (data && data.articles) {
         const urls = data.articles.map(a => a.url).join(',');

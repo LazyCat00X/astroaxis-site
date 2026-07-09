@@ -5,13 +5,25 @@
 <link>https://lazycat00x.github.io/astroaxis-site</link>
 <description>AI-powered news aggregator</description>
 <language>en</language>
-<lastBuildDate>Thu, 09 Jul 2026 16:55:59 +0000</lastBuildDate>
+<lastBuildDate>Thu, 09 Jul 2026 17:03:42 +0000</lastBuildDate>
 <generator>AstroAxis</generator>
 <image>
 <url>https://lazycat00x.github.io/astroaxis-site/og-image.png</url>
 <title>AstroAxis</title>
 <link>https://lazycat00x.github.io/astroaxis-site</link>
 </image>
+<item>
+<title>Microsoft’s patch Tuesdays are about to get bigger</title>
+<link>https://www.theverge.com/tech/963307/microsoft-patch-tuesday-ai-security-updates</link>
+<guid>https://www.theverge.com/tech/963307/microsoft-patch-tuesday-ai-security-updates</guid>
+<pubDate>Thu, 09 Jul 2026 17:00:00 +0000</pubDate>
+<category>Tech</category>
+<description>• 微軟宣布將在Windows 11的安全更新中更多地使用人工智能，以便更早識別潛在問題，從而增加每次安全發布的更新數量。  
+• 隨著黑客和安全研究人員利用人工智能快速發現和利用安全漏洞，微軟將更新其安全開發生命周期，以考慮潛在的AI攻擊技術。  
+• 微軟計劃投資新技術，包括專為Windows設計的工具，以利用人工智能生成和驗證安全修復，同時保持人類參與代碼審查。  
+• 微軟強調，儘管人工智能將在識別和解決安全問題中發揮更大作用，但開發人員仍將驗證這些發現並根據風險做出更新決策。</description>
+<source url="https://www.theverge.com/tech/963307/microsoft-patch-tuesday-ai-security-updates">The Verge</source>
+</item>
 <item>
 <title>UK politicians mull permanent crypto donation ban in wake of Nigel Farage scandal</title>
 <link>https://cointelegraph.com/news/uk-politicians-crypto-donation-ban-nigel-farage-scandal?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound</link>
@@ -83,6 +95,18 @@
 • 新ETF的推出顯示出市場對於多元化投資策略的需求  
 • 此類ETF的具體細節及推出時間尚未公佈</description>
 <source url="https://www.bloomberg.com/news/articles/2026-07-09/wall-street-finds-a-new-way-to-help-investors-avoid-elon-musk">Bloomberg Crypto</source>
+</item>
+<item>
+<title>Artificial Intelligence in the Detection, Characterization, and Management of Renal Masses: A Narrative Review - Cureus</title>
+<link>https://news.google.com/rss/articles/CBMi3wFBVV95cUxPUFA2bXFfbVlpeV9GS0o4LVh4bWxEMmxEUW9idExwZGdpRF9IejJ1SHYwNXg1emZIbjFfV01wczVfVmRUN2VKbjFGMVFSei1ib0I3Qng3NHpVSVVqYmFFbXZxVlVRTlBzNmxXMHgtRzBTY1oyUEVlYlJLRmtRVTM2dTVBM3FBVU4waGhCbG1WQ2xDSmI4TTBBZGtrczlJd1ZnRWVSUmJoY19VQkRtZVRhTndmMzRYZFZVMFF4c0lyeG5UQWZTU0wtOWRzVVFzNUtrYlphTEZES3FqbmZmMmFB?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMi3wFBVV95cUxPUFA2bXFfbVlpeV9GS0o4LVh4bWxEMmxEUW9idExwZGdpRF9IejJ1SHYwNXg1emZIbjFfV01wczVfVmRUN2VKbjFGMVFSei1ib0I3Qng3NHpVSVVqYmFFbXZxVlVRTlBzNmxXMHgtRzBTY1oyUEVlYlJLRmtRVTM2dTVBM3FBVU4waGhCbG1WQ2xDSmI4TTBBZGtrczlJd1ZnRWVSUmJoY19VQkRtZVRhTndmMzRYZFZVMFF4c0lyeG5UQWZTU0wtOWRzVVFzNUtrYlphTEZES3FqbmZmMmFB?oc=5</guid>
+<pubDate>Thu, 09 Jul 2026 16:31:01 +0000</pubDate>
+<category>AI</category>
+<description>• 一項敘述性回顧探討人工智能在腎腫塊的檢測、特徵化及管理中的應用  
+• 研究指出，人工智能技術可提升腎腫塊的診斷準確性及治療效率  
+• 文章分析了現有的人工智能工具及其在臨床實踐中的潛在影響  
+• 研究強調進一步的實證研究對於確定這些技術的有效性及安全性至關重要</description>
+<source url="https://news.google.com/rss/articles/CBMi3wFBVV95cUxPUFA2bXFfbVlpeV9GS0o4LVh4bWxEMmxEUW9idExwZGdpRF9IejJ1SHYwNXg1emZIbjFfV01wczVfVmRUN2VKbjFGMVFSei1ib0I3Qng3NHpVSVVqYmFFbXZxVlVRTlBzNmxXMHgtRzBTY1oyUEVlYlJLRmtRVTM2dTVBM3FBVU4waGhCbG1WQ2xDSmI4TTBBZGtrczlJd1ZnRWVSUmJoY19VQkRtZVRhTndmMzRYZFZVMFF4c0lyeG5UQWZTU0wtOWRzVVFzNUtrYlphTEZES3FqbmZmMmFB?oc=5">AI News (Google)</source>
 </item>
 <item>
 <title>Mortgage rates jump as tensions with Iran spook bond investors</title>
@@ -491,6 +515,18 @@
 • 主要國家的中央銀行正在收緊貨幣政策，以應對通脹問題  
 • 分析師指出，金融市場的不穩定性和高債務水平可能加劇未來的經濟危機</description>
 <source url="https://www.marketwatch.com/story/the-dot-com-crash-was-a-5-trillion-blip-why-the-next-financial-crisis-could-hit-4-times-harder-29f4aa57?mod=mw_rss_topstories">MarketWatch</source>
+</item>
+<item>
+<title>AI Investment Is Shifting as Inference, Enterprise Adoption Accelerate - Goldman Sachs</title>
+<link>https://news.google.com/rss/articles/CBMitwFBVV95cUxPdjJxRzNBVlFTeFpSV2ZtZEE3Y2xpMW45MWtnSnZTNFkyOEFDMnpERkFuZEk0Sl9zVXE0Ni1yRkI1WmJQcXJObGFEdHZTRmV4dmdaOWdic05NaVlyNjBwMi0xcjllVzZIOVI4NlllWXBrWnVIUVFxUXQxcHFQYjZ5Y3pFUDNwTUdIQ29wNkJuUklMSS1BS19RakhPdmxGbzZESW1WOF9hc0hCZ0JkS29mSi1QcFVZdjg?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMitwFBVV95cUxPdjJxRzNBVlFTeFpSV2ZtZEE3Y2xpMW45MWtnSnZTNFkyOEFDMnpERkFuZEk0Sl9zVXE0Ni1yRkI1WmJQcXJObGFEdHZTRmV4dmdaOWdic05NaVlyNjBwMi0xcjllVzZIOVI4NlllWXBrWnVIUVFxUXQxcHFQYjZ5Y3pFUDNwTUdIQ29wNkJuUklMSS1BS19RakhPdmxGbzZESW1WOF9hc0hCZ0JkS29mSi1QcFVZdjg?oc=5</guid>
+<pubDate>Thu, 09 Jul 2026 15:43:08 +0000</pubDate>
+<category>Ai</category>
+<description>• 高盛報告指出，人工智能投資正在轉變，推斷和企業採用加速增長  
+• 企業對人工智能的需求增加，促使資金流向推斷技術和相關基礎設施  
+• 報告強調，企業在人工智能領域的投資將持續增長，以提高效率和競爭力  
+• 高盛預測，未來幾年內，人工智能市場將出現顯著的資金流入和技術創新</description>
+<source url="https://news.google.com/rss/articles/CBMitwFBVV95cUxPdjJxRzNBVlFTeFpSV2ZtZEE3Y2xpMW45MWtnSnZTNFkyOEFDMnpERkFuZEk0Sl9zVXE0Ni1yRkI1WmJQcXJObGFEdHZTRmV4dmdaOWdic05NaVlyNjBwMi0xcjllVzZIOVI4NlllWXBrWnVIUVFxUXQxcHFQYjZ5Y3pFUDNwTUdIQ29wNkJuUklMSS1BS19RakhPdmxGbzZESW1WOF9hc0hCZ0JkS29mSi1QcFVZdjg?oc=5">AI News (Google)</source>
 </item>
 <item>
 <title>Chemical weapons watchdog restores Syria’s voting rights, citing progress</title>
@@ -1242,7 +1278,10 @@
 <guid>https://www.bloomberg.com/news/articles/2026-07-09/qiagen-draws-early-takeover-interest-from-eqt-advent</guid>
 <pubDate>Thu, 09 Jul 2026 14:12:52 +0000</pubDate>
 <category>Finance</category>
-<description></description>
+<description>• 歐洲分子檢測公司Qiagen NV正吸引EQT AB和Advent等公司的早期收購興趣  
+• 據知情人士透露，這些公司對Qiagen的收購可能性表示關注  
+• Qiagen專注於分子診斷和檢測技術  
+• 目前尚未有正式的收購提議或交易細節公開</description>
 <source url="https://www.bloomberg.com/news/articles/2026-07-09/qiagen-draws-early-takeover-interest-from-eqt-advent">Bloomberg Crypto</source>
 </item>
 <item>
@@ -1251,7 +1290,10 @@
 <guid>https://www.theverge.com/tech/963281/pocketmage-pda-e-paper-oled-clamshell-crowd-supply</guid>
 <pubDate>Thu, 09 Jul 2026 14:11:40 +0000</pubDate>
 <category>Finance</category>
-<description></description>
+<description>• Talisman Design 正在進行 PocketMage 的群眾募資，這是一款結合觸控鍵盤及電子紙和 OLED 顯示屏的翻蓋 PDA。  
+• PocketMage 提供兩種預購選擇，價格分別為235美元（已組裝）和185美元（需自組裝），預計最早於2027年3月發貨。  
+• 該設備配備 ESP32-S3 微控制器，具備2MB RAM 和 16MB 存儲（可擴展），主要用於簡單的生產力任務。  
+• PocketMage 配有3.1英寸電子紙主顯示屏和1.8英寸 OLED 副顯示屏，並支持 Wi-Fi、藍牙及 USB-C 端口。</description>
 <source url="https://www.theverge.com/tech/963281/pocketmage-pda-e-paper-oled-clamshell-crowd-supply">The Verge</source>
 </item>
 <item>
@@ -1260,7 +1302,10 @@
 <guid>https://www.ft.com/content/4b1df8e8-cc24-4991-a900-cde0d25f0f68</guid>
 <pubDate>Thu, 09 Jul 2026 14:11:15 +0000</pubDate>
 <category>Finance</category>
-<description></description>
+<description>• 美國對伊朗的鐵路橋樑發動空襲，目標為通往哈梅內伊埋葬城市的路線  
+• 此次空襲的具體時間和地點尚未公開  
+• 美國政府表示，這一行動是為了打擊伊朗的軍事基礎設施  
+• 此次行動引發了國際社會的廣泛關注和討論</description>
 <source url="https://www.ft.com/content/4b1df8e8-cc24-4991-a900-cde0d25f0f68">Financial Times</source>
 </item>
 <item>
@@ -1269,7 +1314,10 @@
 <guid>https://www.bloomberg.com/news/articles/2026-07-09/burnham-to-beef-up-uk-premier-s-economic-powers-key-ally-says</guid>
 <pubDate>Thu, 09 Jul 2026 14:11:12 +0000</pubDate>
 <category>Finance</category>
-<description></description>
+<description>• 英國可能的下一任首相安迪·伯納姆計劃增強其辦公室對經濟政策的監督權限  
+• 伯納姆將取消近期拆分財政部的計劃  
+• 此消息由伯納姆的一位重要盟友透露  
+• 具體實施時間和細節尚未公布</description>
 <source url="https://www.bloomberg.com/news/articles/2026-07-09/burnham-to-beef-up-uk-premier-s-economic-powers-key-ally-says">Bloomberg</source>
 </item>
 <item>
@@ -1278,7 +1326,10 @@
 <guid>https://www.marketwatch.com/story/home-prices-hit-a-new-all-time-high-this-summer-2808d1a3?mod=mw_rss_topstories</guid>
 <pubDate>Thu, 09 Jul 2026 14:10:00 +0000</pubDate>
 <category>Trading</category>
-<description></description>
+<description>• 根據全國房地產經紀人協會的最新數據，房價持續上升，創下歷史新高  
+• 儘管房價上漲，買家仍然從市場撤退  
+• 這一趨勢加劇了住房負擔能力的問題  
+• 專家指出，市場動態可能會影響未來的購房需求</description>
 <source url="https://www.marketwatch.com/story/home-prices-hit-a-new-all-time-high-this-summer-2808d1a3?mod=mw_rss_topstories">MarketWatch</source>
 </item>
 <item>
@@ -1287,7 +1338,10 @@
 <guid>https://www.ft.com/content/28095772-f994-45a9-991f-2cd5f509bddb</guid>
 <pubDate>Thu, 09 Jul 2026 14:08:18 +0000</pubDate>
 <category>Tech</category>
-<description></description>
+<description>• Computacenter的股票因進入FTSE 100指數而上升，受益於人工智能的增長 
+• 公司利用人工智能的機會來推動業務增長 
+• FTSE 100指數是英國主要股票指數之一 
+• 投資者對Computacenter的前景表示樂觀，推動其股價上升</description>
 <source url="https://www.ft.com/content/28095772-f994-45a9-991f-2cd5f509bddb">FT Tech</source>
 </item>
 <item>
@@ -1296,7 +1350,10 @@
 <guid>https://www.aljazeera.com/news/2026/7/9/shes-extremely-dangerous-frances-le-pen-eyes-the-elysee?traffic_source=rss</guid>
 <pubDate>Thu, 09 Jul 2026 14:06:05 +0000</pubDate>
 <category>Finance</category>
-<description></description>
+<description>• 法國極右派領袖瑪琳·勒龐因貪污歐盟資金被定罪，並在上訴後宣布參加2027年總統選舉的計劃。  
+• 上訴法院解除對勒龐參選資格的禁令，但維持其貪污定罪，勒龐可能需要佩戴電子腳鐐。  
+• 勒龐的國民聯盟黨反對全球化和移民，主張加強邊界管控。  
+• 勒龐計劃向法國最高民事法院提出上訴，法律學者指出此舉可能會在選舉前帶來法律不確定性。</description>
 <source url="https://www.aljazeera.com/news/2026/7/9/shes-extremely-dangerous-frances-le-pen-eyes-the-elysee?traffic_source=rss">Al Jazeera</source>
 </item>
 <item>
@@ -1305,7 +1362,10 @@
 <guid>https://www.theblock.co/post/407732/hong-kong-sfc-orders-crypto-platforms-online-brokers-to-phase-out-otp-logins?utm_source=rss&amp;utm_medium=rss</guid>
 <pubDate>Thu, 09 Jul 2026 14:01:43 +0000</pubDate>
 <category>Crypto</category>
-<description></description>
+<description>• 香港證券及期貨事務監察委員會（SFC）要求持牌加密平台及網上經紀商在12個月內停止使用一次性密碼（OTP）進行客戶登錄，原因是詐騙攻擊上升。  
+• 監管機構要求公司採用更強的身份驗證方法，如訪問密鑰和設備綁定，並加強對可疑登錄、交易及提款活動的監控。  
+• 根據香港網絡安全事件協調中心的數據，2025年詐騙攻擊佔所有報告安全事件的57%。  
+• SFC強調，持牌機構的高層管理人員對實施適當控制以保護客戶賬戶和資產負有最終責任。</description>
 <source url="https://www.theblock.co/post/407732/hong-kong-sfc-orders-crypto-platforms-online-brokers-to-phase-out-otp-logins?utm_source=rss&amp;utm_medium=rss">The Block</source>
 </item>
 <item>
@@ -1314,7 +1374,10 @@
 <guid>https://news.google.com/rss/articles/CBMioAFBVV95cUxNaWFCbnpiT1VDNWpiRDVoME85WHZDQkVaSTkyN0xWTXhNejd1UWRqWTVzTGR0TllLYkJGV3Qyc1B4RHhVS19OZ2xqbmpkdWM1Mm5zWV9Fd0JTS3BrZ0hIVEUxZ0ltc0Yyd3lYdjRHdDUzNFlGTnZNcWdIczhlU1RoblJLUlZ3ZkNiMk1KVHFpR01sSGdMemE4dHdFaVZ3aXZi?oc=5</guid>
 <pubDate>Thu, 09 Jul 2026 14:01:38 +0000</pubDate>
 <category>General</category>
-<description></description>
+<description>• Meta公司推出Muse Spark 1.1，並向開發者開放預覽版  
+• 此版本旨在提升創作工具的功能和用戶體驗  
+• 開發者可以在Meta的開發者平台上獲取相關資訊  
+• Muse Spark 1.1的推出標誌著Meta在創意工具領域的持續發展</description>
 <source url="https://news.google.com/rss/articles/CBMioAFBVV95cUxNaWFCbnpiT1VDNWpiRDVoME85WHZDQkVaSTkyN0xWTXhNejd1UWRqWTVzTGR0TllLYkJGV3Qyc1B4RHhVS19OZ2xqbmpkdWM1Mm5zWV9Fd0JTS3BrZ0hIVEUxZ0ltc0Yyd3lYdjRHdDUzNFlGTnZNcWdIczhlU1RoblJLUlZ3ZkNiMk1KVHFpR01sSGdMemE4dHdFaVZ3aXZi?oc=5">Reuters (Google News)</source>
 </item>
 <item>
@@ -1323,7 +1386,10 @@
 <guid>https://news.google.com/rss/articles/CBMisgFBVV95cUxOT0h2Nk5MNktpcnY0SjdnOUhFNnFvSjVLbzdGc1p2TmtFMHdqRnRYVVZQeThjekJJVG1pMlRIZkx6LVJseVdtc0FVYkFRaEhJUjVTeVpzZFJfdUI4dmtQUzZlRDh2NDBSVGw0TE9uR3phVkEyYkRnQlpWZ0VOemJkbmlVaTI3WkVYTkRCZ0dJVDRLZU0zd2xOTWNTMXdPX1l1STRUOWVkcjF0RnFnc19ndzRR?oc=5</guid>
 <pubDate>Thu, 09 Jul 2026 14:01:10 +0000</pubDate>
 <category>Ai</category>
-<description></description>
+<description>• 財務總監面臨人工智能採用的高風險挑戰，需平衡創新與風險管理  
+• 企業在推動AI技術時，需考慮數據隱私及合規性問題  
+• 專家指出，成功的AI實施能提升財務預測準確性及業務效率  
+• 許多財務總監正在尋求培訓和資源，以應對AI帶來的變革</description>
 <source url="https://news.google.com/rss/articles/CBMisgFBVV95cUxOT0h2Nk5MNktpcnY0SjdnOUhFNnFvSjVLbzdGc1p2TmtFMHdqRnRYVVZQeThjekJJVG1pMlRIZkx6LVJseVdtc0FVYkFRaEhJUjVTeVpzZFJfdUI4dmtQUzZlRDh2NDBSVGw0TE9uR3phVkEyYkRnQlpWZ0VOemJkbmlVaTI3WkVYTkRCZ0dJVDRLZU0zd2xOTWNTMXdPX1l1STRUOWVkcjF0RnFnc19ndzRR?oc=5">AI News (Google)</source>
 </item>
 <item>
@@ -1350,7 +1416,10 @@
 <guid>https://www.bloomberg.com/news/articles/2026-07-09/mavik-seeks-1-billion-to-hunt-distressed-commercial-real-estate</guid>
 <pubDate>Thu, 09 Jul 2026 14:00:26 +0000</pubDate>
 <category>Finance</category>
-<description></description>
+<description>• Mavik Capital Management計劃籌集10億美元以收購困境中的商業地產資產  
+• 商業地產市場仍在應對四年前借貸成本上升帶來的影響  
+• 籌款目標旨在利用市場中的投資機會  
+• Mavik希望透過收購來增強其投資組合的多樣性</description>
 <source url="https://www.bloomberg.com/news/articles/2026-07-09/mavik-seeks-1-billion-to-hunt-distressed-commercial-real-estate">Bloomberg Crypto</source>
 </item>
 <item>
@@ -1359,7 +1428,10 @@
 <guid>https://www.bloomberg.com/news/articles/2026-07-09/jpmorgan-says-everything-is-an-ai-trade-it-s-how-you-play-it</guid>
 <pubDate>Thu, 09 Jul 2026 14:00:17 +0000</pubDate>
 <category>AI</category>
-<description></description>
+<description>• 摩根大通資產管理部的David Lebovitz表示，投資者在辨別人工智能的潛在風險和回報方面變得更加成熟  
+• 他指出，人工智能交易已成為華爾街的普遍現象  
+• Lebovitz強調，這是一個對投資者至關重要的教訓  
+• 隨著人工智能的普及，市場對相關投資的理解正在加深</description>
 <source url="https://www.bloomberg.com/news/articles/2026-07-09/jpmorgan-says-everything-is-an-ai-trade-it-s-how-you-play-it">Bloomberg Crypto</source>
 </item>
 <item>
@@ -1368,7 +1440,10 @@
 <guid>https://www.scmp.com/news/china/science/article/3360000/100-gigawatts-china-unveils-its-high-power-microwave-weapon-arsenal?utm_source=rss_feed</guid>
 <pubDate>Thu, 09 Jul 2026 14:00:05 +0000</pubDate>
 <category>Science</category>
-<description></description>
+<description>• 中國軍方公開其高功率微波武器庫，顯示技術可威脅低地球軌道衛星網絡，如Starlink。  
+• 研究人員指出，這項技術的發展是因應國家戰略需求，並在脈衝功率技術方面取得顯著進展。  
+• 研究報告提到，脈衝功率驅動器的應用已從實驗室原型轉變為實際應用，系統性能逐步提升。  
+• 這份報告可能成為其他國家評估大型衛星星座脆弱性的參考資料。</description>
 <source url="https://www.scmp.com/news/china/science/article/3360000/100-gigawatts-china-unveils-its-high-power-microwave-weapon-arsenal?utm_source=rss_feed">SCMP</source>
 </item>
 <item>
@@ -1377,7 +1452,10 @@
 <guid>https://www.ft.com/content/806d4eb3-fe0b-496f-804a-b4a444e94896</guid>
 <pubDate>Thu, 09 Jul 2026 14:00:02 +0000</pubDate>
 <category>Tech</category>
-<description></description>
+<description>• 本文探討人工智能如何影響人類情感的問題 
+• 文章內容需要訂閱才能解鎖 
+• 提供多種訂閱計劃，包括標準數碼和高級數碼選項 
+• 訂閱者可獲得FT的全面數碼新聞報導和專家分析</description>
 <source url="https://www.ft.com/content/806d4eb3-fe0b-496f-804a-b4a444e94896">FT Tech</source>
 </item>
 <item>
@@ -1386,7 +1464,10 @@
 <guid>https://www.theverge.com/tech/962439/sony-rx10v-superzoom-camera-price-specs-hands-on</guid>
 <pubDate>Thu, 09 Jul 2026 14:00:00 +0000</pubDate>
 <category>Trading</category>
-<description></description>
+<description>• 索尼於2023年8月推出RX10 V超變焦相機，距離上代產品近九年，售價為2,299.99美元  
+• RX10 V配備20.1百萬像素的堆疊式1英寸感應器，支持每秒30張的連拍，適合動作、體育及野生動物攝影  
+• 相機繼承了索尼Alpha系列的多項功能，包括OLED電子取景器、4K 60p視頻錄製及575個自動對焦點  
+• RX10 V不再具備內建ND濾鏡及彈出閃光燈功能，但支持通過USB-C連接進行4K直播錄製</description>
 <source url="https://www.theverge.com/tech/962439/sony-rx10v-superzoom-camera-price-specs-hands-on">The Verge</source>
 </item>
 <item>
@@ -1407,7 +1488,10 @@
 <guid>https://www.theverge.com/ai-artificial-intelligence/963193/meta-muse-spark-model-api</guid>
 <pubDate>Thu, 09 Jul 2026 14:00:00 +0000</pubDate>
 <category>Tech</category>
-<description></description>
+<description>• Meta於四月推出首個內部開發的AI模型Muse Spark，現已推出新模型Muse Spark 1.1，供美國開發者使用公共API預覽版。  
+• Muse Spark 1.1相較於第一代有顯著改進，能進行更高級的編碼，檢測和修復複雜錯誤，並支持多應用的端到端工作流程。  
+• 此次發布緊隨Muse Image的推出，該圖像生成模型因能夠融合用戶Instagram內容而引發爭議。  
+• 新模型現已在Meta AI應用程式和網站的Thinking模式中提供，並附帶每個新Meta Model API帳戶20美元的免費信用額度。</description>
 <source url="https://www.theverge.com/ai-artificial-intelligence/963193/meta-muse-spark-model-api">The Verge</source>
 </item>
 <item>
@@ -1416,7 +1500,10 @@
 <guid>https://www.blocktempo.com/glassnode-bitcoin-bottom-building-lth-capitulation/</guid>
 <pubDate>Thu, 09 Jul 2026 13:59:58 +0000</pubDate>
 <category>Bitcoin</category>
-<description></description>
+<description>• 根據Glassnode報告，比特幣已連續五個月處於「深度價值區」，低於多項關鍵成本支撐。  
+• 長期持有者的每日認賠拋售達2.8億美元，顯示市場仍處於熊市末期的「築底階段」。  
+• 美國現貨比特幣ETF自5月中旬以來轉為淨流出，機構買盤持續低迷。  
+• Glassnode指出，確認牛市重啟需等待長期持有者拋壓冷卻、ETF資金流出穩定及比特幣價格回升至76,600美元。</description>
 <source url="https://www.blocktempo.com/glassnode-bitcoin-bottom-building-lth-capitulation/">動區動趨 (BlockTempo)</source>
 </item>
 <item>
@@ -1425,7 +1512,10 @@
 <guid>https://www.wired.com/story/a-majority-of-european-lawmakers-voted-against-letting-big-tech-read-our-messages-theyre-going-to-anyway/</guid>
 <pubDate>Thu, 09 Jul 2026 13:55:08 +0000</pubDate>
 <category>Politics</category>
-<description></description>
+<description>• 歐洲議會投票通過立法，允許科技公司自願掃描用戶私人訊息以檢測兒童性虐待材料，儘管多數立法者反對該提案。  
+• 此法令恢復了包括Meta、Google和Microsoft在內的公司掃描私人文本、電子郵件和社交媒體訊息的權限，端對端加密的聊天應用如WhatsApp和Signal則不受此影響。  
+• 歐洲人民黨表示，科技公司的自願檢測活動有助於識別和救助網上兒童性虐待受害者，並急於在議會休會前恢復該立法。  
+• 儘管更多歐洲議會成員反對該法規，但最終以47票之差未能達到絕對多數，科技公司將保留掃描訊息的權利直至2028年。</description>
 <source url="https://www.wired.com/story/a-majority-of-european-lawmakers-voted-against-letting-big-tech-read-our-messages-theyre-going-to-anyway/">Wired</source>
 </item>
 <item>
@@ -1434,7 +1524,10 @@
 <guid>https://www.theblock.co/post/407719/paypal-seeks-increase-pyusd-stablecoin-native-issuance-on-polygon?utm_source=rss&amp;utm_medium=rss</guid>
 <pubDate>Thu, 09 Jul 2026 13:54:53 +0000</pubDate>
 <category>Crypto</category>
-<description></description>
+<description>• PayPal宣布將在Polygon網絡上本地發行PYUSD穩定幣，以促進其採用率  
+• 企業現在可以通過Polygon的Open Money Stack更無縫地使用PYUSD進行全球支付結算  
+• Polygon表示，其網絡上已經結算超過2.6萬億美元的穩定幣交易  
+• PYUSD由Paxos發行，總供應量接近30億美元，仍落後於Tether和Circle等行業領導者</description>
 <source url="https://www.theblock.co/post/407719/paypal-seeks-increase-pyusd-stablecoin-native-issuance-on-polygon?utm_source=rss&amp;utm_medium=rss">The Block</source>
 </item>
 <item>
@@ -1443,7 +1536,10 @@
 <guid>https://news.google.com/rss/articles/CBMi6AFBVV95cUxORTl0NngwTlFVN2VHektDQkNNMzhDSVNfS0pSU3F2Wk4ycVRJTVVwR21ISWttRnMtb1JyQU50TW0tUFhoVWZjU0g5TEZwc0VWRlE4NWVNcTBTS1doUEpHdWREQWRSQlFMUjV5LUphZWg5Ny1yeU05RC05bEplYmo1V2NPS1IzODNseU9xejA1V0hPaFZ1eUNUdS04eXpUdGF3ME9vQ0g0dFA3MEY3T3VZb3Ixa1ZXNkNBc0RtYVZ1TmJOejR2U1BSdHprTnJ0cmRwcHlWbHRWUFBXQjlOckRkNHNXYnZmM2w1?oc=5</guid>
 <pubDate>Thu, 09 Jul 2026 13:52:00 +0000</pubDate>
 <category>AI</category>
-<description></description>
+<description>• 隨著市場下跌，投資者被建議購買三隻人工智能相關股票  
+• 這些股票被認為在長期內具備增長潛力  
+• 專家分析指出，人工智能技術的需求持續增長  
+• 投資者需謹慎選擇，以應對市場波動帶來的風險</description>
 <source url="https://news.google.com/rss/articles/CBMi6AFBVV95cUxORTl0NngwTlFVN2VHektDQkNNMzhDSVNfS0pSU3F2Wk4ycVRJTVVwR21ISWttRnMtb1JyQU50TW0tUFhoVWZjU0g5TEZwc0VWRlE4NWVNcTBTS1doUEpHdWREQWRSQlFMUjV5LUphZWg5Ny1yeU05RC05bEplYmo1V2NPS1IzODNseU9xejA1V0hPaFZ1eUNUdS04eXpUdGF3ME9vQ0g0dFA3MEY3T3VZb3Ixa1ZXNkNBc0RtYVZ1TmJOejR2U1BSdHprTnJ0cmRwcHlWbHRWUFBXQjlOckRkNHNXYnZmM2w1?oc=5">AI News (Google)</source>
 </item>
 <item>
@@ -1452,7 +1548,10 @@
 <guid>https://news.google.com/rss/articles/CBMiogFBVV95cUxPcDdETngyTVQzZ0Nybk9KaUFMTHhJRVZOemluWFRMZVJ5VG1lc0lXZkM4Qk5xNUpVRl9LTW45REo2eVE1VW0tX0xXN3Bla3JUd21icWg1dGJCRndyeUxNSWM1dXJ2NUtnaGZKYjc4Zk82QW5UYi14MWUweTAwQ25XTmVDcDlwajdBWkYzYTRmaHJiN09JQmVuTTA4enk5RFlOLUE?oc=5</guid>
 <pubDate>Thu, 09 Jul 2026 13:50:00 +0000</pubDate>
 <category>AI</category>
-<description></description>
+<description>• Yahoo Finance報導，近期市場出現拋售潮，投資者尋找人工智能（AI）相關股票的投資機會  
+• 文章提到三隻被認為有潛力的AI股票，具體名稱未在摘要中提及  
+• 報導指出，這些股票可能在市場不穩定時提供增長潛力  
+• 投資者被建議在當前市場環境下考慮這些AI股票作為長期投資選擇</description>
 <source url="https://news.google.com/rss/articles/CBMiogFBVV95cUxPcDdETngyTVQzZ0Nybk9KaUFMTHhJRVZOemluWFRMZVJ5VG1lc0lXZkM4Qk5xNUpVRl9LTW45REo2eVE1VW0tX0xXN3Bla3JUd21icWg1dGJCRndyeUxNSWM1dXJ2NUtnaGZKYjc4Zk82QW5UYi14MWUweTAwQ25XTmVDcDlwajdBWkYzYTRmaHJiN09JQmVuTTA4enk5RFlOLUE?oc=5">AI News (Google)</source>
 </item>
 <item>
@@ -1461,7 +1560,10 @@
 <guid>https://www.scmp.com/news/china/politics/article/3360024/28-killed-factory-blaze-heart-chinese-shoe-manufacturing-hub?utm_source=rss_feed</guid>
 <pubDate>Thu, 09 Jul 2026 13:47:32 +0000</pubDate>
 <category>General</category>
-<description></description>
+<description>• 中國福建省晉江市的Huiteng鞋廠於星期四發生大火，造成28人死亡  
+• 火災於中午12時04分報告，當地消防部門派遣183名消防員及35輛消防車前往現場  
+• 當地政府表示，火勢已於星期四下午得到控制，並有直升機參與救援行動  
+• 習近平要求迅速調查火災原因，並追究相關責任人，並指示全力救援被困者及照顧傷者和家屬</description>
 <source url="https://www.scmp.com/news/china/politics/article/3360024/28-killed-factory-blaze-heart-chinese-shoe-manufacturing-hub?utm_source=rss_feed">SCMP</source>
 </item>
 <item>
@@ -1470,7 +1572,10 @@
 <guid>https://www.nytimes.com/2026/07/09/climate/iucn-red-list-threatened-species.html</guid>
 <pubDate>Thu, 09 Jul 2026 13:47:29 +0000</pubDate>
 <category>General</category>
-<description></description>
+<description>• 國際自然保護聯盟（I.U.C.N.）更新報告指出，深海採礦對熱液噴口周圍的蝸牛及其他軟體動物構成威脅  
+• 這些生物已適應極端環境，但礦物開採可能導致超過一半物種面臨滅絕  
+• 報告強調保護熱液噴口生態系統的重要性  
+• 深海採礦活動的增長引發了對海洋生物多樣性的擔憂</description>
 <source url="https://www.nytimes.com/2026/07/09/climate/iucn-red-list-threatened-species.html">New York Times</source>
 </item>
 <item>
@@ -1479,7 +1584,10 @@
 <guid>https://news.google.com/rss/articles/CBMi9AFBVV95cUxNaWdGclF6cjUtS0EtN2Npa01yRERjQ0tzeEZ1Mkd5RDN6aWlxcTY1VEZQcWhCTXhVTmdaVGRRZDQtb0F6a3JQZGNxOUNGVGpreV9zNmJWVnJ3WlNrTlRvVEkxMVdNSjFmUmhoOTRlLU5qdGhUMmdiWWxWNkUwQkJRR3o4MW1qVVJwWFNTMWM4TVFmNDNhZThvbjhMYXRNY0NFRW1Yb0NOckhvUDR5dTRoMWRxWE1HMXdzVGNld21TeWhEUmtockRQeW1vellDR3hrM1gtMnBwU2VOa1ZTMEdZTENoZWRMMFlOQmVTS256TzVETjJW?oc=5</guid>
 <pubDate>Thu, 09 Jul 2026 13:47:00 +0000</pubDate>
 <category>AI</category>
-<description></description>
+<description>• SU公司宣佈推出人工智能產品組合，旨在擴展其技術服務範疇  
+• 此產品組合包括多種人工智能解決方案，針對不同行業的需求  
+• 發佈會於近期在SU總部舉行，吸引了多位業界專家參加  
+• SU表示，此舉是為了加強其在科技領域的競爭力和創新能力</description>
 <source url="https://news.google.com/rss/articles/CBMi9AFBVV95cUxNaWdGclF6cjUtS0EtN2Npa01yRERjQ0tzeEZ1Mkd5RDN6aWlxcTY1VEZQcWhCTXhVTmdaVGRRZDQtb0F6a3JQZGNxOUNGVGpreV9zNmJWVnJ3WlNrTlRvVEkxMVdNSjFmUmhoOTRlLU5qdGhUMmdiWWxWNkUwQkJRR3o4MW1qVVJwWFNTMWM4TVFmNDNhZThvbjhMYXRNY0NFRW1Yb0NOckhvUDR5dTRoMWRxWE1HMXdzVGNld21TeWhEUmtockRQeW1vellDR3hrM1gtMnBwU2VOa1ZTMEdZTENoZWRMMFlOQmVTS256TzVETjJW?oc=5">AI News (Google)</source>
 </item>
 <item>
@@ -1488,7 +1596,10 @@
 <guid>https://www.theverge.com/report/963106/ice-doxxing-office-of-professional-responsibility-free-speech</guid>
 <pubDate>Thu, 09 Jul 2026 13:45:00 +0000</pubDate>
 <category>Tech</category>
-<description></description>
+<description>• 大衛·斯特里弗在紐約市酒店入住後，收到ICE特工的電話，表示有人在尋找他。
+• DHS指控一些人對聯邦特工進行“doxing”，並在華盛頓特區提起訴訟，聲稱這是在打壓異議言論。
+• DHS在斯特里弗的家中留下“警告通知”，告知他ICE專業責任辦公室負責執法針對ICE人員的威脅。
+• 在過去一年中，DHS對批評特朗普移民政策的人進行調查，已開展超過100宗與ICE相關的“doxing和威脅”調查。</description>
 <source url="https://www.theverge.com/report/963106/ice-doxxing-office-of-professional-responsibility-free-speech">The Verge</source>
 </item>
 <item>
