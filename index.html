@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The $28 Million Mistake That Inspired Estonia's AI “Fuckup Finder” · Trump flies partway home from Turkey in an old Air </title>
-  <meta name="description" content="Trump flies partway home from Turkey in an old Air Force One · Live markets: Bitcoin ETFs slip back to outflows while ether · Taiwan’s Yang Cautions Against Borrowing to Buy Red-Hot Stoc — AI-powered " />
+  <title>Automation and artificial intelligence: the new competitive advantage for data-driven businesses - t · Australia news li</title>
+  <meta name="description" content="Australia news live: SA police investigating death during Te · Egypt complains officials were biased in World Cup loss to A · Mexico Investigates Possible F.B.I. Role in El Mayo Arrest — AI-powered wo" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1261,8 +1261,12 @@
     // ── Existing globe code below ──
     // Already available as THREE, THREE.OrbitControls via global
     function slugify(s) { return ((s||'').toLowerCase().trim().replace(/[^\w\s-]/g,'').replace(/[-\s]+/g,'-').replace(/^-+|-+$/g,'') || 'unknown').slice(0,80); }
-        let NEWS_DATA = {articles: [], sourceLocations: {}};
-    let timelineData = {};  // Will be loaded from timeline-data.json
+    let NEWS_DATA = {articles: [], sourceLocations: {}};
+    let timelineData = {};
+    // Marker globals — declared BEFORE data loading IIFE to avoid TDZ errors
+    let markerPositions = [];
+    let markerColors = [];
+    let markerData = [];
     
     // Load both data files in parallel with localStorage cache
     (function loadData() {
@@ -2015,9 +2019,6 @@ const GEO_KEYWORDS = [
     const markerMeshes = [];
     const markerGeometry = new THREE.SphereGeometry(0.095, MARKER_SEGMENTS[0], MARKER_SEGMENTS[1]);
     const glowGeometry = new THREE.SphereGeometry(0.19, MARKER_SEGMENTS[0], MARKER_SEGMENTS[1]);
-    let markerPositions = [];
-    let markerColors = [];
-    let markerData = [];
     let markerCount = 0;  // Global for animate loop
     let instancedMarkers = null;
     let instancedGlows = null;
