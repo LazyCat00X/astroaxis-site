@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apple sues OpenAI for ‘institutional’ misconduct — and alleges that’s just the tip of the iceberg · South China Sea expe</title>
-  <meta name="description" content="South China Sea expert Wu Shicun on Beijing’s red lines · Witnesses to fatal Houston ICE shooting challenge agency's a · SK Hynix Debut Is a Bet That AI Breaks Boom-and-Bust Chip Cy — AI-powered world" />
+  <title>Former Tory minister Ann Widdecombe dies at 78 · 12 People Die in Southern Spain Wildfire · 2 Magnificent Artificial Int</title>
+  <meta name="description" content="12 People Die in Southern Spain Wildfire · 2 Magnificent Artificial Intelligence (AI) Stocks Down 16% t · Administration without sovereignty will not free Palestine — AI-powered world news aggregator " />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -308,7 +308,7 @@
 <div id="loading-overlay" style="position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;background:#02030a;transition:opacity .5s">
 <div style="text-align:center;width:320px">
 <svg width="48" height="48" viewBox="0 0 48 48" style="animation:spin .8s linear infinite"><circle cx="24" cy="24" r="20" fill="none" stroke="url(#g)" stroke-width="3" stroke-dasharray="90 45"/><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#67e8f9"/><stop offset="50%" stop-color="#6366f1"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient></defs></svg>
-<div id="loading-status" style="color:rgba(136,146,182,.5);font-size:11px;margin-top:12px;letter-spacing:.12em;text-transform:uppercase">Initializing…</div>
+<div id="loading-status" style="color:rgba(136,146,182,.5);font-size:11px;margin-top:12px;letter-spacing:.12em;text-transform:uppercase">Initializing...</div>
 <!-- Progress bar -->
 <div id="loading-progress-bg" style="margin-top:18px;height:3px;background:rgba(99,102,241,.1);border-radius:2px;overflow:hidden">
   <div id="loading-progress-bar" style="height:100%;width:0%;background:linear-gradient(90deg,#6366f1,#67e8f9);border-radius:2px;transition:width .4s ease"></div>
@@ -456,12 +456,12 @@
     import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
     window.THREE = THREE;
     window.OrbitControls = OrbitControls;
-    // ── Three.js load check ──
+    // -- Three.js load check --
     if (typeof THREE === 'undefined') {
       document.body.innerHTML = '<div style="background:#03040c;color:#eef7ff;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:Inter,sans-serif;text-align:center;padding:40px"><div><div style="font-size:48px;margin-bottom:16px">&#9888;</div><h1 style="font-size:22px;margin-bottom:8px">Failed to load 3D engine</h1><p style="color:rgba(238,247,255,.6);max-width:400px;line-height:1.6">The 3D globe library (Three.js) could not be loaded. This may be due to a network issue or content blocker.</p></div></div>';
       throw new Error('Three.js failed to load');
     }
-    // ── Performance monitoring (Core Web Vitals) ──
+    // -- Performance monitoring (Core Web Vitals) --
     window._perfMetrics = {};
     try {
       // LCP (Largest Contentful Paint)
@@ -506,7 +506,7 @@
       }, 5000);
     } catch(e) { window._logError('perf', 'PerformanceObserver failed', e); }
 
-    // ── Structured error logger ──
+    // -- Structured error logger --
     const _errors = [];
     window._logError = function(category, msg, detail) {
       var entry = { time: new Date().toISOString(), category: category, msg: msg, detail: String(detail||'').slice(0,200) };
@@ -521,7 +521,7 @@
       window._logError('promise', String(e.reason||'').slice(0,100));
     });
 
-    // ── Privacy-respecting analytics (localStorage only, no external tracking) ──
+    // -- Privacy-respecting analytics (localStorage only, no external tracking) --
     (function() {
       try {
         var analytics = JSON.parse(localStorage.getItem('astroaxis_analytics') || '{"visits":0,"firstVisit":null,"lastVisit":null,"totalSeconds":0,"sessions":[]}');
@@ -555,7 +555,7 @@
       } catch(e) {}
     })();
 
-    // ── Dev dashboard (type window._dashboard() in console) ──
+    // -- Dev dashboard (type window._dashboard() in console) --
     window._dashboard = function() {
       var d = {
         perf: window._perfMetrics || {},
@@ -573,10 +573,10 @@
       return d;
     };
 
-    // ── View switching ──
+    // -- View switching --
     let currentLang = localStorage.getItem('astrolang') || 'zh-HK';
 
-    // ── Full UI translations ──
+    // -- Full UI translations --
     const I18N = {
       en: {
         'nav.globe':'Globe','nav.timeline':'Timeline','nav.feed':'Feed',
@@ -688,7 +688,7 @@
     // has been initialized. Calling applyLanguage() here triggers temporal-dead-zone
     // ReferenceErrors and aborts the rest of the script before the globe can start.
 
-    // ── Timeline ──
+    // -- Timeline --
     // TL_LABELS merged into I18N above
     const TL_TYPE = {en:{finance:'Finance',tech:'Tech',politics:'Politics',climate:'Climate',crypto:'Crypto',disaster:'Disaster'},'zh-HK':{finance:'金融',tech:'科技',politics:'政治',climate:'氣候',crypto:'加密貨幣',disaster:'災難'},'zh-CN':{finance:'金融',tech:'科技',politics:'政治',climate:'气候',crypto:'加密货币',disaster:'灾难'},ja:{finance:'金融',tech:'技術',politics:'政治',climate:'気候',crypto:'暗号資産',disaster:'災害'},ko:{finance:'금융',tech:'기술',politics:'정치',climate:'기후',crypto:'암호화폐',disaster:'재난'}};
 
@@ -759,7 +759,7 @@
       }
     }
 
-    // ── Feed ──
+    // -- Feed --
 
     const TOPIC_GRADIENTS = {
       'AI': ['#1e3a5f','#3b82f6'], 'Bitcoin': ['#3d2e0a','#f97316'],
@@ -785,7 +785,7 @@
       return TOPIC_ICONS[topic] || TOPIC_ICONS['General'];
     }
 
-    // ── Source trust levels ──
+    // -- Source trust levels --
     const TRUST_MAP = {
       'New York Times': 'high', 'Bloomberg': 'high', 'Reuters': 'high', 'Financial Times': 'high', 'AP News': 'high', 'BBC World': 'high', 'WSJ Markets': 'high', 'NPR': 'high', 'Washington Post': 'high', 'The Guardian': 'high',
       'CNBC': 'medium', 'MarketWatch': 'medium', 'Nikkei Asia': 'medium', 'SCMP': 'medium', 'Time': 'medium', 'Al Jazeera': 'medium', 'TechCrunch': 'medium', 'ArsTechnica': 'medium', 'Wired': 'medium', 'The Verge': 'medium', 'MIT Tech Review': 'medium', 'Bloomberg Crypto': 'medium',
@@ -830,7 +830,7 @@
       if(activeFilters.time !== 'all') pills.push(`<span style="display:inline-block;padding:2px 10px;border-radius:999px;font-size:11px;background:rgba(99,102,241,.15);color:#a78bfa;border:1px solid rgba(99,102,241,.3);margin-right:4px">${activeFilters.time.toUpperCase()}</span>`);
       if(activeFilters.region !== 'All') pills.push(`<span style="display:inline-block;padding:2px 10px;border-radius:999px;font-size:11px;background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.3);margin-right:4px">${activeFilters.region}</span>`);
       if(pills.length){ html += `<div style="margin-bottom:16px">${pills.join('')} · ${filtered.length} result${filtered.length!==1?'s':''}</div>`; }
-      // ── Personalization: "For You" based on reading history ──
+      // -- Personalization: "For You" based on reading history --
       const interests = (()=>{ try{return JSON.parse(localStorage.getItem('astroaxis_interests')||'{}');}catch(e){return{};} })();
       const topInterest = Object.entries(interests).sort((a,b)=>b[1]-a[1])[0];
       if (topInterest && topInterest[1] >= 1 && activeFilters.topic === 'All' && !sq) {
@@ -968,7 +968,7 @@
       cards.forEach((c, i) => { c.style.animationDelay = (i * 0.04) + 's'; });
     }
 
-    // ── Breaking news checker ──
+    // -- Breaking news checker --
     let lastBreakingTitle = '';
     async function checkBreaking() {
       try {
@@ -1035,7 +1035,7 @@
       });
     });
 
-    // ── A11y announcement helper ──
+    // -- A11y announcement helper --
     function a11yAnnounce(msg, priority) {
       const liveRegion = document.getElementById('a11y-live');
       if (!liveRegion) return;
@@ -1090,7 +1090,7 @@
       document.body.classList.remove('keyboard-user');
     }, {capture: true});
 
-    // ── Keyboard navigation ──
+    // -- Keyboard navigation --
     document.addEventListener('keydown', (e) => {
       if (e.key === 'F7') { e.preventDefault(); return; }
 
@@ -1187,7 +1187,7 @@
     }, {capture: true});
     // init moved to initApp() after NEWS_DATA loaded
 
-    // ── Global search input (history + feed) ──
+    // -- Global search input (history + feed) --
     const searchInput = document.getElementById('historySearch');
     const searchRecent = document.getElementById('searchRecent');
 
@@ -1284,7 +1284,7 @@
       });
     }
 
-    // ── Existing globe code below ──
+    // -- Existing globe code below --
     // Already available as THREE, THREE.OrbitControls via global
     function slugify(s) { return ((s||'').toLowerCase().trim().replace(/[^\w\s-]/g,'').replace(/[-\s]+/g,'-').replace(/^-+|-+$/g,'') || 'unknown').slice(0,80); }
     let NEWS_DATA = {articles: [], sourceLocations: {}};
@@ -1333,7 +1333,7 @@
     })();
 
 const GEO_KEYWORDS = [
-      // ── Asia ──
+      // -- Asia --
       { re: /香港|Hong\s*Kong/gi,                                loc: [22.3, 114.2, 'Hong Kong'] },
       { re: /新加坡|Singapore/gi,                                  loc: [1.3, 103.8, 'Singapore'] },
       { re: /東京|Tokyo|日本|Japan/gi,                              loc: [36.0, 138.0, 'Japan'] },
@@ -1349,7 +1349,7 @@ const GEO_KEYWORDS = [
       { re: /巴基斯坦|Pakistan|Karachi/gi,                         loc: [30.0, 70.0, 'Pakistan'] },
       { re: /上海|Shanghai|北京|Beijing|深圳|Shenzhen|中國|China|Chinese/gi, loc: [35.0, 105.0, 'China'] },
 
-      // ── Middle East ──
+      // -- Middle East --
       { re: /霍爾木茲|Hormuz|Strait\s*of\s*Hormuz/gi,              loc: [26.5, 56.0, 'Strait of Hormuz'] },
       { re: /巴林|Bahrain/gi,                                      loc: [26.0, 50.5, 'Bahrain'] },
       { re: /UAE|Dubai|阿聯酋|Abu\s*Dhabi/gi,                        loc: [25.0, 55.0, 'UAE'] },
@@ -1360,7 +1360,7 @@ const GEO_KEYWORDS = [
       { re: /土耳其|Turkey|Istanbul|Ankara/gi,                     loc: [39.0, 35.0, 'Turkey'] },
       { re: /波斯尼亞|Bosnia/gi,                                    loc: [44.0, 18.0, 'Bosnia'] },
 
-      // ── Europe ──
+      // -- Europe --
       { re: /希臘|Greece/gi,                                        loc: [39.0, 22.0, 'Greece'] },
       { re: /EU|歐盟|Europe|European|歐元區/gi,                       loc: [50.0, 10.0, 'Europe'] },
       { re: /英國|UK|Britain|London|England/gi,                     loc: [51.5, -0.1, 'United Kingdom'] },
@@ -1371,7 +1371,7 @@ const GEO_KEYWORDS = [
       { re: /意大利|Italy|Milan|Rome/gi,                            loc: [42.0, 13.0, 'Italy'] },
       { re: /西班牙|Spain|Madrid|Barcelona/gi,                      loc: [40.0, -3.0, 'Spain'] },
 
-      // ── North America ──
+      // -- North America --
       { re: /德州|Texas/gi,                                         loc: [31.0, -100.0, 'Texas, US'] },
       { re: /加州|California/gi,                                    loc: [37.0, -120.0, 'California, US'] },
       { re: /墨西哥|Mexico/gi,                                       loc: [23.0, -102.0, 'Mexico'] },
@@ -1379,7 +1379,7 @@ const GEO_KEYWORDS = [
       { re: /USMCA|美墨加|北美|North\s*America/gi,                    loc: [39.0, -98.0, 'North America'] },
       { re: /美國|US\b|America|United\s*States|Washington|New\s*York|華爾街|白宮|華府|國會|聯邦/gi, loc: [39.0, -98.0, 'United States'] },
 
-      // ── South America ──
+      // -- South America --
       { re: /委內瑞拉|Venezuela|Caracas/gi,                          loc: [8.0, -66.0, 'Venezuela'] },
       { re: /玻利維亞|Bolivia|La\s*Paz/gi,                            loc: [-17.0, -65.0, 'Bolivia'] },
       { re: /巴西|Brazil|Rio|Sao\s*Paulo|Brasilia|São Paulo/gi,      loc: [-15.0, -50.0, 'Brazil'] },
@@ -1391,7 +1391,7 @@ const GEO_KEYWORDS = [
       { re: /巴拉圭|Paraguay|Asunción/gi,                              loc: [-25.0, -57.0, 'Paraguay'] },
       { re: /厄瓜多爾|Ecuador|Quito/gi,                                loc: [-1.0, -78.0, 'Ecuador'] },
 
-      // ── Africa ──
+      // -- Africa --
       { re: /尼日利亞|Nigeria|Lagos|Abuja/gi,                         loc: [8.0, 8.0, 'Nigeria'] },
       { re: /南非|South\s*Africa|Johannesburg|Cape\s*Town|Pretoria/gi, loc: [-30.0, 25.0, 'South Africa'] },
       { re: /肯亞|Kenya|Nairobi/gi,                                   loc: [-1.0, 36.0, 'Kenya'] },
@@ -1403,13 +1403,13 @@ const GEO_KEYWORDS = [
       { re: /摩洛哥|Morocco|Casablanca|Rabat/gi,                      loc: [31.0, -7.0, 'Morocco'] },
       { re: /突尼斯|Tunisia|Tunis/gi,                                  loc: [34.0, 9.0, 'Tunisia'] },
 
-      // ── Oceania ──
+      // -- Oceania --
       { re: /澳洲|Australia|Sydney|Melbourne|Brisbane|Perth/gi,       loc: [-25.0, 135.0, 'Australia'] },
       { re: /新西蘭|New\s*Zealand|Auckland|Wellington/gi,             loc: [-41.0, 174.0, 'New Zealand'] },
       { re: /斐濟|Fiji|Suva/gi,                                        loc: [-18.0, 178.0, 'Fiji'] },
       { re: /巴布亞新幾內亞|Papua New Guinea|Port Moresby/gi,         loc: [-6.0, 147.0, 'Papua New Guinea'] },
 
-      // ── Broad catch-alls (last resort) ──
+      // -- Broad catch-alls (last resort) --
       { re: /中東|Middle\s*East/gi,                                  loc: [25.0, 45.0, 'Middle East'] },
     ];
 
@@ -1427,7 +1427,7 @@ const GEO_KEYWORDS = [
       return null;
     }
 
-    // ── Device capability detection ──
+    // -- Device capability detection --
     const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
     const cores = navigator.hardwareConcurrency || 4;
     const memoryGB = (navigator.deviceMemory || 8);
@@ -1512,7 +1512,7 @@ const GEO_KEYWORDS = [
     if (merMajorPts.length) { const g = new THREE.BufferGeometry().setFromPoints(merMajorPts); grid.add(new THREE.LineSegments(g, meridianMat)); }
     globe.add(grid);
 
-    // ── Depth-occlusion sphere: renders to depth buffer only, no color ──
+    // -- Depth-occlusion sphere: renders to depth buffer only, no color --
     // This prevents back-side elements (borders, labels) from showing through
     const depthSphere = new THREE.Mesh(
       new THREE.SphereGeometry(R * 1.012, 48, 24),
@@ -2040,7 +2040,7 @@ const GEO_KEYWORDS = [
         .slice(0, 5);
     }
 
-    // ── Marker globals (declared early, built after NEWS_DATA loads) ──
+    // -- Marker globals (declared early, built after NEWS_DATA loads) --
     const markerGroup = new THREE.Group();
     const markerMeshes = [];
     const markerGeometry = new THREE.SphereGeometry(0.095, MARKER_SEGMENTS[0], MARKER_SEGMENTS[1]);
@@ -2192,7 +2192,7 @@ const GEO_KEYWORDS = [
     globe.add(continentGroup);
     console.log(`Built ${markerPositions.length} markers from ${_articles.length} articles`);
     }
-    // ── Country labels on zoom ──
+    // -- Country labels on zoom --
     let countryLookup = [];
     const countryNameEl = document.getElementById('country-label-name');
     const countryCountEl = document.getElementById('country-label-markerCount');
@@ -2270,7 +2270,7 @@ const GEO_KEYWORDS = [
     }
     loadCountries();
 
-    // ── Render country boundary lines (called from loadCountries after data ready) ──
+    // -- Render country boundary lines (called from loadCountries after data ready) --
     function renderCountryBorders() {
       const borderGroup = new THREE.Group();
       const borderMat = new THREE.LineBasicMaterial({
@@ -2296,7 +2296,7 @@ const GEO_KEYWORDS = [
         });
       });
       globe.add(borderGroup);
-      // ── Country name sprites on globe surface ──
+      // -- Country name sprites on globe surface --
       const labelGroup = new THREE.Group();
       countryLookup.forEach(entry => {
         const [lon, lat] = entry.centroid;
@@ -2407,7 +2407,7 @@ const GEO_KEYWORDS = [
 
     let hoverCooldown = null;
 
-    // ── AI agent visibility layer ──
+    // -- AI agent visibility layer --
     // Hidden div that syncs raycaster state so AI agents can read marker data
     const agentLayer = document.createElement('div');
     agentLayer.id = 'globe-agent-state';
@@ -2462,13 +2462,24 @@ const GEO_KEYWORDS = [
         if (markerPos) {
           const toMarker = new THREE.Vector3().copy(markerPos).normalize();
           const toCam = new THREE.Vector3().copy(camera.position).normalize();
-          if (toMarker.dot(toCam) < 0.3) return; // Back face, skip
+          if (toMarker.dot(toCam) < 0.3) {
+          // If this was the hovered marker, clear it
+          if (hoveredData && hoveredIdx === idx) {
+            hoveredIdx = -1;
+            hoveredData = null;
+            tooltip.classList.remove('visible');
+            updateAgentLayer(null);
+          }
+          renderer.domElement.style.cursor = 'grab';
+          return; // Back face, skip
+        }
         }
         const data = markerData[idx];
         if (data !== hoveredData) {
           hoveredIdx = idx;
           hoveredData = data;
           updateAgentLayer(data, idx);
+          renderer.domElement.style.cursor = 'pointer';
           // Pause auto-rotate while hovering a marker
           if (controls.autoRotate) controls.autoRotate = false;
           const cnt = data.articles.length;
@@ -2513,10 +2524,11 @@ const GEO_KEYWORDS = [
         hoveredData = null;
         tooltip.classList.remove('visible');
         updateAgentLayer(null);
+        renderer.domElement.style.cursor = 'grab';
       }
     }, { passive: true });
 
-    // ── History dot hover: show event tooltip ──
+    // -- History dot hover: show event tooltip --
     let hoveredHistoryDot = null;
     renderer.domElement.addEventListener('pointermove', event => {
       if (!historyGroup || !window._historyDots) return;
@@ -2563,8 +2575,8 @@ const GEO_KEYWORDS = [
       }
     }, { passive: true });
 
-    // ── History dot click → jump to timeline view ──
-    // ── Globe click: markers or history dots ──
+    // -- History dot click → jump to timeline view --
+    // -- Globe click: markers or history dots --
     let pointerDownPos = null;
     renderer.domElement.addEventListener('pointerdown', (e) => {
       pointerDownPos = { x: e.clientX, y: e.clientY };
@@ -2731,7 +2743,7 @@ const GEO_KEYWORDS = [
     controls.target.set(0, -0.4, 0);
     controls.update();
 
-    // ── Auto-rotation pause/resume: idle 25s → auto-resume ──
+    // -- Auto-rotation pause/resume: idle 25s → auto-resume --
     let autoRotateTimer = null;
     function pauseAutoRotate() {
       if (controls.autoRotate) controls.autoRotate = false;
@@ -2742,11 +2754,11 @@ const GEO_KEYWORDS = [
     renderer.domElement.addEventListener('pointerdown', () => pauseAutoRotate(), { passive: true });
     renderer.domElement.addEventListener('wheel', () => pauseAutoRotate(), { passive: true });
 
-    // ── History Rings (created after timelineData loads) ──
+    // -- History Rings (created after timelineData loads) --
     historyGroup = new THREE.Group();
     globe.add(historyGroup);
 
-    // ── Earth's rotation axis (glowing cylinder through poles) ──
+    // -- Earth's rotation axis (glowing cylinder through poles) --
     // Core
     const axisCoreGeo = new THREE.CylinderGeometry(0.02, 0.02, 16, 8);
     const axisCoreMat = new THREE.MeshBasicMaterial({ color: 0x22d3ee, transparent: true, opacity: 0.9, blending: THREE.AdditiveBlending, depthWrite: false });
@@ -2781,7 +2793,7 @@ const GEO_KEYWORDS = [
     tipGlow.scale.set(2.5, 2.5, 1);
     historyGroup.add(tipGlow);
 
-    // ── Precession cone: edge lines + base ring ──
+    // -- Precession cone: edge lines + base ring --
     const coneR = 3.5, coneH = 5;
     const coneGeoPC = new THREE.ConeGeometry(coneR, coneH, 24, 1, true);
     const coneEdges = new THREE.EdgesGeometry(coneGeoPC, 20);
@@ -2806,7 +2818,7 @@ const GEO_KEYWORDS = [
     window._baseRingMat = baseRingMat2;
     
     function initStarField() {
-      // ── AstroAxis Star Field v2: Spiral Timeline + Background Stars ──
+      // -- AstroAxis Star Field v2: Spiral Timeline + Background Stars --
       // Time = radial spiral. 1900 = outermost, 2026 = nearest to globe.
       // Each event = a star. Same-type = constellation. Background = dust stars.
 
@@ -2829,7 +2841,7 @@ const GEO_KEYWORDS = [
         climate: [0.976,0.451,0.090], general: [0.533,0.573,0.714],
       };
 
-      // ── Background dust stars (pure decoration) ──
+      // -- Background dust stars (pure decoration) --
       const dustGeo = new THREE.BufferGeometry();
       const dustPositions = [];
       const dustColors = [];
@@ -2853,7 +2865,7 @@ const GEO_KEYWORDS = [
       dustMat.userData = { _baseOpacity: 0.25 };
       historyGroup.add(dust);
 
-      // ── Event stars on spiral ──
+      // -- Event stars on spiral --
       const stars = [];
       const constellations = {};
       allEvents.forEach((ev, i) => {
@@ -2888,7 +2900,7 @@ const GEO_KEYWORDS = [
         constellations[ev.type].push(stars.length - 1);
       });
 
-      // ── Build star sprites (point light + diffraction spikes) ──
+      // -- Build star sprites (point light + diffraction spikes) --
       window._historyDots = [];
       window._eventLines = [];
 
@@ -2955,7 +2967,7 @@ const GEO_KEYWORDS = [
         window._historyDots.push(spr);
       });
 
-      // ── Constellation lines: same type, within 10 years, close distance ──
+      // -- Constellation lines: same type, within 10 years, close distance --
       const CLC = { politics: 0xeab308, tech: 0x3b82f6, finance: 0x22c55e, disaster: 0xef4444, crypto: 0x818cf8, science: 0xa78bfa, climate: 0xf97316 };
       Object.keys(constellations).forEach(type => {
         const indices = constellations[type];
@@ -3040,7 +3052,7 @@ const GEO_KEYWORDS = [
     window._scene = scene;
     window._renderer2 = renderer;
 
-    // ── HUD toggle ──
+    // -- HUD toggle --
     const hudPanel = document.getElementById('hud-panel');
     const hudToggle = document.getElementById('hud-toggle');
     if (hudToggle && hudPanel) {
@@ -3049,7 +3061,7 @@ const GEO_KEYWORDS = [
         hudToggle.textContent = hudPanel.classList.contains('collapsed') ? '▶' : '◀';
       });
     }
-    // ── Animate ──
+    // -- Animate --
     const _dummy = new THREE.Object3D();
     const _pos = new THREE.Vector3();
     const _glowPos = new THREE.Vector3();
@@ -3275,7 +3287,7 @@ const GEO_KEYWORDS = [
       requestAnimationFrame(animate);
     }
 
-    // ── Loading Sequence ──
+    // -- Loading Sequence --
     (function(){
       const overlay = document.getElementById('loading-overlay');
       const status = document.getElementById('loading-status');
@@ -3284,11 +3296,11 @@ const GEO_KEYWORDS = [
       const startTime = Date.now();
       const MIN_DISPLAY = 1200;
       const steps = [
-        {msg:'Connecting…', progress:5},
-        {msg:'Loading data…', progress:25},
-        {msg:'Building globe…', progress:50},
-        {msg:'Rendering markers…', progress:75},
-        {msg:'Finalizing…', progress:90}
+        {msg:'Connecting...', progress:5},
+        {msg:'Loading data...', progress:25},
+        {msg:'Building globe...', progress:50},
+        {msg:'Rendering markers...', progress:75},
+        {msg:'Finalizing...', progress:90}
       ];
       if(isLowEnd) steps.push({msg:'Low-end mode', progress:95});
       let i = 0;
@@ -3324,7 +3336,7 @@ const GEO_KEYWORDS = [
       requestAnimationFrame(checkReady);
     })();
 
-    // ── Onboarding ──
+    // -- Onboarding --
     document.getElementById('onboarding-close')?.addEventListener('click', () => {
       document.getElementById('onboarding-overlay').style.display = 'none';
       localStorage.setItem('astroaxis_seen_onboarding', '1');
@@ -3332,7 +3344,7 @@ const GEO_KEYWORDS = [
       setTimeout(() => document.body.focus(), 100);
     });
 
-    // ── Bookmarks (localStorage) ──
+    // -- Bookmarks (localStorage) --
     function getBookmarks(){ try{return JSON.parse(localStorage.getItem('astroaxis_bookmarks')||'[]');}catch(e){return[];} }
     function saveBookmarks(b){ localStorage.setItem('astroaxis_bookmarks', JSON.stringify(b)); }
     function toggleBookmark(url, title, source) {
@@ -3354,7 +3366,7 @@ const GEO_KEYWORDS = [
       else { window.open(url,'_blank'); }
     }
 
-    // ── renderFeed override with bookmark + share ──
+    // -- renderFeed override with bookmark + share --
     const _origRenderFeed = renderFeed;
     renderFeed = function() {
       _origRenderFeed();
@@ -3388,7 +3400,7 @@ const GEO_KEYWORDS = [
       });
     };
 
-    // ── Filter clear-all button ──
+    // -- Filter clear-all button --
     (function(){
       const fb = document.querySelector('.filter-bar');
       if(!fb) return;
@@ -3406,7 +3418,7 @@ const GEO_KEYWORDS = [
       fb.appendChild(clear);
     })();
 
-    // ── Personalization: track topic interest ──
+    // -- Personalization: track topic interest --
     (function(){
       function getInterests(){ try{return JSON.parse(localStorage.getItem('astroaxis_interests')||'{}');}catch(e){return{};} }
       function trackInterest(topic){
@@ -3441,7 +3453,7 @@ const GEO_KEYWORDS = [
       }
     })();
 
-    // ── initApp: called after NEWS_DATA loaded ──
+    // -- initApp: called after NEWS_DATA loaded --
     function initApp() {
       const articles = NEWS_DATA.articles || [];
       if(!articles.length){
@@ -3477,7 +3489,7 @@ const GEO_KEYWORDS = [
       setInterval(checkBreaking, 300000);
       initStarField();  // Create history rings after timelineData loaded
       animate();
-      // ── Default view: first visit → feed, returning → remembered view ──
+      // -- Default view: first visit → feed, returning → remembered view --
       const savedView = localStorage.getItem('astroaxis_view');
       if (!savedView || savedView === 'globe') {
         // First visit: show feed instead of globe
@@ -3494,7 +3506,7 @@ const GEO_KEYWORDS = [
     }
   </script>
 
-  <!-- ── Hidden analytics panel (Ctrl+Shift+A to toggle) ── -->
+  <!-- -- Hidden analytics panel (Ctrl+Shift+A to toggle) -- -->
   <style>
     #astroaxis-analytics-panel {
       position: fixed; top: 0; left: 0; right: 0; bottom: 0;
@@ -3574,7 +3586,7 @@ const GEO_KEYWORDS = [
       };
       function renderAnalytics() {
         var html = '';
-        // ── Overview stats ──
+        // -- Overview stats --
         var a = (function(){try{return JSON.parse(localStorage.getItem('astroaxis_analytics')||'{}');}catch(e){return{};}})();
         var clicks = (function(){try{return JSON.parse(localStorage.getItem('astroaxis_clicks')||'{}');}catch(e){return{};}})();
         var searches = (function(){try{return JSON.parse(localStorage.getItem('astroaxis_searches')||'[]');}catch(e){return[];}})();
@@ -3589,19 +3601,19 @@ const GEO_KEYWORDS = [
         html += '<div class="stat-card"><span class="val">'+topArts+'</span><span class="label">Articles Clicked</span></div>';
         html += '<div class="stat-card"><span class="val">'+(searches.length||0)+'</span><span class="label">Searches</span></div>';
         html += '</div>';
-        // ── Top clicked articles ──
+        // -- Top clicked articles --
         var sorted = Object.keys(clicks).sort(function(a,b){return (clicks[b]||0)-(clicks[a]||0);});
         if (sorted.length > 0) {
           html += '<div class="section"><h2>🖱️ Top Clicked</h2><table><tr><th>#</th><th>Article</th><th class="num">Clicks</th></tr>';
           sorted.slice(0, 15).forEach(function(key, i) {
             // Truncate long titles
             var label = key.replace(/-/g,' ');
-            if (label.length > 40) label = label.slice(0,40)+'…';
+            if (label.length > 40) label = label.slice(0,40)+'...';
             html += '<tr><td>'+(i+1)+'</td><td title="'+key.replace(/'/g,'&apos;')+'">'+label+'</td><td class="num">'+(clicks[key]||0)+'</td></tr>';
           });
           html += '</table></div>';
         }
-        // ── Recent searches ──
+        // -- Recent searches --
         if (searches.length > 0) {
           html += '<div class="section"><h2>🔍 Recent Searches</h2><table><tr><th>#</th><th>Query</th><th>Results</th></tr>';
           searches.slice(-10).reverse().forEach(function(s, i) {
@@ -3609,7 +3621,7 @@ const GEO_KEYWORDS = [
           });
           html += '</table></div>';
         }
-        // ── Session history ──
+        // -- Session history --
         if (a.sessions && a.sessions.length > 0) {
           html += '<div class="section"><h2>⏱️ Recent Sessions</h2><table><tr><th>#</th><th>Duration</th><th>Started</th></tr>';
           a.sessions.slice(-5).reverse().forEach(function(s, i) {
