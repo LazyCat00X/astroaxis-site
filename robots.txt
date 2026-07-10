@@ -1,7 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://lazycat00x.github.io/astroaxis-site/sitemap.xml
-
-# Cache directives
-Crawl-delay: 1
