@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hyperliquid Policy Center and Phantom Ask CFTC to Pave Way for Onchain Infra · Buffalo Bills quarterback Josh Allen says</title>
-  <meta name="description" content="Buffalo Bills quarterback Josh Allen says he would 'entertai · A new kind of robot swims the seas and soars the skies · Meet Biomni: the free powerful biomed AI agent turning data  — AI-powered world " />
+  <title>Neuro-symbolic artificial intelligence in medicine - Nature · TeraWulf eyes $3.5B debt raise for Anthropic-linked data c</title>
+  <meta name="description" content="TeraWulf eyes $3.5B debt raise for Anthropic-linked data cen · Ann Widdecombe: Brexit-backing, animal-loving Strictly star · At least 12 people die in Spanish wildfire as heatwave grips — AI-powered w" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2078,6 +2078,7 @@ const GEO_KEYWORDS = [
     // Create ONE cluster marker per location group
     // with size proportional to article count
     const countSprites = [];
+    window._countSprites = countSprites;
     Object.values(locationGroups).forEach((group) => {
       const { baseLat, baseLon, city } = group[0];
       const groupSize = group.length;
@@ -2456,6 +2457,13 @@ const GEO_KEYWORDS = [
       if (hits.length && hits[0].instanceId !== undefined) {
         const idx = hits[0].instanceId;
         if (invisibleFlags[idx]) return;
+        // Occlusion: skip markers on the back face of the globe
+        const markerPos = markerPositions[idx];
+        if (markerPos) {
+          const toMarker = new THREE.Vector3().copy(markerPos).normalize();
+          const toCam = new THREE.Vector3().copy(camera.position).normalize();
+          if (toMarker.dot(toCam) < 0.3) return; // Back face, skip
+        }
         const data = markerData[idx];
         if (data !== hoveredData) {
           hoveredIdx = idx;
@@ -3127,6 +3135,14 @@ const GEO_KEYWORDS = [
       for (let i = 0; i < markerCount; i++) {
         const data = markerData[i];
         const isHovered = data === hoveredData;
+        // Occlusion: hide back-face markers
+        const markerPos = markerPositions[i];
+        let isBackFace = false;
+        if (markerPos) {
+          const toM = new THREE.Vector3().copy(markerPos).normalize();
+          const toC = new THREE.Vector3().copy(camera.position).normalize();
+          if (toM.dot(toC) < 0.3) isBackFace = true;
+        }
         const target = isHovered ? 1.85 : 1 + Math.sin(elapsed * 2.6 + i * 0.47) * 0.09;
         const prev = data.instanceScale;
         data.instanceScale += (target - prev) * 0.18;
@@ -3136,22 +3152,42 @@ const GEO_KEYWORDS = [
         const gop = isHovered ? 0.50 : 0.22 + Math.sin(elapsed * 1.8 + i) * 0.08;
         const clusterDensity = Math.min(1, 4 / (data._groupSize || 1));
         data.glowOpacity += (gop * clusterDensity - data.glowOpacity) * 0.18;
-        if (Math.abs(s - prev) > 0.001) {
+        if (Math.abs(s - prev) > 0.001 || isBackFace) {
           instancedMarkers.getMatrixAt(i, _dummy.matrix);
           _pos.setFromMatrixPosition(_dummy.matrix);
           _dummy.position.copy(_pos);
-          _dummy.scale.set(s, s, s);
+          if (isBackFace) {
+            _dummy.position.set(0, -100, 0);
+          } else {
+            _dummy.scale.set(s, s, s);
+          }
           _dummy.updateMatrix();
           instancedMarkers.setMatrixAt(i, _dummy.matrix);
           instancedGlows.getMatrixAt(i, _dummy.matrix);
           _glowPos.setFromMatrixPosition(_dummy.matrix);
           _dummy.position.copy(_glowPos);
-          const glowS = s * 2.0;
-          _dummy.scale.set(glowS, glowS, glowS);
+          if (isBackFace) {
+            _dummy.position.set(0, -100, 0);
+          } else {
+            const glowS = s * 2.0;
+            _dummy.scale.set(glowS, glowS, glowS);
+          }
           _dummy.updateMatrix();
           instancedGlows.setMatrixAt(i, _dummy.matrix);
           needsUpdate = true;
         }
+      }
+      // Hide/show count sprites based on occlusion
+      if (window._countSprites && window._countSprites.length) {
+        const _toM = new THREE.Vector3();
+        const _toC = new THREE.Vector3().copy(camera.position).normalize();
+        window._countSprites.forEach((spr, i) => {
+          const pos = markerPositions[i];
+          if (pos) {
+            _toM.copy(pos).normalize();
+            spr.visible = _toM.dot(_toC) >= 0.3;
+          }
+        });
       }
       if (needsUpdate) {
         instancedMarkers.instanceMatrix.needsUpdate = true;
