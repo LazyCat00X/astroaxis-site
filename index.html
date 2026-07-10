@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Former Tory minister Ann Widdecombe dies at 78 · 12 People Die in Southern Spain Wildfire · 2 Magnificent Artificial Int</title>
-  <meta name="description" content="12 People Die in Southern Spain Wildfire · 2 Magnificent Artificial Intelligence (AI) Stocks Down 16% t · Administration without sovereignty will not free Palestine — AI-powered world news aggregator " />
+  <title>Trump Says Iran Ceasefire Over But Talks on Deal to Continue · ‘She wants him gone’: My friend took in a homeless man as</title>
+  <meta name="description" content="‘She wants him gone’: My friend took in a homeless man as a  · Spanish wildfire victims burned in cars as roads turned into · Can you pass this money quiz? — AI-powered world news aggregator with 3D g" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2462,24 +2462,13 @@ const GEO_KEYWORDS = [
         if (markerPos) {
           const toMarker = new THREE.Vector3().copy(markerPos).normalize();
           const toCam = new THREE.Vector3().copy(camera.position).normalize();
-          if (toMarker.dot(toCam) < 0.3) {
-          // If this was the hovered marker, clear it
-          if (hoveredData && hoveredIdx === idx) {
-            hoveredIdx = -1;
-            hoveredData = null;
-            tooltip.classList.remove('visible');
-            updateAgentLayer(null);
-          }
-          renderer.domElement.style.cursor = 'grab';
-          return; // Back face, skip
-        }
+          if (toMarker.dot(toCam) < 0.3) return; // Back face, skip
         }
         const data = markerData[idx];
         if (data !== hoveredData) {
           hoveredIdx = idx;
           hoveredData = data;
           updateAgentLayer(data, idx);
-          renderer.domElement.style.cursor = 'pointer';
           // Pause auto-rotate while hovering a marker
           if (controls.autoRotate) controls.autoRotate = false;
           const cnt = data.articles.length;
@@ -2524,7 +2513,6 @@ const GEO_KEYWORDS = [
         hoveredData = null;
         tooltip.classList.remove('visible');
         updateAgentLayer(null);
-        renderer.domElement.style.cursor = 'grab';
       }
     }, { passive: true });
 
