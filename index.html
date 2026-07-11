@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>As Typhoon Bavi nears, Chinese bloggers warned amateur AI forecasts may be illegal · Meta removes controversial AI featu</title>
-  <meta name="description" content="Meta removes controversial AI feature on Instagram after bac · Meta turns off the Instagram feature that let users make AI  · Could Andy Burnham scrap stamp duty? — AI-powered world news aggregator wi" />
+  <title>OpenAI’s Head of Safety Is Leaving the Company · US cyber agency CISA had to build its incident playbook duri · Trump Tr</title>
+  <meta name="description" content="US cyber agency CISA had to build its incident playbook duri · Trump Tried to Block Canada’s New Bridge to Detroit. It’s Op · Venezuela quake death toll passes 4,000 as scale of recovery — AI-powered " />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2636,7 +2636,11 @@ const GEO_KEYWORDS = [
         return;
       }
       // Marker click
-      if (!hitData || !hitData.articles) return;
+      if (!hitData || !hitData.articles) {
+        renderer.domElement.style.cursor = 'grab';
+        return;
+      }
+      renderer.domElement.style.cursor = 'pointer';
       const articles = hitData.articles;
       if (articles.length === 1) {
         window.location.href = articles[0].url;
@@ -2677,6 +2681,7 @@ const GEO_KEYWORDS = [
         hoveredIdx = -1; hoveredData = null; tooltip.classList.remove('visible');
         updateAgentLayer(null);
       }
+      renderer.domElement.style.cursor = 'grab';
     }, { passive: true });
 
     document.querySelectorAll('.filter-btn').forEach(button => {
@@ -3200,6 +3205,21 @@ const GEO_KEYWORDS = [
             spr.visible = _toM.dot(_toC) >= 0.3;
           }
         });
+      }
+      // If hovered marker rotated to back face, clear it
+      if (hoveredData && hoveredIdx >= 0) {
+        const hp = markerPositions[hoveredIdx];
+        if (hp) {
+          const toH = new THREE.Vector3().copy(hp).normalize();
+          const toC = new THREE.Vector3().copy(camera.position).normalize();
+          if (toH.dot(toC) < 0.3) {
+            hoveredIdx = -1;
+            hoveredData = null;
+            tooltip.classList.remove('visible');
+            updateAgentLayer(null);
+            renderer.domElement.style.cursor = 'grab';
+          }
+        }
       }
       if (needsUpdate) {
         instancedMarkers.instanceMatrix.needsUpdate = true;
