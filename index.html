@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TV presenter Dermot Murnaghan dies aged 68 · Beatbot AquaSense X Review: A Pool Robot That Cleans Itself · Grand Slam: W</title>
-  <meta name="description" content="Beatbot AquaSense X Review: A Pool Robot That Cleans Itself · Grand Slam: Why Wimbledon Is Still the Biggest Stage in Tenn · Skylight’s Touchscreen Calendar Got my Whole Family on the S — AI-powered w" />
+  <title>As Typhoon Bavi nears, Chinese bloggers warned amateur AI forecasts may be illegal · Meta removes controversial AI featu</title>
+  <meta name="description" content="Meta removes controversial AI feature on Instagram after bac · Meta turns off the Instagram feature that let users make AI  · Could Andy Burnham scrap stamp duty? — AI-powered world news aggregator wi" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1293,6 +1293,7 @@
     let markerPositions = [];
     let markerColors = [];
     let markerData = [];
+    let originalPositions = [];
     
     // Load both data files in parallel with localStorage cache
     (function loadData() {
@@ -2150,7 +2151,7 @@ const GEO_KEYWORDS = [
     const colorAttr = new THREE.InstancedBufferAttribute(new Float32Array(markerCount * 3), 3);
     // Build scale array for per-instance size
     const scaleAttr = new THREE.InstancedBufferAttribute(new Float32Array(markerCount), 1);
-    const originalPositions = markerPositions.map(p => p.clone());
+    originalPositions = markerPositions.map(p => p.clone());
     for (let i = 0; i < markerCount; i++) {
       dummy.position.copy(markerPositions[i]);
       dummy.scale.set(markerData[i].baseScale, markerData[i].baseScale, markerData[i].baseScale);
@@ -2457,23 +2458,8 @@ const GEO_KEYWORDS = [
       if (hits.length && hits[0].instanceId !== undefined) {
         const idx = hits[0].instanceId;
         if (invisibleFlags[idx]) return;
-        // Occlusion: skip markers on the back face of the globe
-        const markerPos = markerPositions[idx];
-        if (markerPos) {
-          const toMarker = new THREE.Vector3().copy(markerPos).normalize();
-          const toCam = new THREE.Vector3().copy(camera.position).normalize();
-          if (toMarker.dot(toCam) < 0.3) {
-          // If this was the hovered marker, clear it
-          if (hoveredData && hoveredIdx === idx) {
-            hoveredIdx = -1;
-            hoveredData = null;
-            tooltip.classList.remove('visible');
-            updateAgentLayer(null);
-          }
-          renderer.domElement.style.cursor = 'grab';
-          return; // Back face, skip
-        }
-        }
+        // animate loop already moves back-face markers to (0,-100,0),
+        // so raycaster only hits visible front-face markers.
         const data = markerData[idx];
         if (data !== hoveredData) {
           hoveredIdx = idx;
@@ -3155,14 +3141,6 @@ const GEO_KEYWORDS = [
       for (let i = 0; i < markerCount; i++) {
         const data = markerData[i];
         const isHovered = data === hoveredData;
-        // Occlusion: hide back-face markers
-        const markerPos = markerPositions[i];
-        let isBackFace = false;
-        if (markerPos) {
-          const toM = new THREE.Vector3().copy(markerPos).normalize();
-          const toC = new THREE.Vector3().copy(camera.position).normalize();
-          if (toM.dot(toC) < 0.3) isBackFace = true;
-        }
         const target = isHovered ? 1.85 : 1 + Math.sin(elapsed * 2.6 + i * 0.47) * 0.09;
         const prev = data.instanceScale;
         data.instanceScale += (target - prev) * 0.18;
@@ -3172,57 +3150,26 @@ const GEO_KEYWORDS = [
         const gop = isHovered ? 0.50 : 0.22 + Math.sin(elapsed * 1.8 + i) * 0.08;
         const clusterDensity = Math.min(1, 4 / (data._groupSize || 1));
         data.glowOpacity += (gop * clusterDensity - data.glowOpacity) * 0.18;
-        if (Math.abs(s - prev) > 0.001 || isBackFace) {
+        if (Math.abs(s - prev) > 0.001) {
           instancedMarkers.getMatrixAt(i, _dummy.matrix);
           _pos.setFromMatrixPosition(_dummy.matrix);
           _dummy.position.copy(_pos);
-          if (isBackFace) {
-            _dummy.position.set(0, -100, 0);
-          } else {
-            _dummy.scale.set(s, s, s);
-          }
+          _dummy.scale.set(s, s, s);
           _dummy.updateMatrix();
           instancedMarkers.setMatrixAt(i, _dummy.matrix);
           instancedGlows.getMatrixAt(i, _dummy.matrix);
           _glowPos.setFromMatrixPosition(_dummy.matrix);
           _dummy.position.copy(_glowPos);
-          if (isBackFace) {
-            _dummy.position.set(0, -100, 0);
-          } else {
-            const glowS = s * 2.0;
-            _dummy.scale.set(glowS, glowS, glowS);
-          }
+          const glowS = s * 2.0;
+          _dummy.scale.set(glowS, glowS, glowS);
           _dummy.updateMatrix();
           instancedGlows.setMatrixAt(i, _dummy.matrix);
           needsUpdate = true;
         }
       }
-      // Hide/show count sprites based on occlusion
+      // Count sprites always visible (no occlusion)
       if (window._countSprites && window._countSprites.length) {
-        const _toM = new THREE.Vector3();
-        const _toC = new THREE.Vector3().copy(camera.position).normalize();
-        window._countSprites.forEach((spr, i) => {
-          const pos = markerPositions[i];
-          if (pos) {
-            _toM.copy(pos).normalize();
-            spr.visible = _toM.dot(_toC) >= 0.3;
-          }
-        });
-      }
-      // If hovered marker rotated to back face, clear it
-      if (hoveredData && hoveredIdx >= 0) {
-        const hp = markerPositions[hoveredIdx];
-        if (hp) {
-          const toH = new THREE.Vector3().copy(hp).normalize();
-          const toC = new THREE.Vector3().copy(camera.position).normalize();
-          if (toH.dot(toC) < 0.3) {
-            hoveredIdx = -1;
-            hoveredData = null;
-            tooltip.classList.remove('visible');
-            updateAgentLayer(null);
-            renderer.domElement.style.cursor = 'grab';
-          }
-        }
+        window._countSprites.forEach(spr => { spr.visible = true; });
       }
       if (needsUpdate) {
         instancedMarkers.instanceMatrix.needsUpdate = true;
