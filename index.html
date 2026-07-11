@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apple sues OpenAI, alleging the AI company stole trade secrets - The Washington Post · Housing bill that includes a CBDC</title>
-  <meta name="description" content="Housing bill that includes a CBDC ban passed into law withou · ‘They Don’t Need People’: The Workers Left Behind by China’s · 用 AI 抓漏洞！以太坊基金會：9 成是「偽陽性」誤報、須人工判斷 — AI-powered world news aggregator with " />
+  <title>As Typhoon Bavi nears, Chinese bloggers warned amateur AI forecasts may be illegal · Meta removes controversial AI featu</title>
+  <meta name="description" content="Meta removes controversial AI feature on Instagram after bac · Meta turns off the Instagram feature that let users make AI  · Could Andy Burnham scrap stamp duty? — AI-powered world news aggregator wi" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2460,8 +2460,12 @@ const GEO_KEYWORDS = [
         // Occlusion: skip markers on the back face of the globe
         const markerPos = markerPositions[idx];
         if (markerPos) {
-          const toMarker = new THREE.Vector3().copy(markerPos).normalize();
-          const toCam = new THREE.Vector3().copy(camera.position).normalize();
+          // Convert marker from local (globe) space to world space before comparing with camera
+          const markerWorld = new THREE.Vector3().copy(markerPos).applyMatrix4(globe.matrixWorld);
+          const globeCenter = new THREE.Vector3();
+          globe.getWorldPosition(globeCenter);
+          const toMarker = markerWorld.sub(globeCenter).normalize();
+          const toCam = new THREE.Vector3().copy(camera.position).sub(globeCenter).normalize();
           if (toMarker.dot(toCam) < 0.3) {
           // If this was the hovered marker, clear it
           if (hoveredData && hoveredIdx === idx) {
@@ -3159,8 +3163,12 @@ const GEO_KEYWORDS = [
         const markerPos = markerPositions[i];
         let isBackFace = false;
         if (markerPos) {
-          const toM = new THREE.Vector3().copy(markerPos).normalize();
-          const toC = new THREE.Vector3().copy(camera.position).normalize();
+          // Convert marker from local (globe) space to world space
+          const markerWorld = new THREE.Vector3().copy(markerPos).applyMatrix4(globe.matrixWorld);
+          const globeCenter = new THREE.Vector3();
+          globe.getWorldPosition(globeCenter);
+          const toM = markerWorld.sub(globeCenter).normalize();
+          const toC = new THREE.Vector3().copy(camera.position).sub(globeCenter).normalize();
           if (toM.dot(toC) < 0.3) isBackFace = true;
         }
         const target = isHovered ? 1.85 : 1 + Math.sin(elapsed * 2.6 + i * 0.47) * 0.09;
@@ -3200,11 +3208,13 @@ const GEO_KEYWORDS = [
       // Hide/show count sprites based on occlusion
       if (window._countSprites && window._countSprites.length) {
         const _toM = new THREE.Vector3();
-        const _toC = new THREE.Vector3().copy(camera.position).normalize();
+        const _globeC = new THREE.Vector3();
+        globe.getWorldPosition(_globeC);
+        const _toC = new THREE.Vector3().copy(camera.position).sub(_globeC).normalize();
         window._countSprites.forEach((spr, i) => {
           const pos = markerPositions[i];
           if (pos) {
-            _toM.copy(pos).normalize();
+            _toM.copy(pos).applyMatrix4(globe.matrixWorld).sub(_globeC).normalize();
             spr.visible = _toM.dot(_toC) >= 0.3;
           }
         });
@@ -3213,8 +3223,11 @@ const GEO_KEYWORDS = [
       if (hoveredData && hoveredIdx >= 0) {
         const hp = markerPositions[hoveredIdx];
         if (hp) {
-          const toH = new THREE.Vector3().copy(hp).normalize();
-          const toC = new THREE.Vector3().copy(camera.position).normalize();
+          const hpWorld = new THREE.Vector3().copy(hp).applyMatrix4(globe.matrixWorld);
+          const gc = new THREE.Vector3();
+          globe.getWorldPosition(gc);
+          const toH = hpWorld.sub(gc).normalize();
+          const toC = new THREE.Vector3().copy(camera.position).sub(gc).normalize();
           if (toH.dot(toC) < 0.3) {
             hoveredIdx = -1;
             hoveredData = null;
