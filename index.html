@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OpenAI’s Head of Safety Is Leaving the Company · US cyber agency CISA had to build its incident playbook duri · Trump Tr</title>
-  <meta name="description" content="US cyber agency CISA had to build its incident playbook duri · Trump Tried to Block Canada’s New Bridge to Detroit. It’s Op · Venezuela quake death toll passes 4,000 as scale of recovery — AI-powered " />
+  <title>Apple files lawsuit accusing ChatGPT maker OpenAI of stealing trade secrets - ABC News - Breaking Ne · OpenAI’s Head of </title>
+  <meta name="description" content="OpenAI’s Head of Safety Is Leaving the Company · US cyber agency CISA had to build its incident playbook duri · Trump Tried to Block Canada’s New Bridge to Detroit. It’s Op — AI-powered world news agg" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2525,10 +2525,13 @@ const GEO_KEYWORDS = [
         tooltip.classList.remove('visible');
         updateAgentLayer(null);
         renderer.domElement.style.cursor = 'grab';
+      } else {
+        // No marker hovered — ensure cursor is grab
+        renderer.domElement.style.cursor = 'grab';
       }
     }, { passive: true });
 
-    // -- History dot hover: show event tooltip --
+    // ── History dot hover: show event tooltip ──
     let hoveredHistoryDot = null;
     renderer.domElement.addEventListener('pointermove', event => {
       if (!historyGroup || !window._historyDots) return;
@@ -2537,16 +2540,16 @@ const GEO_KEYWORDS = [
       const dotHits = raycaster.intersectObjects(window._historyDots);
       if (dotHits.length) {
         const dot = dotHits[0].object;
-        // Occlusion check: skip dots BEHIND the globe
-        const globeCenter = new THREE.Vector3(0, -0.8, 0);
+        // Occlusion: skip dots on the back face
         const dotPos = new THREE.Vector3();
         dotPos.copy(dot.position);
         globe.localToWorld(dotPos);
-        const toDot = dotPos.sub(globeCenter).normalize();
-        const toCam = new THREE.Vector3().copy(camera.position).sub(globeCenter).normalize();
-        if (toDot.dot(toCam) < 0.5) return; // Dot is on back face, skip
+        const toDot = dotPos.sub(new THREE.Vector3(0, -0.8, 0)).normalize();
+        const toCam = new THREE.Vector3().copy(camera.position).sub(new THREE.Vector3(0, -0.8, 0)).normalize();
+        if (toDot.dot(toCam) < 0.5) return;
         if (dot !== hoveredHistoryDot) {
           hoveredHistoryDot = dot;
+          renderer.domElement.style.cursor = 'pointer';
           const ev = dot.userData._event;
           if (ev) {
             const evType = ev.type || 'general';
