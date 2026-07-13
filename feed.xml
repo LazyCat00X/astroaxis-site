@@ -5,13 +5,614 @@
 <link>https://lazycat00x.github.io/astroaxis-site</link>
 <description>AI-powered news aggregator</description>
 <language>en</language>
-<lastBuildDate>Mon, 13 Jul 2026 21:06:54 +0000</lastBuildDate>
+<lastBuildDate>Mon, 13 Jul 2026 23:03:41 +0000</lastBuildDate>
 <generator>AstroAxis</generator>
 <image>
 <url>https://lazycat00x.github.io/astroaxis-site/og-image.png</url>
 <title>AstroAxis</title>
 <link>https://lazycat00x.github.io/astroaxis-site</link>
 </image>
+<item>
+<title>The U.S. is maxing out its strategic oil reserves as Trump vows to control the Strait of Hormuz</title>
+<link>https://www.marketwatch.com/story/the-u-s-is-maxing-out-its-strategic-oil-reserves-as-trump-vows-to-control-the-strait-of-hormuz-b71f88a9?mod=mw_rss_topstories</link>
+<guid>https://www.marketwatch.com/story/the-u-s-is-maxing-out-its-strategic-oil-reserves-as-trump-vows-to-control-the-strait-of-hormuz-b71f88a9?mod=mw_rss_topstories</guid>
+<pubDate>Mon, 13 Jul 2026 22:50:00 +0000</pubDate>
+<category>Politics</category>
+<description>• 根據政府報告，美國的戰略石油儲備庫存量已經降至危險低位，受到設備故障、洩漏和溢出的影響。  
+• 特朗普承諾將控制霍爾木茲海峽，以應對能源安全問題。  
+• 戰略石油儲備的低庫存可能影響美國的能源政策和市場穩定。  
+• 政府正在評估儲備的狀況並考慮未來的補充計劃。</description>
+<source url="https://www.marketwatch.com/story/the-u-s-is-maxing-out-its-strategic-oil-reserves-as-trump-vows-to-control-the-strait-of-hormuz-b71f88a9?mod=mw_rss_topstories">MarketWatch</source>
+</item>
+<item>
+<title>Stop Over-Prompting: OpenAI’s New GPT-5.6 Guidelines Change Everything</title>
+<link>https://decrypt.co/373439/openai-new-gpt-5-6-prompt-guide-chatgpt</link>
+<guid>https://decrypt.co/373439/openai-new-gpt-5-6-prompt-guide-chatgpt</guid>
+<pubDate>Mon, 13 Jul 2026 22:46:04 +0000</pubDate>
+<category>AI</category>
+<description>• OpenAI發佈了新的GPT-5.6 Sol提示指南，強調應減少系統提示的長度，轉向以結果為導向的提示方式。  
+• 內部測試顯示，精簡的系統提示能提高評估分數約10-15%，同時降低總標記數41-66%及成本33-67%。  
+• 新指南首次引入程序化工具調用和文本冗長性API參數，這些在GPT-5的指南中並不存在。  
+• 指南警告GPT-5.6會嚴格遵循提示合約，並建議避免使用絕對性指令以防止衝突規則造成的不穩定。</description>
+<source url="https://decrypt.co/373439/openai-new-gpt-5-6-prompt-guide-chatgpt">Decrypt</source>
+</item>
+<item>
+<title>US launches third night of strikes on Iran as Trump announces Hormuz blockade</title>
+<link>https://www.theguardian.com/world/2026/jul/13/us-launches-third-night-of-strikes-on-iran-as-trump-announces-hormuz-blockade</link>
+<guid>https://www.theguardian.com/world/2026/jul/13/us-launches-third-night-of-strikes-on-iran-as-trump-announces-hormuz-blockade</guid>
+<pubDate>Mon, 13 Jul 2026 22:43:12 +0000</pubDate>
+<category>World</category>
+<description>• 美國在伊朗發動第三晚空襲，總統特朗普宣布恢復對該國的海上封鎖並對船隻收取通行費。  
+• 美國中央司令部表示，這些空襲將對伊朗軍隊造成重大損失，削弱其攻擊無辜平民和商業航運的能力。  
+• 特朗普在保守派廣播主持人希尤·休伊特的節目中表示，將對伊朗進行強烈打擊，並要求對所有通過霍爾木茲海峽的貨物徵收20%關稅。  
+• 美國海軍將於格林威治標準時間周二晚上8點開始執行對伊朗的封鎖，任何未經授權進出封鎖區域的船隻將面臨攔截和捕獲。</description>
+<source url="https://www.theguardian.com/world/2026/jul/13/us-launches-third-night-of-strikes-on-iran-as-trump-announces-hormuz-blockade">The Guardian</source>
+</item>
+<item>
+<title>AI-driven 'chipflation' puts chill on electronics purchases - Nikkei Asia</title>
+<link>https://news.google.com/rss/articles/CBMirwFBVV95cUxQbHdaTnhna2JKa2FwMlJzOGxjeGt6LXJrMXBvektKTGZFNm02MXJtUFlGcGVOVXBEUXVORzJCbGdWaFBKQlhsN3NBa0NReWdXNUJRSTFFN0diZU1BQkVEMTJ4LWItYUNQa0Q5MzJIakFSZ0pPMHZEZFpoOWNVa0RIWXNMZzJfT2xQa09iel81QVh6cmRNM2JrYXdseW93QWhIbVgybHNjSmVZVEZxTkww?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMirwFBVV95cUxQbHdaTnhna2JKa2FwMlJzOGxjeGt6LXJrMXBvektKTGZFNm02MXJtUFlGcGVOVXBEUXVORzJCbGdWaFBKQlhsN3NBa0NReWdXNUJRSTFFN0diZU1BQkVEMTJ4LWItYUNQa0Q5MzJIakFSZ0pPMHZEZFpoOWNVa0RIWXNMZzJfT2xQa09iel81QVh6cmRNM2JrYXdseW93QWhIbVgybHNjSmVZVEZxTkww?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 22:36:00 +0000</pubDate>
+<category>General</category>
+<description>• 由於人工智能驅動的「晶片通脹」，電子產品的購買需求減少  
+• 晶片價格上漲影響了消費者的購買決策  
+• 許多電子產品製造商報告銷售下滑，特別是在智能手機和電腦市場  
+• 專家指出，這一趨勢可能會持續影響市場，特別是在高通脹環境下</description>
+<source url="https://news.google.com/rss/articles/CBMirwFBVV95cUxQbHdaTnhna2JKa2FwMlJzOGxjeGt6LXJrMXBvektKTGZFNm02MXJtUFlGcGVOVXBEUXVORzJCbGdWaFBKQlhsN3NBa0NReWdXNUJRSTFFN0diZU1BQkVEMTJ4LWItYUNQa0Q5MzJIakFSZ0pPMHZEZFpoOWNVa0RIWXNMZzJfT2xQa09iel81QVh6cmRNM2JrYXdseW93QWhIbVgybHNjSmVZVEZxTkww?oc=5">Nikkei Asia</source>
+</item>
+<item>
+<title>Backed by Trump, Lindsey Graham’s sister Darline will replace him in Senate</title>
+<link>https://www.aljazeera.com/news/2026/7/13/backed-by-trump-lindsey-grahams-sister-darline-will-replace-him-in-senate?traffic_source=rss</link>
+<guid>https://www.aljazeera.com/news/2026/7/13/backed-by-trump-lindsey-grahams-sister-darline-will-replace-him-in-senate?traffic_source=rss</guid>
+<pubDate>Mon, 13 Jul 2026 22:33:08 +0000</pubDate>
+<category>Politics</category>
+<description>• 南卡羅來納州州長亨利·麥克馬斯特任命達琳·格雷厄姆·諾多恩為美國參議院臨時參議員，以接替已故的林賽·格雷厄姆，任期至2027年1月3日。  
+• 特朗普在任命前公開支持諾多恩，稱她是林賽·格雷厄姆的「美妙妹妹」。  
+• 諾多恩曾擔任南卡羅來納州盲人委員會主席，並在政治活動中與其兄弟一起出現，但缺乏正式的政治經驗。  
+• 她表示將努力支持總統，並延續其兄弟的工作，未透露是否會參加完整的參議院任期選舉。</description>
+<source url="https://www.aljazeera.com/news/2026/7/13/backed-by-trump-lindsey-grahams-sister-darline-will-replace-him-in-senate?traffic_source=rss">Al Jazeera</source>
+</item>
+<item>
+<title>Nine deaths tied to Trump’s immigration enforcement operations in US</title>
+<link>https://www.aljazeera.com/news/2026/7/13/nine-deaths-tied-to-trumps-immigration-enforcement-operations-in-us?traffic_source=rss</link>
+<guid>https://www.aljazeera.com/news/2026/7/13/nine-deaths-tied-to-trumps-immigration-enforcement-operations-in-us?traffic_source=rss</guid>
+<pubDate>Mon, 13 Jul 2026 22:31:36 +0000</pubDate>
+<category>Politics</category>
+<description>• 美國總統特朗普的移民執法行動已導致至少九人死亡，最新事件發生在緬因州比德福德，移民官員開槍擊斃一名駕駛者。  
+• 事件發生於7月13日，當局稱該駕駛者在試圖逮捕時用車輛對抗執法人員，但目擊者的說法對此提出質疑。  
+• 另一名死者洛倫佐·薩爾加多·阿勞霍於7月7日在德克薩斯州休斯頓的執法行動中被射殺，當局表示他試圖逃避逮捕。  
+• 美國國土安全部表示，阿勞霍因無合法身份而成為執法目標，事件引發移民權益團體和部分民主黨議員要求獨立調查。</description>
+<source url="https://www.aljazeera.com/news/2026/7/13/nine-deaths-tied-to-trumps-immigration-enforcement-operations-in-us?traffic_source=rss">Al Jazeera</source>
+</item>
+<item>
+<title>Sam Neill Inspired a Generation of Scientists</title>
+<link>https://www.wired.com/story/sam-neill-inspired-a-generation-of-scientists/</link>
+<guid>https://www.wired.com/story/sam-neill-inspired-a-generation-of-scientists/</guid>
+<pubDate>Mon, 13 Jul 2026 22:26:22 +0000</pubDate>
+<category>Science</category>
+<description>• 紐西蘭演員薩姆·尼爾於周一在澳洲悉尼去世，享年78歲，生前參演多部電影，包括《侏羅紀公園》中的艾倫·格蘭特博士。
+• 許多科學家表示，尼爾在《侏羅紀公園》中飾演的格蘭特博士激勵他們追求科學事業，並成為他們心目中的科學榜樣。
+• 尼爾的角色被認為展現了科學家的理智和目的感，並且強調了對地球歷史的尊重。
+• 對於許多觀眾來說，尼爾的表現不僅影響了他們的職業選擇，也改變了他們對科學的看法。</description>
+<source url="https://www.wired.com/story/sam-neill-inspired-a-generation-of-scientists/">Wired</source>
+</item>
+<item>
+<title>Police hope new photos will jog memories in investigation of murder of British backpacker Peter Falconio</title>
+<link>https://www.theguardian.com/australia-news/2026/jul/14/peter-falconio-murder-joanne-lees-abduction-anniversary-northern-territory-police-mystery-photos</link>
+<guid>https://www.theguardian.com/australia-news/2026/jul/14/peter-falconio-murder-joanne-lees-abduction-anniversary-northern-territory-police-mystery-photos</guid>
+<pubDate>Mon, 13 Jul 2026 22:23:09 +0000</pubDate>
+<category>Finance</category>
+<description>• 北領地警方重新開啟彼得·法爾科尼奧（Peter Falconio）謀殺案的調查，並公開多張未曾曝光的照片，以期喚起目擊者的記憶。  
+• 這宗案件的25周年紀念日是2023年7月14日，法爾科尼奧在偏遠地區失踪，至今仍未找到其遺骸。  
+• 藍德利·約翰·穆多克（Bradley John Murdoch）因謀殺法爾科尼奧而被定罪，於2025年7月15日去世，未曾透露法爾科尼奧的遺骸下落。  
+• 警方表示，仍然提供50萬澳元的獎金，鼓勵任何提供有關法爾科尼奧遺骸信息的人士聯絡他們。</description>
+<source url="https://www.theguardian.com/australia-news/2026/jul/14/peter-falconio-murder-joanne-lees-abduction-anniversary-northern-territory-police-mystery-photos">The Guardian</source>
+</item>
+<item>
+<title>Why a borrowing binge by investors is a warning sign for the stock market</title>
+<link>https://www.marketwatch.com/story/why-a-borrowing-binge-by-investors-is-a-warning-sign-for-the-stock-market-996ee446?mod=mw_rss_topstories</link>
+<guid>https://www.marketwatch.com/story/why-a-borrowing-binge-by-investors-is-a-warning-sign-for-the-stock-market-996ee446?mod=mw_rss_topstories</guid>
+<pubDate>Mon, 13 Jul 2026 22:19:00 +0000</pubDate>
+<category>Finance</category>
+<description>• 投資者越來越多地借貸購買股票，顯示出市場的貪婪情緒 
+• 使用保證金債務來放大回報的行為引起了華爾街的擔憂 
+• 借貸金額的增加可能對股市造成潛在風險 
+• 專家指出，這種借貸潮可能是市場過熱的警告信號</description>
+<source url="https://www.marketwatch.com/story/why-a-borrowing-binge-by-investors-is-a-warning-sign-for-the-stock-market-996ee446?mod=mw_rss_topstories">MarketWatch</source>
+</item>
+<item>
+<title>New Zealand Business Confidence Recovered as Iran War Subsided</title>
+<link>https://www.bloomberg.com/news/articles/2026-07-13/new-zealand-business-confidence-recovered-as-iran-war-subsided</link>
+<guid>https://www.bloomberg.com/news/articles/2026-07-13/new-zealand-business-confidence-recovered-as-iran-war-subsided</guid>
+<pubDate>Mon, 13 Jul 2026 22:16:59 +0000</pubDate>
+<category>Finance</category>
+<description>• 新西蘭商業信心在第二季度回升，根據調查顯示，這與美國和伊朗之間的和平協議有關  
+• 和平協議促使燃料價格下跌，進一步提振商業信心  
+• 調查結果顯示，企業對未來經濟狀況的看法有所改善  
+• 新西蘭商業信心的回升反映了國內經濟的穩定性和增長潛力</description>
+<source url="https://www.bloomberg.com/news/articles/2026-07-13/new-zealand-business-confidence-recovered-as-iran-war-subsided">Bloomberg</source>
+</item>
+<item>
+<title>Protesters March on OpenAI, Anthropic, and Google DeepMind Demanding AI Development Pause</title>
+<link>https://decrypt.co/373433/stop-ai-protest-openai-anthropic-google-deepmind</link>
+<guid>https://decrypt.co/373433/stop-ai-protest-openai-anthropic-google-deepmind</guid>
+<pubDate>Mon, 13 Jul 2026 22:11:05 +0000</pubDate>
+<category>AI</category>
+<description>• 約200名抗議者在舊金山的OpenAI、Anthropic和Google DeepMind辦公室之間遊行，要求暫停開發更強大的人工智能模型。  
+• 抗議活動由Stop the AI Race組織，主要關注人工智能安全、失業、能源使用及住房成本上升等問題。  
+• 組織者Michaël Trazzi表示，抗議的目標已從說服企業CEO轉向提高政治關注度，並希望促進對人工智能安全的研究。  
+• OpenAI、Anthropic和Google DeepMind尚未對抗議活動作出回應，組織者計劃繼續倡導國際性暫停前沿人工智能的開發。</description>
+<source url="https://decrypt.co/373433/stop-ai-protest-openai-anthropic-google-deepmind">Decrypt</source>
+</item>
+<item>
+<title>Gold Miners Cadillac, Amapa Minerals Add to Canada IPO Rebound</title>
+<link>https://www.bloomberg.com/news/articles/2026-07-13/gold-miners-cadillac-amapa-minerals-add-to-canada-ipo-rebound</link>
+<guid>https://www.bloomberg.com/news/articles/2026-07-13/gold-miners-cadillac-amapa-minerals-add-to-canada-ipo-rebound</guid>
+<pubDate>Mon, 13 Jul 2026 22:10:10 +0000</pubDate>
+<category>Finance</category>
+<description>• Cadillac Mines Corp. 和 Amapa Minerals Holdings Inc. 提交了首次公開募股申請 
+• 這是加拿大上市活動回暖的最新跡象 
+• 兩家公司均專注於金礦開採 
+• 加拿大市場的IPO活動在近期有所增加</description>
+<source url="https://www.bloomberg.com/news/articles/2026-07-13/gold-miners-cadillac-amapa-minerals-add-to-canada-ipo-rebound">Bloomberg Crypto</source>
+</item>
+<item>
+<title>Bitcoin and Ethereum tweet volume falls to 12-month lows despite institutional crypto boom</title>
+<link>https://www.theblock.co/post/408061/bitcoin-ethereum-tweet-volume-falls-12-month-lows-despite-institutional-crypto-boom?utm_source=rss&amp;utm_medium=rss</link>
+<guid>https://www.theblock.co/post/408061/bitcoin-ethereum-tweet-volume-falls-12-month-lows-despite-institutional-crypto-boom?utm_source=rss&amp;utm_medium=rss</guid>
+<pubDate>Mon, 13 Jul 2026 22:06:02 +0000</pubDate>
+<category>Bitcoin</category>
+<description>• 比特幣和以太坊的推文量降至12個月來的新低，比特幣提及量約為130,000次，以太坊約為40,000次，這一水平自2020年以來未曾見過。  
+• 雖然零售關注度回落至2020年水平，但機構參與卻在增加，代幣化已成為主要會議和傳統金融新聞稿的熱門話題。  
+• 低推文量歷史上通常與價格停滯或下跌期間相吻合，儘管有觀察認為價格行為和基礎設施發展不再需要同樣的公眾關注。  
+• 本文摘自The Block的數據與洞察通訊，該媒體獨立運作，提供加密行業的新聞和數據。</description>
+<source url="https://www.theblock.co/post/408061/bitcoin-ethereum-tweet-volume-falls-12-month-lows-despite-institutional-crypto-boom?utm_source=rss&amp;utm_medium=rss">The Block</source>
+</item>
+<item>
+<title>Mexico to file criminal complaints over migrants killed by ICE in US</title>
+<link>https://www.theguardian.com/world/2026/jul/13/mexico-criminal-complaint-migrant-ice-deaths</link>
+<guid>https://www.theguardian.com/world/2026/jul/13/mexico-criminal-complaint-migrant-ice-deaths</guid>
+<pubDate>Mon, 13 Jul 2026 22:06:01 +0000</pubDate>
+<category>World</category>
+<description>• 墨西哥總統克勞迪亞·謝因鮑姆宣布將在美國對移民拘留中死亡的墨西哥移民提出刑事控訴，涉及17名墨西哥公民的死亡事件。  
+• 事件包括上週在休士頓被殺的洛倫佐·薩爾加多·阿勞霍，謝因鮑姆形容其為“幾乎被謀殺”。  
+• 美國國土安全部（DHS）聲稱薩爾加多·阿勞霍“武器化”其車輛並試圖撞擊ICE官員，但此說法遭到車內其他三名男子的反駁。  
+• 謝因鮑姆表示，政府將向美國聯邦和地方法院提出控訴，以促進對墨西哥公民人權的尊重，並強調不會因與特朗普政府的關係而保持沉默。</description>
+<source url="https://www.theguardian.com/world/2026/jul/13/mexico-criminal-complaint-migrant-ice-deaths">The Guardian</source>
+</item>
+<item>
+<title>Oil Holds Gains as Iran Stokes Inflation Worries: Markets Wrap</title>
+<link>https://www.bloomberg.com/news/articles/2026-07-13/oil-holds-gains-as-iran-stokes-inflation-worries-markets-wrap</link>
+<guid>https://www.bloomberg.com/news/articles/2026-07-13/oil-holds-gains-as-iran-stokes-inflation-worries-markets-wrap</guid>
+<pubDate>Mon, 13 Jul 2026 22:05:56 +0000</pubDate>
+<category>Policy</category>
+<description>• 油價保持漲幅，因美國與伊朗之間的對峙加劇，引發市場對能源供應中斷的擔憂  
+• 亞洲股市預計將跟隨華爾街下跌  
+• 分析人士指出，能源供應問題可能會加速通脹  
+• 市場對於未來經濟影響的關注持續上升</description>
+<source url="https://www.bloomberg.com/news/articles/2026-07-13/oil-holds-gains-as-iran-stokes-inflation-worries-markets-wrap">Bloomberg Crypto</source>
+</item>
+<item>
+<title>09 Radiologists’ and Ultrasound Artificial Intelligence Decision-Support Assessment of Benign and Malignant Cystic Breast Lesions - CancerNetwork</title>
+<link>https://news.google.com/rss/articles/CBMi2gFBVV95cUxQMGxRcExncl8xRlVJRHBvdTJDVmVyMkl5RTN4TTcycHdMM2RkZ2pVdTlGbjRoWDd0RFB1anVscGx2dnRSZHY0NkE5MlRaQVpLemVkWFFqV1NQS0J3TjNuSUdIY0pGd0NadmQzY3lLVnF0OWVzLVpRNmR6T0tKbTVxRExkMXl3bE1Qb0FSNjBWeGN6d1o0ZGdROXJGRm9yVEowR3NaYzZxb2ZiN1c3bFFtaW1WMWMzMDdFbDA5ZDVqV2ZIZWVXNHA1SThGS1hMS0Y2QmtUV0RWNUJmdw?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMi2gFBVV95cUxQMGxRcExncl8xRlVJRHBvdTJDVmVyMkl5RTN4TTcycHdMM2RkZ2pVdTlGbjRoWDd0RFB1anVscGx2dnRSZHY0NkE5MlRaQVpLemVkWFFqV1NQS0J3TjNuSUdIY0pGd0NadmQzY3lLVnF0OWVzLVpRNmR6T0tKbTVxRExkMXl3bE1Qb0FSNjBWeGN6d1o0ZGdROXJGRm9yVEowR3NaYzZxb2ZiN1c3bFFtaW1WMWMzMDdFbDA5ZDVqV2ZIZWVXNHA1SThGS1hMS0Y2QmtUV0RWNUJmdw?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 22:05:16 +0000</pubDate>
+<category>AI</category>
+<description>• 一項研究評估放射科醫生及超聲人工智能在良性及惡性乳腺囊腫病變的決策支持能力  
+• 研究結果顯示，人工智能系統能有效輔助醫生進行診斷  
+• 該研究於2023年進行，旨在提高乳腺病變的診斷準確性  
+• 研究發表於CancerNetwork，強調人工智能在醫療領域的潛力</description>
+<source url="https://news.google.com/rss/articles/CBMi2gFBVV95cUxQMGxRcExncl8xRlVJRHBvdTJDVmVyMkl5RTN4TTcycHdMM2RkZ2pVdTlGbjRoWDd0RFB1anVscGx2dnRSZHY0NkE5MlRaQVpLemVkWFFqV1NQS0J3TjNuSUdIY0pGd0NadmQzY3lLVnF0OWVzLVpRNmR6T0tKbTVxRExkMXl3bE1Qb0FSNjBWeGN6d1o0ZGdROXJGRm9yVEowR3NaYzZxb2ZiN1c3bFFtaW1WMWMzMDdFbDA5ZDVqV2ZIZWVXNHA1SThGS1hMS0Y2QmtUV0RWNUJmdw?oc=5">AI News (Google)</source>
+</item>
+<item>
+<title>Oil Holds Gains After Trump Reinstates Blockade on Iranian Ships</title>
+<link>https://www.bloomberg.com/news/articles/2026-07-13/latest-oil-market-news-and-analysis-for-july-14</link>
+<guid>https://www.bloomberg.com/news/articles/2026-07-13/latest-oil-market-news-and-analysis-for-july-14</guid>
+<pubDate>Mon, 13 Jul 2026 22:01:33 +0000</pubDate>
+<category>Politics</category>
+<description>• 美國總統特朗普重新實施對伊朗船隻在霍爾木茲海峽的封鎖 
+• 特朗普要求所有通過該水道的貨物支付費用 
+• 油價在自四月以來的最大漲幅後保持穩定 
+• 封鎖措施引發市場對供應鏈影響的關注</description>
+<source url="https://www.bloomberg.com/news/articles/2026-07-13/latest-oil-market-news-and-analysis-for-july-14">Bloomberg Crypto</source>
+</item>
+<item>
+<title>Gang feud ended with 'resolution of differences' between rivals - police report</title>
+<link>https://www.bbc.co.uk/news/articles/c20yqvrn0qvo?at_medium=RSS&amp;at_campaign=rss</link>
+<guid>https://www.bbc.co.uk/news/articles/c20yqvrn0qvo?at_medium=RSS&amp;at_campaign=rss</guid>
+<pubDate>Mon, 13 Jul 2026 22:00:08 +0000</pubDate>
+<category>General</category>
+<description>• 警方報告指出，為期六個月的幫派鬥爭已通過多次逮捕和「解決分歧」結束。  
+• 鬥爭始於去年三月的愛丁堡，涉及84宗暴力事件，包括縱火和謀殺未遂。  
+• 警方共逮捕64人，執行55項搜查和逮捕令，並回收七支火槍及各類武器。  
+• 報告提到，幫派暴力在今年一月和二月再次升級，導致10宗新事件，調查仍在進行中。</description>
+<source url="https://www.bbc.co.uk/news/articles/c20yqvrn0qvo?at_medium=RSS&amp;at_campaign=rss">BBC World</source>
+</item>
+<item>
+<title>Will Manila and Hanoi’s maritime deal challenge Beijing in the South China Sea?</title>
+<link>https://www.scmp.com/news/china/diplomacy/article/3360363/will-manila-and-hanois-maritime-deal-challenge-beijing-south-china-sea?utm_source=rss_feed</link>
+<guid>https://www.scmp.com/news/china/diplomacy/article/3360363/will-manila-and-hanois-maritime-deal-challenge-beijing-south-china-sea?utm_source=rss_feed</guid>
+<pubDate>Mon, 13 Jul 2026 22:00:08 +0000</pubDate>
+<category>General</category>
+<description>• 菲律賓和越南簽署新的海洋合作協議，旨在加強雙方在南海的合作，挑戰中國的談判策略  
+• 菲律賓總統馬科斯表示，維護南海的和平、穩定及航行自由是不可談判的  
+• 兩國承諾以國際法為基礎，和平解決爭端，並計劃設立熱線以改善海岸警衛隊之間的協調  
+• 此次協議簽署恰逢海牙常設仲裁法院對中國南海主權主張作出裁決十周年前夕</description>
+<source url="https://www.scmp.com/news/china/diplomacy/article/3360363/will-manila-and-hanois-maritime-deal-challenge-beijing-south-china-sea?utm_source=rss_feed">SCMP</source>
+</item>
+<item>
+<title>Ex-Canada MP arrested after police seize 439 guns and antique cannon from his home</title>
+<link>https://www.bbc.co.uk/news/articles/crr8gggwe8zo?at_medium=RSS&amp;at_campaign=rss</link>
+<guid>https://www.bbc.co.uk/news/articles/crr8gggwe8zo?at_medium=RSS&amp;at_campaign=rss</guid>
+<pubDate>Mon, 13 Jul 2026 21:57:32 +0000</pubDate>
+<category>General</category>
+<description>• 前加拿大國會議員印基·馬克因警方在其位於曼尼托巴省的住所搜查時查獲439支槍械和一門古董火炮而被捕  
+• 皇家加拿大騎警表示，馬克面臨槍械販運及多項與槍械有關的罪名，包括擁有未經授權的裝置和不安全儲存  
+• 警方調查始於3月，因收到有關另一名達芬地區男子的槍械指控，最終查獲馬克涉嫌非法購買的槍械  
+• 馬克曾於1994年當選達芬市市長，並於1997年至2010年擔任國會議員，2015年以獨立身份再次參選失敗</description>
+<source url="https://www.bbc.co.uk/news/articles/crr8gggwe8zo?at_medium=RSS&amp;at_campaign=rss">BBC World</source>
+</item>
+<item>
+<title>EXCLUSIVE: China detains US seismologist who has studied North Korean nuclear tests - Reuters</title>
+<link>https://news.google.com/rss/articles/CBMiuAFBVV95cUxPM2RCTlAtbmVLSG1sQjJCblpURk9nQ2JPWFpoR1dKNWJxQVVZNGpRM1hGSEFKa1VQQy14UnhtcTFOeGswVUhFQXJ3ZWRyekU4NXNzaWhPY2xyN0JoYVg3bnFXTURPSHUyYTZEOUZOWDdIQmZMTVlKV0RHU19qNjRwUDM4NFVZRVp0YnBETnhwWkxKVkpEMHpEY0ZKNEFqdzFQNjlFRE5uMUNyT2hvSXZvc2Q2Q2lIT0l1?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMiuAFBVV95cUxPM2RCTlAtbmVLSG1sQjJCblpURk9nQ2JPWFpoR1dKNWJxQVVZNGpRM1hGSEFKa1VQQy14UnhtcTFOeGswVUhFQXJ3ZWRyekU4NXNzaWhPY2xyN0JoYVg3bnFXTURPSHUyYTZEOUZOWDdIQmZMTVlKV0RHU19qNjRwUDM4NFVZRVp0YnBETnhwWkxKVkpEMHpEY0ZKNEFqdzFQNjlFRE5uMUNyT2hvSXZvc2Q2Q2lIT0l1?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 21:55:57 +0000</pubDate>
+<category>General</category>
+<description>• 中國拘留了一名美國地震學家，此人曾研究北韓的核試驗  
+• 據報導，該地震學家在中國進行研究時被拘留  
+• 目前尚不清楚拘留的具體原因及其後續情況  
+• 此事件引發對中美之間科學合作及外交關係的關注</description>
+<source url="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPM2RCTlAtbmVLSG1sQjJCblpURk9nQ2JPWFpoR1dKNWJxQVVZNGpRM1hGSEFKa1VQQy14UnhtcTFOeGswVUhFQXJ3ZWRyekU4NXNzaWhPY2xyN0JoYVg3bnFXTURPSHUyYTZEOUZOWDdIQmZMTVlKV0RHU19qNjRwUDM4NFVZRVp0YnBETnhwWkxKVkpEMHpEY0ZKNEFqdzFQNjlFRE5uMUNyT2hvSXZvc2Q2Q2lIT0l1?oc=5">Reuters (Google News)</source>
+</item>
+<item>
+<title>Microsoft tests Windows Search without all the ads and fluff</title>
+<link>https://www.theverge.com/tech/965090/microsoft-windows-11-search-menu-ads</link>
+<guid>https://www.theverge.com/tech/965090/microsoft-windows-11-search-menu-ads</guid>
+<pubDate>Mon, 13 Jul 2026 21:53:20 +0000</pubDate>
+<category>Tech</category>
+<description>• 微軟正在測試一個更簡潔的Windows 11搜索菜單，去除推薦內容和廣告，並已向Windows Insiders推出此版本  
+• 新的搜索主頁僅顯示用戶最近的搜索，取消了右側的干擾性圖塊  
+• 搜索菜單將優先顯示“最相關的答案”，而非“相關產品和促銷”  
+• 測試者可以在設置菜單中完全關閉網絡和商店推薦，並且系統能更好地處理拼寫錯誤和部分單詞</description>
+<source url="https://www.theverge.com/tech/965090/microsoft-windows-11-search-menu-ads">The Verge</source>
+</item>
+<item>
+<title>OnePlus is reportedly bailing on the US</title>
+<link>https://www.theverge.com/tech/965084/oneplus-oppo-exit-us-europe</link>
+<guid>https://www.theverge.com/tech/965084/oneplus-oppo-exit-us-europe</guid>
+<pubDate>Mon, 13 Jul 2026 21:48:43 +0000</pubDate>
+<category>Finance</category>
+<description>• 據報導，一加及其母公司OPPO計劃在未來幾天內宣布一加品牌將退出美國及歐洲市場  
+• 此舉標誌著有關一加未來的數月傳聞的結束  
+• 一加在一月份曾表示北美業務繼續運營，並保證用戶的售後支持和軟件更新  
+• 隨著高層人員的離職，一加歐洲正在評估其區域路線圖和產品策略</description>
+<source url="https://www.theverge.com/tech/965084/oneplus-oppo-exit-us-europe">The Verge</source>
+</item>
+<item>
+<title>Japan voice actor fights clones with AI of his own - Nikkei Asia</title>
+<link>https://news.google.com/rss/articles/CBMiugFBVV95cUxOME5rUFM4ZW1zRlJKLWxpTXJOZDZwNENuYXR1VXMtbWhaWG83UXp6TVk5QWRqa1Y3NmpRRWhic1BYN2pjaFdLR0I5RllqRm44QWtGT2t5OU82eWVaeW0tZTZCQXJjWEV0QUxDLVFjdmt4VE9WaGxMSlRiT2d4OGJzSXVrMUtxa1JHcHRVel93MElBWDEzWnI2MmdGYTlrNFlmelh5VEM1ZUdERVdxalVNQzU1OWJ0TU1tUXc?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMiugFBVV95cUxOME5rUFM4ZW1zRlJKLWxpTXJOZDZwNENuYXR1VXMtbWhaWG83UXp6TVk5QWRqa1Y3NmpRRWhic1BYN2pjaFdLR0I5RllqRm44QWtGT2t5OU82eWVaeW0tZTZCQXJjWEV0QUxDLVFjdmt4VE9WaGxMSlRiT2d4OGJzSXVrMUtxa1JHcHRVel93MElBWDEzWnI2MmdGYTlrNFlmelh5VEM1ZUdERVdxalVNQzU1OWJ0TU1tUXc?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 21:48:00 +0000</pubDate>
+<category>General</category>
+<description>• 日本聲優山寺宏一利用人工智能技術對抗其聲音的克隆版本  
+• 他開發了自己的AI系統，以保護其聲音的獨特性和版權  
+• 山寺宏一表示，這一技術的使用是為了維護創作的完整性  
+• 此舉在日本聲優界引發了對AI技術影響的討論和關注</description>
+<source url="https://news.google.com/rss/articles/CBMiugFBVV95cUxOME5rUFM4ZW1zRlJKLWxpTXJOZDZwNENuYXR1VXMtbWhaWG83UXp6TVk5QWRqa1Y3NmpRRWhic1BYN2pjaFdLR0I5RllqRm44QWtGT2t5OU82eWVaeW0tZTZCQXJjWEV0QUxDLVFjdmt4VE9WaGxMSlRiT2d4OGJzSXVrMUtxa1JHcHRVel93MElBWDEzWnI2MmdGYTlrNFlmelh5VEM1ZUdERVdxalVNQzU1OWJ0TU1tUXc?oc=5">Nikkei Asia</source>
+</item>
+<item>
+<title>After Biden Denied Alabama Coal Waste Bid, Trump Reverses Course</title>
+<link>https://www.bloomberg.com/news/articles/2026-07-13/biden-denied-alabama-bid-to-permit-coal-waste-trump-proposes-to-okay</link>
+<guid>https://www.bloomberg.com/news/articles/2026-07-13/biden-denied-alabama-bid-to-permit-coal-waste-trump-proposes-to-okay</guid>
+<pubDate>Mon, 13 Jul 2026 21:41:57 +0000</pubDate>
+<category>Politics</category>
+<description>• 環境保護局於週一提議批准阿拉巴馬州的申請，讓該州接管某些煤炭廢料許可證的發放權限  
+• 這一提議是特朗普政府下的一部分趨勢，旨在將更多權力從聯邦政府轉移至各州  
+• 此前，拜登政府曾拒絕阿拉巴馬州的煤炭廢料申請  
+• 特朗普政府的政策改變可能影響煤炭行業的監管方式</description>
+<source url="https://www.bloomberg.com/news/articles/2026-07-13/biden-denied-alabama-bid-to-permit-coal-waste-trump-proposes-to-okay">Bloomberg Crypto</source>
+</item>
+<item>
+<title>Global law firm launches MiCA compliance tool as crypto companies navigate new EU rules</title>
+<link>https://cointelegraph.com/news/global-law-firm-mica-compliance-tool-crypto-companies-navigate-new-eu-rules?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound</link>
+<guid>https://cointelegraph.com/news/global-law-firm-mica-compliance-tool-crypto-companies-navigate-new-eu-rules?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound</guid>
+<pubDate>Mon, 13 Jul 2026 21:40:32 +0000</pubDate>
+<category>Regulation</category>
+<description>• 全球律師事務所Reed Smith推出自動化合規平台Aquarius，幫助加密公司遵循歐盟市場加密資產（MiCA）規定。  
+• Aquarius平台自動化關鍵合規任務，包括加密資產分類、監管白皮書生成及環境、社會和治理（ESG）披露。  
+• 此平台旨在簡化進入歐洲市場或擴展加密業務公司的MiCA合規流程，並計劃擴展至英國、阿聯酋、香港及新加坡。  
+• 儘管MiCA框架已建立，但獲得授權仍然對許多服務提供商構成挑戰，歐洲證券及市場管理局（ESMA）正進行監管審查。</description>
+<source url="https://cointelegraph.com/news/global-law-firm-mica-compliance-tool-crypto-companies-navigate-new-eu-rules?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound">CoinTelegraph</source>
+</item>
+<item>
+<title>Siri AI Is Becoming Apple’s Everything Tool</title>
+<link>https://www.wired.com/story/siri-ai-is-now-apple-everything-tool/</link>
+<guid>https://www.wired.com/story/siri-ai-is-now-apple-everything-tool/</guid>
+<pubDate>Mon, 13 Jul 2026 21:39:09 +0000</pubDate>
+<category>Tech</category>
+<description>• 蘋果公司推出iOS 27公共測試版，首次向用戶提供改版的Siri AI
+• Siri AI在WWDC活動中展示，新增聊天機器人風格的應用程式，並加強與iPhone用戶體驗的整合
+• 用戶可透過應用程式或語音與Siri AI互動，並可選擇將對話紀錄保留的時間
+• 用戶需在設定中登記Siri等候名單，並在名單中獲得通知後才能使用Siri AI</description>
+<source url="https://www.wired.com/story/siri-ai-is-now-apple-everything-tool/">Wired</source>
+</item>
+<item>
+<title>Haaland’s Norway receive heroes’ welcome in Oslo after World Cup exit</title>
+<link>https://www.aljazeera.com/sports/2026/7/13/haalands-norway-receive-heroes-welcome-in-oslo-after-world-cup-exit?traffic_source=rss</link>
+<guid>https://www.aljazeera.com/sports/2026/7/13/haalands-norway-receive-heroes-welcome-in-oslo-after-world-cup-exit?traffic_source=rss</guid>
+<pubDate>Mon, 13 Jul 2026 21:38:51 +0000</pubDate>
+<category>World</category>
+<description>• 挪威國家足球隊在奧斯陸獲得超過10萬名球迷的英雄歡迎，慶祝他們的世界杯之旅  
+• 球隊在四分之一決賽以2-1加時賽不敵英格蘭，結束了他們的世界杯歷程  
+• 球隊在皇家宮殿接受水炮致敬，隨後進行了開篷巴士遊行  
+• 前鋒哈蘭德因趕飛機缺席了最後的慶祝活動，教練表示他和另一名球員因航班延誤而提前離開</description>
+<source url="https://www.aljazeera.com/sports/2026/7/13/haalands-norway-receive-heroes-welcome-in-oslo-after-world-cup-exit?traffic_source=rss">Al Jazeera</source>
+</item>
+<item>
+<title>Lindsey Graham's sister chosen as replacement after senator's death</title>
+<link>https://www.bbc.co.uk/news/articles/c05y3rlvp20o?at_medium=RSS&amp;at_campaign=rss</link>
+<guid>https://www.bbc.co.uk/news/articles/c05y3rlvp20o?at_medium=RSS&amp;at_campaign=rss</guid>
+<pubDate>Mon, 13 Jul 2026 21:37:02 +0000</pubDate>
+<category>General</category>
+<description>• 美國南卡羅來納州參議員林賽·格雷厄姆因主動脈撕裂於週六去世，其妹妹達琳·格雷厄姆·諾多恩被選為臨時接替者。  
+• 南卡羅來納州州長亨利·麥克馬斯特於週一正式任命諾多恩，稱她將“完成他的工作”。  
+• 格雷厄姆在去世前正參加11月的連任選舉，並獲得共和黨提名，其他共和黨候選人亦已宣布計劃競爭其參議院席位。  
+• 格雷厄姆於2002年當選參議員，並在去世前剛從烏克蘭基輔回國，與總統澤連斯基會面。</description>
+<source url="https://www.bbc.co.uk/news/articles/c05y3rlvp20o?at_medium=RSS&amp;at_campaign=rss">BBC World</source>
+</item>
+<item>
+<title>England to make late call on Rice for World Cup semi-final</title>
+<link>https://www.bbc.co.uk/sport/football/articles/ce8m996g9g1o?at_medium=RSS&amp;at_campaign=rss</link>
+<guid>https://www.bbc.co.uk/sport/football/articles/ce8m996g9g1o?at_medium=RSS&amp;at_campaign=rss</guid>
+<pubDate>Mon, 13 Jul 2026 21:30:05 +0000</pubDate>
+<category>World</category>
+<description>• 英格蘭將在世界盃半決賽前對德克蘭·賴斯的健康狀況作出最後決定，對手為阿根廷。  
+• 賴斯在對挪威的四分之一決賽中因病於半場被換下，英格蘭最終以2-1獲勝。  
+• 教練托馬斯·圖赫爾表示，賴斯在比賽前曾有三天在床上休息，病情在過去48小時內有所好轉。  
+• 賴斯除了因病恢復外，還有神經問題影響下背部和腿筋，已經影響數月。</description>
+<source url="https://www.bbc.co.uk/sport/football/articles/ce8m996g9g1o?at_medium=RSS&amp;at_campaign=rss">BBC World</source>
+</item>
+<item>
+<title>Japan's soaring AI stocks push smaller firms out of Topix index - Nikkei Asia</title>
+<link>https://news.google.com/rss/articles/CBMiswFBVV95cUxNeEFISDZYZDBsWkdRX3ZfckVBQzdPY05qX29uQnRRTzRxanZrdDZNSXRwSFQwRGNrX3ZkSU1WanlGMnFNNWgyRFkwbEdzYmMzb3hPdGRaQnhuNUR1LVItaGFMSkRmSVhRRU1MNXdQUGg1c0NrLTRZalg2N0kxTlZWSWVoYlRpOHc3ZnVzbjg5Yk90V1hMd2tWdFl4QzBCdTZRdDgzY1hYWWFpNktqYUJIUURwYw?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMiswFBVV95cUxNeEFISDZYZDBsWkdRX3ZfckVBQzdPY05qX29uQnRRTzRxanZrdDZNSXRwSFQwRGNrX3ZkSU1WanlGMnFNNWgyRFkwbEdzYmMzb3hPdGRaQnhuNUR1LVItaGFMSkRmSVhRRU1MNXdQUGg1c0NrLTRZalg2N0kxTlZWSWVoYlRpOHc3ZnVzbjg5Yk90V1hMd2tWdFl4QzBCdTZRdDgzY1hYWWFpNktqYUJIUURwYw?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 21:29:00 +0000</pubDate>
+<category>Finance</category>
+<description>• 日本的人工智能股票大幅上升，導致一些小型公司被排除在東證指數（Topix）之外  
+• 這一變化反映了市場對人工智能技術的強勁需求  
+• 小型公司的市值下降，無法滿足東證指數的納入標準  
+• 分析指出，這一趨勢可能會影響投資者的資金配置策略</description>
+<source url="https://news.google.com/rss/articles/CBMiswFBVV95cUxNeEFISDZYZDBsWkdRX3ZfckVBQzdPY05qX29uQnRRTzRxanZrdDZNSXRwSFQwRGNrX3ZkSU1WanlGMnFNNWgyRFkwbEdzYmMzb3hPdGRaQnhuNUR1LVItaGFMSkRmSVhRRU1MNXdQUGg1c0NrLTRZalg2N0kxTlZWSWVoYlRpOHc3ZnVzbjg5Yk90V1hMd2tWdFl4QzBCdTZRdDgzY1hYWWFpNktqYUJIUURwYw?oc=5">Nikkei Asia</source>
+</item>
+<item>
+<title>Police in South Africa open probe into post-World Cup death of Jayden Adams</title>
+<link>https://www.aljazeera.com/sports/2026/7/13/police-in-south-africa-open-probe-into-post-world-cup-death-of-jayden-adams?traffic_source=rss</link>
+<guid>https://www.aljazeera.com/sports/2026/7/13/police-in-south-africa-open-probe-into-post-world-cup-death-of-jayden-adams?traffic_source=rss</guid>
+<pubDate>Mon, 13 Jul 2026 21:27:52 +0000</pubDate>
+<category>World</category>
+<description>• 南非警方在開普敦對足球運動員杰登·亞當斯的死因展開調查，亞當斯的遺體在他從北美參加世界杯後不久被發現  
+• 25歲的亞當斯是南非國家隊的中場球員，南非足球運動員工會已於週六確認其死亡  
+• 亞當斯在世界杯期間出戰三場比賽，並在祖母去世後仍選擇參賽  
+• 南非體育、藝術及文化部長表示，亞當斯的選擇顯示出其深厚的品格和專業精神，南非失去了一位優秀的年輕人</description>
+<source url="https://www.aljazeera.com/sports/2026/7/13/police-in-south-africa-open-probe-into-post-world-cup-death-of-jayden-adams?traffic_source=rss">Al Jazeera</source>
+</item>
+<item>
+<title>US National Science Foundation to ban projects with flagged Chinese institutions</title>
+<link>https://www.scmp.com/news/us/science-technology/article/3360437/us-national-science-foundation-ban-projects-flagged-chinese-institutions?utm_source=rss_feed</link>
+<guid>https://www.scmp.com/news/us/science-technology/article/3360437/us-national-science-foundation-ban-projects-flagged-chinese-institutions?utm_source=rss_feed</guid>
+<pubDate>Mon, 13 Jul 2026 21:25:28 +0000</pubDate>
+<category>World</category>
+<description>• 美國國家科學基金會（NSF）將禁止與被列為受限實體的中國研究機構及其員工合作的項目  
+• 此政策反映了國會共和黨對於限制中美學術合作的更廣泛推動，因擔心這些合作可能促進中國的軍事和技術發展  
+• NSF在其網站上發布公告，通知美國研究界不再使用聯邦資金與美國受限名單上的實體合作，包括中國大學和研究機構  
+• NSF表示，這些實體因國家安全和其他外交政策原因而被認定為需要限制的對象</description>
+<source url="https://www.scmp.com/news/us/science-technology/article/3360437/us-national-science-foundation-ban-projects-flagged-chinese-institutions?utm_source=rss_feed">SCMP</source>
+</item>
+<item>
+<title>U.S. Tech Legislative &amp; Regulatory Update – Second Quarter 2026 - Inside Global Tech</title>
+<link>https://news.google.com/rss/articles/CBMipgFBVV95cUxPOEJZREl2dXlBTmttUFgtLU8xWWRpbjlHT3dQTWNKVHFyQ0JKZVVVTG5pR3hxeXpBRDF4bDRsenBNWUthTXh5YUV4cTJ2VTdfeGIta0tyQjhpLVNZN1hCUmlJTmV5YUlXcURXVE9aS18xUzFySERwRDM3QUUzc18wckoxRWczUzdSMURMVy1lbERvMXkyMEVJRVJQMm5lREhMZHNBdTZR?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMipgFBVV95cUxPOEJZREl2dXlBTmttUFgtLU8xWWRpbjlHT3dQTWNKVHFyQ0JKZVVVTG5pR3hxeXpBRDF4bDRsenBNWUthTXh5YUV4cTJ2VTdfeGIta0tyQjhpLVNZN1hCUmlJTmV5YUlXcURXVE9aS18xUzFySERwRDM3QUUzc18wckoxRWczUzdSMURMVy1lbERvMXkyMEVJRVJQMm5lREhMZHNBdTZR?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 21:23:12 +0000</pubDate>
+<category>World</category>
+<description>• 美國在2026年第二季度的科技立法和監管更新報告發布，涵蓋了多項新法案和政策變更  
+• 主要議題包括數據隱私、人工智能的監管以及網絡安全法規  
+• 政府機構與科技公司之間的合作加強，以應對快速變化的科技環境  
+• 立法者強調需要平衡創新與保護消費者權益之間的關係</description>
+<source url="https://news.google.com/rss/articles/CBMipgFBVV95cUxPOEJZREl2dXlBTmttUFgtLU8xWWRpbjlHT3dQTWNKVHFyQ0JKZVVVTG5pR3hxeXpBRDF4bDRsenBNWUthTXh5YUV4cTJ2VTdfeGIta0tyQjhpLVNZN1hCUmlJTmV5YUlXcURXVE9aS18xUzFySERwRDM3QUUzc18wckoxRWczUzdSMURMVy1lbERvMXkyMEVJRVJQMm5lREhMZHNBdTZR?oc=5">AI News (Google)</source>
+</item>
+<item>
+<title>From Patient Selection to Surveillance: Artificial Intelligence Applications in Radioiodine Therapy – A Systematic Review - springermedicine.com</title>
+<link>https://news.google.com/rss/articles/CBMi3gFBVV95cUxPaTZjOU91ZEhLRFhRRldOOU5aR1BpOEd3X1NxcUp2WmZ1cmduZ2pnaklGSktjSkI5enotSEs0dlZDS0NQdXV1eFhXclc4a2ZUQjlRZU56MlhJTHBfclQwMW1NR3d0eVZtSFF6a1dUd2xOV3lZQ0U4Z0Z0UzREbHhBV05kVkV0QmdYSkU1TWZnLVR0Sy1nc0xXdGxrd3JBcmNUVlF4THhoNlhqb000ZzZ5T0xBdENlSlh6Q0ZNZHNaLXRiMnY1UnBVdWx5QWtLR2pZYk1lWGdxT2NVQ0hSVmc?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMi3gFBVV95cUxPaTZjOU91ZEhLRFhRRldOOU5aR1BpOEd3X1NxcUp2WmZ1cmduZ2pnaklGSktjSkI5enotSEs0dlZDS0NQdXV1eFhXclc4a2ZUQjlRZU56MlhJTHBfclQwMW1NR3d0eVZtSFF6a1dUd2xOV3lZQ0U4Z0Z0UzREbHhBV05kVkV0QmdYSkU1TWZnLVR0Sy1nc0xXdGxrd3JBcmNUVlF4THhoNlhqb000ZzZ5T0xBdENlSlh6Q0ZNZHNaLXRiMnY1UnBVdWx5QWtLR2pZYk1lWGdxT2NVQ0hSVmc?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 21:21:18 +0000</pubDate>
+<category>AI</category>
+<description>• 一項系統性回顧研究探討人工智能在放射碘治療中的應用，包括病人選擇和監測等方面  
+• 研究顯示人工智能技術能提高放射碘治療的準確性和效率  
+• 文章發表於2023年，旨在總結現有文獻並評估人工智能的潛在益處  
+• 研究強調需要進一步的實證研究來驗證這些技術的臨床應用效果</description>
+<source url="https://news.google.com/rss/articles/CBMi3gFBVV95cUxPaTZjOU91ZEhLRFhRRldOOU5aR1BpOEd3X1NxcUp2WmZ1cmduZ2pnaklGSktjSkI5enotSEs0dlZDS0NQdXV1eFhXclc4a2ZUQjlRZU56MlhJTHBfclQwMW1NR3d0eVZtSFF6a1dUd2xOV3lZQ0U4Z0Z0UzREbHhBV05kVkV0QmdYSkU1TWZnLVR0Sy1nc0xXdGxrd3JBcmNUVlF4THhoNlhqb000ZzZ5T0xBdENlSlh6Q0ZNZHNaLXRiMnY1UnBVdWx5QWtLR2pZYk1lWGdxT2NVQ0hSVmc?oc=5">AI News (Google)</source>
+</item>
+<item>
+<title>From the Nuclear Age to the Age of Artificial Intelligence: Can Humanity Build a New Architecture for Peace? - Global Issues.org</title>
+<link>https://news.google.com/rss/articles/CBMiX0FVX3lxTE5WbVRWamZpRjIzZGNsUlJFQjJjcUxJTkxmRkFiSW9hc2xDYUxpNmszc004T0ZKQmE3Z3U2WlQ5VTc0TDFCQzJJRUhNZWI1bVlxbEdMSWVLTGVrUGwtdDZJ0gFkQVVfeXFMUFFYaVN0WUEwM3E0Q0tsLUlYdXp0M0dpU3l0RExWbXhlOEJna0Mxb3MxN2k0NW9tTUlEVmdQNUVQWWpUTmloaFljUXlWQ0J2Z0tLR0xpVHRSWmhBczlsU0ptR1JfZQ?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMiX0FVX3lxTE5WbVRWamZpRjIzZGNsUlJFQjJjcUxJTkxmRkFiSW9hc2xDYUxpNmszc004T0ZKQmE3Z3U2WlQ5VTc0TDFCQzJJRUhNZWI1bVlxbEdMSWVLTGVrUGwtdDZJ0gFkQVVfeXFMUFFYaVN0WUEwM3E0Q0tsLUlYdXp0M0dpU3l0RExWbXhlOEJna0Mxb3MxN2k0NW9tTUlEVmdQNUVQWWpUTmloaFljUXlWQ0J2Z0tLR0xpVHRSWmhBczlsU0ptR1JfZQ?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 21:19:45 +0000</pubDate>
+<category>AI</category>
+<description>• 全球問題網站探討人類如何從核時代過渡到人工智能時代，以建立新的和平架構  
+• 文章強調科技進步對國際安全的影響，特別是人工智能的潛在風險  
+• 討論各國在和平與安全方面的合作必要性，以應對新興挑戰  
+• 提出建立全球治理機制的建議，以促進持久和平與穩定</description>
+<source url="https://news.google.com/rss/articles/CBMiX0FVX3lxTE5WbVRWamZpRjIzZGNsUlJFQjJjcUxJTkxmRkFiSW9hc2xDYUxpNmszc004T0ZKQmE3Z3U2WlQ5VTc0TDFCQzJJRUhNZWI1bVlxbEdMSWVLTGVrUGwtdDZJ0gFkQVVfeXFMUFFYaVN0WUEwM3E0Q0tsLUlYdXp0M0dpU3l0RExWbXhlOEJna0Mxb3MxN2k0NW9tTUlEVmdQNUVQWWpUTmloaFljUXlWQ0J2Z0tLR0xpVHRSWmhBczlsU0ptR1JfZQ?oc=5">AI News (Google)</source>
+</item>
+<item>
+<title>US, Iran exchange attacks around Strait of Hormuz</title>
+<link>https://www.aljazeera.com/news/2026/7/13/missile-strikes-and-attacks-on-ships-reported-around-strait-of-hormuz?traffic_source=rss</link>
+<guid>https://www.aljazeera.com/news/2026/7/13/missile-strikes-and-attacks-on-ships-reported-around-strait-of-hormuz?traffic_source=rss</guid>
+<pubDate>Mon, 13 Jul 2026 21:19:28 +0000</pubDate>
+<category>General</category>
+<description>• 美國軍方於週一下午4:45（東部時間）對伊朗發動第三夜空襲，目標是削弱伊朗對平民和商業航運的攻擊能力  
+• 伊朗國營電視台報導，伊朗南部沿海及基什島和喀什島等地發生爆炸，並表示伊朗軍方擊落一架美製無人機  
+• 阿聯酋表示其兩艘油輪在霍爾木茲海峽的阿曼水域遭到伊朗巡航導彈襲擊，造成一名印度籍船員死亡及八人受傷  
+• 美國海軍確認將於週二20:00 GMT開始對伊朗港口實施海上封鎖，標誌著6月達成的停火協議的迅速崩潰</description>
+<source url="https://www.aljazeera.com/news/2026/7/13/missile-strikes-and-attacks-on-ships-reported-around-strait-of-hormuz?traffic_source=rss">Al Jazeera</source>
+</item>
+<item>
+<title>Trump’s Hormuz Demand Implies Fee of $30 Million Per Supertanker</title>
+<link>https://www.bloomberg.com/news/articles/2026-07-13/trump-s-hormuz-demand-implies-fee-of-30-million-per-supertanker</link>
+<guid>https://www.bloomberg.com/news/articles/2026-07-13/trump-s-hormuz-demand-implies-fee-of-30-million-per-supertanker</guid>
+<pubDate>Mon, 13 Jul 2026 21:14:11 +0000</pubDate>
+<category>Finance</category>
+<description>• 特朗普要求對通過霍爾木茲海峽的貨物收取20%的補償費，約為每艘滿載油的超級油輪3000萬美元  
+• 此要求是在特朗普總統任內提出的  
+• 霍爾木茲海峽是全球重要的石油運輸通道  
+• 特朗普的要求可能影響該地區的石油運輸成本及貿易關係</description>
+<source url="https://www.bloomberg.com/news/articles/2026-07-13/trump-s-hormuz-demand-implies-fee-of-30-million-per-supertanker">Bloomberg</source>
+</item>
+<item>
+<title>Russian Billionaire Wins Fight to Boot Manager of Biotech Fund</title>
+<link>https://www.bloomberg.com/news/articles/2026-07-13/russian-billionaire-wins-fight-to-boot-manager-of-biotech-fund</link>
+<guid>https://www.bloomberg.com/news/articles/2026-07-13/russian-billionaire-wins-fight-to-boot-manager-of-biotech-fund</guid>
+<pubDate>Mon, 13 Jul 2026 21:12:40 +0000</pubDate>
+<category>Finance</category>
+<description>• 俄羅斯億萬富翁德米特里·里博洛夫列夫的家族信託成功將一個破產的25億美元風險投資基金的經理人撤換。  
+• 該基金由里博洛夫列夫的家族信託支持，並面臨破產問題。  
+• 此次撤換經理人的決定反映了家族信託對基金管理的控制權。  
+• 具體的撤換過程及未來計劃尚未公開。</description>
+<source url="https://www.bloomberg.com/news/articles/2026-07-13/russian-billionaire-wins-fight-to-boot-manager-of-biotech-fund">Bloomberg Crypto</source>
+</item>
+<item>
+<title>Trump's to give speech about foreign interference in 2020 election, MS Now reports - Reuters</title>
+<link>https://news.google.com/rss/articles/CBMiuwFBVV95cUxQNTZsOUhDOHRqLTNSOUNGM2VMOVhkNXExcjd6Y1lPQlNiNkYxVk40RURyNDBTbW9Wb0kzdUg2Sm5WNFRuYW1oVHhOUk05S0x1aU1tMkVRNnF4Ui1NOFNqZE92UjdFRTZpTkVaOE54Q3hnaUhtcjFsNVhYRkhyUm85QzBUcjg2QXJzczhvSzlLd0lXXzVNOFNrVlJrUC0tM0NSUjFKdDZzNTNlcWdfdjFoQ0JlX3FwM3REZHpB?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMiuwFBVV95cUxQNTZsOUhDOHRqLTNSOUNGM2VMOVhkNXExcjd6Y1lPQlNiNkYxVk40RURyNDBTbW9Wb0kzdUg2Sm5WNFRuYW1oVHhOUk05S0x1aU1tMkVRNnF4Ui1NOFNqZE92UjdFRTZpTkVaOE54Q3hnaUhtcjFsNVhYRkhyUm85QzBUcjg2QXJzczhvSzlLd0lXXzVNOFNrVlJrUC0tM0NSUjFKdDZzNTNlcWdfdjFoQ0JlX3FwM3REZHpB?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 21:09:43 +0000</pubDate>
+<category>World</category>
+<description>• 特朗普將於近期發表演講，主題為2020年選舉中的外國干預問題  
+• 根據報導，此次演講將重點討論外部勢力對選舉結果的影響  
+• 演講時間及地點尚未公布  
+• 此次演講旨在引起公眾對選舉安全及外國影響的關注</description>
+<source url="https://news.google.com/rss/articles/CBMiuwFBVV95cUxQNTZsOUhDOHRqLTNSOUNGM2VMOVhkNXExcjd6Y1lPQlNiNkYxVk40RURyNDBTbW9Wb0kzdUg2Sm5WNFRuYW1oVHhOUk05S0x1aU1tMkVRNnF4Ui1NOFNqZE92UjdFRTZpTkVaOE54Q3hnaUhtcjFsNVhYRkhyUm85QzBUcjg2QXJzczhvSzlLd0lXXzVNOFNrVlJrUC0tM0NSUjFKdDZzNTNlcWdfdjFoQ0JlX3FwM3REZHpB?oc=5">Reuters (Google News)</source>
+</item>
+<item>
+<title>Thomson Reuters to cut 'small number' of engineering jobs - Reuters</title>
+<link>https://news.google.com/rss/articles/CBMipAFBVV95cUxNQkVHVEg1LUozUnFBTnZWU2dESU1nZDNKRDNwWHl3eVlmT05fT3NyVlF2QXQ3Vkd1aFpYTlJMdWkwQXZpSWhSRS1xS2xNdWhDRHV1SjZZU3EzWGZsNjFvNVp2NDVfcFVsR1J1Tmx0WGVYeV9saDM0QnduUlNDY2d5UXNPTHN4RVRnSXJmbUJ2Y01sYjlSM1NRbmFtLUMwbE5uZTA3cw?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMipAFBVV95cUxNQkVHVEg1LUozUnFBTnZWU2dESU1nZDNKRDNwWHl3eVlmT05fT3NyVlF2QXQ3Vkd1aFpYTlJMdWkwQXZpSWhSRS1xS2xNdWhDRHV1SjZZU3EzWGZsNjFvNVp2NDVfcFVsR1J1Tmx0WGVYeV9saDM0QnduUlNDY2d5UXNPTHN4RVRnSXJmbUJ2Y01sYjlSM1NRbmFtLUMwbE5uZTA3cw?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 21:08:37 +0000</pubDate>
+<category>Macro</category>
+<description>• 湯森路透公司將裁減少量工程職位，具體人數未公開  
+• 裁員決定是公司重組的一部分，旨在提高效率  
+• 此消息於2023年10月公布，並未透露裁員的具體時間表  
+• 湯森路透表示將繼續投資於其他業務領域以促進增長</description>
+<source url="https://news.google.com/rss/articles/CBMipAFBVV95cUxNQkVHVEg1LUozUnFBTnZWU2dESU1nZDNKRDNwWHl3eVlmT05fT3NyVlF2QXQ3Vkd1aFpYTlJMdWkwQXZpSWhSRS1xS2xNdWhDRHV1SjZZU3EzWGZsNjFvNVp2NDVfcFVsR1J1Tmx0WGVYeV9saDM0QnduUlNDY2d5UXNPTHN4RVRnSXJmbUJ2Y01sYjlSM1NRbmFtLUMwbE5uZTA3cw?oc=5">Reuters (Google News)</source>
+</item>
+<item>
+<title>【今朝の5本】仕事を始める前に読んでおきたい厳選ニュース</title>
+<link>https://www.bloomberg.com/jp/news/newsletters/2026-07-13/TI4TBRKIUPTZ00</link>
+<guid>https://www.bloomberg.com/jp/news/newsletters/2026-07-13/TI4TBRKIUPTZ00</guid>
+<pubDate>Mon, 13 Jul 2026 21:07:03 +0000</pubDate>
+<category>Finance</category>
+<description>• 伊朗要求對霍爾木茲海峽的通航收取20%的對價，可能影響全球石油運輸 
+• 分析指出，近期可能需要進一步加息以應對通脹壓力 
+• 華爾街將公佈最新財報，市場關注企業盈利表現 
+• 德國汽車製造商大眾汽車宣布將裁減5萬名員工以應對經濟挑戰 
+• 對日圓的前景持悲觀態度，可能影響日本經濟復甦</description>
+<source url="https://www.bloomberg.com/jp/news/newsletters/2026-07-13/TI4TBRKIUPTZ00">Bloomberg Crypto</source>
+</item>
+<item>
+<title>Argentina IPO Pipeline Grows as YPF Power Unit Files For US Listing</title>
+<link>https://www.bloomberg.com/news/articles/2026-07-13/argentina-ipo-pipeline-grows-as-ypf-power-unit-files-for-us-listing</link>
+<guid>https://www.bloomberg.com/news/articles/2026-07-13/argentina-ipo-pipeline-grows-as-ypf-power-unit-files-for-us-listing</guid>
+<pubDate>Mon, 13 Jul 2026 21:05:32 +0000</pubDate>
+<category>Finance</category>
+<description>• 阿根廷國有能源公司YPF SA的發電單位已提交美國首次公開募股申請  
+• 此舉使其成為越來越多尋求在紐約上市的阿根廷公司的新成員  
+• YPF的IPO申請顯示阿根廷企業對國際資本市場的興趣增加  
+• 目前尚未公佈具體的上市時間或募資金額</description>
+<source url="https://www.bloomberg.com/news/articles/2026-07-13/argentina-ipo-pipeline-grows-as-ypf-power-unit-files-for-us-listing">Bloomberg Crypto</source>
+</item>
+<item>
+<title>Lindsey Graham’s Death Creates Rare Political Scenario That’s Gripping DC</title>
+<link>https://www.bloomberg.com/news/newsletters/2026-07-13/lindsey-graham-s-death-creates-rare-political-scenario-that-s-gripping-dc</link>
+<guid>https://www.bloomberg.com/news/newsletters/2026-07-13/lindsey-graham-s-death-creates-rare-political-scenario-that-s-gripping-dc</guid>
+<pubDate>Mon, 13 Jul 2026 21:05:24 +0000</pubDate>
+<category>Finance</category>
+<description>• 美國參議員林賽·格雷厄姆的去世引發華盛頓特區的政治局勢變化  
+• 共和黨在國會的微弱多數使得政治決策變得複雜  
+• 格雷厄姆的去世可能影響共和黨在參議院的議程  
+• 政治分析人士指出，這一情況可能改變未來的立法動向</description>
+<source url="https://www.bloomberg.com/news/newsletters/2026-07-13/lindsey-graham-s-death-creates-rare-political-scenario-that-s-gripping-dc">Bloomberg</source>
+</item>
+<item>
+<title>Lindsey Graham’s legacy: Israel advocate, Trump ally, Iran war supporter</title>
+<link>https://www.aljazeera.com/news/2026/7/13/lindsey-grahams-legacy-israel-advocate-trump-ally-iran-war-supporter?traffic_source=rss</link>
+<guid>https://www.aljazeera.com/news/2026/7/13/lindsey-grahams-legacy-israel-advocate-trump-ally-iran-war-supporter?traffic_source=rss</guid>
+<pubDate>Mon, 13 Jul 2026 21:04:56 +0000</pubDate>
+<category>World</category>
+<description>• 美國參議員林賽·格雷厄姆於2024年因「短暫及突發疾病」去世，享年71歲  
+• 他在政治生涯中強烈支持以色列，倡導對伊朗的軍事行動，並支持2003年入侵伊拉克  
+• 格雷厄姆曾批評時任總統喬·拜登對南卡羅來納州颶風海倫的應對，並表達對以色列的關注  
+• 他被認為是特朗普的親密盟友，並在其生涯末期呼籲特朗普對伊朗採取軍事行動</description>
+<source url="https://www.aljazeera.com/news/2026/7/13/lindsey-grahams-legacy-israel-advocate-trump-ally-iran-war-supporter?traffic_source=rss">Al Jazeera</source>
+</item>
+<item>
+<title>Sandisk’s stock is plunging, but some analysts are getting even more bullish</title>
+<link>https://www.marketwatch.com/story/sandisks-stock-is-plunging-but-some-analysts-are-getting-even-more-bullish-cba3472f?mod=mw_rss_topstories</link>
+<guid>https://www.marketwatch.com/story/sandisks-stock-is-plunging-but-some-analysts-are-getting-even-more-bullish-cba3472f?mod=mw_rss_topstories</guid>
+<pubDate>Mon, 13 Jul 2026 21:04:00 +0000</pubDate>
+<category>Trading</category>
+<description>• Sandisk的股票價格大幅下跌，部分分析師對其前景持樂觀態度  
+• 一項新的股票目標價格顯示，從當前水平計算，潛在上漲空間接近85%  
+• 分析師認為Sandisk的未來表現將改善，儘管目前面臨挑戰  
+• 市場對Sandisk的評價存在分歧，部分投資者仍看好其長期潛力</description>
+<source url="https://www.marketwatch.com/story/sandisks-stock-is-plunging-but-some-analysts-are-getting-even-more-bullish-cba3472f?mod=mw_rss_topstories">MarketWatch</source>
+</item>
+<item>
+<title>A two-pack of DJI&amp;#8217;s most capable wireless mics just got its first price cut</title>
+<link>https://www.theverge.com/gadgets/964914/dji-mic-three-bundle-deal-sale</link>
+<guid>https://www.theverge.com/gadgets/964914/dji-mic-three-bundle-deal-sale</guid>
+<pubDate>Mon, 13 Jul 2026 21:03:14 +0000</pubDate>
+<category>Trading</category>
+<description>• DJI Mic 3無線麥克風套裝首次降價，現售219美元，原價259美元，於多個零售商如Best Buy、B&amp;H Photo及Amazon有售。  
+• 套裝包括兩個麥克風、一個接收器、充電盒、電源及音頻線纜，以及四個防風罩。  
+• Mic 3的接收器存儲容量由8GB增至32GB，支持24位及32位浮點音頻，並配備內置顯示屏以檢查電池及連接狀態。  
+• 每個麥克風單次充電可運行約八小時，接收器可運行約十小時，充電盒可為整套設備提供至少兩次完整充電。</description>
+<source url="https://www.theverge.com/gadgets/964914/dji-mic-three-bundle-deal-sale">The Verge</source>
+</item>
+<item>
+<title>Japan eyes network for 10,000 self-driving vehicles by fiscal 2030 - Nikkei Asia</title>
+<link>https://news.google.com/rss/articles/CBMitAFBVV95cUxPLWQ2bVdKSmhkaTJYX0RFWWFZWktvZVlncmdJTW1BUEUtVmstMEF3Sjh0RmtKQ1BfZHlwekEybDZHTVZwOTdueWdlZ21wcERmSkczc1RIbVhxZjc1aXlOUl82ejJQbzExVUVOUlFlaXVjUTZYR2VWNE54c05zck1lMDJmLXlzWXVmQ0NxQkxUb2V2SnE2aEE2X0ZiaXRvTF83UmpST1lsLWVrLWt1YVhZOTAzLWc?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMitAFBVV95cUxPLWQ2bVdKSmhkaTJYX0RFWWFZWktvZVlncmdJTW1BUEUtVmstMEF3Sjh0RmtKQ1BfZHlwekEybDZHTVZwOTdueWdlZ21wcERmSkczc1RIbVhxZjc1aXlOUl82ejJQbzExVUVOUlFlaXVjUTZYR2VWNE54c05zck1lMDJmLXlzWXVmQ0NxQkxUb2V2SnE2aEE2X0ZiaXRvTF83UmpST1lsLWVrLWt1YVhZOTAzLWc?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 21:02:00 +0000</pubDate>
+<category>Macro</category>
+<description>• 日本計劃在2030財政年度前建立一個可支持10,000輛自駕車的網絡  
+• 此計劃旨在提高交通安全和減少交通擁堵  
+• 日本政府將與企業合作，推動自駕車技術的發展  
+• 預計該網絡將涵蓋主要城市及其周邊地區</description>
+<source url="https://news.google.com/rss/articles/CBMitAFBVV95cUxPLWQ2bVdKSmhkaTJYX0RFWWFZWktvZVlncmdJTW1BUEUtVmstMEF3Sjh0RmtKQ1BfZHlwekEybDZHTVZwOTdueWdlZ21wcERmSkczc1RIbVhxZjc1aXlOUl82ejJQbzExVUVOUlFlaXVjUTZYR2VWNE54c05zck1lMDJmLXlzWXVmQ0NxQkxUb2V2SnE2aEE2X0ZiaXRvTF83UmpST1lsLWVrLWt1YVhZOTAzLWc?oc=5">Nikkei Asia</source>
+</item>
+<item>
+<title>Afore Banamex Chief Investment Officer Acosta to Leave Firm</title>
+<link>https://www.bloomberg.com/news/articles/2026-07-13/afore-banamex-chief-investment-officer-acosta-to-leave-firm-mrjpjjf3</link>
+<guid>https://www.bloomberg.com/news/articles/2026-07-13/afore-banamex-chief-investment-officer-acosta-to-leave-firm-mrjpjjf3</guid>
+<pubDate>Mon, 13 Jul 2026 21:01:31 +0000</pubDate>
+<category>Finance</category>
+<description>• 墨西哥退休金基金Afore Banamex的首席投資官托馬斯·阿科斯塔將離開該公司  
+• 消息來源表示此消息來自對此事熟悉的人士  
+• 阿科斯塔的離職時間尚未公開  
+• Afore Banamex是墨西哥主要的退休金管理機構之一</description>
+<source url="https://www.bloomberg.com/news/articles/2026-07-13/afore-banamex-chief-investment-officer-acosta-to-leave-firm-mrjpjjf3">Bloomberg Crypto</source>
+</item>
+<item>
+<title>Israel’s Regime-Change Plan for Iran</title>
+<link>https://www.nytimes.com/2026/07/13/world/iran-israel-ahmadinejad-bangkok-fire.html</link>
+<guid>https://www.nytimes.com/2026/07/13/world/iran-israel-ahmadinejad-bangkok-fire.html</guid>
+<pubDate>Mon, 13 Jul 2026 21:01:03 +0000</pubDate>
+<category>General</category>
+<description>• 以色列曾計劃推翻伊朗政權，意圖讓馬哈茂德·艾哈邁迪內賈德成為下一任領導人  
+• 該計劃的背景涉及多次秘密會議和情報活動  
+• 計劃最終未能實現，具體原因未公開  
+• 相關資訊顯示以色列對伊朗政權的擔憂持續存在</description>
+<source url="https://www.nytimes.com/2026/07/13/world/iran-israel-ahmadinejad-bangkok-fire.html">New York Times</source>
+</item>
 <item>
 <title>1,000 Days of War and Upheaval that Reshaped the Middle East</title>
 <link>https://www.bloomberg.com/graphics/2026-us-iran-war-middle-east-impact/</link>
@@ -23,6 +624,24 @@
 • 地區外交因持續的衝突而遭到破壞，影響各國之間的關係  
 • 此次動盪對中東的政治與社會結構產生深遠影響</description>
 <source url="https://www.bloomberg.com/graphics/2026-us-iran-war-middle-east-impact/">Bloomberg</source>
+</item>
+<item>
+<title>Trump says the US will take out Pickaxe Mountain in Iran - Reuters</title>
+<link>https://news.google.com/rss/articles/CBMipgFBVV95cUxPR0MxRE1KWWs1OXh4SkpMa3dwZWQzSEhxMm11YkNzX1diNFJxNWl6TkxBV1VNczl0c1hheGVMT0l4UVpFcW15YVotc3ZrV1E1bi1TM2tHS3dfdTN1YTJpUTVLdG95RUpELXo5dm9GUFNKSUZ2ekdNdHNfZ2NLQlRyVV94LVhsbVVLSWNvbndVbmpNWTJiMEFlSzBLVDFoeFpXc2FpRzJ3?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMipgFBVV95cUxPR0MxRE1KWWs1OXh4SkpMa3dwZWQzSEhxMm11YkNzX1diNFJxNWl6TkxBV1VNczl0c1hheGVMT0l4UVpFcW15YVotc3ZrV1E1bi1TM2tHS3dfdTN1YTJpUTVLdG95RUpELXo5dm9GUFNKSUZ2ekdNdHNfZ2NLQlRyVV94LVhsbVVLSWNvbndVbmpNWTJiMEFlSzBLVDFoeFpXc2FpRzJ3?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 20:59:43 +0000</pubDate>
+<category>Politics</category>
+<description></description>
+<source url="https://news.google.com/rss/articles/CBMipgFBVV95cUxPR0MxRE1KWWs1OXh4SkpMa3dwZWQzSEhxMm11YkNzX1diNFJxNWl6TkxBV1VNczl0c1hheGVMT0l4UVpFcW15YVotc3ZrV1E1bi1TM2tHS3dfdTN1YTJpUTVLdG95RUpELXo5dm9GUFNKSUZ2ekdNdHNfZ2NLQlRyVV94LVhsbVVLSWNvbndVbmpNWTJiMEFlSzBLVDFoeFpXc2FpRzJ3?oc=5">Reuters (Google News)</source>
+</item>
+<item>
+<title>DIA Expands AI, OSINT Efforts for Cyber Intelligence Missions - ExecutiveGov</title>
+<link>https://news.google.com/rss/articles/CBMilAFBVV95cUxQUjFJN0JmcVNvRUlZWUVDc3J2LWNEVHBIWUVuLXNLbDFZV2lIZVBZT0IzWEozRHZNNnFlbTNfbEs0LWI3UElBdTNUSkxRWFNETVB0ZllwSUhJbS1nRmlGOVg0S1VoWmZldzMtLUV2TGZ4NzZaMFJtTk5QM0hqeU05ZnMzcFBsMFFHZFB2NGRydEF0SEpT?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMilAFBVV95cUxQUjFJN0JmcVNvRUlZWUVDc3J2LWNEVHBIWUVuLXNLbDFZV2lIZVBZT0IzWEozRHZNNnFlbTNfbEs0LWI3UElBdTNUSkxRWFNETVB0ZllwSUhJbS1nRmlGOVg0S1VoWmZldzMtLUV2TGZ4NzZaMFJtTk5QM0hqeU05ZnMzcFBsMFFHZFB2NGRydEF0SEpT?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 20:59:10 +0000</pubDate>
+<category>Ai</category>
+<description></description>
+<source url="https://news.google.com/rss/articles/CBMilAFBVV95cUxQUjFJN0JmcVNvRUlZWUVDc3J2LWNEVHBIWUVuLXNLbDFZV2lIZVBZT0IzWEozRHZNNnFlbTNfbEs0LWI3UElBdTNUSkxRWFNETVB0ZllwSUhJbS1nRmlGOVg0S1VoWmZldzMtLUV2TGZ4NzZaMFJtTk5QM0hqeU05ZnMzcFBsMFFHZFB2NGRydEF0SEpT?oc=5">AI News (Google)</source>
 </item>
 <item>
 <title>Satya Nadella has issued a shocking warning to companies using AI</title>
@@ -47,6 +666,15 @@
 • 耳機具備輕量鈦合金框架，IP55防水等級，並提供最多10小時的電池壽命及多點藍牙連接功能。  
 • 雖然OpenRun Pro不是Shokz的旗艦耳機，但其性價比高，適合喜愛開放式設計的用戶。</description>
 <source url="https://www.theverge.com/gadgets/964982/shokz-openrun-pro-bone-conduction-headphones-summer-deal-sale">The Verge</source>
+</item>
+<item>
+<title>Andy Burnham in line to become British PM after securing party support</title>
+<link>https://www.aljazeera.com/news/2026/7/13/andy-burnham-in-line-to-become-british-pm-after-securing-party-support?traffic_source=rss</link>
+<guid>https://www.aljazeera.com/news/2026/7/13/andy-burnham-in-line-to-become-british-pm-after-securing-party-support?traffic_source=rss</guid>
+<pubDate>Mon, 13 Jul 2026 20:57:21 +0000</pubDate>
+<category>Politics</category>
+<description></description>
+<source url="https://www.aljazeera.com/news/2026/7/13/andy-burnham-in-line-to-become-british-pm-after-securing-party-support?traffic_source=rss">Al Jazeera</source>
 </item>
 <item>
 <title>New Hampshire Follows Bitcoin Reserve With 'Blockchain Basic Laws' Signing</title>
@@ -97,6 +725,15 @@
 <source url="https://www.scmp.com/news/us/article/3360435/us-tariff-probe-unlikely-derail-fall-xi-trump-meeting-analysts-say?utm_source=rss_feed">SCMP</source>
 </item>
 <item>
+<title>Russia-Ukraine | Breaking News &amp; Live Updates - AP News</title>
+<link>https://news.google.com/rss/articles/CBMiTkFVX3lxTE05dU5fdEx0UThlV1ZJRHRsY2dpalBXU0lPdkdndHY3QXBvUUhoWDhabS1PNzlOelV1UWhjdkNTZ19EWnVjcndORXl1WlFVZw?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMiTkFVX3lxTE05dU5fdEx0UThlV1ZJRHRsY2dpalBXU0lPdkdndHY3QXBvUUhoWDhabS1PNzlOelV1UWhjdkNTZ19EWnVjcndORXl1WlFVZw?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 20:52:46 +0000</pubDate>
+<category>General</category>
+<description></description>
+<source url="https://news.google.com/rss/articles/CBMiTkFVX3lxTE05dU5fdEx0UThlV1ZJRHRsY2dpalBXU0lPdkdndHY3QXBvUUhoWDhabS1PNzlOelV1UWhjdkNTZ19EWnVjcndORXl1WlFVZw?oc=5">AP News (Google News)</source>
+</item>
+<item>
 <title>The Pixel colors might rule this year</title>
 <link>https://www.theverge.com/tech/964972/google-pixel-11-colors-rumor</link>
 <guid>https://www.theverge.com/tech/964972/google-pixel-11-colors-rumor</guid>
@@ -107,6 +744,15 @@
 • 據報導，Pixel 11的價格為899美元，配備6.3英寸1080 x 2424顯示屏、256GB存儲和12GB RAM。  
 • 谷歌計劃於8月12日的硬件活動中正式發布新款Pixel手機，並且這些設備可能已在聯邦通信委員會數據庫中出現。</description>
 <source url="https://www.theverge.com/tech/964972/google-pixel-11-colors-rumor">The Verge</source>
+</item>
+<item>
+<title>Argentina vs England World Cup tickets more expensive than France vs Spain</title>
+<link>https://www.aljazeera.com/sports/2026/7/13/argentina-vs-england-world-cup-tickets-more-expensive-than-france-vs-spain?traffic_source=rss</link>
+<guid>https://www.aljazeera.com/sports/2026/7/13/argentina-vs-england-world-cup-tickets-more-expensive-than-france-vs-spain?traffic_source=rss</guid>
+<pubDate>Mon, 13 Jul 2026 20:51:33 +0000</pubDate>
+<category>Trading</category>
+<description></description>
+<source url="https://www.aljazeera.com/sports/2026/7/13/argentina-vs-england-world-cup-tickets-more-expensive-than-france-vs-spain?traffic_source=rss">Al Jazeera</source>
 </item>
 <item>
 <title>Lindsey Graham died from a rare heart condition. Here’s how to know if you’re at risk.</title>
@@ -217,6 +863,24 @@
 <source url="https://www.theverge.com/tech/964701/apple-macos-27-golden-gate-public-beta-impressions-liquid-glass-siri-ai">The Verge</source>
 </item>
 <item>
+<title>Brazil's top court bars Senator Bolsonaro from visiting his father - Reuters</title>
+<link>https://news.google.com/rss/articles/CBMisAFBVV95cUxQZHBpR2c4TF8xU3lUV3ZrSFd6X2FFWTdMOUtoZlRQX3M3azJBQ2E3WXMzNUoxTlVqX3NOdnhoUk9QS2w1ZHkzOGZIN0s3QllCQkVRRlYyS3BCN3JxU2p6SE9ORVNQbldSRVRUdEdodXp3RUlteV95dDZHbTlQTk9jQ1YtZ2ladmh2V1JheUNkMTlodzZYVkc0WTNwUzVZT2lZWlM1WU9jWlR3cmtGTkplZg?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMisAFBVV95cUxQZHBpR2c4TF8xU3lUV3ZrSFd6X2FFWTdMOUtoZlRQX3M3azJBQ2E3WXMzNUoxTlVqX3NOdnhoUk9QS2w1ZHkzOGZIN0s3QllCQkVRRlYyS3BCN3JxU2p6SE9ORVNQbldSRVRUdEdodXp3RUlteV95dDZHbTlQTk9jQ1YtZ2ladmh2V1JheUNkMTlodzZYVkc0WTNwUzVZT2lZWlM1WU9jWlR3cmtGTkplZg?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 20:41:40 +0000</pubDate>
+<category>General</category>
+<description></description>
+<source url="https://news.google.com/rss/articles/CBMisAFBVV95cUxQZHBpR2c4TF8xU3lUV3ZrSFd6X2FFWTdMOUtoZlRQX3M3azJBQ2E3WXMzNUoxTlVqX3NOdnhoUk9QS2w1ZHkzOGZIN0s3QllCQkVRRlYyS3BCN3JxU2p6SE9ORVNQbldSRVRUdEdodXp3RUlteV95dDZHbTlQTk9jQ1YtZ2ladmh2V1JheUNkMTlodzZYVkc0WTNwUzVZT2lZWlM1WU9jWlR3cmtGTkplZg?oc=5">Reuters (Google News)</source>
+</item>
+<item>
+<title>Kyiv attacked after Ukraine launches coalition to tackle Russia missiles</title>
+<link>https://www.aljazeera.com/news/2026/7/13/ukraine-and-allies-launch-coalition-to-tackle-russias-ballistic-missiles?traffic_source=rss</link>
+<guid>https://www.aljazeera.com/news/2026/7/13/ukraine-and-allies-launch-coalition-to-tackle-russias-ballistic-missiles?traffic_source=rss</guid>
+<pubDate>Mon, 13 Jul 2026 20:41:27 +0000</pubDate>
+<category>General</category>
+<description></description>
+<source url="https://www.aljazeera.com/news/2026/7/13/ukraine-and-allies-launch-coalition-to-tackle-russias-ballistic-missiles?traffic_source=rss">Al Jazeera</source>
+</item>
+<item>
 <title>Ukrainian drone strikes forced Russia to stop shipping in vital sea corridor</title>
 <link>https://arstechnica.com/gadgets/2026/07/ukrainian-drone-strikes-forced-russia-to-stop-shipping-in-vital-sea-corridor/</link>
 <guid>https://arstechnica.com/gadgets/2026/07/ukrainian-drone-strikes-forced-russia-to-stop-shipping-in-vital-sea-corridor/</guid>
@@ -299,6 +963,15 @@
 • 法律將於2024年生效，適用於所有社交媒體平台  
 • 政府希望此舉能減少假資訊對選舉結果的影響</description>
 <source url="https://news.google.com/rss/articles/CBMirAFBVV95cUxNaUd6R2p3WU11YnZwU2R4YzFrM2VPc3Nlc25aTTlqTTdOUnhIbWlic1c1T09LSVNkZ3ZqRWZPa1pmX0hvLVRfZHFtdk8zSUFmNVFNUnhieGowV2RDSFJGMXhMNVJYX25MTWFCTDlPc2xvcHpvdFdRaS1jem9FUGdQdW1ZN1NTN1Q1VUE4RklHUm1KcVNDOTJxMWlrd0daYXBKblNfT2ZvNXRfNzVE?oc=5">Nikkei Asia</source>
+</item>
+<item>
+<title>I hunted the men who secretly film their wives and share footage online</title>
+<link>https://www.bbc.co.uk/news/articles/c621kprnd3jo?at_medium=RSS&amp;at_campaign=rss</link>
+<guid>https://www.bbc.co.uk/news/articles/c621kprnd3jo?at_medium=RSS&amp;at_campaign=rss</guid>
+<pubDate>Mon, 13 Jul 2026 20:30:22 +0000</pubDate>
+<category>Entertainment</category>
+<description></description>
+<source url="https://www.bbc.co.uk/news/articles/c621kprnd3jo?at_medium=RSS&amp;at_campaign=rss">BBC World</source>
 </item>
 <item>
 <title>Tokyo Disney to hike maximum ticket prices for first time since 2023 - Nikkei Asia</title>
@@ -443,6 +1116,15 @@
 • Chipotle計劃在今年開設350至370家新餐廳，以恢復增長並吸引顧客。  
 • 公司選擇蒙特雷地區作為開店地點，因為該地區經濟強勁、人口增長及創新中心的地位。</description>
 <source url="https://www.cnbc.com/2026/07/13/chipotle-opening-first-restaurant-in-mexico.html">CNBC</source>
+</item>
+<item>
+<title>On foreign policy, Graham's influence may have been felt the most</title>
+<link>https://www.npr.org/2026/07/13/nx-s1-5890936/on-foreign-policy-grahams-influence-may-have-been-felt-the-most</link>
+<guid>https://www.npr.org/2026/07/13/nx-s1-5890936/on-foreign-policy-grahams-influence-may-have-been-felt-the-most</guid>
+<pubDate>Mon, 13 Jul 2026 20:05:24 +0000</pubDate>
+<category>World</category>
+<description></description>
+<source url="https://www.npr.org/2026/07/13/nx-s1-5890936/on-foreign-policy-grahams-influence-may-have-been-felt-the-most">NPR</source>
 </item>
 <item>
 <title>Lindsey Graham’s death removes one of Washington’s most influential China hawks</title>
@@ -643,6 +1325,15 @@
 <source url="https://unchainedcrypto.com/trump-invokes-grahams-death-to-press-senate-on-clarity-act-as-republican-majority-narrows/">Unchained</source>
 </item>
 <item>
+<title>A Chatbot Just Did an Investment Banker’s Job - PYMNTS.com</title>
+<link>https://news.google.com/rss/articles/CBMipAFBVV95cUxNT2J2cnZZRDE5UzdfY1FwQ2RhUGNFU2o4OEh2cVZyU2laeGZQUlh2akYxRzdTbWxfeWo2WUNzS2NSVlFpSDhuTHlmOGRjcVVaMndGdGpZMUdEb051WEFyV19MSmFPZE5DU19JN3QtcTRTVTY0bHk0WkcyZXhKd1VWVEl3S0xUWFNmejFZZ01YWVdtUFBSbEY1ZHROWldWbW16SnpJWA?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMipAFBVV95cUxNT2J2cnZZRDE5UzdfY1FwQ2RhUGNFU2o4OEh2cVZyU2laeGZQUlh2akYxRzdTbWxfeWo2WUNzS2NSVlFpSDhuTHlmOGRjcVVaMndGdGpZMUdEb051WEFyV19MSmFPZE5DU19JN3QtcTRTVTY0bHk0WkcyZXhKd1VWVEl3S0xUWFNmejFZZ01YWVdtUFBSbEY1ZHROWldWbW16SnpJWA?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 19:40:13 +0000</pubDate>
+<category>Ai</category>
+<description></description>
+<source url="https://news.google.com/rss/articles/CBMipAFBVV95cUxNT2J2cnZZRDE5UzdfY1FwQ2RhUGNFU2o4OEh2cVZyU2laeGZQUlh2akYxRzdTbWxfeWo2WUNzS2NSVlFpSDhuTHlmOGRjcVVaMndGdGpZMUdEb051WEFyV19MSmFPZE5DU19JN3QtcTRTVTY0bHk0WkcyZXhKd1VWVEl3S0xUWFNmejFZZ01YWVdtUFBSbEY1ZHROWldWbW16SnpJWA?oc=5">AI News (Google)</source>
+</item>
+<item>
 <title>Gondor v1 to let users borrow against their entire Polymarket portfolio</title>
 <link>https://www.theblock.co/post/408129/gondor-v1-let-users-borrow-against-entire-polymarket-portfolio?utm_source=rss&amp;utm_medium=rss</link>
 <guid>https://www.theblock.co/post/408129/gondor-v1-let-users-borrow-against-entire-polymarket-portfolio?utm_source=rss&amp;utm_medium=rss</guid>
@@ -797,6 +1488,15 @@
 <category>AI</category>
 <description></description>
 <source url="https://news.google.com/rss/articles/CBMivgFBVV95cUxNVndVUlFjeXZyV1lrNVRsZzJEVXdIUTEwRmdBclIyMDJlRmVGcUNGREdVMVRIQ1l3NWpmNXM5UTdtV3RCZW01V2h5dk1VUy1OU3ZQSDk4b1I0Z0xybEQ2N0lkZUtOLWpvYnFEUWRNVEsyWnIydUtDZXY1cGN0T0RSM25oblAyVG1EaHR5WG9oUXVtRXFPWVR1M3NET1BMZ05mOE0yclA0eDFXTTBLS01wUEx2dG5qUGN4MWJtbWpB?oc=5">Reuters (Google News)</source>
+</item>
+<item>
+<title>Venezuela's smallest refinery restarts catalytic cracker, workers say - Reuters</title>
+<link>https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQ1l2Vkp1SDFLU3FRRmNma3dNd0VObzB5c2IxbDQ3R1JTMG8xZkJxMkFueEVBWnNIY0ZOU2VpdjF3QlFuYUJmRDdQZXN0YlIwUVZrWG9CN0wtVGlrNlN1RE9TQnhxWjZHdmU2QXFRLVU4Z09MeGNGdGZfRWVmLTVNdG1aWjNhWEFFMG5ieU1yT01WZmtkZ0ZxNXhpWG52VXFiS1hTTkRxVGdGbXNGX3A3dDdYbDBkMzlYTUhF?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQ1l2Vkp1SDFLU3FRRmNma3dNd0VObzB5c2IxbDQ3R1JTMG8xZkJxMkFueEVBWnNIY0ZOU2VpdjF3QlFuYUJmRDdQZXN0YlIwUVZrWG9CN0wtVGlrNlN1RE9TQnhxWjZHdmU2QXFRLVU4Z09MeGNGdGZfRWVmLTVNdG1aWjNhWEFFMG5ieU1yT01WZmtkZ0ZxNXhpWG52VXFiS1hTTkRxVGdGbXNGX3A3dDdYbDBkMzlYTUhF?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 19:05:43 +0000</pubDate>
+<category>General</category>
+<description></description>
+<source url="https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQ1l2Vkp1SDFLU3FRRmNma3dNd0VObzB5c2IxbDQ3R1JTMG8xZkJxMkFueEVBWnNIY0ZOU2VpdjF3QlFuYUJmRDdQZXN0YlIwUVZrWG9CN0wtVGlrNlN1RE9TQnhxWjZHdmU2QXFRLVU4Z09MeGNGdGZfRWVmLTVNdG1aWjNhWEFFMG5ieU1yT01WZmtkZ0ZxNXhpWG52VXFiS1hTTkRxVGdGbXNGX3A3dDdYbDBkMzlYTUhF?oc=5">Reuters (Google News)</source>
 </item>
 <item>
 <title>Strategy's New MSTR Sale Pushes Its Cash Reserves to $3B</title>
@@ -1504,6 +2204,15 @@
 <source url="https://arstechnica.com/gadgets/2026/07/apple-and-samsung-benefit-as-memory-shortage-pushes-smartphone-shipments-to-historic-lows/">ArsTechnica</source>
 </item>
 <item>
+<title>US appeals court revives hundreds of private lawsuits linking Tylenol to autism - Reuters</title>
+<link>https://news.google.com/rss/articles/CBMisAFBVV95cUxNc2xNSnUyaHBzVUEwczJ4TjdwUVpfRGhGUzM3YlhNemV5V0syQ2wxbmRab1JtOGpxMXJHeHdDUklWcFI1aXJwNU5ILXdiUFBIa0YwYmRieDNtb1NrTEYzbEhYXzQ1dXNQZmF6UE0zUnByY28tQ3hSTGVDeWUtZml5OWxTU0pmR1RYYXNBZlFoNDFydmR2Z3dEa2NUV1VqLVAyVmVERlBkTXFKOWNIczA5OA?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMisAFBVV95cUxNc2xNSnUyaHBzVUEwczJ4TjdwUVpfRGhGUzM3YlhNemV5V0syQ2wxbmRab1JtOGpxMXJHeHdDUklWcFI1aXJwNU5ILXdiUFBIa0YwYmRieDNtb1NrTEYzbEhYXzQ1dXNQZmF6UE0zUnByY28tQ3hSTGVDeWUtZml5OWxTU0pmR1RYYXNBZlFoNDFydmR2Z3dEa2NUV1VqLVAyVmVERlBkTXFKOWNIczA5OA?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 17:17:16 +0000</pubDate>
+<category>Regulation</category>
+<description></description>
+<source url="https://news.google.com/rss/articles/CBMisAFBVV95cUxNc2xNSnUyaHBzVUEwczJ4TjdwUVpfRGhGUzM3YlhNemV5V0syQ2wxbmRab1JtOGpxMXJHeHdDUklWcFI1aXJwNU5ILXdiUFBIa0YwYmRieDNtb1NrTEYzbEhYXzQ1dXNQZmF6UE0zUnByY28tQ3hSTGVDeWUtZml5OWxTU0pmR1RYYXNBZlFoNDFydmR2Z3dEa2NUV1VqLVAyVmVERlBkTXFKOWNIczA5OA?oc=5">Reuters (Google News)</source>
+</item>
+<item>
 <title>'The Odyssey' Director Chris Nolan: Young Audiences are Rejecting 'AI Slop'</title>
 <link>https://decrypt.co/373401/the-odyssey-director-chris-nolan-ai-slop</link>
 <guid>https://decrypt.co/373401/the-odyssey-director-chris-nolan-ai-slop</guid>
@@ -1520,6 +2229,15 @@
 <category>Tech</category>
 <description></description>
 <source url="https://www.wired.com/story/tesla-says-its-building-a-wheelchair-accessible-robotaxi/">Wired</source>
+</item>
+<item>
+<title>Rivalry and revenge: the long, bitter relationship between England and Argentina - Reuters</title>
+<link>https://news.google.com/rss/articles/CBMitwFBVV95cUxQUzBES1FyeHBCUjlGQ3E5dHp5SWVTc3ZTd0hSWHI1YXFxQmNhVHRmSUU2dFJhMGRRTEp0anRLNFZBUDVKY2hPblVZTGIyV2ZZQjZwcGJfZ2FfSGtFN3dDRUFBa1poU3VBVG1LQTZVSG5UOE1EcWJBd3lFZy1oUktwbEZXUnB6Ul9yUkJua09lRmR5RU83VFp3MWJvaFh3aUpka0s4MWRyRlp3bjVFb2RpdHI0YnR3dU0?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMitwFBVV95cUxQUzBES1FyeHBCUjlGQ3E5dHp5SWVTc3ZTd0hSWHI1YXFxQmNhVHRmSUU2dFJhMGRRTEp0anRLNFZBUDVKY2hPblVZTGIyV2ZZQjZwcGJfZ2FfSGtFN3dDRUFBa1poU3VBVG1LQTZVSG5UOE1EcWJBd3lFZy1oUktwbEZXUnB6Ul9yUkJua09lRmR5RU83VFp3MWJvaFh3aUpka0s4MWRyRlp3bjVFb2RpdHI0YnR3dU0?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 17:15:04 +0000</pubDate>
+<category>General</category>
+<description></description>
+<source url="https://news.google.com/rss/articles/CBMitwFBVV95cUxQUzBES1FyeHBCUjlGQ3E5dHp5SWVTc3ZTd0hSWHI1YXFxQmNhVHRmSUU2dFJhMGRRTEp0anRLNFZBUDVKY2hPblVZTGIyV2ZZQjZwcGJfZ2FfSGtFN3dDRUFBa1poU3VBVG1LQTZVSG5UOE1EcWJBd3lFZy1oUktwbEZXUnB6Ul9yUkJua09lRmR5RU83VFp3MWJvaFh3aUpka0s4MWRyRlp3bjVFb2RpdHI0YnR3dU0?oc=5">Reuters (Google News)</source>
 </item>
 <item>
 <title>Bank of Thailand Flags Suspicious Stablecoin Trades in Collaboration With SEC</title>
@@ -2278,6 +2996,15 @@
 <source url="https://www.coindesk.com/markets/2026/07/13/bitcoin-panic-selling-may-be-ending-as-sellers-profit-margins-disappear">CoinDesk</source>
 </item>
 <item>
+<title>Which AI model should you bet your company on? None of them - InfoWorld</title>
+<link>https://news.google.com/rss/articles/CBMiqAFBVV95cUxOblI4LTR6dmlmeXlSREFaUGhQMnNBYWcwRFNjcGhLUDZNQS1oZnVicTNqSG0wSGpoaGZ0QWRJaHl2R0l2WTRoRWNncFlCamZFRldtcEFYRmt0Q25iaWgtVDhGOTdJVG00bklsSUlyZnpOZHNaYmJKLXp2OThNMDBpVnZKZHBSUDN2Sy1NSGJ4ZXVMcWRJdGNwMzBINHRjRHhtbXcwQUs5MFk?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMiqAFBVV95cUxOblI4LTR6dmlmeXlSREFaUGhQMnNBYWcwRFNjcGhLUDZNQS1oZnVicTNqSG0wSGpoaGZ0QWRJaHl2R0l2WTRoRWNncFlCamZFRldtcEFYRmt0Q25iaWgtVDhGOTdJVG00bklsSUlyZnpOZHNaYmJKLXp2OThNMDBpVnZKZHBSUDN2Sy1NSGJ4ZXVMcWRJdGNwMzBINHRjRHhtbXcwQUs5MFk?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 15:47:17 +0000</pubDate>
+<category>World</category>
+<description></description>
+<source url="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOblI4LTR6dmlmeXlSREFaUGhQMnNBYWcwRFNjcGhLUDZNQS1oZnVicTNqSG0wSGpoaGZ0QWRJaHl2R0l2WTRoRWNncFlCamZFRldtcEFYRmt0Q25iaWgtVDhGOTdJVG00bklsSUlyZnpOZHNaYmJKLXp2OThNMDBpVnZKZHBSUDN2Sy1NSGJ4ZXVMcWRJdGNwMzBINHRjRHhtbXcwQUs5MFk?oc=5">AI News (Google)</source>
+</item>
+<item>
 <title>India thrash England in historic first women’s cricket Test match at Lord’s</title>
 <link>https://www.aljazeera.com/sports/2026/7/13/india-thrash-england-in-historic-first-womens-cricket-test-match-at-lords?traffic_source=rss</link>
 <guid>https://www.aljazeera.com/sports/2026/7/13/india-thrash-england-in-historic-first-womens-cricket-test-match-at-lords?traffic_source=rss</guid>
@@ -2591,6 +3318,15 @@
 <category>Politics</category>
 <description></description>
 <source url="https://news.google.com/rss/articles/CBMixgFBVV95cUxQRm03cGtiNHRMV2Q2S3pmTlY1ek9Hd0tDeEFGOGJwSU16RFMxZ095REtFdm8wbndJVTUwLU42TW9GdXFBRUF1RmFfTUVyNHcxZ25OTHpJZVdTZFRRaXE1Q0tBbVZPVlVxaThZT0I5ZWozajZLbmd1WFlZR2NqNGJtWmRkeWRBSHRyNUV3Wk9Dc3N5SmkwbEw2S3JQLVVyMHZ1OWZpRlBFeElQWGdMcktKcHFMeWs5Z25JYmd6elBZWU4wbFRFdmc?oc=5">Nikkei Asia</source>
+</item>
+<item>
+<title>Trump says US reinstates Iranian blockade, orders new strikes - Nikkei Asia</title>
+<link>https://news.google.com/rss/articles/CBMiuAFBVV95cUxPVjRVbUlzVDBiOUZ1QnVKVTdlNko5dTdiWnJraHFDMVROOVNTU2M0TGN1LS1FVTNzcW1DaHJzeXVtZF9sc3EyLTFMeV95SGRuTVNDUHpKdEQwSGJqVXZjUjlNWDZWUDZuRV96MU9GR2c4REdyRHFFMVhKUkJoN1Z5T3dvdmViR25MTk5FR3h6dUZlTUN0U3NDSlhHclJJQ3JscHdXRF9rWEJkdVJNc0RkLTFzTDVXSEpp?oc=5</link>
+<guid>https://news.google.com/rss/articles/CBMiuAFBVV95cUxPVjRVbUlzVDBiOUZ1QnVKVTdlNko5dTdiWnJraHFDMVROOVNTU2M0TGN1LS1FVTNzcW1DaHJzeXVtZF9sc3EyLTFMeV95SGRuTVNDUHpKdEQwSGJqVXZjUjlNWDZWUDZuRV96MU9GR2c4REdyRHFFMVhKUkJoN1Z5T3dvdmViR25MTk5FR3h6dUZlTUN0U3NDSlhHclJJQ3JscHdXRF9rWEJkdVJNc0RkLTFzTDVXSEpp?oc=5</guid>
+<pubDate>Mon, 13 Jul 2026 15:13:00 +0000</pubDate>
+<category>Politics</category>
+<description></description>
+<source url="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPVjRVbUlzVDBiOUZ1QnVKVTdlNko5dTdiWnJraHFDMVROOVNTU2M0TGN1LS1FVTNzcW1DaHJzeXVtZF9sc3EyLTFMeV95SGRuTVNDUHpKdEQwSGJqVXZjUjlNWDZWUDZuRV96MU9GR2c4REdyRHFFMVhKUkJoN1Z5T3dvdmViR25MTk5FR3h6dUZlTUN0U3NDSlhHclJJQ3JscHdXRF9rWEJkdVJNc0RkLTFzTDVXSEpp?oc=5">Nikkei Asia</source>
 </item>
 <item>
 <title>Trump administration launches effort to isolate International Criminal Court - Reuters</title>
@@ -11629,486 +12365,6 @@
 • 蘋果聲稱譚耀彤在離職前曾將蘋果的機密資訊發送給自己，並鼓勵其他員工在面試時攜帶蘋果零件。  
 • 蘋果指出，超過400名前員工目前在OpenAI工作，並強調這不應該使OpenAI有權使用蘋果的商業機密。</description>
 <source url="https://www.aljazeera.com/economy/2026/7/10/apple-files-lawsuit-accusing-chatgpt-maker-openai-of-stealing-trade-secrets?traffic_source=rss">Al Jazeera</source>
-</item>
-<item>
-<title>University of Chicago cutting use of AI by banning technology in classrooms for first-year law students - CBS News</title>
-<link>https://news.google.com/rss/articles/CBMiaEFVX3lxTE5IeFh0cjhSM2NST0YzUjBLSHhfOXlPZkNpZTUzTXlOTDdMVXBoc2dlYnZHY01IbEl3ZzRtR2pwQk43VkNoVlJVc01jUFFrT3Y3dHFhSjZ3OVVYWVhGUnRiLVlqWTFwWHFi?oc=5</link>
-<guid>https://news.google.com/rss/articles/CBMiaEFVX3lxTE5IeFh0cjhSM2NST0YzUjBLSHhfOXlPZkNpZTUzTXlOTDdMVXBoc2dlYnZHY01IbEl3ZzRtR2pwQk43VkNoVlJVc01jUFFrT3Y3dHFhSjZ3OVVYWVhGUnRiLVlqWTFwWHFi?oc=5</guid>
-<pubDate>Fri, 10 Jul 2026 22:55:04 +0000</pubDate>
-<category>Ai</category>
-<description>• 芝加哥大學決定禁止在法學院一年級學生的課堂上使用人工智能技術  
-• 此措施旨在促進學生的批判性思維和法律分析能力  
-• 學校表示，這一禁令將於新學年開始時生效  
-• 芝加哥大學是首個對法學院學生全面禁止使用AI的高等教育機構</description>
-<source url="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5IeFh0cjhSM2NST0YzUjBLSHhfOXlPZkNpZTUzTXlOTDdMVXBoc2dlYnZHY01IbEl3ZzRtR2pwQk43VkNoVlJVc01jUFFrT3Y3dHFhSjZ3OVVYWVhGUnRiLVlqWTFwWHFi?oc=5">AI News (Google)</source>
-</item>
-<item>
-<title>Le Ly Hayslip's journey from war survivor to peacemaker - Nikkei Asia</title>
-<link>https://news.google.com/rss/articles/CBMimgFBVV95cUxQZlpYcUJrWWhJTG5tcnYtdzN1Ymh6T0ZPdzlWOTN0Ry1YbXRydGJGRllLLW5FeEo1c1UwZnRFUFVPWlJlVThkTTJIcmQxSy1xX0tHbGQyTFI3dHZDSkQyXzBkZE5fcTEyMVhUcFRqak4xMnlNNU56Uno2OTcyVUpOT3pOV0xFUm1hYlhoVGJCd1daUVl5UU94Q2NR?oc=5</link>
-<guid>https://news.google.com/rss/articles/CBMimgFBVV95cUxQZlpYcUJrWWhJTG5tcnYtdzN1Ymh6T0ZPdzlWOTN0Ry1YbXRydGJGRllLLW5FeEo1c1UwZnRFUFVPWlJlVThkTTJIcmQxSy1xX0tHbGQyTFI3dHZDSkQyXzBkZE5fcTEyMVhUcFRqak4xMnlNNU56Uno2OTcyVUpOT3pOV0xFUm1hYlhoVGJCd1daUVl5UU94Q2NR?oc=5</guid>
-<pubDate>Fri, 10 Jul 2026 22:54:00 +0000</pubDate>
-<category>World</category>
-<description>• 李莉·海斯利普是一位越南戰爭倖存者，後來成為和平倡導者。  
-• 她的故事包括在戰爭中失去家庭和面對困難的經歷。  
-• 海斯利普致力於促進越南與美國之間的和解與理解。  
-• 她的努力獲得了國際關注，並在多個平台上分享她的經歷。</description>
-<source url="https://news.google.com/rss/articles/CBMimgFBVV95cUxQZlpYcUJrWWhJTG5tcnYtdzN1Ymh6T0ZPdzlWOTN0Ry1YbXRydGJGRllLLW5FeEo1c1UwZnRFUFVPWlJlVThkTTJIcmQxSy1xX0tHbGQyTFI3dHZDSkQyXzBkZE5fcTEyMVhUcFRqak4xMnlNNU56Uno2OTcyVUpOT3pOV0xFUm1hYlhoVGJCd1daUVl5UU94Q2NR?oc=5">Nikkei Asia</source>
-</item>
-<item>
-<title>China accuses US of ignoring Trump, Xi rapport and targeting Chinese firms</title>
-<link>https://www.scmp.com/news/china/diplomacy/article/3360197/china-accuses-us-ignoring-trump-xi-rapport-and-targeting-chinese-firms?utm_source=rss_feed</link>
-<guid>https://www.scmp.com/news/china/diplomacy/article/3360197/china-accuses-us-ignoring-trump-xi-rapport-and-targeting-chinese-firms?utm_source=rss_feed</guid>
-<pubDate>Fri, 10 Jul 2026 22:44:19 +0000</pubDate>
-<category>Politics</category>
-<description>• 中國指責美國無視特朗普與習近平的良好關係，並針對中國企業採取行動  
-• 北京聲稱美國在特朗普與習近平於5月的峰會後，將超過60家中國公司列入黑名單，濫用其權力  
-• 中國駐華盛頓大使館表示，美方忽視了中美領導人在北京會議上達成的共識  
-• 受影響的中國科技公司已採取法律行動，對抗五角大樓的指控</description>
-<source url="https://www.scmp.com/news/china/diplomacy/article/3360197/china-accuses-us-ignoring-trump-xi-rapport-and-targeting-chinese-firms?utm_source=rss_feed">SCMP</source>
-</item>
-<item>
-<title>Colombia’s Jaminton Campaz receives death threats after World Cup exit</title>
-<link>https://www.aljazeera.com/sports/2026/7/10/colombias-jaminton-campaz-receives-death-threats-after-world-cup-exit?traffic_source=rss</link>
-<guid>https://www.aljazeera.com/sports/2026/7/10/colombias-jaminton-campaz-receives-death-threats-after-world-cup-exit?traffic_source=rss</guid>
-<pubDate>Fri, 10 Jul 2026 22:39:17 +0000</pubDate>
-<category>World</category>
-<description>• 哥倫比亞足球運動員詹米頓·坎帕茲在世界杯出局後收到死亡威脅，該國足球聯合會譴責這些威脅。  
-• 哥倫比亞在16強賽中以點球輸給瑞士，坎帕茲在加時賽中錯失關鍵進球機會。  
-• 坎帕茲在Instagram上發表聲明，呼籲尊重，強調足球也有困難時刻。  
-• 哥倫比亞足球聯合會已要求檢察總長辦公室加快調查，以識別威脅的來源。</description>
-<source url="https://www.aljazeera.com/sports/2026/7/10/colombias-jaminton-campaz-receives-death-threats-after-world-cup-exit?traffic_source=rss">Al Jazeera</source>
-</item>
-<item>
-<title>Increased drone surveillance of illegal July 4th fireworks led to $100K fine</title>
-<link>https://arstechnica.com/gadgets/2026/07/on-americas-250th-more-cities-used-drone-surveillance-to-spot-illegal-fireworks/</link>
-<guid>https://arstechnica.com/gadgets/2026/07/on-americas-250th-more-cities-used-drone-surveillance-to-spot-illegal-fireworks/</guid>
-<pubDate>Fri, 10 Jul 2026 22:37:22 +0000</pubDate>
-<category>Regulation</category>
-<description>• 在美國獨立日慶祝活動中，越來越多城市和城鎮使用無人機監控非法煙火，導致一宗罰款達10萬美元的事件發生。  
-• 薩克拉門托消防局首次在獨立日部署無人機，並利用高解析度錄影協助調查。  
-• 無人機能夠記錄煙火發射的地點，並在一個聚會中拍攝到一輛裝有煙火的U-Haul拖車起火的情況。  
-• 薩克拉門托縣對非法煙火的罰款從每個裝置1000美元起，敏感區域的罰款可高達1萬美元，若造成財產損失或人身傷害，還可能面臨重罪指控。</description>
-<source url="https://arstechnica.com/gadgets/2026/07/on-americas-250th-more-cities-used-drone-surveillance-to-spot-illegal-fireworks/">ArsTechnica</source>
-</item>
-<item>
-<title>Under Lula, Amazon deforestation falls to lowest level in a decade</title>
-<link>https://www.aljazeera.com/news/2026/7/10/under-lula-amazon-deforestation-falls-to-lowest-level-in-a-decade?traffic_source=rss</link>
-<guid>https://www.aljazeera.com/news/2026/7/10/under-lula-amazon-deforestation-falls-to-lowest-level-in-a-decade?traffic_source=rss</guid>
-<pubDate>Fri, 10 Jul 2026 22:36:18 +0000</pubDate>
-<category>Regulation</category>
-<description>• 根據巴西國家太空研究所的數據，2026年上半年巴西亞馬遜雨林的砍伐面積降至十年來最低，減少了38%至約1,295平方公里 
-• 總統盧拉承諾到2030年結束非法砍伐，並在2022年總統選舉中以保護環境資源的承諾擊敗前總統博爾索納羅 
-• 盧拉上任後的第一年，巴西的砍伐率減半，並持續下降 
-• 盧拉的政府面臨批評，因為其授權在亞馬遜河口附近擴大石油勘探，並與美國總統特朗普的政府存在緊張關係</description>
-<source url="https://www.aljazeera.com/news/2026/7/10/under-lula-amazon-deforestation-falls-to-lowest-level-in-a-decade?traffic_source=rss">Al Jazeera</source>
-</item>
-<item>
-<title>The FCC is cracking down on DJI tech that dodged the foreign drone ban</title>
-<link>https://www.theverge.com/policy/964342/fcc-crack-down-dji-front-companies-xtra-skyrover-sgs-lab</link>
-<guid>https://www.theverge.com/policy/964342/fcc-crack-down-dji-front-companies-xtra-skyrover-sgs-lab</guid>
-<pubDate>Fri, 10 Jul 2026 22:35:18 +0000</pubDate>
-<category>World</category>
-<description>• 美國聯邦通信委員會（FCC）對八家公司處以每家公司25,000美元的罰款，因為它們未回應FCC的查詢，這些公司涉嫌協助大疆（DJI）繞過外國無人機禁令。  
-• 涉及的公司包括Cogito Tech、Fixaxo Technology、Lyno Dynamics、Skyhigh Tech、Spatial Hover、SZ Knowact（Skyrover的母公司）、WaveGo Tech和Xtra Technology。  
-• FCC已將所有外國無人機公司列入受限名單，禁止其獲得無線電設備的授權，並且有權追溯禁止已獲授權的產品。  
-• FC...</description>
-<source url="https://www.theverge.com/policy/964342/fcc-crack-down-dji-front-companies-xtra-skyrover-sgs-lab">The Verge</source>
-</item>
-<item>
-<title>Apple sues OpenAI, alleging artificial intelligence company stole trade secrets - The Guardian</title>
-<link>https://news.google.com/rss/articles/CBMiigFBVV95cUxPeWtGRVlvQTA3OXBzNEI1YUZSN3duYzN1OXZQNGNDUmg1T1Z6eGNwbXNhQl81a3liMjAxQlB0QzlGZlBnZ3FWZ19waDZDZm9lczl4THlPTzAzdF9ja2haZkdGS1NKbmxrQ3FLZmlWdTRJVEVxczJKVnFEeG9OaUk5ekFGNEEwUjlwN0E?oc=5</link>
-<guid>https://news.google.com/rss/articles/CBMiigFBVV95cUxPeWtGRVlvQTA3OXBzNEI1YUZSN3duYzN1OXZQNGNDUmg1T1Z6eGNwbXNhQl81a3liMjAxQlB0QzlGZlBnZ3FWZ19waDZDZm9lczl4THlPTzAzdF9ja2haZkdGS1NKbmxrQ3FLZmlWdTRJVEVxczJKVnFEeG9OaUk5ekFGNEEwUjlwN0E?oc=5</guid>
-<pubDate>Fri, 10 Jul 2026 22:33:00 +0000</pubDate>
-<category>AI</category>
-<description>• 蘋果公司對OpenAI提起訴訟，指控該人工智能公司竊取商業機密  
-• 訴訟於2023年在加州提起，涉及多項專利和技術  
-• 蘋果聲稱OpenAI在其產品中使用了未經授權的技術  
-• 此案可能對人工智能行業的商業實踐產生影響</description>
-<source url="https://news.google.com/rss/articles/CBMiigFBVV95cUxPeWtGRVlvQTA3OXBzNEI1YUZSN3duYzN1OXZQNGNDUmg1T1Z6eGNwbXNhQl81a3liMjAxQlB0QzlGZlBnZ3FWZ19waDZDZm9lczl4THlPTzAzdF9ja2haZkdGS1NKbmxrQ3FLZmlWdTRJVEVxczJKVnFEeG9OaUk5ekFGNEEwUjlwN0E?oc=5">AI News (Google)</source>
-</item>
-<item>
-<title>US, Canada Agree to Open Detroit-Windsor Bridge on July 27</title>
-<link>https://www.bloomberg.com/news/articles/2026-07-10/us-canada-strike-deal-to-open-4-5-billion-gordie-howe-bridge</link>
-<guid>https://www.bloomberg.com/news/articles/2026-07-10/us-canada-strike-deal-to-open-4-5-billion-gordie-howe-bridge</guid>
-<pubDate>Fri, 10 Jul 2026 22:24:41 +0000</pubDate>
-<category>Finance</category>
-<description>• 美國和加拿大達成協議，於7月27日開通延遲的戈迪·豪橋，連接底特律和安大略省的溫莎市  
-• 加拿大政府於週五晚間宣佈此消息  
-• 戈迪·豪橋的開通旨在促進兩國之間的貿易和交通  
-• 此橋樑的建設已經延遲，最終確定開通日期為7月27日</description>
-<source url="https://www.bloomberg.com/news/articles/2026-07-10/us-canada-strike-deal-to-open-4-5-billion-gordie-howe-bridge">Bloomberg</source>
-</item>
-<item>
-<title>Canada’s Bill C-36 tackles AI privacy. Is it enough?</title>
-<link>https://www.aljazeera.com/economy/2026/7/10/canadas-bill-c-36-tackles-ai-privacy-is-it-enough?traffic_source=rss</link>
-<guid>https://www.aljazeera.com/economy/2026/7/10/canadas-bill-c-36-tackles-ai-privacy-is-it-enough?traffic_source=rss</guid>
-<pubDate>Fri, 10 Jul 2026 22:12:38 +0000</pubDate>
-<category>World</category>
-<description>• 加拿大於6月公佈C-36法案，旨在修訂私營部門的隱私法，這是25年來的首次重大改革。  
-• C-36法案明確將隱私視為基本權利，並加強對兒童個人資訊的保護。  
-• 此法案的推出正值對人工智能的監管日益加強，特別是在不列顛哥倫比亞省發生的槍擊事件後。  
-• 專家指出，隱私立法能否跟上能預測和影響人類行為的技術仍然是一個挑戰。</description>
-<source url="https://www.aljazeera.com/economy/2026/7/10/canadas-bill-c-36-tackles-ai-privacy-is-it-enough?traffic_source=rss">Al Jazeera</source>
-</item>
-<item>
-<title>Apple sues OpenAI for ‘institutional’ misconduct — and alleges that’s just the tip of the iceberg</title>
-<link>https://www.marketwatch.com/story/apple-sues-openai-for-institutional-misconduct-and-alleges-thats-just-the-tip-of-the-iceberg-6e803c4d?mod=mw_rss_topstories</link>
-<guid>https://www.marketwatch.com/story/apple-sues-openai-for-institutional-misconduct-and-alleges-thats-just-the-tip-of-the-iceberg-6e803c4d?mod=mw_rss_topstories</guid>
-<pubDate>Fri, 10 Jul 2026 22:07:00 +0000</pubDate>
-<category>AI</category>
-<description>• 蘋果公司對OpenAI提起訴訟，指控其進行「制度性」不當行為  
-• 蘋果聲稱OpenAI試圖竊取機密資訊  
-• 訴訟文件中提到的指控可能只是冰山一角  
-• 蘋果要求賠償及停止OpenAI的相關行為</description>
-<source url="https://www.marketwatch.com/story/apple-sues-openai-for-institutional-misconduct-and-alleges-thats-just-the-tip-of-the-iceberg-6e803c4d?mod=mw_rss_topstories">MarketWatch</source>
-</item>
-<item>
-<title>Twelve men and 12 women enter a Buddhist temple - will the monks help them find love?</title>
-<link>https://www.bbc.co.uk/news/articles/cgmdkw7wmkgo?at_medium=RSS&amp;at_campaign=rss</link>
-<guid>https://www.bbc.co.uk/news/articles/cgmdkw7wmkgo?at_medium=RSS&amp;at_campaign=rss</guid>
-<pubDate>Fri, 10 Jul 2026 22:02:09 +0000</pubDate>
-<category>General</category>
-<description>• 十二名男性和十二名女性參加在南韓八世紀的佛教寺廟舉行的約會靜修活動，旨在促進配對和生育。  
-• 活動由主持人尤哲周（Yoo Cheol-ju）引導，強調低出生率已成為國家危機，並呼籲參加者尋找伴侶。  
-• 2023年，南韓女性的總生育率降至歷史低點0.72，遠低於更替率2.1，政府已開始提供育嬰假、現金獎勵及新婚補貼。  
-• 參加者經過激烈的選拔過程，最終有超過1,580人競爭進入此次靜修，活動對所有信仰人士開放。</description>
-<source url="https://www.bbc.co.uk/news/articles/cgmdkw7wmkgo?at_medium=RSS&amp;at_campaign=rss">BBC World</source>
-</item>
-<item>
-<title>South China Sea expert Wu Shicun on Beijing’s red lines</title>
-<link>https://www.scmp.com/plus/news/china/diplomacy/article/3360135/south-china-sea-expert-wu-shicun-beijings-red-lines?utm_source=rss_feed</link>
-<guid>https://www.scmp.com/plus/news/china/diplomacy/article/3360135/south-china-sea-expert-wu-shicun-beijings-red-lines?utm_source=rss_feed</guid>
-<pubDate>Fri, 10 Jul 2026 22:01:05 +0000</pubDate>
-<category>General</category>
-<description>• 吳士存是中國南海研究院的創始院長及華洋海洋合作與治理中心的主席
-• 在訪問中，他討論了北京如何應對南海爭議水域的競爭主權聲索者
-• 吳士存提到馬尼拉正在加強其“透明度”運動
-• 他分析了中國目前面臨的挑戰及對當前局勢的看法</description>
-<source url="https://www.scmp.com/plus/news/china/diplomacy/article/3360135/south-china-sea-expert-wu-shicun-beijings-red-lines?utm_source=rss_feed">SCMP</source>
-</item>
-<item>
-<title>Witnesses to fatal Houston ICE shooting challenge agency's account, lawyer says - Reuters</title>
-<link>https://news.google.com/rss/articles/CBMiuwFBVV95cUxNeEJacVFKOE1SS2pPVS1TcVBrNnlhdUtITnhjSlJjNTYyTXN0N1BRNGpfV3QyQndvMDlBcXdmQTZyNXRGcnNldUVGV0M5Yl9JWE10Y0I4N21hTFpENDMybXBwWWQ2LXBiS1E2Yi1Jek5ZOTYtOURkdzNRdWJDcEYwbXM2ajdENmVtUmRlLWhlYWFQTE1ZWi1KUHhHeW1pTml3MmtEai1jdWpSamhVYUg3RlNYV0VHRklEekQw?oc=5</link>
-<guid>https://news.google.com/rss/articles/CBMiuwFBVV95cUxNeEJacVFKOE1SS2pPVS1TcVBrNnlhdUtITnhjSlJjNTYyTXN0N1BRNGpfV3QyQndvMDlBcXdmQTZyNXRGcnNldUVGV0M5Yl9JWE10Y0I4N21hTFpENDMybXBwWWQ2LXBiS1E2Yi1Jek5ZOTYtOURkdzNRdWJDcEYwbXM2ajdENmVtUmRlLWhlYWFQTE1ZWi1KUHhHeW1pTml3MmtEai1jdWpSamhVYUg3RlNYV0VHRklEekQw?oc=5</guid>
-<pubDate>Fri, 10 Jul 2026 21:54:50 +0000</pubDate>
-<category>General</category>
-<description>• 在休斯頓發生的致命移民和海關執法局（ICE）槍擊事件中，目擊者對該機構的說法提出質疑，根據律師的說法。  
-• 事件發生於當地時間星期三，涉及ICE執法人員與一名嫌疑人之間的衝突。  
-• 律師表示，目擊者的證詞與ICE的官方說法存在不一致之處。  
-• ICE尚未對目擊者的指控作出回應，事件仍在調查中。</description>
-<source url="https://news.google.com/rss/articles/CBMiuwFBVV95cUxNeEJacVFKOE1SS2pPVS1TcVBrNnlhdUtITnhjSlJjNTYyTXN0N1BRNGpfV3QyQndvMDlBcXdmQTZyNXRGcnNldUVGV0M5Yl9JWE10Y0I4N21hTFpENDMybXBwWWQ2LXBiS1E2Yi1Jek5ZOTYtOURkdzNRdWJDcEYwbXM2ajdENmVtUmRlLWhlYWFQTE1ZWi1KUHhHeW1pTml3MmtEai1jdWpSamhVYUg3RlNYV0VHRklEekQw?oc=5">Reuters (Google News)</source>
-</item>
-<item>
-<title>SK Hynix Debut Is a Bet That AI Breaks Boom-and-Bust Chip Cycle</title>
-<link>https://www.bloomberg.com/news/articles/2026-07-10/sk-hynix-debut-is-a-bet-that-ai-breaks-boom-and-bust-chip-cycle</link>
-<guid>https://www.bloomberg.com/news/articles/2026-07-10/sk-hynix-debut-is-a-bet-that-ai-breaks-boom-and-bust-chip-cycle</guid>
-<pubDate>Fri, 10 Jul 2026 21:52:56 +0000</pubDate>
-<category>Trading</category>
-<description>• 韓國記憶體晶片製造商SK Hynix Inc.在美國市場進行了歷史上最大的外國公司公開上市  
-• 該公司股票在首日交易中上漲13%  
-• 此次上市被視為對人工智能推動晶片需求的信心  
-• SK Hynix希望藉此突破晶片行業的繁榮與衰退循環</description>
-<source url="https://www.bloomberg.com/news/articles/2026-07-10/sk-hynix-debut-is-a-bet-that-ai-breaks-boom-and-bust-chip-cycle">Bloomberg Crypto</source>
-</item>
-<item>
-<title>Bluesky’s interim CEO, Toni Schneider, drops the ‘interim’</title>
-<link>https://techcrunch.com/2026/07/10/blueskys-interim-ceo-toni-schneider-drops-the-interim/</link>
-<guid>https://techcrunch.com/2026/07/10/blueskys-interim-ceo-toni-schneider-drops-the-interim/</guid>
-<pubDate>Fri, 10 Jul 2026 21:51:55 +0000</pubDate>
-<category>Tech</category>
-<description>• Bluesky的臨時首席執行官Toni Schneider正式成為該公司的永久首席執行官，取消“臨時”頭銜。  
-• Schneider於2023年3月接替Jay Graber，後者轉任首席創新官。  
-• Schneider計劃創建更小的空間和更私密的社區，以促進增長和創新。  
-• Bluesky最初從Twitter分拆而出，曾吸引大量用戶，但近期用戶增長和參與度出現下滑。</description>
-<source url="https://techcrunch.com/2026/07/10/blueskys-interim-ceo-toni-schneider-drops-the-interim/">TechCrunch</source>
-</item>
-<item>
-<title>Apple Sues OpenAI, Claims Former Employees Stole Trade Secrets</title>
-<link>https://decrypt.co/373339/apple-sues-openai-claims-former-employees-stole-trade-secrets</link>
-<guid>https://decrypt.co/373339/apple-sues-openai-claims-former-employees-stole-trade-secrets</guid>
-<pubDate>Fri, 10 Jul 2026 21:50:30 +0000</pubDate>
-<category>AI</category>
-<description>• 蘋果公司對OpenAI及兩名前員工提起訴訟，指控竊取硬件商業機密。  
-• 訴狀聲稱前員工劉昌及譚耀天在OpenAI工作期間，非法訪問蘋果內部系統並下載機密文件。  
-• 蘋果指控劉昌未歸還公司筆記本電腦，並利用身份驗證漏洞獲取未公開產品的資料。  
-• 此訴訟發生在OpenAI以64億美元收購前蘋果設計師喬尼·艾夫的硬件初創公司io Products之後。</description>
-<source url="https://decrypt.co/373339/apple-sues-openai-claims-former-employees-stole-trade-secrets">Decrypt</source>
-</item>
-<item>
-<title>Apple sues OpenAI, two former employees for trade secrets theft - Reuters</title>
-<link>https://news.google.com/rss/articles/CBMiyAFBVV95cUxQU2NSa1NYbHVibGtrWnV6T2hRd180dUp6WWxFQ2c0bm1POHhGeHk1TlpBQXV6dDBKZVh0MWpkbUVacjlFczV4RmQ2N3ctYVEtcTVrWjdXYTJ1WmRkZ2U5WEh2Q3Nkc05LREJaM19IQS1lRzQ5Q051aGdKRjh1QnIyaENVR2FxWllSMzUycmczRXV5MnVRNFBOMG5RUU5jYkpjYVdiMmMzNjcwdVBZd3AtREJSNEVpdVFnd2JQOHRDM1ZUWjFCS1JMTQ?oc=5</link>
-<guid>https://news.google.com/rss/articles/CBMiyAFBVV95cUxQU2NSa1NYbHVibGtrWnV6T2hRd180dUp6WWxFQ2c0bm1POHhGeHk1TlpBQXV6dDBKZVh0MWpkbUVacjlFczV4RmQ2N3ctYVEtcTVrWjdXYTJ1WmRkZ2U5WEh2Q3Nkc05LREJaM19IQS1lRzQ5Q051aGdKRjh1QnIyaENVR2FxWllSMzUycmczRXV5MnVRNFBOMG5RUU5jYkpjYVdiMmMzNjcwdVBZd3AtREJSNEVpdVFnd2JQOHRDM1ZUWjFCS1JMTQ?oc=5</guid>
-<pubDate>Fri, 10 Jul 2026 21:47:55 +0000</pubDate>
-<category>AI</category>
-<description>• 蘋果公司對OpenAI及兩名前員工提起訴訟，指控其竊取商業機密  
-• 訴訟於2023年在加州提起，涉及的商業機密包括人工智能技術  
-• 蘋果公司表示，這些技術對其未來的產品和服務至關重要  
-• 訴訟的具體賠償金額尚未公開，案件仍在進行中</description>
-<source url="https://news.google.com/rss/articles/CBMiyAFBVV95cUxQU2NSa1NYbHVibGtrWnV6T2hRd180dUp6WWxFQ2c0bm1POHhGeHk1TlpBQXV6dDBKZVh0MWpkbUVacjlFczV4RmQ2N3ctYVEtcTVrWjdXYTJ1WmRkZ2U5WEh2Q3Nkc05LREJaM19IQS1lRzQ5Q051aGdKRjh1QnIyaENVR2FxWllSMzUycmczRXV5MnVRNFBOMG5RUU5jYkpjYVdiMmMzNjcwdVBZd3AtREJSNEVpdVFnd2JQOHRDM1ZUWjFCS1JMTQ?oc=5">Reuters (Google News)</source>
-</item>
-<item>
-<title>China recovered its first reusable rocket and showed a new way to do it</title>
-<link>https://arstechnica.com/space/2026/07/china-recovered-its-first-reusable-rocket-and-showed-a-new-way-to-do-it/</link>
-<guid>https://arstechnica.com/space/2026/07/china-recovered-its-first-reusable-rocket-and-showed-a-new-way-to-do-it/</guid>
-<pubDate>Fri, 10 Jul 2026 21:41:43 +0000</pubDate>
-<category>Science</category>
-<description>• 中國國有火箭開發公司於南海首次成功回收可重複使用的軌道級助推器，標誌著一項里程碑任務的完成。  
-• 長征10B火箭於美東時間12:15（UTC 04:15）從海南島的文昌商業發射場發射，火箭高約63.6米，搭載七個燃油引擎。  
-• 約10分鐘後，長征10B助推器成功降落，並自動引導至固定在離岸船隻上的四腿框架中，實現了海上網捕回收。  
-• 中國官員稱此次飛行為「完全成功」，並表示這是中國首次實現的受控火箭回收，標誌著可重複發射能力的重要進展。</description>
-<source url="https://arstechnica.com/space/2026/07/china-recovered-its-first-reusable-rocket-and-showed-a-new-way-to-do-it/">ArsTechnica</source>
-</item>
-<item>
-<title>Nuclear Energy Services Firm Holtec Joins Sector’s IPO Rush</title>
-<link>https://www.bloomberg.com/news/articles/2026-07-10/nuclear-energy-services-firm-holtec-joins-sector-s-ipo-rush</link>
-<guid>https://www.bloomberg.com/news/articles/2026-07-10/nuclear-energy-services-firm-holtec-joins-sector-s-ipo-rush</guid>
-<pubDate>Fri, 10 Jul 2026 21:40:08 +0000</pubDate>
-<category>Finance</category>
-<description>• Holtec Nuclear Corp. 提交了美國首次公開募股（IPO）的申請，成為該行業最新一間參與IPO潮的公司  
-• 該公司旨在利用數據中心日益增長的電力需求  
-• Holtec專注於核能服務，並希望透過IPO擴大其業務  
-• 此次IPO申請反映了核能行業對市場機會的積極回應</description>
-<source url="https://www.bloomberg.com/news/articles/2026-07-10/nuclear-energy-services-firm-holtec-joins-sector-s-ipo-rush">Bloomberg Crypto</source>
-</item>
-<item>
-<title>Spain leave it late to book semifinal date with France</title>
-<link>https://www.aljazeera.com/sports/2026/7/10/spain-leave-it-late-to-book-semifinal-date-with-france?traffic_source=rss</link>
-<guid>https://www.aljazeera.com/sports/2026/7/10/spain-leave-it-late-to-book-semifinal-date-with-france?traffic_source=rss</guid>
-<pubDate>Fri, 10 Jul 2026 21:39:56 +0000</pubDate>
-<category>General</category>
-<description>• 西班牙在88分鐘由米克爾·梅里諾進球，以2-1戰勝比利時，晉級世界杯半決賽  
-• 梅里諾在第86分鐘替補上場，並在第二次觸球時把握住比利時替補門將塞內·拉門斯的失誤進球  
-• 西班牙將於星期二在達拉斯對陣賽事熱門法國  
-• 比利時的首發門將庫爾圖瓦因大腿受傷在第71分鐘被拉門斯替換下場，並在第41分鐘由查爾斯·德·凱特拉雷打破西班牙在本屆世界杯的零失球紀錄</description>
-<source url="https://www.aljazeera.com/sports/2026/7/10/spain-leave-it-late-to-book-semifinal-date-with-france?traffic_source=rss">Al Jazeera</source>
-</item>
-<item>
-<title>Rhode Island Jail Operator Files Bankruptcy to Cut Bond Debt</title>
-<link>https://www.bloomberg.com/news/articles/2026-07-10/rhode-island-jail-operator-files-bankruptcy-to-cut-bond-debt</link>
-<guid>https://www.bloomberg.com/news/articles/2026-07-10/rhode-island-jail-operator-files-bankruptcy-to-cut-bond-debt</guid>
-<pubDate>Fri, 10 Jul 2026 21:37:26 +0000</pubDate>
-<category>Finance</category>
-<description>• 中央福爾斯拘留設施公司向法院申請破產，原因是無法繼續支付超過1.67億美元的債券債務  
-• 該設施關押聯邦被拘留者，包括被美國移民及海關執法局逮捕的人士  
-• 破產申請旨在減輕其財務負擔  
-• 公司表示目前的債務水平已無法持續運營</description>
-<source url="https://www.bloomberg.com/news/articles/2026-07-10/rhode-island-jail-operator-files-bankruptcy-to-cut-bond-debt">Bloomberg Crypto</source>
-</item>
-<item>
-<title>Apple sues OpenAI for allegedly stealing hardware secrets</title>
-<link>https://www.theverge.com/tech/964350/apple-openai-lawsuit-trade-secrets</link>
-<guid>https://www.theverge.com/tech/964350/apple-openai-lawsuit-trade-secrets</guid>
-<pubDate>Fri, 10 Jul 2026 21:36:51 +0000</pubDate>
-<category>AI</category>
-<description>• 蘋果公司起訴OpenAI，指控其前員工竊取蘋果的商業機密以利於OpenAI。  
-• 蘋果在訴狀中提到，OpenAI的員工曾在蘋果工作，並指出這是一種“竊取模式”。  
-• 蘋果指控Chang Liu在離開蘋果後訪問其系統，下載多份與未發布產品有關的機密文件。  
-• 蘋果聲稱目前有超過400名前蘋果員工在OpenAI工作。</description>
-<source url="https://www.theverge.com/tech/964350/apple-openai-lawsuit-trade-secrets">The Verge</source>
-</item>
-<item>
-<title>US insists Iran commit to stopping attacks in Hormuz strait, say US officials - Reuters</title>
-<link>https://news.google.com/rss/articles/CBMiwgFBVV95cUxOTDI4WnJQY1UzQVd1QjZQMXRFUkM2SHdzNV9EYmd2cTQ2a1h3cTN0NTlza0JSMWFlbFhibmY0SnVRSHU0U2ZsRGpoMEhMamd5RXNZUXZRVUJRQnVzVGhtajFJbHdXSUtjNy1iOGpTODU3dG5YLUphaGlYRDRXLUZSdXF2U3laZDhaeTVvalFJbjlGOGJYaTFFdnRuMUJmZXE3U1Z0LTRxaUtiNTNnQnQ2bGdDZEVhUzV4OHdBVlBTSVVBdw?oc=5</link>
-<guid>https://news.google.com/rss/articles/CBMiwgFBVV95cUxOTDI4WnJQY1UzQVd1QjZQMXRFUkM2SHdzNV9EYmd2cTQ2a1h3cTN0NTlza0JSMWFlbFhibmY0SnVRSHU0U2ZsRGpoMEhMamd5RXNZUXZRVUJRQnVzVGhtajFJbHdXSUtjNy1iOGpTODU3dG5YLUphaGlYRDRXLUZSdXF2U3laZDhaeTVvalFJbjlGOGJYaTFFdnRuMUJmZXE3U1Z0LTRxaUtiNTNnQnQ2bGdDZEVhUzV4OHdBVlBTSVVBdw?oc=5</guid>
-<pubDate>Fri, 10 Jul 2026 21:36:03 +0000</pubDate>
-<category>General</category>
-<description>• 美國官員強調伊朗必須承諾停止在霍爾木茲海峽的攻擊行為  
-• 此言論是在美國與伊朗之間的緊張局勢加劇之際發表的  
-• 霍爾木茲海峽是全球重要的石油運輸通道  
-• 美國希望透過外交手段降低該地區的衝突風險</description>
-<source url="https://news.google.com/rss/articles/CBMiwgFBVV95cUxOTDI4WnJQY1UzQVd1QjZQMXRFUkM2SHdzNV9EYmd2cTQ2a1h3cTN0NTlza0JSMWFlbFhibmY0SnVRSHU0U2ZsRGpoMEhMamd5RXNZUXZRVUJRQnVzVGhtajFJbHdXSUtjNy1iOGpTODU3dG5YLUphaGlYRDRXLUZSdXF2U3laZDhaeTVvalFJbjlGOGJYaTFFdnRuMUJmZXE3U1Z0LTRxaUtiNTNnQnQ2bGdDZEVhUzV4OHdBVlBTSVVBdw?oc=5">Reuters (Google News)</source>
-</item>
-<item>
-<title>New dinosaur species with neck as long as cricket pitch discovered in Thailand</title>
-<link>https://www.bbc.co.uk/news/articles/crely7g8xepo?at_medium=RSS&amp;at_campaign=rss</link>
-<guid>https://www.bbc.co.uk/news/articles/crely7g8xepo?at_medium=RSS&amp;at_campaign=rss</guid>
-<pubDate>Fri, 10 Jul 2026 21:30:57 +0000</pubDate>
-<category>General</category>
-<description>• 泰國考古學家在卡拉辛省發現一種新的恐龍物種，名為Uragasaurus kalasinensis，估計生活在約1.5億年前。  
-• 這種植食性恐龍擁有長達20米的脖子，與板球場的長度相當。  
-• 研究團隊發現的化石包括一塊獨特的背椎，顯示出其屬於長頸恐龍的Mamenchisauridae科。  
-• 此次發現是泰國首次發現此類恐龍，研究結果已於本週發表在《自然》科學期刊上。</description>
-<source url="https://www.bbc.co.uk/news/articles/crely7g8xepo?at_medium=RSS&amp;at_campaign=rss">BBC World</source>
-</item>
-<item>
-<title>How the New Left won the battle of ideas for 21st-century China</title>
-<link>https://www.scmp.com/opinion/china-opinion/article/3359813/how-new-left-won-battle-ideas-21st-century-china?utm_source=rss_feed</link>
-<guid>https://www.scmp.com/opinion/china-opinion/article/3359813/how-new-left-won-battle-ideas-21st-century-china?utm_source=rss_feed</guid>
-<pubDate>Fri, 10 Jul 2026 21:30:06 +0000</pubDate>
-<category>General</category>
-<description>• 新左派挑戰了新自由主義觀點，認為毛澤東的指揮經濟與鄧小平時代的資本主義改革並非對立的兩極。  
-• 許多西方學者對鄧小平的評價認為他成功實現了中國的富強之路。  
-• 鄧小平的改革被描述為結合了列寧的有序國家理念與弗里德曼的自由市場經濟。  
-• 這些觀點反映了對21世紀中國思想戰爭的不同理解與詮釋。</description>
-<source url="https://www.scmp.com/opinion/china-opinion/article/3359813/how-new-left-won-battle-ideas-21st-century-china?utm_source=rss_feed">SCMP</source>
-</item>
-<item>
-<title>Pugnacious, charismatic and she always answered the question - Chris Mason on Widdecombe</title>
-<link>https://www.bbc.co.uk/news/articles/czrxdnmlk5no?at_medium=RSS&amp;at_campaign=rss</link>
-<guid>https://www.bbc.co.uk/news/articles/czrxdnmlk5no?at_medium=RSS&amp;at_campaign=rss</guid>
-<pubDate>Fri, 10 Jul 2026 21:27:28 +0000</pubDate>
-<category>General</category>
-<description>• 英國政治人物安·威迪科姆（Ann Widdecombe）被卷入謀殺調查，警方表示目前沒有證據顯示此案與政治有關。  
-• 威迪科姆以其強烈的個性和辯論能力聞名，曾是廣播節目《Any Questions》的受歡迎嘉賓。  
-• 她的去世令許多朋友感到悲痛，並引發對公共生活中安全問題的關注。  
-• 此事件使人們回想起過去十年中，英國政治界發生的幾起議員遇害事件。</description>
-<source url="https://www.bbc.co.uk/news/articles/czrxdnmlk5no?at_medium=RSS&amp;at_campaign=rss">BBC World</source>
-</item>
-<item>
-<title>Shionogi-Backed Apnimed Files for IPO to Fund Sleep Apnea Drug</title>
-<link>https://www.bloomberg.com/news/articles/2026-07-10/shionogi-backed-apnimed-files-for-ipo-to-fund-sleep-apnea-drug</link>
-<guid>https://www.bloomberg.com/news/articles/2026-07-10/shionogi-backed-apnimed-files-for-ipo-to-fund-sleep-apnea-drug</guid>
-<pubDate>Fri, 10 Jul 2026 21:27:05 +0000</pubDate>
-<category>Finance</category>
-<description>• Apnimed Inc. 提交了美國首次公開募股（IPO）申請，以資助其治療阻塞性睡眠呼吸暫停症的口服藥物的商業化進程  
-• 該藥物的開發得到了製藥公司塩野義（Shionogi）的支持  
-• Apnimed 的IPO申請旨在籌集資金以推動藥物的上市  
-• 目前尚未確定IPO的具體時間或籌集金額</description>
-<source url="https://www.bloomberg.com/news/articles/2026-07-10/shionogi-backed-apnimed-files-for-ipo-to-fund-sleep-apnea-drug">Bloomberg Crypto</source>
-</item>
-<item>
-<title>Meta's Chief Data Officer Says Agentic Commerce is the "Next Tier of Business"</title>
-<link>https://www.coindesk.com/coindesk-news/2026/07/10/meta-s-chief-data-officer-says-agentic-commerce-is-the-next-tier-of-business</link>
-<guid>https://www.coindesk.com/coindesk-news/2026/07/10/meta-s-chief-data-officer-says-agentic-commerce-is-the-next-tier-of-business</guid>
-<pubDate>Fri, 10 Jul 2026 21:26:55 +0000</pubDate>
-<category>Crypto</category>
-<description>• Meta的首席數據官亞歷克斯·舒爾茨表示，代理商務可能是公司未來的下一個商業層級。  
-• 舒爾茨提到，Meta目前擁有超過一百萬個每週活躍的商業代理，並強調代理可以處理低風險的物流，進而應用於供應鏈談判和跨境商務。  
-• 他預測未來將不再需要實體錢包，數字支付將成為主流，並指出穩定幣在這一願景中扮演重要角色。  
-• 舒爾茨強調Meta在金融服務方面的未來將以合作為主，而非專有貨幣，並提到Facebook的Libra計劃七周年。</description>
-<source url="https://www.coindesk.com/coindesk-news/2026/07/10/meta-s-chief-data-officer-says-agentic-commerce-is-the-next-tier-of-business">CoinDesk</source>
-</item>
-<item>
-<title>US relaxes export controls on advanced chips and drones for UAE</title>
-<link>https://www.ft.com/content/8f33a9b2-bf8a-4c11-8a94-5d86a93b29ba</link>
-<guid>https://www.ft.com/content/8f33a9b2-bf8a-4c11-8a94-5d86a93b29ba</guid>
-<pubDate>Fri, 10 Jul 2026 21:25:08 +0000</pubDate>
-<category>Tech</category>
-<description>• 美國放寬對阿聯酋的先進芯片和無人機的出口管制 
-• 此舉旨在加強與阿聯酋的經濟和安全合作 
-• 政府官員表示，這將促進雙方在科技領域的合作 
-• 此政策變更在近期生效，具體細節尚未公開</description>
-<source url="https://www.ft.com/content/8f33a9b2-bf8a-4c11-8a94-5d86a93b29ba">FT Tech</source>
-</item>
-<item>
-<title>Graham Platner makes it official in Maine, submitting paperwork to leave Senate race</title>
-<link>https://www.npr.org/2026/07/10/nx-s1-5888709/graham-platner-maine-senate-susan-collins</link>
-<guid>https://www.npr.org/2026/07/10/nx-s1-5888709/graham-platner-maine-senate-susan-collins</guid>
-<pubDate>Fri, 10 Jul 2026 21:22:01 +0000</pubDate>
-<category>Politics</category>
-<description>• 格雷厄姆·普拉特納（Graham Platner）正式退出緬因州參議院選舉，並已向緬因州國務卿提交撤回候選人資格的文件。  
-• 普拉特納在宣布計劃退出後兩天提交了文件，原因是面臨前伴侶的強姦指控，普拉特納否認該指控。  
-• 緬因州民主黨需在7月27日前選出普拉特納的接替人，已有多位候選人表達參選意向。  
-• 普拉特納在社交媒體上發佈的視頻中表示，退出並不意味著承認有罪，而是為了保持進步運動的活力，以便在11月擊敗共和黨參議員蘇珊·柯林斯（Susan Collins）。</description>
-<source url="https://www.npr.org/2026/07/10/nx-s1-5888709/graham-platner-maine-senate-susan-collins">NPR</source>
-</item>
-<item>
-<title>Young lawmakers talk online child safety and AI policy at annual bipartisan summit - News From The States</title>
-<link>https://news.google.com/rss/articles/CBMivgFBVV95cUxQQlFjcGYxa1lfX3JMaFo3ZXpoRzlrQjVod014RGw2dVFKcVRwVUNGQVNLME9IYlJsaElLbUJuUDRTSW5EWXdJZGs5OHY4VkZhVHRLekp6dWZEQU91XzByVVJXTU9kSFJQVGsteWV1NWxhWjlBU2QxTkw4RG5ycS1BQWVJNjNPemdyRXJ1SWVGMVByTDlnWlB2YnJqOXNQWDk1T1IyS3ExRmdKV2RUcjlLRWVIZk5iU3R2d1VtLWtn?oc=5</link>
-<guid>https://news.google.com/rss/articles/CBMivgFBVV95cUxQQlFjcGYxa1lfX3JMaFo3ZXpoRzlrQjVod014RGw2dVFKcVRwVUNGQVNLME9IYlJsaElLbUJuUDRTSW5EWXdJZGs5OHY4VkZhVHRLekp6dWZEQU91XzByVVJXTU9kSFJQVGsteWV1NWxhWjlBU2QxTkw4RG5ycS1BQWVJNjNPemdyRXJ1SWVGMVByTDlnWlB2YnJqOXNQWDk1T1IyS3ExRmdKV2RUcjlLRWVIZk5iU3R2d1VtLWtn?oc=5</guid>
-<pubDate>Fri, 10 Jul 2026 21:22:01 +0000</pubDate>
-<category>Ai</category>
-<description>• 年輕立法者在年度兩黨峰會上討論網上兒童安全及人工智能政策  
-• 峰會旨在促進跨黨派合作，解決網絡安全及科技影響問題  
-• 參加者包括來自不同州的年輕議員及專家  
-• 討論重點包括如何保護兒童免受網絡危害及制定相關政策框架</description>
-<source url="https://news.google.com/rss/articles/CBMivgFBVV95cUxQQlFjcGYxa1lfX3JMaFo3ZXpoRzlrQjVod014RGw2dVFKcVRwVUNGQVNLME9IYlJsaElLbUJuUDRTSW5EWXdJZGs5OHY4VkZhVHRLekp6dWZEQU91XzByVVJXTU9kSFJQVGsteWV1NWxhWjlBU2QxTkw4RG5ycS1BQWVJNjNPemdyRXJ1SWVGMVByTDlnWlB2YnJqOXNQWDk1T1IyS3ExRmdKV2RUcjlLRWVIZk5iU3R2d1VtLWtn?oc=5">AI News (Google)</source>
-</item>
-<item>
-<title>Needham's Laura Martin on why she prefers Reddit's 'human intelligence' to Meta's artificial intelligence - CNBC</title>
-<link>https://news.google.com/rss/articles/CBMi2wFBVV95cUxQYU9jZzhZdXk2OE43ZHktQ1hzZFQ1eHZCc0FYc0FNNlNZMHpibHFrZ1o5bHFTYW9QbTVBcERkVzNUSDhBZHhBcHRvMjRNbjVoZUFaWGhNMFprREI1MGc0ZWthdFQ4X0hQdmVhcTlzb3lKM3FYSmg0VmZpemNaMWI2QzFsWmFaeTVUcEsxSTd0TWpjN2pXaFplNjlTZktlcFJVUlpEMTBEUFotTElITUNKREJkbFpGRmZlMExMUjRScFMtU2puSDNZX1l2WUlEY01ERHZfNnBmZl94aE0?oc=5</link>
-<guid>https://news.google.com/rss/articles/CBMi2wFBVV95cUxQYU9jZzhZdXk2OE43ZHktQ1hzZFQ1eHZCc0FYc0FNNlNZMHpibHFrZ1o5bHFTYW9QbTVBcERkVzNUSDhBZHhBcHRvMjRNbjVoZUFaWGhNMFprREI1MGc0ZWthdFQ4X0hQdmVhcTlzb3lKM3FYSmg0VmZpemNaMWI2QzFsWmFaeTVUcEsxSTd0TWpjN2pXaFplNjlTZktlcFJVUlpEMTBEUFotTElITUNKREJkbFpGRmZlMExMUjRScFMtU2puSDNZX1l2WUlEY01ERHZfNnBmZl94aE0?oc=5</guid>
-<pubDate>Fri, 10 Jul 2026 21:19:33 +0000</pubDate>
-<category>AI</category>
-<description>• Needham的分析師Laura Martin表示，她更偏好Reddit的「人類智慧」而非Meta的人工智慧  
-• Martin指出，Reddit的用戶生成內容能提供更真實的社交互動  
-• 她認為Meta的人工智慧在理解人類情感和需求方面存在局限  
-• 此言論是在CNBC的訪問中發表，強調了社交媒體平台的不同運作模式</description>
-<source url="https://news.google.com/rss/articles/CBMi2wFBVV95cUxQYU9jZzhZdXk2OE43ZHktQ1hzZFQ1eHZCc0FYc0FNNlNZMHpibHFrZ1o5bHFTYW9QbTVBcERkVzNUSDhBZHhBcHRvMjRNbjVoZUFaWGhNMFprREI1MGc0ZWthdFQ4X0hQdmVhcTlzb3lKM3FYSmg0VmZpemNaMWI2QzFsWmFaeTVUcEsxSTd0TWpjN2pXaFplNjlTZktlcFJVUlpEMTBEUFotTElITUNKREJkbFpGRmZlMExMUjRScFMtU2puSDNZX1l2WUlEY01ERHZfNnBmZl94aE0?oc=5">AI News (Google)</source>
-</item>
-<item>
-<title>Mali, Algeria Agree to Reopen Airspace After Months of Tensions</title>
-<link>https://www.bloomberg.com/news/articles/2026-07-10/mali-algeria-agree-to-reopen-airspace-after-months-of-tensions</link>
-<guid>https://www.bloomberg.com/news/articles/2026-07-10/mali-algeria-agree-to-reopen-airspace-after-months-of-tensions</guid>
-<pubDate>Fri, 10 Jul 2026 21:12:09 +0000</pubDate>
-<category>Finance</category>
-<description>• 馬利和阿爾及利亞達成協議，重新開放民用及軍用飛機的空域 
-• 兩國將恢復大使的職位，顯示出長達一年的緊張局勢有所緩解 
-• 此協議標誌著北非兩國之間的關係改善 
-• 具體的重新開放日期尚未公布</description>
-<source url="https://www.bloomberg.com/news/articles/2026-07-10/mali-algeria-agree-to-reopen-airspace-after-months-of-tensions">Bloomberg</source>
-</item>
-<item>
-<title>This Should Have Been the Grant Wahl World Cup</title>
-<link>https://time.com/article/2026/07/10/grant-wahl-death-world-cup-soccer/</link>
-<guid>https://time.com/article/2026/07/10/grant-wahl-death-world-cup-soccer/</guid>
-<pubDate>Fri, 10 Jul 2026 21:11:43 +0000</pubDate>
-<category>World</category>
-<description>• 醫學教授Céline Gounder表示，她的已故丈夫Grant Wahl在2022年卡塔爾世界杯期間去世，享年48歲，死因為未被檢測的升主動脈瘤。  
-• Gounder認為Wahl會對本屆世界杯的精彩表現感到高興，並會批評FIFA在特朗普的干預下撤回對美國前鋒的禁賽。  
-• Wahl的報導生涯促進了美國足球的發展，他在1998年法國世界杯首次擔任記者，並在數字媒體領域取得成功。  
-• Gounder表示，Wahl的缺席讓人感到空虛，因為他會關注體育與政治之間的關聯，並深入報導賽事。</description>
-<source url="https://time.com/article/2026/07/10/grant-wahl-death-world-cup-soccer/">Time</source>
-</item>
-<item>
-<title>US Demands Iran Declare Strait of Hormuz Open to All Ships</title>
-<link>https://www.bloomberg.com/news/articles/2026-07-10/us-demands-iran-declare-strait-of-hormuz-open-to-all-shipping</link>
-<guid>https://www.bloomberg.com/news/articles/2026-07-10/us-demands-iran-declare-strait-of-hormuz-open-to-all-shipping</guid>
-<pubDate>Fri, 10 Jul 2026 21:09:59 +0000</pubDate>
-<category>Finance</category>
-<description>• 美國要求伊朗公開聲明霍爾木茲海峽的所有航道對所有船隻開放  
-• 美國官員表示，伊朗應承諾不會攻擊過境的民用船隻  
-• 此要求旨在確保國際航運的安全和穩定  
-• 霍爾木茲海峽是全球重要的石油運輸通道</description>
-<source url="https://www.bloomberg.com/news/articles/2026-07-10/us-demands-iran-declare-strait-of-hormuz-open-to-all-shipping">Bloomberg</source>
-</item>
-<item>
-<title>Kraken to overhaul app with AI investing assistant</title>
-<link>https://cointelegraph.com/news/kraken-to-rebuild-app-around-ai-powered-trading-agents-report?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound</link>
-<guid>https://cointelegraph.com/news/kraken-to-rebuild-app-around-ai-powered-trading-agents-report?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound</guid>
-<pubDate>Fri, 10 Jul 2026 21:07:39 +0000</pubDate>
-<category>Trading</category>
-<description>• 加密貨幣交易所Kraken將其移動應用程式進行重新設計，新增AI投資助手功能，以提供個性化的投資工具和建議。  
-• 用戶可設置財務目標和偏好，應用程式將根據這些目標調整界面和建議，幫助用戶實現如購屋、退休儲蓄或建立應急基金等目標。  
-• Kraken的「財務智能」系統持續監控市場，識別投資機會並提供交易建議，但不會自動執行交易，所有建議需用戶批准後才能進行。  
-• 隨著加密交易平台和金融科技公司逐漸將AI整合進其交易平台，市場分析、投資組合管理和交易都可通過對話界面進行。</description>
-<source url="https://cointelegraph.com/news/kraken-to-rebuild-app-around-ai-powered-trading-agents-report?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound">CoinTelegraph</source>
-</item>
-<item>
-<title>Detroit-Canada bridge to open by late July after delay due to issues between countries, sources say - AP News</title>
-<link>https://news.google.com/rss/articles/CBMiigFBVV95cUxPQ2N0TnlrZUNwWEZNRDdac3BYUm5XdTB3MndCZkVnT1Q2eU5Cc2hibHBlRzVKT2ljdXpaVWdvM011cmV1MF9JYWNpNzhOVnRWeVh6bjc4UllzLVYzMWNFWmFQSGZraUJxWDlzcUxqZThqUk9mT0M0b0xkdmZzS0R1bUtFLUpRM3hGLWc?oc=5</link>
-<guid>https://news.google.com/rss/articles/CBMiigFBVV95cUxPQ2N0TnlrZUNwWEZNRDdac3BYUm5XdTB3MndCZkVnT1Q2eU5Cc2hibHBlRzVKT2ljdXpaVWdvM011cmV1MF9JYWNpNzhOVnRWeVh6bjc4UllzLVYzMWNFWmFQSGZraUJxWDlzcUxqZThqUk9mT0M0b0xkdmZzS0R1bUtFLUpRM3hGLWc?oc=5</guid>
-<pubDate>Fri, 10 Jul 2026 21:06:00 +0000</pubDate>
-<category>General</category>
-<description>• 位於底特律的加拿大橋預計將於七月底開通，之前因國家之間的問題而延遲  
-• 消息來源指出，開通時間受到兩國間的協商影響  
-• 此橋樑將連接美國底特律和加拿大的溫莎  
-• 開通後，預計將改善兩國之間的貿易和交通流量</description>
-<source url="https://news.google.com/rss/articles/CBMiigFBVV95cUxPQ2N0TnlrZUNwWEZNRDdac3BYUm5XdTB3MndCZkVnT1Q2eU5Cc2hibHBlRzVKT2ljdXpaVWdvM011cmV1MF9JYWNpNzhOVnRWeVh6bjc4UllzLVYzMWNFWmFQSGZraUJxWDlzcUxqZThqUk9mT0M0b0xkdmZzS0R1bUtFLUpRM3hGLWc?oc=5">AP News (Google News)</source>
-</item>
-<item>
-<title>Senate Democrats call for hearings into Trump’s ties to crypto amid CLARITY Act discussions</title>
-<link>https://cointelegraph.com/news/senate-democrats-hearings-donald-trump-crypto-clarity-act?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound</link>
-<guid>https://cointelegraph.com/news/senate-democrats-hearings-donald-trump-crypto-clarity-act?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound</guid>
-<pubDate>Fri, 10 Jul 2026 21:03:57 +0000</pubDate>
-<category>Politics</category>
-<description>• 五名民主黨參議員呼籲舉行聽證會，調查特朗普與加密貨幣的關係及其對國家安全的影響。  
-• 參議員們要求針對特朗普在2025年財務披露中報告的14億美元加密貨幣收益進行調查，並關注其推動加密立法的可能利益衝突。  
-• 參議院將於本月對數字資產市場結構法案（CLARITY法案）進行投票，民主黨在參議院和眾議院的少數地位限制了他們的聽證權限。  
-• 在特朗普拒絕簽署禁止美聯儲發行中央銀行數字貨幣（CBDC）的法案後，該法案將於周六自動成為法律。</description>
-<source url="https://cointelegraph.com/news/senate-democrats-hearings-donald-trump-crypto-clarity-act?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound">CoinTelegraph</source>
-</item>
-<item>
-<title>Platner Quits Maine Race as Democrats Seek Quick Replacement</title>
-<link>https://www.bloomberg.com/news/articles/2026-07-10/platner-quits-maine-race-as-democrats-seek-quick-replacement</link>
-<guid>https://www.bloomberg.com/news/articles/2026-07-10/platner-quits-maine-race-as-democrats-seek-quick-replacement</guid>
-<pubDate>Fri, 10 Jul 2026 21:03:52 +0000</pubDate>
-<category>Finance</category>
-<description>• 格雷厄姆·普拉特納於星期五正式退出美國參議院競選  
-• 此舉使得緬因州的民主黨內部出現前所未有的競爭，以尋找替代人選  
-• 普拉特納的退出為民主黨提供了重新組織的機會  
-• 目前尚未確定新的候選人名單及提名時間表</description>
-<source url="https://www.bloomberg.com/news/articles/2026-07-10/platner-quits-maine-race-as-democrats-seek-quick-replacement">Bloomberg</source>
 </item>
 </channel>
 </rss>
